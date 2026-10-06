@@ -1,0 +1,709 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_Artefacts",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Data/DT_Artefacts",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "Class'SArtefact'",
+        "ObjectPath": "/Script/RoboQuest"
+      }
+    },
+    "Rows": {
+      "FireBoots": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_FireBoots.BP_FireBoots_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_fireboots",
+            "SourceString": "Explorer Slippers",
+            "LocalizedString": "Explorer Slippers"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_FireBoots'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_FireBoots.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_FireBoots'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_FireBoots.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "D263760447DC232B1E045F92C0E1489B",
+            "SourceString": "Reduces damage from acid pools by <b><1>%</>.",
+            "LocalizedString": "Reduces damage from acid pools by <b><1>%</>."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "DamageReduction",
+              "Value": 35.0
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "BunnyCrouch": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_BunnyCrouch.BP_BunnyCrouch_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "BunnyCrouch_FireNova"
+            }
+          ],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_pogoStick",
+            "SourceString": "Pogo Stick",
+            "LocalizedString": "Pogo Stick"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_BunnyCrouch'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_BunnyCrouch.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_BunnyCrouch'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_BunnyCrouch.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "7BF913224D0EA076777F4796C53C61B2",
+            "SourceString": "Hold <b>\"Crouch\"</> to load. When fully loaded, jumping triggers a mega jump.",
+            "LocalizedString": "Hold <b>\"Crouch\"</> to load. When fully loaded, jumping triggers a mega jump."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "ChargeDuration",
+              "Value": 0.57
+            },
+            {
+              "Key": "JumpVelocity",
+              "Value": 2800.0
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "RideSpeedFirerate": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_RideSpeedFirerate.BP_RideSpeedFirerate_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "Roller_DurationAndFirerate"
+            }
+          ],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_roller",
+            "SourceString": "Roller",
+            "LocalizedString": "Roller"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_RideSpeedFirerate'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_RideSpeedFirerate.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_RideSpeedFirerate'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_RideSpeedFirerate.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "764AAF78439DF95CEF07A18B5E1D3442",
+            "SourceString": "While riding and for <b><2>s</> after riding, increases {moveSpeed} by <b><1>%</>.",
+            "LocalizedString": "While riding and for <b><2>s</> after riding, increases {moveSpeed} by <b><1>%</>."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "BonusMoveSpeed",
+              "Value": 12.0
+            },
+            {
+              "Key": "Duration",
+              "Value": 6.0
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "HeroLanding": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_HeroLanding.BP_HeroLanding_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::Equipped",
+          "AddedBazarItems": [
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "HeroLanding_Ice"
+            },
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "HeroLanding_ArmorDamage"
+            },
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "HeroLanding_DamageButMalusRange"
+            }
+          ],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_heroCape",
+            "SourceString": "Hero Cape",
+            "LocalizedString": "Hero Cape"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_Herolanding'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Herolanding.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_Herolanding'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_Herolanding.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "4D41EBD04CADA3B98C7597AC3E6B99AF",
+            "SourceString": "Press <b>\"Crouch\"</> while in the air to stomp the ground beneath you, dealing <b><2></> damage to all nearby enemies. Damage is increased up to <b><6>%</> based on distance travelled.",
+            "LocalizedString": "Press <b>\"Crouch\"</> while in the air to stomp the ground beneath you, dealing <b><2></> damage to all nearby enemies. Damage is increased up to <b><6>%</> based on distance travelled."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "MinFallDistance",
+              "Value": 400.0
+            },
+            {
+              "Key": "ScalableDamage",
+              "Value": 25.0
+            },
+            {
+              "Key": "AreaSize",
+              "Value": 1000.0
+            },
+            {
+              "Key": "ImpactForce",
+              "Value": 50.0
+            },
+            {
+              "Key": "Cooldown",
+              "Value": 0.7
+            },
+            {
+              "Key": "Text_MaxDamageModifier",
+              "Value": 300.0
+            },
+            {
+              "Key": "SecurityCooldown",
+              "Value": 1.5
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "Collier": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_Collier.BP_Collier_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_collier",
+            "SourceString": "Business Briefcase",
+            "LocalizedString": "Business Briefcase"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_Collier'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Collier.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_Collier'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_Collier.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "2916AED441F1AF0F9F45F9AE4F674406",
+            "SourceString": "Gain <b><1></> {ticket} when leveling-up.",
+            "LocalizedString": "Gain <b><1></> {ticket} when leveling-up."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "Amount",
+              "Value": 1.0
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "Powercellhealth": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_PowercellHealth.BP_PowercellHealth_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_powercellHealth",
+            "SourceString": "Battery Burger",
+            "LocalizedString": "Battery Burger"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_BatteryBurger'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_BatteryBurger.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_BatteryBurger'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_BatteryBurger.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "1472B3364607BE051B8D5DB33FD41292",
+            "SourceString": "Restores <b><1>%</> {health} for each {ticket} you spend.",
+            "LocalizedString": "Restores <b><1>%</> {health} for each {ticket} you spend."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "HealthByPowercell",
+              "Value": 0.5
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "RerollAffixFree": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_RerollAffixFree.BP_RerollAffixFree_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_affixReroll",
+            "SourceString": "Cooking Gloves",
+            "LocalizedString": "Cooking Gloves"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_RerollAffixFree'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_RerollAffixFree.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_RerollAffixFree'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_RerollAffixFree.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "E5801F99491BDA36F722A1988CDEF27F",
+            "SourceString": "Reduces the cost to upgrade {weapons} or reroll their affixes at {weaponBuffShop} by <b><1></> for {weapons} you have the <b>card</> of.",
+            "LocalizedString": "Reduces the cost to upgrade {weapons} or reroll their affixes at {weaponBuffShop} by <b><1></> for {weapons} you have the <b>card</> of."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "PriceReduction",
+              "Value": 1.0
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "Jetpack": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_Jetpack.BP_Jetpack_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "Bazar_JetpackDuration"
+            }
+          ],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_jetpack",
+            "SourceString": "Jetpack",
+            "LocalizedString": "Jetpack"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_JetPack'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_JetPack.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_JetPack'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_JetPack.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "60FA300C4E6E9D6930D9AE9882CD4460",
+            "SourceString": "Hold <b>\"Jump\"</> while in the air to activate your jetpack.",
+            "LocalizedString": "Hold <b>\"Jump\"</> while in the air to activate your jetpack."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "JetpackDuration",
+              "Value": 2.5
+            },
+            {
+              "Key": "RegenDuration",
+              "Value": 4.0
+            },
+            {
+              "Key": "RegenOnAir",
+              "Value": 0.0
+            },
+            {
+              "Key": "AddFuelDurationOnJump",
+              "Value": 0.5
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "GlassCanon": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_GlassCanon.BP_GlassCanon_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::Unequipped",
+          "AddedBazarItems": [],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_sunglass",
+            "SourceString": "Sunglasses",
+            "LocalizedString": "Sunglasses"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_GlassCanob'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_GlassCanob.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_GlassCanob'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_GlassCanob.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "65E8FBF549A598F6D0262A9B719A2B6E",
+            "SourceString": "Increases all damage dealt by <b><1>%</> but decreases {health} by <b><2>%</>.",
+            "LocalizedString": "Increases all damage dealt by <b><1>%</> but decreases {health} by <b><2>%</>."
+          },
+          "TooltipPosition": {
+            "X": 0.425,
+            "Y": 0.12
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "BonusDamageDeal",
+              "Value": 30.0
+            },
+            {
+              "Key": "MalusHealth",
+              "Value": 25.0
+            }
+          ],
+          "bUnlockedInLG": false
+        }
+      },
+      "Grapple": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_Grapple.BP_Grapple_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::Equipped",
+          "AddedBazarItems": [
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "Grapple_RangeAndCooldown"
+            },
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "Grapple_DamageButCooldown"
+            },
+            {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_BazarItems'",
+                "ObjectPath": "/Game/Data/DT_BazarItems.0"
+              },
+              "RowName": "Grapple_Mark"
+            }
+          ],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_grapple",
+            "SourceString": "Grappling Hook",
+            "LocalizedString": "Grappling Hook"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_Grapple'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Grapple.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_Grapple'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_Grapple.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "EC2944774ABE56382D9DBEAF6170ADA3",
+            "SourceString": "Press <b>\"Interact\"</> to throw a grappling hook and pull you towards the environment or an enemy, dealing <b><12></> damage and applying high impact.",
+            "LocalizedString": "Press <b>\"Interact\"</> to throw a grappling hook and pull you towards the environment or an enemy, dealing <b><12></> damage and applying high impact."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [
+            {
+              "Key": "MaxDistance",
+              "Value": 4600.0
+            },
+            {
+              "Key": "MinDistance",
+              "Value": 1250.0
+            },
+            {
+              "Key": "LaunchSpeed",
+              "Value": 12500.0
+            },
+            {
+              "Key": "AttractSpeed",
+              "Value": 8500.0
+            },
+            {
+              "Key": "StopDistance",
+              "Value": 450.0
+            },
+            {
+              "Key": "ImpactForce",
+              "Value": 800.0
+            },
+            {
+              "Key": "DettachImpulse",
+              "Value": 2000.0
+            },
+            {
+              "Key": "DettachImpulseZ",
+              "Value": 1000.0
+            },
+            {
+              "Key": "EnemyDettachImpulse",
+              "Value": 750.0
+            },
+            {
+              "Key": "EnemyDettachImpulseZ",
+              "Value": 350.0
+            },
+            {
+              "Key": "Cooldown",
+              "Value": 4.5
+            },
+            {
+              "Key": "Damage",
+              "Value": 20.0
+            },
+            {
+              "Key": "EnemyMinDistance",
+              "Value": 650.0
+            },
+            {
+              "Key": "RopeRadius",
+              "Value": 0.1
+            },
+            {
+              "Key": "BossStopDistance",
+              "Value": 720.0
+            }
+          ],
+          "bUnlockedInLG": true
+        }
+      },
+      "StoryDetector": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_StoryDetector.BP_StoryDetector_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": true,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [],
+          "bInCompendium": true,
+          "Name": {
+            "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+            "Key": "gadget_storyDetector",
+            "SourceString": "Metal Detector",
+            "LocalizedString": "Metal Detector"
+          },
+          "IconOutline": {
+            "ObjectName": "PaperSprite'S_Gadgets_StoryCapsuleDetector'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_StoryCapsuleDetector.0"
+          },
+          "SmallIcon": {
+            "ObjectName": "PaperSprite'S_Gadgets_Mini_StoryCapsuleDetector'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_Mini_StoryCapsuleDetector.0"
+          },
+          "Description": {
+            "Namespace": "",
+            "Key": "4E84BBC14A701FD6A224D584A0E0312E",
+            "SourceString": "Displays the <b>data-logs</> you haven't found yet on your map.",
+            "LocalizedString": "Displays the <b>data-logs</> you haven't found yet on your map."
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [],
+          "bUnlockedInLG": true
+        }
+      },
+      "=================UNUSED": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "bCheatMenu": false,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [],
+          "bInCompendium": false,
+          "Name": {
+            "CultureInvariantString": null
+          },
+          "IconOutline": null,
+          "SmallIcon": null,
+          "Description": {
+            "CultureInvariantString": null
+          },
+          "TooltipPosition": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "CustomFloatProperties": [],
+          "bUnlockedInLG": true
+        }
+      },
+      "BackPack": {
+        "Artefact": {
+          "ID": {
+            "AssetPathName": "/Game/Blueprint/Upgrade/Artefact/BP_BackPack.BP_BackPack_C",
+            "SubPathString": ""
+          },
+          "bCheatMenu": false,
+          "SuperBotLockedState": "ESuperBotGadgetLockedState::None",
+          "AddedBazarItems": [],
+          "bInCompendium": false,
+          "Name": {
+            "CultureInvariantString": "Fanny Pack"
+          },
+          "IconOutline": null,
+          "SmallIcon": null,
+          "Description": {
+            "CultureInvariantString": "Grants an additional {weapon} slot."
+          },
+          "TooltipPosition": {
+            "X": 0.425,
+            "Y": 0.12
+          },
+          "CustomFloatProperties": [],
+          "bUnlockedInLG": true
+        }
+      }
+    }
+  }
+]
