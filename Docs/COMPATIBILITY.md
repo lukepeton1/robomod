@@ -18,6 +18,7 @@ Current policy:
 
 - broad composition primitives: 74 weapons whose primary skill is natively Projectile or Raycast and which are inside the game's broad elemental compatibility baseline;
 - Seeker/Homing: 39 weapons whose primary skill is already Projectile;
+- resolved transferable elite secondary fires: 15 native weapon-mod rows widened across the 74 standard chassis set;
 - held back pending dedicated handling: Energy Gauntlets, Dual Colts, Boltgun, Superbot Weapon 2, Laser Sword, Panchaku.
 
 Raycast + Seeker is not silently enabled yet. It requires a proper hit-model resolver.
