@@ -123,7 +123,18 @@ def apply_remove_row_handles(
     }
 
 
-def apply_copy_row_handles(
+def array_item_value(item: Any) -> Any:
+    if not isinstance(item, dict):
+        return item
+    # Row-handle struct arrays need semantic extraction; scalar property arrays such
+    # as Weapons (Array<NameProperty>) already store their payload in Value directly.
+    row_name = row_handle_name(item)
+    if row_name is not None:
+        return row_name
+    return item.get("Value")
+
+
+def apply_copy_array(
     target_row: dict[str, Any],
     target_field: str,
     source_row: dict[str, Any],
@@ -135,29 +146,40 @@ def apply_copy_row_handles(
     target_values = target_prop.get("Value")
     source_values = source_prop.get("Value")
     if not isinstance(target_values, list) or not isinstance(source_values, list):
-        raise PatchError("copy_row_handles requires array-valued source and target properties")
+        raise PatchError("copy_array requires array-valued source and target properties")
 
-    before = [row_handle_name(x) for x in target_values]
-    source_names = [row_handle_name(x) for x in source_values]
-    if any(x is None for x in source_names):
+    target_array_type = target_prop.get("ArrayType")
+    source_array_type = source_prop.get("ArrayType")
+    if target_array_type and source_array_type and target_array_type != source_array_type:
         raise PatchError(
-            f"row {source_row.get('Name')} field {source_field}: contains non-row-handle entries"
+            f"cannot copy {source_row.get('Name')}.{source_field} ({source_array_type}) "
+            f"into {target_row.get('Name')}.{target_field} ({target_array_type})"
         )
 
+    before = [array_item_value(x) for x in target_values]
+    source_snapshot = [array_item_value(x) for x in source_values]
+
+    # Copy the complete native element representation rather than reconstructing it.
+    # This preserves NamePropertyData/StructPropertyData metadata, element names,
+    # property flags and any future fields UAssetAPI expects.
     target_prop["Value"] = copy.deepcopy(source_values)
 
-    if source_prop.get("ArrayType") is not None:
-        target_prop["ArrayType"] = copy.deepcopy(source_prop["ArrayType"])
-    if source_prop.get("DummyStruct") is not None:
-        target_prop["DummyStruct"] = copy.deepcopy(source_prop["DummyStruct"])
+    for key in ("ArrayType", "DummyStruct"):
+        if key in source_prop:
+            target_prop[key] = copy.deepcopy(source_prop[key])
+        elif key in target_prop and key == "DummyStruct":
+            # A non-struct source array must not retain stale struct-only metadata.
+            target_prop.pop(key, None)
 
-    after = [row_handle_name(x) for x in target_prop["Value"]]
+    after = [array_item_value(x) for x in target_prop["Value"]]
     return {
         "before": before,
         "after": after,
         "copied_from_row": source_row.get("Name"),
         "copied_from_field": source_field,
+        "array_type": source_prop.get("ArrayType"),
         "copied_count": len(after),
+        "source_values": source_snapshot,
     }
 
 
@@ -178,13 +200,13 @@ def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], 
                 str(op["field"]),
                 [str(x) for x in op.get("values", [])],
             )
-        elif op.get("op") == "copy_row_handles":
+        elif op.get("op") == "copy_array":
             source_row_name = str(op.get("source_row"))
             if source_row_name not in by_name:
                 raise PatchError(
                     f"operation {index}: source DataTable row not found: {source_row_name!r}"
                 )
-            detail = apply_copy_row_handles(
+            detail = apply_copy_array(
                 by_name[row_name],
                 str(op["field"]),
                 by_name[source_row_name],
