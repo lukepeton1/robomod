@@ -97,12 +97,26 @@ foreach ($relative in $targets) {
         New-Item -ItemType Directory -Force -Path ([System.IO.Path]::GetDirectoryName($jsonPath)) | Out-Null
 
         Write-Host "UAssetAPI JSON: $relative"
-        & $UAssetGUIPath tojson $uasset $jsonPath 4.26
-        if ($LASTEXITCODE -ne 0) {
-            throw "UAssetGUI tojson failed for '$uasset' with exit code $LASTEXITCODE."
+
+        # UAssetGUI is a WinForms application. Invoking it with '&' from interactive
+        # Windows PowerShell can return before the GUI process exits, leaving
+        # $LASTEXITCODE unset. Start-Process -Wait gives us a reliable exit code.
+        #
+        # v1.1.0 accepts the enum-style engine version on all supported releases;
+        # dotted versions such as "4.26" are only supported by v1.1.1+.
+        $uassetGuiArgs = @(
+            "tojson",
+            ('"' + $uasset + '"'),
+            ('"' + $jsonPath + '"'),
+            "VER_UE4_26"
+        )
+        $proc = Start-Process -FilePath $UAssetGUIPath -ArgumentList $uassetGuiArgs -Wait -PassThru
+
+        if ($proc.ExitCode -ne 0) {
+            throw "UAssetGUI tojson failed for '$uasset' with exit code $($proc.ExitCode)."
         }
         if (-not (Test-Path -LiteralPath $jsonPath)) {
-            throw "UAssetGUI reported success but did not create '$jsonPath'."
+            throw "UAssetGUI exited successfully but did not create '$jsonPath'."
         }
         $jsonRel = [System.IO.Path]::GetRelativePath($OutputDir, $jsonPath).Replace("\", "/")
     }
