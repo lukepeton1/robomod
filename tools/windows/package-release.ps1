@@ -64,6 +64,8 @@ $sourceFiles = @(
     "tools\patch_uassetapi_datatable.py",
     "tools\verify_uassetapi_patch.py",
     "tools\patch_fragmentation_bytecode.py",
+    "tools\patch_homing_resolver.py",
+    "tools\patch_foundry_interactive.py",
     "tools\patch_uassetapi_cdo.py",
     "tools\kismet_layout.py",
     "tools\generate_weapon_foundry_core_patch.py",
