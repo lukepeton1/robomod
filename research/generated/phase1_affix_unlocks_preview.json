@@ -1,0 +1,109 @@
+{
+  "source": "installed-build UAssetAPI DT_WeaponAffix handoff",
+  "patch": "phase1-native-affix-composition",
+  "verified_date": "2026-10-06",
+  "operations": [
+    {
+      "row": "Burn",
+      "before": [
+        "Ice",
+        "Shock",
+        "Impact"
+      ],
+      "after": [
+        "Impact"
+      ]
+    },
+    {
+      "row": "Ice",
+      "before": [
+        "Burn",
+        "Shock",
+        "Impact"
+      ],
+      "after": [
+        "Impact"
+      ]
+    },
+    {
+      "row": "Shock",
+      "before": [
+        "Burn",
+        "Ice",
+        "Impact"
+      ],
+      "after": [
+        "Impact"
+      ]
+    },
+    {
+      "row": "Bounce",
+      "before": [
+        "Ricochet"
+      ],
+      "after": []
+    },
+    {
+      "row": "Ricochet",
+      "before": [
+        "Bounce"
+      ],
+      "after": []
+    },
+    {
+      "row": "Pierce",
+      "before": [
+        "Explosive2",
+        "Explosive3",
+        "Explosive4",
+        "Explosive5"
+      ],
+      "after": []
+    },
+    {
+      "row": "Explosive2",
+      "before": [
+        "Pierce",
+        "Bounce"
+      ],
+      "after": []
+    },
+    {
+      "row": "Explosive3",
+      "before": [
+        "Pierce",
+        "Bounce"
+      ],
+      "after": []
+    },
+    {
+      "row": "Explosive4",
+      "before": [
+        "Pierce",
+        "Bounce"
+      ],
+      "after": []
+    },
+    {
+      "row": "Explosive5",
+      "before": [
+        "Pierce",
+        "Bounce"
+      ],
+      "after": []
+    },
+    {
+      "row": "ExplosiveBlank",
+      "before": [
+        "Pierce",
+        "Bounce"
+      ],
+      "after": []
+    }
+  ],
+  "notes": [
+    "No damage, rarity, proc-chance, class, weapon-stat or skill-value fields are changed.",
+    "Impact remains mutually exclusive with Burn/Cryo/Shock in Phase 1.",
+    "Fragmentation and Homing/Hitscan restrictions are deliberately untouched."
+  ]
+}
