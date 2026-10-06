@@ -13,6 +13,7 @@ from verify_uassetapi_patch import semantic_scalar  # noqa: E402
 from disassemble_uassetapi import PackageResolver, function_summary, inline  # noqa: E402
 from patch_fragmentation_bytecode import patch as patch_fragmentation, verify as verify_fragmentation  # noqa: E402
 from patch_uassetapi_cdo import apply as patch_cdo, verify as verify_cdo  # noqa: E402
+from kismet_layout import expression_size, insert_top_level_statements, script_size, validate_asset  # noqa: E402
 
 
 def row_handle(field: str, row_name: str) -> dict:
@@ -435,6 +436,135 @@ class CdoPatcherTests(unittest.TestCase):
             patched["NamesReferencedFromExportDataCount"],
             len(patched["NameMap"]),
         )
+
+
+
+class KismetLayoutTests(unittest.TestCase):
+    def test_exact_sizes_for_common_expressions(self):
+        local = kismet_local("X")
+        self.assertEqual(expression_size(local), 9)
+        self.assertEqual(
+            expression_size({
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
+                "Value": 42,
+            }),
+            5,
+        )
+        call = {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
+            "StackNode": -1,
+            "Parameters": [copy.deepcopy(local), {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
+                "Value": 6,
+            }],
+        }
+        self.assertEqual(expression_size(call), 1 + 8 + 9 + 5 + 1)
+
+    def test_top_level_insertion_rebases_absolute_targets(self):
+        code = [
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_JumpIfNot, UAssetAPI",
+                "CodeOffset": 17,
+                "BooleanExpression": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_True, UAssetAPI",
+                },
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
+                "Value": 1,
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Return, UAssetAPI",
+                "ReturnExpression": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Nothing, UAssetAPI",
+                },
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_EndOfScript, UAssetAPI",
+            },
+        ]
+        # Sizes: JumpIfNot 6, IntConst 5, Return 2, End 1 => 14.
+        # Use a real target at Return start (11), not a made-up one.
+        code[0]["CodeOffset"] = 11
+        fn = {
+            "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+            "ObjectName": "Test",
+            "ScriptBytecodeRaw": [],
+            "ScriptBytecodeSize": script_size(code),
+            "ScriptBytecode": code,
+        }
+        inserted = [{
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
+            "Value": 99,
+        }]
+        report = insert_top_level_statements(fn, 1, inserted)
+        self.assertEqual(report["insertion_offset"], 6)
+        self.assertEqual(report["inserted_byte_count"], 5)
+        self.assertEqual(fn["ScriptBytecode"][0]["CodeOffset"], 16)
+        self.assertEqual(fn["ScriptBytecodeSize"], 19)
+
+    def test_insertion_rebases_nested_switch_absolute_offsets(self):
+        switch = {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_SwitchValue, UAssetAPI",
+            "EndGotoOffset": 100,
+            "IndexTerm": kismet_local("Index"),
+            "Cases": [{
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.FKismetSwitchCase, UAssetAPI",
+                "CaseIndexValueTerm": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_ByteConst, UAssetAPI",
+                    "Value": 0,
+                },
+                "NextOffset": 90,
+                "CaseTerm": kismet_local("CaseValue"),
+            }],
+            "DefaultTerm": kismet_local("DefaultValue"),
+        }
+        code = [
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
+                "Value": {"New": {"Path": ["Out"], "ResolvedOwner": 1}},
+                "Variable": kismet_local("Out"),
+                "Expression": switch,
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_EndOfScript, UAssetAPI",
+            },
+        ]
+        fn = {
+            "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+            "ObjectName": "SwitchTest",
+            "ScriptBytecodeRaw": [],
+            "ScriptBytecodeSize": script_size(code),
+            "ScriptBytecode": code,
+        }
+        # Insert at byte 0: every absolute target must shift.
+        report = insert_top_level_statements(
+            fn,
+            0,
+            [{
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
+                "Value": 7,
+            }],
+        )
+        patched_switch = fn["ScriptBytecode"][1]["Expression"]
+        self.assertEqual(patched_switch["EndGotoOffset"], 105)
+        self.assertEqual(patched_switch["Cases"][0]["NextOffset"], 95)
+        self.assertEqual(report["rebased_absolute_targets"], 2)
+
+    def test_validate_asset_accepts_consistent_function(self):
+        code = [{
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_EndOfScript, UAssetAPI",
+        }]
+        asset = {
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+                "ObjectName": "Tiny",
+                "ScriptBytecodeRaw": [],
+                "ScriptBytecodeSize": 1,
+                "ScriptBytecode": code,
+            }],
+        }
+        self.assertTrue(validate_asset(asset)["verified"])
 
 
 class DisassemblerTests(unittest.TestCase):
