@@ -40,10 +40,10 @@
 
 ### Foundry progression
 
-- Generated target-aware transfer policy: 49 ordinary affixes + 15 resolved alt-fires.
+- Generated target-aware transfer policy: 50 ordinary affixes + 15 resolved alt-fires.
 - Promoted the successful ordinary-affix merchant probe into production.
 - Vanilla Perfumer/affix merchant now acts as the first Foundry surface using native Power Cell/UI/server/multicast behavior.
-- Restricted the global random merchant to 17 affixes proven safe/generalized across the standard chassis set; target-specific rows remain reserved for deterministic GRAFT.
+- Restricted the global random merchant to 18 affixes proven safe/generalized across the standard chassis set; target-specific rows remain reserved for deterministic GRAFT.
 - Added six-affix purchase guard.
 - Added authoritative graft transaction contract for the final donor workflow.
 
