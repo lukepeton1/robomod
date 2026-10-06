@@ -25,7 +25,8 @@ The production build intentionally excludes the diagnostic starter-gun edits.
 `Source/patches/weapon_foundry_core.json` is generated from the extracted game catalog and currently opens the verified composition primitives across:
 
 - **74** standard Projectile/Raycast weapon chassis;
-- **39** natively Projectile weapon chassis for Seeker/Homing.
+- **39** natively Projectile weapon chassis for Seeker/Homing;
+- **15** resolved native elite secondary-fire/weapon-mod rows widened across the 74 standard chassis set.
 
 Unusual `None`/unresolved edge cases remain held back instead of being guessed.
 
