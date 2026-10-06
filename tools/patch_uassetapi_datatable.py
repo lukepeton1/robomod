@@ -327,6 +327,59 @@ def apply_replace_row_handles(
     }
 
 
+
+def apply_replace_name_array(
+    asset: dict[str, Any],
+    row: dict[str, Any],
+    field: str,
+    values: list[str],
+) -> dict[str, Any]:
+    prop = property_by_name(row, field)
+    current = prop.get("Value")
+    if not isinstance(current, list):
+        raise PatchError(
+            f"row {row.get('Name')} field {field}: expected array Value"
+        )
+
+    array_type = prop.get("ArrayType")
+    if array_type != "NameProperty":
+        raise PatchError(
+            f"row {row.get('Name')} field {field}: replace_name_array requires "
+            f"ArrayType NameProperty, found {array_type!r}"
+        )
+
+    before = [array_item_value(x) for x in current]
+    template = copy.deepcopy(current[0]) if current else {
+        "$type": "UAssetAPI.PropertyTypes.Objects.NamePropertyData, UAssetAPI",
+        "Name": "0",
+        "ArrayIndex": 0,
+        "PropertyGuid": None,
+        "IsZero": False,
+        "PropertyTagFlags": "None",
+        "PropertyTypeName": None,
+        "PropertyTagExtensions": "NoExtension",
+        "Value": "None",
+    }
+
+    replacement = []
+    for i, value in enumerate(values):
+        item = copy.deepcopy(template)
+        item["Name"] = str(i)
+        item["ArrayIndex"] = 0
+        item["Value"] = value
+        replacement.append(item)
+
+    prop["Value"] = replacement
+    added_names = ensure_name_map(asset, values)
+    return {
+        "before": before,
+        "after": values,
+        "replacement_count": len(values),
+        "name_map_added": added_names,
+        "array_type": array_type,
+    }
+
+
 def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     patched = copy.deepcopy(asset)
     rows = data_rows(patched)
@@ -365,6 +418,13 @@ def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], 
             )
         elif op.get("op") == "replace_row_handles":
             detail = apply_replace_row_handles(
+                patched,
+                by_name[row_name],
+                str(op["field"]),
+                [str(x) for x in op.get("values", [])],
+            )
+        elif op.get("op") == "replace_name_array":
+            detail = apply_replace_name_array(
                 patched,
                 by_name[row_name],
                 str(op["field"]),
