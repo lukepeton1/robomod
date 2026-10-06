@@ -47,18 +47,33 @@
     },
     {
       "id": "transferable",
-      "rule": "row exists in transfer_policy.transferable",
+      "rule": "row exists in compatibility_matrix + transfer_policy.transferable",
       "failure": "locked_property"
     },
     {
       "id": "target_compatibility",
-      "rule": "resolved hit-model/skill requirements are satisfied or a verified resolver exists",
+      "rule": "target weapon row is present in compatibility_matrix.properties[row_id].production_weapons",
       "failure": "incompatible_target"
     },
     {
+      "id": "row_conflicts",
+      "rule": "no existing target row appears in compatibility_matrix.properties[row_id].transferable_conflicts",
+      "failure": "transferable_conflict"
+    },
+    {
       "id": "duplicate_policy",
-      "rule": "duplicate row is absent unless that row has verified duplicate-instance semantics",
+      "rule": "duplicate row is absent unless compatibility_matrix duplicate_status is explicitly supported",
       "failure": "duplicate_not_supported"
+    },
+    {
+      "id": "quality_complexity",
+      "rule": "ordinary affix count remains below native quality-scaled cap 0/3/4/5/6 for color bytes 0..4",
+      "failure": "quality_locked_or_complexity_cap"
+    },
+    {
+      "id": "alt_fire_slot",
+      "rule": "weapon_mod graft requires the single native secondary-fire slot to be empty unless multi-mod behavior is later verified",
+      "failure": "alt_fire_slot_occupied"
     },
     {
       "id": "funds",
@@ -68,7 +83,13 @@
   ],
   "cost": {
     "source": "Source/grafting/transfer_policy.json",
-    "formula": "base_cost + max(0, transferable_affix_count - 2) + duplicate_instance_surcharge_if_applicable",
+    "implementation": "tools/evaluate_graft.py:GraftRules.power_cell_cost",
+    "formula": "base_cost + max(0, current_affix_count - 2) + duplicate_instance_surcharge_if_applicable",
+    "base_costs": {
+      "common_affix": 2,
+      "rare_affix": 4,
+      "elite_alt_fire": 7
+    },
     "charge_timing": "after all validation and immediately before mutation inside the authoritative transaction",
     "refund_on_failed_mutation": true
   },
@@ -105,5 +126,25 @@
     "client never directly destroys donor",
     "host/server validates donor contents and target legality",
     "all modded peers converge on target weapon state before donor disappears"
-  ]
+  ],
+  "rule_engine": {
+    "implementation": "tools/evaluate_graft.py",
+    "compatibility_matrix": "Source/grafting/compatibility_matrix.json",
+    "transfer_policy": "Source/grafting/transfer_policy.json",
+    "client_usage": "preview_only",
+    "server_usage": "authoritative_validation",
+    "quality_caps": {
+      "0": 0,
+      "1": 3,
+      "2": 4,
+      "3": 5,
+      "4": 6
+    },
+    "alt_fire_slots": 1
+  },
+  "ui_preview": {
+    "donor_planner": "tools/evaluate_graft.py:GraftRules.plan_donor",
+    "smith_planner": "tools/evaluate_graft.py:GraftRules.plan_smith",
+    "rule": "UI may preview cost/legality but server recomputes from authoritative weapon/currency state before commit"
+  }
 }
