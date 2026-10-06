@@ -60,3 +60,9 @@ Test a fresh run with no other mods installed first.
 Visual ambiguity is not automatically a gameplay failure: the weapon mesh may still choose one dominant element visual even if independent skill tags remain active. Record gameplay/status behavior separately from weapon VFX.
 
 If the game fails at startup, remove only the three `WeaponFoundry_P.*` files from `Paks\Mods` and report the log/crash point. The script never edits the clean legacy extraction or vanilla game containers in place.
+
+## Manual load verification
+
+On 2026-10-06 the Windows build script completed through its final `7/7` step, installed the generated `WeaponFoundry_P.pak/.ucas/.utoc` triplet into Roboquest's `Paks\\Mods` directory, and Roboquest launched successfully with the prototype installed.
+
+This verifies the current end-to-end path for a DataTable-only patch: legacy extraction -> UAssetAPI JSON patch -> cooked package rebuild -> retoc IoStore repack -> game load.
