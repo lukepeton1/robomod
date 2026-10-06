@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "mod_id": "WeaponFoundry",
+  "version_source": "VERSION",
+  "engine": "UE4_26",
+  "max_foundry_affixes": 6,
+  "packages": [
+    {
+      "path": "RoboQuest/Content/Data/DT_WeaponAffix",
+      "role": "affix compatibility and weapon eligibility",
+      "source": "Source/patches/weapon_foundry_core.json"
+    },
+    {
+      "path": "RoboQuest/Content/Data/DT_WeaponMod",
+      "role": "resolved native secondary-fire eligibility",
+      "source": "Source/patches/weapon_foundry_mods.json"
+    },
+    {
+      "path": "RoboQuest/Content/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation",
+      "role": "child projectile inheritance",
+      "source": "tools/patch_fragmentation_bytecode.py"
+    },
+    {
+      "path": "RoboQuest/Content/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing",
+      "role": "live Raycast to Projectile Seeker resolver",
+      "source": "tools/patch_homing_resolver.py"
+    },
+    {
+      "path": "RoboQuest/Content/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix",
+      "role": "native Foundry merchant affix pool",
+      "source": "Source/patches/foundry_merchant.json"
+    },
+    {
+      "path": "RoboQuest/Content/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_AddEnchantedAffix",
+      "role": "six-affix native purchase guard",
+      "source": "tools/patch_foundry_interactive.py"
+    }
+  ],
+  "excluded_diagnostic_packages": [
+    "RoboQuest/Content/Data/DT_Weapons",
+    "RoboQuest/Content/Data/DT_PlayerSkills"
+  ]
+}
