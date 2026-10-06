@@ -91,3 +91,9 @@ The installed triplet intentionally retains the same `WeaponFoundry_P` name, rep
 The first test is simply that Roboquest boots with the cooked Blueprint override.
 
 After that, test Fragments on one of the weapons that already supports Seeker. That gives us an early signal on whether `SpawnCustomProjectiles` naturally inherits the source skill's native homing fields in addition to the GameplayTags that Phase 2 explicitly propagates.
+
+## Manual load verification
+
+On 2026-10-06 the Phase 2 builder completed through `9/9`, installed its replacement `WeaponFoundry_P.pak/.ucas/.utoc` triplet, and Roboquest launched successfully with both the `DT_WeaponAffix` override and patched cooked `BP_WA_Fragmentation` Blueprint loaded.
+
+This verifies the current end-to-end pipeline for a same-shape cooked Kismet patch: legacy Blueprint -> UAssetAPI JSON -> decoded ScriptBytecode substitution -> cooked package rebuild -> retoc IoStore repack -> game load.
