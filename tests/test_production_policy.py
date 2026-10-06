@@ -52,15 +52,33 @@ class ProductionPolicyTests(unittest.TestCase):
         self.assertEqual(summary["transferable_affixes"], 49)
         self.assertEqual(summary["transferable_alt_fires"], 15)
 
-    def test_foundry_merchant_exactly_uses_transferable_ordinary_affixes(self):
-        expected = [
-            row["row"]
+    def test_foundry_merchant_uses_only_globally_safe_transferable_affixes(self):
+        ordinary = {
+            row["row"]: row
             for row in self.transfer["transferable"]
             if row["kind"] == "affix"
-        ]
+        }
         values = self.merchant["operations"][0]["values"]
-        self.assertEqual(values, expected)
-        self.assertEqual(len(values), 49)
+
+        self.assertEqual(len(ordinary), 49)
+        self.assertEqual(self.merchant["policy"]["full_transferable_affix_count"], 49)
+        self.assertEqual(self.merchant["policy"]["global_merchant_affix_count"], 17)
+        self.assertEqual(len(values), 17)
+        self.assertTrue(set(values).issubset(ordinary))
+
+        generalized = {
+            op["row"]
+            for op in self.core["operations"]
+            if op["op"] == "replace_name_array"
+        }
+        coverage = self.core["policy"]["standard_weapon_count"]
+        unsafe = [
+            row
+            for row in values
+            if ordinary[row].get("vanilla_weapons", 0) < coverage
+            and row not in generalized
+        ]
+        self.assertEqual(unsafe, [])
 
         enchanted = {
             row["row"]
@@ -70,6 +88,11 @@ class ProductionPolicyTests(unittest.TestCase):
         }
         self.assertTrue(enchanted)
         self.assertTrue(enchanted.isdisjoint(values))
+
+        # Target-specific rows remain available for the future donor GRAFT flow,
+        # but must not leak into the global random merchant.
+        target_specific = set(ordinary) - set(values)
+        self.assertGreater(len(target_specific), 0)
 
     def test_no_diagnostic_weapon_or_skill_patch_in_production_specs(self):
         production_targets = {
