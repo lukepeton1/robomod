@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-progression",
+  "quality_color_caps": {
+    "0": 0,
+    "1": 3,
+    "2": 4,
+    "3": 5,
+    "4": 6
+  },
+  "quality_rules": {
+    "common_foundry_enabled": false,
+    "upgraded_tiers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "top_tier_color": 4,
+    "top_tier_affix_cap": 6,
+    "rationale": "Preserve normal early-run weapons while allowing higher native quality tiers to support progressively more composition complexity."
+  },
+  "power_cell_economy": {
+    "free_complexity_affixes": 2,
+    "merchant_formula": "native_EnchantedAffixPrice + max(0, AffixAmount - 2)",
+    "graft_complexity_formula": "max(0, current_affix_count - 2)",
+    "graft_base_cost_source": "Source/grafting/transfer_policy.json",
+    "currency": "Power Cells"
+  },
+  "native_alt_fire_slots": 1,
+  "duplicate_policy": "blocked_until_modifier_instance_provenance_or_native_duplicate_semantics_are_verified"
+}
