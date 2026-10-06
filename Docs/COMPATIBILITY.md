@@ -2,51 +2,52 @@
 
 ## Game / engine
 
-Current verified target:
+Current target:
 
-- Roboquest installed build used for the 2026-10-06 reverse-engineering pass.
-- Unreal Engine serialization target: UE4.26.
-- retoc legacy/Zen conversion: `UE4_26`.
+- Roboquest installed build used for the 2026-10-06 reverse-engineering pass;
+- Unreal Engine serialization target: UE4.26;
+- retoc legacy/Zen conversion: `UE4_26`;
+- UAssetGUI v1.1.0 with `VER_UE4_26`.
 
-A game update that changes `DT_WeaponAffix` or the patched Fragmentation Blueprint must be treated as a compatibility event and rebuilt from the new game assets.
+Any Roboquest update touching a modified cooked package is a compatibility event and should trigger a rebuild/retest.
 
-## Weapon compatibility policy
+## Weapon policy
 
-The production core is generated from the extracted weapon/skill tables.
+Release-candidate policy:
 
-Current policy:
+- broad composition primitives: 74 standard Projectile/Raycast chassis;
+- Seeker/Homing: 74 standard chassis through the live hit-model resolver;
+- native elite secondary fires: 15 resolved rows widened across the 74 standard chassis;
+- held back: unusual `None`/unresolved edge cases.
 
-- broad composition primitives: 74 weapons whose primary skill is natively Projectile or Raycast and which are inside the game's broad elemental compatibility baseline;
-- Seeker/Homing: 39 weapons whose primary skill is already Projectile;
-- resolved transferable elite secondary fires: 15 native weapon-mod rows widened across the 74 standard chassis set;
-- held back pending dedicated handling: Energy Gauntlets, Dual Colts, Boltgun, Superbot Weapon 2, Laser Sword, Panchaku.
+The Seeker resolver is implemented and statically verified, but its Raycast path still needs final in-game validation.
 
-Raycast + Seeker is not silently enabled yet. It requires a proper hit-model resolver.
+## Verified composition
 
-## Verified combinations
+The Phase 3 diagnostic confirmed:
 
-The Phase 3 diagnostic confirmed one six-effect weapon executing:
-
-- Seeker/Homing;
+- Seeker;
 - Fragments;
 - Burn;
 - Explosive;
 - Freewheel;
-- Buckshot.
+- Buckshot;
 
-Observed behavior included fragment creation, Burn/explosion behavior, and Freewheel repeating the transformed Buckshot shot without obvious recursion or performance failure. Child-fragment homing remained visually difficult to isolate, so it is not listed as separately proven.
+on one weapon at the same time, including Freewheel repeating the complete Buckshot shot and fragment/status/explosion behavior without obvious recursion/performance collapse.
 
-The cooked Fragmentation override and data-only compatibility changes both successfully load in-game.
+## Package conflicts
 
-## Other mods
+The release candidate overrides:
 
-Any mod replacing the same cooked packages can conflict:
+- `/Game/Data/DT_WeaponAffix`;
+- `/Game/Data/DT_WeaponMod`;
+- `/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation`;
+- `/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing`;
+- `/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix`;
+- `/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_AddEnchantedAffix`.
 
-- `/Game/Data/DT_WeaponAffix`
-- `/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation`
-
-IoStore load order determines which complete package wins when two mods override the same asset. Weapon Foundry does not attempt binary package merging at runtime.
+Another mod overriding one of the same complete cooked packages will conflict unless the changes are composed before packing.
 
 ## Multiplayer
 
-Native Roboquest server/multicast seams are being preserved, but full modded-client multiplayer behavior has not yet completed its validation matrix. Do not claim unmodded-client compatibility.
+The production Foundry transaction intentionally preserves Roboquest's reliable server + multicast affix path. CI asserts those RPC signatures remain present. Full host/client behavior still requires an in-game validation pass; unmodded-client compatibility is not claimed.
