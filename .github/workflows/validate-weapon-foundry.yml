@@ -44,6 +44,7 @@ jobs:
           python3 tools/generate_weapon_foundry_mod_patch.py
           python3 tools/generate_alt_fire_profiles.py
           python3 tools/generate_raycast_seeker_probe.py
+          python3 tools/generate_graft_compatibility.py
 
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
@@ -69,4 +70,6 @@ jobs:
             Source/probes/graft_merchant_probe.json \
             Source/patches/foundry_merchant.json \
             Source/patches/weapon_foundry_mods.json \
-            Source/probes/raycast_seeker_eligibility.json
+            Source/probes/raycast_seeker_eligibility.json \
+            Source/composition/alt_fire_skill_profiles.json \
+            Source/grafting/compatibility_matrix.json
