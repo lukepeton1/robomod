@@ -64,6 +64,9 @@ jobs:
           print(f"validated {len(files)} JSON files")
           PY
 
+      - name: Validate release candidate contracts
+        run: python3 tools/validate_release_candidate.py
+
       - name: Verify generated files are current
         run: |
           git diff --exit-code --             research/generated             Source/patches/weapon_foundry_core.json             Source/grafting/transfer_policy.json \
