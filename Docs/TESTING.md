@@ -47,7 +47,9 @@ Confirm:
 - Power Cells are charged;
 - ordinary rows apply;
 - multiple different ordinary rows coexist;
-- a weapon at six affixes can no longer buy another Foundry affix;
+- Common-quality weapons cannot buy ordinary Foundry affixes;
+- upgraded quality tiers enforce 3 / 4 / 5 / 6 affix caps;
+- a top-tier weapon at six affixes can no longer buy another Foundry affix;
 - existing vanilla enchanted/perfume offers still appear.
 
 ## Native alt-fires
