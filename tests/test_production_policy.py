@@ -17,6 +17,7 @@ class ProductionPolicyTests(unittest.TestCase):
         cls.mods = load("Source/patches/weapon_foundry_mods.json")
         cls.transfer = load("Source/grafting/transfer_policy.json")
         cls.merchant = load("Source/patches/foundry_merchant.json")
+        cls.alt_profiles = load("Source/composition/alt_fire_skill_profiles.json")
 
     def test_core_weapon_counts(self):
         policy = self.core["policy"]
@@ -93,6 +94,33 @@ class ProductionPolicyTests(unittest.TestCase):
         # but must not leak into the global random merchant.
         target_specific = set(ordinary) - set(values)
         self.assertGreater(len(target_specific), 0)
+
+
+    def test_every_transferable_alt_fire_has_profile(self):
+        expected = {
+            row["row"]
+            for row in self.transfer["transferable"]
+            if row["kind"] == "weapon_mod"
+        }
+        profiles = {row["row"]: row for row in self.alt_profiles["profiles"]}
+        self.assertEqual(set(profiles), expected)
+        self.assertEqual(self.alt_profiles["production_alt_fire_count"], 15)
+
+        for row, profile in profiles.items():
+            self.assertTrue(profile["secondary_skill_row"].startswith("WS_"))
+            self.assertIn(
+                profile["target_detection"],
+                {"EHitType::Projectile", "EHitType::Raycast", "EHitType::None"},
+            )
+            self.assertTrue(profile["behavior"])
+            self.assertIn(
+                profile["validation_priority"],
+                {
+                    "high_projectile_inheritance",
+                    "high_raycast_inheritance",
+                    "state_or_utility",
+                },
+            )
 
     def test_no_diagnostic_weapon_or_skill_patch_in_production_specs(self):
         production_targets = {
