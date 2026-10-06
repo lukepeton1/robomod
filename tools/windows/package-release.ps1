@@ -2,7 +2,7 @@
 param(
     [string]$RepoRoot = "",
     [string]$BuildReleaseDir = "",
-    [string]$Version = "0.1.0-dev",
+    [string]$Version = "",
     [string]$OutputDir = ""
 )
 
@@ -17,6 +17,14 @@ if (-not $BuildReleaseDir) {
 }
 if (-not $OutputDir) {
     $OutputDir = Join-Path $RepoRoot "dist"
+}
+if (-not $Version) {
+    $versionFile = Join-Path $RepoRoot "VERSION"
+    if (-not (Test-Path -LiteralPath $versionFile)) {
+        throw "VERSION file not found and -Version was not supplied."
+    }
+    $Version = (Get-Content -LiteralPath $versionFile -Raw).Trim()
+    if (-not $Version) { throw "VERSION file is empty." }
 }
 
 $required = @(
@@ -84,6 +92,7 @@ foreach ($relative in $sourceFiles) {
 
 Copy-Item -LiteralPath (Join-Path $RepoRoot "Docs\*") -Destination $docs -Recurse
 Copy-Item -LiteralPath (Join-Path $RepoRoot "README.md") -Destination (Join-Path $stage "README.md")
+Copy-Item -LiteralPath (Join-Path $RepoRoot "VERSION") -Destination (Join-Path $stage "VERSION")
 
 $releaseInfo = [ordered]@{
     name = "Roboquest Weapon Foundry"
