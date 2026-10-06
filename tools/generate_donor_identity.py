@@ -43,8 +43,13 @@ def load_json(path: Path) -> Any:
 
 
 def normalize_scalar(value: Any) -> Any:
-    if isinstance(value, float) and value == 0:
-        return 0
+    # Runtime custom properties are floats, but identity comparison only needs
+    # numeric value. Canonicalize whole-number floats so generated JSON is stable
+    # across Python/JSON producers while preserving fractional discriminators.
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        numeric = float(value)
+        if numeric.is_integer():
+            return int(numeric)
     return value
 
 
