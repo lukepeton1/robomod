@@ -442,6 +442,16 @@ def object_name(asset: dict[str, Any], index: int) -> str | None:
     return None
 
 
+def walk(value: Any):
+    if isinstance(value, dict):
+        yield value
+        for child in value.values():
+            yield from walk(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from walk(child)
+
+
 def verify(asset: dict[str, Any]) -> dict[str, Any]:
     validate_asset(asset)
     owner, fn = find_function(asset)
