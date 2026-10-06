@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "phase3-diagnostic-starter-weapon",
+  "target": "Data/DT_Weapons",
+  "status": "diagnostic_only",
+  "operations": [
+    {
+      "op": "replace_row_handles",
+      "row": "HandGun",
+      "field": "Affixes",
+      "values": [
+        "Fragmentation",
+        "Homing",
+        "Burn",
+        "ExplosiveBlank",
+        "FreeShot",
+        "AutoShotgun"
+      ],
+      "reason": "Deterministic six-affix diagnostic loadout: Fragments + Seeker + Burn + Explosive + Freewheel + Buckshot. Six matches the observed vanilla weapon-tooltip affix-slot count."
+    }
+  ]
+}
