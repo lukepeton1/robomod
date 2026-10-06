@@ -127,7 +127,7 @@ class DataTablePatcherTests(unittest.TestCase):
         }
         spec = {
             "operations": [{
-                "op": "copy_row_handles",
+                "op": "copy_array",
                 "row": "Fragmentation",
                 "field": "Weapons",
                 "source_row": "Burn",
@@ -145,7 +145,61 @@ class DataTablePatcherTests(unittest.TestCase):
         ]
         self.assertEqual(target_names, ["JunkColt", "BlastArbalete", "MineGun"])
         self.assertEqual(report[0]["copied_count"], 3)
+        self.assertEqual(report[0]["array_type"], "StructProperty")
         self.assertIsNot(target["Value"], source["Value"])
+
+
+    def test_copy_name_property_array_preserves_native_shape(self):
+        def weapons_row(name, values):
+            return {
+                "$type": "StructPropertyData",
+                "Name": name,
+                "Value": [{
+                    "$type": "StructPropertyData",
+                    "Name": "Affix",
+                    "Value": [{
+                        "$type": "UAssetAPI.PropertyTypes.Objects.ArrayPropertyData, UAssetAPI",
+                        "ArrayType": "NameProperty",
+                        "Name": "Weapons",
+                        "Value": [
+                            {
+                                "$type": "UAssetAPI.PropertyTypes.Objects.NamePropertyData, UAssetAPI",
+                                "Name": str(i),
+                                "ArrayIndex": 0,
+                                "Value": value,
+                            }
+                            for i, value in enumerate(values)
+                        ],
+                    }],
+                }],
+            }
+
+        asset = {
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
+                "Table": {"Data": [
+                    weapons_row("Fragmentation", ["Boltgun"]),
+                    weapons_row("Burn", ["JunkColt", "BlastArbalete", "MineGun"]),
+                ]},
+            }],
+        }
+        spec = {
+            "operations": [{
+                "op": "copy_array",
+                "row": "Fragmentation",
+                "field": "Weapons",
+                "source_row": "Burn",
+                "source_field": "Weapons",
+            }],
+        }
+
+        patched, report = apply(asset, spec)
+        rows = patched["Exports"][0]["Table"]["Data"]
+        target = rows[0]["Value"][0]["Value"][0]
+        self.assertEqual(target["ArrayType"], "NameProperty")
+        self.assertEqual([x["Value"] for x in target["Value"]], ["JunkColt", "BlastArbalete", "MineGun"])
+        self.assertEqual([x["Name"] for x in target["Value"]], ["0", "1", "2"])
+        self.assertEqual(report[0]["array_type"], "NameProperty")
 
     def test_missing_requested_handle_fails_closed(self):
         asset = {
