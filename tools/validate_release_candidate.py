@@ -45,7 +45,7 @@ def main() -> int:
     alt_profiles = load_json("Source/composition/alt_fire_skill_profiles.json")
 
     packages = production["packages"]
-    require(len(packages) == 6, f"expected 6 production packages, found {len(packages)}")
+    require(len(packages) == 5, f"expected 5 production packages after Homing safety rollback, found {len(packages)}")
     package_paths = [row["path"] for row in packages]
     require(len(package_paths) == len(set(package_paths)), "duplicate production package path")
 
@@ -92,13 +92,15 @@ def main() -> int:
 
     standard_count = core["policy"]["standard_weapon_count"]
     require(standard_count == 74, f"expected 74 standard chassis, found {standard_count}")
-    require(core["policy"]["seeker_resolved_weapon_count"] == 74, "Seeker resolver is not enabled across all standard chassis")
-
-    seeker = next(
-        row for row in core["operations"]
-        if row["op"] == "replace_name_array" and row["row"] == "Homing"
+    require(core["policy"].get("seeker_resolver_enabled") is False, "unsafe Seeker resolver unexpectedly enabled")
+    require(core["policy"].get("seeker_supported_weapon_count") == 7, "Seeker should remain on the 7 vanilla chassis")
+    require(
+        not any(
+            row["op"] == "replace_name_array" and row["row"] == "Homing"
+            for row in core["operations"]
+        ),
+        "production core must not widen Homing eligibility while the resolver is disabled",
     )
-    require(len(seeker["values"]) == 74, "production Seeker eligibility is not 74")
 
     require(mods["policy"]["resolved_alt_fire_count"] == 15, "expected 15 production alt-fire rows")
     require(len(mods["operations"]) == 15, "weapon-mod patch operation count changed")
@@ -110,7 +112,7 @@ def main() -> int:
     )
 
     merchant_rows = merchant["operations"][0]["values"]
-    require(len(merchant_rows) == 15, f"expected 15 globally safe conflict-free merchant affixes, found {len(merchant_rows)}")
+    require(len(merchant_rows) == 14, f"expected 14 globally safe conflict-free merchant affixes with Homing withheld, found {len(merchant_rows)}")\n    require("Homing" not in merchant_rows, "Homing must remain target-specific while the raycast resolver is disabled")
     transfer_affixes = {
         row["row"]: row for row in transfer["transferable"] if row["kind"] == "affix"
     }
