@@ -39,6 +39,17 @@ The Phase 3 diagnostic additionally overrode:
 
 to force the starter HandGun into a six-effect projectile test. Those overrides are **not part of the production build**.
 
+### `/Game/Data/DT_WeaponMod`
+
+Purpose:
+
+- broaden the 15 resolved transferable native secondary-fire rows across the standard 74 Projectile/Raycast chassis set;
+- preserve each mod's existing native `AddSecondaryFire` Blueprint and resolved secondary skill.
+
+Patch source:
+
+`Source/patches/weapon_foundry_mods.json`
+
 ### `/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix`
 
 Purpose:
