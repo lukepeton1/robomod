@@ -44,7 +44,9 @@ The intended progression loop is:
 
 A generated transfer policy currently identifies **49 ordinary affixes** and **15 resolved alt-fires** as graft candidates while locking identity, enchanted-slot, dependent-upgrade and narrow chassis-specific rows.
 
-The live server-authoritative graft transaction and smith/editor UI are currently being implemented.
+The native server-authoritative ordinary-affix transaction has now been promoted into production through the existing Perfumer/affix merchant. The merchant acts as the first **Foundry surface**, mixing curated transferable ordinary affixes into its normal Power Cell purchase flow.
+
+Ground-donor GRAFT selection/consumption and the full deterministic smith/editor are still being implemented.
 
 ## Build
 
