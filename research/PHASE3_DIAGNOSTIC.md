@@ -53,3 +53,24 @@ The diagnostic also does not implement grafting, economy, rarity budgets, or sav
 ## Reverting
 
 Running the Phase 2 builder again restores the normal HandGun/skill while retaining the verified Phase 1 + Phase 2 Weapon Foundry changes.
+
+
+## Manual in-game result — 2026-10-06
+
+The Phase 3 diagnostic builder completed and Roboquest launched successfully with the deterministic six-affix HandGun installed.
+
+Observed in-game behavior:
+
+- parent projectile homing: confirmed;
+- Fragmentation spawning: confirmed;
+- Burn behavior from the composed weapon/fragments: confirmed;
+- explosive behavior from the composed weapon/fragments: confirmed;
+- Freewheel repeating the Buckshot-transformed shot: confirmed;
+- performance/stability: no obvious infinite recursion, freeze, severe frame-rate collapse, or crash observed;
+- child-fragment homing: probable but not yet visually isolated from the parent's homing behavior.
+
+This is the first direct in-game confirmation that several formerly mutually exclusive/native effects can coexist on one weapon and execute through Roboquest's existing skill/projectile systems rather than a parallel custom damage implementation.
+
+### Child-homing isolation test
+
+To verify child homing without changing the build, fire the parent projectile into a wall or ground surface beside a live enemy. The parent projectile terminates on the surface. If the spawned fragments then curve toward the nearby target, homing is active on the child projectiles independently of the parent.
