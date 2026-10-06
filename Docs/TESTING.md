@@ -54,14 +54,20 @@ Confirm:
 
 ## Native alt-fires
 
-On several unrelated chassis, acquire/test representative widened secondary fires:
+The release source includes `Source/composition/alt_fire_skill_profiles.json`, which classifies all 15 widened native secondaries.
 
-- projectile secondary;
-- raycast/mark secondary;
-- explosive/sticky secondary;
-- mobility secondary such as Rocket Jump.
+For the first RC pass, test at least one representative from each high-value behavior class:
 
-Confirm input binding, cooldown/charge and original primary-fire behavior.
+- raycast volley: **Bullet Hail / CombiShotgun**;
+- projectile volley: **LaserShotgun**;
+- sticky explosive projectile: **Sticky Grenade** or **Sticky Mines**;
+- homing explosive projectile: **Missile Blast**;
+- prefab projectile: **Arc Wave** or **Hoverball**;
+- primary retrigger: **Trigger Tap**;
+- state/utility: **Booster** or **Rocket Jump**;
+- mark utility: one Sonar Shot variant.
+
+Confirm input binding, cooldown/charge, original primary-fire behavior and whether elements/Buckshot propagate as predicted by the profile. Traversal inheritance (Seeker/Bounce/Pierce) is deliberately treated as a separate validation axis rather than assumed.
 
 ## Save/load release gate
 
