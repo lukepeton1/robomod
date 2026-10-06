@@ -19,6 +19,7 @@ def main():
     affixes, weapons, skills = load(AFFIXES), load(WEAPONS), load(SKILLS)
     skill_by_row = {x["row"]: x for x in skills}
     burn = next(x for x in affixes if x["row"] == "Burn")["weapons"]
+    homing = next(x for x in affixes if x["row"] == "Homing")["weapons"]
 
     hit_by_weapon = {}
     for weapon in weapons:
@@ -64,7 +65,9 @@ def main():
             "standard_hit_types": ["EHitType::Projectile","EHitType::Raycast"],
             "standard_weapon_count": len(standard),
             "projectile_weapon_count": len(projectile),
-            "seeker_resolved_weapon_count": len(standard),
+            "seeker_resolver_enabled": False,
+            "seeker_supported_weapon_count": len(homing),
+            "seeker_supported_weapons": homing,
             "unresolved_edge_cases": [
                 {"weapon": row, "hit_type": hit_by_weapon.get(row)}
                 for row in burn if row not in standard
