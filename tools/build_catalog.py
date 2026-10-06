@@ -246,6 +246,24 @@ def class_package(value: str | None) -> str | None:
     return value.split(".", 1)[0]
 
 
+def class_row_hint(value: str | None) -> str | None:
+    """Derive a likely DataTable row from a Blueprint package name.
+
+    Roboquest sometimes uses a dedicated Blueprint class whose DT row points at another
+    implementation class. The row name still commonly mirrors the weapon/action asset
+    (BP_PF_Slingshot -> PF_SlingShot; BP_SF_SuperbotMod -> SF_SuperbotMod).
+    """
+    pkg = class_package(value)
+    if not pkg:
+        return None
+    base = pkg.rsplit("/", 1)[-1]
+    return base[3:] if base.startswith("BP_") else base
+
+
+def ci_row_lookup(rows: dict[str, Any]) -> dict[str, str]:
+    return {name.casefold(): name for name in rows}
+
+
 def weapon_record(
     row_name: str,
     row: dict[str, Any],
@@ -266,12 +284,24 @@ def weapon_record(
             conventional = f"PF_{row_name}"
         elif action == "EAction::SecondaryFire":
             conventional = f"SF_{row_name}"
-        resolved = conventional if conventional in skill_rows_by_name else skill_by_class.get(cls)
+        by_ci = ci_row_lookup(skill_rows_by_name)
+        class_hint = class_row_hint(cls)
+        resolved = conventional if conventional in skill_rows_by_name else None
+        reason = "row_convention" if resolved else None
+        if not resolved and conventional:
+            resolved = by_ci.get(conventional.casefold())
+            reason = "row_convention_ci" if resolved else None
+        if not resolved and class_hint:
+            resolved = by_ci.get(class_hint.casefold())
+            reason = "class_name_row_hint" if resolved else None
+        if not resolved:
+            resolved = skill_by_class.get(cls)
+            reason = "class" if resolved else None
         skills.append({
             "action": action,
             "class": cls,
             "skill_row": resolved,
-            "resolved_by": "row_convention" if resolved == conventional and resolved else ("class" if resolved else None),
+            "resolved_by": reason,
         })
     return {
         "row": row_name,
@@ -358,6 +388,7 @@ def main() -> int:
         class_package(s["skill_class"]): s["row"] for s in mod_skills
         if s.get("skill_class")
     }
+    mod_skill_rows_ci = ci_row_lookup(mod_skill_rows)
 
     weapons = [weapon_record(k, v, skill_by_class, skill_rows) for k, v in weapon_rows.items()]
     affixes = [affix_record(k, v, content) for k, v in affix_rows.items()]
@@ -367,7 +398,11 @@ def main() -> int:
     for mod in mods:
         in_class = ((mod.get("blueprint") or {}).get("cdo_in_class"))
         mod["secondary_skill_class"] = in_class
-        mod["secondary_skill_row"] = mod_skill_by_package.get(class_package(in_class))
+        row_hint = class_row_hint(in_class)
+        mod["secondary_skill_row"] = (
+            mod_skill_by_package.get(class_package(in_class))
+            or (mod_skill_rows_ci.get(row_hint.casefold()) if row_hint else None)
+        )
 
     real_weapons = [w for w in weapons if not w.get("separator") and w.get("weapon_class")]
     active_affixes = [a for a in affixes if not a.get("separator") and a.get("active")]
