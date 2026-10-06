@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from patch_uassetapi_datatable import PatchError, apply  # noqa: E402
 from disassemble_uassetapi import PackageResolver, function_summary, inline  # noqa: E402
+from patch_fragmentation_bytecode import patch as patch_fragmentation, verify as verify_fragmentation  # noqa: E402
 
 
 def row_handle(field: str, row_name: str) -> dict:
@@ -194,6 +195,136 @@ class DisassemblerTests(unittest.TestCase):
         summary = function_summary(asset["Exports"][0], resolver)
         self.assertIn("GetCustomFloatProperties", summary["calls"])
         self.assertIn("DamageRatio", summary["name_constants"])
+
+
+
+def kismet_local(name: str) -> dict:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LocalVariable, UAssetAPI",
+        "Variable": {
+            "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+            "New": {
+                "$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI",
+                "Path": [name],
+                "ResolvedOwner": 1,
+            },
+        },
+    }
+
+
+def fragmentation_fixture() -> dict:
+    imports = [
+        {"$type": "UAssetAPI.Import, UAssetAPI", "ObjectName": "CheckFlagToBitmask", "OuterIndex": 0},
+        {"$type": "UAssetAPI.Import, UAssetAPI", "ObjectName": "LessEqual_IntInt", "OuterIndex": 0},
+        {"$type": "UAssetAPI.Import, UAssetAPI", "ObjectName": "IsValid", "OuterIndex": 0},
+        {"$type": "UAssetAPI.Import, UAssetAPI", "ObjectName": "ASkill", "OuterIndex": 0},
+        {"$type": "UAssetAPI.Import, UAssetAPI", "ObjectName": "AProjectile", "OuterIndex": 0},
+    ]
+    child_gameplay_tags = {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Context, UAssetAPI",
+        "ObjectExpression": kismet_local("CallFunc_Array_Get_Item_2"),
+        "Offset": 9,
+        "PropertyType": 0,
+        "RValuePointer": {
+            "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+            "New": {"$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI", "Path": ["GameplayTags"], "ResolvedOwner": -5},
+        },
+        "ContextExpression": {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_InstanceVariable, UAssetAPI",
+            "Variable": {
+                "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+                "New": {"$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI", "Path": ["GameplayTags"], "ResolvedOwner": -5},
+            },
+        },
+    }
+    source_gameplay_tags = copy.deepcopy(child_gameplay_tags)
+    source_gameplay_tags["ObjectExpression"] = kismet_local("K2Node_CustomEvent_Projectile")
+
+    code = [
+        {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LetBool, UAssetAPI",
+            "VariableExpression": kismet_local("CallFunc_IsValid_ReturnValue_1"),
+            "AssignmentExpression": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
+                "StackNode": -3,
+                "Parameters": [kismet_local("K2Node_CustomEvent_Projectile")],
+            },
+        },
+        {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
+            "Value": copy.deepcopy(child_gameplay_tags["RValuePointer"]),
+            "Variable": child_gameplay_tags,
+            "Expression": source_gameplay_tags,
+        },
+        {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LetBool, UAssetAPI",
+            "VariableExpression": kismet_local("CallFunc_CheckFlagToBitmask_ReturnValue"),
+            "AssignmentExpression": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
+                "StackNode": -1,
+                "Parameters": [
+                    kismet_local("CallFunc_MakeLiteralByte_ReturnValue"),
+                    kismet_local("CallFunc_GetGameplayTags_ReturnValue"),
+                ],
+            },
+        },
+    ]
+    return {
+        "Imports": imports,
+        "Exports": [{
+            "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+            "ObjectName": "ExecuteUbergraph_BP_WA_Fragmentation",
+            "ScriptBytecodeSize": 3486,
+            "ScriptBytecodeRaw": [],
+            "ScriptBytecode": code,
+        }],
+    }
+
+
+class FragmentationBytecodePatcherTests(unittest.TestCase):
+    def test_same_shape_patch_universalizes_and_retargets_inheritance(self):
+        asset = fragmentation_fixture()
+        original = copy.deepcopy(asset)
+        patched, report = patch_fragmentation(asset)
+
+        self.assertTrue(report["same_shape_only"])
+        self.assertFalse(report["absolute_flow_offsets_modified"])
+        self.assertEqual(report["declared_script_bytecode_size"], 3486)
+        self.assertEqual(len(report["changes"]), 3)
+        self.assertTrue(verify_fragmentation(patched)["verified"])
+
+        fn = patched["Exports"][0]
+        gate = fn["ScriptBytecode"][2]["AssignmentExpression"]
+        self.assertEqual(gate["StackNode"], -2)
+        self.assertEqual(
+            gate["Parameters"][0]["Variable"]["New"]["Path"],
+            ["CallFunc_GetGameplayTags_ReturnValue"],
+        )
+        self.assertEqual(
+            gate["Parameters"][1]["Variable"]["New"]["Path"],
+            ["CallFunc_GetGameplayTags_ReturnValue"],
+        )
+
+        validity = fn["ScriptBytecode"][0]["AssignmentExpression"]["Parameters"][0]
+        self.assertEqual(validity["Variable"]["New"]["Path"], ["CallFunc_Array_Get_Item_2"])
+
+        source = fn["ScriptBytecode"][1]["Expression"]
+        self.assertEqual(source["ObjectExpression"]["Variable"]["New"]["Path"], ["K2Node_CustomEvent_Skill"])
+        self.assertEqual(source["RValuePointer"]["New"]["ResolvedOwner"], -4)
+        self.assertEqual(
+            source["ContextExpression"]["Variable"]["New"]["ResolvedOwner"],
+            -4,
+        )
+
+        # patch() must not mutate the caller's input object.
+        self.assertEqual(
+            original["Exports"][0]["ScriptBytecode"][2]["AssignmentExpression"]["StackNode"],
+            -1,
+        )
+
+    def test_fragmentation_verify_rejects_unpatched_asset(self):
+        with self.assertRaises(Exception):
+            verify_fragmentation(fragmentation_fixture())
 
 
 if __name__ == "__main__":
