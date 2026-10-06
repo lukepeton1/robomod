@@ -37,7 +37,7 @@ Source: `tools/patch_homing_resolver.py`
 
 ### `/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix`
 
-- seeds native `AffixRows : Array<Name>` with the 49 ordinary transferable-affix catalog;
+- seeds native `AffixRows : Array<Name>` with the 17 globally safe/generalized ordinary-affix pool;
 - leaves native random offer generation, UI and transaction logic intact.
 
 Source: `Source/patches/foundry_merchant.json`
