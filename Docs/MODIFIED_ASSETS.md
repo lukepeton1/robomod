@@ -1,70 +1,67 @@
 # Modified assets
 
-## Production core
-
-Weapon Foundry's current production core overrides exactly these cooked Roboquest packages:
+## Release-candidate production packages
 
 ### `/Game/Data/DT_WeaponAffix`
 
-Purpose:
+- removes selected artificial compatibility exclusions;
+- broadens safe composition eligibility across 74 standard chassis;
+- expands Seeker to those 74 chassis now that a live hit-model resolver exists.
 
-- remove selected artificial compatibility exclusions already proven/decoded to coexist;
-- broaden safe weapon eligibility for composition primitives;
-- keep Seeker limited to natively projectile-based primary skills until hit-model conversion is implemented.
-
-Generated policy source:
-
-`Source/patches/weapon_foundry_core.json`
-
-### `/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation`
-
-Purpose:
-
-- remove the vanilla gameplay-tag gate that prevented generalized Fragmentation;
-- validate the spawned fragment for child-tag propagation;
-- inherit GameplayTags from the originating `ASkill`, including raycast-origin cases.
-
-The patch uses same-shape Kismet substitutions: it inserts/removes no expressions and changes no absolute execution-flow offsets.
-
-Patch source:
-
-`tools/patch_fragmentation_bytecode.py`
-
-## Diagnostic-only assets
-
-The Phase 3 diagnostic additionally overrode:
-
-- `/Game/Data/DT_Weapons`
-- `/Game/Data/DT_PlayerSkills`
-
-to force the starter HandGun into a six-effect projectile test. Those overrides are **not part of the production build**.
+Source: `Source/patches/weapon_foundry_core.json`
 
 ### `/Game/Data/DT_WeaponMod`
 
-Purpose:
+- broadens 15 resolved transferable native secondary-fire rows across the standard 74 chassis set.
 
-- broaden the 15 resolved transferable native secondary-fire rows across the standard 74 Projectile/Raycast chassis set;
-- preserve each mod's existing native `AddSecondaryFire` Blueprint and resolved secondary skill.
+Source: `Source/patches/weapon_foundry_mods.json`
 
-Patch source:
+### `/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation`
 
-`Source/patches/weapon_foundry_mods.json`
+- removes the restrictive gameplay-tag gate;
+- validates the spawned child for tag propagation;
+- copies GameplayTags from the originating `ASkill`;
+- preserves the vanilla `CustomTag = Fragmentation` recursion guard.
+
+Source: `tools/patch_fragmentation_bytecode.py`
+
+### `/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing`
+
+- inserts live Raycast → Projectile conversion while Seeker is applied;
+- applies shipped `ProjectileSpeed` / `ProjectileCollisionSize` values;
+- zeros gravity while converted;
+- relies on vanilla `OnRemove` to restore `BaseHitType`;
+- rebases absolute Kismet flow targets after insertion.
+
+Source: `tools/patch_homing_resolver.py`
 
 ### `/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix`
 
-Purpose:
+- seeds native `AffixRows : Array<Name>` with the 49 ordinary transferable-affix catalog;
+- leaves native random offer generation, UI and transaction logic intact.
 
-- pre-seed the native merchant's `AffixRows : Array<Name>` with the curated ordinary transferable-affix catalog;
-- preserve the merchant's native random offer generation, Power Cell transaction, UI, player mutation call, server RPC and multicast.
+Source: `Source/patches/foundry_merchant.json`
 
-Patch source:
+### `/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_AddEnchantedAffix`
 
-`Source/patches/foundry_merchant.json`
+- inserts a six-affix `CanInteract` guard using native `AWeapon.AffixAmount`;
+- preserves existing vanilla validity / current-row checks and purchase event.
 
-## Planned graft/editor assets
+Source: `tools/patch_foundry_interactive.py`
 
-Ground-donor interaction assets are not listed as production modifications until their mutation/consumption path is committed to the production builder.
+## Diagnostic-only assets
+
+Phase 3 additionally overrode:
+
+- `/Game/Data/DT_Weapons`;
+- `/Game/Data/DT_PlayerSkills`.
+
+Those starter-HandGun overrides are not present in the production release candidate.
+
+## Planned donor assets
+
+The expanded raw-handoff target list includes the weapon-tooltip, weapon-spawner, player-controller and related interaction assets needed to finish donor-row selection. They are not production overrides yet.
 
 ## Vanilla assets
 
-Weapon Foundry source control and release packages do not include the user's extracted vanilla `.uasset/.uexp` game files.
+Release packages do not contain the user's extracted vanilla `.uasset/.uexp` files.
