@@ -27,6 +27,9 @@ jobs:
           python3 tools/build_catalog.py
           python3 tools/extract_runtime_seams.py
 
+      - name: Run research tests
+        run: python3 -m unittest discover -s tests -v
+
       - name: Validate generated JSON
         run: |
           python3 - <<'PY'
