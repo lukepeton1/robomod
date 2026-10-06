@@ -14,6 +14,7 @@ from disassemble_uassetapi import PackageResolver, function_summary, inline  # n
 from patch_fragmentation_bytecode import patch as patch_fragmentation, verify as verify_fragmentation  # noqa: E402
 from patch_uassetapi_cdo import apply as patch_cdo, verify as verify_cdo  # noqa: E402
 from kismet_layout import expression_size, insert_top_level_statements, script_size, validate_asset  # noqa: E402
+from patch_foundry_interactive import patch as patch_foundry_interactive, verify as verify_foundry_interactive  # noqa: E402
 
 
 def row_handle(field: str, row_name: str) -> dict:
@@ -565,6 +566,93 @@ class KismetLayoutTests(unittest.TestCase):
             }],
         }
         self.assertTrue(validate_asset(asset)["verified"])
+
+
+
+class FoundryInteractivePatchTests(unittest.TestCase):
+    def test_affix_count_guard_inserts_and_rebases(self):
+        imports = [
+            {
+                "$type": "UAssetAPI.Import, UAssetAPI",
+                "ObjectName": "/Script/Engine",
+                "OuterIndex": 0,
+                "ClassPackage": "/Script/CoreUObject",
+                "ClassName": "Package",
+                "PackageName": None,
+                "bImportOptional": False,
+            },
+            {
+                "$type": "UAssetAPI.Import, UAssetAPI",
+                "ObjectName": "KismetMathLibrary",
+                "OuterIndex": -1,
+                "ClassPackage": "/Script/CoreUObject",
+                "ClassName": "Class",
+                "PackageName": None,
+                "bImportOptional": False,
+            },
+            {
+                "$type": "UAssetAPI.Import, UAssetAPI",
+                "ObjectName": "Character_Player",
+                "OuterIndex": -1,
+                "ClassPackage": "/Script/CoreUObject",
+                "ClassName": "Class",
+                "PackageName": None,
+                "bImportOptional": False,
+            },
+            {
+                "$type": "UAssetAPI.Import, UAssetAPI",
+                "ObjectName": "AWeapon",
+                "OuterIndex": -1,
+                "ClassPackage": "/Script/CoreUObject",
+                "ClassName": "Class",
+                "PackageName": None,
+                "bImportOptional": False,
+            },
+        ]
+        code = [
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_JumpIfNot, UAssetAPI",
+                "CodeOffset": 11,
+                "BooleanExpression": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_True, UAssetAPI",
+                },
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Return, UAssetAPI",
+                "ReturnExpression": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Nothing, UAssetAPI",
+                },
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_EndOfScript, UAssetAPI",
+            },
+        ]
+        # JumpIfNot is 6 bytes, Return is 2; target the EndOfScript at byte 8.
+        code[0]["CodeOffset"] = 8
+        asset = {
+            "NameMap": ["CanInteract", "PlayerCharacter", "currentWeapon", "AffixAmount"],
+            "NamesReferencedFromExportDataCount": 4,
+            "Imports": imports,
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+                "ObjectName": "CanInteract",
+                "ScriptBytecodeRaw": [],
+                "ScriptBytecodeSize": script_size(code),
+                "ScriptBytecode": code,
+            }],
+        }
+
+        patched, report = patch_foundry_interactive(asset, 6)
+        self.assertEqual(report["old_false_target"], 8)
+        self.assertGreater(report["inserted_byte_count"], 0)
+        self.assertIn("Less_IntInt", patched["NameMap"])
+        self.assertEqual(patched["Imports"][-1]["ObjectName"], "Less_IntInt")
+        self.assertEqual(
+            patched["Exports"][0]["ScriptBytecode"][1]["CodeOffset"],
+            8 + report["inserted_byte_count"],
+        )
+        self.assertTrue(verify_foundry_interactive(patched, 6)["verified"])
+        self.assertTrue(validate_asset(patched)["verified"])
 
 
 class DisassemblerTests(unittest.TestCase):
