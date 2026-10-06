@@ -28,14 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MATRIX = ROOT / "Source/grafting/compatibility_matrix.json"
 DEFAULT_TRANSFER = ROOT / "Source/grafting/transfer_policy.json"
 DEFAULT_TRANSACTION = ROOT / "Source/grafting/graft_transaction.json"
-
-QUALITY_CAPS = {
-    0: 0,  # Common: Foundry ordinary-affix grafting disabled
-    1: 3,
-    2: 4,
-    3: 5,
-    4: 6,
-}
+DEFAULT_PROGRESSION = ROOT / "Source/grafting/progression_policy.json"
 
 
 class GraftRuleError(RuntimeError):
@@ -63,10 +56,12 @@ class GraftRules:
         matrix: dict[str, Any],
         transfer: dict[str, Any],
         transaction: dict[str, Any] | None = None,
+        progression: dict[str, Any] | None = None,
     ):
         self.matrix = matrix
         self.transfer = transfer
         self.transaction = transaction or {}
+        self.progression = progression or {}
         self.properties = {
             row["row"]: row
             for row in matrix.get("properties", [])
@@ -82,6 +77,7 @@ class GraftRules:
             load_json(DEFAULT_MATRIX),
             load_json(DEFAULT_TRANSFER),
             load_json(DEFAULT_TRANSACTION),
+            load_json(DEFAULT_PROGRESSION),
         )
 
     def quality_cap(self, quality_color: int) -> int:
@@ -89,11 +85,13 @@ class GraftRules:
             quality_color = int(quality_color)
         except (TypeError, ValueError) as exc:
             raise GraftRuleError("quality_color must be an integer") from exc
-        if quality_color not in QUALITY_CAPS:
+        raw_caps = self.progression.get("quality_color_caps") or {}
+        caps = {int(key): int(value) for key, value in raw_caps.items()}
+        if quality_color not in caps:
             raise GraftRuleError(
-                f"unsupported quality color {quality_color}; expected one of {sorted(QUALITY_CAPS)}"
+                f"unsupported quality color {quality_color}; expected one of {sorted(caps)}"
             )
-        return QUALITY_CAPS[quality_color]
+        return caps[quality_color]
 
     def power_cell_cost(
         self,
@@ -107,7 +105,13 @@ class GraftRules:
             raise GraftRuleError(f"row is not transferable: {row_id}")
 
         base = int(transfer["cell_cost_base"])
-        complexity = max(0, int(current_affix_count) - 2)
+        free_affixes = int(
+            self.progression.get("power_cell_economy", {}).get(
+                "free_complexity_affixes",
+                2,
+            )
+        )
+        complexity = max(0, int(current_affix_count) - free_affixes)
         duplicate = (
             int(self.transfer["cost_model"].get("duplicate_instance_surcharge", 0))
             if duplicate_instance
