@@ -30,7 +30,7 @@ The generated production policy currently supports:
 - **74** standard Projectile/Raycast weapon chassis for the broad composition primitives;
 - **74** standard chassis for Seeker/Homing through the production raycast→projectile resolver;
 - **15** resolved native elite secondary-fire/weapon-mod rows widened across the standard chassis set;
-- **18** globally safe ordinary affixes exposed through the native Foundry merchant surface;
+- **15** globally safe, pairwise conflict-free ordinary affixes exposed through the native Foundry merchant surface;
 - a **six-affix purchase guard** matching the existing weapon-tooltip capacity.
 
 Unusual `None`/unresolved edge cases remain held back instead of being guessed.
@@ -56,7 +56,7 @@ This non-same-shape Kismet edit is layout-validated and rebases absolute flow of
 
 The first production construction surface reuses Roboquest's existing Perfumer/affix merchant.
 
-Weapon Foundry seeds its native affix pool with the **18 globally safe/generalized ordinary affixes** while retaining:
+Weapon Foundry seeds its native affix pool with the **15 globally safe, pairwise conflict-free ordinary affixes** while retaining:
 
 - the native merchant UI;
 - native Power Cell spending;
@@ -65,7 +65,7 @@ Weapon Foundry seeds its native affix pool with the **18 globally safe/generaliz
 - reliable multicast;
 - native weapon mutation.
 
-A generated transfer policy identifies **50 ordinary affixes** and **15 resolved alt-fires** as target-aware graft candidates while locking identity, enchanted-slot, dependent-upgrade and narrow chassis-specific rows. The random merchant deliberately exposes only the 18 rows safe across the whole standard chassis set.
+A generated transfer policy identifies **50 ordinary affixes** and **15 resolved alt-fires** as target-aware graft candidates while locking identity, enchanted-slot, dependent-upgrade and narrow chassis-specific rows. The random merchant deliberately exposes only the 15 rows safe across the whole standard chassis set.
 
 The intended final ground loop remains:
 
