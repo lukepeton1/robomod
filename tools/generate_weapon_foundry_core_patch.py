@@ -35,9 +35,9 @@ def main():
     projectile = [row for row in burn if hit_by_weapon.get(row) == "EHitType::Projectile"]
 
     operations = [
-        {"op":"remove_row_handles","row":"Burn","field":"RemovedPool","values":["Ice","Shock"],"reason":"Verified independent native elemental tags."},
-        {"op":"remove_row_handles","row":"Ice","field":"RemovedPool","values":["Burn","Shock"],"reason":"Verified independent native elemental tags."},
-        {"op":"remove_row_handles","row":"Shock","field":"RemovedPool","values":["Burn","Ice"],"reason":"Verified independent native elemental tags."},
+        {"op":"remove_row_handles","row":"Burn","field":"RemovedPool","values":["Ice","Shock","Impact"],"reason":"Verified independent native elemental tags; Impact is an independent native stat modifier."},
+        {"op":"remove_row_handles","row":"Ice","field":"RemovedPool","values":["Burn","Shock","Impact"],"reason":"Verified independent native elemental tags; Impact is an independent native stat modifier."},
+        {"op":"remove_row_handles","row":"Shock","field":"RemovedPool","values":["Burn","Ice","Impact"],"reason":"Verified independent native elemental tags; Impact is an independent native stat modifier."},
         {"op":"remove_row_handles","row":"Bounce","field":"RemovedPool","values":["Ricochet"],"reason":"Native traversal states are independent."},
         {"op":"remove_row_handles","row":"Ricochet","field":"RemovedPool","values":["Bounce"],"reason":"Native traversal states are independent."},
         {"op":"remove_row_handles","row":"Pierce","field":"RemovedPool","values":["Explosive2","Explosive3","Explosive4","Explosive5"],"reason":"Native pierce and explosive proc states are independent."},
