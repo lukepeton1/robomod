@@ -265,15 +265,7 @@ Invoke-Python @(
     (Join-Path $reportRoot "fragmentation-bytecode.json")
 )
 
-Write-Host "6/14 Retaining vanilla Seeker bytecode (raycast resolver disabled after runtime crash)..."
-Copy-Item -LiteralPath $homingOriginalJson -Destination $homingPatchedJson -Force
-@{
-    asset = "BP_WA_Homing"
-    resolver_enabled = $false
-    reason = "Synthetic Raycast-to-Projectile resolver disabled after UE4 runtime Unknown code token crash."
-} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $reportRoot "homing-resolver.json") -Encoding UTF8
-
-Write-Host "7/14 Seeding the native merchant with Foundry affix candidates..."
+Write-Host "6/14 Seeker safety rollback: BP_WA_Homing is not included in mod containers."\n\nWrite-Host "7/14 Seeding the native merchant with Foundry affix candidates..."
 Invoke-Python @(
     $cdoPatcher,
     $merchantOriginalJson,
