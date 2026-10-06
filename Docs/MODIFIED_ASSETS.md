@@ -39,9 +39,20 @@ The Phase 3 diagnostic additionally overrode:
 
 to force the starter HandGun into a six-effect projectile test. Those overrides are **not part of the production build**.
 
+### `/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix`
+
+Purpose:
+
+- pre-seed the native merchant's `AffixRows : Array<Name>` with the curated ordinary transferable-affix catalog;
+- preserve the merchant's native random offer generation, Power Cell transaction, UI, player mutation call, server RPC and multicast.
+
+Patch source:
+
+`Source/patches/foundry_merchant.json`
+
 ## Planned graft/editor assets
 
-The merchant/player/interactive packages under investigation are not listed as production modifications until their patch is committed to the production builder.
+Ground-donor interaction assets are not listed as production modifications until their mutation/consumption path is committed to the production builder.
 
 ## Vanilla assets
 
