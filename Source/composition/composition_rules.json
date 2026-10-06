@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "research_contract_not_yet_runtime_patched",
+  "status": "production_release_candidate",
   "guards": {
     "max_generation_depth": 12,
     "max_events_per_root_trigger": 4096
@@ -34,7 +34,9 @@
           "sound",
           "critical_semantics"
         ],
-        "requires_runtime_validation": true
+        "requires_runtime_validation": true,
+        "runtime_implementation": "BP_WA_Homing cooked Kismet patch assigns HitType=Projectile, Speed=ProjectileSpeed, CollisionSize=ProjectileCollisionSize, GravityScale=0 while applied; vanilla OnRemove restores HitType=BaseHitType.",
+        "static_validation": "Kismet layout/rebased absolute-flow verification passes in CI; in-game raycast weapon smoke test still required."
       }
     ]
   },
@@ -100,7 +102,8 @@
       "role": "guidance",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing.BP_WA_Homing_C",
       "native_hit_types_observed": [
-        "EHitType::Projectile"
+        "EHitType::Projectile",
+        "EHitType::Raycast"
       ],
       "blueprint_affected_hit_types": [
         "EHitType::Projectile",
@@ -123,11 +126,21 @@
         "alt_fire_projectile"
       ],
       "spawns_children": false,
-      "runtime_status": "native homing-state mutation verified; no cooked raycast-to-projectile conversion found",
+      "runtime_status": "production resolver implemented in cooked BP_WA_Homing; static Kismet layout and semantic verification pass; in-game raycast Seeker smoke test pending",
       "row_parameters_not_observed_in_blueprint": [
         "ProjectileSpeed",
         "ProjectileCollisionSize"
-      ]
+      ],
+      "resolver": {
+        "on_apply": [
+          "HitType = EHitType::Projectile",
+          "Speed = CustomFloat(ProjectileSpeed)",
+          "CollisionSize = CustomFloat(ProjectileCollisionSize)",
+          "GravityScale = 0"
+        ],
+        "on_remove": "vanilla HitType = BaseHitType",
+        "flow_offsets": "rebased by tools/kismet_layout.py"
+      }
     },
     "Ricochet": {
       "row_ids": [
@@ -261,7 +274,7 @@
         "field": "AProjectile.CustomTag",
         "blocked_value": "Fragmentation"
       },
-      "runtime_status": "native child-projectile path verified; universal use blocked by native gameplay-tag gate"
+      "runtime_status": "production child-projectile path verified in-game; gameplay-tag gate removed; children inherit source ASkill.GameplayTags; child homing remains visually unisolated"
     },
     "Explosive": {
       "row_ids": [
@@ -457,5 +470,32 @@
     "function_exports_with_decoded_script_bytecode": 788,
     "raw_bytecode_fallback_function_exports": 0,
     "verified_date": "2026-10-06"
+  },
+  "production": {
+    "max_foundry_affixes": 6,
+    "standard_weapon_chassis": 74,
+    "seeker_resolved_chassis": 74,
+    "native_alt_fire_rows": 15,
+    "foundry_transferable_affixes": 49,
+    "foundry_transferable_alt_fires": 15,
+    "diagnostic_weapon_overrides_included": false
+  },
+  "production_validation": {
+    "verified_in_game": [
+      "UE4.26 IoStore mod loads",
+      "DT_WeaponAffix override loads",
+      "same-shape Fragmentation Kismet override loads",
+      "Seeker + Fragments + Burn + Explosive + Freewheel + Buckshot diagnostic functions",
+      "Freewheel repeats the complete Buckshot-transformed skill",
+      "fragment Burn/explosion semantics compose",
+      "no obvious recursion/performance collapse in diagnostic"
+    ],
+    "pending_in_game": [
+      "production raycast-to-projectile Seeker resolver",
+      "six-affix Foundry purchase guard",
+      "widened native alt-fire matrix",
+      "run save/load persistence of ordinary Foundry affixes",
+      "host/client multiplayer convergence"
+    ]
   }
 }
