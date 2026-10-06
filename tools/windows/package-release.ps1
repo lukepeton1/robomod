@@ -67,6 +67,9 @@ $sourceFiles = @(
     "Source\composition\alt_fire_skill_profiles.json",
     "Source\grafting\transfer_policy.json",
     "Source\grafting\graft_transaction.json",
+    "Source\grafting\ui_contract.json",
+    "Source\grafting\compatibility_matrix.json",
+    "Source\composition\alt_fire_skill_profiles.json",
     "Source\manifests\production_packages.json",
     "Source\patches\weapon_foundry_core.json",
     "Source\patches\weapon_foundry_mods.json",
@@ -83,6 +86,9 @@ $sourceFiles = @(
     "tools\generate_alt_fire_profiles.py",
     "tools\generate_transfer_policy.py",
     "tools\generate_foundry_merchant.py",
+    "tools\generate_graft_compatibility.py",
+    "tools\generate_alt_fire_profiles.py",
+    "tools\evaluate_graft.py",
     "tools\windows\build-weapon-foundry.ps1"
 )
 foreach ($relative in $sourceFiles) {
