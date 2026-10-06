@@ -10,6 +10,16 @@ echo Repo:      %REPO%
 echo Game root: %RQROOT%
 echo.
 
+echo === Static RC preflight ===
+where python >nul 2>nul
+if not errorlevel 1 (
+  python "%REPO%\tools\validate_release_candidate.py"
+) else (
+  py -3 "%REPO%\tools\validate_release_candidate.py"
+)
+if errorlevel 1 exit /b %ERRORLEVEL%
+
+echo.
 call "%REPO%\tools\windows\run-weapon-foundry.cmd"
 if errorlevel 1 exit /b %ERRORLEVEL%
 
