@@ -15,6 +15,7 @@ from patch_fragmentation_bytecode import patch as patch_fragmentation, verify as
 from patch_uassetapi_cdo import apply as patch_cdo, verify as verify_cdo  # noqa: E402
 from kismet_layout import expression_size, insert_top_level_statements, script_size, validate_asset  # noqa: E402
 from patch_foundry_interactive import patch as patch_foundry_interactive, verify as verify_foundry_interactive  # noqa: E402
+from patch_homing_resolver import patch as patch_homing_resolver, verify as verify_homing_resolver  # noqa: E402
 
 
 def row_handle(field: str, row_name: str) -> dict:
@@ -653,6 +654,137 @@ class FoundryInteractivePatchTests(unittest.TestCase):
         )
         self.assertTrue(verify_foundry_interactive(patched, 6)["verified"])
         self.assertTrue(validate_asset(patched)["verified"])
+
+
+
+def kismet_instance(owner: int, name: str) -> dict:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_InstanceVariable, UAssetAPI",
+        "Variable": {
+            "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+            "New": {
+                "$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI",
+                "Path": [name],
+                "ResolvedOwner": owner,
+            },
+        },
+    }
+
+
+def kismet_context(local_name: str, owner: int, property_name: str) -> dict:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Context, UAssetAPI",
+        "ObjectExpression": kismet_local(local_name),
+        "Offset": 9,
+        "PropertyType": 0,
+        "RValuePointer": {
+            "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+            "New": {
+                "$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI",
+                "Path": [property_name],
+                "ResolvedOwner": owner,
+            },
+        },
+        "ContextExpression": kismet_instance(owner, property_name),
+    }
+
+
+class HomingResolverPatchTests(unittest.TestCase):
+    def test_inserts_projectile_resolver_before_homing_enable(self):
+        # +1 export owner for locals, -1 native ASkill import.
+        hit_restore = {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
+            "Value": {"New": {"Path": ["HitType"], "ResolvedOwner": -1}},
+            "Variable": kismet_context("Skill", -1, "HitType"),
+            "Expression": kismet_context("Skill", -1, "BaseHitType"),
+        }
+        get_custom = {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
+            "Value": {"New": {"Path": ["TmpFloat"], "ResolvedOwner": 1}},
+            "Variable": kismet_local("TmpFloat"),
+            "Expression": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_FinalFunction, UAssetAPI",
+                "StackNode": -2,
+                "Parameters": [{
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_NameConst, UAssetAPI",
+                    "Value": "HomingRange",
+                }],
+            },
+        }
+        set_range = {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
+            "Value": {"New": {"Path": ["HomingRange"], "ResolvedOwner": -1}},
+            "Variable": kismet_context("Skill", -1, "HomingRange"),
+            "Expression": kismet_local("TmpFloat"),
+        }
+        enable = {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LetBool, UAssetAPI",
+            "VariableExpression": kismet_context("Skill", -1, "bHomingProjectile"),
+            "AssignmentExpression": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_True, UAssetAPI",
+            },
+        }
+        code = [
+            hit_restore,
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Jump, UAssetAPI",
+                "CodeOffset": 0,
+            },
+            get_custom,
+            set_range,
+            enable,
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_EndOfScript, UAssetAPI",
+            },
+        ]
+        old_size = script_size(code)
+        code[1]["CodeOffset"] = old_size - 1
+        asset = {
+            "NameMap": [
+                "ExecuteUbergraph_BP_WA_Homing", "HitType", "BaseHitType",
+                "HomingRange", "bHomingProjectile", "HomingAccelerationMagnitude",
+                "HomingDotTolerance",
+            ],
+            "NamesReferencedFromExportDataCount": 7,
+            "Imports": [
+                {
+                    "$type": "UAssetAPI.Import, UAssetAPI",
+                    "ObjectName": "ASkill",
+                    "OuterIndex": 0,
+                    "ClassPackage": "/Script/CoreUObject",
+                    "ClassName": "Class",
+                },
+                {
+                    "$type": "UAssetAPI.Import, UAssetAPI",
+                    "ObjectName": "GetCustomFloatProperties",
+                    "OuterIndex": 0,
+                    "ClassPackage": "/Script/CoreUObject",
+                    "ClassName": "Function",
+                },
+            ],
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+                "ObjectName": "ExecuteUbergraph_BP_WA_Homing",
+                "ScriptBytecodeRaw": [],
+                "ScriptBytecodeSize": old_size,
+                "ScriptBytecode": code,
+            }],
+        }
+
+        patched, report = patch_homing_resolver(asset)
+        self.assertGreater(report["inserted_byte_count"], 0)
+        self.assertTrue(verify_homing_resolver(patched)["verified"])
+        self.assertTrue(validate_asset(patched)["verified"])
+
+        fn = patched["Exports"][0]
+        self.assertGreater(fn["ScriptBytecodeSize"], old_size)
+        # The pre-existing absolute jump points after the insertion and must shift.
+        self.assertEqual(
+            fn["ScriptBytecode"][1]["CodeOffset"],
+            (old_size - 1) + report["inserted_byte_count"],
+        )
+        self.assertIn("ProjectileSpeed", patched["NameMap"])
+        self.assertIn("ProjectileCollisionSize", patched["NameMap"])
 
 
 class DisassemblerTests(unittest.TestCase):
