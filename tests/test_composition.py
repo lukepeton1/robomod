@@ -15,7 +15,7 @@ class CompositionSimulatorTests(unittest.TestCase):
     def test_ray_cast_seeker_resolves_to_projectile(self):
         result = simulate(["Homing"], base_hit_type="EHitType::Raycast", rules=self.rules)
         self.assertEqual(result["resolved_hit_type"], "EHitType::Projectile")
-        self.assertTrue(any("Seeker" in x for x in result["conversions"]))
+        self.assertTrue(any("Homing" in x for x in result["conversions"]))
 
     def test_freewheel_duplicates_complete_buckshot_shape(self):
         result = simulate(["FreeShot", "AutoShotgun"], rules=self.rules)
