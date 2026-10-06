@@ -66,6 +66,7 @@ $sourceFiles = @(
     "Source\composition\composition_rules.json",
     "Source\composition\alt_fire_skill_profiles.json",
     "Source\grafting\transfer_policy.json",
+    "Source\grafting\progression_policy.json",
     "Source\grafting\graft_transaction.json",
     "Source\grafting\ui_contract.json",
     "Source\grafting\compatibility_matrix.json",
