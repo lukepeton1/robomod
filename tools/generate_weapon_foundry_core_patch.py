@@ -26,7 +26,7 @@ def main():
         primary = next((s for s in skill_links if s.get("action") == "EAction::PrimaryFire"), None)
         primary = primary or (skill_links[0] if skill_links else None)
         skill = skill_by_row.get((primary or {}).get("skill_row"))
-        hit_by_weapon[weapon["row"]] = (skill or {}).get("hit_type")
+        hit_by_weapon[weapon["row"]] = (skill or {}).get("target_detection")
 
     standard = [
         row for row in burn
