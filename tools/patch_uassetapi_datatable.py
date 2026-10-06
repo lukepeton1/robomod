@@ -23,6 +23,34 @@ def load(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def ensure_name_map(asset: dict[str, Any], names: list[str]) -> list[str]:
+    """Register newly introduced FName values before UAssetAPI deserialization/write.
+
+    UAssetAPI JSON represents FNames as strings, but a string not present in the
+    package-level NameMap deserializes as a Dummy FName. Dummy FNames cannot be
+    written once serialization begins. Adding the names here mirrors
+    UAsset.AddNameReference(...): append each unique string and update
+    NamesReferencedFromExportDataCount so retoc's Zen conversion sees it.
+    """
+    name_map = asset.get("NameMap")
+    if not isinstance(name_map, list):
+        raise PatchError("asset has no JSON NameMap list")
+
+    added: list[str] = []
+    existing = set(str(x) for x in name_map)
+    for name in names:
+        if not isinstance(name, str) or not name or name in existing:
+            continue
+        name_map.append(name)
+        existing.add(name)
+        added.append(name)
+
+    if added:
+        asset["NamesReferencedFromExportDataCount"] = len(name_map)
+
+    return added
+
+
 def data_rows(asset: dict[str, Any]) -> list[dict[str, Any]]:
     exports = asset.get("Exports", [])
     tables = [x for x in exports if "DataTableExport" in str(x.get("$type", ""))]
@@ -208,6 +236,7 @@ def apply_copy_array(
 
 
 def apply_set_value(
+    asset: dict[str, Any],
     row: dict[str, Any],
     field: str,
     value: Any,
@@ -215,14 +244,26 @@ def apply_set_value(
     prop = property_by_name(row, field)
     before = copy.deepcopy(prop.get("Value"))
     prop["Value"] = copy.deepcopy(value)
+
+    added_names: list[str] = []
+    property_type = str(prop.get("$type", ""))
+    if isinstance(value, str) and (
+        "NamePropertyData" in property_type
+        or "EnumPropertyData" in property_type
+        or "BytePropertyData" in property_type
+    ):
+        added_names = ensure_name_map(asset, [value])
+
     return {
         "before": before,
         "after": copy.deepcopy(prop.get("Value")),
         "property_type": prop.get("$type"),
+        "name_map_added": added_names,
     }
 
 
 def apply_replace_row_handles(
+    asset: dict[str, Any],
     row: dict[str, Any],
     field: str,
     values: list[str],
@@ -269,6 +310,8 @@ def apply_replace_row_handles(
         replacement.append(item)
 
     prop["Value"] = replacement
+    added_names = ensure_name_map(asset, values)
+
     if not replacement and not prop.get("DummyStruct"):
         dummy = copy.deepcopy(template)
         dummy["Value"] = []
@@ -278,6 +321,9 @@ def apply_replace_row_handles(
         "before": before,
         "after": [row_handle_name(x) for x in prop["Value"]],
         "replacement_count": len(replacement),
+        "name_map_added": added_names,
+        "name_map_count": len(asset.get("NameMap") or []),
+        "names_referenced_from_export_data_count": asset.get("NamesReferencedFromExportDataCount"),
     }
 
 
@@ -312,12 +358,14 @@ def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], 
             )
         elif op.get("op") == "set_value":
             detail = apply_set_value(
+                patched,
                 by_name[row_name],
                 str(op["field"]),
                 op.get("value"),
             )
         elif op.get("op") == "replace_row_handles":
             detail = apply_replace_row_handles(
+                patched,
                 by_name[row_name],
                 str(op["field"]),
                 [str(x) for x in op.get("values", [])],
