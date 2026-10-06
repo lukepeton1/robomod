@@ -39,7 +39,7 @@ Intended ground-loop interaction:
 
 Locked properties include chassis identity and narrow/special variants. Dependent upgrade rows are not directly grafted away from their parent affix.
 
-The generated transfer policy currently marks 49 ordinary affixes and 15 resolved alt-fires as candidate transferable rows. This is policy data; the live graft transaction is still being implemented.
+The generated transfer policy currently marks 50 ordinary affixes and 15 resolved alt-fires as candidate transferable rows. This is policy data; the live graft transaction is still being implemented.
 
 ## Smith / editor
 
@@ -70,8 +70,8 @@ These are tuning values, not architectural constants.
 
 The first production construction surface deliberately reuses Roboquest's existing Perfumer/affix merchant rather than adding a detached mod menu.
 
-Weapon Foundry pre-seeds the merchant's native `AffixRows` array with the 17 ordinary affixes that are safe/generalized across the full standard chassis set. Vanilla initialization still appends the normal enchanted rows. Offer selection, tooltip UI, Power Cell price, player mutation call, server RPC and multicast remain native.
+Weapon Foundry pre-seeds the merchant's native `AffixRows` array with the 18 ordinary affixes that are safe/generalized across the full standard chassis set. Vanilla initialization still appends the normal enchanted rows. Offer selection, tooltip UI, Power Cell price, player mutation call, server RPC and multicast remain native.
 
-The broader 49-affix transfer catalog is deliberately **not** dumped into this random merchant: target-specific rows are reserved for donor GRAFT, where the actual target weapon can be validated first.
+The broader 50-affix transfer catalog is deliberately **not** dumped into this random merchant: target-specific rows are reserved for donor GRAFT, where the actual target weapon can be validated first.
 
 This is not the final donor-ground GRAFT UX, but it makes the composition loop available through ordinary runs while the donor interaction is built.
