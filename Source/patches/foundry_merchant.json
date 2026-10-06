@@ -3,10 +3,11 @@
   "name": "weapon-foundry-merchant",
   "target": "Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix",
   "status": "production",
-  "purpose": "Seed the vanilla Perfumer/affix merchant with only globally safe ordinary Foundry affixes. Target-specific transferable rows remain reserved for the future donor GRAFT flow, which can validate the target weapon before mutation.",
+  "purpose": "Seed the vanilla Perfumer/affix merchant with only globally safe, pairwise conflict-free ordinary Foundry affixes. Target-specific or mutually exclusive transferable rows remain reserved for deterministic GRAFT/Smith, which validates the actual target weapon before mutation.",
   "policy": {
     "full_transferable_affix_count": 50,
-    "global_merchant_affix_count": 18,
+    "chassis_safe_candidate_count": 18,
+    "global_merchant_affix_count": 15,
     "minimum_vanilla_weapon_coverage": 74,
     "explicit_generalized_rows_allowed": [
       "AutoShotgun",
@@ -17,6 +18,25 @@
       "Homing",
       "Pierce",
       "Ricochet"
+    ],
+    "excluded_global_conflict_rows": [
+      "BossDamage",
+      "FlyDamage",
+      "TurretDamage"
+    ],
+    "excluded_global_conflict_pairs": [
+      [
+        "BossDamage",
+        "FlyDamage"
+      ],
+      [
+        "BossDamage",
+        "TurretDamage"
+      ],
+      [
+        "FlyDamage",
+        "TurretDamage"
+      ]
     ]
   },
   "operations": [
@@ -27,12 +47,10 @@
       "values": [
         "AutoCritical",
         "AutoShotgun",
-        "BossDamage",
         "Bounce",
         "Burn",
         "ExplosiveBlank",
         "Firerate",
-        "FlyDamage",
         "Fragmentation",
         "FreeShot",
         "Homing",
@@ -41,8 +59,7 @@
         "MarkDamage",
         "Pierce",
         "Ricochet",
-        "Shock",
-        "TurretDamage"
+        "Shock"
       ]
     }
   ]
