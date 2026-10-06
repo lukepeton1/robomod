@@ -466,8 +466,9 @@ def verify(asset: dict[str, Any]) -> dict[str, Any]:
     label_present = False
     count_text_used = False
 
-    for expr in fn.get("ScriptBytecode") or []:
-        if str(expr.get("$type", "")).endswith("EX_CallMath, UAssetAPI"):
+    for expr in walk(fn.get("ScriptBytecode") or []):
+        expr_type = str(expr.get("$type", "")).split(",", 1)[0].rsplit(".", 1)[-1]
+        if expr_type in {"EX_CallMath", "EX_FinalFunction"}:
             call = object_name(asset, expr.get("StackNode"))
             if call:
                 calls.append(call)
