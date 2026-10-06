@@ -86,6 +86,44 @@ def verify_applied(asset: dict, spec: dict) -> list[dict]:
                     f"operation {index}: {row_name}.{op['field']} does not match "
                     f"{source_row_name}.{op.get('source_field') or op['field']}"
                 )
+        elif op.get("op") == "set_value":
+            prop = property_by_name(row, str(op["field"]))
+            current = prop.get("Value")
+            expected = op.get("value")
+            matches = current == expected
+            results.append({
+                "operation_index": index,
+                "op": op.get("op"),
+                "row": row_name,
+                "field": op["field"],
+                "current_value": current,
+                "expected_value": expected,
+                "matches": matches,
+            })
+            if not matches:
+                errors.append(
+                    f"operation {index}: {row_name}.{op['field']} is {current!r}, expected {expected!r}"
+                )
+
+        elif op.get("op") == "replace_row_handles":
+            prop = property_by_name(row, str(op["field"]))
+            current = [row_handle_name(x) for x in prop.get("Value", [])]
+            expected = [str(x) for x in op.get("values", [])]
+            matches = current == expected
+            results.append({
+                "operation_index": index,
+                "op": op.get("op"),
+                "row": row_name,
+                "field": op["field"],
+                "current_values": current,
+                "expected_values": expected,
+                "matches": matches,
+            })
+            if not matches:
+                errors.append(
+                    f"operation {index}: {row_name}.{op['field']} is {current}, expected {expected}"
+                )
+
         else:
             errors.append(f"operation {index}: unsupported verification op {op.get('op')!r}")
 
