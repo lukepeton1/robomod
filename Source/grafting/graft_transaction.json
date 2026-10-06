@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-graft-transaction",
+  "currency": "Power Cells",
+  "authority": "server",
+  "request": {
+    "required": [
+      "target_weapon",
+      "donor_weapon",
+      "property_kind",
+      "row_id"
+    ],
+    "property_kind": [
+      "affix",
+      "weapon_mod"
+    ],
+    "client_supplied_fields": [
+      "target_weapon",
+      "donor_weapon",
+      "property_kind",
+      "row_id"
+    ],
+    "server_derived_fields": [
+      "ownership",
+      "donor_contents",
+      "transferability",
+      "cost",
+      "target_complexity",
+      "compatibility"
+    ]
+  },
+  "validation_order": [
+    {
+      "id": "distinct_weapons",
+      "rule": "target_weapon != donor_weapon",
+      "failure": "same_weapon"
+    },
+    {
+      "id": "ownership",
+      "rule": "requesting player currently owns/controls target and donor interaction is valid",
+      "failure": "invalid_ownership"
+    },
+    {
+      "id": "donor_contains_row",
+      "rule": "donor actually contains requested row in the requested property kind",
+      "failure": "donor_missing_property"
+    },
+    {
+      "id": "transferable",
+      "rule": "row exists in transfer_policy.transferable",
+      "failure": "locked_property"
+    },
+    {
+      "id": "target_compatibility",
+      "rule": "resolved hit-model/skill requirements are satisfied or a verified resolver exists",
+      "failure": "incompatible_target"
+    },
+    {
+      "id": "duplicate_policy",
+      "rule": "duplicate row is absent unless that row has verified duplicate-instance semantics",
+      "failure": "duplicate_not_supported"
+    },
+    {
+      "id": "funds",
+      "rule": "player Power Cells >= server-computed cost",
+      "failure": "insufficient_power_cells"
+    }
+  ],
+  "cost": {
+    "source": "Source/grafting/transfer_policy.json",
+    "formula": "base_cost + max(0, transferable_affix_count - 2) + duplicate_instance_surcharge_if_applicable",
+    "charge_timing": "after all validation and immediately before mutation inside the authoritative transaction",
+    "refund_on_failed_mutation": true
+  },
+  "commit_order": [
+    "reserve/debit Power Cells",
+    "mutate target through native weapon-affix/skill storage",
+    "verify target reports new row and resolved context rebuild succeeds",
+    "consume donor weapon",
+    "replicate/multicast resulting weapon state",
+    "mark run-save state dirty"
+  ],
+  "rollback": [
+    "if target mutation fails: refund Power Cells; donor remains",
+    "if target verification fails: revert target mutation when native API permits; refund Power Cells; donor remains",
+    "donor is never consumed before target mutation verifies"
+  ],
+  "idempotency": {
+    "key_components": [
+      "player_network_identity",
+      "donor_network_identity",
+      "target_network_identity",
+      "interaction_sequence"
+    ],
+    "rule": "server rejects a previously committed transaction key"
+  },
+  "save_requirements": [
+    "target chassis identity unchanged",
+    "grafted row IDs/custom parameters persist",
+    "donor absence persists",
+    "Power Cell debit persists"
+  ],
+  "multiplayer_requirements": [
+    "client never directly debits currency",
+    "client never directly destroys donor",
+    "host/server validates donor contents and target legality",
+    "all modded peers converge on target weapon state before donor disappears"
+  ]
+}
