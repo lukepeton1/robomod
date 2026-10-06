@@ -268,6 +268,87 @@ class GraftRules:
             property=prop,
         )
 
+    def plan_donor(
+        self,
+        *,
+        target_weapon: str,
+        donor_rows: Iterable[str],
+        existing_affix_rows: Iterable[str] = (),
+        existing_weapon_mod_rows: Iterable[str] = (),
+        current_affix_count: int | None = None,
+        quality_color: int = 0,
+        available_power_cells: int | None = None,
+    ) -> dict[str, Any]:
+        donor = _dedupe(donor_rows)
+        choices = [
+            self.evaluate(
+                target_weapon=target_weapon,
+                row_id=row_id,
+                existing_affix_rows=existing_affix_rows,
+                existing_weapon_mod_rows=existing_weapon_mod_rows,
+                current_affix_count=current_affix_count,
+                quality_color=quality_color,
+                available_power_cells=available_power_cells,
+                donor_rows=donor,
+            )
+            for row_id in donor
+        ]
+        choices.sort(
+            key=lambda result: (
+                not result["allowed"],
+                (result.get("cost") or {}).get("total", 10**9),
+                result["row_id"],
+            )
+        )
+        return {
+            "mode": "donor",
+            "target_weapon": target_weapon,
+            "quality_color": int(quality_color),
+            "donor_rows": donor,
+            "allowed_count": sum(result["allowed"] for result in choices),
+            "blocked_count": sum(not result["allowed"] for result in choices),
+            "choices": choices,
+        }
+
+    def plan_smith(
+        self,
+        *,
+        target_weapon: str,
+        existing_affix_rows: Iterable[str] = (),
+        existing_weapon_mod_rows: Iterable[str] = (),
+        current_affix_count: int | None = None,
+        quality_color: int = 0,
+        available_power_cells: int | None = None,
+    ) -> dict[str, Any]:
+        choices = [
+            self.evaluate(
+                target_weapon=target_weapon,
+                row_id=row_id,
+                existing_affix_rows=existing_affix_rows,
+                existing_weapon_mod_rows=existing_weapon_mod_rows,
+                current_affix_count=current_affix_count,
+                quality_color=quality_color,
+                available_power_cells=available_power_cells,
+            )
+            for row_id in sorted(self.transferable)
+        ]
+        choices.sort(
+            key=lambda result: (
+                not result["allowed"],
+                result.get("kind") or "",
+                (result.get("cost") or {}).get("total", 10**9),
+                result["row_id"],
+            )
+        )
+        return {
+            "mode": "smith",
+            "target_weapon": target_weapon,
+            "quality_color": int(quality_color),
+            "allowed_count": sum(result["allowed"] for result in choices),
+            "blocked_count": sum(not result["allowed"] for result in choices),
+            "choices": choices,
+        }
+
     @staticmethod
     def _result(
         *,
