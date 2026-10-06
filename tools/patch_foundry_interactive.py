@@ -127,6 +127,17 @@ def find_function(asset: dict[str, Any], name: str) -> tuple[int, dict[str, Any]
     return matches[0]
 
 
+def find_class_export_index(asset: dict[str, Any]) -> int:
+    matches = [
+        i + 1
+        for i, exp in enumerate(asset.get("Exports", []))
+        if "ClassExport" in str(exp.get("$type", ""))
+    ]
+    if len(matches) != 1:
+        raise PatchError(f"expected exactly one ClassExport, found {len(matches)}")
+    return matches[0]
+
+
 def property_pointer(owner: int, path: str) -> dict[str, Any]:
     return {
         "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
@@ -254,6 +265,87 @@ def build_quality_scaled_condition(
     )
 
 
+def find_return_assignment(fn: dict[str, Any]) -> tuple[int, dict[str, Any]]:
+    code = fn.get("ScriptBytecode") or []
+    matches = []
+    for i, expr in enumerate(code):
+        if str(expr.get("$type", "")).endswith("EX_Let, UAssetAPI"):
+            variable = expr.get("Variable") or {}
+            pointer = (variable.get("Variable") or {}).get("New") or {}
+            if pointer.get("Path") == ["ReturnValue"]:
+                matches.append((i, expr))
+    if len(matches) != 1:
+        raise PatchError(
+            f"expected one ReturnValue EX_Let assignment, found {len(matches)}"
+        )
+    return matches[0]
+
+
+def build_complexity_surcharge(
+    asset: dict[str, Any],
+    function_export_index: int,
+    free_affixes: int,
+) -> dict[str, Any]:
+    subtract_int = add_math_import(asset, "Subtract_IntInt")
+    max_int = add_math_import(asset, "Max_IntInt")
+
+    character_player = require_import(asset, "Character_Player")
+    aweapon = require_import(asset, "AWeapon")
+
+    player = local_variable(function_export_index, "PlayerCharacter")
+    current_weapon = context(player, character_player, "currentWeapon")
+    affix_amount = context(current_weapon, aweapon, "AffixAmount")
+
+    over_free = math_call(
+        subtract_int,
+        [affix_amount, int_const(free_affixes)],
+    )
+    return math_call(
+        max_int,
+        [over_free, int_const(0)],
+    )
+
+
+def patch_ticket_cost(
+    asset: dict[str, Any],
+    free_affixes: int = 2,
+) -> dict[str, Any]:
+    fn_index, fn = find_function(asset, "GetTicketCost")
+    code = fn.get("ScriptBytecode")
+    if not isinstance(code, list) or fn.get("ScriptBytecodeRaw"):
+        raise PatchError("GetTicketCost bytecode is not fully decoded")
+
+    statement_index, assignment = find_return_assignment(fn)
+    original_base_price = copy.deepcopy(assignment.get("Expression"))
+    if not isinstance(original_base_price, dict):
+        raise PatchError("GetTicketCost ReturnValue assignment has no expression")
+
+    add_int = add_math_import(asset, "Add_IntInt")
+    surcharge = build_complexity_surcharge(asset, fn_index, free_affixes)
+    assignment["Expression"] = math_call(
+        add_int,
+        [original_base_price, surcharge],
+    )
+
+    old_size = fn.get("ScriptBytecodeSize")
+    new_size = sum(expression_size(expr) for expr in code)
+    fn["ScriptBytecodeSize"] = new_size
+
+    return {
+        "function": "GetTicketCost",
+        "statement_index": statement_index,
+        "free_affixes": free_affixes,
+        "formula": "native_EnchantedAffixPrice + max(0, AffixAmount - free_affixes)",
+        "old_script_size": old_size,
+        "new_script_size": new_size,
+        "delta": new_size - old_size,
+        "imports": {
+            name: import_index(asset, name)
+            for name in ("Add_IntInt", "Subtract_IntInt", "Max_IntInt")
+        },
+    }
+
+
 def patch(
     asset: dict[str, Any],
     max_affixes: int,
@@ -294,6 +386,7 @@ def patch(
     guard["CodeOffset"] = old_false_target + delta
 
     report = insert_top_level_statements(fn, 0, [guard])
+    ticket_cost = patch_ticket_cost(patched, free_affixes=base_affixes)
     validate_asset(patched)
 
     report.update({
@@ -311,6 +404,7 @@ def patch(
         },
         "old_false_target": old_false_target,
         "new_false_target": guard["CodeOffset"],
+        "ticket_cost": ticket_cost,
         "imports": {
             name: import_index(patched, name)
             for name in (
@@ -324,6 +418,59 @@ def patch(
         },
     })
     return patched, report
+
+
+def verify_ticket_cost(
+    asset: dict[str, Any],
+    free_affixes: int = 2,
+) -> dict[str, Any]:
+    _, fn = find_function(asset, "GetTicketCost")
+    _, assignment = find_return_assignment(fn)
+    expr = assignment.get("Expression") or {}
+
+    add_int = import_index(asset, "Add_IntInt")
+    subtract_int = import_index(asset, "Subtract_IntInt")
+    max_int = import_index(asset, "Max_IntInt")
+    if None in (add_int, subtract_int, max_int):
+        raise PatchError("Foundry ticket-cost math imports missing")
+    if expr.get("StackNode") != add_int:
+        raise PatchError("Foundry ticket cost is not native base + surcharge")
+
+    params = expr.get("Parameters") or []
+    if len(params) != 2:
+        raise PatchError("Foundry ticket-cost Add_IntInt shape changed")
+
+    surcharge = params[1]
+    if surcharge.get("StackNode") != max_int:
+        raise PatchError("Foundry ticket cost missing non-negative surcharge")
+    max_params = surcharge.get("Parameters") or []
+    if len(max_params) != 2 or max_params[1].get("Value") != 0:
+        raise PatchError("Foundry ticket-cost Max_IntInt shape changed")
+
+    subtract = max_params[0]
+    if subtract.get("StackNode") != subtract_int:
+        raise PatchError("Foundry ticket cost missing AffixAmount subtraction")
+    sub_params = subtract.get("Parameters") or []
+    if len(sub_params) != 2 or sub_params[1].get("Value") != free_affixes:
+        raise PatchError("Foundry ticket-cost free-affix threshold changed")
+
+    serialized = json.dumps(expr, separators=(",", ":"))
+    for token in (
+        '"EnchantedAffixPrice"',
+        '"PlayerCharacter"',
+        '"currentWeapon"',
+        '"AffixAmount"',
+    ):
+        if token not in serialized:
+            raise PatchError(f"Foundry ticket cost missing path token {token}")
+
+    return {
+        "verified": True,
+        "function": "GetTicketCost",
+        "free_affixes": free_affixes,
+        "formula": "native_EnchantedAffixPrice + max(0, AffixAmount - free_affixes)",
+        "script_bytecode_size": fn.get("ScriptBytecodeSize"),
+    }
 
 
 def verify(
@@ -391,6 +538,8 @@ def verify(
     if base_affixes + 4 != max_affixes:
         raise PatchError("Foundry max/base configuration inconsistent")
 
+    ticket_cost = verify_ticket_cost(asset, free_affixes=base_affixes)
+
     return {
         "verified": True,
         "asset": CDO_ASSET,
@@ -407,6 +556,7 @@ def verify(
         },
         "script_bytecode_size": fn.get("ScriptBytecodeSize"),
         "guard_size": expression_size(first),
+        "ticket_cost": ticket_cost,
     }
 
 
