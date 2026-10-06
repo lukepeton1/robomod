@@ -53,10 +53,6 @@ def main():
             "op":"replace_name_array","row":row,"field":"Weapons","values":standard,
             "reason":"Broaden verified standard hit-model composition primitives across projectile/raycast weapon chassis while excluding None/AIM/unknown edge cases."
         })
-    operations.append({
-        "op":"replace_name_array","row":"Homing","field":"Weapons","values":standard,
-        "reason":"Broaden Seeker across standard Projectile/Raycast chassis; production BP_WA_Homing now resolves live Raycast skills to Projectile while the affix is applied."
-    })
 
     payload = {
         "schema_version": 1,
