@@ -45,6 +45,7 @@ jobs:
           python3 tools/generate_alt_fire_profiles.py
           python3 tools/generate_raycast_seeker_probe.py
           python3 tools/generate_graft_compatibility.py
+          python3 tools/generate_donor_identity.py
 
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
@@ -75,4 +76,5 @@ jobs:
             Source/patches/weapon_foundry_mods.json \
             Source/probes/raycast_seeker_eligibility.json \
             Source/composition/alt_fire_skill_profiles.json \
-            Source/grafting/compatibility_matrix.json
+            Source/grafting/compatibility_matrix.json \\
+            Source/grafting/donor_identity_catalog.json
