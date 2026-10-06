@@ -1,0 +1,1124 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-donor-runtime-identity",
+  "runtime_model": {
+    "enumeration": "enumerate live AWeaponAffix instances and keep only instances whose WeaponRef equals the donor AWeapon",
+    "class_identity": "GetObjectClass(AWeaponAffix instance)",
+    "custom_identity": "AWeaponAffix.GetCustomFloatProperties(Name); absent keys are treated as 0",
+    "enchanted_disambiguation": "AWeapon.GetCurrentEnchantedAffixRowName()",
+    "chassis_identity": "AWeapon.GetDataRowName(); use native/chassis affix provenance to exclude non-transferable base/internal rows",
+    "source_of_truth": "row IDs and runtime signatures come from DT_WeaponAffix/DT_WeaponMod generated catalogs; never infer row identity from tooltip/display strings",
+    "failure_policy": "fail closed when an active locked row shares a signature and provenance cannot distinguish the instance"
+  },
+  "summary": {
+    "transferable_rows": 65,
+    "exact_signature_rows": 50,
+    "context_guarded_rows": 15,
+    "class_discriminator_groups": 4
+  },
+  "class_discriminators": [
+    {
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AmmoInClip.BP_WA_AmmoInClip_C",
+      "keys": [
+        "Value"
+      ],
+      "rows": [
+        "FastAmmoInClip",
+        "MaxCooling",
+        "SlowAmmoInClip"
+      ]
+    },
+    {
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AutoCritical.BP_WA_AutoCritical_C",
+      "keys": [
+        "Luck"
+      ],
+      "rows": [
+        "AutoCritical",
+        "AutoCriticalRare"
+      ]
+    },
+    {
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+      "keys": [
+        "BonusDamage"
+      ],
+      "rows": [
+        "Explosive3",
+        "Explosive4",
+        "Explosive5"
+      ]
+    },
+    {
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TripleShot2.BP_WA_TripleShot2_C",
+      "keys": [
+        "Angle"
+      ],
+      "rows": [
+        "TripleShot2",
+        "TripleShot3"
+      ]
+    }
+  ],
+  "identities": [
+    {
+      "row": "Accuracy",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Accuracy.BP_WA_Accuracy_C",
+      "custom": {
+        "AddRange": 25,
+        "SpreadValue": 25
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "AreaSize",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AreaSize.BP_WA_AreaSize_C",
+      "custom": {
+        "Value": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "AreaSize_Enchanted",
+          "kind": "affix",
+          "active": true,
+          "enchanted": true,
+          "locked_reason": "enchanted_slot_reserved"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "current_enchanted_row",
+          "row": "AreaSize_Enchanted",
+          "rule": "do not identify this transferable row from an instance accounted for by the donor's current enchanted row"
+        }
+      ]
+    },
+    {
+      "row": "AutoCritical",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AutoCritical.BP_WA_AutoCritical_C",
+      "custom": {
+        "IncreaseLuckByFail": 0,
+        "Luck": 10
+      },
+      "class_discriminator_keys": [
+        "Luck"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "AutoCriticalRare",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AutoCritical.BP_WA_AutoCritical_C",
+      "custom": {
+        "IncreaseLuckByFail": 0,
+        "Luck": 20
+      },
+      "class_discriminator_keys": [
+        "Luck"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "AutoShotgun",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_AutoShotgun.BP_WA_AutoShotgun_C",
+      "custom": {
+        "AddHitAmount": 1,
+        "CriticalHitAmount": 5,
+        "FirstHitAmount": 2,
+        "IncreaseLuckByFail": 5,
+        "Luck": 15,
+        "MalusDamage": 70,
+        "MaxHitAmount": 5
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "AutoShotgun_Explosion",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_AutoShotgun_Explosion.BP_WA_AutoShotgun_Explosion_C",
+      "custom": {
+        "AddHitAmount": 1,
+        "CriticalHitAmount": 5,
+        "FirstHitAmount": 2,
+        "IncreaseLuckByFail": 5,
+        "Luck": 15,
+        "MalusDamage": 75,
+        "MaxHitAmount": 5
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "BossDamage",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.BP_WA_BossDamage_C",
+      "custom": {
+        "BonusDamage": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "BossDamage_Enchanted",
+          "kind": "affix",
+          "active": true,
+          "enchanted": true,
+          "locked_reason": "enchanted_slot_reserved"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "current_enchanted_row",
+          "row": "BossDamage_Enchanted",
+          "rule": "do not identify this transferable row from an instance accounted for by the donor's current enchanted row"
+        }
+      ]
+    },
+    {
+      "row": "Bounce",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Bounce.BP_WA_Bounce_C",
+      "custom": {
+        "BounceAmount": 1,
+        "Bounciness": 0.7,
+        "Friction": 0.2
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Burn",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Burn.BP_WA_Burn_C",
+      "custom": {
+        "BurnRatio": 30
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "Burn_Buddybot",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "chassis_or_internal_variant"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "chassis_or_internal_row",
+          "row": "Burn_Buddybot",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        }
+      ]
+    },
+    {
+      "row": "CoolingDamage",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_CoolingDamage.BP_WA_CoolingDamage_C",
+      "custom": {
+        "BonusDamage": 25
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "CoolingDamageBlank",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "chassis_or_internal_variant"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "chassis_or_internal_row",
+          "row": "CoolingDamageBlank",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        }
+      ]
+    },
+    {
+      "row": "Critical",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Critical.BP_WA_Critical_C",
+      "custom": {
+        "BonusCritical": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "Critical_Enchanted",
+          "kind": "affix",
+          "active": true,
+          "enchanted": true,
+          "locked_reason": "enchanted_slot_reserved"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "current_enchanted_row",
+          "row": "Critical_Enchanted",
+          "rule": "do not identify this transferable row from an instance accounted for by the donor's current enchanted row"
+        }
+      ]
+    },
+    {
+      "row": "CriticalChain",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_CriticalChain.BP_WA_CriticalChain_C",
+      "custom": {
+        "Value": 30
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "CriticalExplosion",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_CriticalExplosion.BP_WA_CriticalExplosion_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "ExplosionConcentrated",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_ExplosionConcentrated.BP_WA_ExplosionConcentrated_C",
+      "custom": {
+        "BonusDamage": 10,
+        "MalusRadius": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Explosive3",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+      "custom": {
+        "BonusDamage": 10,
+        "Radius": 240,
+        "ShotAmount": 2
+      },
+      "class_discriminator_keys": [
+        "BonusDamage"
+      ],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "Explosive2",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "narrow_chassis_specific_pool"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "chassis_or_internal_row",
+          "row": "Explosive2",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        }
+      ]
+    },
+    {
+      "row": "Explosive4",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+      "custom": {
+        "BonusDamage": 20,
+        "Radius": 220,
+        "ShotAmount": 3
+      },
+      "class_discriminator_keys": [
+        "BonusDamage"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Explosive5",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+      "custom": {
+        "BonusDamage": 30,
+        "Radius": 200,
+        "ShotAmount": 4
+      },
+      "class_discriminator_keys": [
+        "BonusDamage"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "ExplosiveBlank",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_ExplosiveBlank.BP_WA_ExplosiveBlank_C",
+      "custom": {
+        "Radius": 240
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "FastAmmoInClip",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AmmoInClip.BP_WA_AmmoInClip_C",
+      "custom": {
+        "Value": 25
+      },
+      "class_discriminator_keys": [
+        "Value"
+      ],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "Ammo_Enchanted",
+          "kind": "affix",
+          "active": true,
+          "enchanted": true,
+          "locked_reason": "enchanted_slot_reserved"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "current_enchanted_row",
+          "row": "Ammo_Enchanted",
+          "rule": "do not identify this transferable row from an instance accounted for by the donor's current enchanted row"
+        }
+      ]
+    },
+    {
+      "row": "Firerate",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Firerate.BP_WA_Firerate_C",
+      "custom": {
+        "BonusFirerate": 10
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "Firerate_Enchanted",
+          "kind": "affix",
+          "active": true,
+          "enchanted": true,
+          "locked_reason": "enchanted_slot_reserved"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "current_enchanted_row",
+          "row": "Firerate_Enchanted",
+          "rule": "do not identify this transferable row from an instance accounted for by the donor's current enchanted row"
+        }
+      ]
+    },
+    {
+      "row": "FirstAutocritical",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirstAutoCritical.BP_WA_FirstAutoCritical_C",
+      "custom": {
+        "Value": 100
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "FirstShoot",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirstShoot.BP_WA_FirstShoot_C",
+      "custom": {
+        "Value": 25
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "FlyDamage",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_FlyDamage.BP_WA_FlyDamage_C",
+      "custom": {
+        "BonusDamage": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Fragmentation",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation.BP_WA_Fragmentation_C",
+      "custom": {
+        "DamageRatio": 50,
+        "FragmentationAmount": 3,
+        "IncreaseLuckByFail": 10,
+        "LaunchAngle": 55,
+        "Luck": 25,
+        "ProjectileGravityScale": 1,
+        "ProjectileSpeed": 450,
+        "RadiusRatio": 70
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "FreeShot",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FreeShot.BP_WA_FreeShot_C",
+      "custom": {
+        "Delay": 0.12,
+        "IncreaseLuckByFail": 8,
+        "Luck": 0,
+        "Text_Luck": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "HeavyCooling",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_HeavyCooling.BP_WA_HeavyCooling_C",
+      "custom": {
+        "CoolingPerShotModifier": 10,
+        "DamageModifier": 10
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "HeavyLight",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_HeavyLight.BP_WA_HeavyLight_C",
+      "custom": {
+        "SpeedReduction": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Homing",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing.BP_WA_Homing_C",
+      "custom": {
+        "HomingAccelerationMagnitude": 35000,
+        "HomingDotTolerance": 0.95,
+        "HomingRange": 3000,
+        "ProjectileCollisionSize": 10,
+        "ProjectileSpeed": 12500
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Ice",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ice.BP_WA_Ice_C",
+      "custom": {
+        "ElementalRatio": 90
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "IceBlank",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "chassis_or_internal_variant"
+        },
+        {
+          "row": "Ice_BuddyBot",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "chassis_or_internal_variant"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "chassis_or_internal_row",
+          "row": "IceBlank",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        },
+        {
+          "type": "chassis_or_internal_row",
+          "row": "Ice_BuddyBot",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        }
+      ]
+    },
+    {
+      "row": "Impact",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Impact.BP_WA_Impact_C",
+      "custom": {
+        "BonusImpact": 20
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "LastShoot",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_LastShoot.BP_WA_LastShoot_C",
+      "custom": {
+        "Value": 100
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "LuckyExplosion",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_LuckyExplosion.BP_WA_LuckyExplosion_C",
+      "custom": {
+        "BonusAreaSize": 35,
+        "BonusDamage": 30,
+        "IncreaseLuckByFail": 4,
+        "Luck": 26
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "MarkDamage",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_MarkDamage.BP_WA_MarkDamage_C",
+      "custom": {
+        "BonusDamage": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "MarkDamage_Enchanted",
+          "kind": "affix",
+          "active": false,
+          "enchanted": true,
+          "locked_reason": "inactive_or_separator"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "ignore_inactive_row",
+          "row": "MarkDamage_Enchanted"
+        }
+      ]
+    },
+    {
+      "row": "MaxCooling",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AmmoInClip.BP_WA_AmmoInClip_C",
+      "custom": {
+        "Value": 15
+      },
+      "class_discriminator_keys": [
+        "Value"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Movespeed",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Movespeed.BP_WA_Movespeed_C",
+      "custom": {
+        "BonusSpeed": 8
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "Movespeed_Enchanted",
+          "kind": "affix",
+          "active": true,
+          "enchanted": true,
+          "locked_reason": "enchanted_slot_reserved"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "current_enchanted_row",
+          "row": "Movespeed_Enchanted",
+          "rule": "do not identify this transferable row from an instance accounted for by the donor's current enchanted row"
+        }
+      ]
+    },
+    {
+      "row": "OnCriticalHitFirerate",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.BP_WA_OnCriticalHitFirerate_C",
+      "custom": {
+        "BonusFirerate": 30,
+        "Duration": 2
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "OnKillHealingCell",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C",
+      "custom": {
+        "HealingCellAmount": 6,
+        "IncreaseLuckByFail": 0.5,
+        "Luck": 4.5
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "OverheatSpeed",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_OverheatSpeed.BP_WA_OverheatSpeed_C",
+      "custom": {
+        "OverheatSpeedModifier": 20
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Pierce",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Pierce.BP_WA_Pierce_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "ProjectileRaycast",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_ProjectileRaycast.BP_WA_ProjectileRaycast_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "ProjectileRaycast_BuddyBot",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "chassis_or_internal_variant"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "chassis_or_internal_row",
+          "row": "ProjectileRaycast_BuddyBot",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        }
+      ]
+    },
+    {
+      "row": "ProjectileSpeedCritical",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_ProjectileSpeedCritical.BP_WA_ProjectileSpeedCritical_C",
+      "custom": {
+        "BonusCritical": 25,
+        "BonusProjectileSpeed": 100
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "ReloadSpeed",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_ReloadSpeed.BP_WA_ReloadSpeed_C",
+      "custom": {
+        "ReloadSpeedModifier": 25
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "ReloadSpeed_Enchanted",
+          "kind": "affix",
+          "active": true,
+          "enchanted": true,
+          "locked_reason": "enchanted_slot_reserved"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "current_enchanted_row",
+          "row": "ReloadSpeed_Enchanted",
+          "rule": "do not identify this transferable row from an instance accounted for by the donor's current enchanted row"
+        }
+      ]
+    },
+    {
+      "row": "Resistance",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_ResistanceWhileInHand.BP_WA_ResistanceWhileInHand_C",
+      "custom": {
+        "BonusResistance": 8
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Ricochet",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ricochet.BP_WA_Ricochet_C",
+      "custom": {
+        "IncreaseLuckByFail": 5,
+        "Luck": 25,
+        "RicochetAmount": 1,
+        "RicochetDamageRatio": 75
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Shock",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Shock.BP_WA_Shock_C",
+      "custom": {
+        "ElementalRatio": 90
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "ShockBlank",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "chassis_or_internal_variant"
+        },
+        {
+          "row": "Shock_BuddyBot",
+          "kind": "affix",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "chassis_or_internal_variant"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "chassis_or_internal_row",
+          "row": "ShockBlank",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        },
+        {
+          "type": "chassis_or_internal_row",
+          "row": "Shock_BuddyBot",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        }
+      ]
+    },
+    {
+      "row": "SlowAmmoInClip",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AmmoInClip.BP_WA_AmmoInClip_C",
+      "custom": {
+        "Value": 50
+      },
+      "class_discriminator_keys": [
+        "Value"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "TripleShot2",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TripleShot2.BP_WA_TripleShot2_C",
+      "custom": {
+        "AddHitAmount": 1,
+        "Angle": 50,
+        "CriticalHitAmount": 1,
+        "FirstHitAmount": 1,
+        "MaxHitAmount": 1,
+        "ShotAmount": 2
+      },
+      "class_discriminator_keys": [
+        "Angle"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "TripleShot3",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TripleShot2.BP_WA_TripleShot2_C",
+      "custom": {
+        "AddHitAmount": 1,
+        "Angle": 75,
+        "CriticalHitAmount": 1,
+        "FirstHitAmount": 1,
+        "MaxHitAmount": 1,
+        "ShotAmount": 3
+      },
+      "class_discriminator_keys": [
+        "Angle"
+      ],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "TurretDamage",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TurretDamage.BP_WA_TurretDamage_C",
+      "custom": {
+        "BonusDamage": 15
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Warmup",
+      "kind": "affix",
+      "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Warmup.BP_WA_Warmup_C",
+      "custom": {
+        "ChargeDuration": 1,
+        "text_Firerate": 25
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Barrier",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Barrier.BP_WA_Barrier_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Bayonet",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Bayonet.BP_WA_Bayonet_C",
+      "custom": {
+        "Text_ReportFromModSkill": 3
+      },
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "BlunderMine",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_BlunderMine.BP_WA_BlunderMine_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "ChargedOrb",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_ChargedOrb.BP_WA_ChargedOrb_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "CombiShotgun",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_CombiShotgun.BP_WA_CombiShotgun_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "CombiSniper",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_CombiSniper.BP_WA_CombiSniper_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "DoubleTap",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_DoubleTap.BP_WA_DoubleTap_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "Energize",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Energize.BP_WA_Energize_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "LaserShotgun",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_LaserShotgun.BP_WA_LaserShotgun_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "LongSlash",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_LongSlash.BP_WA_LongSlash_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "MarkExplosion",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_MArkExplosion.BP_WA_MarkExplosion_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "MarkRaycast",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_MarkRaycast.BP_WA_MarkRaycast_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "MissileLauncher",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_MissileLauncher.BP_WA_MissileLauncher_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "PlasmaGrenade",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_PlasmaGrenade.BP_WA_PlasmaGrenade_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_exact",
+      "signature_collisions": [],
+      "context_guards": []
+    },
+    {
+      "row": "RocketJump",
+      "kind": "weapon_mod",
+      "class": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_RocketJump.BP_WA_RocketJump_C",
+      "custom": {},
+      "class_discriminator_keys": [],
+      "identity_mode": "class_custom_plus_context",
+      "signature_collisions": [
+        {
+          "row": "RocketJump_0",
+          "kind": "weapon_mod",
+          "active": true,
+          "enchanted": false,
+          "locked_reason": "narrow_chassis_specific_alt_fire"
+        }
+      ],
+      "context_guards": [
+        {
+          "type": "chassis_or_internal_row",
+          "row": "RocketJump_0",
+          "rule": "subtract chassis/native/internal instances before exposing donor choices; fail closed if provenance is ambiguous"
+        }
+      ]
+    }
+  ]
+}
