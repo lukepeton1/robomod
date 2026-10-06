@@ -1,13 +1,23 @@
 #!/usr/bin/env python3
-"""Patch the Foundry affix purchase interactive with a native AffixAmount cap.
+"""Patch the Foundry affix purchase interactive with a quality-scaled complexity gate.
 
-This is the first Weapon Foundry patch that intentionally inserts a new top-level
-Kismet statement. Absolute flow targets are rebased with tools/kismet_layout.py.
+This patch intentionally inserts a new top-level Kismet statement. Absolute flow
+targets are rebased with tools/kismet_layout.py.
 
 The inserted guard is equivalent to:
 
-    if not (PlayerCharacter.currentWeapon.AffixAmount < max_affixes):
+    color = PlayerCharacter.currentWeapon.CurrentAffixBundle.Color
+    cap = int(color) + base_affixes
+
+    if not (color > 0 and PlayerCharacter.currentWeapon.AffixAmount < cap):
         return false
+
+For Roboquest's observed five color/quality bytes (0..4) and base_affixes=2:
+- Common (0): Foundry ordinary-affix purchase disabled;
+- tier 1: cap 3;
+- tier 2: cap 4;
+- tier 3: cap 5;
+- top tier (4): cap 6.
 
 The existing vanilla checks (valid current weapon and not buying the same current
 enchanted row) remain untouched.
@@ -21,10 +31,8 @@ from pathlib import Path
 from typing import Any
 
 from kismet_layout import (
-    KismetLayoutError,
     expression_size,
     insert_top_level_statements,
-    script_size,
     validate_asset,
 )
 
@@ -87,6 +95,26 @@ def add_math_import(asset: dict[str, Any], function_name: str) -> int:
     return -len(asset["Imports"])
 
 
+def add_roboquest_object_import(asset: dict[str, Any], object_name: str) -> int:
+    existing = import_index(asset, object_name)
+    if existing is not None:
+        return existing
+
+    roboquest = require_import(asset, "/Script/RoboQuest")
+    ensure_name(asset, object_name)
+    entry = {
+        "$type": "UAssetAPI.Import, UAssetAPI",
+        "ObjectName": object_name,
+        "OuterIndex": roboquest,
+        "ClassPackage": "/Script/CoreUObject",
+        "ClassName": "Object",
+        "PackageName": None,
+        "bImportOptional": False,
+    }
+    asset.setdefault("Imports", []).append(entry)
+    return -len(asset["Imports"])
+
+
 def find_function(asset: dict[str, Any], name: str) -> tuple[int, dict[str, Any]]:
     matches = [
         (i + 1, exp)
@@ -128,40 +156,109 @@ def context(object_expression: dict[str, Any], owner: int, path: str) -> dict[st
     return {
         "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Context, UAssetAPI",
         "ObjectExpression": object_expression,
-        "Offset": 9,  # one InstanceVariable expression
+        "Offset": 9,
         "PropertyType": 0,
         "RValuePointer": property_pointer(owner, path),
         "ContextExpression": instance_variable(owner, path),
     }
 
 
-def build_affix_count_condition(
-    asset: dict[str, Any],
-    function_export_index: int,
-    max_affixes: int,
+def struct_member(
+    struct_expression: dict[str, Any],
+    owner: int,
+    path: str,
 ) -> dict[str, Any]:
-    less_int = add_math_import(asset, "Less_IntInt")
-    character_player = require_import(asset, "Character_Player")
-    aweapon = require_import(asset, "AWeapon")
-
-    player = local_variable(function_export_index, "PlayerCharacter")
-    current_weapon = context(player, character_player, "currentWeapon")
-    affix_amount = context(current_weapon, aweapon, "AffixAmount")
-
     return {
-        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
-        "StackNode": less_int,
-        "Parameters": [
-            affix_amount,
-            {
-                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
-                "Value": int(max_affixes),
-            },
-        ],
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_StructMemberContext, UAssetAPI",
+        "StructMemberExpression": property_pointer(owner, path),
+        "StructExpression": struct_expression,
     }
 
 
-def patch(asset: dict[str, Any], max_affixes: int) -> tuple[dict[str, Any], dict[str, Any]]:
+def int_const(value: int) -> dict[str, Any]:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
+        "Value": int(value),
+    }
+
+
+def byte_const(value: int) -> dict[str, Any]:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_ByteConst, UAssetAPI",
+        "Value": int(value),
+    }
+
+
+def math_call(stack_node: int, parameters: list[dict[str, Any]]) -> dict[str, Any]:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
+        "StackNode": stack_node,
+        "Parameters": parameters,
+    }
+
+
+def build_quality_scaled_condition(
+    asset: dict[str, Any],
+    function_export_index: int,
+    base_affixes: int,
+    max_affixes: int,
+) -> dict[str, Any]:
+    if base_affixes < 0:
+        raise PatchError("base_affixes must be >= 0")
+    if base_affixes + 4 != max_affixes:
+        raise PatchError(
+            "quality-scaled gate currently assumes observed color bytes 0..4; "
+            "max_affixes must equal base_affixes + 4"
+        )
+
+    less_int = add_math_import(asset, "Less_IntInt")
+    greater_byte = add_math_import(asset, "Greater_ByteByte")
+    byte_to_int = add_math_import(asset, "Conv_ByteToInt")
+    add_int = add_math_import(asset, "Add_IntInt")
+    boolean_and = add_math_import(asset, "BooleanAND")
+
+    character_player = require_import(asset, "Character_Player")
+    aweapon = require_import(asset, "AWeapon")
+    weapon_affix_rarity = add_roboquest_object_import(asset, "WeaponAffixRarity")
+
+    for name in ("CurrentAffixBundle", "Color", "AffixAmount"):
+        ensure_name(asset, name)
+
+    player = local_variable(function_export_index, "PlayerCharacter")
+    current_weapon = context(player, character_player, "currentWeapon")
+    affix_amount = context(copy.deepcopy(current_weapon), aweapon, "AffixAmount")
+
+    bundle = context(copy.deepcopy(current_weapon), aweapon, "CurrentAffixBundle")
+    color = struct_member(bundle, weapon_affix_rarity, "Color")
+
+    non_common = math_call(
+        greater_byte,
+        [copy.deepcopy(color), byte_const(0)],
+    )
+    color_int = math_call(
+        byte_to_int,
+        [copy.deepcopy(color)],
+    )
+    quality_cap = math_call(
+        add_int,
+        [color_int, int_const(base_affixes)],
+    )
+    under_cap = math_call(
+        less_int,
+        [affix_amount, quality_cap],
+    )
+
+    return math_call(
+        boolean_and,
+        [non_common, under_cap],
+    )
+
+
+def patch(
+    asset: dict[str, Any],
+    max_affixes: int,
+    base_affixes: int = 2,
+) -> tuple[dict[str, Any], dict[str, Any]]:
     patched = copy.deepcopy(asset)
     validate_asset(patched)
 
@@ -170,8 +267,6 @@ def patch(asset: dict[str, Any], max_affixes: int) -> tuple[dict[str, Any], dict
     if not isinstance(code, list) or fn.get("ScriptBytecodeRaw"):
         raise PatchError("CanInteract bytecode is not fully decoded")
 
-    # Vanilla's first JumpIfNot branches to the false-return statement. Preserve that
-    # semantic target instead of hardcoding a package-specific offset.
     vanilla_guard = next(
         (
             expr for expr in code
@@ -184,10 +279,15 @@ def patch(asset: dict[str, Any], max_affixes: int) -> tuple[dict[str, Any], dict
         raise PatchError("could not locate vanilla CanInteract false branch")
     old_false_target = vanilla_guard["CodeOffset"]
 
-    condition = build_affix_count_condition(patched, fn_index, max_affixes)
+    condition = build_quality_scaled_condition(
+        patched,
+        fn_index,
+        base_affixes,
+        max_affixes,
+    )
     guard = {
         "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_JumpIfNot, UAssetAPI",
-        "CodeOffset": 0,  # assigned after delta is known
+        "CodeOffset": 0,
         "BooleanExpression": condition,
     }
     delta = expression_size(guard)
@@ -199,47 +299,112 @@ def patch(asset: dict[str, Any], max_affixes: int) -> tuple[dict[str, Any], dict
     report.update({
         "asset": CDO_ASSET,
         "function": FUNCTION,
+        "guard": "quality_scaled_foundry_complexity",
+        "base_affixes": base_affixes,
         "max_affixes": max_affixes,
+        "quality_caps": {
+            "0": 0,
+            "1": base_affixes + 1,
+            "2": base_affixes + 2,
+            "3": base_affixes + 3,
+            "4": base_affixes + 4,
+        },
         "old_false_target": old_false_target,
         "new_false_target": guard["CodeOffset"],
-        "less_int_import": import_index(patched, "Less_IntInt"),
+        "imports": {
+            name: import_index(patched, name)
+            for name in (
+                "Less_IntInt",
+                "Greater_ByteByte",
+                "Conv_ByteToInt",
+                "Add_IntInt",
+                "BooleanAND",
+                "WeaponAffixRarity",
+            )
+        },
     })
     return patched, report
 
 
-def verify(asset: dict[str, Any], max_affixes: int) -> dict[str, Any]:
+def verify(
+    asset: dict[str, Any],
+    max_affixes: int,
+    base_affixes: int = 2,
+) -> dict[str, Any]:
     validate_asset(asset)
-    fn_index, fn = find_function(asset, FUNCTION)
+    _, fn = find_function(asset, FUNCTION)
     code = fn.get("ScriptBytecode") or []
     if not code:
         raise PatchError("CanInteract has no bytecode")
 
     first = code[0]
     if "EX_JumpIfNot" not in str(first.get("$type", "")):
-        raise PatchError("Foundry affix-count guard is not first statement")
+        raise PatchError("Foundry quality gate is not first statement")
     condition = first.get("BooleanExpression") or {}
-    if "EX_CallMath" not in str(condition.get("$type", "")):
-        raise PatchError("Foundry affix-count guard is not a math call")
 
-    less_idx = import_index(asset, "Less_IntInt")
-    if less_idx is None or condition.get("StackNode") != less_idx:
-        raise PatchError("Foundry affix-count guard does not call Less_IntInt")
+    boolean_and = import_index(asset, "BooleanAND")
+    if boolean_and is None or condition.get("StackNode") != boolean_and:
+        raise PatchError("Foundry quality gate does not end in BooleanAND")
 
     params = condition.get("Parameters") or []
-    if len(params) != 2 or params[1].get("Value") != max_affixes:
-        raise PatchError("Foundry affix-count guard has unexpected max-affix value")
+    if len(params) != 2:
+        raise PatchError("Foundry quality gate BooleanAND shape changed")
 
-    # Fail closed if the nested path stops being PlayerCharacter.currentWeapon.AffixAmount.
-    p0 = json.dumps(params[0], separators=(",", ":"))
-    for token in ('"PlayerCharacter"', '"currentWeapon"', '"AffixAmount"'):
-        if token not in p0:
-            raise PatchError(f"Foundry guard missing path token {token}")
+    non_common, under_cap = params
+    greater_byte = import_index(asset, "Greater_ByteByte")
+    less_int = import_index(asset, "Less_IntInt")
+    add_int = import_index(asset, "Add_IntInt")
+    byte_to_int = import_index(asset, "Conv_ByteToInt")
+
+    if non_common.get("StackNode") != greater_byte:
+        raise PatchError("Foundry quality gate does not block common-quality weapons")
+    nc_params = non_common.get("Parameters") or []
+    if len(nc_params) != 2 or nc_params[1].get("Value") != 0:
+        raise PatchError("Foundry common-quality guard changed")
+
+    if under_cap.get("StackNode") != less_int:
+        raise PatchError("Foundry quality gate missing AffixAmount < cap")
+    cap_params = under_cap.get("Parameters") or []
+    if len(cap_params) != 2:
+        raise PatchError("Foundry cap comparison shape changed")
+
+    cap_expr = cap_params[1]
+    if cap_expr.get("StackNode") != add_int:
+        raise PatchError("Foundry cap is not color + base")
+    add_params = cap_expr.get("Parameters") or []
+    if len(add_params) != 2 or add_params[1].get("Value") != base_affixes:
+        raise PatchError("Foundry base affix allowance changed")
+    if add_params[0].get("StackNode") != byte_to_int:
+        raise PatchError("Foundry cap does not convert quality color to int")
+
+    serialized = json.dumps(first, separators=(",", ":"))
+    for token in (
+        '"PlayerCharacter"',
+        '"currentWeapon"',
+        '"AffixAmount"',
+        '"CurrentAffixBundle"',
+        '"Color"',
+    ):
+        if token not in serialized:
+            raise PatchError(f"Foundry quality gate missing path token {token}")
+
+    if base_affixes + 4 != max_affixes:
+        raise PatchError("Foundry max/base configuration inconsistent")
 
     return {
         "verified": True,
         "asset": CDO_ASSET,
         "function": FUNCTION,
+        "guard": "quality_scaled_foundry_complexity",
+        "base_affixes": base_affixes,
         "max_affixes": max_affixes,
+        "quality_caps": {
+            "common": 0,
+            "tier_1": base_affixes + 1,
+            "tier_2": base_affixes + 2,
+            "tier_3": base_affixes + 3,
+            "top_tier": base_affixes + 4,
+        },
         "script_bytecode_size": fn.get("ScriptBytecodeSize"),
         "guard_size": expression_size(first),
     }
@@ -250,18 +415,26 @@ def main() -> int:
     ap.add_argument("input_json", type=Path)
     ap.add_argument("output_json", type=Path, nargs="?")
     ap.add_argument("--max-affixes", type=int, default=6)
+    ap.add_argument("--base-affixes", type=int, default=2)
     ap.add_argument("--report", type=Path)
     ap.add_argument("--verify-only", action="store_true")
     args = ap.parse_args()
 
     asset = load(args.input_json)
     if args.verify_only:
-        print(json.dumps(verify(asset, args.max_affixes), indent=2))
+        print(json.dumps(
+            verify(asset, args.max_affixes, args.base_affixes),
+            indent=2,
+        ))
         return 0
     if args.output_json is None:
         raise SystemExit("output_json required unless --verify-only")
 
-    patched, report = patch(asset, args.max_affixes)
+    patched, report = patch(
+        asset,
+        args.max_affixes,
+        args.base_affixes,
+    )
     args.output_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_json.write_text(json.dumps(patched, indent=2) + "\n", encoding="utf-8")
     if args.report:
