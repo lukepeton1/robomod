@@ -240,7 +240,18 @@ def affix_record(row_name: str, row: dict[str, Any], content_root: Path) -> dict
     }
 
 
-def weapon_record(row_name: str, row: dict[str, Any], skill_by_class: dict[str, str]) -> dict[str, Any]:
+def class_package(value: str | None) -> str | None:
+    if not value:
+        return None
+    return value.split(".", 1)[0]
+
+
+def weapon_record(
+    row_name: str,
+    row: dict[str, Any],
+    skill_by_class: dict[str, str],
+    skill_rows_by_name: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
     w = row.get("Weapon", row)
     if not isinstance(w, dict):
         return {"row": row_name, "invalid": True}
@@ -249,10 +260,18 @@ def weapon_record(row_name: str, row: dict[str, Any], skill_by_class: dict[str, 
         if not isinstance(entry, dict):
             continue
         cls = asset_path(entry.get("Value"))
+        action = entry.get("Key")
+        conventional = None
+        if action == "EAction::PrimaryFire":
+            conventional = f"PF_{row_name}"
+        elif action == "EAction::SecondaryFire":
+            conventional = f"SF_{row_name}"
+        resolved = conventional if conventional in skill_rows_by_name else skill_by_class.get(cls)
         skills.append({
-            "action": entry.get("Key"),
+            "action": action,
             "class": cls,
-            "skill_row": skill_by_class.get(cls),
+            "skill_row": resolved,
+            "resolved_by": "row_convention" if resolved == conventional and resolved else ("class" if resolved else None),
         })
     return {
         "row": row_name,
@@ -335,12 +354,12 @@ def main() -> int:
         s["skill_class"]: s["row"] for s in skills
         if s.get("skill_class")
     }
-    mod_skill_by_class = {
-        s["skill_class"]: s["row"] for s in mod_skills
+    mod_skill_by_package = {
+        class_package(s["skill_class"]): s["row"] for s in mod_skills
         if s.get("skill_class")
     }
 
-    weapons = [weapon_record(k, v, skill_by_class) for k, v in weapon_rows.items()]
+    weapons = [weapon_record(k, v, skill_by_class, skill_rows) for k, v in weapon_rows.items()]
     affixes = [affix_record(k, v, content) for k, v in affix_rows.items()]
     mods = [affix_record(k, v, content) for k, v in mod_rows.items()]
     items = [item_record(k, v, content) for k, v in item_rows.items()]
@@ -348,7 +367,7 @@ def main() -> int:
     for mod in mods:
         in_class = ((mod.get("blueprint") or {}).get("cdo_in_class"))
         mod["secondary_skill_class"] = in_class
-        mod["secondary_skill_row"] = mod_skill_by_class.get(in_class)
+        mod["secondary_skill_row"] = mod_skill_by_package.get(class_package(in_class))
 
     real_weapons = [w for w in weapons if not w.get("separator") and w.get("weapon_class")]
     active_affixes = [a for a in affixes if not a.get("separator") and a.get("active")]
