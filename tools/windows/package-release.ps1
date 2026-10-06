@@ -64,6 +64,7 @@ Copy-Item -LiteralPath (Join-Path $RepoRoot "packaging\uninstall.cmd") -Destinat
 
 $sourceFiles = @(
     "Source\composition\composition_rules.json",
+    "Source\composition\alt_fire_skill_profiles.json",
     "Source\grafting\transfer_policy.json",
     "Source\grafting\graft_transaction.json",
     "Source\manifests\production_packages.json",
@@ -79,6 +80,7 @@ $sourceFiles = @(
     "tools\kismet_layout.py",
     "tools\generate_weapon_foundry_core_patch.py",
     "tools\generate_weapon_foundry_mod_patch.py",
+    "tools\generate_alt_fire_profiles.py",
     "tools\generate_transfer_policy.py",
     "tools\generate_foundry_merchant.py",
     "tools\windows\build-weapon-foundry.ps1"
