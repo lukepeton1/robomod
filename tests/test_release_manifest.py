@@ -14,6 +14,9 @@ class ReleaseManifestTests(unittest.TestCase):
             (ROOT / "Source/manifests/production_packages.json").read_text(encoding="utf-8")
         )
         cls.version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+        cls.progression = json.loads(
+            (ROOT / "Source/grafting/progression_policy.json").read_text(encoding="utf-8")
+        )
         cls.builder = (ROOT / "tools/windows/build-weapon-foundry.ps1").read_text(encoding="utf-8")
 
     def test_release_version_is_rc(self):
@@ -46,9 +49,15 @@ class ReleaseManifestTests(unittest.TestCase):
         excluded = set(self.manifest["excluded_diagnostic_packages"])
         self.assertTrue(excluded.isdisjoint(prod))
 
-    def test_manifest_affix_cap_matches_builder(self):
+    def test_manifest_affix_cap_matches_policy_driven_builder(self):
         cap = self.manifest["max_foundry_affixes"]
-        self.assertIn(f'"{cap}"', self.builder)
+        self.assertEqual(
+            cap,
+            self.progression["quality_color_caps"]["4"],
+        )
+        self.assertIn("progression_policy.json", self.builder)
+        self.assertIn("$maxFoundryAffixes", self.builder)
+        self.assertIn("$baseFoundryAffixes", self.builder)
         self.assertIn("foundryGuard", self.builder)
 
 
