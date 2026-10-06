@@ -13,84 +13,159 @@ Weapon Foundry already has a working mutation path for ordinary affix rows:
 
 The production transfer policy already classifies which ordinary affixes/alt-fires are legal graft candidates.
 
-## Exact remaining blocker
+## Raw UAssetAPI handoff result
 
-The dropped weapon actor in the current raw handoff exposes:
+The expanded UE4.26 legacy handoff has now been collected and analyzed. It contains the relevant dropped-weapon, player, affix, tooltip, merchant, compendium, weapon and DataTable packages with decoded Kismet bytecode.
 
-- the spawned weapon object;
-- `AffixAmount`;
-- `CurrentAffixBundle`;
-- normal pickup/swap interaction;
-- server-validation behavior.
+The raw pass confirms there is no obvious Blueprint-callable native function that simply returns every ordinary affix row name attached to an `AWeapon`.
 
-It does **not** expose, in the currently collected Blueprint bytecode, a function/property that enumerates the actual ordinary affix row IDs contained by the donor.
+The tooltip path is also not the row-enumeration source of truth:
 
-Without the donor row IDs, a ground GRAFT implementation would have to:
+- `WGT_Tooltip_Weapon` is a thin child of native `WeaponTooltipWidget`;
+- `WGT_Tooltip_WeaponAffix` is a thin child of native `WeaponAffixTooltipWidget`;
+- `WGT_WeaponCompendium_Affix` can render a supplied `WeaponAffixRow`, but it does not discover live donor rows.
 
-- choose a random property;
-- infer from display text;
-- reconstruct a random roll from insufficient state;
-- or add an external runtime reflection layer.
+The singular native `AWeapon.GetCurrentEnchantedAffixRowName()` getter remains useful for the perfume slot but is not the ordinary-affix enumerator.
 
-None of those matches the intended deterministic “choose this donor property” design.
+## Runtime identity breakthrough
 
-## Repository-side FModel pass after the first expanded manifest
+The raw affix Blueprints expose a more useful native seam.
 
-The committed `vanilla-json/` property dump now includes the tooltip, merchant, dropped-weapon, weapon-spawner and player-controller surfaces needed for a second static pass.
+Live `AWeaponAffix` behavior objects expose/consume:
 
-That pass established several concrete facts:
+- `WeaponRef`, identifying the weapon instance the affix belongs to;
+- `GetCustomFloatProperties(Name)`, exposing the row-supplied custom parameter values;
+- their concrete UObject/AActor class identity.
 
-1. `WGT_Tooltip_Weapon` derives from native `WeaponTooltipWidget` and owns six `WGT_Tooltip_WeaponAffix` children.
-2. `WGT_Tooltip_WeaponAffix` derives from native `WeaponAffixTooltipWidget`; its Blueprint shell only exposes presentation widgets (`Image_Line` and `Text_Description`). The row payload is therefore supplied by native/base behavior that the FModel property dump does not contain.
-3. `BP_Interactive_Weapon` exposes the weapon row lookup path (`GetDataRowName` -> `SyncLoadWeaponRow`) but no Blueprint-local active-affix row array.
-4. `BP_Interactive_Merchant_AddEnchantedAffix.CanInteract` calls the singular native getter `GetCurrentEnchantedAffixRowName`. This is useful evidence that at least one affix row ID is Blueprint-readable, but it is not a complete ordinary-affix enumerator.
-5. `BP_Interactive_Merchant_AddEnchantedAffix.InitializeAffixRow` resolves a `WeaponAffix` row from a row name, confirming the existing merchant path is suitable once a donor row ID is known.
-6. `WGT_WeaponCompendium_Affix` has an explicit `AffixRow : WeaponAffixRow` property. It is a promising native-looking row-rendering surface for GRAFT/Smith UI, but it still does not identify which rows belong to a live donor.
-7. `DA_CommonWeaponData.AffixBundleByLevel` stores rarity-pattern bundles (for example common/rare counts plus quality/color), not the actual row IDs selected for an individual weapon. Therefore `CurrentAffixBundle` cannot be safely reverse-mapped into the donor's exact affixes from the static generation table.
+The generated `DT_WeaponAffix` and `DT_WeaponMod` catalogs already map every transferable row to:
 
-The legacy handoff manifest now also requests:
+- its affix class;
+- its custom-float payload;
+- its property kind;
+- its transfer policy.
 
-- `Blueprint/HUD/Compendium/Weapons/WGT_WeaponCompendium_Affix`
+Therefore donor rows do not need to be inferred from display text.
 
-so the next UAssetAPI collection includes the strongest newly identified UI/data seam.
+The production identity model is:
 
-## Why raw UAssetAPI bytecode is still the next gate
+1. enumerate live `AWeaponAffix` instances;
+2. keep only instances whose `WeaponRef` is the donor `AWeapon`;
+3. map the concrete affix class to candidate transferable rows;
+4. where multiple transferable rows share a class, query only the minimum custom-float keys necessary to distinguish them;
+5. subtract/guard the donor's current enchanted row through `GetCurrentEnchantedAffixRowName()`;
+6. use donor chassis/native provenance to reject locked base/internal variants;
+7. fail closed if an active locked variant remains ambiguous.
 
-The committed FModel dump is intentionally a property/signature export. It does not contain the compiled Kismet call graph needed to answer whether a Blueprint-accessible native getter already enumerates the live weapon's ordinary affix rows.
+This is materially stronger than tooltip parsing and remains PAK/native-first.
 
-The next raw handoff needs to resolve one of:
+## Generated donor identity catalog
 
-1. a native getter returning all active affix row names;
-2. a tooltip/recap initialization payload that receives those row names;
-3. a native weapon array/struct that can be read from the dropped weapon;
-4. a minimal Blueprint patch that exposes the already-existing native state.
+`tools/generate_donor_identity.py` now generates:
 
-The singular `GetCurrentEnchantedAffixRowName` getter is not sufficient to claim full donor enumeration.
+`Source/grafting/donor_identity_catalog.json`
+
+from:
+
+- `research/generated/affixes.json`;
+- `research/generated/weapon_mods.json`;
+- `Source/grafting/transfer_policy.json`.
+
+Current catalog coverage:
+
+- 65 transferable rows total;
+- 50 rows have an exact class/custom runtime signature with no locked-row collision;
+- 15 rows require an explicit context/provenance guard;
+- 4 transferable class families require custom-property discrimination.
+
+The four same-class transferable families are distinguished by native custom properties rather than names or tooltip strings.
+
+The generator deliberately fails if a future transferable row develops an unresolved runtime-identity collision.
+
+## Context-guarded collisions
+
+The remaining signature collisions are known rather than hidden.
+
+They fall into three classes:
+
+1. **enchanted-slot variants**
+   - identified separately by `GetCurrentEnchantedAffixRowName()`;
+2. **chassis/internal variants**
+   - removed using weapon/chassis provenance and fail-closed behavior;
+3. **inactive rows**
+   - never exposed as donor choices.
+
+Examples include ordinary vs enchanted forms of Area Size, Boss Damage, Critical, Fire Rate, Reload Speed and similar rows, plus internal variants such as `IceBlank`, `ShockBlank`, BuddyBot rows and the narrow `RocketJump_0` alt-fire row.
+
+## Current live gate: AWeaponAffix actor enumeration
+
+One fact remains unproven in the actual game:
+
+> whether live `AWeaponAffix` objects can be enumerated through
+> `GameplayStatics.GetAllActorsOfClass(AWeaponAffix)`.
+
+The naming/runtime structure strongly suggests this is viable, but production GRAFT must not assume it.
+
+A deterministic cooked probe now exists:
+
+- patcher: `tools/patch_donor_identity_probe.py`;
+- builder: `tools/windows/build-donor-identity-probe.ps1`;
+- runner: `tools/windows/run-donor-identity-probe.cmd`.
+
+The probe layers on top of the normal production release candidate and patches only:
+
+`RoboQuest/Content/Blueprint/Interactive/Reward/BP_Interactive_Weapon`
+
+When a dropped weapon's `GetInteractSound` executes, it prints:
+
+`Weapon Foundry AWeaponAffix count:`
+
+followed by the global live `AWeaponAffix` actor count.
+
+It does not modify weapon state or consume a donor.
+
+### Interpretation
+
+- positive non-zero count with affixed weapons live -> promote actor enumeration into the cooked GRAFT implementation;
+- zero with known affixed weapons live -> actor enumeration is not sufficient; continue to the next native ownership seam;
+- load/crash failure -> restore normal RC and treat actor enumeration as disproven/unusable.
 
 ## Planned ground transaction
 
-Once donor row enumeration is available:
+Once live donor enumeration is validated:
 
 1. focus dropped donor;
-2. collect transferable rows from donor;
-3. show only legal rows under `transfer_policy.json`;
-4. select one exact donor row;
-5. server re-reads donor state and verifies the row still exists;
-6. server computes Power Cell cost;
-7. reserve/debit Power Cells;
-8. apply the row through the existing native affix transaction (or the native weapon-mod path for alt-fires);
-9. verify target mutation;
-10. consume donor exactly once;
-11. replicate the result;
-12. let the native run-save path persist resulting weapon/currency state.
+2. enumerate donor-owned transferable rows using `WeaponRef` + the generated identity catalog;
+3. show legal and useful blocked choices using the shared rule engine;
+4. player selects one exact donor row;
+5. server re-enumerates/revalidates donor state;
+6. server validates transferability, target compatibility, conflicts, duplicates, complexity and alt-fire slot;
+7. server computes Power Cell cost;
+8. reserve/debit Power Cells;
+9. mutate the target through the existing native affix transaction, or the corresponding native weapon-mod path;
+10. verify target mutation;
+11. consume donor exactly once;
+12. replicate result;
+13. rely on native run-save serialization unless testing proves it insufficient.
 
 The donor is never consumed before successful target mutation verifies.
 
+## UI direction after enumeration
+
+The handoff confirms `WGT_WeaponCompendium_Affix` already owns an `AffixRow : WeaponAffixRow` field and native formatted-description behavior.
+
+That makes it a useful visual building block/reference for:
+
+- donor-choice rows;
+- Smith rows;
+- compatibility/cost previews.
+
+It should be reused or matched rather than inventing a detached developer menu.
+
 ## Fallback order
 
-1. existing native getter / tooltip / pickup seam;
-2. native `CurrentAffixBundle` or weapon-state structure if it contains exact row identities;
-3. minimal cooked Blueprint exposure of that native state;
-4. minimal runtime reflection layer only if the cooked/native paths are conclusively insufficient.
+1. enumerate live `AWeaponAffix` actors and filter by `WeaponRef`;
+2. if actor enumeration fails, identify another native registry/container carrying those affix objects;
+3. minimally expose the existing native state through cooked Blueprint;
+4. introduce runtime reflection only if cooked/native paths are conclusively insufficient.
 
-The project remains PAK-only until that is actually proven necessary.
+The project remains PAK-only until that boundary is actually reached.
