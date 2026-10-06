@@ -162,6 +162,10 @@ foreach ($source in @(
 $coreSpec = Join-Path $RepoRoot "Source\patches\weapon_foundry_core.json"
 $modSpec = Join-Path $RepoRoot "Source\patches\weapon_foundry_mods.json"
 $merchantSpec = Join-Path $RepoRoot "Source\patches\foundry_merchant.json"
+$progressionPolicyPath = Join-Path $RepoRoot "Source\grafting\progression_policy.json"
+$progressionPolicy = Get-Content -LiteralPath $progressionPolicyPath -Raw | ConvertFrom-Json
+$baseFoundryAffixes = [int]$progressionPolicy.power_cell_economy.free_complexity_affixes
+$maxFoundryAffixes = [int]$progressionPolicy.quality_color_caps.'4'
 
 $dataPatcher = Join-Path $RepoRoot "tools\patch_uassetapi_datatable.py"
 $dataVerifier = Join-Path $RepoRoot "tools\verify_uassetapi_patch.py"
@@ -286,7 +290,9 @@ Invoke-Python @(
     $interactiveOriginalJson,
     $interactivePatchedJson,
     "--max-affixes",
-    "6",
+    "$maxFoundryAffixes",
+    "--base-affixes",
+    "$baseFoundryAffixes",
     "--report",
     (Join-Path $reportRoot "foundry-affix-cap.json")
 )
@@ -319,7 +325,15 @@ Invoke-Python @($dataVerifier, $modRoundtripJson, $modSpec)
 Invoke-Python @($fragPatcher, $fragRoundtripJson, "--verify-only")
 Invoke-Python @($homingPatcher, $homingRoundtripJson, "--verify-only")
 Invoke-Python @($cdoPatcher, $merchantRoundtripJson, $merchantSpec, "--verify-only")
-Invoke-Python @($foundryGuard, $interactiveRoundtripJson, "--max-affixes", "6", "--verify-only")
+Invoke-Python @(
+    $foundryGuard,
+    $interactiveRoundtripJson,
+    "--max-affixes",
+    "$maxFoundryAffixes",
+    "--base-affixes",
+    "$baseFoundryAffixes",
+    "--verify-only"
+)
 
 foreach ($json in @(
     $fragRoundtripJson,
@@ -357,7 +371,8 @@ $manifest = [ordered]@{
     generated_utc = [DateTime]::UtcNow.ToString("o")
     source_content_root = $contentRoot
     diagnostic_weapon_edits = $false
-    max_foundry_affixes = 6
+    max_foundry_affixes = $maxFoundryAffixes
+    foundry_free_complexity_affixes = $baseFoundryAffixes
     modified_packages = @(
         "RoboQuest/Content/Data/DT_WeaponAffix",
         "RoboQuest/Content/Data/DT_WeaponMod",
@@ -373,6 +388,7 @@ $manifest = [ordered]@{
         weapon_mod_patch = "Source/patches/weapon_foundry_mods.json"
         raycast_seeker_resolver = "tools/patch_homing_resolver.py"
         foundry_purchase_guard = "tools/patch_foundry_interactive.py"
+        progression_policy = "Source/grafting/progression_policy.json"
     }
     containers = @(
         [ordered]@{ name = "WeaponFoundry_P.pak"; sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $pak).Hash.ToLowerInvariant() },
