@@ -1,0 +1,50 @@
+name: Build Roboquest research catalog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-research-catalog.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out research branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/catalog-v2
+          fetch-depth: 0
+
+      - name: Build machine-readable catalog
+        run: python3 tools/build_catalog.py
+
+      - name: Validate generated JSON
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path("research/generated")
+          files = sorted(root.glob("*.json"))
+          assert files, "no generated JSON files"
+          for p in files:
+              json.loads(p.read_text(encoding="utf-8"))
+          print(f"validated {len(files)} generated JSON files")
+          PY
+
+      - name: Commit generated catalog to research branch
+        run: |
+          if git diff --quiet -- research/generated && [ -z "$(git status --porcelain -- research/generated)" ]; then
+            echo "Catalog is already up to date."
+            exit 0
+          fi
+          git config user.name "robomod-catalog-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add research/generated
+          git commit -m "Generate Roboquest research catalog"
+          git push origin HEAD:research/catalog-v2
