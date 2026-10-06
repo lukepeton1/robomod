@@ -64,3 +64,12 @@ Starting tuning targets:
 - duplicate-instance surcharge once duplicate semantics are validated.
 
 These are tuning values, not architectural constants.
+
+
+## Production Foundry merchant
+
+The first production construction surface deliberately reuses Roboquest's existing Perfumer/affix merchant rather than adding a detached mod menu.
+
+Weapon Foundry pre-seeds the merchant's native `AffixRows` array with the curated ordinary transferable-affix catalog. Vanilla initialization still appends the normal enchanted rows. Offer selection, tooltip UI, Power Cell price, player mutation call, server RPC and multicast remain native.
+
+This is not the final donor-ground GRAFT UX, but it makes the composition loop available through ordinary runs while the donor interaction is built.
