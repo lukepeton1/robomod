@@ -4,6 +4,21 @@
   "target": "Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix",
   "status": "production",
   "purpose": "Seed the vanilla Perfumer/affix merchant with only globally safe ordinary Foundry affixes. Target-specific transferable rows remain reserved for the future donor GRAFT flow, which can validate the target weapon before mutation.",
+  "policy": {
+    "full_transferable_affix_count": 49,
+    "global_merchant_affix_count": 17,
+    "minimum_vanilla_weapon_coverage": 74,
+    "explicit_generalized_rows_allowed": [
+      "AutoShotgun",
+      "Bounce",
+      "ExplosiveBlank",
+      "Fragmentation",
+      "FreeShot",
+      "Homing",
+      "Pierce",
+      "Ricochet"
+    ]
+  },
   "operations": [
     {
       "op": "set_name_array",
@@ -29,20 +44,5 @@
         "TurretDamage"
       ]
     }
-  ],
-  "policy": {
-    "full_transferable_affix_count": 49,
-    "global_merchant_affix_count": 17,
-    "minimum_vanilla_weapon_coverage": 74,
-    "explicit_generalized_rows_allowed": [
-      "AutoShotgun",
-      "Bounce",
-      "ExplosiveBlank",
-      "Fragmentation",
-      "FreeShot",
-      "Homing",
-      "Pierce",
-      "Ricochet"
-    ]
-  }
+  ]
 }
