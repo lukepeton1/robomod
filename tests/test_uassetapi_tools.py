@@ -40,6 +40,23 @@ def affix_row(name: str, removed: list[str]) -> dict:
     }
 
 
+
+def affix_row_with_weapons(name: str, weapons: list[str]) -> dict:
+    return {
+        "$type": "StructPropertyData",
+        "Name": name,
+        "Value": [{
+            "$type": "StructPropertyData",
+            "Name": "Affix",
+            "Value": [{
+                "$type": "ArrayPropertyData",
+                "Name": "Weapons",
+                "ArrayType": "StructProperty",
+                "Value": [row_handle("Weapons", x) for x in weapons],
+            }],
+        }],
+    }
+
 class DataTablePatcherTests(unittest.TestCase):
     def test_remove_row_handles_preserves_other_values_and_order(self):
         asset = {
@@ -95,6 +112,39 @@ class DataTablePatcherTests(unittest.TestCase):
         self.assertEqual(prop["DummyStruct"]["StructType"], "WeaponAffixRowHandle")
         self.assertEqual(prop["DummyStruct"]["Value"], [])
         self.assertTrue(report[0]["dummy_struct_preserved"])
+
+
+    def test_copy_row_handles_clones_native_eligibility_pool(self):
+        asset = {
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
+                "Table": {"Data": [
+                    affix_row_with_weapons("Fragmentation", ["Boltgun"]),
+                    affix_row_with_weapons("Burn", ["JunkColt", "BlastArbalete", "MineGun"]),
+                ]},
+            }],
+        }
+        spec = {
+            "operations": [{
+                "op": "copy_row_handles",
+                "row": "Fragmentation",
+                "field": "Weapons",
+                "source_row": "Burn",
+                "source_field": "Weapons",
+            }],
+        }
+
+        patched, report = apply(asset, spec)
+        rows = patched["Exports"][0]["Table"]["Data"]
+        target = rows[0]["Value"][0]["Value"][0]
+        source = rows[1]["Value"][0]["Value"][0]
+        target_names = [
+            next(x["Value"] for x in h["Value"] if x["Name"] == "RowName")
+            for h in target["Value"]
+        ]
+        self.assertEqual(target_names, ["JunkColt", "BlastArbalete", "MineGun"])
+        self.assertEqual(report[0]["copied_count"], 3)
+        self.assertIsNot(target["Value"], source["Value"])
 
     def test_missing_requested_handle_fails_closed(self):
         asset = {
