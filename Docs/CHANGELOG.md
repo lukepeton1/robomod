@@ -44,7 +44,7 @@
 - Promoted the successful ordinary-affix merchant probe into production.
 - Vanilla Perfumer/affix merchant now acts as the first Foundry surface using native Power Cell/UI/server/multicast behavior.
 - Restricted the global random merchant to 18 affixes proven safe/generalized across the standard chassis set; target-specific rows remain reserved for deterministic GRAFT.
-- Added six-affix purchase guard.
+- Replaced the flat six-affix guard with a native quality-scaled complexity gate: Common disabled, then 3/4/5/6 affixes across the upgraded quality tiers.
 - Added authoritative graft transaction contract for the final donor workflow.
 
 ### Packaging
