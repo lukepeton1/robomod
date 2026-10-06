@@ -70,7 +70,8 @@ class ProductionPolicyTests(unittest.TestCase):
         self.assertEqual(len(ordinary), 50)
         self.assertEqual(self.merchant["policy"]["full_transferable_affix_count"], 50)
         self.assertEqual(self.merchant["policy"]["global_merchant_affix_count"], 14)
-        self.assertEqual(len(values), 14)\n        self.assertNotIn("Homing", values)
+        self.assertEqual(len(values), 14)
+        self.assertNotIn("Homing", values)
         self.assertTrue(set(values).issubset(ordinary))
 
         generalized = {
