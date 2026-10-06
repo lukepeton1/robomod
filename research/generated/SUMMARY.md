@@ -32,5 +32,5 @@ Generated from the installed-build JSON property export. Do not hand-edit files 
 
 ## Link integrity
 
-- Unresolved weapon skill class -> DT_PlayerSkills rows: **2**
-- Unresolved mod skill class -> DT_ModSkills rows: **1**
+- Unresolved weapon skill class -> DT_PlayerSkills rows: **0**
+- Unresolved mod skill class -> DT_ModSkills rows: **0**
