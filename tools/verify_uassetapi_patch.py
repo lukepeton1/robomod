@@ -136,6 +136,30 @@ def verify_applied(asset: dict, spec: dict) -> list[dict]:
                     f"operation {index}: {row_name}.{op['field']} is {current}, expected {expected}"
                 )
 
+        elif op.get("op") == "replace_name_array":
+            prop = property_by_name(row, str(op["field"]))
+            current = [
+                x.get("Value") if isinstance(x, dict) else x
+                for x in prop.get("Value", [])
+            ]
+            expected = [str(x) for x in op.get("values", [])]
+            matches = current == expected and prop.get("ArrayType") == "NameProperty"
+            results.append({
+                "operation_index": index,
+                "op": op.get("op"),
+                "row": row_name,
+                "field": op["field"],
+                "array_type": prop.get("ArrayType"),
+                "current_values": current,
+                "expected_values": expected,
+                "matches": matches,
+            })
+            if not matches:
+                errors.append(
+                    f"operation {index}: {row_name}.{op['field']} NameProperty array "
+                    f"is {current}, expected {expected}"
+                )
+
         else:
             errors.append(f"operation {index}: unsupported verification op {op.get('op')!r}")
 
