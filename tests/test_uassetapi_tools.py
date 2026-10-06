@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
 from patch_uassetapi_datatable import PatchError, apply  # noqa: E402
+from verify_uassetapi_patch import semantic_scalar  # noqa: E402
 from disassemble_uassetapi import PackageResolver, function_summary, inline  # noqa: E402
 from patch_fragmentation_bytecode import patch as patch_fragmentation, verify as verify_fragmentation  # noqa: E402
 
@@ -319,6 +320,13 @@ class DataTablePatcherTests(unittest.TestCase):
         with self.assertRaises(PatchError):
             apply(asset, spec)
 
+
+
+    def test_signed_zero_semantics(self):
+        self.assertEqual(semantic_scalar("+0"), 0.0)
+        self.assertEqual(semantic_scalar("-0"), 0.0)
+        self.assertEqual(semantic_scalar(0), 0)
+        self.assertEqual(semantic_scalar(1.25), 1.25)
 
 class DisassemblerTests(unittest.TestCase):
     def test_resolves_import_stack_node(self):
