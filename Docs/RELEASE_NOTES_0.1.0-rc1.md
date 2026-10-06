@@ -14,7 +14,7 @@ This is the first release-candidate architecture for the Roboquest Weapon Foundr
 - Seeker + Buckshot.
 - Freewheel + transformed native shots.
 - 15 widened native elite secondary-fire rows.
-- 18 globally safe/generalized ordinary Foundry affixes offered through the native affix merchant.
+- 15 globally safe, pairwise conflict-free ordinary Foundry affixes offered through the native affix merchant.
 - 50 ordinary affixes retained in the target-aware GRAFT transfer catalog.
 - Native Power Cell / server / multicast mutation path.
 - Native quality-scaled Foundry complexity gate: Common disabled, then 3/4/5/6 affix caps across the upgraded tiers.
