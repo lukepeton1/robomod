@@ -123,6 +123,44 @@ def apply_remove_row_handles(
     }
 
 
+def apply_copy_row_handles(
+    target_row: dict[str, Any],
+    target_field: str,
+    source_row: dict[str, Any],
+    source_field: str,
+) -> dict[str, Any]:
+    target_prop = property_by_name(target_row, target_field)
+    source_prop = property_by_name(source_row, source_field)
+
+    target_values = target_prop.get("Value")
+    source_values = source_prop.get("Value")
+    if not isinstance(target_values, list) or not isinstance(source_values, list):
+        raise PatchError("copy_row_handles requires array-valued source and target properties")
+
+    before = [row_handle_name(x) for x in target_values]
+    source_names = [row_handle_name(x) for x in source_values]
+    if any(x is None for x in source_names):
+        raise PatchError(
+            f"row {source_row.get('Name')} field {source_field}: contains non-row-handle entries"
+        )
+
+    target_prop["Value"] = copy.deepcopy(source_values)
+
+    if source_prop.get("ArrayType") is not None:
+        target_prop["ArrayType"] = copy.deepcopy(source_prop["ArrayType"])
+    if source_prop.get("DummyStruct") is not None:
+        target_prop["DummyStruct"] = copy.deepcopy(source_prop["DummyStruct"])
+
+    after = [row_handle_name(x) for x in target_prop["Value"]]
+    return {
+        "before": before,
+        "after": after,
+        "copied_from_row": source_row.get("Name"),
+        "copied_from_field": source_field,
+        "copied_count": len(after),
+    }
+
+
 def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     patched = copy.deepcopy(asset)
     rows = data_rows(patched)
@@ -139,6 +177,18 @@ def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], 
                 by_name[row_name],
                 str(op["field"]),
                 [str(x) for x in op.get("values", [])],
+            )
+        elif op.get("op") == "copy_row_handles":
+            source_row_name = str(op.get("source_row"))
+            if source_row_name not in by_name:
+                raise PatchError(
+                    f"operation {index}: source DataTable row not found: {source_row_name!r}"
+                )
+            detail = apply_copy_row_handles(
+                by_name[row_name],
+                str(op["field"]),
+                by_name[source_row_name],
+                str(op.get("source_field") or op["field"]),
             )
         else:
             raise PatchError(f"operation {index}: unsupported op {op.get('op')!r}")
