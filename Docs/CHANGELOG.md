@@ -24,6 +24,7 @@
 
 - Added generated safe eligibility policy: 74 standard Projectile/Raycast weapons and 39 projectile Seeker candidates.
 - Added generated graft transfer policy.
+- Broadened 15 resolved native elite secondary-fire/weapon-mod rows across the standard 74 Projectile/Raycast chassis set.
 - Added production build/install/uninstall/release packaging scripts.
 - Added documentation and modified-asset tracking.
 
