@@ -40,113 +40,237 @@
   },
   "effects": {
     "Bounce": {
-      "row_ids": ["Bounce"],
+      "row_ids": [
+        "Bounce"
+      ],
       "display_name": "Bounce",
       "role": "traversal",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Bounce.BP_WA_Bounce_C",
-      "native_hit_types_observed": ["EHitType::Projectile", "EHitType::Raycast"],
+      "native_hit_types_observed": [
+        "EHitType::Projectile",
+        "EHitType::Raycast"
+      ],
       "stacking": {
         "mode": "add_native_parameter",
         "parameter": "BounceAmount"
       },
-      "inherits_into": ["duplicate_shot", "pellet", "fragment", "ricochet_hit", "alt_fire_projectile"],
-      "spawns_children": false
+      "inherits_into": [
+        "duplicate_shot",
+        "pellet",
+        "fragment",
+        "ricochet_hit",
+        "alt_fire_projectile"
+      ],
+      "spawns_children": false,
+      "native_apply": "ASkill.InitBounceState(BounceAmount, Bounciness, Friction)",
+      "native_remove": "ASkill.RemoveBounceState()"
     },
     "Pierce": {
-      "row_ids": ["Pierce"],
+      "row_ids": [
+        "Pierce"
+      ],
       "display_name": "Pierce",
       "role": "traversal",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Pierce.BP_WA_Pierce_C",
-      "native_hit_types_observed": ["EHitType::Projectile", "EHitType::Raycast"],
+      "native_hit_types_observed": [
+        "EHitType::Projectile",
+        "EHitType::Raycast"
+      ],
       "stacking": {
         "mode": "native_budget",
         "parameter": "pierce_count_or_equivalent_runtime_state",
         "requires_runtime_validation": true
       },
-      "inherits_into": ["duplicate_shot", "pellet", "fragment", "ricochet_hit", "alt_fire_projectile"],
-      "spawns_children": false
+      "inherits_into": [
+        "duplicate_shot",
+        "pellet",
+        "fragment",
+        "ricochet_hit",
+        "alt_fire_projectile"
+      ],
+      "spawns_children": false,
+      "native_apply": "ASkill.InitPierceState(0)",
+      "native_remove": "ASkill.RemovePierceState()"
     },
     "Homing": {
-      "row_ids": ["Homing"],
+      "row_ids": [
+        "Homing"
+      ],
       "display_name": "Seeker",
       "role": "guidance",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing.BP_WA_Homing_C",
-      "native_hit_types_observed": ["EHitType::Projectile"],
-      "blueprint_affected_hit_types": ["EHitType::Projectile", "EHitType::Raycast"],
+      "native_hit_types_observed": [
+        "EHitType::Projectile"
+      ],
+      "blueprint_affected_hit_types": [
+        "EHitType::Projectile",
+        "EHitType::Raycast"
+      ],
       "requires_physical_projectile": true,
       "stacking": {
         "mode": "scale_native_homing_parameters",
-        "parameters": ["HomingAccelerationMagnitude", "HomingRange", "HomingDotTolerance"],
+        "parameters": [
+          "HomingAccelerationMagnitude",
+          "HomingRange",
+          "HomingDotTolerance"
+        ],
         "requires_runtime_validation": true
       },
-      "inherits_into": ["duplicate_shot", "pellet", "fragment", "alt_fire_projectile"],
-      "spawns_children": false
+      "inherits_into": [
+        "duplicate_shot",
+        "pellet",
+        "fragment",
+        "alt_fire_projectile"
+      ],
+      "spawns_children": false,
+      "runtime_status": "native homing-state mutation verified; no cooked raycast-to-projectile conversion found",
+      "row_parameters_not_observed_in_blueprint": [
+        "ProjectileSpeed",
+        "ProjectileCollisionSize"
+      ]
     },
     "Ricochet": {
-      "row_ids": ["Ricochet", "AddRicochet"],
+      "row_ids": [
+        "Ricochet",
+        "AddRicochet"
+      ],
       "display_name": "Ricochet",
       "role": "spawn_traversal",
       "native_blueprints": [
         "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ricochet.BP_WA_Ricochet_C",
         "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AddRicochet.BP_WA_AddRicochet_C"
       ],
-      "native_hit_types_observed": ["EHitType::Projectile", "EHitType::Raycast"],
+      "native_hit_types_observed": [
+        "EHitType::Projectile",
+        "EHitType::Raycast"
+      ],
       "stacking": {
         "mode": "add_native_parameter",
-        "parameters": ["RicochetAmount", "RicochetDamageRatio"]
+        "parameters": [
+          "RicochetAmount",
+          "RicochetDamageRatio"
+        ]
       },
-      "trigger_event_kinds": ["impact", "pierce_hit"],
+      "trigger_event_kinds": [
+        "impact",
+        "pierce_hit"
+      ],
       "child_event_kind": "ricochet_hit",
       "inheritance": "copy_compatible_context_then_consume_this_modifier_instance",
-      "spawns_children": true
+      "spawns_children": true,
+      "native_fields": [
+        "ASkill.RicochetAmount",
+        "ASkill.RicochetDamageRatio"
+      ]
     },
     "Freewheel": {
-      "row_ids": ["FreeShot"],
+      "row_ids": [
+        "FreeShot"
+      ],
       "display_name": "Freewheel",
       "role": "spawn_shot",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FreeShot.BP_WA_FreeShot_C",
-      "native_hit_types_observed": ["EHitType::Projectile", "EHitType::Raycast"],
+      "native_hit_types_observed": [
+        "EHitType::Projectile",
+        "EHitType::Raycast"
+      ],
       "stacking": {
         "mode": "independent_modifier_instances"
       },
-      "trigger_event_kinds": ["trigger_pull", "duplicate_shot"],
+      "trigger_event_kinds": [
+        "trigger_pull",
+        "duplicate_shot"
+      ],
       "child_event_kind": "duplicate_shot",
       "inheritance": "copy_complete_resolved_shot_then_consume_this_modifier_instance",
-      "spawns_children": true
+      "spawns_children": true,
+      "native_retrigger": {
+        "set": "APlayerSkill.bNoCostForNextShot = true",
+        "call": "APlayerSkill.UseSkill()"
+      },
+      "runtime_status": "complete native skill retrigger verified in cooked bytecode"
     },
     "Buckshot": {
-      "row_ids": ["AutoShotgun"],
+      "row_ids": [
+        "AutoShotgun"
+      ],
       "display_name": "Buckshot",
       "role": "shot_shape",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_AutoShotgun.BP_WA_AutoShotgun_C",
-      "native_hit_types_observed": ["EHitType::Projectile", "EHitType::Raycast"],
+      "native_hit_types_observed": [
+        "EHitType::Projectile",
+        "EHitType::Raycast"
+      ],
       "stacking": {
         "mode": "resolve_native_hit_amount_and_damage_modifier",
-        "native_parameters": ["FirstHitAmount", "AddHitAmount", "MaxHitAmount", "CriticalHitAmount", "MalusDamage"]
+        "native_parameters": [
+          "FirstHitAmount",
+          "AddHitAmount",
+          "MaxHitAmount",
+          "CriticalHitAmount",
+          "MalusDamage"
+        ]
       },
       "simulator_extra_pellets_per_instance": 2,
-      "inherits_into": ["duplicate_shot"],
+      "inherits_into": [
+        "duplicate_shot"
+      ],
       "spawns_children": false
     },
     "Fragmentation": {
-      "row_ids": ["Fragmentation"],
+      "row_ids": [
+        "Fragmentation"
+      ],
       "display_name": "Fragments",
       "role": "spawn_projectile",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation.BP_WA_Fragmentation_C",
-      "native_child_path": ["GetFragNetworkInfo", "SpawnCustomProjectiles"],
-      "native_structs": ["NetworkSkillInfo", "RQHitResult"],
+      "native_child_path": [
+        "GetFragNetworkInfo",
+        "SpawnCustomProjectiles"
+      ],
+      "native_structs": [
+        "NetworkSkillInfo",
+        "RQHitResult"
+      ],
       "stacking": {
         "mode": "independent_modifier_instances",
-        "native_parameters": ["FragmentationAmount", "ProjectileSpeed", "ProjectileGravityScale", "LaunchAngle", "DamageRatio", "RadiusRatio"]
+        "native_parameters": [
+          "FragmentationAmount",
+          "ProjectileSpeed",
+          "ProjectileGravityScale",
+          "LaunchAngle",
+          "DamageRatio",
+          "RadiusRatio"
+        ]
       },
-      "trigger_event_kinds": ["impact", "pierce_hit", "ricochet_hit"],
+      "trigger_event_kinds": [
+        "impact",
+        "pierce_hit",
+        "ricochet_hit"
+      ],
       "child_event_kind": "fragment",
       "simulator_children_per_proc": 3,
       "inheritance": "copy_compatible_context_then_consume_this_modifier_instance",
-      "spawns_children": true
+      "spawns_children": true,
+      "native_gate": {
+        "gameplay_tag_byte": 0,
+        "semantic": "Explosive (strong inference from BP_WA_Explosive/BP_WA_ExplosiveBlank)",
+        "universal_fragmentation_requires_gate_patch": true
+      },
+      "native_recursion_guard": {
+        "field": "AProjectile.CustomTag",
+        "blocked_value": "Fragmentation"
+      },
+      "runtime_status": "native child-projectile path verified; universal use blocked by native gameplay-tag gate"
     },
     "Explosive": {
-      "row_ids": ["ExplosiveBlank", "Explosive2", "Explosive3", "Explosive4", "Explosive5"],
+      "row_ids": [
+        "ExplosiveBlank",
+        "Explosive2",
+        "Explosive3",
+        "Explosive4",
+        "Explosive5"
+      ],
       "display_name": "Explosive/Volatile",
       "role": "spawn_payload",
       "native_blueprints": [
@@ -157,25 +281,42 @@
         "mode": "independent_native_trigger_or_payload_instances",
         "requires_runtime_validation": true
       },
-      "trigger_event_kinds": ["impact", "pierce_hit", "ricochet_hit", "fragment_impact"],
+      "trigger_event_kinds": [
+        "impact",
+        "pierce_hit",
+        "ricochet_hit",
+        "fragment_impact"
+      ],
       "child_event_kind": "explosion",
       "inheritance": "copy_damage_status_context_then_consume_this_modifier_instance",
-      "spawns_children": true
+      "spawns_children": true,
+      "native_semantics": "InitExplosiveTag / RemoveExplosiveTag; gameplay-tag byte 0 inferred as explosive"
     },
     "Megaboom": {
-      "row_ids": ["LuckyExplosion"],
+      "row_ids": [
+        "LuckyExplosion"
+      ],
       "display_name": "Megaboom",
       "role": "payload_modifier",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_LuckyExplosion.BP_WA_LuckyExplosion_C",
       "stacking": {
         "mode": "native_parameters",
-        "parameters": ["BonusAreaSize", "BonusDamage", "Luck", "IncreaseLuckByFail"]
+        "parameters": [
+          "BonusAreaSize",
+          "BonusDamage",
+          "Luck",
+          "IncreaseLuckByFail"
+        ]
       },
-      "inherits_into": ["explosion"],
+      "inherits_into": [
+        "explosion"
+      ],
       "spawns_children": false
     },
     "Burn": {
-      "row_ids": ["Burn"],
+      "row_ids": [
+        "Burn"
+      ],
       "display_name": "Burn",
       "role": "passive_status",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Burn.BP_WA_Burn_C",
@@ -184,11 +325,28 @@
         "parameter": "BurnRatio",
         "requires_runtime_validation": true
       },
-      "inherits_into": ["duplicate_shot", "pellet", "impact", "pierce_hit", "ricochet_hit", "explosion", "fragment", "fragment_impact", "alt_fire_projectile", "alt_fire_explosion"],
-      "spawns_children": false
+      "inherits_into": [
+        "duplicate_shot",
+        "pellet",
+        "impact",
+        "pierce_hit",
+        "ricochet_hit",
+        "explosion",
+        "fragment",
+        "fragment_impact",
+        "alt_fire_projectile",
+        "alt_fire_explosion"
+      ],
+      "spawns_children": false,
+      "native_tag_byte": 2,
+      "native_apply": "InitBurnTag",
+      "native_remove": "RemoveBurnTag",
+      "multi_element_status": "independent native tag; Phase 1 removes Burn/Ice/Shock mutual pool exclusions"
     },
     "Cryo": {
-      "row_ids": ["Ice"],
+      "row_ids": [
+        "Ice"
+      ],
       "display_name": "Cryo",
       "role": "passive_status",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ice.BP_WA_Ice_C",
@@ -197,11 +355,28 @@
         "parameter": "ElementalRatio",
         "requires_runtime_validation": true
       },
-      "inherits_into": ["duplicate_shot", "pellet", "impact", "pierce_hit", "ricochet_hit", "explosion", "fragment", "fragment_impact", "alt_fire_projectile", "alt_fire_explosion"],
-      "spawns_children": false
+      "inherits_into": [
+        "duplicate_shot",
+        "pellet",
+        "impact",
+        "pierce_hit",
+        "ricochet_hit",
+        "explosion",
+        "fragment",
+        "fragment_impact",
+        "alt_fire_projectile",
+        "alt_fire_explosion"
+      ],
+      "spawns_children": false,
+      "native_tag_byte": 4,
+      "native_apply": "InitIceTag",
+      "native_remove": "RemoveIceTag",
+      "multi_element_status": "independent native tag; Phase 1 removes Burn/Ice/Shock mutual pool exclusions"
     },
     "Shock": {
-      "row_ids": ["Shock"],
+      "row_ids": [
+        "Shock"
+      ],
       "display_name": "Shock",
       "role": "passive_status",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Shock.BP_WA_Shock_C",
@@ -210,28 +385,60 @@
         "parameter": "ElementalRatio",
         "requires_runtime_validation": true
       },
-      "inherits_into": ["duplicate_shot", "pellet", "impact", "pierce_hit", "ricochet_hit", "explosion", "fragment", "fragment_impact", "alt_fire_projectile", "alt_fire_explosion"],
-      "spawns_children": false
+      "inherits_into": [
+        "duplicate_shot",
+        "pellet",
+        "impact",
+        "pierce_hit",
+        "ricochet_hit",
+        "explosion",
+        "fragment",
+        "fragment_impact",
+        "alt_fire_projectile",
+        "alt_fire_explosion"
+      ],
+      "spawns_children": false,
+      "native_tag_byte": 3,
+      "native_apply": "InitShockTag",
+      "native_remove": "RemoveShockTag",
+      "multi_element_status": "independent native tag; Phase 1 removes Burn/Ice/Shock mutual pool exclusions"
     },
     "Hitscan": {
-      "row_ids": ["ProjectileRaycast"],
+      "row_ids": [
+        "ProjectileRaycast"
+      ],
       "display_name": "Hitscan",
       "role": "hit_model_conversion",
       "native_blueprint": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_ProjectileRaycast.BP_WA_ProjectileRaycast_C",
-      "source_hit_types_observed": ["EHitType::Projectile"],
+      "source_hit_types_observed": [
+        "EHitType::Projectile"
+      ],
       "target_hit_type": "EHitType::Raycast",
       "spawns_children": false
     }
   },
   "alt_fire_profiles": {
     "projectile": {
-      "inherit_roles": ["passive_status", "guidance", "traversal", "spawn_traversal", "spawn_payload", "payload_modifier"]
+      "inherit_roles": [
+        "passive_status",
+        "guidance",
+        "traversal",
+        "spawn_traversal",
+        "spawn_payload",
+        "payload_modifier"
+      ]
     },
     "explosive": {
-      "inherit_roles": ["passive_status", "spawn_payload", "payload_modifier"]
+      "inherit_roles": [
+        "passive_status",
+        "spawn_payload",
+        "payload_modifier"
+      ]
     },
     "summon": {
-      "inherit_roles": ["passive_status"],
+      "inherit_roles": [
+        "passive_status"
+      ],
       "requires_actor_skill_manager_support": true
     },
     "scope_or_state": {
@@ -239,8 +446,16 @@
       "behavior": "modifies primary skill rather than receiving projectile effects"
     },
     "melee_or_mark": {
-      "inherit_roles": ["passive_status"],
+      "inherit_roles": [
+        "passive_status"
+      ],
       "requires_semantic_compatibility": true
     }
+  },
+  "verified_cooked_bytecode": {
+    "handoff_target_count": 39,
+    "function_exports_with_decoded_script_bytecode": 788,
+    "raw_bytecode_fallback_function_exports": 0,
+    "verified_date": "2026-10-06"
   }
 }
