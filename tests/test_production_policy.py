@@ -63,8 +63,8 @@ class ProductionPolicyTests(unittest.TestCase):
 
         self.assertEqual(len(ordinary), 50)
         self.assertEqual(self.merchant["policy"]["full_transferable_affix_count"], 50)
-        self.assertEqual(self.merchant["policy"]["global_merchant_affix_count"], 18)
-        self.assertEqual(len(values), 18)
+        self.assertEqual(self.merchant["policy"]["global_merchant_affix_count"], 15)
+        self.assertEqual(len(values), 15)
         self.assertTrue(set(values).issubset(ordinary))
 
         generalized = {
@@ -94,6 +94,20 @@ class ProductionPolicyTests(unittest.TestCase):
         # but must not leak into the global random merchant.
         target_specific = set(ordinary) - set(values)
         self.assertGreater(len(target_specific), 0)
+
+        matrix = load("Source/grafting/compatibility_matrix.json")
+        by_row = {row["row"]: row for row in matrix["properties"]}
+        pairwise_conflicts = {
+            (row, conflict)
+            for row in values
+            for conflict in by_row[row]["transferable_conflicts"]
+            if conflict in values
+        }
+        self.assertEqual(pairwise_conflicts, set())
+        self.assertEqual(
+            set(self.merchant["policy"]["excluded_global_conflict_rows"]),
+            {"BossDamage", "FlyDamage", "TurretDamage"},
+        )
 
 
     def test_every_transferable_alt_fire_has_profile(self):
