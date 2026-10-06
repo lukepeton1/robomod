@@ -28,8 +28,17 @@ function Add-UniquePath([System.Collections.Generic.List[string]]$List, [string]
 function Resolve-RoboquestExeFromRoot([string]$Root) {
     if (-not $Root) { return $null }
 
+    # Never accept the small RoboQuest.exe launcher as the target. If a file path
+    # was supplied (for example from a running process), only accept it directly
+    # when it is the actual shipping executable; otherwise search from its folder.
+    if (Test-Path -LiteralPath $Root -PathType Leaf) {
+        if ([System.IO.Path]::GetFileName($Root) -ieq "RoboQuest-Win64-Shipping.exe") {
+            return [System.IO.Path]::GetFullPath($Root)
+        }
+        $Root = Split-Path -Parent $Root
+    }
+
     $candidates = @(
-        $Root,
         (Join-Path $Root "RoboQuest-Win64-Shipping.exe"),
         (Join-Path $Root "RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"),
         (Join-Path $Root "Content\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"),
@@ -135,7 +144,18 @@ function Find-RoboquestExe {
             try {
                 $path = $proc.Path
                 if ($path -and (Test-Path -LiteralPath $path -PathType Leaf)) {
-                    return [System.IO.Path]::GetFullPath($path)
+                    $resolved = Resolve-RoboquestExeFromRoot $path
+                    if ($resolved) { return $resolved }
+
+                    # Some launchers sit one directory above the game content.
+                    $parent = Split-Path -Parent $path
+                    try {
+                        $found = Get-ChildItem -LiteralPath $parent -Filter "RoboQuest-Win64-Shipping.exe" -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+                        if ($found) {
+                            return [System.IO.Path]::GetFullPath($found.FullName)
+                        }
+                    } catch {
+                    }
                 }
             } catch {
             }
