@@ -1,0 +1,1336 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-transfer-policy",
+  "currency": "Power Cells",
+  "identity_rules": {
+    "donor_weapon_is_consumed": true,
+    "chassis_and_innate_identity_affixes_locked": true,
+    "enchanted_slot_not_used_as_general_affix_storage": true,
+    "dependent_upgrade_rows_transfer_directly": false,
+    "duplicate_row_policy": "allow_only_when_runtime_semantics_and_provenance_are_verified"
+  },
+  "cost_model": {
+    "common_affix": 2,
+    "rare_affix": 4,
+    "elite_alt_fire": 7,
+    "target_complexity_surcharge": "max(0, transferable_affix_count - 2)",
+    "duplicate_instance_surcharge": 2,
+    "note": "All costs are Power Cells; values are starting tuning targets, not new currency."
+  },
+  "quality_budget": {
+    "preserve_vanilla_quality_progression": true,
+    "observed_breakpoints": [
+      2,
+      4,
+      6,
+      10
+    ],
+    "rule": "Grafting may exceed the current random-roll bundle only through explicit player spend; smith/editor UI must display projected complexity."
+  },
+  "transferable": [
+    {
+      "row": "AutoCritical",
+      "kind": "affix",
+      "name": "Surprise",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 87,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "ExplosionConcentrated",
+      "kind": "affix",
+      "name": "Thick",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 17,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "HeavyCooling",
+      "kind": "affix",
+      "name": "Unstable",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 32,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "MaxCooling",
+      "kind": "affix",
+      "name": "Solar",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 33,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "FastAmmoInClip",
+      "kind": "affix",
+      "name": "Big Mag.",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 21,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "SlowAmmoInClip",
+      "kind": "affix",
+      "name": "Big Mag.",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 26,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "ReloadSpeed",
+      "kind": "affix",
+      "name": "Quickload",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 46,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "OverheatSpeed",
+      "kind": "affix",
+      "name": "Cooler",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 33,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "Firerate",
+      "kind": "affix",
+      "name": "Cadence",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 80,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "Accuracy",
+      "kind": "affix",
+      "name": "Neat",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 39,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "AreaSize",
+      "kind": "affix",
+      "name": "Nitro",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 19,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "Impact",
+      "kind": "affix",
+      "name": "Knock",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 77,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "Critical",
+      "kind": "affix",
+      "name": "Sharp",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 41,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "Bounce",
+      "kind": "affix",
+      "name": "Bounce",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 40,
+      "cell_cost_base": 2,
+      "core_composition": true
+    },
+    {
+      "row": "HeavyLight",
+      "kind": "affix",
+      "name": "Carbon",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 18,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "Pierce",
+      "kind": "affix",
+      "name": "Pierce",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 48,
+      "cell_cost_base": 2,
+      "core_composition": true
+    },
+    {
+      "row": "Resistance",
+      "kind": "affix",
+      "name": "Armored",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 24,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "FirstShoot",
+      "kind": "affix",
+      "name": "Prime",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 33,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "FirstAutocritical",
+      "kind": "affix",
+      "name": "First",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 11,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "LastShoot",
+      "kind": "affix",
+      "name": "Last",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 30,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "TripleShot2",
+      "kind": "affix",
+      "name": "Fork",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 30,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "TripleShot3",
+      "kind": "affix",
+      "name": "Fork",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 14,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "AutoCriticalRare",
+      "kind": "affix",
+      "name": "Lucky",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 49,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "FreeShot",
+      "kind": "affix",
+      "name": "Freewheel",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 49,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "AutoShotgun",
+      "kind": "affix",
+      "name": "Buckshot",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 34,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "Explosive3",
+      "kind": "affix",
+      "name": "Volatile",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 15,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "Explosive4",
+      "kind": "affix",
+      "name": "Volatile",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 12,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "Explosive5",
+      "kind": "affix",
+      "name": "Volatile",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 11,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "LuckyExplosion",
+      "kind": "affix",
+      "name": "Megaboom",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 19,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "CriticalExplosion",
+      "kind": "affix",
+      "name": "Spiky",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 11,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "Warmup",
+      "kind": "affix",
+      "name": "Warmup",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 60,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "Ricochet",
+      "kind": "affix",
+      "name": "Ricochet",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 69,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "Homing",
+      "kind": "affix",
+      "name": "Seeker",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 7,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "ProjectileRaycast",
+      "kind": "affix",
+      "name": "Hitscan",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 10,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "Burn",
+      "kind": "affix",
+      "name": "Burn",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 80,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "Shock",
+      "kind": "affix",
+      "name": "Shock",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 80,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "Ice",
+      "kind": "affix",
+      "name": "Cryo",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 80,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "CoolingDamage",
+      "kind": "affix",
+      "name": "Overclocking",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 30,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "Fragmentation",
+      "kind": "affix",
+      "name": "Fragments",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 1,
+      "cell_cost_base": 4,
+      "core_composition": true
+    },
+    {
+      "row": "CriticalChain",
+      "kind": "affix",
+      "name": "Bullseye",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 25,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "ProjectileSpeedCritical",
+      "kind": "affix",
+      "name": "Velocity",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 10,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "OnCriticalHitFirerate",
+      "kind": "affix",
+      "name": "Breach",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 14,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "AutoShotgun_Explosion",
+      "kind": "affix",
+      "name": "Buckshot",
+      "rarity": "EWeaponAffixRarity::Rare",
+      "vanilla_weapons": 15,
+      "cell_cost_base": 4,
+      "core_composition": false
+    },
+    {
+      "row": "FlyDamage",
+      "kind": "affix",
+      "name": "Interceptor",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 81,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "BossDamage",
+      "kind": "affix",
+      "name": "Big-Game",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 81,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "TurretDamage",
+      "kind": "affix",
+      "name": "Uproot",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 81,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "MarkDamage",
+      "kind": "affix",
+      "name": "Eraser",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 81,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "Movespeed",
+      "kind": "affix",
+      "name": "Haste",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 15,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "OnKillHealingCell",
+      "kind": "affix",
+      "name": "Piñata",
+      "rarity": "EWeaponAffixRarity::Common",
+      "vanilla_weapons": 10,
+      "cell_cost_base": 2,
+      "core_composition": false
+    },
+    {
+      "row": "DoubleTap",
+      "kind": "weapon_mod",
+      "name": "Trigger Tap",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_DoubleTap",
+      "vanilla_weapons": 24,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "RocketJump",
+      "kind": "weapon_mod",
+      "name": "Rocket Jump",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_RocketJump",
+      "vanilla_weapons": 50,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "CombiShotgun",
+      "kind": "weapon_mod",
+      "name": "Bullet Hail",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_CombiShotgun",
+      "vanilla_weapons": 15,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "LaserShotgun",
+      "kind": "weapon_mod",
+      "name": "Bullet Hail",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_LaserShotgun",
+      "vanilla_weapons": 17,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "ChargedOrb",
+      "kind": "weapon_mod",
+      "name": "Hoverball",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_ChargedOrb",
+      "vanilla_weapons": 15,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "CombiSniper",
+      "kind": "weapon_mod",
+      "name": "Unstable Ray",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_CombiSniper",
+      "vanilla_weapons": 30,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "LongSlash",
+      "kind": "weapon_mod",
+      "name": "Arc Wave",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_LongSlash",
+      "vanilla_weapons": 21,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "MissileLauncher",
+      "kind": "weapon_mod",
+      "name": "Missile Blast",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_MissileLauncher",
+      "vanilla_weapons": 19,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "PlasmaGrenade",
+      "kind": "weapon_mod",
+      "name": "Sticky Grenade",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_PlasmaGrenade",
+      "vanilla_weapons": 21,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "BlunderMine",
+      "kind": "weapon_mod",
+      "name": "Sticky Mines",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_BlunderMine",
+      "vanilla_weapons": 12,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "MarkExplosion",
+      "kind": "weapon_mod",
+      "name": "Sonar Shot",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_MarkExplosion",
+      "vanilla_weapons": 10,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "MarkRaycast",
+      "kind": "weapon_mod",
+      "name": "Sonar Shot",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_MarkRaycast",
+      "vanilla_weapons": 32,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "Energize",
+      "kind": "weapon_mod",
+      "name": "Booster",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_Energize",
+      "vanilla_weapons": 64,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "Bayonet",
+      "kind": "weapon_mod",
+      "name": "Can-Opener",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_Bayonet",
+      "vanilla_weapons": 30,
+      "cell_cost_base": 7
+    },
+    {
+      "row": "Barrier",
+      "kind": "weapon_mod",
+      "name": "Barrier",
+      "rarity": "EWeaponAffixRarity::Elite",
+      "secondary_skill_row": "WS_Barrier",
+      "vanilla_weapons": 36,
+      "cell_cost_base": 7
+    }
+  ],
+  "locked": [
+    {
+      "row": "==============USED",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "BurnImpact",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "SecondaryCharge",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "SecondaryCharge2",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "BurnPower",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "ShockPower",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "IcePower",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "SecondaryDamage",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "PierceDamage",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "Swift",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "SpeedCharge",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "ScopeCritical",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "==============RARE",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "IonLance",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "Explosive2",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "SecondaryCooldown",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "OnHitBurnDamage",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "OnHitShockDamage",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "OnHitIceDamage",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "==============BASE",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "MeleeDamageAndAttackSpeed",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Heavy",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Mark",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "CoolingDamageBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "RefundAmmo",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "OnIceDamage",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "CriticalChain_power",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "OnKillReloadOtherWeapon",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "RefundAltFire",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "StaggerDamage",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "==============BLANK",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "IceBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "BurnBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "ShockBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "ExplosiveBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "BounceBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "PierceBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "BounceAndPierceBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "WreckBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "WarmupBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "HomingBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "RicochetBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "MeleeBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "MeleeBlank_Throw",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "ConsecutiveDamageBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "TickProjectileBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "BoomerangBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "==============Afinity==",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "==============UNUSED",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "PocketReload",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "CellRefundAmmo",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "MeleeLowHealth",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Nuke",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "TripleShot",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Execution",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "FirerateOnKill",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "OnHitLaunchSkill",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "LongSlash3",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "TripleShotAlways",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "RandomElemental",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "DamageOnKill",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "DamageOnMod",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "DamageOnReload",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "==============DEBUG",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "MissingCommon",
+      "kind": "affix",
+      "reason": "no_runtime_affix_class"
+    },
+    {
+      "row": "MissingRare",
+      "kind": "affix",
+      "reason": "no_runtime_affix_class"
+    },
+    {
+      "row": "MissingElite",
+      "kind": "affix",
+      "reason": "no_runtime_affix_class"
+    },
+    {
+      "row": "==========STARTERLEGENDAIRE",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "MeleeDamage_Handgun",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Burn_Buddybot",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "Shock_BuddyBot",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "Ice_BuddyBot",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "BurnDamage",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "ShockDamage",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "IceDamage",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "ProjectileRaycast_BuddyBot",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "UpgradePriceReduction",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "OnHitFirerate",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Top3",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "HeadbonkDamage",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Critical_Shovel",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "Critical_75",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "SlowPocketReload",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "==========ENCHANTED",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "AutoCritical_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "Critical_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "Firerate_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "AreaSize_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "Resistance_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "MeleeDamageAndAttackSpeed_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "ReloadSpeed_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "Ammo_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "BossDamage_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "MarkDamage_Enchanted",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "Movespeed_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "SecondaryCooldown_Enchanted",
+      "kind": "affix",
+      "reason": "enchanted_slot_reserved"
+    },
+    {
+      "row": "ElementalRatio",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "SummonDamage_Enchanted",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "IcePower_Enchanted",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "ShockPower_Enchanted",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "BurnPower_Enchanted",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "==========NEWS",
+      "kind": "affix",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "AddRicochet",
+      "kind": "affix",
+      "reason": "dependent_upgrade_row"
+    },
+    {
+      "row": "SummonDamage",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "AmmoInClip_100",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "Superbot_Explosive",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "Superbot_Raycast",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "Superbot_Shotgun",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "Superbot_Homing",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "MalusResistance",
+      "kind": "affix",
+      "reason": "narrow_chassis_specific_pool"
+    },
+    {
+      "row": "PierceMeleeBlank",
+      "kind": "affix",
+      "reason": "chassis_or_internal_variant"
+    },
+    {
+      "row": "PanchakuCombo",
+      "kind": "affix",
+      "reason": "no_runtime_affix_class"
+    },
+    {
+      "row": "RocketJump_0",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "=============Shotgun",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "DualShotgun",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "DualLaserShotgun",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "MultiArrow",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "DualArrowShotgun",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "=============Laser",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "=============Explosion",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "ExplosiveArrow",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "MissileLauncherDual",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "=============Mine",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "=============Mark",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "=============Other",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "=============Scope",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "Scope",
+      "kind": "weapon_mod",
+      "reason": "narrow_chassis_specific_alt_fire"
+    },
+    {
+      "row": "ChargedScope",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "====JunkRifle===FlakCannon=====",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "TripleGrenade",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "MarkGrenade",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "StickingGrenade",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "======AssaultSentry=====",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "SummonBubble",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "SummonRocket",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "======MineGun=====",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "MineGunEnergize",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "MineGunRocketJump",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "======UnrealGun=====",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "TripleOrb",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "BigOrb",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "KillReduceCooldown",
+      "kind": "weapon_mod",
+      "reason": "no_resolved_secondary_skill"
+    },
+    {
+      "row": "=============Test",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    },
+    {
+      "row": "=============NoVali",
+      "kind": "weapon_mod",
+      "reason": "inactive_or_separator"
+    }
+  ],
+  "summary": {
+    "transferable_affixes": 49,
+    "transferable_alt_fires": 15,
+    "locked_affixes": 112,
+    "locked_alt_fires": 32
+  }
+}
