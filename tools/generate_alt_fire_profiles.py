@@ -31,6 +31,11 @@ BEHAVIOR = {
 def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
+def canonical_number(value):
+    if isinstance(value, float) and value.is_integer():
+        return int(value)
+    return value
+
 def main():
     policy, mods, skills = load(POLICY), load(MODS), load(SKILLS)
     mod_by = {x["row"]: x for x in mods}
@@ -50,15 +55,15 @@ def main():
             "behavior": BEHAVIOR[item["row"]],
             "target_detection": hit,
             "hit_amount": skill["hit_amount"],
-            "damage": skill["damage"],
+            "damage": canonical_number(skill["damage"]),
             "damage_types": skill["damage_types"],
-            "area_radius": skill["area_radius"],
+            "area_radius": canonical_number(skill["area_radius"]),
             "projectile_class": skill["projectile_class"],
             "prefab_projectile": skill["prefab_projectile"],
             "sticking": skill["sticking"],
             "intrinsic_homing": skill["homing"],
             "intrinsic_bounce": skill["bounce"],
-            "cooldown": skill["cooldown"],
+            "cooldown": canonical_number(skill["cooldown"]),
             "native_affix_inheritance": {
                 "elements": "expected: Burn/Cryo/Shock subscribe to newly registered skills",
                 "buckshot": "expected: AutoShotgun handles DelegateOnAddSkill",
