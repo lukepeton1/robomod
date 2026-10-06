@@ -203,6 +203,56 @@ class DataTablePatcherTests(unittest.TestCase):
         self.assertEqual(report[0]["array_type"], "NameProperty")
 
 
+
+    def test_replace_name_array_registers_values(self):
+        def weapons_row(name, values):
+            return {
+                "$type": "StructPropertyData",
+                "Name": name,
+                "Value": [{
+                    "$type": "StructPropertyData",
+                    "Name": "Affix",
+                    "Value": [{
+                        "$type": "UAssetAPI.PropertyTypes.Objects.ArrayPropertyData, UAssetAPI",
+                        "ArrayType": "NameProperty",
+                        "Name": "Weapons",
+                        "Value": [
+                            {
+                                "$type": "UAssetAPI.PropertyTypes.Objects.NamePropertyData, UAssetAPI",
+                                "Name": str(i),
+                                "ArrayIndex": 0,
+                                "Value": value,
+                            }
+                            for i, value in enumerate(values)
+                        ],
+                    }],
+                }],
+            }
+
+        asset = {
+            "NameMap": ["Boltgun"],
+            "NamesReferencedFromExportDataCount": 1,
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
+                "Table": {"Data": [weapons_row("Fragmentation", ["Boltgun"])]},
+            }],
+        }
+        expected = ["BlastGun", "RocketLauncher", "Boltgun"]
+        spec = {
+            "operations": [{
+                "op": "replace_name_array",
+                "row": "Fragmentation",
+                "field": "Weapons",
+                "values": expected,
+            }],
+        }
+        patched, report = apply(asset, spec)
+        prop = patched["Exports"][0]["Table"]["Data"][0]["Value"][0]["Value"][0]
+        self.assertEqual([x["Value"] for x in prop["Value"]], expected)
+        self.assertEqual([x["Name"] for x in prop["Value"]], ["0", "1", "2"])
+        self.assertEqual(report[0]["name_map_added"], ["BlastGun", "RocketLauncher"])
+        self.assertEqual(patched["NamesReferencedFromExportDataCount"], 3)
+
     def test_set_value_works_through_player_skill_wrapper(self):
         asset = {
             "NameMap": ["EHitType::Raycast"],
