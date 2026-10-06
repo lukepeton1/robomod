@@ -23,22 +23,28 @@ class ProductionPolicyTests(unittest.TestCase):
         policy = self.core["policy"]
         self.assertEqual(policy["standard_weapon_count"], 74)
         self.assertEqual(policy["projectile_weapon_count"], 39)
-        self.assertEqual(policy["seeker_resolved_weapon_count"], 74)
+        self.assertFalse(policy["seeker_resolver_enabled"])
+        self.assertEqual(policy["seeker_supported_weapon_count"], 7)
 
-    def test_seeker_uses_full_standard_pool_after_resolver(self):
+    def test_seeker_stays_on_vanilla_pool_while_resolver_is_disabled(self):
         ops = self.core["operations"]
-        seeker = next(
+        widened = [
             op for op in ops
             if op["op"] == "replace_name_array" and op["row"] == "Homing"
+        ]
+        self.assertEqual(widened, [])
+        self.assertEqual(
+            self.core["policy"]["seeker_supported_weapons"],
+            [
+                "MineGun",
+                "BlastGun",
+                "RocketLauncher",
+                "BallGun",
+                "BarrelCannon",
+                "BlastArbalete",
+                "DualTonfa",
+            ],
         )
-        baseline = next(
-            op for op in ops
-            if op["op"] == "replace_name_array" and op["row"] == "Fragmentation"
-        )
-        self.assertEqual(seeker["values"], baseline["values"])
-        self.assertEqual(len(seeker["values"]), 74)
-        self.assertIn("JunkColt", seeker["values"])  # native Raycast
-        self.assertIn("BlastGun", seeker["values"])  # native Projectile
 
     def test_production_mod_pool_is_curated_and_broad(self):
         self.assertEqual(self.mods["policy"]["resolved_alt_fire_count"], 15)
