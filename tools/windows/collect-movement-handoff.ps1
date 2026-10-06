@@ -50,21 +50,26 @@ if ($SkipJson) {
 
 Write-Host "=== Roboquest Momentum: collect movement handoff ==="
 & $collector @collectorParams
-if ($LASTEXITCODE -ne 0) {
-    exit $LASTEXITCODE
+$collectorSucceeded = $?
+if (-not $collectorSucceeded) {
+    throw "Movement asset collector failed."
 }
 
 function Invoke-Python([string[]]$Arguments) {
     $python = Get-Command python -ErrorAction SilentlyContinue
     if ($python) {
-        & python @Arguments
-        return $LASTEXITCODE
+        & python @Arguments | Out-Host
+        if ($null -eq $LASTEXITCODE) { return 0 }
+        return [int]$LASTEXITCODE
     }
+
     $py = Get-Command py -ErrorAction SilentlyContinue
     if ($py) {
-        & py -3 @Arguments
-        return $LASTEXITCODE
+        & py -3 @Arguments | Out-Host
+        if ($null -eq $LASTEXITCODE) { return 0 }
+        return [int]$LASTEXITCODE
     }
+
     throw "Python 3 was not found on PATH."
 }
 
