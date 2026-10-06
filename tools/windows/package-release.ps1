@@ -66,6 +66,7 @@ $sourceFiles = @(
     "Source\composition\composition_rules.json",
     "Source\grafting\transfer_policy.json",
     "Source\grafting\graft_transaction.json",
+    "Source\manifests\production_packages.json",
     "Source\patches\weapon_foundry_core.json",
     "Source\patches\weapon_foundry_mods.json",
     "Source\patches\foundry_merchant.json",
