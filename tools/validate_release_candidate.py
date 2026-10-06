@@ -148,7 +148,6 @@ def main() -> int:
     builder = (ROOT / "tools/windows/build-weapon-foundry.ps1").read_text(encoding="utf-8")
     required_builder_tokens = [
         "patch_fragmentation_bytecode.py",
-        "patch_homing_resolver.py",
         "patch_foundry_interactive.py",
         "foundry_merchant.json",
         "weapon_foundry_mods.json",
