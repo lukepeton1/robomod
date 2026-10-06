@@ -34,7 +34,7 @@ def main():
             reason = "enchanted_slot_reserved"
         elif rid in dependent:
             reason = "dependent_upgrade_row"
-        elif LOCKED_PATTERN.search(rid):
+        elif LOCKED_PATTERN.search(rid) and rid not in CORE:
             reason = "chassis_or_internal_variant"
         elif not row.get("class"):
             reason = "no_runtime_affix_class"
