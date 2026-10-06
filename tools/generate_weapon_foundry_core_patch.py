@@ -45,7 +45,7 @@ def main():
     for row in ["Explosive2","Explosive3","Explosive4","Explosive5","ExplosiveBlank"]:
         operations.append({"op":"remove_row_handles","row":row,"field":"RemovedPool","values":["Pierce","Bounce"],"reason":"Verified/decoded native explosive state can coexist with traversal."})
     operations.extend([
-        {"op":"remove_row_handles","row":"Homing","field":"RemovedPool","values":["AutoShotgun"],"reason":"Phase 3 in-game test confirmed Seeker + Buckshot on a projectile skill."},
+        {"op":"remove_row_handles","row":"Homing","field":"RemovedPool","values":["AutoShotgun","Bounce"],"reason":"Phase 3 confirmed Seeker + Buckshot; decoded Homing and Bounce mutate independent native projectile state."},
         {"op":"remove_row_handles","row":"AutoShotgun","field":"RemovedPool","values":["Homing"],"reason":"Phase 3 in-game test confirmed Seeker + Buckshot on a projectile skill."},
     ])
     for row in BROAD_ROWS:
