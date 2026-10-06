@@ -1,0 +1,56 @@
+# Roboquest Momentum raw legacy extraction targets.
+# Paths are relative to <LegacyExtract>/RoboQuest/Content and omit extensions.
+# Keep this list focused on movement architecture and first-order compatibility seams.
+#
+# The repository's FModel JSON is the first research source. These raw assets are requested
+# because cooked UAssetAPI bytecode/native imports are needed to resolve the actual movement
+# integrator and safe Blueprint/native patch seams.
+
+# Core player / controllers
+Blueprint/Player/BP_APlayer
+Blueprint/Player/BP_APlayerController
+Blueprint/Player/BP_AGamePlayerController
+Blueprint/Player/BP_IngamePlayerController
+
+# Shared player data
+Data/DataAsset/DA_CommonCharacterData
+Data/DataAsset/DA_CommonPlayerData
+Data/DataAsset/DA_CommonPlayerSkillDataAsset
+Data/DT_PlayerSkills
+
+# Existing movement verbs / semantic events
+Blueprint/Skill/Ability/BP_PS_Dash
+Blueprint/Upgrade/Artefact/BP_Grapple
+Blueprint/Upgrade/Artefact/BP_Jetpack
+Blueprint/Upgrade/Artefact/BP_BunnyCrouch
+Blueprint/Item/Common/BP_PowerSlideSkill
+Blueprint/Skill/Mod/BP_WS_RocketJump
+Blueprint/Skill/Perk/BP_PS_RocketJump
+Blueprint/Skill/Perk/BP_PS_PowerSlideGrenade
+Blueprint/Interactive/Level/BP_Jumpad
+
+# Progression / input / diagnostics
+Blueprint/GameSystem/MetaReward/Player/BP_MetaReward_Speed
+Blueprint/GameSystem/MetaReward/Player/BP_MetaReward_TripleJump
+Blueprint/Item/Bazar/BP_AddJump
+Blueprint/GameSystem/SaveGame/BP_SaveGame_Controls
+Data/StringTable/DST_PlayerActions
+Blueprint/HUD/Player/WGT_MoveSpeedDisplayer
+
+# Superbot is the one class requested in the first raw pass because vanilla ships a
+# separate Power Slide curve for it. Other classes inherit BP_APlayer without an
+# FModel-visible movement override and remain covered by the static compatibility scan.
+Blueprint/Player/Class/BP_SuperBot
+
+# Movement curves
+Data/Curve/CU_PowerSlide
+Data/Curve/CU_PowerSlide_Superbot
+Data/Curve/CU_DashRangeByAngle
+Data/Curve/CU_DashSpeedbyDistance
+Data/Curve/CU_DashFovEffect
+Data/Curve/CU_Jump_MultiplierByBonusSpeed
+Data/Curve/CU_Jetpack
+Data/Curve/CU_Jetpack_Gravity
+Data/Curve/CU_RocketJump
+Data/Curve/CU_RocketJump_DistanceRatio
+Data/Curve/Physique/CU_Velocity_ImpactForce

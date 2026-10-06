@@ -1,0 +1,56 @@
+name: Validate Momentum Research
+
+on:
+  push:
+    branches:
+      - feature/movement-overhaul
+    paths:
+      - ".github/workflows/validate-momentum.yml"
+      - "Source/manifests/movement_patch_targets.txt"
+      - "tools/analyze_movement_seams.py"
+      - "tools/windows/collect-movement-handoff.*"
+      - "tests/test_movement_analyzer.py"
+      - "vanilla-json/**"
+      - "Docs/MOVEMENT_RESEARCH.md"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+
+      - name: Run movement analyzer
+        run: |
+          python3 tools/analyze_movement_seams.py             --output /tmp/movement-seams.json             --compat-output /tmp/movement-compatibility.json
+
+      - name: Run movement analyzer tests
+        run: python3 -m unittest discover -s tests -p "test_movement_analyzer.py" -v
+
+      - name: Verify manifest targets exist in committed static JSON
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          root = Path("vanilla-json/RoboQuest/Content")
+          manifest = Path("Source/manifests/movement_patch_targets.txt")
+          targets = [
+              line.strip()
+              for line in manifest.read_text(encoding="utf-8").splitlines()
+              if line.strip() and not line.lstrip().startswith("#")
+          ]
+          duplicates = sorted({x for x in targets if targets.count(x) > 1})
+          missing = [x for x in targets if not (root / f"{x}.json").is_file()]
+          if duplicates:
+              raise SystemExit(f"duplicate manifest targets: {duplicates}")
+          if missing:
+              raise SystemExit(f"manifest targets missing static JSON: {missing}")
+          print(f"validated {len(targets)} movement targets")
+          PY
