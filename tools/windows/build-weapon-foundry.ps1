@@ -154,6 +154,7 @@ $dataPatcher = Join-Path $RepoRoot "tools\patch_uassetapi_datatable.py"
 $dataVerifier = Join-Path $RepoRoot "tools\verify_uassetapi_patch.py"
 $fragPatcher = Join-Path $RepoRoot "tools\patch_fragmentation_bytecode.py"
 $cdoPatcher = Join-Path $RepoRoot "tools\patch_uassetapi_cdo.py"
+$kismetLayout = Join-Path $RepoRoot "tools\kismet_layout.py"
 
 $affixOriginalJson = Join-Path $jsonRoot "DT_WeaponAffix.original.json"
 $affixPatchedJson = Join-Path $jsonRoot "DT_WeaponAffix.weapon-foundry.json"
@@ -177,6 +178,8 @@ Export-UAssetJson $fragSource $fragOriginalJson "UAssetGUI Fragmentation tojson"
 Export-UAssetJson $merchantSource $merchantOriginalJson "UAssetGUI Foundry merchant tojson"
 
 Write-Host "2/12 Proving clean Blueprint round-trips..."
+Invoke-Python @($kismetLayout, $fragOriginalJson, "--validate")
+Invoke-Python @($kismetLayout, $merchantOriginalJson, "--validate")
 $fragCleanBase = Join-Path $cleanRoot ("RoboQuest\Content\" + $fragRelative)
 Build-UAssetFromJson $fragOriginalJson $fragCleanBase "UAssetGUI clean Fragmentation fromjson"
 Export-UAssetJson ($fragCleanBase + ".uasset") $fragCleanJson "UAssetGUI clean Fragmentation round-trip"
@@ -242,6 +245,8 @@ Invoke-Python @($dataVerifier, $affixRoundtripJson, $coreSpec)
 Invoke-Python @($dataVerifier, $modRoundtripJson, $modSpec)
 Invoke-Python @($fragPatcher, $fragRoundtripJson, "--verify-only")
 Invoke-Python @($cdoPatcher, $merchantRoundtripJson, $merchantSpec, "--verify-only")
+Invoke-Python @($kismetLayout, $fragRoundtripJson, "--validate")
+Invoke-Python @($kismetLayout, $merchantRoundtripJson, "--validate")
 
 Write-Host "9/12 Packing WeaponFoundry_P UE4.26 IoStore containers..."
 $utoc = Join-Path $releaseRoot "WeaponFoundry_P.utoc"
