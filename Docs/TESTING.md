@@ -26,18 +26,19 @@ Test at least:
 - Fragments + Explosive;
 - Fragments + Seeker where visually isolatable.
 
-## Raycast Seeker release gate
+## Seeker safety rollback
 
-Use a weapon whose vanilla primary skill is Raycast.
+The synthetic Raycast → Projectile Seeker resolver is currently disabled after an actual UE4 runtime crash in `BP_WA_Homing.OnApply` reporting an unknown code token.
 
-Confirm:
+Release candidates must confirm:
 
-- the weapon still fires normally before Seeker;
-- adding Seeker produces visible traveling projectiles;
-- projectiles home;
-- damage/fire cadence remain sensible;
-- removing/replacing the Seeker weapon state does not leave the skill permanently converted;
-- no crash when changing weapon/map.
+- `BP_WA_Homing` is absent from the mod container override list;
+- the Homing row remains on its vanilla seven weapon chassis;
+- Homing is absent from the global Foundry merchant pool;
+- native projectile Seeker behavior still works on vanilla-supported chassis;
+- no test or release script claims raycast Seeker support until a replacement resolver passes a real in-game gate.
+
+Do not use the old raycast-Seeker smoke expectation as a release criterion while this rollback is active.
 
 ## Foundry progression
 
