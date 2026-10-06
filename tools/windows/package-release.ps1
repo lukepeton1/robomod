@@ -57,12 +57,19 @@ Copy-Item -LiteralPath (Join-Path $RepoRoot "packaging\uninstall.cmd") -Destinat
 $sourceFiles = @(
     "Source\composition\composition_rules.json",
     "Source\grafting\transfer_policy.json",
+    "Source\grafting\graft_transaction.json",
     "Source\patches\weapon_foundry_core.json",
+    "Source\patches\weapon_foundry_mods.json",
+    "Source\patches\foundry_merchant.json",
     "tools\patch_uassetapi_datatable.py",
     "tools\verify_uassetapi_patch.py",
     "tools\patch_fragmentation_bytecode.py",
+    "tools\patch_uassetapi_cdo.py",
+    "tools\kismet_layout.py",
     "tools\generate_weapon_foundry_core_patch.py",
+    "tools\generate_weapon_foundry_mod_patch.py",
     "tools\generate_transfer_policy.py",
+    "tools\generate_foundry_merchant.py",
     "tools\windows\build-weapon-foundry.ps1"
 )
 foreach ($relative in $sourceFiles) {
