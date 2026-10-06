@@ -167,8 +167,27 @@ def set_name_const(expr: dict[str, Any], value: str) -> None:
     params[0]["Value"] = value
 
 
+def set_context_object_local(expr: dict[str, Any], local_name: str) -> None:
+    if type_name(expr) != "EX_Context":
+        raise PatchError("target is not EX_Context")
+    obj = expr.get("ObjectExpression") or {}
+    if type_name(obj) != "EX_LocalVariable":
+        raise PatchError("context object is not a local variable")
+    new = (obj.get("Variable") or {}).get("New") or {}
+    path = new.get("Path")
+    if not isinstance(path, list) or len(path) != 1:
+        raise PatchError("context object local path shape changed")
+    new["Path"] = [local_name]
+
+
 def make_hit_type_assignment(template: dict[str, Any]) -> dict[str, Any]:
     expr = copy.deepcopy(template)
+    # Vanilla OnRemove uses K2Node_DynamicCast_AsAPlayer_Skill, while OnApply
+    # uses the separate _1 local. Retarget the cloned l-value to the apply local.
+    set_context_object_local(
+        expr["Variable"],
+        "K2Node_DynamicCast_AsAPlayer_Skill_1",
+    )
     expr["Expression"] = {
         "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_ByteConst, UAssetAPI",
         "Value": 1,
@@ -261,6 +280,7 @@ def verify(asset: dict[str, Any]) -> dict[str, Any]:
     targets = []
     custom_names = []
     projectile_assignment = False
+    projectile_assignment_uses_apply_local = False
     gravity_zero = False
 
     for expr in prior:
@@ -273,6 +293,10 @@ def verify(asset: dict[str, Any]) -> dict[str, Any]:
             targets.append(target)
         if target == "HitType" and type_name(rhs) == "EX_ByteConst" and rhs.get("Value") == 1:
             projectile_assignment = True
+            obj = (var.get("ObjectExpression") or {})
+            projectile_assignment_uses_apply_local = (
+                local_path(obj) == "K2Node_DynamicCast_AsAPlayer_Skill_1"
+            )
         if target == "GravityScale" and type_name(rhs) == "EX_FloatConst" and float(rhs.get("Value", 1)) == 0.0:
             gravity_zero = True
 
@@ -288,6 +312,8 @@ def verify(asset: dict[str, Any]) -> dict[str, Any]:
         raise PatchError("resolver custom property lookups missing")
     if not projectile_assignment:
         raise PatchError("resolver does not assign HitType byte 1")
+    if not projectile_assignment_uses_apply_local:
+        raise PatchError("resolver HitType assignment does not use the OnApply skill local")
     if not gravity_zero:
         raise PatchError("resolver does not assign GravityScale=0")
 
