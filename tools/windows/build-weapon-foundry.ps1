@@ -389,6 +389,14 @@ $manifest = [ordered]@{
         raycast_seeker_resolver = "tools/patch_homing_resolver.py"
         foundry_purchase_guard = "tools/patch_foundry_interactive.py"
         progression_policy = "Source/grafting/progression_policy.json"
+        progression = [ordered]@{
+            quality_color_caps = $progressionPolicy.quality_color_caps
+            free_complexity_affixes = $baseFoundryAffixes
+            max_foundry_affixes = $maxFoundryAffixes
+            merchant_cost_formula = $progressionPolicy.power_cell_economy.merchant_formula
+            graft_complexity_formula = $progressionPolicy.power_cell_economy.graft_complexity_formula
+            native_alt_fire_slots = [int]$progressionPolicy.native_alt_fire_slots
+        }
     }
     containers = @(
         [ordered]@{ name = "WeaponFoundry_P.pak"; sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $pak).Hash.ToLowerInvariant() },
