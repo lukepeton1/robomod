@@ -1,28 +1,24 @@
 # Building from source
 
-## Required local inputs
+## Requirements
 
-Weapon Foundry intentionally does not redistribute extracted Roboquest assets.
+Weapon Foundry does not redistribute extracted Roboquest cooked assets.
 
-You need:
+Required locally:
 
-1. A current Roboquest installation.
-2. `retoc`.
-3. UAssetGUI v1.1.0.
-4. Python 3.
-5. A UE4.26 legacy extraction generated with retoc.
+1. current Roboquest installation;
+2. `retoc`;
+3. UAssetGUI v1.1.0;
+4. Python 3;
+5. UE4.26 legacy extraction from the installed game.
 
-Verified research workflow:
+Verified extraction pattern:
 
 ```text
 retoc to-legacy --version UE4_26 <Roboquest Paks> <LegacyExtract>
 ```
 
-UAssetGUI v1.1.0 is invoked with `VER_UE4_26`.
-
-## Production build
-
-From the repository:
+## Release-candidate build
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tools\windows\build-weapon-foundry.ps1 `
@@ -39,32 +35,51 @@ Add:
 
 to install after a successful build.
 
-The current developer folder layout also supports:
+With the development folder layout used during reverse engineering:
 
 ```cmd
 tools\windows\run-weapon-foundry.cmd
 ```
 
-## What the build does
+builds and installs the full release candidate.
 
-The production core:
+## Build pipeline
 
-1. exports clean `DT_WeaponAffix` and `BP_WA_Fragmentation`;
-2. applies the generated compatibility/eligibility policy;
-3. applies the verified same-shape Fragmentation Kismet substitutions;
-4. reconstructs cooked UE4.26 assets;
-5. re-exports them and verifies the intended edits survived round-trip;
-6. packs `WeaponFoundry_P.pak/.ucas/.utoc` with retoc;
-7. writes SHA-256 hashes to a manifest.
+The production builder now validates and reconstructs six cooked packages.
 
-The production build contains no Phase 3 diagnostic HandGun edits.
+It:
+
+1. exports `DT_WeaponAffix`, `DT_WeaponMod`, Fragmentation, Homing and the two Foundry merchant Blueprints;
+2. validates clean Kismet layout for every modified Blueprint;
+3. applies generated affix compatibility/eligibility policy;
+4. applies generated native alt-fire eligibility policy;
+5. applies Fragmentation child-inheritance Kismet edits;
+6. inserts/rebases the Homing Raycast→Projectile resolver;
+7. seeds the native merchant with transferable ordinary affixes;
+8. inserts/rebases the six-affix purchase guard;
+9. reconstructs all cooked packages;
+10. re-exports and semantically verifies all edits;
+11. validates final Kismet byte layout;
+12. packs `WeaponFoundry_P.pak/.ucas/.utoc`;
+13. records hashes and modified-package manifest;
+14. optionally installs the release candidate.
+
+The build contains no Phase 3 diagnostic HandGun/skill overrides.
 
 ## Release ZIP
 
-After a successful production build:
+After a successful build:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\windows\package-release.ps1 -Version 0.1.0-dev
+powershell -ExecutionPolicy Bypass -File .\tools\windows\package-release.ps1 -Version 0.1.0-rc1
 ```
 
-This creates a self-contained ZIP under `dist/` while excluding extracted vanilla assets.
+The ZIP contains:
+
+- installable IoStore triplet;
+- install/uninstall helpers;
+- manifest and hashes;
+- production source patch/generator tooling;
+- documentation.
+
+It excludes extracted vanilla game assets.
