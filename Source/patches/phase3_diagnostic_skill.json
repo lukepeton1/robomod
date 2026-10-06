@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "phase3-diagnostic-starter-skill",
+  "target": "Data/DT_PlayerSkills",
+  "status": "diagnostic_only",
+  "operations": [
+    {
+      "op": "set_value",
+      "row": "PF_Handgun",
+      "field": "TargetDetection",
+      "value": "EHitType::Projectile",
+      "reason": "Force the starter diagnostic skill onto the native generic projectile path so Seeker can be assessed without depending on raycast conversion."
+    },
+    {
+      "op": "set_value",
+      "row": "PF_Handgun",
+      "field": "Speed",
+      "value": 12500,
+      "reason": "Use the Homing affix's shipped ProjectileSpeed parameter as the diagnostic projectile speed."
+    },
+    {
+      "op": "set_value",
+      "row": "PF_Handgun",
+      "field": "CollisionSize",
+      "value": 10,
+      "reason": "Use the Homing affix's shipped ProjectileCollisionSize parameter for the diagnostic projectile."
+    },
+    {
+      "op": "set_value",
+      "row": "PF_Handgun",
+      "field": "GravityScale",
+      "value": 0,
+      "reason": "Keep the diagnostic projectile ballistic behavior close to the original handgun raycast feel."
+    }
+  ]
+}
