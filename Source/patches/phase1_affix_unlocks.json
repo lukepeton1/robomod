@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "name": "phase1-native-affix-composition",
+  "target": "Data/DT_WeaponAffix",
+  "status": "prototype",
+  "principle": "Only remove generation-pool conflicts where cooked Blueprint bytecode already expresses both effects as independent native skill states/tags.",
+  "operations": [
+    {
+      "op": "remove_row_handles",
+      "row": "Burn",
+      "field": "RemovedPool",
+      "values": ["Ice", "Shock"],
+      "reason": "Burn, Ice and Shock initialize/remove distinct native element tags."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Ice",
+      "field": "RemovedPool",
+      "values": ["Burn", "Shock"],
+      "reason": "Burn, Ice and Shock initialize/remove distinct native element tags."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Shock",
+      "field": "RemovedPool",
+      "values": ["Burn", "Ice"],
+      "reason": "Burn, Ice and Shock initialize/remove distinct native element tags."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Bounce",
+      "field": "RemovedPool",
+      "values": ["Ricochet"],
+      "reason": "Bounce initializes native bounce state while Ricochet uses native ricochet fields."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Ricochet",
+      "field": "RemovedPool",
+      "values": ["Bounce"],
+      "reason": "Bounce and Ricochet mutate independent native skill state."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Pierce",
+      "field": "RemovedPool",
+      "values": ["Explosive2", "Explosive3", "Explosive4", "Explosive5"],
+      "reason": "Pierce initializes native pierce state; trigger-based Explosive variants use native explosive-tag/proc state."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Explosive2",
+      "field": "RemovedPool",
+      "values": ["Pierce", "Bounce"],
+      "reason": "Explosive and traversal states are independent in cooked bytecode."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Explosive3",
+      "field": "RemovedPool",
+      "values": ["Pierce", "Bounce"],
+      "reason": "Explosive and traversal states are independent in cooked bytecode."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Explosive4",
+      "field": "RemovedPool",
+      "values": ["Pierce", "Bounce"],
+      "reason": "Explosive and traversal states are independent in cooked bytecode."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "Explosive5",
+      "field": "RemovedPool",
+      "values": ["Pierce", "Bounce"],
+      "reason": "Explosive and traversal states are independent in cooked bytecode."
+    },
+    {
+      "op": "remove_row_handles",
+      "row": "ExplosiveBlank",
+      "field": "RemovedPool",
+      "values": ["Pierce", "Bounce"],
+      "reason": "ExplosiveBlank initializes native explosive-tag state independently of native traversal state."
+    }
+  ],
+  "deliberately_not_unlocked": {
+    "Fragmentation": "Vanilla cooked graph contains a gameplay-tag gate and requires a bytecode change for universal use.",
+    "Homing_vs_Hitscan": "Homing does not perform a verified raycast-to-projectile conversion.",
+    "Homing_vs_Buckshot_or_TripleShot": "Deferred until first in-game native-composition smoke test."
+  }
+}
