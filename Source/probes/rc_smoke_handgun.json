@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "rc-smoke-native-raycast-handgun",
+  "target": "Data/DT_Weapons",
+  "status": "diagnostic_only",
+  "invariant": "DT_PlayerSkills/PF_Handgun is not modified; the native Raycast skill must be converted only by production BP_WA_Homing at runtime.",
+  "operations": [
+    {
+      "op": "replace_row_handles",
+      "row": "HandGun",
+      "field": "Affixes",
+      "values": [
+        "Homing",
+        "Bounce",
+        "Fragmentation",
+        "Burn",
+        "ExplosiveBlank",
+        "FreeShot"
+      ],
+      "reason": "Deterministic RC smoke composition on the native Raycast Fox Gun. No static hit-model conversion is permitted in this probe."
+    }
+  ]
+}
