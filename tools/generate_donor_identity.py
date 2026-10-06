@@ -208,6 +208,25 @@ def build_catalog(
             "context_guards": guards,
         })
 
+    guarded_native_rows = {
+        guard["row"]
+        for identity in identities
+        for guard in identity["context_guards"]
+        if guard["type"] == "chassis_or_internal_row"
+    }
+    chassis_native_rows = {}
+    for weapon in sorted(weapons, key=lambda row: row.get("row") or ""):
+        row_name = weapon.get("row")
+        if not row_name:
+            continue
+        preset = [
+            str(row)
+            for row in (weapon.get("preset_affixes") or [])
+            if str(row) in guarded_native_rows
+        ]
+        if preset:
+            chassis_native_rows[str(row_name)] = preset
+
     return {
         "schema_version": 1,
         "name": "weapon-foundry-donor-runtime-identity",
