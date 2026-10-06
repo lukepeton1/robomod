@@ -584,6 +584,15 @@ class FoundryInteractivePatchTests(unittest.TestCase):
             },
             {
                 "$type": "UAssetAPI.Import, UAssetAPI",
+                "ObjectName": "/Script/RoboQuest",
+                "OuterIndex": 0,
+                "ClassPackage": "/Script/CoreUObject",
+                "ClassName": "Package",
+                "PackageName": None,
+                "bImportOptional": False,
+            },
+            {
+                "$type": "UAssetAPI.Import, UAssetAPI",
                 "ObjectName": "KismetMathLibrary",
                 "OuterIndex": -1,
                 "ClassPackage": "/Script/CoreUObject",
@@ -594,7 +603,7 @@ class FoundryInteractivePatchTests(unittest.TestCase):
             {
                 "$type": "UAssetAPI.Import, UAssetAPI",
                 "ObjectName": "Character_Player",
-                "OuterIndex": -1,
+                "OuterIndex": -2,
                 "ClassPackage": "/Script/CoreUObject",
                 "ClassName": "Class",
                 "PackageName": None,
@@ -603,7 +612,7 @@ class FoundryInteractivePatchTests(unittest.TestCase):
             {
                 "$type": "UAssetAPI.Import, UAssetAPI",
                 "ObjectName": "AWeapon",
-                "OuterIndex": -1,
+                "OuterIndex": -2,
                 "ClassPackage": "/Script/CoreUObject",
                 "ClassName": "Class",
                 "PackageName": None,
@@ -631,7 +640,12 @@ class FoundryInteractivePatchTests(unittest.TestCase):
         # JumpIfNot is 6 bytes, Return is 2; target the EndOfScript at byte 8.
         code[0]["CodeOffset"] = 8
         asset = {
-            "NameMap": ["CanInteract", "PlayerCharacter", "currentWeapon", "AffixAmount"],
+            "NameMap": [
+                "CanInteract",
+                "PlayerCharacter",
+                "currentWeapon",
+                "AffixAmount",
+            ],
             "NamesReferencedFromExportDataCount": 4,
             "Imports": imports,
             "Exports": [{
@@ -646,13 +660,49 @@ class FoundryInteractivePatchTests(unittest.TestCase):
         patched, report = patch_foundry_interactive(asset, 6)
         self.assertEqual(report["old_false_target"], 8)
         self.assertGreater(report["inserted_byte_count"], 0)
-        self.assertIn("Less_IntInt", patched["NameMap"])
-        self.assertEqual(patched["Imports"][-1]["ObjectName"], "Less_IntInt")
+        self.assertEqual(report["quality_caps"], {
+            "0": 0,
+            "1": 3,
+            "2": 4,
+            "3": 5,
+            "4": 6,
+        })
+
+        import_names = {entry["ObjectName"] for entry in patched["Imports"]}
+        for name in (
+            "Less_IntInt",
+            "Greater_ByteByte",
+            "Conv_ByteToInt",
+            "Add_IntInt",
+            "BooleanAND",
+            "WeaponAffixRarity",
+        ):
+            self.assertIn(name, import_names)
+
+        for name in ("CurrentAffixBundle", "Color", "AffixAmount"):
+            self.assertIn(name, patched["NameMap"])
+
         self.assertEqual(
             patched["Exports"][0]["ScriptBytecode"][1]["CodeOffset"],
             8 + report["inserted_byte_count"],
         )
-        self.assertTrue(verify_foundry_interactive(patched, 6)["verified"])
+
+        guard = patched["Exports"][0]["ScriptBytecode"][0]
+        serialized = json.dumps(guard)
+        for token in (
+            "PlayerCharacter",
+            "currentWeapon",
+            "CurrentAffixBundle",
+            "Color",
+            "AffixAmount",
+        ):
+            self.assertIn(token, serialized)
+
+        verified = verify_foundry_interactive(patched, 6)
+        self.assertTrue(verified["verified"])
+        self.assertEqual(verified["quality_caps"]["common"], 0)
+        self.assertEqual(verified["quality_caps"]["tier_1"], 3)
+        self.assertEqual(verified["quality_caps"]["top_tier"], 6)
         self.assertTrue(validate_asset(patched)["verified"])
 
 
