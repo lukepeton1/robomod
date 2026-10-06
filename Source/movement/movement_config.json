@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "initial_simulation_baseline_not_release_tuning",
+  "units": {
+    "distance": "Unreal centimeters",
+    "speed": "cm/s",
+    "time": "s"
+  },
+  "notes": [
+    "The 1050 cm/s ordinary horizontal target is an initial authored baseline anchored to the tail of vanilla CU_PowerSlide, not a claim that native Roboquest walking speed equals 1050.",
+    "Vertical, acceleration, wallrun, lurch and impulse constants are provisional until the native movement probe can measure the live integrator.",
+    "The emergency safety speed is a physics/network guardrail, not a player-facing movement cap."
+  ],
+  "ground": {
+    "wish_speed": 1050.0,
+    "sprint_wish_speed": 1200.0,
+    "acceleration": 12.0,
+    "friction": 7.0,
+    "stop_speed": 220.0
+  },
+  "air": {
+    "acceleration": 12.0,
+    "wish_speed": 1050.0,
+    "directional_wish_cap": 320.0,
+    "soft_speed_threshold": 5000.0,
+    "soft_damping": 0.15
+  },
+  "jump": {
+    "vertical_impulse": 900.0,
+    "gravity": 2400.0,
+    "buffer_seconds": 0.1,
+    "coyote_seconds": 0.08
+  },
+  "slide": {
+    "entry_speed": 900.0,
+    "friction": 1.15,
+    "steering_acceleration": 3.5,
+    "exit_preservation": 1.0
+  },
+  "wallrun": {
+    "minimum_speed": 850.0,
+    "gravity_scale": 0.25,
+    "tangent_acceleration": 5.0,
+    "wall_jump_outward_impulse": 650.0,
+    "wall_jump_upward_impulse": 850.0,
+    "wall_coyote_seconds": 0.1
+  },
+  "lurch": {
+    "duration": 0.15,
+    "redirect_fraction": 0.28
+  },
+  "impulses": {
+    "dash": {
+      "horizontal": 2600.0,
+      "preserve_incoming": 1.0
+    },
+    "grapple_release": {
+      "horizontal": 850.0,
+      "preserve_incoming": 1.0
+    },
+    "rocket_jump": {
+      "horizontal": 1200.0,
+      "vertical": 1450.0,
+      "preserve_incoming": 1.0
+    }
+  },
+  "safety": {
+    "absolute_speed": 12000.0
+  }
+}

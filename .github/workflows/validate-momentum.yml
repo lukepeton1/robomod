@@ -7,14 +7,17 @@ on:
     paths:
       - ".github/workflows/validate-momentum.yml"
       - "Source/manifests/movement_patch_targets.txt"
+      - "Source/movement/**"
       - "tools/analyze_movement_seams.py"
       - "tools/analyze_native_movement_strings.py"
       - "tools/extract_movement_callgraph.py"
+      - "tools/simulate_movement.py"
       - "tools/windows/collect-movement-handoff.*"
       - "tools/windows/collect-movement-native-handoff.*"
       - "tests/test_*movement*.py"
       - "vanilla-json/**"
       - "Docs/MOVEMENT_RESEARCH.md"
+      - "Docs/MOVEMENT_DESIGN.md"
       - "research/MOVEMENT_HANDOFF_FINDINGS.md"
       - "research/generated/movement_native_surface.json"
   pull_request:
@@ -40,6 +43,9 @@ jobs:
 
       - name: Run movement research tests
         run: python3 -m unittest discover -s tests -p "test_*movement*.py" -v
+
+      - name: Validate reference movement suite
+        run: python3 tools/simulate_movement.py --frame-invariance > /tmp/movement-frame-invariance.json
 
       - name: Verify manifest targets exist in committed static JSON
         run: |
