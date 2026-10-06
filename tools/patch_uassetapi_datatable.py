@@ -89,7 +89,19 @@ def apply_remove_row_handles(
     # a DummyStruct that records the WeaponAffixRowHandle type. When a patch removes
     # the last real element, preserve that schema by synthesizing the same metadata
     # from the first pre-patch element.
-    if not remaining and prop.get("ArrayType") == "StructProperty" and not prop.get("DummyStruct"):
+    first_type = (
+        str(current[0].get("$type", ""))
+        if current and isinstance(current[0], dict)
+        else ""
+    )
+    is_struct_array = (
+        prop.get("ArrayType") == "StructProperty"
+        or "StructPropertyData" in first_type
+    )
+    if is_struct_array and not prop.get("ArrayType"):
+        prop["ArrayType"] = "StructProperty"
+
+    if not remaining and is_struct_array and not prop.get("DummyStruct"):
         if not current:
             raise PatchError(
                 f"row {row.get('Name')} field {field}: cannot infer DummyStruct for empty StructProperty array"
