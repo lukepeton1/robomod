@@ -110,7 +110,7 @@ def main() -> int:
     )
 
     merchant_rows = merchant["operations"][0]["values"]
-    require(len(merchant_rows) == 18, f"expected 18 globally safe merchant affixes, found {len(merchant_rows)}")
+    require(len(merchant_rows) == 15, f"expected 15 globally safe conflict-free merchant affixes, found {len(merchant_rows)}")
     transfer_affixes = {
         row["row"]: row for row in transfer["transferable"] if row["kind"] == "affix"
     }
@@ -124,6 +124,23 @@ def main() -> int:
         and row not in generalized
     ]
     require(not unsafe, f"merchant exposes target-specific rows globally: {unsafe}")
+
+    matrix_by_row = {row["row"]: row for row in matrix["properties"]}
+    pairwise_conflicts = sorted({
+        tuple(sorted((row, conflict)))
+        for row in merchant_rows
+        for conflict in matrix_by_row[row].get("transferable_conflicts", [])
+        if conflict in merchant_rows
+    })
+    require(
+        not pairwise_conflicts,
+        f"global merchant contains mutually exclusive transferable rows: {pairwise_conflicts}",
+    )
+    require(
+        set(merchant["policy"].get("excluded_global_conflict_rows") or [])
+        == {"BossDamage", "FlyDamage", "TurretDamage"},
+        "expected mutually exclusive damage-specialization rows to remain target-aware only",
+    )
 
     builder = (ROOT / "tools/windows/build-weapon-foundry.ps1").read_text(encoding="utf-8")
     required_builder_tokens = [
