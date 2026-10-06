@@ -204,6 +204,8 @@ class DataTablePatcherTests(unittest.TestCase):
 
     def test_set_value_works_through_player_skill_wrapper(self):
         asset = {
+            "NameMap": ["EHitType::Raycast"],
+            "NamesReferencedFromExportDataCount": 1,
             "Exports": [{
                 "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
                 "Table": {"Data": [{
@@ -233,9 +235,21 @@ class DataTablePatcherTests(unittest.TestCase):
         prop = patched["Exports"][0]["Table"]["Data"][0]["Value"][0]["Value"][0]
         self.assertEqual(prop["Value"], "EHitType::Projectile")
         self.assertEqual(report[0]["before"], "EHitType::Raycast")
+        self.assertEqual(report[0]["name_map_added"], ["EHitType::Projectile"])
+        self.assertIn("EHitType::Projectile", patched["NameMap"])
+        self.assertEqual(
+            patched["NamesReferencedFromExportDataCount"],
+            len(patched["NameMap"]),
+        )
 
     def test_replace_row_handles_works_through_weapon_wrapper(self):
         asset = {
+            "NameMap": [
+                "OnKillReloadOtherWeapon",
+                "ExplosiveBlank",
+                "AutoShotgun",
+            ],
+            "NamesReferencedFromExportDataCount": 3,
             "Exports": [{
                 "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
                 "Table": {"Data": [{
@@ -271,6 +285,17 @@ class DataTablePatcherTests(unittest.TestCase):
         ]
         self.assertEqual(actual, expected)
         self.assertEqual(report[0]["replacement_count"], 6)
+        self.assertEqual(
+            report[0]["name_map_added"],
+            ["Fragmentation", "Homing", "Burn", "FreeShot"],
+        )
+        self.assertEqual(
+            patched["NamesReferencedFromExportDataCount"],
+            len(patched["NameMap"]),
+        )
+        for name in expected:
+            self.assertIn(name, patched["NameMap"])
+
         # The copied row-handle template keeps the source DataTable pointer.
         for handle in prop["Value"]:
             table = next(x["Value"] for x in handle["Value"] if x["Name"] == "DataTable")
