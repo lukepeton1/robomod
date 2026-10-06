@@ -21,7 +21,9 @@
       "alt_fire_slot_occupied",
       "insufficient_power_cells"
     ],
-    "progression_policy": "Source/grafting/progression_policy.json"
+    "progression_policy": "Source/grafting/progression_policy.json",
+    "donor_identity_catalog": "Source/grafting/donor_identity_catalog.json",
+    "donor_identity_reconciler": "tools/reconcile_donor_affixes.py"
   },
   "ground_graft": {
     "trigger": "secondary interaction on dropped weapon while holding a different target weapon",
@@ -64,7 +66,8 @@
       "server consumes donor exactly once",
       "server replicates resulting weapon state"
     ],
-    "cancel": "no state mutation"
+    "cancel": "no state mutation",
+    "donor_enumeration": "live AWeaponAffix instances filtered by donor WeaponRef and reconciled against enchanted/chassis-native provenance"
   },
   "smith": {
     "trigger": "Foundry / Smith interaction",
