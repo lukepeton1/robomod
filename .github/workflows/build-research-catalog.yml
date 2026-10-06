@@ -23,7 +23,9 @@ jobs:
           fetch-depth: 0
 
       - name: Build machine-readable catalog
-        run: python3 tools/build_catalog.py
+        run: |
+          python3 tools/build_catalog.py
+          python3 tools/extract_runtime_seams.py
 
       - name: Validate generated JSON
         run: |
