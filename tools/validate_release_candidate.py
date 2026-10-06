@@ -112,7 +112,8 @@ def main() -> int:
     )
 
     merchant_rows = merchant["operations"][0]["values"]
-    require(len(merchant_rows) == 14, f"expected 14 globally safe conflict-free merchant affixes with Homing withheld, found {len(merchant_rows)}")\n    require("Homing" not in merchant_rows, "Homing must remain target-specific while the raycast resolver is disabled")
+    require(len(merchant_rows) == 14, f"expected 14 globally safe conflict-free merchant affixes with Homing withheld, found {len(merchant_rows)}")
+    require("Homing" not in merchant_rows, "Homing must remain target-specific while the raycast resolver is disabled")
     transfer_affixes = {
         row["row"]: row for row in transfer["transferable"] if row["kind"] == "affix"
     }
