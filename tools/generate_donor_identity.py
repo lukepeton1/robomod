@@ -94,6 +94,7 @@ def minimal_discriminator_keys(rows: Iterable[dict[str, Any]]) -> list[str]:
 def build_catalog(
     affixes: list[dict[str, Any]],
     mods: list[dict[str, Any]],
+    weapons: list[dict[str, Any]],
     transfer: dict[str, Any],
 ) -> dict[str, Any]:
     sources = {
@@ -254,6 +255,7 @@ def build_from_repo() -> dict[str, Any]:
     return build_catalog(
         load_json(DEFAULT_AFFIXES),
         load_json(DEFAULT_MODS),
+        load_json(DEFAULT_WEAPONS),
         load_json(DEFAULT_TRANSFER),
     )
 
