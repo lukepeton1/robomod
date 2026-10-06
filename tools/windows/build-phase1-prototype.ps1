@@ -35,6 +35,33 @@ function Resolve-Existing([string]$Path, [string]$Label) {
     return [System.IO.Path]::GetFullPath((Resolve-Path -LiteralPath $Path).Path)
 }
 
+function Find-Python {
+    $candidates = @(
+        @{ File = "python"; Prefix = @() },
+        @{ File = "py"; Prefix = @("-3") }
+    )
+    foreach ($candidate in $candidates) {
+        $cmd = Get-Command $candidate.File -ErrorAction SilentlyContinue
+        if ($cmd) {
+            return $candidate
+        }
+    }
+    throw "Python 3 was not found. Install Python 3 or make python/py available on PATH."
+}
+
+$python = Find-Python
+
+function Invoke-Python([string[]]$Arguments) {
+    if ($python.Prefix.Count -gt 0) {
+        & $python.File @($python.Prefix) @Arguments
+    } else {
+        & $python.File @Arguments
+    }
+    if ($LASTEXITCODE -ne 0) {
+        throw "Python command failed with exit code $LASTEXITCODE."
+    }
+}
+
 $LegacyExtractRoot = Resolve-Existing $LegacyExtractRoot "Legacy extraction"
 $UAssetGUIPath = Resolve-Existing $UAssetGUIPath "UAssetGUI"
 $RetocPath = Resolve-Existing $RetocPath "retoc"
@@ -79,6 +106,7 @@ $roundtripJson = Join-Path $jsonRoot "DT_WeaponAffix.roundtrip.json"
 $patchReport = Join-Path $reportRoot "phase1-affix-unlocks.json"
 $patchSpec = Join-Path $RepoRoot "Source\patches\phase1_affix_unlocks.json"
 $patcher = Join-Path $RepoRoot "tools\patch_uassetapi_datatable.py"
+$verifier = Join-Path $RepoRoot "tools\verify_uassetapi_patch.py"
 
 Write-Host "1/6 Exporting clean DT_WeaponAffix through UAssetGUI..."
 $toJsonArgs = @(
@@ -93,10 +121,7 @@ if ($proc.ExitCode -ne 0 -or -not (Test-Path -LiteralPath $sourceJson)) {
 }
 
 Write-Host "2/6 Applying Phase 1 declarative patch..."
-& python $patcher $sourceJson $patchSpec $patchedJson --report $patchReport
-if ($LASTEXITCODE -ne 0) {
-    throw "DataTable patcher failed with exit code $LASTEXITCODE."
-}
+Invoke-Python @($patcher, $sourceJson, $patchSpec, $patchedJson, "--report", $patchReport)
 
 Write-Host "3/6 Rebuilding patched cooked package..."
 $fromJsonArgs = @(
@@ -127,12 +152,7 @@ if ($proc.ExitCode -ne 0 -or -not (Test-Path -LiteralPath $roundtripJson)) {
     throw "Round-trip UAssetGUI tojson failed with exit code $($proc.ExitCode)."
 }
 
-& python $patcher $roundtripJson $patchSpec (Join-Path $jsonRoot "should-not-be-needed.json") *> (Join-Path $reportRoot "idempotence-check.txt")
-if ($LASTEXITCODE -eq 0) {
-    throw "Patched table still contains values that the patch expected to remove; round-trip validation failed."
-}
-# The patcher is fail-closed and reports missing requested handles on an already patched
-# table. That failure is the expected idempotence signal here.
+Invoke-Python @($verifier, $roundtripJson, $patchSpec)
 
 Write-Host "5/6 Packing UE4.26 IoStore containers..."
 $utoc = Join-Path $releaseRoot "WeaponFoundry_P.utoc"
