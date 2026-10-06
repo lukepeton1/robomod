@@ -52,11 +52,10 @@ function Find-Python {
 $python = Find-Python
 
 function Invoke-Python([string[]]$Arguments) {
-    if ($python.Prefix.Count -gt 0) {
-        & $python.File @($python.Prefix) @Arguments
-    } else {
-        & $python.File @Arguments
-    }
+    $allArgs = @()
+    $allArgs += $python.Prefix
+    $allArgs += $Arguments
+    & $python.File @allArgs
     if ($LASTEXITCODE -ne 0) {
         throw "Python command failed with exit code $LASTEXITCODE."
     }
