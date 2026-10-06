@@ -19,30 +19,63 @@ def verify_applied(asset: dict, spec: dict) -> list[dict]:
     errors = []
 
     for index, op in enumerate(spec.get("operations", [])):
-        if op.get("op") != "remove_row_handles":
-            errors.append(f"operation {index}: unsupported verification op {op.get('op')!r}")
-            continue
         row_name = str(op["row"])
         row = by_name.get(row_name)
         if row is None:
             errors.append(f"operation {index}: row not found: {row_name}")
             continue
-        prop = property_by_name(row, str(op["field"]))
-        current = [row_handle_name(x) for x in prop.get("Value", [])]
-        forbidden = [str(x) for x in op.get("values", [])]
-        still_present = [x for x in forbidden if x in current]
-        results.append({
-            "operation_index": index,
-            "row": row_name,
-            "field": op["field"],
-            "forbidden_values": forbidden,
-            "current_values": current,
-            "still_present": still_present,
-        })
-        if still_present:
-            errors.append(
-                f"operation {index}: {row_name}.{op['field']} still contains {still_present}"
+
+        if op.get("op") == "remove_row_handles":
+            prop = property_by_name(row, str(op["field"]))
+            current = [row_handle_name(x) for x in prop.get("Value", [])]
+            forbidden = [str(x) for x in op.get("values", [])]
+            still_present = [x for x in forbidden if x in current]
+            results.append({
+                "operation_index": index,
+                "op": op.get("op"),
+                "row": row_name,
+                "field": op["field"],
+                "forbidden_values": forbidden,
+                "current_values": current,
+                "still_present": still_present,
+            })
+            if still_present:
+                errors.append(
+                    f"operation {index}: {row_name}.{op['field']} still contains {still_present}"
+                )
+
+        elif op.get("op") == "copy_row_handles":
+            source_row_name = str(op.get("source_row"))
+            source_row = by_name.get(source_row_name)
+            if source_row is None:
+                errors.append(f"operation {index}: source row not found: {source_row_name}")
+                continue
+            target_prop = property_by_name(row, str(op["field"]))
+            source_prop = property_by_name(
+                source_row,
+                str(op.get("source_field") or op["field"]),
             )
+            current = [row_handle_name(x) for x in target_prop.get("Value", [])]
+            expected = [row_handle_name(x) for x in source_prop.get("Value", [])]
+            matches = current == expected
+            results.append({
+                "operation_index": index,
+                "op": op.get("op"),
+                "row": row_name,
+                "field": op["field"],
+                "source_row": source_row_name,
+                "source_field": op.get("source_field") or op["field"],
+                "current_values": current,
+                "expected_values": expected,
+                "matches": matches,
+            })
+            if not matches:
+                errors.append(
+                    f"operation {index}: {row_name}.{op['field']} does not match "
+                    f"{source_row_name}.{op.get('source_field') or op['field']}"
+                )
+        else:
+            errors.append(f"operation {index}: unsupported verification op {op.get('op')!r}")
 
     if errors:
         raise PatchError("; ".join(errors))
