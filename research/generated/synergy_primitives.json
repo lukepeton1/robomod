@@ -1,0 +1,6594 @@
+[
+  {
+    "row": "ExplosionConcentrated",
+    "name": "Thick",
+    "description": "+<2>% damage but -<1>% {explosion} radius",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_ExplosionConcentrated.BP_WA_ExplosionConcentrated_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "MalusRadius": 15.0,
+      "BonusDamage": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 17,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_ExplosionConcentrated",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "Less_IntInt",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "BurnImpact",
+    "name": "Magma",
+    "description": "Now applies impact",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BurnImpact.BP_WA_BurnImpact_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "DamagePercent": 100.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 3,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_BurnImpact",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "GetStatInitialValue",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "SecondaryCharge",
+    "name": "Loaded",
+    "description": "+<1> alt-fire charge",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_SecondaryStack.BP_WA_SecondaryStack_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "Stack": 1.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 7,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SecondaryStack",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "EqualEqual_ByteByte",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "IsValid",
+            "Multiply_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1",
+            "APlayer_Skill_2"
+          ]
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "SecondaryCharge2",
+    "name": "Loaded",
+    "description": "+<1> alt-fire charge",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_SecondaryStack.BP_WA_SecondaryStack_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "Stack": 2.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 1,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SecondaryStack",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "EqualEqual_ByteByte",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "IsValid",
+            "Multiply_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1",
+            "APlayer_Skill_2"
+          ]
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "AreaSize",
+    "name": "Nitro",
+    "description": "+<1>% {explosion} radius",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AreaSize.BP_WA_AreaSize_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "Value": 15.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Nuke"
+    ],
+    "compatible_weapon_count": 19,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_AreaSize",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "BurnPower",
+    "name": "Blaze",
+    "description": "+<1>% additional {burn} damage over time",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_DotPower.BP_WA_DotPower_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "Value": 15.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 3,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_DotPower",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_FloatFloat",
+            "Add_IntInt",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt",
+            "Subtract_FloatFloat"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "ShockPower",
+    "name": "Volt",
+    "description": "Applies {shock} <1>% faster",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_ShockPower.BP_WA_ShockPower_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusShockRatio": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 2,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_ShockPower",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_FloatFloat",
+            "Add_IntInt",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt",
+            "Subtract_FloatFloat"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "IcePower",
+    "name": "Freeze",
+    "description": "Applies {ice} <1>% faster",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_IcePower.BP_WA_IcePower_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusIceRatio": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 2,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_IcePower",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_FloatFloat",
+            "Add_IntInt",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt",
+            "Subtract_FloatFloat"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "SecondaryDamage",
+    "name": "Trick",
+    "description": "+<1>% alt-fire damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_SecondaryDamage.BP_WA_SecondaryDamage_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusDamage": 20.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 6,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SecondaryDamage",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "IsValid",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Bounce",
+    "name": "Bounce",
+    "description": "Projectiles bounce",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Bounce.BP_WA_Bounce_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BounceAmount": 1.0,
+      "Bounciness": 0.7,
+      "Friction": 0.2
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Ricochet"
+    ],
+    "compatible_weapon_count": 40,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Bounce",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "BounceAmount": 2
+      }
+    }
+  },
+  {
+    "row": "Pierce",
+    "name": "Pierce",
+    "description": "Projectiles pierce",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Pierce.BP_WA_Pierce_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [
+      "PierceDamage"
+    ],
+    "removed_pool": [
+      "Explosive2",
+      "Explosive3",
+      "Explosive4",
+      "Explosive5"
+    ],
+    "compatible_weapon_count": 48,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Pierce",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "PierceDamage",
+    "name": "Puncture",
+    "description": "+<1>% damage to each enemy pierced",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_PierceDamage.BP_WA_PierceDamage_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusDamage": 75.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 7,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_PierceDamage",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "TripleShot2",
+    "name": "Fork",
+    "description": "Every <1> shots, fires 3 projectiles",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TripleShot2.BP_WA_TripleShot2_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ShotAmount": 2.0,
+      "FirstHitAmount": 1.0,
+      "AddHitAmount": 1.0,
+      "MaxHitAmount": 1.0,
+      "CriticalHitAmount": 1.0,
+      "Angle": 50.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "ProjectileRaycast",
+      "AutoShotgun",
+      "AutoShotgun_Explosion",
+      "Homing",
+      "Superbot_Homing",
+      "Superbot_Shotgun",
+      "Superbot_Raycast"
+    ],
+    "compatible_weapon_count": 30,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_TripleShot2",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSpawnRotation_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Length",
+            "Conv_IntToFloat",
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSpawnRotation",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill"
+          ]
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "BooleanAND",
+            "EqualEqual_IntInt",
+            "GetHitAmount",
+            "IsSkillConditionValid"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetSpawnRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Target",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetAngleRotation_SpawnRotation",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Add_Vector2DVector2D",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "GetAngleRotation_SpawnRotation",
+            "Greater_IntInt",
+            "Less_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetAngleRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "SpawnRotation",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "GetCustomFloatProperties",
+            "MakeVector2D",
+            "Multiply_IntFloat"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SpawnRotation": [
+          {
+            "X": -50.0,
+            "Y": 0.0
+          },
+          {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          {
+            "X": 50.0,
+            "Y": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "TripleShot3",
+    "name": "Fork",
+    "description": "Every <1> shots, fires 3 projectiles",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TripleShot2.BP_WA_TripleShot2_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ShotAmount": 3.0,
+      "FirstHitAmount": 1.0,
+      "AddHitAmount": 1.0,
+      "MaxHitAmount": 1.0,
+      "CriticalHitAmount": 1.0,
+      "Angle": 75.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "ProjectileRaycast",
+      "AutoShotgun",
+      "AutoShotgun_Explosion",
+      "Homing",
+      "Superbot_Homing",
+      "Superbot_Shotgun",
+      "Superbot_Raycast"
+    ],
+    "compatible_weapon_count": 14,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_TripleShot2",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSpawnRotation_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Length",
+            "Conv_IntToFloat",
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSpawnRotation",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill"
+          ]
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "BooleanAND",
+            "EqualEqual_IntInt",
+            "GetHitAmount",
+            "IsSkillConditionValid"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetSpawnRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Target",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetAngleRotation_SpawnRotation",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Add_Vector2DVector2D",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "GetAngleRotation_SpawnRotation",
+            "Greater_IntInt",
+            "Less_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetAngleRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "SpawnRotation",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "GetCustomFloatProperties",
+            "MakeVector2D",
+            "Multiply_IntFloat"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SpawnRotation": [
+          {
+            "X": -50.0,
+            "Y": 0.0
+          },
+          {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          {
+            "X": 50.0,
+            "Y": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "FreeShot",
+    "name": "Freewheel",
+    "description": "<4>% chance to fire twice",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FreeShot.BP_WA_FreeShot_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 0.0,
+      "IncreaseLuckByFail": 8.0,
+      "Delay": 0.12,
+      "Text_Luck": 15.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 49,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_FreeShot",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "BooleanAND",
+            "GetCharacter",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "IsCurrentAction",
+            "IsCurrentWeapon",
+            "IsLocallyControlled",
+            "IsValid",
+            "K2_SetTimerDelegate",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill"
+          ]
+        },
+        {
+          "name": "CustomEvent_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "AutoShotgun",
+    "name": "Buckshot",
+    "description": "<1>% chance to fire a shotgun blast",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_AutoShotgun.BP_WA_AutoShotgun_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 15.0,
+      "IncreaseLuckByFail": 5.0,
+      "FirstHitAmount": 2.0,
+      "AddHitAmount": 1.0,
+      "MaxHitAmount": 5.0,
+      "CriticalHitAmount": 5.0,
+      "MalusDamage": 70.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "TripleShot",
+      "Homing",
+      "TripleShot2",
+      "TripleShot3",
+      "Superbot_Homing"
+    ],
+    "compatible_weapon_count": 34,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_AutoShotgun",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSpawnRotation_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Length",
+            "Conv_IntToFloat",
+            "Divide_FloatFloat",
+            "EqualEqual_ByteByte",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSpawnRotation",
+            "GetStatInitialValue",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "GetStatManager_self_CastInput_2",
+            "IsValid",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "SpawnObject",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "InitSkillDamageModifier",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "InSkill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateOnAddSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "NewSkill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetSpawnRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Target",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Add_Vector2DVector2D",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "Greater_IntInt",
+            "Less_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SpawnRotation": [
+          {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          {
+            "X": 0.0,
+            "Y": 25.0
+          },
+          {
+            "X": 15.0,
+            "Y": 25.0
+          },
+          {
+            "X": -25.0,
+            "Y": 15.0
+          },
+          {
+            "X": 0.0,
+            "Y": 15.0
+          },
+          {
+            "X": 25.0,
+            "Y": 15.0
+          },
+          {
+            "X": -15.0,
+            "Y": 0.0
+          },
+          {
+            "X": 15.0,
+            "Y": 0.0
+          },
+          {
+            "X": -25.0,
+            "Y": -15.0
+          },
+          {
+            "X": 0.0,
+            "Y": -15.0
+          },
+          {
+            "X": 25.0,
+            "Y": -15.0
+          },
+          {
+            "X": -15.0,
+            "Y": -25.0
+          },
+          {
+            "X": 0.0,
+            "Y": -25.0
+          },
+          {
+            "X": 15.0,
+            "Y": -25.0
+          },
+          {
+            "X": -15.0,
+            "Y": 25.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "Explosive2",
+    "name": "Volatile",
+    "description": "Every <1> shots, triggers an {explosion}",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ShotAmount": 2.0,
+      "Radius": 240.0,
+      "BonusDamage": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Pierce",
+      "Bounce"
+    ],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Explosive",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "BooleanAND",
+            "GetGameplayTagList",
+            "IsSkillConditionValid",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Explosive3",
+    "name": "Volatile",
+    "description": "Every <1> shots, triggers an {explosion}",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ShotAmount": 2.0,
+      "Radius": 240.0,
+      "BonusDamage": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Pierce",
+      "Bounce"
+    ],
+    "compatible_weapon_count": 15,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Explosive",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "BooleanAND",
+            "GetGameplayTagList",
+            "IsSkillConditionValid",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Explosive4",
+    "name": "Volatile",
+    "description": "Every <1> shots, triggers an {explosion}",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ShotAmount": 3.0,
+      "Radius": 220.0,
+      "BonusDamage": 20.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Pierce",
+      "Bounce"
+    ],
+    "compatible_weapon_count": 12,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Explosive",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "BooleanAND",
+            "GetGameplayTagList",
+            "IsSkillConditionValid",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Explosive5",
+    "name": "Volatile",
+    "description": "Every <1> shots, triggers an {explosion}",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Explosive.BP_WA_Explosive_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ShotAmount": 4.0,
+      "Radius": 200.0,
+      "BonusDamage": 30.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Pierce",
+      "Bounce"
+    ],
+    "compatible_weapon_count": 11,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Explosive",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "BooleanAND",
+            "GetGameplayTagList",
+            "IsSkillConditionValid",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "LuckyExplosion",
+    "name": "Megaboom",
+    "description": "<3>% chance to trigger a bigger {explosion}",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_LuckyExplosion.BP_WA_LuckyExplosion_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "BonusAreaSize": 35.0,
+      "BonusDamage": 30.0,
+      "Luck": 26.0,
+      "IncreaseLuckByFail": 4.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 19,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_LuckyExplosion",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "CheckFlagToBitmask",
+            "MakeLiteralByte"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "CriticalExplosion",
+    "name": "Spiky",
+    "description": "Hitting weak spots deals {critical} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_CriticalExplosion.BP_WA_CriticalExplosion_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [
+      "AutoCriticalRare"
+    ],
+    "compatible_weapon_count": 11,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_CriticalExplosion",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Ricochet",
+    "name": "Ricochet",
+    "description": "<3>% chance to ricochet dealing <2>% damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ricochet.BP_WA_Ricochet_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "RicochetAmount": 1.0,
+      "RicochetDamageRatio": 75.0,
+      "Luck": 25.0,
+      "IncreaseLuckByFail": 5.0
+    },
+    "additional_pool": [
+      "AddRicochet"
+    ],
+    "removed_pool": [
+      "Bounce"
+    ],
+    "compatible_weapon_count": 69,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Ricochet",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Homing",
+    "name": "Seeker",
+    "description": "Projectiles are homing",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing.BP_WA_Homing_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "HomingAccelerationMagnitude": 35000.0,
+      "HomingRange": 3000.0,
+      "HomingDotTolerance": 0.95,
+      "ProjectileSpeed": 12500.0,
+      "ProjectileCollisionSize": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "ProjectileRaycast",
+      "Bounce",
+      "AutoShotgun",
+      "AutoShotgun_Explosion",
+      "TripleShot",
+      "TripleShot2",
+      "TripleShot3"
+    ],
+    "compatible_weapon_count": 7,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Homing",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "BooleanOR",
+            "ClassIsChildOf",
+            "GetCustomFloatProperties",
+            "GetObjectClass",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "Not_PreBool",
+            "Set_Contains"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "AffectedHitTypes": [
+          "EHitType::Projectile",
+          "EHitType::Raycast"
+        ]
+      }
+    }
+  },
+  {
+    "row": "ProjectileRaycast",
+    "name": "Hitscan",
+    "description": "Projectiles instantly hit",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_ProjectileRaycast.BP_WA_ProjectileRaycast_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {},
+    "additional_pool": [
+      "IonLance"
+    ],
+    "removed_pool": [
+      "Homing",
+      "TripleShot",
+      "Bounce"
+    ],
+    "compatible_weapon_count": 10,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_ProjectileRaycast",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetModifiedSpawnRotationOffset_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "GetModifiedSpawnRotationOffset",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetModifiedSpawnRotationOffset",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "BreakVector2D_X",
+            "BreakVector2D_X_1",
+            "BreakVector2D_Y",
+            "BreakVector2D_Y_1",
+            "Greater_IntInt",
+            "Less_IntInt",
+            "MakeVector2D",
+            "NotEqual_FloatFloat"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Burn",
+    "name": "Burn",
+    "description": "Deals {burn} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Burn.BP_WA_Burn_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "BurnRatio": 30.0
+    },
+    "additional_pool": [
+      "BurnPower"
+    ],
+    "removed_pool": [
+      "Ice",
+      "Shock",
+      "Impact"
+    ],
+    "compatible_weapon_count": 80,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Burn",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_2",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "GetSkills_self_CastInput_2",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Shock",
+    "name": "Shock",
+    "description": "Deals {shock} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Shock.BP_WA_Shock_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ElementalRatio": 90.0
+    },
+    "additional_pool": [
+      "ShockPower"
+    ],
+    "removed_pool": [
+      "Burn",
+      "Ice",
+      "Impact"
+    ],
+    "compatible_weapon_count": 80,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Shock",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Ice",
+    "name": "Cryo",
+    "description": "Deals {ice} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ice.BP_WA_Ice_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ElementalRatio": 90.0
+    },
+    "additional_pool": [
+      "IcePower"
+    ],
+    "removed_pool": [
+      "Burn",
+      "Shock",
+      "Impact"
+    ],
+    "compatible_weapon_count": 80,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Ice",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_2",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "GetSkills_self_CastInput_2",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "SecondaryCooldown",
+    "name": "Turbo",
+    "description": "-<1>% alt-fire cooldown",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_SecondaryCooldown.BP_WA_SecondaryCooldown_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Value": 25.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 10,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SecondaryCooldown",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Fragmentation",
+    "name": "Fragments",
+    "description": "<5>% chance to fragment into <1> projectiles",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation.BP_WA_Fragmentation_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "FragmentationAmount": 3.0,
+      "ProjectileSpeed": 450.0,
+      "ProjectileGravityScale": 1.0,
+      "LaunchAngle": 55.0,
+      "Luck": 25.0,
+      "IncreaseLuckByFail": 10.0,
+      "DamageRatio": 50.0,
+      "RadiusRatio": 70.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 1,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Fragmentation",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetFragNetworkInfo_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_SpawnCustomProjectiles_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_FloatFloat",
+            "Add_IntInt",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Length",
+            "CheckFlagToBitmask",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetFragNetworkInfo",
+            "GetGameplayTags",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "IsValid",
+            "LessEqual_FloatFloat",
+            "Less_IntInt",
+            "MakeLiteralByte",
+            "MakeRandomStream",
+            "Multiply_FloatFloat",
+            "Multiply_IntFloat",
+            "NotEqual_ByteByte",
+            "NotEqual_NameName",
+            "RandomFloatInRangeFromStream",
+            "SpawnCustomProjectiles"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "CustomEvent",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "RQHitResult",
+              "type": "StructProperty",
+              "struct": "/Script/RoboQuest",
+              "class": null
+            },
+            {
+              "name": "Projectile",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetGameplayTags",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "Projectile",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "IsValid"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsValidSpawnLocation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "InLocation",
+              "type": "StructProperty",
+              "struct": "/Script/CoreUObject",
+              "class": null
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetFragNetworkInfo",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "HitResult",
+              "type": "StructProperty",
+              "struct": "/Script/Engine",
+              "class": null
+            },
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Add_VectorVector",
+            "Array_Add",
+            "BreakHitResult_Distance",
+            "BreakHitResult_FaceIndex",
+            "BreakHitResult_HitActor",
+            "BreakHitResult_HitBoneName",
+            "BreakHitResult_HitComponent",
+            "BreakHitResult_HitItem",
+            "BreakHitResult_ImpactNormal",
+            "BreakHitResult_ImpactPoint",
+            "BreakHitResult_Location",
+            "BreakHitResult_Normal",
+            "BreakHitResult_PhysMat",
+            "BreakHitResult_Time",
+            "BreakHitResult_TraceEnd",
+            "BreakHitResult_TraceStart",
+            "BreakHitResult_bBlockingHit",
+            "BreakHitResult_bInitialOverlap",
+            "BreakVector_X",
+            "BreakVector_X_1",
+            "BreakVector_X_2",
+            "BreakVector_Y",
+            "BreakVector_Y_1",
+            "BreakVector_Y_2",
+            "BreakVector_Z",
+            "BreakVector_Z_1",
+            "BreakVector_Z_2",
+            "ClassIsChildOf",
+            "Conv_IntToFloat",
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetForwardVector",
+            "GetObjectClass",
+            "GreaterGreater_VectorRotator",
+            "IsValid",
+            "IsValidSpawnlocation",
+            "LessEqual_IntInt",
+            "MakeLiteralFloat",
+            "MakeRotFromZ",
+            "MakeRotator",
+            "MakeVector",
+            "Multiply_IntFloat",
+            "Multiply_VectorFloat",
+            "Normal",
+            "SelectVector",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [
+            "NetworkSkillInfo",
+            "Vector_NetQuantize"
+          ],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "RandomStream": {
+          "InitialSeed": 0,
+          "Seed": 0
+        }
+      }
+    }
+  },
+  {
+    "row": "ProjectileSpeedCritical",
+    "name": "Velocity",
+    "description": "+<1>% {critical} damage and +<2>% projectile speed",
+    "class": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_ProjectileSpeedCritical.BP_WA_ProjectileSpeedCritical_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "BonusCritical": 25.0,
+      "BonusProjectileSpeed": 100.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 10,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_ProjectileSpeedCritical",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_FloatFloat",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "OnHitBurnDamage",
+    "name": "Scorch",
+    "description": "<1>% chance to deal {burn} damage and +<3>% damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BonusDamageLuck_Burn.BP_WA_BonusDamageLuck_Burn_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 33.0,
+      "IncreaseLuckByFail": 2.0,
+      "BonusDamage": 25.0,
+      "BurnRatio": 60.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "OnHitIceDamage",
+      "OnHitShockDamage"
+    ],
+    "compatible_weapon_count": 4,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_BonusDamageLuck_Burn",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagByElement",
+            "GetGameplayTagList",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "Not_PreBool",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "OnHitShockDamage",
+    "name": "Thunder",
+    "description": "<1>% chance to deal {shock} damage and +<3>% damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BonusDamageLuck_Shock.BP_WA_BonusDamageLuck_Shock_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 33.0,
+      "IncreaseLuckByFail": 2.0,
+      "BonusDamage": 25.0,
+      "ElementalRatio": 180.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "OnHitIceDamage",
+      "OnHitBurnDamage"
+    ],
+    "compatible_weapon_count": 5,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_BonusDamageLuck_Shock",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagByElement",
+            "GetGameplayTagList",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "Not_PreBool",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "OnHitIceDamage",
+    "name": "Shard",
+    "description": "<1>% chance to deal {ice} damage and +<3>% damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BonusDamageLuck_Ice.BP_WA_BonusDamageLuck_Ice_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 33.0,
+      "IncreaseLuckByFail": 2.0,
+      "BonusDamage": 25.0,
+      "ElementalRatio": 180.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "OnHitShockDamage",
+      "OnHitBurnDamage"
+    ],
+    "compatible_weapon_count": 5,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_BonusDamageLuck_Ice",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagByElement",
+            "GetGameplayTagList",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "Not_PreBool",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Mark",
+    "name": "Mark",
+    "description": "Projectiles {mark} enemies, increasing the damage they take",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Mark.BP_WA_Mark_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Mark",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable_1",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt",
+            "Set_Remove"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "OnIceDamage",
+    "name": "Shatter",
+    "description": "+<1>% damage against <ice>frozen</> enemies",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_OnIceDamage.BP_OnIceDamage_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusDamage": 30.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_OnIceDamage",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "IceBlank",
+    "name": "Cryo",
+    "description": "Deals {ice} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ice.BP_WA_Ice_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "ElementalRatio": 90.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Ice",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_2",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "GetSkills_self_CastInput_2",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "BurnBlank",
+    "name": "Burn",
+    "description": "Deals {burn} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Burn.BP_WA_Burn_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BurnRatio": 70.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Burn",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_2",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "GetSkills_self_CastInput_2",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "ShockBlank",
+    "name": "Shock",
+    "description": "Deals {shock} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Shock.BP_WA_Shock_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "ElementalRatio": 90.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Shock",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "ExplosiveBlank",
+    "name": "Explosive",
+    "description": "Projectiles are {explosive}",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_ExplosiveBlank.BP_WA_ExplosiveBlank_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Radius": 240.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Pierce",
+      "Bounce"
+    ],
+    "compatible_weapon_count": 9,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_ExplosiveBlank",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "BooleanAND",
+            "GetGameplayTagList",
+            "IsSkillConditionValid",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "BounceBlank",
+    "name": "Bounce",
+    "description": "Projectiles bounce",
+    "class": null,
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": null
+  },
+  {
+    "row": "PierceBlank",
+    "name": "Pierce",
+    "description": "Projectiles pierce",
+    "class": null,
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": null
+  },
+  {
+    "row": "BounceAndPierceBlank",
+    "name": "Ballista",
+    "description": "Projectiles bounce and pierce",
+    "class": null,
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": null
+  },
+  {
+    "row": "HomingBlank",
+    "name": "Seeker",
+    "description": "Projectiles are homing",
+    "class": null,
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": null
+  },
+  {
+    "row": "RicochetBlank",
+    "name": "Ricochet",
+    "description": "Ricochets on a nearby enemy dealing <1>% damage",
+    "class": null,
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "RicochetDamageRatio": 75.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": null
+  },
+  {
+    "row": "TickProjectileBlank",
+    "name": "Ticking",
+    "description": "Projectiles deal damage over time",
+    "class": null,
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": null
+  },
+  {
+    "row": "Nuke",
+    "name": "Megaboom",
+    "description": "+<1>% {explosion} radius",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AreaSize.BP_WA_AreaSize_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Value": 30.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "AreaSize"
+    ],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_AreaSize",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "TripleShot",
+    "name": "Fork",
+    "description": "<1>% chance to fire 3 projectiles",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TripleShot.BP_WA_TripleShot_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 30.0,
+      "IncreaseLuckByFail": 5.0,
+      "FirstHitAmount": 1.0,
+      "AddHitAmount": 1.0,
+      "MaxHitAmount": 1.0,
+      "CriticalHitAmount": 1.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "ProjectileRaycast",
+      "AutoShotgun",
+      "AutoShotgun_Explosion",
+      "Homing"
+    ],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_TripleShot",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSpawnRotation_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Length",
+            "Conv_IntToFloat",
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSpawnRotation",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill"
+          ]
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "BooleanAND",
+            "EqualEqual_IntInt",
+            "GetHitAmount",
+            "IsSkillConditionValid"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetSpawnRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Target",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Add_Vector2DVector2D",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "Greater_IntInt",
+            "Less_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SpawnRotation": [
+          {
+            "X": -75.0,
+            "Y": 0.0
+          },
+          {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          {
+            "X": 75.0,
+            "Y": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "OnHitLaunchSkill",
+    "name": "Hit Shockwave",
+    "description": "Hit Shockwave",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_OnHitLaunchSkill.BP_WA_OnHitLaunchSkill_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "Luck": 50.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SkillClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PS_OnHitShockwave_C'",
+          "ObjectPath": "/Game/Blueprint/Skill/Perk/BP_PS_OnHitShockwave.0"
+        },
+        "Luck": 0
+      }
+    }
+  },
+  {
+    "row": "TripleShotAlways",
+    "name": null,
+    "description": "Fires 3 projectiles",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_TripleShotAlways.BP_WA_TripleShotAlways_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 30.0,
+      "IncreaseLuckByFail": 5.0,
+      "FirstHitAmount": 1.0,
+      "AddHitAmount": 1.0,
+      "MaxHitAmount": 1.0,
+      "CriticalHitAmount": 1.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "ProjectileRaycast",
+      "AutoShotgun",
+      "AutoShotgun_Explosion",
+      "Homing"
+    ],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_TripleShotAlways",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSpawnRotation_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Length",
+            "Conv_IntToFloat",
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "GetSpawnRotation",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "SpawnObject",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill"
+          ]
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetSpawnRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Target",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Add_Vector2DVector2D",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "Greater_IntInt",
+            "Less_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SpawnRotation": [
+          {
+            "X": -75.0,
+            "Y": 0.0
+          },
+          {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          {
+            "X": 75.0,
+            "Y": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "RandomElemental",
+    "name": "random elem",
+    "description": "random elemental generation",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_RandomElemental.BP_WA_RandomElemental_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BurnRatio": 0.7,
+      "ShockRatio": 0.9,
+      "IceRatio": 0.9
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_RandomElemental",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_LastIndex",
+            "GetCustomFloatProperties",
+            "GetGameplayTagByElement",
+            "GetGameplayTagList",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "K2_SetTimerDelegate",
+            "Not_PreBool",
+            "RandomIntegerInRangeFromStream"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnEndSkill",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnUsed",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnSkillTrigger",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bTrigger",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "RandomElement": [
+          "EElement::Burn",
+          "EElement::Ice",
+          "EElement::Shock"
+        ],
+        "RandomSeed": {
+          "InitialSeed": 0,
+          "Seed": 0
+        }
+      }
+    }
+  },
+  {
+    "row": "Burn_Buddybot",
+    "name": "Burn",
+    "description": "Deals {burn} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Burn.BP_WA_Burn_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "BurnRatio": 30.0
+    },
+    "additional_pool": [
+      "BurnDamage"
+    ],
+    "removed_pool": [
+      "Ice_BuddyBot",
+      "Shock_BuddyBot"
+    ],
+    "compatible_weapon_count": 3,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Burn",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_2",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "GetSkills_self_CastInput_2",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Shock_BuddyBot",
+    "name": "Shock",
+    "description": "Deals {shock} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Shock.BP_WA_Shock_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ElementalRatio": 90.0
+    },
+    "additional_pool": [
+      "ShockDamage"
+    ],
+    "removed_pool": [
+      "Burn_Buddybot",
+      "Ice_BuddyBot"
+    ],
+    "compatible_weapon_count": 3,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Shock",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Ice_BuddyBot",
+    "name": "Cryo",
+    "description": "Deals {ice} damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Ice.BP_WA_Ice_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "ElementalRatio": 90.0
+    },
+    "additional_pool": [
+      "IceDamage"
+    ],
+    "removed_pool": [
+      "Burn_Buddybot",
+      "Shock_BuddyBot"
+    ],
+    "compatible_weapon_count": 3,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_Ice",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSkills_ReturnValue_2",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Contains",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Get_Item_2",
+            "Array_Get_Item_3",
+            "Array_Length",
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkills",
+            "GetSkills_self_CastInput",
+            "GetSkills_self_CastInput_1",
+            "GetSkills_self_CastInput_2",
+            "Less_IntInt",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateUsed_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "bIsStarting",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "DelegateRegisterSkill_Event_0",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "BurnDamage",
+    "name": "Heat",
+    "description": "Increases your {burn} damage by <1>% (even while not in hand)",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BurnDamage.BP_WA_BurnDamage_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusDamage": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_BurnDamage",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "IsValid",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "UnbindPlayerEvent",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "InPlayer",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "BindPlayerEvent",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "InPlayer",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "ShockDamage",
+    "name": "Conduit",
+    "description": "Increases your {shock} damage by <1>% (even while not in hand)",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_ShockDamage.BP_WA_ShockDamage_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusDamage": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_ShockDamage",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "IsValid",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "UnbindPlayerEvent",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "InPlayer",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "BindPlayerEvent",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "InPlayer",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "IceDamage",
+    "name": "Chill",
+    "description": "Increases your {ice} damage by <1>% (even while not in hand)",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_IceDamage.BP_WA_IceDamage_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusDamage": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_IceDamage",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "IsValid",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "UnbindPlayerEvent",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "InPlayer",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "BindPlayerEvent",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "InPlayer",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "ProjectileRaycast_BuddyBot",
+    "name": "Hitscan",
+    "description": "Projectiles instantly hit",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_ProjectileRaycast.BP_WA_ProjectileRaycast_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [
+      "Homing",
+      "TripleShot",
+      "Bounce"
+    ],
+    "compatible_weapon_count": 1,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_ProjectileRaycast",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetModifiedSpawnRotationOffset_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "GetModifiedSpawnRotationOffset",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetModifiedSpawnRotationOffset",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "BreakVector2D_X",
+            "BreakVector2D_X_1",
+            "BreakVector2D_Y",
+            "BreakVector2D_Y_1",
+            "Greater_IntInt",
+            "Less_IntInt",
+            "MakeVector2D",
+            "NotEqual_FloatFloat"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "UpgradePriceReduction",
+    "name": "Budget",
+    "description": "-<1> {ticket} cost to upgrade",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_UpgradePriceReduction.BP_WA_UpgradePriceReduction_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "PriceReduction": 2.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 3,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_UpgradePriceReduction",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "AreaSize_Enchanted",
+    "name": "Nitro",
+    "description": "+<1>% {explosion} radius",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AreaSize.BP_WA_AreaSize_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "Value": 15.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 1,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_AreaSize",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "SecondaryCooldown_Enchanted",
+    "name": "Turbo",
+    "description": "-<1>% alt-fire cooldown",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_SecondaryCooldown.BP_WA_SecondaryCooldown_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Value": 20.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 8,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SecondaryCooldown",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "MakeLiteralByte",
+            "Multiply_FloatFloat",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "AutoShotgun_Explosion",
+    "name": "Buckshot",
+    "description": "<1>% chance to fire a shotgun blast",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_AutoShotgun_Explosion.BP_WA_AutoShotgun_Explosion_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Luck": 15.0,
+      "IncreaseLuckByFail": 5.0,
+      "FirstHitAmount": 2.0,
+      "AddHitAmount": 1.0,
+      "MaxHitAmount": 5.0,
+      "CriticalHitAmount": 5.0,
+      "MalusDamage": 75.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "TripleShot",
+      "Homing",
+      "TripleShot2",
+      "TripleShot3"
+    ],
+    "compatible_weapon_count": 15,
+    "blueprint": {
+      "functions": [],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SpawnRotation": [
+          {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          {
+            "X": 0.0,
+            "Y": 25.0
+          },
+          {
+            "X": 25.0,
+            "Y": -20.0
+          },
+          {
+            "X": -25.0,
+            "Y": -20.0
+          },
+          {
+            "X": 0.0,
+            "Y": -25.0
+          },
+          {
+            "X": -25.0,
+            "Y": 5.0
+          },
+          {
+            "X": 25.0,
+            "Y": 5.0
+          },
+          {
+            "X": 0.0,
+            "Y": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "AddRicochet",
+    "name": "Echo",
+    "description": "+<1> additional ricochet and +<2>% ricochet initial damage",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_AddRicochet.BP_WA_AddRicochet_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "AddRicochet": 1.0,
+      "AddRicochetDamage": 15.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 1,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_AddRicochet",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_FloatFloat",
+            "Add_IntInt",
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "Subtract_FloatFloat",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "MarkDamage",
+    "name": "Eraser",
+    "description": "+<1>% damage against marked enemies",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_MarkDamage.BP_WA_MarkDamage_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {
+      "BonusDamage": 15.0
+    },
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 81,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_MarkDamage",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "K2Node_MakeArray_Array_1",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Superbot_Explosive",
+    "name": "Explosive",
+    "description": "Projectiles are {explosive}",
+    "class": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_SuperBot_Explosive.BP_WA_SuperBot_Explosive_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Radius": 140.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Bounce",
+      "Pierce"
+    ],
+    "compatible_weapon_count": 2,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SuperBot_Explosive",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "GetCustomFloatProperties",
+            "GetGameplayTagList",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "IsSkillConditionValid",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Skill",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "Temp_byte_Variable",
+              "type": "EnumProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetGameplayTagList_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Contains",
+            "BooleanAND",
+            "GetGameplayTagList",
+            "IsSkillConditionValid",
+            "Not_PreBool"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Superbot_Raycast",
+    "name": "Hitscan",
+    "description": "Projectiles instantly hit",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_SuperBotRaycast.BP_WA_SuperBotRaycast_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "BonusCriticalDamage": 15.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "Homing",
+      "TripleShot",
+      "Bounce",
+      "Superbot_Homing"
+    ],
+    "compatible_weapon_count": 2,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SuperBotRaycast",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Divide_FloatFloat",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "GetSkill_self_CastInput_2",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "MakeLiteralByte",
+            "SpawnObject"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {}
+    }
+  },
+  {
+    "row": "Superbot_Shotgun",
+    "name": "Bullshot",
+    "description": "Fires additional projectiles but reduces range by <6>%",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_SuperbotShotgun.BP_WA_SuperbotShotgun_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "Text_TriggerChance": 100.0,
+      "AddHitAmount": 1.0,
+      "MaxHitAmount": 5.0,
+      "CriticalHitAmount": 5.0,
+      "MalusDamage": 77.5,
+      "MalusRange": 50.0,
+      "FirstHitAmount": 2.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "TripleShot",
+      "Homing",
+      "TripleShot2",
+      "TripleShot3",
+      "Superbot_Homing"
+    ],
+    "compatible_weapon_count": 1,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SuperbotShotgun",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            },
+            {
+              "name": "CallFunc_GetSpawnRotation_ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Array_Length",
+            "Conv_IntToFloat",
+            "Divide_FloatFloat",
+            "FTrunc",
+            "GetCustomFloatProperties",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "GetSkill_self_CastInput_2",
+            "GetSpawnRotation",
+            "GetStatManager",
+            "GetStatManager_self_CastInput",
+            "GetStatManager_self_CastInput_1",
+            "GetStatManager_self_CastInput_2",
+            "GetStatManager_self_CastInput_3",
+            "MakeLiteralByte",
+            "Multiply_IntFloat",
+            "SpawnObject",
+            "Subtract_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "SetShotgunState",
+          "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": null,
+          "params": [
+            {
+              "name": "bIsApply",
+              "type": "BoolProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "GetSpawnRotation",
+          "flags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure",
+          "override": null,
+          "params": [
+            {
+              "name": "Target",
+              "type": "ObjectProperty",
+              "struct": null,
+              "class": "/Script/RoboQuest"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "ArrayProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "Add_IntInt",
+            "Add_Vector2DVector2D",
+            "Array_Add",
+            "Array_Get_Item",
+            "Array_Get_Item_1",
+            "Array_Length",
+            "Greater_IntInt",
+            "Less_IntInt"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "SpawnRotation": [
+          {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          {
+            "X": 0.0,
+            "Y": 25.0
+          },
+          {
+            "X": 25.0,
+            "Y": -20.0
+          },
+          {
+            "X": -25.0,
+            "Y": -20.0
+          },
+          {
+            "X": 0.0,
+            "Y": -25.0
+          },
+          {
+            "X": -25.0,
+            "Y": 5.0
+          },
+          {
+            "X": 25.0,
+            "Y": 5.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "row": "Superbot_Homing",
+    "name": "Seeker",
+    "description": "Projectiles are homing",
+    "class": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_SuperBotHoming.BP_WA_SuperBotHoming_C",
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Rare",
+    "custom": {
+      "HomingAccelerationMagnitude": 68000.0,
+      "HomingRange": 2200.0,
+      "HomingDotTolerance": 0.95,
+      "ProjectileSpeed": 18000.0,
+      "ProjectileCollisionSize": 10.0
+    },
+    "additional_pool": [],
+    "removed_pool": [
+      "ProjectileRaycast",
+      "Bounce",
+      "AutoShotgun",
+      "AutoShotgun_Explosion",
+      "TripleShot",
+      "TripleShot2",
+      "TripleShot3",
+      "Superbot_Raycast",
+      "Superbot_Shotgun"
+    ],
+    "compatible_weapon_count": 2,
+    "blueprint": {
+      "functions": [
+        {
+          "name": "ExecuteUbergraph_BP_WA_SuperBotHoming",
+          "flags": "FUNC_Final | FUNC_UbergraphFunction",
+          "override": null,
+          "params": [
+            {
+              "name": "EntryPoint",
+              "type": "IntProperty",
+              "struct": null,
+              "class": null
+            }
+          ],
+          "call_hints": [
+            "BooleanOR",
+            "ClassIsChildOf",
+            "GetCustomFloatProperties",
+            "GetObjectClass",
+            "GetSkill",
+            "GetSkill_self_CastInput",
+            "GetSkill_self_CastInput_1",
+            "Not_PreBool",
+            "Set_Contains"
+          ],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": [
+            "APlayer_Skill",
+            "APlayer_Skill_1"
+          ]
+        },
+        {
+          "name": "OnApply",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnApply'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        },
+        {
+          "name": "OnRemove",
+          "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+          "override": "Class'AWeaponAffix:OnRemove'",
+          "params": [],
+          "call_hints": [],
+          "make_struct_hints": [],
+          "dynamic_cast_hints": []
+        }
+      ],
+      "cdo_in_class": null,
+      "cdo_properties": {
+        "AffectedHitTypes": [
+          "EHitType::Projectile",
+          "EHitType::Raycast"
+        ]
+      }
+    }
+  },
+  {
+    "row": "PierceMeleeBlank",
+    "name": "Pierce",
+    "description": "Attacks pierce",
+    "class": null,
+    "parent": null,
+    "rarity": "EWeaponAffixRarity::Common",
+    "custom": {},
+    "additional_pool": [],
+    "removed_pool": [],
+    "compatible_weapon_count": 0,
+    "blueprint": null
+  }
+]
