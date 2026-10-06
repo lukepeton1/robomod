@@ -695,8 +695,8 @@ class HomingResolverPatchTests(unittest.TestCase):
         hit_restore = {
             "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
             "Value": {"New": {"Path": ["HitType"], "ResolvedOwner": -1}},
-            "Variable": kismet_context("Skill", -1, "HitType"),
-            "Expression": kismet_context("Skill", -1, "BaseHitType"),
+            "Variable": kismet_context("K2Node_DynamicCast_AsAPlayer_Skill", -1, "HitType"),
+            "Expression": kismet_context("K2Node_DynamicCast_AsAPlayer_Skill", -1, "BaseHitType"),
         }
         get_custom = {
             "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
@@ -714,12 +714,12 @@ class HomingResolverPatchTests(unittest.TestCase):
         set_range = {
             "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
             "Value": {"New": {"Path": ["HomingRange"], "ResolvedOwner": -1}},
-            "Variable": kismet_context("Skill", -1, "HomingRange"),
+            "Variable": kismet_context("K2Node_DynamicCast_AsAPlayer_Skill_1", -1, "HomingRange"),
             "Expression": kismet_local("TmpFloat"),
         }
         enable = {
             "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LetBool, UAssetAPI",
-            "VariableExpression": kismet_context("Skill", -1, "bHomingProjectile"),
+            "VariableExpression": kismet_context("K2Node_DynamicCast_AsAPlayer_Skill_1", -1, "bHomingProjectile"),
             "AssignmentExpression": {
                 "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_True, UAssetAPI",
             },
@@ -785,6 +785,17 @@ class HomingResolverPatchTests(unittest.TestCase):
         )
         self.assertIn("ProjectileSpeed", patched["NameMap"])
         self.assertIn("ProjectileCollisionSize", patched["NameMap"])
+        hit_assignments = [
+            expr for expr in patched["Exports"][0]["ScriptBytecode"]
+            if expr.get("$type", "").endswith("EX_Let, UAssetAPI")
+            and ((expr.get("Variable") or {}).get("RValuePointer") or {}).get("New", {}).get("Path") == ["HitType"]
+            and (expr.get("Expression") or {}).get("$type", "").endswith("EX_ByteConst, UAssetAPI")
+        ]
+        self.assertEqual(len(hit_assignments), 1)
+        self.assertEqual(
+            hit_assignments[0]["Variable"]["ObjectExpression"]["Variable"]["New"]["Path"],
+            ["K2Node_DynamicCast_AsAPlayer_Skill_1"],
+        )
 
 
 class DisassemblerTests(unittest.TestCase):
