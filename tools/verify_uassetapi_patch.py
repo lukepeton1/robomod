@@ -13,6 +13,18 @@ def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def semantic_scalar(value):
+    """Normalize UAssetAPI JSON scalar encodings for verification only.
+
+    UAssetAPI's signed-zero converter may serialize floating-point +0.0/-0.0 as
+    the strings "+0"/"-0" to preserve the IEEE-754 sign bit. Declarative patch
+    specs use ordinary JSON numbers, so compare those encodings numerically.
+    """
+    if value in {"+0", "-0"}:
+        return 0.0
+    return value
+
+
 def verify_applied(asset: dict, spec: dict) -> list[dict]:
     by_name = {str(x.get("Name")): x for x in data_rows(asset)}
     results = []
@@ -90,7 +102,7 @@ def verify_applied(asset: dict, spec: dict) -> list[dict]:
             prop = property_by_name(row, str(op["field"]))
             current = prop.get("Value")
             expected = op.get("value")
-            matches = current == expected
+            matches = semantic_scalar(current) == semantic_scalar(expected)
             results.append({
                 "operation_index": index,
                 "op": op.get("op"),
