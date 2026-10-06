@@ -5,9 +5,9 @@ param(
 
     [string]$UAssetGUIPath = "",
 
-    [string]$ManifestPath = (Join-Path $PSScriptRoot "..\..\Source\manifests\legacy_patch_targets.txt"),
+    [string]$ManifestPath = "",
 
-    [string]$OutputDir = (Join-Path $PSScriptRoot "..\..\handoff\legacy-assets"),
+    [string]$OutputDir = "",
 
     [switch]$SkipJson,
 
@@ -15,6 +15,19 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+
+# Resolve defaults here rather than in param(...). Windows PowerShell 5.1 can
+# evaluate parameter default expressions before $PSScriptRoot is populated.
+$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+if (-not $scriptRoot) {
+    throw "Unable to determine collect-legacy-handoff.ps1 script directory."
+}
+if (-not $ManifestPath) {
+    $ManifestPath = Join-Path $scriptRoot "..\..\Source\manifests\legacy_patch_targets.txt"
+}
+if (-not $OutputDir) {
+    $OutputDir = Join-Path $scriptRoot "..\..\handoff\legacy-assets"
+}
 
 function Resolve-FullPath([string]$Path) {
     return [System.IO.Path]::GetFullPath((Resolve-Path -LiteralPath $Path).Path)
@@ -118,7 +131,10 @@ foreach ($relative in $targets) {
         if (-not (Test-Path -LiteralPath $jsonPath)) {
             throw "UAssetGUI exited successfully but did not create '$jsonPath'."
         }
-        $jsonRel = [System.IO.Path]::GetRelativePath($OutputDir, $jsonPath).Replace("\", "/")
+        # System.IO.Path.GetRelativePath is not available in Windows PowerShell
+        # 5.1's .NET Framework runtime. jsonPath is guaranteed to live below
+        # OutputDir, so derive the relative path directly.
+        $jsonRel = $jsonPath.Substring($OutputDir.Length).TrimStart("\", "/").Replace("\", "/")
     }
 
     $records.Add([ordered]@{
