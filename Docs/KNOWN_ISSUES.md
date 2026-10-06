@@ -4,8 +4,8 @@ This file separates actual blockers from features that are simply not finished y
 
 ## Open implementation work
 
-- Ground-weapon **GRAFT** action is not yet wired to live ordinary affix storage.
-- Smith/editor workflow is not yet wired.
+- Ground-weapon **GRAFT** selection/donor consumption is not yet wired.
+- The production Foundry merchant provides ordinary-affix construction now, but the full deterministic smith/editor workflow is not yet wired.
 - Exact persistence of grafted ordinary multi-affix state through run save/load is not yet proven.
 - Full host/client multiplayer validation is pending.
 - Raycast + Seeker needs a proper raycast-to-projectile resolver.
