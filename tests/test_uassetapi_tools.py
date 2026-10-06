@@ -201,6 +201,81 @@ class DataTablePatcherTests(unittest.TestCase):
         self.assertEqual([x["Name"] for x in target["Value"]], ["0", "1", "2"])
         self.assertEqual(report[0]["array_type"], "NameProperty")
 
+
+    def test_set_value_works_through_player_skill_wrapper(self):
+        asset = {
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
+                "Table": {"Data": [{
+                    "$type": "StructPropertyData",
+                    "Name": "PF_Handgun",
+                    "Value": [{
+                        "$type": "StructPropertyData",
+                        "Name": "PlayerSkill",
+                        "Value": [{
+                            "$type": "EnumPropertyData",
+                            "Name": "TargetDetection",
+                            "Value": "EHitType::Raycast",
+                        }],
+                    }],
+                }]},
+            }],
+        }
+        spec = {
+            "operations": [{
+                "op": "set_value",
+                "row": "PF_Handgun",
+                "field": "TargetDetection",
+                "value": "EHitType::Projectile",
+            }],
+        }
+        patched, report = apply(asset, spec)
+        prop = patched["Exports"][0]["Table"]["Data"][0]["Value"][0]["Value"][0]
+        self.assertEqual(prop["Value"], "EHitType::Projectile")
+        self.assertEqual(report[0]["before"], "EHitType::Raycast")
+
+    def test_replace_row_handles_works_through_weapon_wrapper(self):
+        asset = {
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
+                "Table": {"Data": [{
+                    "$type": "StructPropertyData",
+                    "Name": "HandGun",
+                    "Value": [{
+                        "$type": "StructPropertyData",
+                        "Name": "Weapon",
+                        "Value": [{
+                            "$type": "ArrayPropertyData",
+                            "ArrayType": "StructProperty",
+                            "Name": "Affixes",
+                            "Value": [row_handle("Affixes", "OnKillReloadOtherWeapon")],
+                        }],
+                    }],
+                }]},
+            }],
+        }
+        expected = ["Fragmentation", "Homing", "Burn", "ExplosiveBlank", "FreeShot", "AutoShotgun"]
+        spec = {
+            "operations": [{
+                "op": "replace_row_handles",
+                "row": "HandGun",
+                "field": "Affixes",
+                "values": expected,
+            }],
+        }
+        patched, report = apply(asset, spec)
+        prop = patched["Exports"][0]["Table"]["Data"][0]["Value"][0]["Value"][0]
+        actual = [
+            next(x["Value"] for x in h["Value"] if x["Name"] == "RowName")
+            for h in prop["Value"]
+        ]
+        self.assertEqual(actual, expected)
+        self.assertEqual(report[0]["replacement_count"], 6)
+        # The copied row-handle template keeps the source DataTable pointer.
+        for handle in prop["Value"]:
+            table = next(x["Value"] for x in handle["Value"] if x["Name"] == "DataTable")
+            self.assertEqual(table, 1)
+
     def test_missing_requested_handle_fails_closed(self):
         asset = {
             "Exports": [{
