@@ -16,6 +16,7 @@ class GraftContractAlignmentTests(unittest.TestCase):
         cls.transaction = load("Source/grafting/graft_transaction.json")
         cls.ui = load("Source/grafting/ui_contract.json")
         cls.transfer = load("Source/grafting/transfer_policy.json")
+        cls.progression = load("Source/grafting/progression_policy.json")
         cls.matrix = load("Source/grafting/compatibility_matrix.json")
         cls.packager = (
             ROOT / "tools/windows/package-release.ps1"
@@ -31,25 +32,40 @@ class GraftContractAlignmentTests(unittest.TestCase):
             "tools/evaluate_graft.py",
         )
 
-    def test_quality_caps_match_every_contract(self):
+    def test_quality_caps_match_central_progression_policy(self):
         expected = {"0": 0, "1": 3, "2": 4, "3": 5, "4": 6}
+        self.assertEqual(self.progression["quality_color_caps"], expected)
+        self.assertEqual(self.ui["quality_display"]["color_byte_caps"], expected)
         self.assertEqual(
-            self.transaction["rule_engine"]["quality_caps"],
-            expected,
+            self.transaction["rule_engine"]["progression_policy"],
+            "Source/grafting/progression_policy.json",
         )
         self.assertEqual(
-            self.ui["quality_display"]["color_byte_caps"],
-            expected,
+            self.ui["shared"]["progression_policy"],
+            "Source/grafting/progression_policy.json",
         )
 
     def test_single_alt_fire_slot_is_explicit(self):
+        self.assertEqual(self.progression["native_alt_fire_slots"], 1)
         self.assertEqual(
-            self.transaction["rule_engine"]["alt_fire_slots"],
-            1,
+            self.transaction["rule_engine"]["alt_fire_slots_source"],
+            "Source/grafting/progression_policy.json",
         )
         self.assertIn(
             "single native secondary-fire slot",
             self.ui["smith"]["behavior"]["alt_fire"],
+        )
+
+    def test_complexity_surcharge_threshold_matches_progression_policy(self):
+        free = self.progression["power_cell_economy"]["free_complexity_affixes"]
+        self.assertEqual(free, 2)
+        self.assertIn(
+            "max(0, current_affix_count - 2)",
+            self.transaction["cost"]["formula"],
+        )
+        self.assertEqual(
+            self.transaction["cost"]["progression_policy"],
+            "Source/grafting/progression_policy.json",
         )
 
     def test_transaction_base_costs_match_transfer_policy(self):
@@ -95,6 +111,7 @@ class GraftContractAlignmentTests(unittest.TestCase):
     def test_release_source_contains_rule_engine_and_generated_inputs(self):
         required = [
             "Source\\grafting\\compatibility_matrix.json",
+            "Source\\grafting\\progression_policy.json",
             "Source\\grafting\\ui_contract.json",
             "Source\\composition\\alt_fire_skill_profiles.json",
             "tools\\evaluate_graft.py",
