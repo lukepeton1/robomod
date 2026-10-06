@@ -1,0 +1,63 @@
+name: Validate Weapon Foundry
+
+on:
+  push:
+    branches:
+      - feature/weapon-foundry
+      - main
+    paths:
+      - ".github/workflows/validate-weapon-foundry.yml"
+      - "tools/**"
+      - "tests/**"
+      - "Source/**"
+      - "research/generated/**"
+      - "vanilla-json/**"
+      - "Docs/**"
+      - "packaging/**"
+      - "README.md"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+
+      - name: Rebuild research catalog
+        run: |
+          python3 tools/build_catalog.py
+          python3 tools/extract_runtime_seams.py
+
+      - name: Regenerate production policy
+        run: |
+          python3 tools/generate_weapon_foundry_core_patch.py
+          python3 tools/generate_transfer_policy.py
+
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Validate JSON
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          roots = [Path("research/generated"), Path("Source")]
+          files = []
+          for root in roots:
+              files.extend(root.rglob("*.json"))
+          assert files
+          for path in sorted(files):
+              json.loads(path.read_text(encoding="utf-8"))
+          print(f"validated {len(files)} JSON files")
+          PY
+
+      - name: Verify generated files are current
+        run: |
+          git diff --exit-code --             research/generated             Source/patches/weapon_foundry_core.json             Source/grafting/transfer_policy.json
