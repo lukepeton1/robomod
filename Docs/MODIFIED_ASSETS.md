@@ -27,13 +27,11 @@ Source: `tools/patch_fragmentation_bytecode.py`
 
 ### `/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing`
 
-- inserts live Raycast → Projectile conversion while Seeker is applied;
-- applies shipped `ProjectileSpeed` / `ProjectileCollisionSize` values;
-- zeros gravity while converted;
-- relies on vanilla `OnRemove` to restore `BaseHitType`;
-- rebases absolute Kismet flow targets after insertion.
+- **not included in production containers after the 2026-10-06 runtime crash**;
+- the synthetic Raycast → Projectile resolver is disabled;
+- Homing/Seeker eligibility is restored to the vanilla seven chassis until a runtime-safe resolver is proven.
 
-Source: `tools/patch_homing_resolver.py`
+The retired experimental patch remains in `tools/patch_homing_resolver.py` for forensic/reference work only; the production builder does not invoke it.
 
 ### `/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix`
 
