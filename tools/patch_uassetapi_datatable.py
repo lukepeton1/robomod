@@ -81,9 +81,34 @@ def apply_remove_row_handles(
             f"current={before}"
         )
 
-    prop["Value"] = [x for x in current if row_handle_name(x) not in requested]
+    remaining = [x for x in current if row_handle_name(x) not in requested]
+    prop["Value"] = remaining
+
+    # UAssetAPI needs a StructProperty prototype when serializing an empty array.
+    # In the vanilla DT_WeaponAffix export, naturally empty RemovedPool arrays carry
+    # a DummyStruct that records the WeaponAffixRowHandle type. When a patch removes
+    # the last real element, preserve that schema by synthesizing the same metadata
+    # from the first pre-patch element.
+    if not remaining and prop.get("ArrayType") == "StructProperty" and not prop.get("DummyStruct"):
+        if not current:
+            raise PatchError(
+                f"row {row.get('Name')} field {field}: cannot infer DummyStruct for empty StructProperty array"
+            )
+        dummy = copy.deepcopy(current[0])
+        if not isinstance(dummy, dict):
+            raise PatchError(
+                f"row {row.get('Name')} field {field}: first StructProperty element is not an object"
+            )
+        dummy["Value"] = []
+        prop["DummyStruct"] = dummy
+
     after = [row_handle_name(x) for x in prop["Value"]]
-    return {"before": before, "after": after, "removed": sorted(requested)}
+    return {
+        "before": before,
+        "after": after,
+        "removed": sorted(requested),
+        "dummy_struct_preserved": bool(not remaining and prop.get("DummyStruct")),
+    }
 
 
 def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
