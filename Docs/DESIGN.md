@@ -65,6 +65,18 @@ Starting tuning targets:
 
 These are tuning values, not architectural constants.
 
+### Quality as complexity
+
+The production Foundry no longer uses a flat six-affix gate. It reads the weapon's native `CurrentAffixBundle.Color` and uses that existing quality progression as the complexity budget:
+
+- Common: Foundry ordinary-affix purchase disabled;
+- next tier: up to 3 affixes;
+- next tier: up to 4;
+- next tier: up to 5;
+- top tier: up to 6.
+
+This keeps early weapons close to normal Roboquest and makes the late-run monster gun something the player grows into rather than something the mod hands out immediately.
+
 
 ## Production Foundry merchant
 
