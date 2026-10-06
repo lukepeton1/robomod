@@ -44,7 +44,7 @@ def verify_applied(asset: dict, spec: dict) -> list[dict]:
                     f"operation {index}: {row_name}.{op['field']} still contains {still_present}"
                 )
 
-        elif op.get("op") == "copy_row_handles":
+        elif op.get("op") == "copy_array":
             source_row_name = str(op.get("source_row"))
             source_row = by_name.get(source_row_name)
             if source_row is None:
@@ -55,9 +55,19 @@ def verify_applied(asset: dict, spec: dict) -> list[dict]:
                 source_row,
                 str(op.get("source_field") or op["field"]),
             )
-            current = [row_handle_name(x) for x in target_prop.get("Value", [])]
-            expected = [row_handle_name(x) for x in source_prop.get("Value", [])]
-            matches = current == expected
+
+            def item_value(item):
+                row_name_value = row_handle_name(item)
+                if row_name_value is not None:
+                    return row_name_value
+                return item.get("Value") if isinstance(item, dict) else item
+
+            current = [item_value(x) for x in target_prop.get("Value", [])]
+            expected = [item_value(x) for x in source_prop.get("Value", [])]
+            matches = (
+                current == expected
+                and target_prop.get("ArrayType") == source_prop.get("ArrayType")
+            )
             results.append({
                 "operation_index": index,
                 "op": op.get("op"),
@@ -65,6 +75,8 @@ def verify_applied(asset: dict, spec: dict) -> list[dict]:
                 "field": op["field"],
                 "source_row": source_row_name,
                 "source_field": op.get("source_field") or op["field"],
+                "array_type": target_prop.get("ArrayType"),
+                "expected_array_type": source_prop.get("ArrayType"),
                 "current_values": current,
                 "expected_values": expected,
                 "matches": matches,
