@@ -54,8 +54,8 @@ def main():
             "reason":"Broaden verified standard hit-model composition primitives across projectile/raycast weapon chassis while excluding None/AIM/unknown edge cases."
         })
     operations.append({
-        "op":"replace_name_array","row":"Homing","field":"Weapons","values":projectile,
-        "reason":"Broaden Seeker only across already-projectile primary skills until the raycast-to-projectile resolver is implemented."
+        "op":"replace_name_array","row":"Homing","field":"Weapons","values":standard,
+        "reason":"Broaden Seeker across standard Projectile/Raycast chassis; production BP_WA_Homing now resolves live Raycast skills to Projectile while the affix is applied."
     })
 
     payload = {
@@ -68,6 +68,7 @@ def main():
             "standard_hit_types": ["EHitType::Projectile","EHitType::Raycast"],
             "standard_weapon_count": len(standard),
             "projectile_weapon_count": len(projectile),
+            "seeker_resolved_weapon_count": len(standard),
             "unresolved_edge_cases": [
                 {"weapon": row, "hit_type": hit_by_weapon.get(row)}
                 for row in burn if row not in standard
