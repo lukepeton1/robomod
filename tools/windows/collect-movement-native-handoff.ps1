@@ -25,6 +25,28 @@ function Add-UniquePath([System.Collections.Generic.List[string]]$List, [string]
     }
 }
 
+function Resolve-RoboquestExeFromRoot([string]$Root) {
+    if (-not $Root) { return $null }
+
+    $candidates = @(
+        $Root,
+        (Join-Path $Root "RoboQuest-Win64-Shipping.exe"),
+        (Join-Path $Root "RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"),
+        (Join-Path $Root "Content\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"),
+        (Join-Path $Root "Roboquest\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"),
+        (Join-Path $Root "RoboQuest\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"),
+        (Join-Path $Root "Roboquest\Content\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"),
+        (Join-Path $Root "RoboQuest\Content\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe")
+    )
+
+    foreach ($candidate in $candidates) {
+        if (Test-Path -LiteralPath $candidate -PathType Leaf) {
+            return [System.IO.Path]::GetFullPath($candidate)
+        }
+    }
+    return $null
+}
+
 function Get-SteamRoots {
     $roots = New-Object System.Collections.Generic.List[string]
 
@@ -42,12 +64,28 @@ function Get-SteamRoots {
         }
     }
 
+    $pf86 = [Environment]::GetFolderPath([Environment+SpecialFolder]::ProgramFilesX86)
+    $pf64 = [Environment]::GetFolderPath([Environment+SpecialFolder]::ProgramFiles)
     foreach ($fallback in @(
-        "${env:ProgramFiles(x86)}\Steam",
-        "$env:ProgramFiles\Steam"
+        (Join-Path $pf86 "Steam"),
+        (Join-Path $pf64 "Steam")
     )) {
         if ($fallback) {
             Add-UniquePath $roots $fallback
+        }
+    }
+
+    foreach ($drive in Get-PSDrive -PSProvider FileSystem -ErrorAction SilentlyContinue) {
+        foreach ($candidate in @(
+            (Join-Path $drive.Root "Steam"),
+            (Join-Path $drive.Root "SteamLibrary"),
+            (Join-Path $drive.Root "Games\Steam"),
+            (Join-Path $drive.Root "Program Files (x86)\Steam"),
+            (Join-Path $drive.Root "Program Files\Steam")
+        )) {
+            if (Test-Path -LiteralPath $candidate) {
+                Add-UniquePath $roots $candidate
+            }
         }
     }
 
@@ -59,7 +97,7 @@ function Get-SteamRoots {
         $libraries = Join-Path $root "steamapps\libraryfolders.vdf"
         if (-not (Test-Path -LiteralPath $libraries)) { continue }
 
-        foreach ($line in Get-Content -LiteralPath $libraries) {
+        foreach ($line in Get-Content -LiteralPath $libraries -ErrorAction SilentlyContinue) {
             if ($line -notmatch '"path"\s+"(.+)"') { continue }
             $candidate = $Matches[1] -replace '\\\\', '\'
             Add-UniquePath $expanded $candidate
@@ -69,16 +107,49 @@ function Get-SteamRoots {
     return $expanded
 }
 
+function Get-UninstallInstallRoots {
+    $roots = New-Object System.Collections.Generic.List[string]
+    $uninstallRoots = @(
+        "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*",
+        "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*",
+        "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"
+    )
+
+    foreach ($pattern in $uninstallRoots) {
+        try {
+            foreach ($app in Get-ItemProperty $pattern -ErrorAction SilentlyContinue) {
+                if ([string]$app.DisplayName -notmatch "Robo\s*Quest|Roboquest") { continue }
+                Add-UniquePath $roots ([string]$app.InstallLocation)
+            }
+        } catch {
+        }
+    }
+    return $roots
+}
+
 function Find-RoboquestExe {
-    $steamRoots = Get-SteamRoots
-    foreach ($root in $steamRoots) {
+    try {
+        foreach ($proc in Get-Process -ErrorAction SilentlyContinue | Where-Object {
+            $_.ProcessName -match "^RoboQuest|Roboquest"
+        }) {
+            try {
+                $path = $proc.Path
+                if ($path -and (Test-Path -LiteralPath $path -PathType Leaf)) {
+                    return [System.IO.Path]::GetFullPath($path)
+                }
+            } catch {
+            }
+        }
+    } catch {
+    }
+
+    foreach ($root in Get-SteamRoots) {
         $steamApps = Join-Path $root "steamapps"
-        # Roboquest Steam app ID: 692890.
         $manifest = Join-Path $steamApps "appmanifest_692890.acf"
         $installDir = "Roboquest"
 
         if (Test-Path -LiteralPath $manifest) {
-            foreach ($line in Get-Content -LiteralPath $manifest) {
+            foreach ($line in Get-Content -LiteralPath $manifest -ErrorAction SilentlyContinue) {
                 if ($line -match '"installdir"\s+"(.+)"') {
                     $installDir = $Matches[1]
                     break
@@ -86,19 +157,59 @@ function Find-RoboquestExe {
             }
         }
 
-        $candidate = Join-Path $steamApps "common\$installDir\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"
-        if (Test-Path -LiteralPath $candidate) {
-            return [System.IO.Path]::GetFullPath($candidate)
+        foreach ($candidateRoot in @(
+            (Join-Path $steamApps "common\$installDir"),
+            (Join-Path $steamApps "common\Roboquest"),
+            (Join-Path $steamApps "common\RoboQuest")
+        )) {
+            $resolved = Resolve-RoboquestExeFromRoot $candidateRoot
+            if ($resolved) { return $resolved }
         }
     }
 
-    foreach ($candidate in @(
-        "C:\Program Files (x86)\Steam\steamapps\common\Roboquest\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe",
-        "C:\Program Files\Steam\steamapps\common\Roboquest\RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"
-    )) {
-        if (Test-Path -LiteralPath $candidate) {
-            return [System.IO.Path]::GetFullPath($candidate)
+    foreach ($root in Get-UninstallInstallRoots) {
+        $resolved = Resolve-RoboquestExeFromRoot $root
+        if ($resolved) { return $resolved }
+    }
+
+    foreach ($drive in Get-PSDrive -PSProvider FileSystem -ErrorAction SilentlyContinue) {
+        $xboxRoot = Join-Path $drive.Root "XboxGames"
+        if (-not (Test-Path -LiteralPath $xboxRoot)) { continue }
+
+        foreach ($namedRoot in @(
+            (Join-Path $xboxRoot "Roboquest"),
+            (Join-Path $xboxRoot "RoboQuest")
+        )) {
+            $resolved = Resolve-RoboquestExeFromRoot $namedRoot
+            if ($resolved) { return $resolved }
         }
+
+        try {
+            $found = Get-ChildItem -LiteralPath $xboxRoot -Filter "RoboQuest-Win64-Shipping.exe" -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+            if ($found) {
+                return [System.IO.Path]::GetFullPath($found.FullName)
+            }
+        } catch {
+        }
+    }
+
+    try {
+        foreach ($pkg in Get-AppxPackage -ErrorAction SilentlyContinue | Where-Object {
+            $_.Name -match "Robo\s*Quest|Roboquest" -or
+            $_.PackageFullName -match "Robo\s*Quest|Roboquest"
+        }) {
+            $resolved = Resolve-RoboquestExeFromRoot ([string]$pkg.InstallLocation)
+            if ($resolved) { return $resolved }
+
+            try {
+                $found = Get-ChildItem -LiteralPath $pkg.InstallLocation -Filter "RoboQuest-Win64-Shipping.exe" -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+                if ($found) {
+                    return [System.IO.Path]::GetFullPath($found.FullName)
+                }
+            } catch {
+            }
+        }
+    } catch {
     }
 
     return $null
@@ -126,7 +237,15 @@ if (-not $GameExePath) {
 if (-not $GameExePath -or -not (Test-Path -LiteralPath $GameExePath)) {
     throw @"
 Could not locate RoboQuest-Win64-Shipping.exe automatically.
-Rerun with:
+
+The locator checked:
+  - a currently running Roboquest process;
+  - Steam registry + libraryfolders.vdf + common alternate-drive Steam roots;
+  - Windows uninstall InstallLocation metadata;
+  - XboxGames folders on all filesystem drives;
+  - matching AppX/MSIX package locations.
+
+If Roboquest is installed somewhere unusual, rerun once with the executable path:
   tools\windows\collect-movement-native-handoff.cmd -GameExePath "C:\path\to\RoboQuest-Win64-Shipping.exe"
 "@
 }
