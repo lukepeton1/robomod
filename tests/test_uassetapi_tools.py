@@ -571,7 +571,7 @@ class KismetLayoutTests(unittest.TestCase):
 
 
 class FoundryInteractivePatchTests(unittest.TestCase):
-    def test_affix_count_guard_inserts_and_rebases(self):
+    def test_quality_gate_and_complexity_price_patch(self):
         imports = [
             {
                 "$type": "UAssetAPI.Import, UAssetAPI",
@@ -619,10 +619,11 @@ class FoundryInteractivePatchTests(unittest.TestCase):
                 "bImportOptional": False,
             },
         ]
-        code = [
+
+        can_interact_code = [
             {
                 "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_JumpIfNot, UAssetAPI",
-                "CodeOffset": 11,
+                "CodeOffset": 8,
                 "BooleanExpression": {
                     "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_True, UAssetAPI",
                 },
@@ -637,27 +638,97 @@ class FoundryInteractivePatchTests(unittest.TestCase):
                 "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_EndOfScript, UAssetAPI",
             },
         ]
-        # JumpIfNot is 6 bytes, Return is 2; target the EndOfScript at byte 8.
-        code[0]["CodeOffset"] = 8
+
+        return_pointer = {
+            "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+            "New": {
+                "$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI",
+                "Path": ["ReturnValue"],
+                "ResolvedOwner": 2,
+            },
+        }
+        base_price = {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Context, UAssetAPI",
+            "ObjectExpression": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Self, UAssetAPI",
+            },
+            "Offset": 9,
+            "PropertyType": 0,
+            "RValuePointer": {
+                "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+                "New": {
+                    "$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI",
+                    "Path": ["EnchantedAffixPrice"],
+                    "ResolvedOwner": -5,
+                },
+            },
+            "ContextExpression": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_InstanceVariable, UAssetAPI",
+                "Variable": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.KismetPropertyPointer, UAssetAPI",
+                    "New": {
+                        "$type": "UAssetAPI.UnrealTypes.FFieldPath, UAssetAPI",
+                        "Path": ["EnchantedAffixPrice"],
+                        "ResolvedOwner": -5,
+                    },
+                },
+            },
+        }
+        ticket_code = [
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
+                "Value": copy.deepcopy(return_pointer),
+                "Variable": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LocalOutVariable, UAssetAPI",
+                    "Variable": copy.deepcopy(return_pointer),
+                },
+                "Expression": base_price,
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Return, UAssetAPI",
+                "ReturnExpression": {
+                    "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LocalOutVariable, UAssetAPI",
+                    "Variable": copy.deepcopy(return_pointer),
+                },
+            },
+            {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_EndOfScript, UAssetAPI",
+            },
+        ]
+
         asset = {
             "NameMap": [
                 "CanInteract",
+                "GetTicketCost",
                 "PlayerCharacter",
                 "currentWeapon",
                 "AffixAmount",
+                "EnchantedAffixPrice",
+                "ReturnValue",
             ],
-            "NamesReferencedFromExportDataCount": 4,
+            "NamesReferencedFromExportDataCount": 7,
             "Imports": imports,
-            "Exports": [{
-                "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
-                "ObjectName": "CanInteract",
-                "ScriptBytecodeRaw": [],
-                "ScriptBytecodeSize": script_size(code),
-                "ScriptBytecode": code,
-            }],
+            "Exports": [
+                {
+                    "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+                    "ObjectName": "CanInteract",
+                    "ScriptBytecodeRaw": [],
+                    "ScriptBytecodeSize": script_size(can_interact_code),
+                    "ScriptBytecode": can_interact_code,
+                },
+                {
+                    "$type": "UAssetAPI.ExportTypes.FunctionExport, UAssetAPI",
+                    "ObjectName": "GetTicketCost",
+                    "ScriptBytecodeRaw": [],
+                    "ScriptBytecodeSize": script_size(ticket_code),
+                    "ScriptBytecode": ticket_code,
+                },
+            ],
         }
 
+        old_ticket_size = asset["Exports"][1]["ScriptBytecodeSize"]
         patched, report = patch_foundry_interactive(asset, 6)
+
         self.assertEqual(report["old_false_target"], 8)
         self.assertGreater(report["inserted_byte_count"], 0)
         self.assertEqual(report["quality_caps"], {
@@ -667,6 +738,8 @@ class FoundryInteractivePatchTests(unittest.TestCase):
             "3": 5,
             "4": 6,
         })
+        self.assertGreater(report["ticket_cost"]["new_script_size"], old_ticket_size)
+        self.assertEqual(report["ticket_cost"]["free_affixes"], 2)
 
         import_names = {entry["ObjectName"] for entry in patched["Imports"]}
         for name in (
@@ -676,6 +749,8 @@ class FoundryInteractivePatchTests(unittest.TestCase):
             "Add_IntInt",
             "BooleanAND",
             "WeaponAffixRarity",
+            "Subtract_IntInt",
+            "Max_IntInt",
         ):
             self.assertIn(name, import_names)
 
@@ -698,11 +773,23 @@ class FoundryInteractivePatchTests(unittest.TestCase):
         ):
             self.assertIn(token, serialized)
 
+        ticket_serialized = json.dumps(
+            patched["Exports"][1]["ScriptBytecode"][0]["Expression"]
+        )
+        for token in (
+            "EnchantedAffixPrice",
+            "PlayerCharacter",
+            "currentWeapon",
+            "AffixAmount",
+        ):
+            self.assertIn(token, ticket_serialized)
+
         verified = verify_foundry_interactive(patched, 6)
         self.assertTrue(verified["verified"])
         self.assertEqual(verified["quality_caps"]["common"], 0)
         self.assertEqual(verified["quality_caps"]["tier_1"], 3)
         self.assertEqual(verified["quality_caps"]["top_tier"], 6)
+        self.assertEqual(verified["ticket_cost"]["free_affixes"], 2)
         self.assertTrue(validate_asset(patched)["verified"])
 
 
