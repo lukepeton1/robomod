@@ -27,9 +27,14 @@
 - Added production build/install/uninstall/release packaging scripts.
 - Added documentation and modified-asset tracking.
 
+### Foundry progression
+
+- Promoted the successful native ordinary-affix merchant probe into the production build.
+- The vanilla Perfumer/affix merchant now serves as the first Foundry construction surface using its existing Power Cell/UI/server/multicast transaction.
+
 ### In progress
 
-- Native graft transaction and donor consumption.
+- Ground-donor GRAFT selection and donor consumption.
 - Smith/editor interaction.
 - Save/load and multiplayer validation.
 - Raycast + Seeker resolver.
