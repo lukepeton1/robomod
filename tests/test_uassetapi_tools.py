@@ -12,6 +12,7 @@ from patch_uassetapi_datatable import PatchError, apply  # noqa: E402
 from verify_uassetapi_patch import semantic_scalar  # noqa: E402
 from disassemble_uassetapi import PackageResolver, function_summary, inline  # noqa: E402
 from patch_fragmentation_bytecode import patch as patch_fragmentation, verify as verify_fragmentation  # noqa: E402
+from patch_uassetapi_cdo import apply as patch_cdo, verify as verify_cdo  # noqa: E402
 
 
 def row_handle(field: str, row_name: str) -> dict:
@@ -377,6 +378,64 @@ class DataTablePatcherTests(unittest.TestCase):
         self.assertEqual(semantic_scalar("-0"), 0.0)
         self.assertEqual(semantic_scalar(0), 0)
         self.assertEqual(semantic_scalar(1.25), 1.25)
+
+
+class CdoPatcherTests(unittest.TestCase):
+    def test_set_name_array_on_blueprint_cdo(self):
+        asset = {
+            "NameMap": ["AffixRows", "Default__BP_Test_C"],
+            "NamesReferencedFromExportDataCount": 2,
+            "Exports": [
+                {
+                    "$type": "UAssetAPI.ExportTypes.ClassExport, UAssetAPI",
+                    "ObjectName": "BP_Test_C",
+                    "LoadedProperties": [{
+                        "$type": "UAssetAPI.FieldTypes.FArrayProperty, UAssetAPI",
+                        "Name": "AffixRows",
+                        "SerializedType": "ArrayProperty",
+                        "Inner": {
+                            "$type": "UAssetAPI.FieldTypes.FGenericProperty, UAssetAPI",
+                            "Name": "AffixRows",
+                            "SerializedType": "NameProperty",
+                        },
+                    }],
+                },
+                {
+                    "$type": "UAssetAPI.ExportTypes.NormalExport, UAssetAPI",
+                    "ObjectName": "Default__BP_Test_C",
+                    "Data": [],
+                },
+            ],
+        }
+        spec = {
+            "name": "test-cdo",
+            "operations": [{
+                "op": "set_name_array",
+                "cdo": "Default__BP_Test_C",
+                "field": "AffixRows",
+                "values": ["Fragmentation", "Homing", "Burn"],
+            }],
+        }
+
+        patched, report = patch_cdo(asset, spec)
+        self.assertEqual(report[0]["count"], 3)
+        self.assertEqual(
+            report[0]["name_map_added"],
+            ["Fragmentation", "Homing", "Burn"],
+        )
+        cdo = patched["Exports"][1]
+        prop = cdo["Data"][0]
+        self.assertEqual(prop["ArrayType"], "NameProperty")
+        self.assertEqual(
+            [x["Value"] for x in prop["Value"]],
+            ["Fragmentation", "Homing", "Burn"],
+        )
+        self.assertTrue(verify_cdo(patched, spec)["verified"])
+        self.assertEqual(
+            patched["NamesReferencedFromExportDataCount"],
+            len(patched["NameMap"]),
+        )
+
 
 class DisassemblerTests(unittest.TestCase):
     def test_resolves_import_stack_node(self):
