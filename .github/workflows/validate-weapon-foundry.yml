@@ -41,6 +41,7 @@ jobs:
           python3 tools/generate_transfer_policy.py
           python3 tools/generate_graft_probe.py
           python3 tools/generate_foundry_merchant.py
+          python3 tools/generate_weapon_foundry_mod_patch.py
 
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
@@ -64,4 +65,5 @@ jobs:
         run: |
           git diff --exit-code --             research/generated             Source/patches/weapon_foundry_core.json             Source/grafting/transfer_policy.json \
             Source/probes/graft_merchant_probe.json \
-            Source/patches/foundry_merchant.json
+            Source/patches/foundry_merchant.json \
+            Source/patches/weapon_foundry_mods.json
