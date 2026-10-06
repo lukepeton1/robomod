@@ -17,7 +17,7 @@ This is the first release-candidate architecture for the Roboquest Weapon Foundr
 - 18 globally safe/generalized ordinary Foundry affixes offered through the native affix merchant.
 - 50 ordinary affixes retained in the target-aware GRAFT transfer catalog.
 - Native Power Cell / server / multicast mutation path.
-- Six-affix purchase guard.
+- Native quality-scaled Foundry complexity gate: Common disabled, then 3/4/5/6 affix caps across the upgraded tiers.
 - Reproducible UE4.26 build, verification and IoStore packaging.
 - Install/uninstall helpers and source-side patch tooling.
 
