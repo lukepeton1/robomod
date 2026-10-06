@@ -248,6 +248,7 @@ def build_catalog(
             "class_discriminator_groups": len(class_discriminators),
         },
         "class_discriminators": class_discriminators,
+        "chassis_native_rows": chassis_native_rows,
         "identities": identities,
     }
 
