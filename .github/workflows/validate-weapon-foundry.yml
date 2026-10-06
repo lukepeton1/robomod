@@ -39,6 +39,7 @@ jobs:
         run: |
           python3 tools/generate_weapon_foundry_core_patch.py
           python3 tools/generate_transfer_policy.py
+          python3 tools/generate_graft_probe.py
 
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
@@ -60,4 +61,5 @@ jobs:
 
       - name: Verify generated files are current
         run: |
-          git diff --exit-code --             research/generated             Source/patches/weapon_foundry_core.json             Source/grafting/transfer_policy.json
+          git diff --exit-code --             research/generated             Source/patches/weapon_foundry_core.json             Source/grafting/transfer_policy.json \
+            Source/probes/graft_merchant_probe.json
