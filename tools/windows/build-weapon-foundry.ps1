@@ -135,14 +135,12 @@ New-Item -ItemType Directory -Force -Path $jsonRoot, $reportRoot, $cleanRoot, $r
 $affixRelative = "Data\DT_WeaponAffix"
 $modRelative = "Data\DT_WeaponMod"
 $fragRelative = "Blueprint\Weapon\Affixes\Common\BP_WA_Fragmentation"
-$homingRelative = "Blueprint\Weapon\Affixes\Prefab\BP_WA_Homing"
 $merchantRelative = "Blueprint\Interactive\Merchant\BP_Merchant_UpgradeAffix"
 $interactiveRelative = "Blueprint\Interactive\Merchant\BP_Interactive_Merchant_AddEnchantedAffix"
 
 $affixSource = Join-Path $contentRoot ($affixRelative + ".uasset")
 $modSource = Join-Path $contentRoot ($modRelative + ".uasset")
 $fragSource = Join-Path $contentRoot ($fragRelative + ".uasset")
-$homingSource = Join-Path $contentRoot ($homingRelative + ".uasset")
 $merchantSource = Join-Path $contentRoot ($merchantRelative + ".uasset")
 $interactiveSource = Join-Path $contentRoot ($interactiveRelative + ".uasset")
 
@@ -150,7 +148,6 @@ foreach ($source in @(
     $affixSource,
     $modSource,
     $fragSource,
-    $homingSource,
     $merchantSource,
     $interactiveSource
 )) {
@@ -170,7 +167,6 @@ $maxFoundryAffixes = [int]$progressionPolicy.quality_color_caps.'4'
 $dataPatcher = Join-Path $RepoRoot "tools\patch_uassetapi_datatable.py"
 $dataVerifier = Join-Path $RepoRoot "tools\verify_uassetapi_patch.py"
 $fragPatcher = Join-Path $RepoRoot "tools\patch_fragmentation_bytecode.py"
-$homingPatcher = Join-Path $RepoRoot "tools\patch_homing_resolver.py"
 $foundryGuard = Join-Path $RepoRoot "tools\patch_foundry_interactive.py"
 $cdoPatcher = Join-Path $RepoRoot "tools\patch_uassetapi_cdo.py"
 $kismetLayout = Join-Path $RepoRoot "tools\kismet_layout.py"
@@ -188,10 +184,6 @@ $fragCleanJson = Join-Path $jsonRoot "BP_WA_Fragmentation.clean-roundtrip.json"
 $fragPatchedJson = Join-Path $jsonRoot "BP_WA_Fragmentation.weapon-foundry.json"
 $fragRoundtripJson = Join-Path $jsonRoot "BP_WA_Fragmentation.roundtrip.json"
 
-$homingOriginalJson = Join-Path $jsonRoot "BP_WA_Homing.original.json"
-$homingCleanJson = Join-Path $jsonRoot "BP_WA_Homing.clean-roundtrip.json"
-$homingPatchedJson = Join-Path $jsonRoot "BP_WA_Homing.weapon-foundry.json"
-$homingRoundtripJson = Join-Path $jsonRoot "BP_WA_Homing.roundtrip.json"
 
 $merchantOriginalJson = Join-Path $jsonRoot "BP_Merchant_UpgradeAffix.original.json"
 $merchantCleanJson = Join-Path $jsonRoot "BP_Merchant_UpgradeAffix.clean-roundtrip.json"
@@ -207,14 +199,12 @@ Write-Host "1/14 Exporting production source packages..."
 Export-UAssetJson $affixSource $affixOriginalJson "UAssetGUI DT_WeaponAffix tojson"
 Export-UAssetJson $modSource $modOriginalJson "UAssetGUI DT_WeaponMod tojson"
 Export-UAssetJson $fragSource $fragOriginalJson "UAssetGUI Fragmentation tojson"
-Export-UAssetJson $homingSource $homingOriginalJson "UAssetGUI Homing tojson"
 Export-UAssetJson $merchantSource $merchantOriginalJson "UAssetGUI Foundry merchant tojson"
 Export-UAssetJson $interactiveSource $interactiveOriginalJson "UAssetGUI Foundry purchase interactive tojson"
 
 Write-Host "2/14 Validating and proving clean Blueprint round-trips..."
 foreach ($json in @(
     $fragOriginalJson,
-    $homingOriginalJson,
     $merchantOriginalJson,
     $interactiveOriginalJson
 )) {
@@ -222,17 +212,14 @@ foreach ($json in @(
 }
 
 $fragCleanBase = Join-Path $cleanRoot ("RoboQuest\Content\" + $fragRelative)
-$homingCleanBase = Join-Path $cleanRoot ("RoboQuest\Content\" + $homingRelative)
 $merchantCleanBase = Join-Path $cleanRoot ("RoboQuest\Content\" + $merchantRelative)
 $interactiveCleanBase = Join-Path $cleanRoot ("RoboQuest\Content\" + $interactiveRelative)
 
 Build-UAssetFromJson $fragOriginalJson $fragCleanBase "UAssetGUI clean Fragmentation fromjson"
-Build-UAssetFromJson $homingOriginalJson $homingCleanBase "UAssetGUI clean Homing fromjson"
 Build-UAssetFromJson $merchantOriginalJson $merchantCleanBase "UAssetGUI clean Foundry merchant fromjson"
 Build-UAssetFromJson $interactiveOriginalJson $interactiveCleanBase "UAssetGUI clean Foundry interactive fromjson"
 
 Export-UAssetJson ($fragCleanBase + ".uasset") $fragCleanJson "UAssetGUI clean Fragmentation round-trip"
-Export-UAssetJson ($homingCleanBase + ".uasset") $homingCleanJson "UAssetGUI clean Homing round-trip"
 Export-UAssetJson ($merchantCleanBase + ".uasset") $merchantCleanJson "UAssetGUI clean Foundry merchant round-trip"
 Export-UAssetJson ($interactiveCleanBase + ".uasset") $interactiveCleanJson "UAssetGUI clean Foundry interactive round-trip"
 
@@ -265,7 +252,9 @@ Invoke-Python @(
     (Join-Path $reportRoot "fragmentation-bytecode.json")
 )
 
-Write-Host "6/14 Seeker safety rollback: BP_WA_Homing is not included in mod containers."\n\nWrite-Host "7/14 Seeding the native merchant with Foundry affix candidates..."
+Write-Host "6/14 Seeker safety rollback: BP_WA_Homing is not included in mod containers."
+
+Write-Host "7/14 Seeding the native merchant with Foundry affix candidates..."
 Invoke-Python @(
     $cdoPatcher,
     $merchantOriginalJson,
@@ -292,14 +281,12 @@ Write-Host "9/14 Rebuilding production cooked packages..."
 $affixStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $affixRelative)
 $modStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $modRelative)
 $fragStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $fragRelative)
-$homingStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $homingRelative)
 $merchantStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $merchantRelative)
 $interactiveStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $interactiveRelative)
 
 Build-UAssetFromJson $affixPatchedJson $affixStageBase "UAssetGUI production DT_WeaponAffix fromjson"
 Build-UAssetFromJson $modPatchedJson $modStageBase "UAssetGUI production DT_WeaponMod fromjson"
 Build-UAssetFromJson $fragPatchedJson $fragStageBase "UAssetGUI production Fragmentation fromjson"
-Build-UAssetFromJson $homingPatchedJson $homingStageBase "UAssetGUI production Homing fromjson"
 Build-UAssetFromJson $merchantPatchedJson $merchantStageBase "UAssetGUI production Foundry merchant fromjson"
 Build-UAssetFromJson $interactivePatchedJson $interactiveStageBase "UAssetGUI production Foundry interactive fromjson"
 
@@ -307,14 +294,12 @@ Write-Host "10/14 Re-exporting and verifying all production packages..."
 Export-UAssetJson ($affixStageBase + ".uasset") $affixRoundtripJson "UAssetGUI production DT_WeaponAffix round-trip"
 Export-UAssetJson ($modStageBase + ".uasset") $modRoundtripJson "UAssetGUI production DT_WeaponMod round-trip"
 Export-UAssetJson ($fragStageBase + ".uasset") $fragRoundtripJson "UAssetGUI production Fragmentation round-trip"
-Export-UAssetJson ($homingStageBase + ".uasset") $homingRoundtripJson "UAssetGUI production Homing round-trip"
 Export-UAssetJson ($merchantStageBase + ".uasset") $merchantRoundtripJson "UAssetGUI production Foundry merchant round-trip"
 Export-UAssetJson ($interactiveStageBase + ".uasset") $interactiveRoundtripJson "UAssetGUI production Foundry interactive round-trip"
 
 Invoke-Python @($dataVerifier, $affixRoundtripJson, $coreSpec)
 Invoke-Python @($dataVerifier, $modRoundtripJson, $modSpec)
 Invoke-Python @($fragPatcher, $fragRoundtripJson, "--verify-only")
-Invoke-Python @($homingPatcher, $homingRoundtripJson, "--verify-only")
 Invoke-Python @($cdoPatcher, $merchantRoundtripJson, $merchantSpec, "--verify-only")
 Invoke-Python @(
     $foundryGuard,
@@ -328,7 +313,6 @@ Invoke-Python @(
 
 foreach ($json in @(
     $fragRoundtripJson,
-    $homingRoundtripJson,
     $merchantRoundtripJson,
     $interactiveRoundtripJson
 )) {
@@ -368,7 +352,6 @@ $manifest = [ordered]@{
         "RoboQuest/Content/Data/DT_WeaponAffix",
         "RoboQuest/Content/Data/DT_WeaponMod",
         "RoboQuest/Content/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation",
-        "RoboQuest/Content/Blueprint/Weapon/Affixes/Prefab/BP_WA_Homing",
         "RoboQuest/Content/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix",
         "RoboQuest/Content/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_AddEnchantedAffix"
     )
@@ -377,7 +360,6 @@ $manifest = [ordered]@{
         transfer_policy = "Source/grafting/transfer_policy.json"
         foundry_merchant = "Source/patches/foundry_merchant.json"
         weapon_mod_patch = "Source/patches/weapon_foundry_mods.json"
-        raycast_seeker_resolver = "tools/patch_homing_resolver.py"
         foundry_purchase_guard = "tools/patch_foundry_interactive.py"
         progression_policy = "Source/grafting/progression_policy.json"
         progression = [ordered]@{
@@ -421,7 +403,7 @@ Write-Host "Includes:"
 Write-Host "  - broad affix composition"
 Write-Host "  - 15 widened native alt-fires"
 Write-Host "  - Fragmentation child GameplayTag inheritance"
-Write-Host "  - live Raycast -> Projectile Seeker resolver"
+Write-Host "  - vanilla Seeker behavior on vanilla-supported chassis only"
 Write-Host "  - native Foundry merchant surface"
 Write-Host "  - six-affix purchase guard"
 Write-Host "  - no Phase 3 diagnostic HandGun/skill overrides"
