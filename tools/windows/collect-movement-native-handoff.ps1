@@ -271,6 +271,9 @@ If Roboquest is installed somewhere unusual, rerun once with the executable path
 }
 
 $GameExePath = [System.IO.Path]::GetFullPath((Resolve-Path -LiteralPath $GameExePath).Path)
+if ([System.IO.Path]::GetFileName($GameExePath) -ine "RoboQuest-Win64-Shipping.exe") {
+    throw "Resolved executable is '$GameExePath', but Momentum requires RoboQuest-Win64-Shipping.exe (not the small RoboQuest.exe launcher)."
+}
 $OutputDir = [System.IO.Path]::GetFullPath($OutputDir)
 
 if (Test-Path -LiteralPath $OutputDir) {
