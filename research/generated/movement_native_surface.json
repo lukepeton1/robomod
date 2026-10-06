@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "source_handoff_sha256": "91f90ba53c3f4b2e2127e31d5682be6320ab30f44b42388bdeb61ac1348399bf",
+  "packages_collected": 35,
+  "packages_missing": 0,
+  "raw_bytecode_fallback_functions": 0,
+  "architecture": {
+    "core_integrator": "native Character_Player / RoboquestMovementComponent",
+    "pak_only_full_core_supported_by_current_seams": false,
+    "direct_reflected_roboquest_movement_component_call_targets": [],
+    "bp_aplayer": {
+      "movement_component_type": "RoboquestMovementComponent",
+      "movement_component_name": "CharMoveComp",
+      "bMovementPredict": true,
+      "bReplicateMovement": false
+    },
+    "verbs": {
+      "jump": {
+        "physical_layer": "native/inherited",
+        "entry": "OnPressedJump / Character_Player.OnJump"
+      },
+      "dash": {
+        "physical_layer": "native",
+        "entry": "Character_Player.OnStartDash"
+      },
+      "power_slide": {
+        "physical_layer": "native/core player",
+        "blueprint_role": "semantic listener/item"
+      },
+      "grapple": {
+        "physical_layer": "substantially Blueprint-authored",
+        "important_calls": [
+          "K2_SetActorLocation",
+          "SetMovementMode",
+          "LaunchCharacter",
+          "Character_Player.OnStartGrapple",
+          "Character_Player.OnStopGrapple"
+        ],
+        "current_pull_model": "constant interpolation / positional pull in MOVE_Custom"
+      },
+      "jetpack": {
+        "physical_layer": "native",
+        "entry": "Character_Player.SetJetpackActivate"
+      },
+      "rocket_jump": {
+        "physical_layer": "native/inherited",
+        "entry": "OnTriggerRocketJump"
+      },
+      "jump_pad": {
+        "physical_layer": "native-facing",
+        "entry": "AJumpad / DelegateOnTakeJumpad"
+      }
+    }
+  },
+  "next_gate": "Run targeted local shipping-executable string/reflection probe; do not redistribute the executable."
+}
