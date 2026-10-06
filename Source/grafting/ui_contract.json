@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-ui-contract",
+  "shared": {
+    "rule_engine": "tools/evaluate_graft.py",
+    "compatibility_matrix": "Source/grafting/compatibility_matrix.json",
+    "transfer_policy": "Source/grafting/transfer_policy.json",
+    "authoritative_side": "server",
+    "preview_side": "client",
+    "reason_codes": [
+      "same_weapon",
+      "invalid_ownership",
+      "donor_missing_property",
+      "locked_property",
+      "property_kind_mismatch",
+      "incompatible_target",
+      "transferable_conflict",
+      "duplicate_not_supported",
+      "quality_locked",
+      "complexity_cap",
+      "alt_fire_slot_occupied",
+      "insufficient_power_cells"
+    ]
+  },
+  "ground_graft": {
+    "trigger": "secondary interaction on dropped weapon while holding a different target weapon",
+    "required_inputs": [
+      "target_weapon",
+      "donor_weapon",
+      "donor_affix_rows",
+      "donor_weapon_mod_rows",
+      "target_affix_rows",
+      "target_weapon_mod_rows",
+      "target_quality_color",
+      "player_power_cells"
+    ],
+    "planner": "GraftRules.plan_donor",
+    "presentation": {
+      "title": "GRAFT",
+      "subtitle": "Consume donor weapon to transfer one property",
+      "row_fields": [
+        "display_name",
+        "kind",
+        "rarity",
+        "Power Cell cost",
+        "allowed / blocked",
+        "blocked reason"
+      ],
+      "confirm_fields": [
+        "selected property",
+        "target weapon",
+        "donor weapon",
+        "Power Cell cost",
+        "resulting affix count / quality cap"
+      ]
+    },
+    "commit": [
+      "server re-enumerates donor rows",
+      "server re-evaluates legality and cost",
+      "server debits Power Cells",
+      "server mutates target through native affix/mod path",
+      "server verifies mutation",
+      "server consumes donor exactly once",
+      "server replicates resulting weapon state"
+    ],
+    "cancel": "no state mutation"
+  },
+  "smith": {
+    "trigger": "Foundry / Smith interaction",
+    "planner": "GraftRules.plan_smith",
+    "required_inputs": [
+      "target_weapon",
+      "target_affix_rows",
+      "target_weapon_mod_rows",
+      "target_quality_color",
+      "player_power_cells"
+    ],
+    "tabs": [
+      "Affixes",
+      "Alt-Fire",
+      "Quality"
+    ],
+    "row_fields": [
+      "display_name",
+      "kind",
+      "rarity",
+      "Power Cell cost",
+      "compatibility",
+      "conflicts",
+      "blocked reason"
+    ],
+    "behavior": {
+      "affixes": "show target-compatible transferable rows; blocked rows remain visible with reason when useful",
+      "alt_fire": "single native secondary-fire slot until multi-mod semantics are verified",
+      "quality": "reuse native weapon-quality upgrade transaction; quality controls Foundry complexity cap"
+    }
+  },
+  "quality_display": {
+    "color_byte_caps": {
+      "0": 0,
+      "1": 3,
+      "2": 4,
+      "3": 5,
+      "4": 6
+    },
+    "rule": "display current affix count and next quality-scaled cap before purchase/graft"
+  }
+}
