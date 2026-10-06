@@ -1,16 +1,17 @@
-# Testing matrix
+# Release-candidate testing matrix
 
 Every release candidate should be tested with no other content mods first.
 
 ## Load / packaging
 
-- production builder completes;
-- UAssetGUI round-trip verification passes;
+- production builder reaches 14/14;
+- every UAssetGUI clean and patched round-trip succeeds;
+- Kismet layout validation succeeds;
 - retoc emits `.pak/.ucas/.utoc`;
-- game reaches title screen;
-- removing only Weapon Foundry files restores vanilla load.
+- game reaches the title screen;
+- uninstalling only Weapon Foundry restores vanilla load.
 
-## Composition smoke tests
+## Composition
 
 Test at least:
 
@@ -18,43 +19,73 @@ Test at least:
 - Bounce + Ricochet;
 - Pierce + Explosive/Volatile;
 - Bounce + Explosive;
+- Seeker + Bounce;
 - Buckshot + Freewheel;
-- Seeker + Buckshot on projectile weapons;
+- Seeker + Buckshot;
 - Fragments + Burn;
 - Fragments + Explosive;
 - Fragments + Seeker where visually isolatable.
 
-## Progression
+## Raycast Seeker release gate
 
-Once grafting is active:
+Use a weapon whose vanilla primary skill is Raycast.
 
-- donor disappears exactly once;
-- Power Cells are charged exactly once;
-- target gains exactly the selected legal property;
-- locked identity/dependent rows cannot be grafted;
-- invalid/insufficient-funds transactions do nothing;
-- repeated interaction cannot duplicate the transaction.
+Confirm:
 
-## Save/load
+- the weapon still fires normally before Seeker;
+- adding Seeker produces visible traveling projectiles;
+- projectiles home;
+- damage/fire cadence remain sensible;
+- removing/replacing the Seeker weapon state does not leave the skill permanently converted;
+- no crash when changing weapon/map.
 
-- save and quit with a grafted weapon;
-- reload the run;
-- confirm chassis, quality, affix rows and custom parameters;
-- repeat after changing map/level if the game saves at that boundary.
+## Foundry progression
 
-## Multiplayer
+Confirm:
 
-- host performs graft;
-- client observes target state;
-- client performs graft and server validates it;
-- no duplicate currency spend;
-- child projectiles/effects agree between host/client;
-- reconnect/load behavior remains coherent.
+- ordinary affix offers appear at the existing affix merchant;
+- Power Cells are charged;
+- ordinary rows apply;
+- multiple different ordinary rows coexist;
+- a weapon at six affixes can no longer buy another Foundry affix;
+- existing vanilla enchanted/perfume offers still appear.
+
+## Native alt-fires
+
+On several unrelated chassis, acquire/test representative widened secondary fires:
+
+- projectile secondary;
+- raycast/mark secondary;
+- explosive/sticky secondary;
+- mobility secondary such as Rocket Jump.
+
+Confirm input binding, cooldown/charge and original primary-fire behavior.
+
+## Save/load release gate
+
+With a multi-affix Foundry weapon:
+
+1. note chassis, quality, all visible affixes and Power Cells;
+2. save/quit;
+3. reload the run;
+4. confirm the weapon state and currency;
+5. cross a level/map save boundary and repeat.
+
+## Multiplayer release gate
+
+With both players modded:
+
+- host buys a Foundry affix and client observes it;
+- client buys one and host observes it;
+- Power Cells debit once;
+- no duplicate transaction;
+- composed child projectiles/effects agree between peers;
+- save/reconnect behavior remains coherent.
 
 ## Stress
 
-- late-game multi-effect projectile weapon;
+- six-effect projectile build;
 - Buckshot + Freewheel + Fragments + payload/status;
-- repeated explosive/pierce/bounce collisions;
-- monitor frame time and actor/projectile growth;
-- prove recursion guards terminate before declaring duplicate spawn-affix support.
+- repeated explosive/pierce/bounce interactions;
+- watch actor/projectile growth and frame time;
+- do not deliberately support duplicate spawn/proc rows until provenance is implemented.
