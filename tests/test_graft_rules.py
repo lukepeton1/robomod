@@ -164,6 +164,57 @@ class GraftRuleEngineTests(unittest.TestCase):
         self.assertFalse(blocked["allowed"])
         self.assertIn("alt_fire_slot_occupied", self.codes(blocked))
 
+
+    def test_donor_planner_surfaces_allowed_and_blocked_choices(self):
+        plan = self.rules.plan_donor(
+            target_weapon="JunkColt",
+            donor_rows=["Burn", "ExplosiveBlank", "ProjectileRaycast", "Barrier"],
+            existing_affix_rows=["Homing", "Firerate"],
+            existing_weapon_mod_rows=[],
+            current_affix_count=2,
+            quality_color=4,
+            available_power_cells=20,
+        )
+        by_row = {choice["row_id"]: choice for choice in plan["choices"]}
+
+        self.assertTrue(by_row["Burn"]["allowed"])
+        self.assertTrue(by_row["ExplosiveBlank"]["allowed"])
+        self.assertFalse(by_row["ProjectileRaycast"]["allowed"])
+        self.assertIn(
+            "transferable_conflict",
+            {r["code"] for r in by_row["ProjectileRaycast"]["reasons"]},
+        )
+        self.assertTrue(by_row["Barrier"]["allowed"])
+        self.assertEqual(plan["allowed_count"], 3)
+        self.assertEqual(plan["blocked_count"], 1)
+
+    def test_smith_planner_uses_same_rule_engine(self):
+        plan = self.rules.plan_smith(
+            target_weapon="JunkColt",
+            existing_affix_rows=["Burn", "Bounce"],
+            existing_weapon_mod_rows=["Barrier"],
+            current_affix_count=2,
+            quality_color=2,
+            available_power_cells=5,
+        )
+        self.assertEqual(
+            plan["allowed_count"] + plan["blocked_count"],
+            len(self.rules.transferable),
+        )
+
+        by_row = {choice["row_id"]: choice for choice in plan["choices"]}
+        self.assertFalse(by_row["Burn"]["allowed"])
+        self.assertIn(
+            "duplicate_not_supported",
+            {r["code"] for r in by_row["Burn"]["reasons"]},
+        )
+        self.assertFalse(by_row["RocketJump"]["allowed"])
+        self.assertIn(
+            "alt_fire_slot_occupied",
+            {r["code"] for r in by_row["RocketJump"]["reasons"]},
+        )
+        self.assertTrue(by_row["ExplosiveBlank"]["allowed"])
+
     def test_kind_mismatch_fails_closed(self):
         result = self.rules.evaluate(
             target_weapon="JunkColt",
