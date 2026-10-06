@@ -71,6 +71,31 @@ class DataTablePatcherTests(unittest.TestCase):
         self.assertEqual(report[0]["removed"], ["Ice", "Shock"])
         self.assertEqual(original["Exports"][0]["Table"]["Data"][0]["Value"][0]["Value"][0]["Value"][0]["Value"][1]["Value"], "Ice")
 
+
+    def test_empty_struct_array_gets_dummy_struct_schema(self):
+        asset = {
+            "Exports": [{
+                "$type": "UAssetAPI.ExportTypes.DataTableExport, UAssetAPI",
+                "Table": {"Data": [affix_row("Bounce", ["Ricochet"])]},
+            }],
+        }
+        spec = {
+            "operations": [{
+                "op": "remove_row_handles",
+                "row": "Bounce",
+                "field": "RemovedPool",
+                "values": ["Ricochet"],
+            }],
+        }
+
+        patched, report = apply(asset, spec)
+        prop = patched["Exports"][0]["Table"]["Data"][0]["Value"][0]["Value"][0]
+        self.assertEqual(prop["Value"], [])
+        self.assertIn("DummyStruct", prop)
+        self.assertEqual(prop["DummyStruct"]["StructType"], "WeaponAffixRowHandle")
+        self.assertEqual(prop["DummyStruct"]["Value"], [])
+        self.assertTrue(report[0]["dummy_struct_preserved"])
+
     def test_missing_requested_handle_fails_closed(self):
         asset = {
             "Exports": [{
