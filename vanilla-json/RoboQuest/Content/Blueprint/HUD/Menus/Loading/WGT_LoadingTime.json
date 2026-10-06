@@ -1,0 +1,459 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_LoadingTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LoadingTime_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_FloatToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LoadingTime_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LoadingTime_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "NewText",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_LoadingTime_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_LoadingTime_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.12"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_LoadingTime_C:ExecuteUbergraph_WGT_LoadingTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_LoadingTime_C:UpdateText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.2"
+      },
+      {
+        "ObjectName": "Function'WGT_LoadingTime_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.1"
+      },
+      {
+        "ObjectName": "Function'WGT_LoadingTime_C:ExecuteUbergraph_WGT_LoadingTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Separator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Title",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "Title",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LoadingTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_LoadingTime": {
+        "ObjectName": "Function'WGT_LoadingTime_C:ExecuteUbergraph_WGT_LoadingTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_LoadingTime_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.1"
+      },
+      "UpdateText": {
+        "ObjectName": "Function'WGT_LoadingTime_C:UpdateText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_LoadingTime_C'Default__WGT_LoadingTime_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.4"
+    }
+  },
+  {
+    "Type": "WGT_LoadingTime_C",
+    "Name": "Default__WGT_LoadingTime_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.WGT_LoadingTime_C'",
+    "Package": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LoadingTime_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.12"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.6"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_LoadingTime_C:WidgetTree.Txt_Title'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_LoadingTime_C:WidgetTree.Txt_Separator'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.9"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_LoadingTime_C:WidgetTree.Txt_Time'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.10"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Separator",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LoadingTime_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.12"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "88B297F842CE57748C5F89B9D994DDF8",
+        "SourceString": " : ",
+        "LocalizedString": " : "
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 36
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.7"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Time",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LoadingTime_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.12"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "29EE075648DC03D5FABA6C8D8AC4F893",
+        "SourceString": "10,5",
+        "LocalizedString": "10,5"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 36
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.8"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Title",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LoadingTime_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.12"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4FC0D1144A4AA8BD1B84DAAD72C051E3",
+        "SourceString": "Loading time",
+        "LocalizedString": "Loading time"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 36
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.6"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LoadingTime_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.3"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'WGT_LoadingTime_C:WidgetTree.HorizontalBox_16'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Loading/WGT_LoadingTime.5"
+      }
+    }
+  }
+]

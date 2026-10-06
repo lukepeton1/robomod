@@ -1,0 +1,1376 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_FriendDisplay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_CustomEvent_SanitizedName",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AsyncSanitizeDisplayName:AsyncSanitizeDisplayNameCompletePin__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "Temp_string_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_CustomEvent_Name",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AsyncSanitizeDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AsyncSanitizeDisplayName'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetDisplayName",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "Name",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Complete_33B7CD4847B433AF38A24C8BB3F2F93D",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "SanitizedName",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetupWidget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "OnlineFriend",
+        "Flags": "RF_Public",
+        "ElementSize": 120,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'RQBPOnlineFriend'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetPresenseInfo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "Struct": {
+          "ObjectName": "Class'RQBPPresenceInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetPlatformEnum_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EFriendPlatform'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetPlatform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPlatformIcon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "SystemPlatform",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EFriendPlatform'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetIconForPlatform_Logo",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetOnlineStatus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "PrecenseInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'RQBPPresenceInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetIconForPlatform_Logo",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetTextFromPresenceInfo_PresenceText",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTextFromPresenceInfo_TextColor",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'SlateColor'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBrushResourceAsTexture2D_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetAvatarPicture",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AvatarPicture",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EBPPresenceInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetPresenseInfo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "Struct": {
+          "ObjectName": "Class'RQBPPresenceInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetPresenceInfoEnum_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EBPPresenceInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush_1",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_FriendDisplay_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:ExecuteUbergraph_WGT_FriendDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetAvatarPicture'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.7"
+      },
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetOnlineStatus'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.6"
+      },
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetPlatformIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.5"
+      },
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetupWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.4"
+      },
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:Complete_33B7CD4847B433AF38A24C8BB3F2F93D'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.3"
+      },
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.2"
+      },
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetDisplayName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.1"
+      },
+      {
+        "ObjectName": "Function'WGT_FriendDisplay_C:ExecuteUbergraph_WGT_FriendDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Avatar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OnlineServiceLogo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextBlock_DisplayName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextBlock_OnlineStatus",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "OnlineFriend",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 120,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "Struct": {
+          "ObjectName": "Class'RQBPOnlineFriend'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_FriendDisplay": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:ExecuteUbergraph_WGT_FriendDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.0"
+      },
+      "SetDisplayName": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetDisplayName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.2"
+      },
+      "Complete_33B7CD4847B433AF38A24C8BB3F2F93D": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:Complete_33B7CD4847B433AF38A24C8BB3F2F93D'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.3"
+      },
+      "SetupWidget": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetupWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.4"
+      },
+      "SetPlatformIcon": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetPlatformIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.5"
+      },
+      "SetOnlineStatus": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetOnlineStatus'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.6"
+      },
+      "SetAvatarPicture": {
+        "ObjectName": "Function'WGT_FriendDisplay_C:SetAvatarPicture'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.7"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_FriendDisplay_C'Default__WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.9"
+    }
+  },
+  {
+    "Type": "WGT_FriendDisplay_C",
+    "Name": "Default__WGT_FriendDisplay_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.WGT_FriendDisplay_C'",
+    "Package": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay",
+    "Properties": {
+      "UberGraphFrame": {},
+      "OnlineFriend": {
+        "RQBPUniqueNetId": {
+          "StringRepresentation": ""
+        },
+        "RealName": "",
+        "DisplayName": "",
+        "InviteStatus": "EBPInviteStatus::Unknown",
+        "PresenceInfo": {
+          "bIsOnline": false,
+          "bIsPlaying": false,
+          "bIsPlayingThisGame": false,
+          "bIsJoinable": false
+        },
+        "Avatar": null,
+        "Platform": "EFriendPlatform::Unknown"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_54",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_11'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.14"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_88",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.16"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.17"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.31"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_FriendDisplay_C:WidgetTree.Image_Avatar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.10"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.10"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_FriendDisplay_C:WidgetTree.Spacer_72'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.27"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.10"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.10"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_FriendDisplay_C:WidgetTree.SizeBox_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.11"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.11"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'WGT_FriendDisplay_C:WidgetTree.TextBlock_OnlineStatus'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.29"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.11"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.11"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_FriendDisplay_C:WidgetTree.OnlineServiceLogo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.19"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.11"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.11"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_FriendDisplay_C:WidgetTree.Spacer_53'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.26"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Avatar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 105.0,
+          "Y": 105.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Avatar_Default'",
+          "ObjectPath": "/Game/Graphic/HUD/Multiplayer/T_Avatar_Default.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.12"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "OnlineServiceLogo",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 30.0,
+          "Y": 30.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Logo_Steam'",
+          "ObjectPath": "/Game/Graphic/HUD/Multiplayer/T_Logo_Steam.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.16"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_87",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Stretch": "EStretch::ScaleToFitX",
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_FriendDisplay_C:WidgetTree.ScaleBox_87.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_FriendDisplay_C:WidgetTree.SizeBox_70.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.25"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_FriendDisplay_C:WidgetTree.ScaleBox_87'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.20"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_FriendDisplay_C:WidgetTree.ScaleBox_87'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.20"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'WGT_FriendDisplay_C:WidgetTree.TextBlock_DisplayName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.28"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_FriendDisplay_C:WidgetTree.SizeBox_3.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.14"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_70",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "MaxDesiredWidth": 500.0,
+      "bOverride_MaxDesiredWidth": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_FriendDisplay_C:WidgetTree.SizeBox_70.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.32"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_FriendDisplay_C:WidgetTree.SizeBox_3'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.22"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_FriendDisplay_C:WidgetTree.SizeBox_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.22"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.30"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_FriendDisplay_C:WidgetTree.SizeBox_70'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_FriendDisplay_C:WidgetTree.SizeBox_70'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.23"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_FriendDisplay_C:WidgetTree.ScaleBox_87'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.20"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_53",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Size": {
+        "X": 10.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.17"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_72",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Size": {
+        "X": 20.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.13"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_DisplayName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 36
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_FriendDisplay_C:WidgetTree.ScaleBox_87.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.21"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_OnlineStatus",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Online"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.002224,
+          "G": 0.291667,
+          "B": 0.045811,
+          "A": 1.0,
+          "Hex": "07933C"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 26
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.15"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_FriendDisplay_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.32"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_FriendDisplay_C:WidgetTree.SizeBox_3.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.24"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.30"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_88'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.30"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_FriendDisplay_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.30"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_FriendDisplay_C:WidgetTree.SizeBox_70'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.23"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_FriendDisplay_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.8"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'WGT_FriendDisplay_C:WidgetTree.HorizontalBox_54'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Browser/WGT_FriendDisplay.10"
+      }
+    }
+  }
+]

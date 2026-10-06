@@ -1,0 +1,274 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Tooltip_WeaponAffix_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Tooltip_WeaponAffix_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponAffixTooltipWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Line",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Description",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'RichTextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Tooltip_WeaponAffix_C'Default__WGT_Tooltip_WeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.1"
+    }
+  },
+  {
+    "Type": "WGT_Tooltip_WeaponAffix_C",
+    "Name": "Default__WGT_Tooltip_WeaponAffix_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.WGT_Tooltip_WeaponAffix_C'",
+    "Package": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix",
+    "Properties": {
+      "BaseColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFF"
+      },
+      "EnchantedTitle": {
+        "TableId": "/Game/Data/StringTable/DST_Weapons.DST_Weapons",
+        "Key": "enchantedAffixTitle",
+        "SourceString": "Perfumed",
+        "LocalizedString": "Perfumed"
+      },
+      "EnchantedColor": {
+        "R": 1.0,
+        "G": 0.180784,
+        "B": 0.844464,
+        "A": 1.0,
+        "Hex": "FF76ED"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tooltip_WeaponAffix_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.3"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Tooltip_WeaponAffix_C:WidgetTree.Overlay_12.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.2"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.2"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tooltip_WeaponAffix_C:WidgetTree.Image_Line'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.2"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 5.1
+      },
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.2"
+      },
+      "Content": {
+        "ObjectName": "RichTextBlock'WGT_Tooltip_WeaponAffix_C:WidgetTree.Text_Description'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.8"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Line",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tooltip_WeaponAffix_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.9"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 3.0,
+          "Y": 32.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.3"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tooltip_WeaponAffix_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Tooltip_WeaponAffix_C:WidgetTree.Overlay_12.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Tooltip_WeaponAffix_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 5.0,
+        "Bottom": 5.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Tooltip_WeaponAffix_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.6"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.2"
+      }
+    }
+  },
+  {
+    "Type": "RichTextBlock",
+    "Name": "Text_Description",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tooltip_WeaponAffix_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.9"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Additional description: <b>RKJAK</> JKAJK fjkjaf."
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable'DT_RichText_Affix'",
+        "ObjectPath": "/Game/Data/DT_RichText_Affix.0"
+      },
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'F_GameplayText'",
+            "ObjectPath": "/Game/Graphic/Fonts/F_GameplayText.0"
+          },
+          "OutlineSettings": {
+            "bApplyOutlineToDropShadows": true
+          },
+          "TypefaceFontName": "Italic",
+          "Size": 1000
+        }
+      },
+      "WrapTextAt": 700.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tooltip_WeaponAffix_C:WidgetTree.HBox_Main.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tooltip_WeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Tooltip_WeaponAffix_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_WeaponAffix.6"
+      }
+    }
+  }
+]

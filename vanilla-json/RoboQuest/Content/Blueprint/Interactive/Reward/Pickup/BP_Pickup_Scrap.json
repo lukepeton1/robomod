@@ -1,0 +1,405 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Pickup_Scrap",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetLifetime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_LootLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_LootOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLooted",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ILootable:OnLooted'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "LootLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LootOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Pickup_Scrap_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Pickup_Scrap_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.10"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Pickup_Scrap_C:ExecuteUbergraph_BP_Pickup_Scrap'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APickup'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Pickup_Scrap_C:OnLooted'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.1"
+      },
+      {
+        "ObjectName": "Function'BP_Pickup_Scrap_C:ExecuteUbergraph_BP_Pickup_Scrap'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Pickup_Scrap": {
+        "ObjectName": "Function'BP_Pickup_Scrap_C:ExecuteUbergraph_BP_Pickup_Scrap'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.0"
+      },
+      "OnLooted": {
+        "ObjectName": "Function'BP_Pickup_Scrap_C:OnLooted'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Pickup_Scrap_C'Default__BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.3"
+    }
+  },
+  {
+    "Type": "BP_Pickup_Scrap_C",
+    "Name": "Default__BP_Pickup_Scrap_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.BP_Pickup_Scrap_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Scrap_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.12"
+      },
+      "SphereTrigger": {
+        "ObjectName": "SphereComponent'Default__BP_Pickup_Scrap_C:SphereTrigger'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.11"
+      },
+      "RotatingMovement": {
+        "ObjectName": "RotatingMovementComponent'Default__BP_Pickup_Scrap_C:RotatingMovement'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.6"
+      },
+      "DisappearFXComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Pickup_Scrap_C:DisappearFX'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.5"
+      },
+      "Type": "EPickup::Scrap",
+      "Value": 0.5,
+      "LifeTime": 9.0,
+      "CollisionActivationDelay": 0.5,
+      "GatherRange": 1200.0,
+      "bLocalPickup": true,
+      "GrantSound": {
+        "ObjectName": "SoundCue'SC_Pickup_Scrap'",
+        "ObjectPath": "/Game/Audio/Sound/Interactive/Pickup/SC_Pickup_Scrap.0"
+      },
+      "bQueuedSound": true,
+      "AttractDuration": 0.25,
+      "bInstantGrantBonus": false,
+      "AttractOffset": {
+        "X": -50.0,
+        "Y": 0.0,
+        "Z": -200.0
+      },
+      "ImpulseHeight": 650.0,
+      "HoverHeight": 70.0,
+      "HoverActivationDelay": 0.5,
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Scrap_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.12"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.2"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_Pickup_Scrap_v03'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/PickUp/PowerCell/PS_Pickup_Scrap_v03.122"
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 0.8,
+        "Z": 0.8
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisappearFX",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Scrap_C'Default__BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.3"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_Pickup_Cell_Disapear_Yellow_04_bigSlow'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/PickUp/PowerCell/PS_Pickup_Cell_Disapear_Yellow_04_bigSlow.12"
+      },
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Scrap_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.12"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "RotatingMovementComponent",
+    "Name": "RotatingMovement",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RotatingMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Scrap_C'Default__BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.3"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Pickup_Scrap_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Pickup_Scrap_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.7"
+      },
+      "VariableGuid": "F7E77D18-4CEBB5D3-E40DCE82-53A8A14C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Pickup_Scrap_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_Pickup_Scrap_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.4"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "82CAA1BC-4F664C1D-DC8E2C81-53ECAA71",
+      "InternalVariableName": "ParticleSystem"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.2"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Pickup_Scrap_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Pickup_Scrap_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Pickup_Scrap_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.8"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereTrigger",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Scrap_C'Default__BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.3"
+    },
+    "Properties": {
+      "SphereRadius": 100.0,
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Pickup_Scrap_C'Default__BP_Pickup_Scrap_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.3"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Scrap_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.12"
+      },
+      "bAbsoluteRotation": true
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Scrap_C'Default__BP_Pickup_Scrap_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Scrap.3"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_VFX_Sphere_Low'",
+        "ObjectPath": "/Game/Graphic/VFX/Base/Mesh/SM_VFX_Sphere_Low.2"
+      },
+      "bAbsoluteRotation": true,
+      "bVisible": false,
+      "bHiddenInGame": true
+    }
+  }
+]

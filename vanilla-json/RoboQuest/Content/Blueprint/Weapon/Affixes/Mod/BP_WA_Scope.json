@@ -1,0 +1,186 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WA_Scope",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_Scope_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill_Scope",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill_Scope'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BindSkillEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_Scope_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.3"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_AddSecondaryFire_C:BindSkillEvent'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_AddSecondaryFire.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemove",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_Scope_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.3"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_AddSecondaryFire_C:OnRemove'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_AddSecondaryFire.3"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WA_Scope_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_AddSecondaryFire_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_AddSecondaryFire.5"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WA_Scope_C:ExecuteUbergraph_BP_WA_Scope'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WA_Scope_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.2"
+      },
+      {
+        "ObjectName": "Function'BP_WA_Scope_C:BindSkillEvent'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.1"
+      },
+      {
+        "ObjectName": "Function'BP_WA_Scope_C:ExecuteUbergraph_BP_WA_Scope'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WA_Scope": {
+        "ObjectName": "Function'BP_WA_Scope_C:ExecuteUbergraph_BP_WA_Scope'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.0"
+      },
+      "BindSkillEvent": {
+        "ObjectName": "Function'BP_WA_Scope_C:BindSkillEvent'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.1"
+      },
+      "OnRemove": {
+        "ObjectName": "Function'BP_WA_Scope_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WA_Scope_C'Default__BP_WA_Scope_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.4"
+    }
+  },
+  {
+    "Type": "BP_WA_Scope_C",
+    "Name": "Default__BP_WA_Scope_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope.BP_WA_Scope_C'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Mod/BP_WA_Scope",
+    "Template": {
+      "ObjectName": "BP_AWeaponAffix_AddSecondaryFire_C'Default__BP_AWeaponAffix_AddSecondaryFire_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_AddSecondaryFire.6"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "InClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_WS_Scope_C'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Scope.4"
+      }
+    }
+  }
+]

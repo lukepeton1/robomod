@@ -1,0 +1,815 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_DamageReductionDisplayer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AsyncWaitingForPlayerInitialization_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AsyncWaitingForPlayerInitialization'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'PlayerInitializedCompletePin__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'ACharacter:DelegateShieldDamageReduction__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetStatStruct_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'StatValues'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_NewShieldDamageReduction",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AStatManager:DelegateRepNotify__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateShieldDamageReduction_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "NewShieldDamageReduction",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateRepNotify_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "value",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.6"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Complete_7FE3B73C4E76E195D484869D650471D1",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.6"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateDisplay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_X",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetStatValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Abs_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_IntFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Round_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateColor",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'SlateColor'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_IntToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_SelectString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_DamageReductionDisplayer_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_DamageReductionDisplayer_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:ExecuteUbergraph_WGT_DamageReductionDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:UpdateDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.5"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:Complete_7FE3B73C4E76E195D484869D650471D1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.4"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.3"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:DelegateRepNotify_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.2"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:DelegateShieldDamageReduction_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.1"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:ExecuteUbergraph_WGT_DamageReductionDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Value",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_DamageReductionDisplayer": {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:ExecuteUbergraph_WGT_DamageReductionDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.0"
+      },
+      "DelegateShieldDamageReduction_Event_0": {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:DelegateShieldDamageReduction_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.1"
+      },
+      "DelegateRepNotify_Event_0": {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:DelegateRepNotify_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.2"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.3"
+      },
+      "Complete_7FE3B73C4E76E195D484869D650471D1": {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:Complete_7FE3B73C4E76E195D484869D650471D1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.4"
+      },
+      "UpdateDisplay": {
+        "ObjectName": "Function'WGT_DamageReductionDisplayer_C:UpdateDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.5"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_DamageReductionDisplayer_C'Default__WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.7"
+    }
+  },
+  {
+    "Type": "WGT_DamageReductionDisplayer_C",
+    "Name": "Default__WGT_DamageReductionDisplayer_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.WGT_DamageReductionDisplayer_C'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_111",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DamageReductionDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.15"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.8"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_DamageReductionDisplayer_C:WidgetTree.Text_Value'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.8"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_DamageReductionDisplayer_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.12"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.8"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.8"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_DamageReductionDisplayer_C:WidgetTree.Spacer_160'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DamageReductionDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.15"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 43.0,
+          "Y": 47.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Shield'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/T_Shield.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_160",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DamageReductionDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.15"
+    },
+    "Properties": {
+      "Size": {
+        "X": 4.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.11"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Value",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DamageReductionDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.15"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "C0ED5F00419D5287F78C19B608BC265A",
+        "SourceString": "+50%",
+        "LocalizedString": "+50%"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 34
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.9"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageReductionDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.6"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'WGT_DamageReductionDisplayer_C:WidgetTree.HorizontalBox_111'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageReductionDisplayer.8"
+      }
+    }
+  }
+]

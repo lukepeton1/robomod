@@ -1,0 +1,229 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Pickup_Ticket_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Pickup_Ticket_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APickup_Ticket'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Pickup_Ticket_C'Default__BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.1"
+    }
+  },
+  {
+    "Type": "BP_Pickup_Ticket_C",
+    "Name": "Default__BP_Pickup_Ticket_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.BP_Pickup_Ticket_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket",
+    "Properties": {
+      "IdleFXComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Pickup_Ticket_C:IdleFX'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.3"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Ticket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.9"
+      },
+      "SphereTrigger": {
+        "ObjectName": "SphereComponent'Default__BP_Pickup_Ticket_C:SphereTrigger'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.8"
+      },
+      "RotatingMovement": {
+        "ObjectName": "RotatingMovementComponent'Default__BP_Pickup_Ticket_C:RotatingMovement'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.4"
+      },
+      "DisappearFXComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Pickup_Ticket_C:DisappearFX'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.2"
+      },
+      "Type": "EPickup::Ticket",
+      "LifeTime": 12.0,
+      "GatherRange": 700.0,
+      "bLocalPickup": true,
+      "LootedSound": {
+        "ObjectName": "SoundCue'SC_Pickup_Powercell_Drop'",
+        "ObjectPath": "/Game/Audio/Sound/Interactive/Pickup/SC_Pickup_Powercell_Drop.0"
+      },
+      "GrantSound": {
+        "ObjectName": "SoundCue'SC_Pickup_Powercell'",
+        "ObjectPath": "/Game/Audio/Sound/Interactive/Pickup/SC_Pickup_Powercell.0"
+      },
+      "bInstantGrantBonus": false,
+      "ImpulseHeight": 600.0,
+      "ImpulseStrength": 300.0,
+      "HoverHeight": 60.0,
+      "HoverActivationDelay": 0.5,
+      "bShouldRotate": true,
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Ticket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisappearFX",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Ticket_C'Default__BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.1"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_Pickup_Cell_Disapear_Blue_05_bigSlow'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/PickUp/PowerCell/PS_Pickup_Cell_Disapear_Blue_05_bigSlow.12"
+      },
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Ticket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.9"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "IdleFX",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Ticket_C'Default__BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.1"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_Pickup_01_Ticket'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/PickUp/PS_Pickup_01_Ticket.64"
+      },
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Ticket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.9"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "RotatingMovementComponent",
+    "Name": "RotatingMovement",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RotatingMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Ticket_C'Default__BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Pickup_Ticket_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Pickup_Ticket_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.5"
+      },
+      "VariableGuid": "F7E77D18-4CEBB5D3-E40DCE82-53A8A14C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Pickup_Ticket_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.6"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereTrigger",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Ticket_C'Default__BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.1"
+    },
+    "Properties": {
+      "SphereRadius": 100.0,
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Pickup_Ticket_C'Default__BP_Pickup_Ticket_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.1"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Pickup_Ticket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Pickup_Ticket_C'Default__BP_Pickup_Ticket_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Pickup/BP_Pickup_Ticket.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_MetaCell01'",
+        "ObjectPath": "/Game/Graphic/Interactive/Cells/SM_MetaCell01.2"
+      }
+    }
+  }
+]

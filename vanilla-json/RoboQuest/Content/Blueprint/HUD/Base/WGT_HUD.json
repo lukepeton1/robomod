@@ -1,0 +1,552 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_HUD",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadSaveGame",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitializeHUD",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerSettings",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SaveGame_Settings_C'",
+          "ObjectPath": "/Game/Blueprint/GameSystem/SaveGame/BP_SaveGame_Settings.3"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetGameInstanceBPRef",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AGameInstance_C'",
+          "ObjectPath": "/Game/Blueprint/GameSystem/GameInstance/BP_AGameInstance.208"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_AGame_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AGameInstance_C'",
+          "ObjectPath": "/Game/Blueprint/GameSystem/GameInstance/BP_AGameInstance.208"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPlayerControllerRef",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_APlayer_Controller",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetGamepadBaseFocusWidget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'UserWidget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnValidate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsPressed",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsMouse",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNavigate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Direction",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EDirection'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCancel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCurrentWidgetDisplay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetValidationButton",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewParam",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_HUD_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Base/WGT_HUD",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_HUD_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_HUD_C:ExecuteUbergraph_WGT_HUD'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_HUD_C:GetValidationButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.11"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:GetCurrentWidgetDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.10"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:OnCancel'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.9"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:OnNavigate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.8"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:OnValidate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.7"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:GetGamepadBaseFocusWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.6"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:GetPlayerControllerRef'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.5"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:GetGameInstanceBPRef'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.4"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:InitializeHUD'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.3"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:LoadSaveGame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.2"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+      },
+      {
+        "ObjectName": "Function'WGT_HUD_C:ExecuteUbergraph_WGT_HUD'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GameInstanceBPRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AGameInstance_C'",
+          "ObjectPath": "/Game/Blueprint/GameSystem/GameInstance/BP_AGameInstance.208"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerControllerRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_HUD": {
+        "ObjectName": "Function'WGT_HUD_C:ExecuteUbergraph_WGT_HUD'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_HUD_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+      },
+      "LoadSaveGame": {
+        "ObjectName": "Function'WGT_HUD_C:LoadSaveGame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.2"
+      },
+      "InitializeHUD": {
+        "ObjectName": "Function'WGT_HUD_C:InitializeHUD'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.3"
+      },
+      "GetGameInstanceBPRef": {
+        "ObjectName": "Function'WGT_HUD_C:GetGameInstanceBPRef'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.4"
+      },
+      "GetPlayerControllerRef": {
+        "ObjectName": "Function'WGT_HUD_C:GetPlayerControllerRef'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.5"
+      },
+      "GetGamepadBaseFocusWidget": {
+        "ObjectName": "Function'WGT_HUD_C:GetGamepadBaseFocusWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.6"
+      },
+      "OnValidate": {
+        "ObjectName": "Function'WGT_HUD_C:OnValidate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.7"
+      },
+      "OnNavigate": {
+        "ObjectName": "Function'WGT_HUD_C:OnNavigate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.8"
+      },
+      "OnCancel": {
+        "ObjectName": "Function'WGT_HUD_C:OnCancel'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.9"
+      },
+      "GetCurrentWidgetDisplay": {
+        "ObjectName": "Function'WGT_HUD_C:GetCurrentWidgetDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.10"
+      },
+      "GetValidationButton": {
+        "ObjectName": "Function'WGT_HUD_C:GetValidationButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.11"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    }
+  },
+  {
+    "Type": "WGT_HUD_C",
+    "Name": "Default__WGT_HUD_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/WGT_HUD.WGT_HUD_C'",
+    "Package": "/Game/Blueprint/HUD/Base/WGT_HUD",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    }
+  }
+]

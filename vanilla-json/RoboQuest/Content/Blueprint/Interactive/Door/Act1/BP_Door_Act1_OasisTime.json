@@ -1,0 +1,907 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Door_Act1_OasisTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_GameTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_CurrentTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_TargetTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetWidget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'UserWidget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsWGT_Time_Screen",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TimeScreen_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLevelGenerator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ALevelGenerator'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_LinearColorToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintSetOasisCorruptedDoorScreenTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ADoor:OnBlueprintSetOasisCorruptedDoorScreenTime'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "GameTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateScreenTimer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TargetTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Door_Act1_OasisTime_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.17"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Door_Act1_OasisTime_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:ExecuteUbergraph_BP_Door_Act1_OasisTime'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:UpdateScreenTimer'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.3"
+      },
+      {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.2"
+      },
+      {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:OnBlueprintSetOasisCorruptedDoorScreenTime'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.1"
+      },
+      {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:ExecuteUbergraph_BP_Door_Act1_OasisTime'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Plane",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Door_Act1_OasisTime": {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:ExecuteUbergraph_BP_Door_Act1_OasisTime'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.0"
+      },
+      "OnBlueprintSetOasisCorruptedDoorScreenTime": {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:OnBlueprintSetOasisCorruptedDoorScreenTime'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.2"
+      },
+      "UpdateScreenTimer": {
+        "ObjectName": "Function'BP_Door_Act1_OasisTime_C:UpdateScreenTimer'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    }
+  },
+  {
+    "Type": "BP_Door_Act1_OasisTime_C",
+    "Name": "Default__BP_Door_Act1_OasisTime_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.BP_Door_Act1_OasisTime_C'",
+    "Package": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime",
+    "Template": {
+      "ObjectName": "BP_Door_Act1_C'Default__BP_Door_Act1_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Door_Act1_OasisTime_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.18"
+      },
+      "PathBlocker": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:PathBlocker'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.7"
+      },
+      "TriggerBox1": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:TriggerBox1'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.8"
+      },
+      "TriggerBox2": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:TriggerBox2'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.9"
+      },
+      "OneWayCollision": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_OasisTime_C:OneWayCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.23"
+      },
+      "HitBlocker": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_OasisTime_C:HitBlocker'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.21"
+      },
+      "HitBlockerBack": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_OasisTime_C:HitBlockerBack'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.22"
+      },
+      "UnderConstruction": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_OasisTime_C:UnderConstruction'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.25"
+      },
+      "UnderConstructionBack": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_OasisTime_C:UnderConstructionBack'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.26"
+      },
+      "StaticMeshBlocker": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_OasisTime_C:StaticMeshBlocker'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.24"
+      },
+      "TutoBox": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:TutoBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.10"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Door_Act1_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.2"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PathBlocker",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Door_Act1_C:PathBlocker'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TriggerBox1",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Door_Act1_C:TriggerBox1'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.4"
+    },
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+            },
+            "FunctionName": "OnBeginTriggerBoxOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+            },
+            "FunctionName": "OnEndTriggerBoxOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TriggerBox2",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Door_Act1_C:TriggerBox2'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.5"
+    },
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+            },
+            "FunctionName": "OnBeginTriggerBoxOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+            },
+            "FunctionName": "OnEndTriggerBoxOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TutoBox",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Door_Act1_C:TutoBox'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Door_Act1_OasisTime_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.12"
+      },
+      "VariableGuid": "8D6642B9-49259277-2DAEE984-DA802CBE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Door_Act1_OasisTime_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.20"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.15"
+        }
+      ],
+      "VariableGuid": "BEE3C27B-43161A30-70D3E593-910C7212",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Door_Act1_OasisTime_C:Plane_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.19"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.16"
+        }
+      ],
+      "VariableGuid": "BA10C3D4-409C507B-70E17B90-1E1F30D0",
+      "InternalVariableName": "Plane"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BP_Door_Act1_OasisTime_C:WidgetTime_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.27"
+      },
+      "VariableGuid": "ECB31980-49966218-1BEC2FB2-555F8EEE",
+      "InternalVariableName": "WidgetTime"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Door_Act1_OasisTime_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.13"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_Door_Act1_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.11"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Plane'",
+        "ObjectPath": "/Engine/BasicShapes/Plane.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Color_Black'",
+          "ObjectPath": "/Game/Graphic/Base/Material/Color/MI_Color_Black.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 186.30075,
+        "Z": -147.90855
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 120.0
+      },
+      "RelativeScale3D": {
+        "X": 3.1875,
+        "Y": 1.3125,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Elec_CodeMachine_02'",
+        "ObjectPath": "/Game/Graphic/Environment/1_Act2/1_Library_Electricity/SM_Elec_CodeMachine_02.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Metal_Rust_04'",
+          "ObjectPath": "/Game/Graphic/Environment/1_Act1/0_Shaders/MI_Metal_Rust_04.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Metal_Rust_04'",
+          "ObjectPath": "/Game/Graphic/Environment/1_Act1/0_Shaders/MI_Metal_Rust_04.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Metal_Rust_04'",
+          "ObjectPath": "/Game/Graphic/Environment/1_Act1/0_Shaders/MI_Metal_Rust_04.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 134.82465,
+        "Z": 656.4373
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "HitBlocker",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_C:HitBlocker'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.12"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "HitBlockerBack",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_C:HitBlockerBack'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.13"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "OneWayCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_C:OneWayCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.14"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshBlocker",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_C:StaticMeshBlocker'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.15"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "UnderConstruction",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_C:UnderConstruction'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.16"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "UnderConstructionBack",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act1_OasisTime_C'Default__BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.5"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Door_Act1_C:UnderConstructionBack'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1.17"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act1_OasisTime_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "WidgetTime_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act1_OasisTime_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act1/BP_Door_Act1_OasisTime.4"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TimeScreen_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.1"
+      },
+      "bDrawAtDesiredSize": true,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

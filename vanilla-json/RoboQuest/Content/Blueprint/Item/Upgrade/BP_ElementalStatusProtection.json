@@ -1,0 +1,231 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ElementalStatusProtection",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ElementalStatusProtection_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bFromRunSave",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ElementalStatusProtection_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AItem:OnApply'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromRunSave",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ElementalStatusProtection_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AItem_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_AItem.3"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ElementalStatusProtection_C:ExecuteUbergraph_BP_ElementalStatusProtection'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ElementalStatusProtection_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.1"
+      },
+      {
+        "ObjectName": "Function'BP_ElementalStatusProtection_C:ExecuteUbergraph_BP_ElementalStatusProtection'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Status",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "EnumProperty",
+          "Name": "Status",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EStatus'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ElementalStatusProtection": {
+        "ObjectName": "Function'BP_ElementalStatusProtection_C:ExecuteUbergraph_BP_ElementalStatusProtection'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.0"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_ElementalStatusProtection_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ElementalStatusProtection_C'Default__BP_ElementalStatusProtection_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.3"
+    }
+  },
+  {
+    "Type": "BP_ElementalStatusProtection_C",
+    "Name": "Default__BP_ElementalStatusProtection_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection.BP_ElementalStatusProtection_C'",
+    "Package": "/Game/Blueprint/Item/Upgrade/BP_ElementalStatusProtection",
+    "Template": {
+      "ObjectName": "BP_AItem_C'Default__BP_AItem_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_AItem.4"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Status": [
+        "EStatus::Stun",
+        "EStatus::Burn",
+        "EStatus::Slowed"
+      ]
+    }
+  }
+]

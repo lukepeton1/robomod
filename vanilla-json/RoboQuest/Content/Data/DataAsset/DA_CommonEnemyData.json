@@ -1,0 +1,153 @@
+[
+  {
+    "Type": "EnemyDataAsset",
+    "Name": "DA_CommonEnemyData",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnemyDataAsset'",
+    "Package": "/Game/Data/DataAsset/DA_CommonEnemyData",
+    "Properties": {
+      "CurveStunRegeneration": {
+        "ObjectName": "CurveFloat'CU_EnemyImpactRegenByResistance'",
+        "ObjectPath": "/Game/Data/Curve/Enemy/CU_EnemyImpactRegenByResistance.0"
+      },
+      "CurveImpactRegeneration": {
+        "ObjectName": "CurveFloat'CU_EnemyImpactRegenByResistance'",
+        "ObjectPath": "/Game/Data/Curve/Enemy/CU_EnemyImpactRegenByResistance.0"
+      },
+      "CurveIceRegeneration": {
+        "ObjectName": "CurveFloat'CU_EnemyIceRegenByResistance'",
+        "ObjectPath": "/Game/Data/Curve/Enemy/CU_EnemyIceRegenByResistance.0"
+      },
+      "CurveBossStunRegeneration": {
+        "ObjectName": "CurveFloat'CU_BossImpactRegenByResistance'",
+        "ObjectPath": "/Game/Data/Curve/Enemy/CU_BossImpactRegenByResistance.0"
+      },
+      "CurveBossImpactRegeneration": {
+        "ObjectName": "CurveFloat'CU_BossImpactRegenByResistance'",
+        "ObjectPath": "/Game/Data/Curve/Enemy/CU_BossImpactRegenByResistance.0"
+      },
+      "CurveBossIceRegeneration": {
+        "ObjectName": "CurveFloat'CU_BossIceRegenByResistance'",
+        "ObjectPath": "/Game/Data/Curve/Enemy/CU_BossIceRegenByResistance.0"
+      },
+      "StatusSFX": {
+        "LoopFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Burn_Size_00_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Burn_Sized/PS_Status_Burn_Size_00_Param.49"
+        },
+        "BossLoopFX": {
+          "AssetPathName": "/Game/Graphic/VFX/Enemy/Status/Status_Burn_Sized/PS_Status_Burn_Boss_00_Param.PS_Status_Burn_Boss_00_Param",
+          "SubPathString": ""
+        },
+        "MaterialParameterName": "BurnedActive"
+      },
+      "StatusSFX[1]": {
+        "StartSound": {
+          "ObjectName": "SoundCue'SC_Enemy_Stun_Trigger'",
+          "ObjectPath": "/Game/Audio/Sound/Enemy/Generic/Status/Stun/SC_Enemy_Stun_Trigger.0"
+        },
+        "TriggerFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Shock_Trigger_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Shock_Sized/PS_Status_Shock_Trigger_Param.56"
+        },
+        "LoopFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Shock_Size_00_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Shock_Sized/PS_Status_Shock_Size_00_Param.29"
+        },
+        "BossLoopFX": {
+          "AssetPathName": "/Game/Graphic/VFX/Enemy/Status/Status_Shock_Sized/PS_Status_Shock_Boss_00_Param.PS_Status_Shock_Boss_00_Param",
+          "SubPathString": ""
+        }
+      },
+      "StatusSFX[2]": {
+        "LoopFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Marked_Size_00_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Marked_Sized/PS_Status_Marked_Size_00_Param.44"
+        },
+        "BossLoopFX": {
+          "AssetPathName": "/Game/Graphic/VFX/Enemy/Status/Status_Marked_Sized/PS_Status_Marked_Size_00_Param.PS_Status_Marked_Size_00_Param",
+          "SubPathString": ""
+        },
+        "LoopSocketLocation": "ESocketLocation::Overhead"
+      },
+      "StatusSFX[3]": {
+        "StartSound": {
+          "ObjectName": "SoundCue'SC_Enemy_Freeze_Trigger'",
+          "ObjectPath": "/Game/Audio/Sound/Enemy/Generic/Status/Freeze/SC_Enemy_Freeze_Trigger.0"
+        },
+        "EndSound": {
+          "ObjectName": "SoundCue'SC_Player_Freeze_Stop'",
+          "ObjectPath": "/Game/Audio/Sound/Player/Status/Freeze/SC_Player_Freeze_Stop.0"
+        },
+        "TriggerFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Freeze_Trigger_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Freeze_Sized/PS_Status_Freeze_Trigger_Param.74"
+        },
+        "LoopFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Freeze_Size_00_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Freeze_Sized/PS_Status_Freeze_Size_00_Param.51"
+        },
+        "BossLoopFX": {
+          "AssetPathName": "/Game/Graphic/VFX/Enemy/Status/Status_Freeze_Sized/PS_Status_Freeze_Boss_00_Param.PS_Status_Freeze_Boss_00_Param",
+          "SubPathString": ""
+        },
+        "MaterialParameterName": "ChilledActive"
+      },
+      "StatusSFX[4]": {
+        "StartSound": {
+          "ObjectName": "SoundCue'SC_Enemy_Stagger_Trigger'",
+          "ObjectPath": "/Game/Audio/Sound/Enemy/Generic/Status/Stagger/SC_Enemy_Stagger_Trigger.0"
+        },
+        "TriggerFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Stagger_Trigger_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Stagger_Sized/PS_Status_Stagger_Trigger_Param.34"
+        },
+        "TriggerSocketLocation": "ESocketLocation::Head",
+        "LoopFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Stagger_Size_00_Param'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/Status_Stagger_Sized/PS_Status_Stagger_Size_00_Param.31"
+        },
+        "BossLoopFX": {
+          "AssetPathName": "/Game/Graphic/VFX/Enemy/Status/Status_Stagger_Sized/PS_Status_Stagger_Size_00_Param.PS_Status_Stagger_Size_00_Param",
+          "SubPathString": ""
+        },
+        "LoopSocketLocation": "ESocketLocation::Overhead"
+      },
+      "StatusSFX[5]": {
+        "LoopFX": {
+          "ObjectName": "ParticleSystem'PS_Status_Focused'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Status/PS_Status_Focused.16"
+        },
+        "BossLoopFX": {
+          "AssetPathName": "/Game/Graphic/VFX/Enemy/Status/PS_Status_Focused.PS_Status_Focused",
+          "SubPathString": ""
+        },
+        "LoopSocketLocation": "ESocketLocation::Overhead"
+      },
+      "StatusSFX[6]": {
+        "StartSound": {
+          "ObjectName": "SoundCue'SC_Enemy_Empower_Start'",
+          "ObjectPath": "/Game/Audio/Sound/Enemy/Generic/Status/Empower/SC_Enemy_Empower_Start.0"
+        },
+        "LoopSound": {
+          "ObjectName": "SoundCue'SC_Enemy_Empower_Loop'",
+          "ObjectPath": "/Game/Audio/Sound/Enemy/Generic/Status/Empower/SC_Enemy_Empower_Loop.0"
+        },
+        "EndSound": {
+          "ObjectName": "SoundCue'SC_Enemy_Empower_Stop'",
+          "ObjectPath": "/Game/Audio/Sound/Enemy/Generic/Status/Empower/SC_Enemy_Empower_Stop.0"
+        }
+      },
+      "StatusSFX[7]": {
+        "LoopSound": {
+          "ObjectName": "SoundCue'SC_Enemy_Shield_Loop'",
+          "ObjectPath": "/Game/Audio/Sound/Enemy/Specific/Shieldfly/SC_Enemy_Shield_Loop.0"
+        }
+      },
+      "EmpowerDamageModifier": 0.0,
+      "EmpowerSpeedModifier": 30.0,
+      "StunDuration": 3.5,
+      "FreezeDuration": 6.0
+    }
+  }
+]

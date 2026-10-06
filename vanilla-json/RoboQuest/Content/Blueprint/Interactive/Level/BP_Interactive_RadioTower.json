@@ -1,0 +1,744 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_RadioTower",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Event_RowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bStoryAlreadyUnlocked",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentToWorld_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_FinishSpawningActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintSetStoryRowName",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveStory:OnBlueprintSetStoryRowName'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "RowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bStoryAlreadyUnlocked",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnStartInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_OpenDoor__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_OpenDoor__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_RadioTower_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_Interactive_RadioTower_C:Timeline_OpenDoor_Template'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.18"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_RadioTower_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:ExecuteUbergraph_BP_Interactive_RadioTower'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveStory'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.6"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.5"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:Timeline_OpenDoor__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:Timeline_OpenDoor__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:OnBlueprintSetStoryRowName'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:ExecuteUbergraph_BP_Interactive_RadioTower'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CapsuleSpawnRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_OpenDoor_NewTrack_0_E2BC29DB4156D0F7F48003ACB5EB45FB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_OpenDoor__Direction_E2BC29DB4156D0F7F48003ACB5EB45FB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "UObjectWrapper",
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_OpenDoor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DynamicMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StoryCapsuleRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_RadioTower": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:ExecuteUbergraph_BP_Interactive_RadioTower'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.0"
+      },
+      "OnBlueprintSetStoryRowName": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:OnBlueprintSetStoryRowName'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.1"
+      },
+      "OnStartInteract": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.2"
+      },
+      "Timeline_OpenDoor__UpdateFunc": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:Timeline_OpenDoor__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.3"
+      },
+      "Timeline_OpenDoor__FinishedFunc": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:Timeline_OpenDoor__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.4"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.5"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_RadioTower_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_RadioTower_C'Default__BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.8"
+    }
+  },
+  {
+    "Type": "BP_Interactive_RadioTower_C",
+    "Name": "Default__BP_Interactive_RadioTower_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.BP_Interactive_RadioTower_C'",
+    "Package": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_RadioTower_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.9"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": null
+      },
+      "InteractText": {
+        "Namespace": "",
+        "Key": "57B25C6642F516FF0BEF3889C8DE44E7",
+        "SourceString": "Open",
+        "LocalizedString": "Open"
+      },
+      "ErrorText": {
+        "CultureInvariantString": null
+      },
+      "InteractState": "EInteractState::Deactivate",
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_RadioTower_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.9"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_RadioTower_C'Default__BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.8"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 300.0
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.2,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "CapsuleSpawnRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -100.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.00012,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_RadioTower_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_RadioTower_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.12"
+      },
+      "VariableGuid": "16D49C15-40440463-DC6BC6BA-3A9C44EC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_RadioTower_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactive_RadioTower_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.17"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DE7813F4-435D1397-62114D8A-A39C4885",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_RadioTower_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_RadioTower_C:CapsuleSpawnRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.11"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "090C3931-4378F3F7-A6E1F588-BEAC4B8F",
+      "InternalVariableName": "CapsuleSpawnRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_RadioTower_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_RadioTower_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_RadioTower_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_RadioTower_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_RadioTower_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.13"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_RadioTower'",
+        "ObjectPath": "/Game/Graphic/Interactive/RadioTower/SM_RadioTower.2"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "AllyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnvironmentCheck",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "WeaponMesh",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "EnemyPawn",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TrapScale",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyPawnProjectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "LedgeGrab",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_OpenDoor_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_RadioTower_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.7"
+    },
+    "Properties": {
+      "LengthMode": "TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_Interactive_RadioTower_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_RadioTower.10"
+          },
+          "PropertyName": "Timeline_OpenDoor_NewTrack_0_E2BC29DB4156D0F7F48003ACB5EB45FB",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "E2BC29DB-4156D0F7-F48003AC-B5EB45FB",
+      "VariableName": "Timeline_OpenDoor",
+      "DirectionPropertyName": "Timeline_OpenDoor__Direction_E2BC29DB4156D0F7F48003ACB5EB45FB",
+      "UpdateFunctionName": "Timeline_OpenDoor__UpdateFunc",
+      "FinishedFunctionName": "Timeline_OpenDoor__FinishedFunc"
+    }
+  }
+]

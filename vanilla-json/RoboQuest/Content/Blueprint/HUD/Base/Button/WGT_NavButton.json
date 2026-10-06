@@ -1,0 +1,739 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_NavButton",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsHighlight",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_IntFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateFontInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 104,
+        "Struct": {
+          "ObjectName": "Class'SlateFontInfo'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush_1",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.9"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetIsHighlight",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:SetIsHighlight'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.22"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsHighlight",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetSelectedState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:SetSelectedState'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetButtonText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:GetButtonText'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetBackgroundImage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:GetBackgroundImage'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.18"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetButtonText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:SetButtonText'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.21"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "NewText",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_TextToUpper_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_NavButton_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_NavButton_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_NavButton_C:ExecuteUbergraph_WGT_NavButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_NavButton_C:SetButtonText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.6"
+      },
+      {
+        "ObjectName": "Function'WGT_NavButton_C:GetBackgroundImage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.5"
+      },
+      {
+        "ObjectName": "Function'WGT_NavButton_C:GetButtonText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.4"
+      },
+      {
+        "ObjectName": "Function'WGT_NavButton_C:SetSelectedState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.3"
+      },
+      {
+        "ObjectName": "Function'WGT_NavButton_C:SetIsHighlight'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.2"
+      },
+      {
+        "ObjectName": "Function'WGT_NavButton_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.1"
+      },
+      {
+        "ObjectName": "Function'WGT_NavButton_C:ExecuteUbergraph_WGT_NavButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_ButtonName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bHighlight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "BaseFontSize",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "HighlightFontMultiplier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_NavButton": {
+        "ObjectName": "Function'WGT_NavButton_C:ExecuteUbergraph_WGT_NavButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_NavButton_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.1"
+      },
+      "SetIsHighlight": {
+        "ObjectName": "Function'WGT_NavButton_C:SetIsHighlight'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.2"
+      },
+      "SetSelectedState": {
+        "ObjectName": "Function'WGT_NavButton_C:SetSelectedState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.3"
+      },
+      "GetButtonText": {
+        "ObjectName": "Function'WGT_NavButton_C:GetButtonText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.4"
+      },
+      "GetBackgroundImage": {
+        "ObjectName": "Function'WGT_NavButton_C:GetBackgroundImage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.5"
+      },
+      "SetButtonText": {
+        "ObjectName": "Function'WGT_NavButton_C:SetButtonText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.6"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_NavButton_C'Default__WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.8"
+    }
+  },
+  {
+    "Type": "WGT_NavButton_C",
+    "Name": "Default__WGT_NavButton_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Button/WGT_NavButton.WGT_NavButton_C'",
+    "Package": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton",
+    "Template": {
+      "ObjectName": "WGT_AButton_C'Default__WGT_AButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.28"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "HighlightFontMultiplier": 1.3,
+      "ButtonTitle": {
+        "Namespace": "",
+        "Key": "34EC8DE448349875EE23F2AE23EB552F",
+        "SourceString": "Yolo",
+        "LocalizedString": "Yolo"
+      },
+      "BaseBrush": {
+        "ImageSize": {
+          "X": 299.0,
+          "Y": 138.0
+        },
+        "Margin": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Onglet_Idle'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/T_Onglet_Idle.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Image"
+      },
+      "HoverBrush": {
+        "ImageSize": {
+          "X": 299.0,
+          "Y": 138.0
+        },
+        "Margin": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Onglet_Hover'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/T_Onglet_Hover.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Image"
+      },
+      "HighlightBrush": {
+        "ImageSize": {
+          "X": 358.8,
+          "Y": 165.6
+        },
+        "Margin": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Onglet_Active'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/T_Onglet_Active.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Image"
+      },
+      "PressedBrush": {
+        "ImageSize": {
+          "X": 299.0,
+          "Y": 138.0
+        },
+        "Margin": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Onglet_Pressed'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/T_Onglet_Pressed.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Image"
+      },
+      "bIsGamepadNavigable": false,
+      "bHorizontalyCanJumpVerticaly": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_NavButton_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.14"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 17.846441,
+          "Y": 138.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.53125,
+            "G": 0.53125,
+            "B": 0.53125,
+            "A": 1.0,
+            "Hex": "C1C1C1"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Onglet_Idle'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/T_Onglet_Idle.0"
+        },
+        "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+        "ImageType": "ESlateBrushImageType::FullColor"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_NavButton_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.11"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_NavButton_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.14"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_NavButton_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.11"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_NavButton_C:WidgetTree.Overlay_0.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_NavButton_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 0.01
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_NavButton_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_NavButton_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_NavButton_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Right": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_NavButton_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.10"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_NavButton_C:WidgetTree.Text_ButtonName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.13"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_ButtonName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_NavButton_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.14"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "YOLO"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 3.0,
+        "Y": 3.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_NavButton_C:WidgetTree.Overlay_0.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.12"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.3
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_NavButton_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.10"
+      }
+    }
+  }
+]

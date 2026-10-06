@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WS_RocketJump",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WS_RocketJump_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetSphereRadius_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_OnTriggerRocketJump_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IDamageable'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerSkillCustomEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WS_RocketJump_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ASkill:OnTriggerSkillCustomEffect'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WS_RocketJump_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WS_RocketJump_C:ExecuteUbergraph_BP_WS_RocketJump'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill_Automatic'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WS_RocketJump_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.1"
+      },
+      {
+        "ObjectName": "Function'BP_WS_RocketJump_C:ExecuteUbergraph_BP_WS_RocketJump'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WS_RocketJump": {
+        "ObjectName": "Function'BP_WS_RocketJump_C:ExecuteUbergraph_BP_WS_RocketJump'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.0"
+      },
+      "OnTriggerSkillCustomEffect": {
+        "ObjectName": "Function'BP_WS_RocketJump_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WS_RocketJump_C'Default__BP_WS_RocketJump_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.3"
+    }
+  },
+  {
+    "Type": "BP_WS_RocketJump_C",
+    "Name": "Default__BP_WS_RocketJump_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Skill/Mod/BP_WS_RocketJump.BP_WS_RocketJump_C'",
+    "Package": "/Game/Blueprint/Skill/Mod/BP_WS_RocketJump",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

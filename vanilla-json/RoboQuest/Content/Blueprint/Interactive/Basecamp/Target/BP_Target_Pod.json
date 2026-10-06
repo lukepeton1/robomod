@@ -1,0 +1,275 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Target_Pod_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ATarget_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.4"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Target_Pod_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Target_Pod_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Target_Pod_C'Default__BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.1"
+    }
+  },
+  {
+    "Type": "BP_Target_Pod_C",
+    "Name": "Default__BP_Target_Pod_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.BP_Target_Pod_C'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod",
+    "Template": {
+      "ObjectName": "BP_ATarget_C'Default__BP_ATarget_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.5"
+    },
+    "Properties": {
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Target_Pod_C:CapsuleComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.4"
+      },
+      "TargetMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Target_Pod_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.10"
+      },
+      "HomingComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Target_Pod_C:HomingComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.7"
+      },
+      "ArrowLeft": {
+        "ObjectName": "ArrowComponent'Default__BP_Target_Pod_C:ArrowLeft'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.2"
+      },
+      "ArrowRight": {
+        "ObjectName": "ArrowComponent'Default__BP_Target_Pod_C:ArrowRight'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.3"
+      },
+      "Health": 70,
+      "ImpactResistance": 40,
+      "CapsuleHalfHeight": 132,
+      "CapsuleRadius": 70,
+      "DeathDuration": 7.0,
+      "KillAmountToRespawn": 8,
+      "CriticalBones": [],
+      "Type": "EEnemyType::Turret",
+      "Score": 24,
+      "UpAndDownSpeed": 420.0,
+      "HealthBarSize": 140,
+      "StatusRadius": 40.0,
+      "DeathRow": {
+        "RowName": "High"
+      },
+      "HitAnimations": [
+        {
+          "ObjectName": "AnimMontage'AM_ShootingRange_Target_Pod_Hit'",
+          "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Pod/Animation/AM_ShootingRange_Target_Pod_Hit.0"
+        }
+      ],
+      "CriticalHitAnimations": [
+        {
+          "ObjectName": "AnimMontage'AM_ShootingRange_Target_Pod_Hit_Critic'",
+          "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Pod/Animation/AM_ShootingRange_Target_Pod_Hit_Critic.0"
+        }
+      ],
+      "StaggerAnimation": {
+        "ObjectName": "AnimMontage'AM_ShootingRange_Target_Pod_Stagger'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Pod/Animation/AM_ShootingRange_Target_Pod_Stagger.0"
+      },
+      "StunAnimation": {
+        "ObjectName": "AnimMontage'AM_ShootingRange_Target_Pod_Stun_Start'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Pod/Animation/AM_ShootingRange_Target_Pod_Stun_Start.0"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Target_Pod_C:CapsuleComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.4"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowLeft",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_Target_Pod_C'Default__BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.1"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'Default__BP_ATarget_C:ArrowLeft'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Target_Pod_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.10"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowRight",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_Target_Pod_C'Default__BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.1"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'Default__BP_ATarget_C:ArrowRight'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.7"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Target_Pod_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.10"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CapsuleComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_Target_Pod_C'Default__BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.1"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_ATarget_C:CapsuleComponent'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.9"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 132.0,
+      "CapsuleRadius": 70.0
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "HomingComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Target_Pod_C'Default__BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.1"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_ATarget_C:HomingComponent'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.11"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Target_Pod_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.10"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Target_Pod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.9"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Target_Pod_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.6"
+      },
+      "VariableGuid": "B893800D-443AA6FB-60C173BC-EF8F6A2B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Target_Pod_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "TargetMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Target_Pod_C'Default__BP_Target_Pod_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_ATarget_C:TargetMesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.15"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_ShootingRange_TargetPod_C'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Pod/ABP_ShootingRange_TargetPod.2"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_ShootingRange_Target_Pod'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Pod/SK_ShootingRange_Target_Pod.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Target_Pod_C:CapsuleComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_Target_Pod.4"
+      },
+      "RelativeLocation": {
+        "X": -35.0,
+        "Y": 0.0,
+        "Z": -132.0
+      }
+    }
+  }
+]

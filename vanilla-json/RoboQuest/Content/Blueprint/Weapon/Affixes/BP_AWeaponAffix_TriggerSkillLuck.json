@@ -1,0 +1,685 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AWeaponAffix_TriggerSkillLuck",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateUsed__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Skill_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bTrigger",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsSkillConditionValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_IntFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_RandomFloatInRangeFromStream_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEndFirerateDelay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemove",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeaponAffix:OnRemove'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEndSkill",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeaponAffix:OnApply'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnSkillTrigger",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bTrigger",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUsed",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsSkillConditionValid",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AWeaponAffix_TriggerSkillLuck_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:ExecuteUbergraph_BP_AWeaponAffix_TriggerSkillLuck'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:IsSkillConditionValid'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.7"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnUsed'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.6"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnSkillTrigger'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.5"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.4"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnEndSkill'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.3"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.2"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnEndFirerateDelay'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.1"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:ExecuteUbergraph_BP_AWeaponAffix_TriggerSkillLuck'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ModifiedSkill",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RandomSeed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'RandomStream'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentFail",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "IgnoreSkillClass",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "SoftClassProperty",
+          "Name": "IgnoreSkillClass",
+          "Flags": "RF_Public",
+          "ElementSize": 48,
+          "PropertyClass": {
+            "ObjectName": "Class'Class'",
+            "ObjectPath": "/Script/CoreUObject"
+          },
+          "MetaClass": {
+            "ObjectName": "Class'ASkill'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TimerMinimalFirerate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFirerateDelay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AWeaponAffix_TriggerSkillLuck": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:ExecuteUbergraph_BP_AWeaponAffix_TriggerSkillLuck'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.0"
+      },
+      "OnEndFirerateDelay": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnEndFirerateDelay'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.1"
+      },
+      "OnRemove": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.2"
+      },
+      "OnEndSkill": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnEndSkill'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.3"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.4"
+      },
+      "OnSkillTrigger": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnSkillTrigger'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.5"
+      },
+      "OnUsed": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:OnUsed'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.6"
+      },
+      "IsSkillConditionValid": {
+        "ObjectName": "Function'BP_AWeaponAffix_TriggerSkillLuck_C:IsSkillConditionValid'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.7"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AWeaponAffix_TriggerSkillLuck_C'Default__BP_AWeaponAffix_TriggerSkillLuck_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.9"
+    }
+  },
+  {
+    "Type": "BP_AWeaponAffix_TriggerSkillLuck_C",
+    "Name": "Default__BP_AWeaponAffix_TriggerSkillLuck_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck.BP_AWeaponAffix_TriggerSkillLuck_C'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_TriggerSkillLuck",
+    "Template": {
+      "ObjectName": "BP_AWeaponAffix_C'Default__BP_AWeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "RandomSeed": {
+        "InitialSeed": 0,
+        "Seed": 0
+      },
+      "TimerMinimalFirerate": {
+        "Handle": 0
+      }
+    }
+  }
+]

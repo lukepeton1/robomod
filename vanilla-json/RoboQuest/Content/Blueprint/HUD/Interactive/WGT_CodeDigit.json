@@ -1,0 +1,292 @@
+[
+  {
+    "Type": "Function",
+    "Name": "SetDigit",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CodeDigit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "InDigit",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": null
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_ByteToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDigit",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CodeDigit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TextIsEmpty_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_TextToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Conv_StringToInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CodeDigit_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CodeDigit_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_CodeDigit_C:GetDigit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.1"
+      },
+      {
+        "ObjectName": "Function'WGT_CodeDigit_C:SetDigit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Digit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "SetDigit": {
+        "ObjectName": "Function'WGT_CodeDigit_C:SetDigit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.0"
+      },
+      "GetDigit": {
+        "ObjectName": "Function'WGT_CodeDigit_C:GetDigit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CodeDigit_C'Default__WGT_CodeDigit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.3"
+    }
+  },
+  {
+    "Type": "WGT_CodeDigit_C",
+    "Name": "Default__WGT_CodeDigit_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.WGT_CodeDigit_C'",
+    "Package": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CodeDigit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.7"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_CodeDigit_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_CodeDigit_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_CodeDigit_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.4"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_CodeDigit_C:WidgetTree.Digit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.6"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Digit",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CodeDigit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.7"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "DB9EFAEA4BA51CF29B178482BDE4FB4E",
+        "SourceString": "2",
+        "LocalizedString": "2"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "Size": 40
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_CodeDigit_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.5"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CodeDigit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'WGT_CodeDigit_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.4"
+      }
+    }
+  }
+]

@@ -1,0 +1,246 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_CellSpark",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CellSpark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateOnSuperbotEatWeapon__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bFromRunSave",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SuperbotRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_WeaponRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnSuperbotEatWeapon_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CellSpark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SuperbotRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WeaponRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CellSpark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.3"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_Item_Spark_C:OnApply'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_Item_Spark.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromRunSave",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_CellSpark_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Item/Common/BP_CellSpark",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Item_Spark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_Item_Spark.11"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_CellSpark_C:ExecuteUbergraph_BP_CellSpark'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_CellSpark_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.2"
+      },
+      {
+        "ObjectName": "Function'BP_CellSpark_C:DelegateOnSuperbotEatWeapon_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.1"
+      },
+      {
+        "ObjectName": "Function'BP_CellSpark_C:ExecuteUbergraph_BP_CellSpark'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "AddAmount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_CellSpark": {
+        "ObjectName": "Function'BP_CellSpark_C:ExecuteUbergraph_BP_CellSpark'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.0"
+      },
+      "DelegateOnSuperbotEatWeapon_Event_0": {
+        "ObjectName": "Function'BP_CellSpark_C:DelegateOnSuperbotEatWeapon_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.1"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_CellSpark_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_CellSpark_C'Default__BP_CellSpark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_CellSpark.4"
+    }
+  },
+  {
+    "Type": "BP_CellSpark_C",
+    "Name": "Default__BP_CellSpark_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Item/Common/BP_CellSpark.BP_CellSpark_C'",
+    "Package": "/Game/Blueprint/Item/Common/BP_CellSpark",
+    "Template": {
+      "ObjectName": "BP_Item_Spark_C'Default__BP_Item_Spark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_Item_Spark.12"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "SparkSkillClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_PS_LightSpark_C'",
+        "ObjectPath": "/Game/Blueprint/Skill/Spark/BP_PS_LightSpark.0"
+      },
+      "bHaveStack": true
+    }
+  }
+]

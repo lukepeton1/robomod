@@ -1,0 +1,908 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_EOSDefaultUserInterface_EnterDevicePinCode_Ryseup",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_ButtonRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Context",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'EOSUserInterface_EnterDevicePinCode_Context'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_VerificationUrl",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_PinCode",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetWidget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AWidget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerControllerRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerControllerRef_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "CancelAndClose",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.4"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_OnlinePopupUserInterfaceBase_C:CancelAndClose'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/WGT_OnlinePopupUserInterfaceBase.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetupUserInterface",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Context",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'EOSUserInterface_EnterDevicePinCode_Context'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "VerificationUrl",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "PinCode",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__WGT_MenuButton_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ButtonRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_OnlinePopupUserInterfaceBase_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/WGT_OnlinePopupUserInterfaceBase.7"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+      },
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.8"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:ExecuteUbergraph_EOSDefaultUserInterface_EnterDevicePinCode_Ryseup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:BndEvt__WGT_MenuButton_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.3"
+      },
+      {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:SetupUserInterface'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.2"
+      },
+      {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:CancelAndClose'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.1"
+      },
+      {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:ExecuteUbergraph_EOSDefaultUserInterface_EnterDevicePinCode_Ryseup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PinCode",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VerificationUrl",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_MenuButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MenuButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Context",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'EOSUserInterface_EnterDevicePinCode_Context'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_EOSDefaultUserInterface_EnterDevicePinCode_Ryseup": {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:ExecuteUbergraph_EOSDefaultUserInterface_EnterDevicePinCode_Ryseup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.0"
+      },
+      "CancelAndClose": {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:CancelAndClose'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.1"
+      },
+      "SetupUserInterface": {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:SetupUserInterface'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.2"
+      },
+      "BndEvt__WGT_MenuButton_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature": {
+        "ObjectName": "Function'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:BndEvt__WGT_MenuButton_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'EOSUserInterface_EnterDevicePinCode'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'Default__EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.5"
+    }
+  },
+  {
+    "Type": "EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C",
+    "Name": "Default__EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+    "Package": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup",
+    "Template": {
+      "ObjectName": "WGT_OnlinePopupUserInterfaceBase_C'Default__WGT_OnlinePopupUserInterfaceBase_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/WGT_OnlinePopupUserInterfaceBase.8"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "BackgroundBlur",
+    "Name": "BackgroundBlur_87",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BackgroundBlur'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "BlurStrength": 10.0,
+      "LowQualityFallbackBrush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.2,
+            "G": 0.2,
+            "B": 0.2,
+            "A": 1.0,
+            "Hex": "7C7C7C"
+          }
+        },
+        "DrawAs": "ESlateBrushDrawType::Image"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BackgroundBlurSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.BackgroundBlur_87.BackgroundBlurSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.7"
+        }
+      ],
+      "Visibility": "ESlateVisibility::Visible"
+    }
+  },
+  {
+    "Type": "BackgroundBlurSlot",
+    "Name": "BackgroundBlurSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BackgroundBlurSlot'",
+    "Outer": {
+      "ObjectName": "BackgroundBlur'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.BackgroundBlur_87'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "BackgroundBlur'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.BackgroundBlur_87'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.6"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_64'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.17"
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.4"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "WGT_MenuButton",
+          "DelegatePropertyName": "DispatchOnValidateButton",
+          "FunctionNameToBind": "BndEvt__WGT_MenuButton_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "MinDesiredWidth": 140.0,
+      "MinDesiredHeight": 60.0,
+      "bOverride_MinDesiredWidth": true,
+      "bOverride_MinDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.SizeBox_1.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.20"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.SizeBox_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.9"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.9"
+      },
+      "Content": {
+        "ObjectName": "WGT_MenuButton_C'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.WGT_MenuButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.25"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "PinCode",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "00000000"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 80
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_8'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.23"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_155",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "EpicOnlineSubsystem",
+        "Key": "16F21AD94955C2C615FE9DA327D8B769",
+        "SourceString": "To complete the sign-in process, open a web browser on your PC or phone and visit the following URL:",
+        "LocalizedString": "To complete the sign-in process, open a web browser on your PC or phone and visit the following URL:"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_GameplayText'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_GameplayText.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 40
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 2000.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.19"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "EpicOnlineSubsystem",
+        "Key": "DACEEF6E491EC18EC7488BA1CA06D389",
+        "SourceString": "And enter the following PIN:",
+        "LocalizedString": "And enter the following PIN:"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_GameplayText'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_GameplayText.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 40
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.22"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_83",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "EpicOnlineSubsystem",
+        "Key": "4F60AD97408B00C038AC4A8EB42936DB",
+        "SourceString": "Enter PIN Code",
+        "LocalizedString": "Enter PIN Code"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 80
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.18"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "VerificationUrl",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "https://THISURLWILLBEREPLACED/"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_GameplayText'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_GameplayText.0"
+        },
+        "Size": 60
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.21"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_62",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.18"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.19"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.21"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.22"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_8'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.23"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_12'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_64.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.24"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_64",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_64.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BackgroundBlurSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.BackgroundBlur_87.BackgroundBlurSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.7"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.TextBlock_83'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 20.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.TextBlock_155'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 10.0,
+        "Right": 10.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 20.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerificationUrl'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 20.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.TextBlock_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.13"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.PinCode'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_64'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_64'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.17"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.16"
+      }
+    }
+  },
+  {
+    "Type": "WGT_MenuButton_C",
+    "Name": "WGT_MenuButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.WGT_MenuButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.26"
+    },
+    "Template": {
+      "ObjectName": "WGT_MenuButton_C'Default__WGT_MenuButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.10"
+    },
+    "Properties": {
+      "ButtonTitle": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "btn_cancel",
+        "SourceString": "Cancel",
+        "LocalizedString": "Cancel"
+      },
+      "FontSize": 18,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.SizeBox_1.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.10"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "BackgroundBlur'EOSDefaultUserInterface_EnterDevicePinCode_Ryseup_C:WidgetTree.BackgroundBlur_87'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_EnterDevicePinCode_Ryseup.6"
+      }
+    }
+  }
+]

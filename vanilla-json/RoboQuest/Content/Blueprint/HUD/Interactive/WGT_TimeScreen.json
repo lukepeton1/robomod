@@ -1,0 +1,247 @@
+[
+  {
+    "Type": "Function",
+    "Name": "SetTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TimeScreen_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "InTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetTimeAsText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_TextToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_TimeScreen_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_TimeScreen_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_TimeScreen_C:SetTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "SetTime": {
+        "ObjectName": "Function'WGT_TimeScreen_C:SetTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_TimeScreen_C'Default__WGT_TimeScreen_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.2"
+    }
+  },
+  {
+    "Type": "WGT_TimeScreen_C",
+    "Name": "Default__WGT_TimeScreen_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.WGT_TimeScreen_C'",
+    "Package": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_52",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TimeScreen_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.8"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_TimeScreen_C:WidgetTree.Overlay_52.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_TimeScreen_C:WidgetTree.SizeBox_18.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_TimeScreen_C:WidgetTree.Overlay_52'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.3"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_TimeScreen_C:WidgetTree.Overlay_52'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.3"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_TimeScreen_C:WidgetTree.Text_Time'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.7"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TimeScreen_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.8"
+    },
+    "Properties": {
+      "WidthOverride": 200.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_TimeScreen_C:WidgetTree.SizeBox_18.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_TimeScreen_C:WidgetTree.SizeBox_18'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_TimeScreen_C:WidgetTree.SizeBox_18'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.5"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_TimeScreen_C:WidgetTree.Overlay_52'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.3"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Time",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TimeScreen_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.8"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "1:00:23"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "Size": 50
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_TimeScreen_C:WidgetTree.Overlay_52.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.4"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TimeScreen_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WGT_TimeScreen_C:WidgetTree.SizeBox_18'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_TimeScreen.5"
+      }
+    }
+  }
+]

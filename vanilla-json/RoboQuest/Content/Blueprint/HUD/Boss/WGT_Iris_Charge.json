@@ -1,0 +1,500 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_Iris_Charge",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Iris_Charge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Iris_C:DelegateUpdateCurrentChargeRatio__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprint/Enemy/Boss/BP_Iris.0"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Iris_C:DelegateGuitarHeroState__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprint/Enemy/Boss/BP_Iris.1"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_NewRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_NewState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Conv_BoolToFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateGuitarHeroState_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Iris_Charge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "NewState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateUpdateCurrentChargeRatio_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Iris_Charge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "NewRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Iris_Charge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.4"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Iris_Charge_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Iris_Charge_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_Iris_Charge_C:ExecuteUbergraph_WGT_Iris_Charge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Iris_Charge_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.3"
+      },
+      {
+        "ObjectName": "Function'WGT_Iris_Charge_C:DelegateUpdateCurrentChargeRatio_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.2"
+      },
+      {
+        "ObjectName": "Function'WGT_Iris_Charge_C:DelegateGuitarHeroState_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.1"
+      },
+      {
+        "ObjectName": "Function'WGT_Iris_Charge_C:ExecuteUbergraph_WGT_Iris_Charge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IrisRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | ExposeOnSpawn",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Iris_C'",
+          "ObjectPath": "/Game/Blueprint/Enemy/Boss/BP_Iris.64"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_Iris_Charge": {
+        "ObjectName": "Function'WGT_Iris_Charge_C:ExecuteUbergraph_WGT_Iris_Charge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.0"
+      },
+      "DelegateGuitarHeroState_Event_0": {
+        "ObjectName": "Function'WGT_Iris_Charge_C:DelegateGuitarHeroState_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.1"
+      },
+      "DelegateUpdateCurrentChargeRatio_Event_0": {
+        "ObjectName": "Function'WGT_Iris_Charge_C:DelegateUpdateCurrentChargeRatio_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.2"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_Iris_Charge_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Iris_Charge_C'Default__WGT_Iris_Charge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.5"
+    }
+  },
+  {
+    "Type": "WGT_Iris_Charge_C",
+    "Name": "Default__WGT_Iris_Charge_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.WGT_Iris_Charge_C'",
+    "Package": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Iris_Charge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.13"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 613.0,
+          "Y": 50.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Explobar_Background_1'",
+          "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Background_1.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Iris_Charge_C:WidgetTree.Overlay_12.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Iris_Charge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.13"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Iris_Charge_C:WidgetTree.Overlay_12.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.8"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Iris_Charge_C:WidgetTree.Overlay_12.OverlaySlot_8'",
+          "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.9"
+        }
+      ],
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 20.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Iris_Charge_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.7"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Iris_Charge_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.7"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Iris_Charge_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Iris_Charge_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.7"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Iris_Charge_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.7"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Iris_Charge_C:WidgetTree.SizeBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.11"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Iris_Charge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.13"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 837.0,
+            "Y": 27.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Explobar_Bar'",
+            "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Bar.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 837.0,
+            "Y": 27.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Explobar_Bar'",
+            "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Bar.0"
+          }
+        }
+      },
+      "FillColorAndOpacity": {
+        "R": 0.973445,
+        "G": 0.775822,
+        "B": 0.001214,
+        "A": 1.0,
+        "Hex": "FCE404"
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Iris_Charge_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.12"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Iris_Charge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.13"
+    },
+    "Properties": {
+      "WidthOverride": 600.0,
+      "HeightOverride": 34.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Iris_Charge_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Iris_Charge_C:WidgetTree.Overlay_12.OverlaySlot_8'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.9"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Iris_Charge_C:WidgetTree.SizeBox'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.11"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Iris_Charge_C:WidgetTree.SizeBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.11"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_Iris_Charge_C:WidgetTree.PBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.10"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Iris_Charge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Iris_Charge_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Iris_Charge.7"
+      }
+    }
+  }
+]

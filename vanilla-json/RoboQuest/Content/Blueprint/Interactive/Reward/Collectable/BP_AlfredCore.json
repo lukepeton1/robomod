@@ -1,0 +1,244 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AlfredCore_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_AKey_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_AKey.5"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AlfredCore_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.7"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_AlfredCore_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AlfredCore_C'Default__BP_AlfredCore_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.1"
+    }
+  },
+  {
+    "Type": "BP_AlfredCore_C",
+    "Name": "Default__BP_AlfredCore_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.BP_AlfredCore_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore",
+    "Template": {
+      "ObjectName": "BP_Interactive_AKey_C'Default__BP_Interactive_AKey_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_AKey.6"
+    },
+    "Properties": {
+      "ScreenColor": {
+        "R": 0.947307,
+        "G": 0.462077,
+        "B": 0.011612,
+        "A": 1.0,
+        "Hex": "F9B51C"
+      },
+      "Collectable": {
+        "RowName": "AlfredCore"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_AlfredCore_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.2"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_AlfredCore_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_AlfredCore_C'Default__BP_AlfredCore_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.1"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Interactive_AKey_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_AKey.7"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlfredCore_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_AlfredCore_C:StaticMesh_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Interactive_AKey_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_AKey.5"
+            },
+            "SCSVariableName": "StaticMesh",
+            "AssociatedGuid": "DCB7CB20-4F03DB88-10FDFBBC-5713D6FD"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'RotatingMovementComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "RotatingMovementComponent'BP_AlfredCore_C:RotatingMovement_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.4"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Interactive_AKey_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_AKey.5"
+            },
+            "SCSVariableName": "RotatingMovement",
+            "AssociatedGuid": "BE68B7CA-4325D973-0109148A-42035D8C"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RotatingMovementComponent",
+    "Name": "RotatingMovement_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'RotatingMovementComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlfredCore_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.0"
+    },
+    "Template": {
+      "ObjectName": "RotatingMovementComponent'BP_Interactive_AKey_C:RotatingMovement_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_AKey.9"
+    },
+    "Properties": {
+      "PivotTranslation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlfredCore_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlfredCore_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AlfredCore_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.5"
+      },
+      "VariableGuid": "31C462D7-4A1C7019-6676139B-13DB018C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlfredCore_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AlfredCore_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlfredCore_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Collectable/BP_AlfredCore.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_Interactive_AKey_C:StaticMesh_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_AKey.18"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_BowTie'",
+        "ObjectPath": "/Game/Graphic/Interactive/Key/SM_BowTie.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 42.875153
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  }
+]

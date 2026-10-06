@@ -1,0 +1,1125 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CorruptedTimeBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CorruptedTimeBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.25"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_CorruptedTimeBar_C:Fade_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.24"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_CorruptedTimeBar_C:Appear_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.23"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CorruptedTimeBarWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HealthBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Range",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Timer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CorruptedTimeBar_C'Default__WGT_CorruptedTimeBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.1"
+    }
+  },
+  {
+    "Type": "WGT_CorruptedTimeBar_C",
+    "Name": "Default__WGT_CorruptedTimeBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.WGT_CorruptedTimeBar_C'",
+    "Package": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar",
+    "Properties": {
+      "RangeActorClassesPtr": [
+        {
+          "AssetPathName": "/Game/Blueprint/Interactive/Level/BP_Interactive_Bomb.BP_Interactive_Bomb_C",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Blueprint/Interactive/Level/BP_Interactive_Crystal.BP_Interactive_Crystal_C",
+          "SubPathString": ""
+        }
+      ],
+      "TimeBarMaterialPtr": {
+        "AssetPathName": "/Game/Graphic/HUD/CorruptedLevel/MI_TimeBar.MI_TimeBar",
+        "SubPathString": ""
+      },
+      "ArenaClearedSoundPtr": {
+        "AssetPathName": "/Game/Audio/Sound/Interface/Feedback/SC_Feedback_ArenaCleared.SC_Feedback_ArenaCleared",
+        "SubPathString": ""
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HealthBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CorruptedTimeBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.25"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.16"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Appear",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CorruptedTimeBar_C:Appear_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.23"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "6A763F10-453E8EA9-AA60D58F-6AD71A96",
+          "Name": "WGT_CorruptedTimeBar_C_50",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CorruptedTimeBar_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.0"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "6A763F10-453E8EA9-AA60D58F-6AD71A96",
+          "BindingName": "WGT_CorruptedTimeBar_C_50",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2'",
+              "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.13"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "A9CDF473-4BA13DF1-F29B579E-0830098E"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Fade",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CorruptedTimeBar_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.24"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "B5DA69D9-4E1D40F1-69A5F29F-D6E7F3F1",
+          "Name": "WGT_CorruptedTimeBar_C_49",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CorruptedTimeBar_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.0"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "B5DA69D9-4E1D40F1-69A5F29F-D6E7F3F1",
+          "BindingName": "WGT_CorruptedTimeBar_C_49",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2'",
+              "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.14"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 309001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "E9C9AD74-408B5C77-6D0C7E88-3B8023E3"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.11"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.11"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.12"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.12"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CorruptedTimeBar_C:Appear_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.23"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 60000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.11"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "6A763F10-453E8EA9-AA60D58F-6AD71A96"
+          }
+        ]
+      },
+      "CompiledSignature": "0D35BA64-4968EF03-83C3CCA9-F8020691",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CorruptedTimeBar_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.24"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 309000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.12"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "B5DA69D9-4E1D40F1-69A5F29F-D6E7F3F1"
+          }
+        ]
+      },
+      "CompiledSignature": "E6DA0E7D-43D78EF9-DA8BFDBD-B27257D1",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.13"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.5"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.6"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 60000
+            }
+          }
+        }
+      },
+      "Signature": "5EA7C033-4828CCD8-D4D2A08F-8AF9DC2A"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.14"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.7"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.8"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 309000
+            }
+          }
+        }
+      },
+      "Signature": "FC619C62-4DDAF1EC-CBF182BB-E4677987"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CorruptedTimeBar_C:Appear_INST.Appear'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.3"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.11"
+        }
+      ],
+      "EvaluationFieldGuid": "7C12DA27-40DE44F9-4A0AB5A6-25DB8982",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Appear_INST.Appear.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.11"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 60000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "7C12DA27-40DE44F9-4A0AB5A6-25DB8982"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CorruptedTimeBar_C:Fade_INST.Fade'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.4"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.12"
+        }
+      ],
+      "EvaluationFieldGuid": "8DF70980-4F993E1C-F78AB9B6-1E110A96",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_CorruptedTimeBar_C:Fade_INST.Fade.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.12"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 309000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "8DF70980-4F993E1C-F78AB9B6-1E110A96"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CorruptedTimeBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.25"
+    },
+    "Properties": {
+      "WidthOverride": 1627.0,
+      "HeightOverride": 80.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.19"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_CorruptedTimeBar_C:WidgetTree.SizeBox_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.15"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_CorruptedTimeBar_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.15"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CorruptedTimeBar_C:WidgetTree.Image_HealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.2"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CorruptedTimeBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.25"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.19"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.18"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.17"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.17"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_CorruptedTimeBar_C:WidgetTree.Text_Timer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.22"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.17"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.17"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_CorruptedTimeBar_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.17"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 30.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.17"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_CorruptedTimeBar_C:WidgetTree.Text_Range'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.21"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Range",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CorruptedTimeBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.25"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "9F4A8EF840FAA028B144B3B38A4862EC",
+        "SourceString": "500m",
+        "LocalizedString": "500m"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 44
+      },
+      "ShadowOffset": {
+        "X": 1.5,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.20"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -220.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Timer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CorruptedTimeBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.25"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "00:00"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 44
+      },
+      "ShadowOffset": {
+        "X": 1.5,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.18"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Appear_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CorruptedTimeBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_CorruptedTimeBar_C:Appear_INST.Appear'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.3"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_CorruptedTimeBar_C_50",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "6A763F10-453E8EA9-AA60D58F-6AD71A96",
+          "bIsRootWidget": true
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_CorruptedTimeBar_C:Appear_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.9"
+      },
+      "Signature": "0D35BA64-4968EF03-83C3CCA9-F8020691"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Fade_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CorruptedTimeBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_CorruptedTimeBar_C:Fade_INST.Fade'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.4"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_CorruptedTimeBar_C_49",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "B5DA69D9-4E1D40F1-69A5F29F-D6E7F3F1",
+          "bIsRootWidget": true
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_CorruptedTimeBar_C:Fade_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.10"
+      },
+      "Signature": "E6DA0E7D-43D78EF9-DA8BFDBD-B27257D1"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CorruptedTimeBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "VerticalBox'WGT_CorruptedTimeBar_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Corrupted/WGT_CorruptedTimeBar.17"
+      }
+    }
+  }
+]

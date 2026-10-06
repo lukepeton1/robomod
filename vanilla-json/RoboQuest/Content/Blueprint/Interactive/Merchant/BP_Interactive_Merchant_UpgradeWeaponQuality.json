@@ -1,0 +1,1842 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_Merchant_UpgradeWeaponQuality",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLevelGenerator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ALevelGenerator'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'LoadObjectFromPathCompletePin__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AsyncWaitingForLevelGeneratorInitialization_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AsyncWaitingForLevelGeneratorInitialization'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInfiniteRun_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Object",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "K2Node_CustomEvent_LoadingTime",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "Temp_int64_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsMaterial_Interface",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AsyncLoadObjectFromPathWithTimer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AsyncLoadObjectFromPathWithTimer'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'LevelGeneratorInitializedCompletePin__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_APlayer",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMainHUDRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Ingame_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/HUD_Ingame.85"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyControlled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_APlayer_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyControlled_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMainHUDRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Ingame_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/HUD_Ingame.85"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_NewWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLocalPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_APlayer_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateCurrentWeapon__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMainHUDRef_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Ingame_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/HUD_Ingame.85"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsPlatformConsole_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateCurrentWeapon_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintFocus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IFocusable:OnBlueprintFocus'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnStartInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Complete_F090035642A8B7027D52D8B5A369AAD0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Complete_FADD6E6049BF6F3E1DD90D975D825BF7",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Object",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "LoadingTime",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsPlatformConsole_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:CanInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CanInteract_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "CallFunc_GetObjectClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "SoftClassProperty",
+        "Name": "CallFunc_Conv_ClassToSoftClassReference_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTicketCost",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetTicketCost'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetUpgradeAffixQualityPrice_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetInteractText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetWeaponName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 64,
+          "Struct": {
+            "ObjectName": "Class'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateMaterialColor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_Add_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_GetValidValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetWeaponColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCustomCost",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetCustomCost'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetErrorText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetErrorText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetErrorText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractSound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetInteractSound'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInteractSound_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetColorParameter",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "InLinearColor",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_Merchant_UpgradeWeaponQuality_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.24"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:ExecuteUbergraph_BP_Interactive_Merchant_UpgradeWeaponQuality'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SetColorParameter'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.16"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetInteractSound'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.15"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetErrorText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.14"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetCustomCost'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.13"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:UpdateMaterialColor'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.12"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.11"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetTicketCost'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.10"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.9"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.8"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.7"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:Complete_FADD6E6049BF6F3E1DD90D975D825BF7'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.6"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:Complete_F090035642A8B7027D52D8B5A369AAD0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.5"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:OnBlueprintFocus'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:DelegateCurrentWeapon_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:ExecuteUbergraph_BP_Interactive_Merchant_UpgradeWeaponQuality'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Widget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ExcludedClasses",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "SoftClassProperty",
+          "Name": "ExcludedClasses",
+          "Flags": "RF_Public",
+          "ElementSize": 48,
+          "PropertyClass": {
+            "ObjectName": "Class'Class'",
+            "ObjectPath": "/Script/CoreUObject"
+          },
+          "MetaClass": {
+            "ObjectName": "Class'AWeapon'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DynamicMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InitLavaLampMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bInfiniteRun",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_Merchant_UpgradeWeaponQuality": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:ExecuteUbergraph_BP_Interactive_Merchant_UpgradeWeaponQuality'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.1"
+      },
+      "DelegateCurrentWeapon_Event_0": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:DelegateCurrentWeapon_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.2"
+      },
+      "OnBlueprintFocus": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:OnBlueprintFocus'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.3"
+      },
+      "OnStartInteract": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.4"
+      },
+      "Complete_F090035642A8B7027D52D8B5A369AAD0": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:Complete_F090035642A8B7027D52D8B5A369AAD0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.5"
+      },
+      "Complete_FADD6E6049BF6F3E1DD90D975D825BF7": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:Complete_FADD6E6049BF6F3E1DD90D975D825BF7'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.6"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.7"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.8"
+      },
+      "CanInteract": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.9"
+      },
+      "GetTicketCost": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetTicketCost'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.10"
+      },
+      "GetInteractText": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.11"
+      },
+      "UpdateMaterialColor": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:UpdateMaterialColor'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.12"
+      },
+      "GetCustomCost": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetCustomCost'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.13"
+      },
+      "GetErrorText": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetErrorText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.14"
+      },
+      "GetInteractSound": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:GetInteractSound'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.15"
+      },
+      "SetColorParameter": {
+        "ObjectName": "Function'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SetColorParameter'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.16"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_Merchant_UpgradeWeaponQuality_C'Default__BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.18"
+    }
+  },
+  {
+    "Type": "BP_Interactive_Merchant_UpgradeWeaponQuality_C",
+    "Name": "Default__BP_Interactive_Merchant_UpgradeWeaponQuality_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+    "Package": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ExcludedClasses": [
+        {
+          "AssetPathName": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.BP_HandGun_C",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Blueprint/Weapon/Prefab/BP_Shovel.BP_Shovel_C",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Blueprint/Weapon/Prefab/BP_BuddyBot.BP_BuddyBot_C",
+          "SubPathString": ""
+        }
+      ],
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Merchant_UpgradeWeaponQuality_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.19"
+      },
+      "InteractTime": 0.3,
+      "ChannelingSound": {
+        "ObjectName": "SoundCue'SC_NPC_WillyWonder_Channel'",
+        "ObjectPath": "/Game/Audio/Sound/Interactive/NPC/SC_NPC_WillyWonder_Channel.0"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": null
+      },
+      "InteractText": {
+        "TableId": "/Game/Data/StringTable/DST_Interactive.DST_Interactive",
+        "Key": "upgradeWeaponQuality",
+        "SourceString": "Upgrade {targetWeapon} Quality",
+        "LocalizedString": "Upgrade {targetWeapon} Quality"
+      },
+      "ErrorText": {
+        "TableId": "/Game/Data/StringTable/DST_Interactive.DST_Interactive",
+        "Key": "weaponAlreadyMaxQuality",
+        "SourceString": "This beauty's perfect already!",
+        "LocalizedString": "This beauty's perfect already!"
+      },
+      "InteractState": "EInteractState::Nothing",
+      "CustomCostType": "ECustomCost::CrystalPowder",
+      "InteractSound": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/NPC/SC_NPC_WillyWonder_Interact.SC_NPC_WillyWonder_Interact",
+        "SubPathString": ""
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Merchant_UpgradeWeaponQuality_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.19"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Merchant_UpgradeWeaponQuality_C'Default__BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.18"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 130.0,
+        "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_Merchant_UpgradeWeaponQuality_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.20"
+      },
+      "VariableGuid": "31C462D7-4A1C7019-6676139B-13DB018C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactive_Merchant_UpgradeWeaponQuality_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.25"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "AECC490D-46BA56D6-40C4E1B0-3B97A1A1",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BP_Interactive_Merchant_UpgradeWeaponQuality_C:Widget_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.26"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2606EF44-4675701D-4604F68C-7EC32697",
+      "InternalVariableName": "Widget"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.23"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.23"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_Merchant_UpgradeWeaponQuality_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.21"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Shop_Perfumer_Interactible02'",
+        "ObjectPath": "/Game/Graphic/Interactive/Merchant/Mesh/SM_Shop_Perfumer_Interactible02.2"
+      },
+      "OverrideMaterials": [
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Perfumer_06_LavaLamp_Simple'",
+          "ObjectPath": "/Game/Graphic/VFX/Interactive/Characters/Perfumer/TMM/MI_Perfumer_06_LavaLamp_Simple.0"
+        }
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "AllyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnvironmentCheck",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "WeaponMesh",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "EnemyPawn",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TrapScale",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyPawnProjectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "LedgeGrab",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -100.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeaponQuality_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeaponQuality.17"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Merchant_UpgradeAffixQuality_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeAffixQuality.3"
+      },
+      "DrawSize": {
+        "X": 1000,
+        "Y": 1000
+      },
+      "bDrawAtDesiredSize": true,
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": -320.2853,
+        "Y": 31.706387,
+        "Z": 238.53568
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -13.663064,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.025,
+        "Y": 0.024999999,
+        "Z": 0.024999999
+      }
+    }
+  }
+]

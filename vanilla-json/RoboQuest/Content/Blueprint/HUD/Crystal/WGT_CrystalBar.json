@@ -1,0 +1,576 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CrystalBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CrystalBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.14"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_CrystalBar_C:Fade_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.13"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CrystalBarWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_Crystals",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CrystalBar_C'Default__WGT_CrystalBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.1"
+    }
+  },
+  {
+    "Type": "WGT_CrystalBar_C",
+    "Name": "Default__WGT_CrystalBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.WGT_CrystalBar_C'",
+    "Package": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar",
+    "Properties": {
+      "CrystalWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Crystal_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_Crystal.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_Crystals",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrystalBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.14"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrystalBar_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.12"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -12.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_CrystalBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrystalBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.14"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1870.0,
+          "Y": 105.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.65,
+            "Hex": "A6FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_QuestBar_01'",
+          "ObjectPath": "/Game/Graphic/HUD/Quest/T_QuestBar_01.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrystalBar_C:WidgetTree.Overlay_0.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.11"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Fade",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CrystalBar_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.13"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "DE4CC264-4E0D8C26-76626EA9-C5C43DE8",
+          "Name": "WGT_QuestBar_C_6",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestBar_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Quest/WGT_QuestBar.7"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "DE4CC264-4E0D8C26-76626EA9-C5C43DE8",
+          "BindingName": "WGT_QuestBar_C_6",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.9"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "8CBDD868-4ACC5755-D5FE02B8-9F93BA94"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.8"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.8"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CrystalBar_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.13"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 60000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.8"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "DE4CC264-4E0D8C26-76626EA9-C5C43DE8"
+          }
+        ]
+      },
+      "CompiledSignature": "1B3DA3BE-4B228E7B-4DBAD4A0-39847996",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.9"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.5"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.6"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 60000
+            }
+          }
+        }
+      },
+      "Signature": "D6DA77DF-4BCA475F-B09E6F8C-7E3299C0"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CrystalBar_C:Fade_INST.Fade'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.4"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.8"
+        }
+      ],
+      "EvaluationFieldGuid": "F81B4D4E-4081F148-7DAB5FA0-D72F3077",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_CrystalBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.8"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 60000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F81B4D4E-4081F148-7DAB5FA0-D72F3077"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrystalBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.14"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_CrystalBar_C:WidgetTree.Overlay_0.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.11"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrystalBar_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrystalBar_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrystalBar_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CrystalBar_C:WidgetTree.Image_CrystalBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.3"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrystalBar_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrystalBar_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.10"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_CrystalBar_C:WidgetTree.HBox_Crystals'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.2"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Fade_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CrystalBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_CrystalBar_C:Fade_INST.Fade'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.4"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_QuestBar_C_6",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "DE4CC264-4E0D8C26-76626EA9-C5C43DE8",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "Fade",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_CrystalBar_C:Fade_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.7"
+      },
+      "Signature": "1B3DA3BE-4B228E7B-4DBAD4A0-39847996"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CrystalBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_CrystalBar_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crystal/WGT_CrystalBar.10"
+      }
+    }
+  }
+]

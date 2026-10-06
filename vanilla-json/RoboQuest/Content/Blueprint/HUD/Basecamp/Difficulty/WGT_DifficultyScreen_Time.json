@@ -1,0 +1,636 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_DifficultyScreen_Time",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_Time_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateSetNewDifficulty__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_DifficultyRow",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "Class'DifficultyRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInitialized",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_Time_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:OnInitialized'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetBestTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_Time_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Seconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetTimeAsText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetNewDifficulty",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_Time_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "DifficultyRowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Difficulty",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'DifficultyRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCompletionOfDifficulty_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'DifficultyCompletion'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_DifficultyScreen_Time_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_DifficultyScreen_Time_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.17"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:ExecuteUbergraph_WGT_DifficultyScreen_Time'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:SetNewDifficulty'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.3"
+      },
+      {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:SetBestTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.2"
+      },
+      {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:OnInitialized'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.1"
+      },
+      {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:ExecuteUbergraph_WGT_DifficultyScreen_Time'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Title",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_DifficultyScreen_Time": {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:ExecuteUbergraph_WGT_DifficultyScreen_Time'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.0"
+      },
+      "OnInitialized": {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:OnInitialized'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.1"
+      },
+      "SetBestTime": {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:SetBestTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.2"
+      },
+      "SetNewDifficulty": {
+        "ObjectName": "Function'WGT_DifficultyScreen_Time_C:SetNewDifficulty'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_DifficultyScreen_Time_C'Default__WGT_DifficultyScreen_Time_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.5"
+    }
+  },
+  {
+    "Type": "WGT_DifficultyScreen_Time_C",
+    "Name": "Default__WGT_DifficultyScreen_Time_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.WGT_DifficultyScreen_Time_C'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_41",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DifficultyScreen_Time_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.17"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_DifficultyScreen_Time_C:WidgetTree.Overlay_41.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.SizeBox_12.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.11"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_DifficultyScreen_Time_C:WidgetTree.Overlay_41'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_DifficultyScreen_Time_C:WidgetTree.Overlay_41'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.6"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_DifficultyScreen_Time_C:WidgetTree.ScaleBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.8"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DifficultyScreen_Time_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.17"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_DifficultyScreen_Time_C:WidgetTree.Overlay_41.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.7"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_DifficultyScreen_Time_C:WidgetTree.ScaleBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_DifficultyScreen_Time_C:WidgetTree.ScaleBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.8"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.12"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DifficultyScreen_Time_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.17"
+    },
+    "Properties": {
+      "WidthOverride": 160.0,
+      "HeightOverride": 230.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.SizeBox_12.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_DifficultyScreen_Time_C:WidgetTree.SizeBox_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.10"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_DifficultyScreen_Time_C:WidgetTree.SizeBox_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.10"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_DifficultyScreen_Time_C:WidgetTree.Overlay_41'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_85",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DifficultyScreen_Time_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.17"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.13"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.12"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_DifficultyScreen_Time_C:WidgetTree.Text_Title'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.16"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.12"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_DifficultyScreen_Time_C:WidgetTree.Text_Time'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.15"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Time",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DifficultyScreen_Time_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.17"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "1:00:23.165"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "Size": 34
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.14"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Title",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DifficultyScreen_Time_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.17"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Compendium.DST_Compendium",
+        "Key": "globalStat_bestTime",
+        "SourceString": "Best Time",
+        "LocalizedString": "Best Time"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "Size": 24
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_DifficultyScreen_Time_C:WidgetTree.VerticalBox_85.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.13"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_Time_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WGT_DifficultyScreen_Time_C:WidgetTree.SizeBox_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.10"
+      }
+    }
+  }
+]

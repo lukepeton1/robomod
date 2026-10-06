@@ -1,0 +1,2132 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_Mutator_TimeLimit",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'WidgetAnimationResult__DelegateSignature'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:OnUpdateGameTime__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateOnEnterBossSafeZone__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateOnMutatorTimeLimitationElapsed__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:GameTimePaused__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreatePlayAnimationTimeRangeProxyObject_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreatePlayAnimationTimeRangeProxyObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimationPlayCallbackProxy'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bForce",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "UObjectWrapper",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_GameTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_SyncDelayInMs",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bNewPaused",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnGameTimePaused_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bNewPaused",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnMutatorTimeLimitationElapsed_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "SyncDelayInMs",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnEnterBossSafeZone_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUpdateGameTime_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "GameTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Show",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bForce",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | UObjectWrapper",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Hide",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Finished_5159FEF24E7A671EC2A94394DF16CE22",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateTimeProgressBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLevelGeneratorRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ALevelGenerator'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCurrentLevelDuration_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetLevelTimeRatioRemaining_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Reset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPauseState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsPaused",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Temp_softobject_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Temp_softobject_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetAlertState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Mutator_TimeLimit_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_Mutator_TimeLimit_C:Fade_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.42"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_Mutator_TimeLimit_C:Bump_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.41"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:ExecuteUbergraph_WGT_Mutator_TimeLimit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MutatorTimeLimitBarWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:SetAlertState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.13"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:SetPauseState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.12"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Reset'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.11"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:UpdateTimeProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.10"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Finished_5159FEF24E7A671EC2A94394DF16CE22'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.9"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.8"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.7"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Hide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.6"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Show'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.5"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:OnUpdateGameTime_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.4"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:DelegateOnEnterBossSafeZone_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.3"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:DelegateOnMutatorTimeLimitationElapsed_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.2"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:OnGameTimePaused_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.1"
+      },
+      {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:ExecuteUbergraph_WGT_Mutator_TimeLimit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Bump",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fade",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "BaseColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AlertColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PauseColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bTimeElapsed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_Mutator_TimeLimit": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:ExecuteUbergraph_WGT_Mutator_TimeLimit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.0"
+      },
+      "OnGameTimePaused_Event_0": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:OnGameTimePaused_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.1"
+      },
+      "DelegateOnMutatorTimeLimitationElapsed_Event_0": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:DelegateOnMutatorTimeLimitationElapsed_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.2"
+      },
+      "DelegateOnEnterBossSafeZone_Event_0": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:DelegateOnEnterBossSafeZone_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.3"
+      },
+      "OnUpdateGameTime_Event_0": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:OnUpdateGameTime_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.4"
+      },
+      "Show": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Show'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.5"
+      },
+      "Hide": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Hide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.6"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.7"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.8"
+      },
+      "Finished_5159FEF24E7A671EC2A94394DF16CE22": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Finished_5159FEF24E7A671EC2A94394DF16CE22'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.9"
+      },
+      "UpdateTimeProgressBar": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:UpdateTimeProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.10"
+      },
+      "Reset": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:Reset'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.11"
+      },
+      "SetPauseState": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:SetPauseState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.12"
+      },
+      "SetAlertState": {
+        "ObjectName": "Function'WGT_Mutator_TimeLimit_C:SetAlertState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.13"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Mutator_TimeLimit_C'Default__WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.15"
+    }
+  },
+  {
+    "Type": "WGT_Mutator_TimeLimit_C",
+    "Name": "Default__WGT_Mutator_TimeLimit_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.WGT_Mutator_TimeLimit_C'",
+    "Package": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit",
+    "Properties": {
+      "UberGraphFrame": {},
+      "BaseColor": {
+        "R": 0.973445,
+        "G": 0.775822,
+        "B": 0.001214,
+        "A": 1.0,
+        "Hex": "FCE404"
+      },
+      "AlertColor": {
+        "R": 1.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF0000"
+      },
+      "PauseColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFFFFF"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 857.0,
+          "Y": 50.0
+        },
+        "Margin": {
+          "Left": 0.2,
+          "Top": 0.2,
+          "Right": 0.2,
+          "Bottom": 0.2
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Explobar_Background_1'",
+          "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Background_1.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.36"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 865.0,
+          "Y": 102.0
+        },
+        "Margin": {
+          "Left": 0.2,
+          "Top": 0.2,
+          "Right": 0.2,
+          "Bottom": 0.2
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Explobar_Background_2'",
+          "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Background_2.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.973445,
+        "G": 0.775822,
+        "B": 0.001214,
+        "A": 1.0,
+        "Hex": "FCE404"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.35"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 90.0
+        },
+        "Margin": {
+          "Left": 0.2,
+          "Top": 0.2,
+          "Right": 0.2,
+          "Bottom": 0.2
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Explobar_Warning'",
+          "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Warning.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.973445,
+        "G": 0.775822,
+        "B": 0.001214,
+        "A": 1.0,
+        "Hex": "FCE404"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.34"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 120.0,
+          "Y": -14.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Bump",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Mutator_TimeLimit_C:Bump_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.41"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "8D1502D6-49352AEB-E1FF1EB9-392BE3F3",
+          "Name": "Image_Icon",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "8D1502D6-49352AEB-E1FF1EB9-392BE3F3",
+          "BindingName": "Image_Icon",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.22"
+            }
+          ]
+        }
+      ],
+      "SelectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 26999
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -1
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "F4043234-4C26CDED-F7C07CA9-376A94BD"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Fade",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Mutator_TimeLimit_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.42"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "53004C37-4C0EEC2A-34605BB2-C90C999D",
+          "Name": "WGT_Mutator_TimeLimit_C_21",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "53004C37-4C0EEC2A-34605BB2-C90C999D",
+          "BindingName": "WGT_Mutator_TimeLimit_C_21",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.30"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "D7E8AC6F-44F85631-2D282F8B-94789B4F"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.22"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": -1
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": -1
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.23"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.24"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -1
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18000
+            }
+          }
+        }
+      },
+      "Signature": "87EE190A-481E8802-551F2DBD-19ABD6AA"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Mutator_TimeLimit_C:Bump_INST.Bump'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.19"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.21"
+        }
+      ],
+      "EvaluationFieldGuid": "3F52A309-41B02C93-622A8F92-AE52F359",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.21"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": -1
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "3F52A309-41B02C93-622A8F92-AE52F359"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.29"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.29"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Mutator_TimeLimit_C:Bump_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.41"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": -1
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 18000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_Mutator_TimeLimit_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.21"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "8D1502D6-49352AEB-E1FF1EB9-392BE3F3"
+          }
+        ]
+      },
+      "CompiledSignature": "E7448991-4858ED45-6E305EA3-E95E313D",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Mutator_TimeLimit_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.42"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 60000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.29"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "53004C37-4C0EEC2A-34605BB2-C90C999D"
+          }
+        ]
+      },
+      "CompiledSignature": "49163EA4-4BCA345A-5684D89B-B600CF6C",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.30"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.25"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.26"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 60000
+            }
+          }
+        }
+      },
+      "Signature": "4C690824-4C080581-2238F798-E26E30C2"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Mutator_TimeLimit_C:Fade_INST.Fade'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.20"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.29"
+        }
+      ],
+      "EvaluationFieldGuid": "C3D2BFB1-47B0801C-B8558288-D601B6B4",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_Mutator_TimeLimit_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.29"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 60000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C3D2BFB1-47B0801C-B8558288-D601B6B4"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.35"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.33"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.34"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_59",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.36"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.37"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.33"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 15.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.31"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.32"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.31"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Mutator_TimeLimit_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.18"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.31"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Mutator_TimeLimit_C:WidgetTree.Image_Background_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.17"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.32"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.32"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Mutator_TimeLimit_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.16"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.32"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.32"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Mutator_TimeLimit_C:WidgetTree.SizeBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.39"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 837.0,
+            "Y": 27.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Explobar_Bar'",
+            "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Bar.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 837.0,
+            "Y": 27.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Explobar_Bar'",
+            "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Bar.0"
+          }
+        }
+      },
+      "Percent": 1.0,
+      "FillColorAndOpacity": {
+        "R": 0.973445,
+        "G": 0.775822,
+        "B": 0.001214,
+        "A": 1.0,
+        "Hex": "FCE404"
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Mutator_TimeLimit_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.40"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Mutator_TimeLimit_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.43"
+    },
+    "Properties": {
+      "WidthOverride": 837.0,
+      "HeightOverride": 27.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Mutator_TimeLimit_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.40"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_59.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.37"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Mutator_TimeLimit_C:WidgetTree.SizeBox'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.39"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Mutator_TimeLimit_C:WidgetTree.SizeBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.39"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_Mutator_TimeLimit_C:WidgetTree.PBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.38"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Bump_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_Mutator_TimeLimit_C:Bump_INST.Bump'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.19"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Icon",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "8D1502D6-49352AEB-E1FF1EB9-392BE3F3",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Bump",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_Mutator_TimeLimit_C:Bump_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.27"
+      },
+      "Signature": "E7448991-4858ED45-6E305EA3-E95E313D"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Fade_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_Mutator_TimeLimit_C:Fade_INST.Fade'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.20"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_Mutator_TimeLimit_C_21",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "53004C37-4C0EEC2A-34605BB2-C90C999D",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "Fade",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_Mutator_TimeLimit_C:Fade_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.28"
+      },
+      "Signature": "49163EA4-4BCA345A-5684D89B-B600CF6C"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_TimeLimit_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.14"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Mutator_TimeLimit_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_TimeLimit.31"
+      }
+    }
+  }
+]

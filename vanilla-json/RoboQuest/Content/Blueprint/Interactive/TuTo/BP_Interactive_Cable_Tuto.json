@@ -1,0 +1,702 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_Cable_Tuto",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetStatusDuration_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_OnApplyStatus_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IDamageable'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_RotatorToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_OnBumped_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IDamageable'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintDeactivateInteractive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnBlueprintDeactivateInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintActivateInteractive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnBlueprintActivateInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnStartInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_Cable_Tuto_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:ExecuteUbergraph_BP_Interactive_Cable_Tuto'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:OnBlueprintActivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:ExecuteUbergraph_BP_Interactive_Cable_Tuto'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PS_LeverHighlight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_Cable_Tuto": {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:ExecuteUbergraph_BP_Interactive_Cable_Tuto'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.0"
+      },
+      "OnBlueprintDeactivateInteractive": {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.1"
+      },
+      "OnBlueprintActivateInteractive": {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:OnBlueprintActivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.2"
+      },
+      "OnStartInteract": {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.3"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_Cable_Tuto_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_Cable_Tuto_C'Default__BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.6"
+    }
+  },
+  {
+    "Type": "BP_Interactive_Cable_Tuto_C",
+    "Name": "Default__BP_Interactive_Cable_Tuto_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.BP_Interactive_Cable_Tuto_C'",
+    "Package": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Cable_Tuto_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.7"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": null
+      },
+      "InteractText": {
+        "Namespace": "",
+        "Key": "B790028C41C6B52783F2D188961B3377",
+        "SourceString": "Repair",
+        "LocalizedString": "Repair"
+      },
+      "ErrorText": {
+        "CultureInvariantString": null
+      },
+      "InteractState": "EInteractState::Deactivate",
+      "InteractSound": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Unique/SC_BasecampGenerator_Interact.SC_BasecampGenerator_Interact",
+        "SubPathString": ""
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Cable_Tuto_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.7"
+      },
+      "Tags": [
+        "TutoCable"
+      ]
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Cable_Tuto_C'Default__BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.6"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 150.0,
+        "Y": 100.0,
+        "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_Generator_Broken_01_Loop'",
+        "ObjectPath": "/Game/Graphic/VFX/Environement/Tutorial/PS_Generator_Broken_01_Loop.64"
+      },
+      "RelativeLocation": {
+        "X": 62.892395,
+        "Y": 131.37968,
+        "Z": 72.37171
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PS_LeverHighlight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_Plunger_Highlight'",
+        "ObjectPath": "/Game/Graphic/Interactive/Button/PS_Plunger_Highlight.30"
+      },
+      "RelativeLocation": {
+        "X": -0.041925,
+        "Y": 0.000993,
+        "Z": -83.614265
+      },
+      "RelativeScale3D": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 0.5
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_Cable_Tuto_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.10"
+      },
+      "VariableGuid": "26BCE99C-484EAD79-6A4A6CB8-3CC0660E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactive_Cable_Tuto_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.16"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5863C66A-4606574E-88178F88-85BA40AA",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_Interactive_Cable_Tuto_C:PS_LeverHighlight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.9"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6C521042-44B0DAC1-CC5AE695-7399A8CB",
+      "InternalVariableName": "PS_LeverHighlight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_Interactive_Cable_Tuto_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.8"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "11225D78-4152EE76-A0FF6D8B-2D7514D3",
+      "InternalVariableName": "ParticleSystem"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_Cable_Tuto_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Cable_Tuto_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Tuto/BP_Interactive_Cable_Tuto.5"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Battery_Big_Lvl01'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/Props/SM_Battery_Big_Lvl01.2"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockOnlySkill",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnvironmentCheck",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Dash",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -100.0
+      }
+    }
+  }
+]

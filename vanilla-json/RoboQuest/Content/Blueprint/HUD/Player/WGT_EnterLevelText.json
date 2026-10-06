@@ -1,0 +1,1737 @@
+[
+  {
+    "Type": "Function",
+    "Name": "DisplayLevelEnterNotify",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_EnterLevelText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "ActName",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_TextToUpper_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HideMe",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_EnterLevelText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.2"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_EnterLevelText_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_EnterLevelText_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.30"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_EnterLevelText_C:Popup_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.29"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_EnterLevelText_C:HideMe'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.1"
+      },
+      {
+        "ObjectName": "Function'WGT_EnterLevelText_C:DisplayLevelEnterNotify'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Popup",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_156",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_ActName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_EnteringCommon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "DisplayLevelEnterNotify": {
+        "ObjectName": "Function'WGT_EnterLevelText_C:DisplayLevelEnterNotify'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.0"
+      },
+      "HideMe": {
+        "ObjectName": "Function'WGT_EnterLevelText_C:HideMe'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_EnterLevelText_C'Default__WGT_EnterLevelText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.3"
+    }
+  },
+  {
+    "Type": "WGT_EnterLevelText_C",
+    "Name": "Default__WGT_EnterLevelText_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/WGT_EnterLevelText.WGT_EnterLevelText_C'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_147",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_EnterLevelText_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.30"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Top",
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'WGT_EnterLevelText_C:WidgetTree.Border_147.BorderSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText.VerticalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.26"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'WGT_EnterLevelText_C:WidgetTree.Border_147'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "Border'WGT_EnterLevelText_C:WidgetTree.Border_147'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.4"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_EnterLevelText_C:WidgetTree.Image_156'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_EnterLevelText_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_EnterLevelText_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_EnterLevelText_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Bottom": 40.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_EnterLevelText_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.6"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.23"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_156",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_EnterLevelText_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.30"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 600.0,
+          "Y": 4.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'WGT_EnterLevelText_C:WidgetTree.Border_147.BorderSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.5"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Popup",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_EnterLevelText_C:Popup_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.29"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "FC9A9CB5-441A0530-ADB403AC-B797E2FE",
+          "Name": "WGT_EnterLevelText_C_12",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_EnterLevelText_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.2"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "2E772A67-46ECD68C-60EC1A8B-7664A5CE",
+          "Name": "Text_ActName",
+          "PossessedObjectClass": {
+            "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "FC9A9CB5-441A0530-ADB403AC-B797E2FE",
+          "BindingName": "WGT_EnterLevelText_C_12",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.22"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.13"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "2E772A67-46ECD68C-60EC1A8B-7664A5CE",
+          "BindingName": "Text_ActName",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.12"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 240001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "940F6FCB-498A6EF5-918EE1AF-6E2DF81B"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.12"
+    },
+    "Properties": {
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 240000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 240000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 36000
+          },
+          {
+            "Value": 51000
+          },
+          {
+            "Value": 66000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -3.517053E-07,
+              "LeaveTangent": -3.517053E-07,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 36000
+          },
+          {
+            "Value": 51000
+          },
+          {
+            "Value": 66000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -3.517053E-07,
+              "LeaveTangent": -3.517053E-07,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 240000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 240000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.14"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.15"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 240000
+            }
+          }
+        }
+      },
+      "Signature": "990D91CE-4F3E0DD1-0AD4699F-52F28EA7"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.13"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 18000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -700.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 150.0,
+            "Tangent": {
+              "ArriveTangent": 0.012870703,
+              "LeaveTangent": 0.012870703,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.16"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.17"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 240000
+            }
+          }
+        }
+      },
+      "Signature": "4A2C5D65-44EAFFF8-B1CDBFB9-B67D72C7"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_EnterLevelText_C:Popup_INST.Popup'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.9"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.10"
+        }
+      ],
+      "EvaluationFieldGuid": "C702E793-4B9F9905-F9461CB1-346E89CB",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.10"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 240000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C702E793-4B9F9905-F9461CB1-346E89CB"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_EnterLevelText_C:Popup_INST.Popup'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.9"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.11"
+        }
+      ],
+      "EvaluationFieldGuid": "453F601C-4EBE4F60-A6B212AD-03EFE7CA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.11"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 240000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "453F601C-4EBE4F60-A6B212AD-03EFE7CA"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.10"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.10"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.11"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.11"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.21"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_EnterLevelText_C:Popup_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.29"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                },
+                {
+                  "StartIndex": 2,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 240000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 240000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 0
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.21"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.11"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.10"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "FC9A9CB5-441A0530-ADB403AC-B797E2FE"
+          },
+          {
+            "ObjectBindingID": "FC9A9CB5-441A0530-ADB403AC-B797E2FE"
+          },
+          {
+            "ObjectBindingID": "2E772A67-46ECD68C-60EC1A8B-7664A5CE"
+          }
+        ]
+      },
+      "CompiledSignature": "640767F3-4B1BAC78-95731D90-A3C87093",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.22"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 180000
+          },
+          {
+            "Value": 240000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.18"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.19"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 240000
+            }
+          }
+        }
+      },
+      "Signature": "84064B7E-43117271-E4D32EA4-0783FDF8"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_EnterLevelText_C:Popup_INST.Popup'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.9"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.21"
+        }
+      ],
+      "EvaluationFieldGuid": "E4E55984-461CBF9A-58F078BE-7E34E069",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_EnterLevelText_C:Popup_INST.Popup.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.21"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 240000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "E4E55984-461CBF9A-58F078BE-7E34E069"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_DiscoveryText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_EnterLevelText_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.24"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.25"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText.VerticalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_EnterLevelText_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.7"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.23"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.23"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_EnterLevelText_C:WidgetTree.Text_EnteringCommon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.28"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.23"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": -10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.23"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_EnterLevelText_C:WidgetTree.Text_ActName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.27"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.23"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.23"
+      },
+      "Content": {
+        "ObjectName": "Border'WGT_EnterLevelText_C:WidgetTree.Border_147'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.4"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_ActName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_EnterLevelText_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.30"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Production Fields"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 3
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 90
+      },
+      "ShadowOffset": {
+        "X": 4.0,
+        "Y": 4.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Margin": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 10.0,
+        "Bottom": 5.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.25"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_EnteringCommon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_EnterLevelText_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.30"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "txt_entering",
+        "SourceString": "entering the",
+        "LocalizedString": "entering the"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 40
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Margin": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 10.0,
+        "Bottom": 5.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_EnterLevelText_C:WidgetTree.VBox_DiscoveryText.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.24"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Popup_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_EnterLevelText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.2"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_EnterLevelText_C:Popup_INST.Popup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.9"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_EnterLevelText_C_12",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "FC9A9CB5-441A0530-ADB403AC-B797E2FE",
+          "bIsRootWidget": true
+        },
+        {
+          "WidgetName": "Text_ActName",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "2E772A67-46ECD68C-60EC1A8B-7664A5CE",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_EnterLevelText_C:Popup_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.20"
+      },
+      "Signature": "640767F3-4B1BAC78-95731D90-A3C87093"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_EnterLevelText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'WGT_EnterLevelText_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_EnterLevelText.6"
+      }
+    }
+  }
+]

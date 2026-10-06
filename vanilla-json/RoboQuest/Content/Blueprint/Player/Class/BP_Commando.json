@@ -1,0 +1,782 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Commando_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Player/Class/BP_Commando",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Commando_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.15"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Commando_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.11"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    }
+  },
+  {
+    "Type": "BP_Commando_C",
+    "Name": "Default__BP_Commando_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Player/Class/BP_Commando.BP_Commando_C'",
+    "Package": "/Game/Blueprint/Player/Class/BP_Commando",
+    "Template": {
+      "ObjectName": "BP_APlayer_C'Default__BP_APlayer_C'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.350"
+    },
+    "Properties": {
+      "JumpDamageType": "EDamageType::Bullet",
+      "JumpDotRatio": 0.0,
+      "ReloadAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Commando_C:ReloadAudioComponent'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.5"
+      },
+      "firstPersonCameraComponent": {
+        "ObjectName": "CameraComponent'Default__BP_Commando_C:firstPersonCamera'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.9"
+      },
+      "cameraPivot": {
+        "ObjectName": "SpringArmComponent'Default__BP_Commando_C:cameraPivot'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.27"
+      },
+      "FPSMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:FPSMesh'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.20"
+      },
+      "SkillMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:SkillMesh'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.23"
+      },
+      "BashMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:BashMesh'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.17"
+      },
+      "SkillMeshTPS": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:SkillMeshTPS'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.24"
+      },
+      "BashMeshTPS": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:BashMeshTPS'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.18"
+      },
+      "MeleeWeaponMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:MeleeWeaponMesh'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.21"
+      },
+      "MeleeWeaponMeshTPS": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:MeleeWeaponMeshTPS'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.22"
+      },
+      "WeaponMeshTPS": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:WeaponMeshTPS'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.25"
+      },
+      "FeetCollision": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Commando_C:FeetCollision'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.28"
+      },
+      "JetpackAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Commando_C:JetpackAudioComponent'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.4"
+      },
+      "RideAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Commando_C:RideAudioComponent'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.6"
+      },
+      "ShieldMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Commando_C:ShieldMesh'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.29"
+      },
+      "SkillManager": {
+        "ObjectName": "ASkillManager'Default__BP_Commando_C:SkillManager'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.2"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.19"
+      },
+      "CharacterMovement": {
+        "ObjectName": "RoboquestMovementComponent'Default__BP_Commando_C:CharMoveComp'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.12"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "ASkillManager",
+    "Name": "SkillManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ASkillManager'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "ASkillManager'Default__BP_APlayer_C:SkillManager'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.351"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "RideWaterAudioComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'BP_APlayer_C:RideWaterAudioComponent_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.352"
+    },
+    "Properties": {
+      "Sound": null,
+      "bAutoActivate": true
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "JetpackAudioComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_APlayer_C:JetpackAudioComponent'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.353"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "ReloadAudioComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_APlayer_C:ReloadAudioComponent'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.354"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "RideAudioComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_APlayer_C:RideAudioComponent'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.355"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "BP_ACompassLocator_C",
+    "Name": "BP_ACompassLocator_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Component/BP_ACompassLocator.BP_ACompassLocator_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    },
+    "Template": {
+      "ObjectName": "BP_ACompassLocator_C'BP_APlayer_C:BP_ACompassLocator_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.358"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "AssetPathName": "None",
+        "SubPathString": ""
+      },
+      "bAutoRegister": true,
+      "MaxVisiblityDistance": 5000
+    }
+  },
+  {
+    "Type": "BP_AMapLocator_C",
+    "Name": "BP_AMapLocator_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Component/BP_AMapLocator.BP_AMapLocator_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    },
+    "Template": {
+      "ObjectName": "BP_AMapLocator_C'BP_APlayer_C:BP_AMapLocator_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.359"
+    },
+    "Properties": {
+      "Icon": null,
+      "OffsetAngle": 0.0,
+      "bAutoRegister": true,
+      "ZOrder": 0
+    }
+  },
+  {
+    "Type": "CameraComponent",
+    "Name": "firstPersonCamera",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CameraComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "CameraComponent'Default__BP_APlayer_C:firstPersonCamera'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.361"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_APlayer_C:CollisionCylinder'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.362"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'AudioComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "AudioComponent'BP_Commando_C:RideWaterAudioComponent_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+              "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+            },
+            "SCSVariableName": "RideWaterAudioComponent",
+            "AssociatedGuid": "C7094D01-41AEF6CC-4F408DAD-AE912B9C"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_AMapLocator_C'",
+            "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.0"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_AMapLocator_C'BP_Commando_C:BP_AMapLocator_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+              "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+            },
+            "SCSVariableName": "BP_AMapLocator",
+            "AssociatedGuid": "2D91613D-4C287354-6963D496-8889C67D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_ACompassLocator_C'",
+            "ObjectPath": "/Game/Blueprint/Component/BP_ACompassLocator.0"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_ACompassLocator_C'BP_Commando_C:BP_ACompassLocator_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+              "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+            },
+            "SCSVariableName": "BP_ACompassLocator",
+            "AssociatedGuid": "0FEE78D1-4870A4DE-2D839B9F-8C826F38"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkeletalMeshComponent'BP_Commando_C:SK_FPS_MeleeWeapon_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+              "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+            },
+            "SCSVariableName": "SK_FPS_MeleeWeapon",
+            "AssociatedGuid": "622114E3-42F3377D-C1F275BE-C0FC8E92"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SpringArmComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SpringArmComponent'BP_Commando_C:SpringArm_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.26"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+              "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+            },
+            "SCSVariableName": "SpringArm",
+            "AssociatedGuid": "63577BA7-4FB575B1-18DB36A7-8E22AFF9"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RoboquestMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RoboquestMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "RoboquestMovementComponent'Default__BP_APlayer_C:CharMoveComp'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.373"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Commando_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Commando_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.13"
+      },
+      "VariableGuid": "6D16130A-4712DE1E-8923D8B7-2222ED4D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Commando_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.14"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SK_FPS_MeleeWeapon_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'BP_APlayer_C:SK_FPS_MeleeWeapon_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.394"
+    },
+    "Properties": {
+      "bReceivesDecals": true,
+      "CastShadow": true,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "bHiddenInGame": false
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "BashMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:BashMesh'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.395"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "BashMeshTPS",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:BashMeshTPS'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.396"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:CharacterMesh0'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.397"
+    },
+    "Properties": {
+      "AnimationData": {
+        "SavedPosition": 0.7083333
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "FPSMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:FPSMesh'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.398"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SpringArmComponent'Default__BP_Commando_C:cameraPivot'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.27"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "MeleeWeaponMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:MeleeWeaponMesh'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.399"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "MeleeWeaponMeshTPS",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:MeleeWeaponMeshTPS'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.400"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkillMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:SkillMesh'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.401"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkillMeshTPS",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:SkillMeshTPS'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.402"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "WeaponMeshTPS",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_APlayer_C:WeaponMeshTPS'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.403"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Commando_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.19"
+      }
+    }
+  },
+  {
+    "Type": "SpringArmComponent",
+    "Name": "SpringArm_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SpringArmComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.0"
+    },
+    "Template": {
+      "ObjectName": "SpringArmComponent'BP_APlayer_C:SpringArm_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.406"
+    },
+    "Properties": {
+      "TargetArmLength": 300.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SpringArmComponent",
+    "Name": "cameraPivot",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpringArmComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "SpringArmComponent'Default__BP_APlayer_C:cameraPivot'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.408"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "FeetCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_APlayer_C:FeetCollision'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.411"
+    },
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+              "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+            },
+            "FunctionName": "OnFeetCollisionBeginOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ShieldMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Commando_C'Default__BP_Commando_C'",
+      "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.1"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_APlayer_C:ShieldMesh'",
+      "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.412"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Commando_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprint/Player/Class/BP_Commando.10"
+      }
+    }
+  }
+]

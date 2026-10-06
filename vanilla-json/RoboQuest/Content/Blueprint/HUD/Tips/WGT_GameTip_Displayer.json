@@ -1,0 +1,387 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_GameTip_Displayer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Displayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameState_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameStateBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAGame_State",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_OnBlueprintGetRandomGameTip_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "Class'GameTip'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Entry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Entry.4"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChild_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartDisplayTips",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Displayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopDisplayTips",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Displayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DisplayNextTips",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Displayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Displayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_GameTip_Displayer_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_GameTip_Displayer_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:ExecuteUbergraph_WGT_GameTip_Displayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.4"
+      },
+      {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:DisplayNextTips'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.3"
+      },
+      {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:StopDisplayTips'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.2"
+      },
+      {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:StartDisplayTips'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.1"
+      },
+      {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:ExecuteUbergraph_WGT_GameTip_Displayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_111",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "DelayBetweenTips",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentGameTip",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Entry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Entry.4"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TimerDisplayTips",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_GameTip_Displayer": {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:ExecuteUbergraph_WGT_GameTip_Displayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.0"
+      },
+      "StartDisplayTips": {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:StartDisplayTips'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.1"
+      },
+      "StopDisplayTips": {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:StopDisplayTips'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.2"
+      },
+      "DisplayNextTips": {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:DisplayNextTips'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.3"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_GameTip_Displayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_GameTip_Displayer_C'Default__WGT_GameTip_Displayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.6"
+    }
+  },
+  {
+    "Type": "WGT_GameTip_Displayer_C",
+    "Name": "Default__WGT_GameTip_Displayer_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.WGT_GameTip_Displayer_C'",
+    "Package": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer",
+    "Properties": {
+      "UberGraphFrame": {},
+      "TimerDisplayTips": {
+        "Handle": 0
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_111",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_GameTip_Displayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.8"
+    },
+    "Properties": {
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GameTip_Displayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.5"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_GameTip_Displayer_C:WidgetTree.Overlay_111'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tips/WGT_GameTip_Displayer.7"
+      }
+    }
+  }
+]

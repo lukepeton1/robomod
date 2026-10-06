@@ -1,0 +1,331 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Beetle_DestructPlate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Beetle_DestructPlate_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAICharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_AI'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Beetle",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Beetle_C'",
+          "ObjectPath": "/Game/Blueprint/Enemy/Boss/BP_Beetle.41"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateOnTriggerEndResult__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_RQHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 256,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQHitResult'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Projectile",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AProjectile'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Beetle_DestructPlate_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ActorComponent:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnTriggerEndResult_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Beetle_DestructPlate_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RQHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 256,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQHitResult'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Projectile",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AProjectile'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetForwardVector",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Beetle_DestructPlate_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ASkill:GetForwardVector'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAICharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_AI'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetMuzzleLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_RotatorToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Normal_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Beetle_DestructPlate_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:ExecuteUbergraph_BP_Beetle_DestructPlate'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AEnemySkill'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:GetForwardVector'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.3"
+      },
+      {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:DelegateOnTriggerEndResult_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.2"
+      },
+      {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.1"
+      },
+      {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:ExecuteUbergraph_BP_Beetle_DestructPlate'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Beetle_DestructPlate": {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:ExecuteUbergraph_BP_Beetle_DestructPlate'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.1"
+      },
+      "DelegateOnTriggerEndResult_Event_0": {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:DelegateOnTriggerEndResult_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.2"
+      },
+      "GetForwardVector": {
+        "ObjectName": "Function'BP_Beetle_DestructPlate_C:GetForwardVector'",
+        "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Beetle_DestructPlate_C'Default__BP_Beetle_DestructPlate_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.5"
+    }
+  },
+  {
+    "Type": "BP_Beetle_DestructPlate_C",
+    "Name": "Default__BP_Beetle_DestructPlate_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate.BP_Beetle_DestructPlate_C'",
+    "Package": "/Game/Blueprint/Skill/Enemy/BP_Beetle_DestructPlate",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bIsIgnoredByBarrier": true
+    }
+  }
+]

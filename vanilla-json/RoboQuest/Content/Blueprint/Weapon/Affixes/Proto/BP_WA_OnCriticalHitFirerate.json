@@ -1,0 +1,354 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WA_OnCriticalHitFirerate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_OnCriticalHitFirerate_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EModifierStatType'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_MakeLiteralByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_MakeLiteralByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AWeapon:DelegateOnDealDamage__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Modifier_Stat'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemoveBonus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_OnCriticalHitFirerate_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDealDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_OnCriticalHitFirerate_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemove",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_OnCriticalHitFirerate_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.5"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnRemove'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.7"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_OnCriticalHitFirerate_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.5"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnApply'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.6"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WA_OnCriticalHitFirerate_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:ExecuteUbergraph_BP_WA_OnCriticalHitFirerate'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.4"
+      },
+      {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.3"
+      },
+      {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnDealDamage'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.2"
+      },
+      {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnRemoveBonus'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.1"
+      },
+      {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:ExecuteUbergraph_BP_WA_OnCriticalHitFirerate'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FirerateModifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Modifier_Stat'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bApply",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WA_OnCriticalHitFirerate": {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:ExecuteUbergraph_BP_WA_OnCriticalHitFirerate'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.0"
+      },
+      "OnRemoveBonus": {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnRemoveBonus'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.1"
+      },
+      "OnDealDamage": {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnDealDamage'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.2"
+      },
+      "OnRemove": {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.3"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_WA_OnCriticalHitFirerate_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WA_OnCriticalHitFirerate_C'Default__BP_WA_OnCriticalHitFirerate_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.6"
+    }
+  },
+  {
+    "Type": "BP_WA_OnCriticalHitFirerate_C",
+    "Name": "Default__BP_WA_OnCriticalHitFirerate_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate.BP_WA_OnCriticalHitFirerate_C'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Proto/BP_WA_OnCriticalHitFirerate",
+    "Template": {
+      "ObjectName": "BP_AWeaponAffix_OnHitHitEffect_C'Default__BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.9"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timer": {
+        "Handle": 0
+      }
+    }
+  }
+]

@@ -1,0 +1,386 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WA_FirerateOnKill",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EModifierStatType'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_MakeLiteralByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_MakeLiteralByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_InvalidateTimerHandle_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Modifier_Stat'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.7"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_C:OnTriggerEffect'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemove",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.7"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_C:OnRemove'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.2"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RemoveModifier",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ApplyModifier",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.7"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_C:OnApply'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.4"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WA_FirerateOnKill_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnKillEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.5"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:ExecuteUbergraph_BP_WA_FirerateOnKill'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.6"
+      },
+      {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.5"
+      },
+      {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:ApplyModifier'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.4"
+      },
+      {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:RemoveModifier'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.3"
+      },
+      {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.2"
+      },
+      {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:OnTriggerEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.1"
+      },
+      {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:ExecuteUbergraph_BP_WA_FirerateOnKill'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TimerOnKill",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsApply",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FirerateModifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Modifier_Stat'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WA_FirerateOnKill": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:ExecuteUbergraph_BP_WA_FirerateOnKill'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.0"
+      },
+      "OnTriggerEffect": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:OnTriggerEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.1"
+      },
+      "OnRemove": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.2"
+      },
+      "RemoveModifier": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:RemoveModifier'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.3"
+      },
+      "ApplyModifier": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:ApplyModifier'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.4"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.5"
+      },
+      "CustomEvent_0": {
+        "ObjectName": "Function'BP_WA_FirerateOnKill_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.6"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WA_FirerateOnKill_C'Default__BP_WA_FirerateOnKill_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.8"
+    }
+  },
+  {
+    "Type": "BP_WA_FirerateOnKill_C",
+    "Name": "Default__BP_WA_FirerateOnKill_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill.BP_WA_FirerateOnKill_C'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Prefab/BP_WA_FirerateOnKill",
+    "Template": {
+      "ObjectName": "BP_AWeaponAffix_OnKillEffect_C'Default__BP_AWeaponAffix_OnKillEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.6"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "TimerOnKill": {
+        "Handle": 0
+      },
+      "Luck": 0,
+      "IncreaseLuckByFail": 0.0
+    }
+  }
+]

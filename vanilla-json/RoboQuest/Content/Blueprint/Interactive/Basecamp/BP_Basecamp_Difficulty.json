@@ -1,0 +1,595 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Basecamp_Difficulty",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_DifficultyRow",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "Class'DifficultyRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateSetNewDifficulty__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetNewDifficulty",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "DifficultyRowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Difficulty",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'DifficultyRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAGame_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCompletionOfDifficulty_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'DifficultyCompletion'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SelectFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Basecamp_Difficulty_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Basecamp_Difficulty_C:ExecuteUbergraph_BP_Basecamp_Difficulty'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ABasecampActor'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Basecamp_Difficulty_C:SetNewDifficulty'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.2"
+      },
+      {
+        "ObjectName": "Function'BP_Basecamp_Difficulty_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.1"
+      },
+      {
+        "ObjectName": "Function'BP_Basecamp_Difficulty_C:ExecuteUbergraph_BP_Basecamp_Difficulty'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Widget_Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Widget_Rank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Widget_Difficulty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Basecamp_CrystalScreen_Lvl01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Basecamp_Difficulty": {
+        "ObjectName": "Function'BP_Basecamp_Difficulty_C:ExecuteUbergraph_BP_Basecamp_Difficulty'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Basecamp_Difficulty_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.1"
+      },
+      "SetNewDifficulty": {
+        "ObjectName": "Function'BP_Basecamp_Difficulty_C:SetNewDifficulty'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Basecamp_Difficulty_C'Default__BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.4"
+    }
+  },
+  {
+    "Type": "BP_Basecamp_Difficulty_C",
+    "Name": "Default__BP_Basecamp_Difficulty_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.BP_Basecamp_Difficulty_C'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty",
+    "Properties": {
+      "UberGraphFrame": {},
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": true
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Basecamp_Difficulty_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.5"
+      },
+      "VariableGuid": "2A9CA66C-42AA8B32-F213B594-822171DC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BP_Basecamp_Difficulty_C:Widget_Time_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.15"
+      },
+      "VariableGuid": "DFB1FE5A-45DF6260-70D884A1-631E7BE6",
+      "InternalVariableName": "Widget_Time"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BP_Basecamp_Difficulty_C:Widget_Difficulty_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.13"
+      },
+      "VariableGuid": "B82A86D5-4F6FC560-E9560496-E33C48F8",
+      "InternalVariableName": "Widget_Difficulty"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BP_Basecamp_Difficulty_C:Widget_Rank_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.14"
+      },
+      "VariableGuid": "E1A629E2-497E5D67-FE71C09D-556A4434",
+      "InternalVariableName": "Widget_Rank"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Basecamp_Difficulty_C:SM_Basecamp_CrystalScreen_Lvl01_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.12"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.7"
+        }
+      ],
+      "VariableGuid": "2A8A59BB-4E0B8E95-EF151E84-1FFDA9AB",
+      "InternalVariableName": "SM_Basecamp_CrystalScreen_Lvl01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Basecamp_Difficulty_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Basecamp_CrystalScreen_Lvl01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Basecamp_CrystalScreen_Lvl01'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/Buildings/SM_Basecamp_CrystalScreen_Lvl01.2"
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_Difficulty_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen.4"
+      },
+      "DrawSize": {
+        "X": 1,
+        "Y": 1
+      },
+      "bDrawAtDesiredSize": true,
+      "BlendMode": "EWidgetBlendMode::Transparent",
+      "TickMode": "ETickMode::Automatic",
+      "RelativeLocation": {
+        "X": -41.414272,
+        "Y": 35.67452,
+        "Z": 244.92126
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.07051,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
+      }
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_Rank_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_Rank_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Rank.6"
+      },
+      "DrawSize": {
+        "X": 1,
+        "Y": 1
+      },
+      "bDrawAtDesiredSize": true,
+      "BlendMode": "EWidgetBlendMode::Transparent",
+      "TickMode": "ETickMode::Automatic",
+      "RelativeLocation": {
+        "X": -176.57047,
+        "Y": 46.393333,
+        "Z": 244.69919
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 75.81834,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.1,
+        "Y": 0.1,
+        "Z": 0.1
+      }
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_Time_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_Difficulty_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_Basecamp_Difficulty.3"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DifficultyScreen_Time_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/Difficulty/WGT_DifficultyScreen_Time.4"
+      },
+      "DrawSize": {
+        "X": 1,
+        "Y": 1
+      },
+      "bDrawAtDesiredSize": true,
+      "BlendMode": "EWidgetBlendMode::Transparent",
+      "TickMode": "ETickMode::Automatic",
+      "RelativeLocation": {
+        "X": 104.410995,
+        "Y": 61.47947,
+        "Z": 246.21094
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 115.35412,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
+      }
+    }
+  }
+]

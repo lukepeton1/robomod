@@ -1,0 +1,254 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AWeaponAffix_OnKillEffect_LootHealthPickup",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_AEnemy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AEnemy_C'",
+          "ObjectPath": "/Game/Blueprint/Enemy/BP_AEnemy.64"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetPickupFromPool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetPickupFromPool_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'APickup'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APickup'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.2"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_C:OnTriggerEffect'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnKillEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.5"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C:ExecuteUbergraph_BP_AWeaponAffix_OnKillEffect_LootHealthPickup'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C:OnTriggerEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.1"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C:ExecuteUbergraph_BP_AWeaponAffix_OnKillEffect_LootHealthPickup'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AWeaponAffix_OnKillEffect_LootHealthPickup": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C:ExecuteUbergraph_BP_AWeaponAffix_OnKillEffect_LootHealthPickup'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.0"
+      },
+      "OnTriggerEffect": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C:OnTriggerEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C'Default__BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.3"
+    }
+  },
+  {
+    "Type": "BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C",
+    "Name": "Default__BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup.BP_AWeaponAffix_OnKillEffect_LootHealthPickup_C'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Common/BP_AWeaponAffix_OnKillEffect_LootHealthPickup",
+    "Template": {
+      "ObjectName": "BP_AWeaponAffix_OnKillEffect_C'Default__BP_AWeaponAffix_OnKillEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnKillEffect.6"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

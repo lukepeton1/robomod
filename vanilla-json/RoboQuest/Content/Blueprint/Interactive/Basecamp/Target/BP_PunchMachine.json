@@ -1,0 +1,455 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_PunchMachine",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "CallFunc_GetObjectClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_ClassIsChildOf_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApplyCosmeticDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IDamageable:OnApplyCosmeticDamage'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTargetThreat",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IDamageable:GetTargetThreat'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PunchMachine_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ATarget_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.4"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_PunchMachine_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_PunchMachine_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_PunchMachine_C:ExecuteUbergraph_BP_PunchMachine'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_PunchMachine_C:GetTargetThreat'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.2"
+      },
+      {
+        "ObjectName": "Function'BP_PunchMachine_C:OnApplyCosmeticDamage'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.1"
+      },
+      {
+        "ObjectName": "Function'BP_PunchMachine_C:ExecuteUbergraph_BP_PunchMachine'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Threat",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PunchMachine": {
+        "ObjectName": "Function'BP_PunchMachine_C:ExecuteUbergraph_BP_PunchMachine'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.0"
+      },
+      "OnApplyCosmeticDamage": {
+        "ObjectName": "Function'BP_PunchMachine_C:OnApplyCosmeticDamage'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.1"
+      },
+      "GetTargetThreat": {
+        "ObjectName": "Function'BP_PunchMachine_C:GetTargetThreat'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PunchMachine_C'Default__BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.4"
+    }
+  },
+  {
+    "Type": "BP_PunchMachine_C",
+    "Name": "Default__BP_PunchMachine_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.BP_PunchMachine_C'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine",
+    "Template": {
+      "ObjectName": "BP_ATarget_C'Default__BP_ATarget_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.5"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_PunchMachine_C:CapsuleComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.7"
+      },
+      "TargetMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_PunchMachine_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.13"
+      },
+      "HomingComponent": {
+        "ObjectName": "SceneComponent'Default__BP_PunchMachine_C:HomingComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.10"
+      },
+      "ArrowLeft": {
+        "ObjectName": "ArrowComponent'Default__BP_PunchMachine_C:ArrowLeft'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.5"
+      },
+      "ArrowRight": {
+        "ObjectName": "ArrowComponent'Default__BP_PunchMachine_C:ArrowRight'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.6"
+      },
+      "bCanMove": false,
+      "Health": 0,
+      "ImpactResistance": 0,
+      "CapsuleHalfHeight": 146,
+      "CapsuleRadius": 100,
+      "DeathDuration": 7.0,
+      "Type": "EEnemyType::Pawn",
+      "Score": 4,
+      "UpAndDownSpeed": 420.0,
+      "HitAnimations": [
+        {
+          "ObjectName": "AnimMontage'AM_ShootingRange_Target_Dummy_Hit_01'",
+          "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Dummy/Animation/AM_ShootingRange_Target_Dummy_Hit_01.0"
+        },
+        {
+          "ObjectName": "AnimMontage'AM_ShootingRange_Target_Dummy_Hit_02'",
+          "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Dummy/Animation/AM_ShootingRange_Target_Dummy_Hit_02.0"
+        }
+      ],
+      "CriticalHitAnimations": [
+        {
+          "ObjectName": "AnimMontage'AM_ShootingRange_Target_Dummy_Hit_01'",
+          "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Dummy/Animation/AM_ShootingRange_Target_Dummy_Hit_01.0"
+        },
+        {
+          "ObjectName": "AnimMontage'AM_ShootingRange_Target_Dummy_Hit_02'",
+          "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Dummy/Animation/AM_ShootingRange_Target_Dummy_Hit_02.0"
+        }
+      ],
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_PunchMachine_C:CapsuleComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.7"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowLeft",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_PunchMachine_C'Default__BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.4"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'Default__BP_ATarget_C:ArrowLeft'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_PunchMachine_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.13"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowRight",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_PunchMachine_C'Default__BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.4"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'Default__BP_ATarget_C:ArrowRight'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.7"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_PunchMachine_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.13"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CapsuleComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_PunchMachine_C'Default__BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.4"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_ATarget_C:CapsuleComponent'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.9"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 146.0,
+      "CapsuleRadius": 100.0
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.3"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.3"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "HomingComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_PunchMachine_C'Default__BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.4"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_ATarget_C:HomingComponent'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.11"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_PunchMachine_C:TargetMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.13"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_PunchMachine_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.12"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_PunchMachine_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.9"
+      },
+      "VariableGuid": "B893800D-443AA6FB-60C173BC-EF8F6A2B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.3"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_PunchMachine_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "TargetMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_PunchMachine_C'Default__BP_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.4"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_ATarget_C:TargetMesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_ATarget.15"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_ShootingRange_TargetDummy_C'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Dummy/ABP_ShootingRange_TargetDummy.2"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_ShootingRange_Target_Dummy'",
+        "ObjectPath": "/Game/Graphic/Environment/0_Basecamp/ShootingRange/Target_Dummy/SK_ShootingRange_Target_Dummy.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_PunchMachine_C:CapsuleComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/Target/BP_PunchMachine.7"
+      },
+      "RelativeLocation": {
+        "X": -50.0,
+        "Y": 0.0,
+        "Z": -146.0
+      }
+    }
+  }
+]

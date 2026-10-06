@@ -1,0 +1,231 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetInteractText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Discovery_Weapon_4_Meta_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AChest_C:GetInteractText'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.23"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Discovery_Weapon_4_Meta_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Discovery_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_AWeapon.6"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Discovery_Weapon_4_Meta_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.7"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Discovery_Weapon_4_Meta_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.4"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Discovery_Weapon_4_Meta_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.0"
+      }
+    ],
+    "FuncMap": {
+      "GetInteractText": {
+        "ObjectName": "Function'BP_Discovery_Weapon_4_Meta_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Discovery_Weapon_4_Meta_C'Default__BP_Discovery_Weapon_4_Meta_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.2"
+    }
+  },
+  {
+    "Type": "BP_Discovery_Weapon_4_Meta_C",
+    "Name": "Default__BP_Discovery_Weapon_4_Meta_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.BP_Discovery_Weapon_4_Meta_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta",
+    "Template": {
+      "ObjectName": "BP_Discovery_AWeapon_C'Default__BP_Discovery_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_AWeapon.7"
+    },
+    "Properties": {
+      "bCustomLoot": true,
+      "Amount": 4,
+      "SeedID": "ERandomSeedID::MetaRewards",
+      "BaseMetaRewardModifier": "EWeaponMetaRewardModifier::Starter",
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Discovery_Weapon_4_Meta_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.3"
+      },
+      "RemoteRole": "ROLE_SimulatedProxy",
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Discovery_Weapon_4_Meta_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Discovery_Weapon_4_Meta_C'Default__BP_Discovery_Weapon_4_Meta_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.2"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Discovery_AWeapon_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_AWeapon.8"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Discovery_Weapon_4_Meta_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'WidgetComponent'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "WidgetComponent'BP_Discovery_Weapon_4_Meta_C:Widget_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_ADiscovery_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_ADiscovery.8"
+            },
+            "SCSVariableName": "Widget",
+            "AssociatedGuid": "02C75D6C-4E5E415B-9875FCBF-81A74C3F"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Discovery_Weapon_4_Meta_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Discovery_Weapon_4_Meta_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Discovery_Weapon_4_Meta_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.5"
+      },
+      "VariableGuid": "B8FB94B2-47BF3F45-36AAA6AF-BDE54DAA",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Discovery_Weapon_4_Meta_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.1"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Discovery_Weapon_4_Meta_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Discovery_Weapon_4_Meta_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_Weapon_4_Meta.1"
+    },
+    "Template": {
+      "ObjectName": "WidgetComponent'BP_ADiscovery_C:Widget_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_ADiscovery.17"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 6.1000013E-05,
+        "Y": 0.000134811,
+        "Z": 110.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

@@ -1,0 +1,270 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_HoleSpawner_BoomHack_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AHoleSpawner_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_AHoleSpawner.4"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_HoleSpawner_BoomHack_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_HoleSpawner_BoomHack_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.4"
+      }
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Arrow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'ArrowComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_HoleSpawner_BoomHack_C'Default__BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.1"
+    }
+  },
+  {
+    "Type": "BP_HoleSpawner_BoomHack_C",
+    "Name": "Default__BP_HoleSpawner_BoomHack_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.BP_HoleSpawner_BoomHack_C'",
+    "Package": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack",
+    "Template": {
+      "ObjectName": "BP_AHoleSpawner_C'Default__BP_AHoleSpawner_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_AHoleSpawner.5"
+    },
+    "Properties": {
+      "SceneRoot": {
+        "ObjectName": "SceneComponent'Default__BP_HoleSpawner_BoomHack_C:SceneRoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.6"
+      },
+      "SpawnPoint": {
+        "ObjectName": "SceneComponent'Default__BP_HoleSpawner_BoomHack_C:SpawnPoint'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.7"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_HoleSpawner_BoomHack_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.11"
+      },
+      "LoopSpawnSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_HoleSpawner_BoomHack_C:LoopSpawnSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.3"
+      },
+      "EnemyClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Boomfly_Hack_C'",
+        "ObjectPath": "/Game/Blueprint/Enemy/Fly/BP_Boomfly_Hack.0"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_HoleSpawner_BoomHack_C:SceneRoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.6"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.0"
+    },
+    "Properties": {
+      "ArrowSize": 2.0
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopSpawnSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_HoleSpawner_BoomHack_C'Default__BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.1"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_AHoleSpawner_C:LoopSpawnSoundComponent'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_AHoleSpawner.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_HoleSpawner_BoomHack_C:SceneRoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.6"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_HoleSpawner_BoomHack_C'Default__BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.1"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_AHoleSpawner_C:SceneRoot'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_AHoleSpawner.9"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SpawnPoint",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_HoleSpawner_BoomHack_C'Default__BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.1"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_AHoleSpawner_C:SpawnPoint'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_AHoleSpawner.10"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_HoleSpawner_BoomHack_C:SceneRoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.6"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.00001,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_HoleSpawner_BoomHack_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_HoleSpawner_BoomHack_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.5"
+      },
+      "VariableGuid": "8FE7BDA4-429BA924-875F6480-3800A432",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_HoleSpawner_BoomHack_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ArrowComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ArrowComponent'BP_HoleSpawner_BoomHack_C:Arrow_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.2"
+      },
+      "ParentComponentOrVariableName": "SpawnPoint",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "84113D97-4C991882-B20BAB93-0880F2BB",
+      "InternalVariableName": "Arrow"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_HoleSpawner_BoomHack_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_HoleSpawner_BoomHack_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_HoleSpawner_BoomHack_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_HoleSpawner_BoomHack_C'Default__BP_HoleSpawner_BoomHack_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.1"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_AHoleSpawner_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_AHoleSpawner.14"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_HoleSpawner_BoomHack_C:SceneRoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_HoleSpawner_BoomHack.6"
+      }
+    }
+  }
+]

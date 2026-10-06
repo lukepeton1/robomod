@@ -1,0 +1,692 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Door_Act3",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Set_ToArray_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "CallFunc_Set_ToArray_Result",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsMaterial_Instance_Dynamic",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "UnlockSecretDoor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ADoor:UnlockSecretDoor'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Door_Act3_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ADoor_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.7"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Door_Act3_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Door_Act3_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.9"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Door_Act3_C:ExecuteUbergraph_BP_Door_Act3'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Door_Act3_C:UnlockSecretDoor'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.1"
+      },
+      {
+        "ObjectName": "Function'BP_Door_Act3_C:ExecuteUbergraph_BP_Door_Act3'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Door_Act3": {
+        "ObjectName": "Function'BP_Door_Act3_C:ExecuteUbergraph_BP_Door_Act3'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.0"
+      },
+      "UnlockSecretDoor": {
+        "ObjectName": "Function'BP_Door_Act3_C:UnlockSecretDoor'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    }
+  },
+  {
+    "Type": "BP_Door_Act3_C",
+    "Name": "Default__BP_Door_Act3_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.BP_Door_Act3_C'",
+    "Package": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3",
+    "Template": {
+      "ObjectName": "BP_ADoor_C'Default__BP_ADoor_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.8"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Door_Act3_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.13"
+      },
+      "PathBlocker": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:PathBlocker'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.5"
+      },
+      "TriggerBox1": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:TriggerBox1'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.6"
+      },
+      "TriggerBox2": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:TriggerBox2'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.7"
+      },
+      "OneWayCollision": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act3_C:OneWayCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.16"
+      },
+      "HitBlocker": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act3_C:HitBlocker'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.14"
+      },
+      "HitBlockerBack": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act3_C:HitBlockerBack'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.15"
+      },
+      "UnderConstruction": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act3_C:UnderConstruction'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.18"
+      },
+      "UnderConstructionBack": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act3_C:UnderConstructionBack'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.19"
+      },
+      "StaticMeshBlocker": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Door_Act3_C:StaticMeshBlocker'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.17"
+      },
+      "TutoBox": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:TutoBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.8"
+      },
+      "SecretUnlockMontage": {
+        "ObjectName": "AnimMontage'AM_Door_Act03_Lock_Open'",
+        "ObjectPath": "/Game/Graphic/Interactive/Door/Act_03/Base/AM_Door_Act03_Lock_Open.0"
+      },
+      "LightMaterialIndex": [
+        1
+      ],
+      "ScreenMaterialIndex": [
+        2
+      ],
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_ADoor_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.10"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PathBlocker",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_ADoor_C:PathBlocker'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.11"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -35.315796
+      },
+      "RelativeScale3D": {
+        "X": 1.764883,
+        "Y": 3.6239543,
+        "Z": 1.3849809
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TriggerBox1",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_ADoor_C:TriggerBox1'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.12"
+    },
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+            },
+            "FunctionName": "OnBeginTriggerBoxOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+            },
+            "FunctionName": "OnEndTriggerBoxOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 251.73907,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TriggerBox2",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_ADoor_C:TriggerBox2'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.13"
+    },
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+            },
+            "FunctionName": "OnBeginTriggerBoxOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+            },
+            "FunctionName": "OnEndTriggerBoxOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -203.47751,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TutoBox",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_ADoor_C:TutoBox'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.14"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.2"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_Act3_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.12"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Door_Act3_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.10"
+      },
+      "VariableGuid": "CEC9681D-4427D75E-21D35E9A-07FE627E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.2"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Door_Act3_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_ADoor_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.26"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Door_Act03_C'",
+        "ObjectPath": "/Game/Graphic/Interactive/Door/Act_03/Base/ABP_Door_Act03.10"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Door_Act03'",
+        "ObjectPath": "/Game/Graphic/Interactive/Door/Act_03/Base/SK_Door_Act03.0"
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "HitBlocker",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_ADoor_C:HitBlocker'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.27"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      },
+      "RelativeLocation": {
+        "X": 1.4921357E-13,
+        "Y": -2.5033883E-06,
+        "Z": -7.0
+      },
+      "RelativeScale3D": {
+        "X": 9.5,
+        "Y": 11.875,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "HitBlockerBack",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_ADoor_C:HitBlockerBack'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.28"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -3E-06,
+        "Z": -7.0
+      },
+      "RelativeScale3D": {
+        "X": 9.5,
+        "Y": 11.875,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "OneWayCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_ADoor_C:OneWayCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.29"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      },
+      "RelativeScale3D": {
+        "X": 12.0,
+        "Y": 9.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshBlocker",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_ADoor_C:StaticMeshBlocker'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.30"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "UnderConstruction",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_ADoor_C:UnderConstruction'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.31"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "UnderConstructionBack",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_Act3_C'Default__BP_Door_Act3_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.3"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_ADoor_C:UnderConstructionBack'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Door/BP_ADoor.32"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Door_Act3_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Door/Act3/BP_Door_Act3.4"
+      }
+    }
+  }
+]

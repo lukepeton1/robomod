@@ -1,0 +1,624 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Proj_ReloadThrow",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 148,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeactivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AProjectile:OnDeactivate'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnActivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AProjectile:OnActivate'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Proj_ReloadThrow_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Proj_ReloadThrow_C:ExecuteUbergraph_BP_Proj_ReloadThrow'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerProjectile'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Proj_ReloadThrow_C:OnActivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.2"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ReloadThrow_C:OnDeactivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.1"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ReloadThrow_C:ExecuteUbergraph_BP_Proj_ReloadThrow'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WeaponMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "RotationByType",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "KeyProp": {
+          "Type": "EnumProperty",
+          "Name": "RotationByType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EAnimPose'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        },
+        "ValueProp": {
+          "Type": "StructProperty",
+          "Name": "RotationByType_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 12,
+          "Struct": {
+            "ObjectName": "Class'Rotator'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Proj_ReloadThrow": {
+        "ObjectName": "Function'BP_Proj_ReloadThrow_C:ExecuteUbergraph_BP_Proj_ReloadThrow'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.0"
+      },
+      "OnDeactivate": {
+        "ObjectName": "Function'BP_Proj_ReloadThrow_C:OnDeactivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.1"
+      },
+      "OnActivate": {
+        "ObjectName": "Function'BP_Proj_ReloadThrow_C:OnActivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+    }
+  },
+  {
+    "Type": "BP_Proj_ReloadThrow_C",
+    "Name": "Default__BP_Proj_ReloadThrow_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.BP_Proj_ReloadThrow_C'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow",
+    "Properties": {
+      "UberGraphFrame": {},
+      "RotationByType": null,
+      "CollisionComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ReloadThrow_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.16"
+      },
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Proj_ReloadThrow_C:StaticMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.17"
+      },
+      "ParticleSystemComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_ReloadThrow_C:ParticleSystemComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.6"
+      },
+      "TrailComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_ReloadThrow_C:TrailComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.7"
+      },
+      "TravelSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Proj_ReloadThrow_C:TravelSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.5"
+      },
+      "ProjectileMovement": {
+        "ObjectName": "ProjectileMovementComponent'Default__BP_Proj_ReloadThrow_C:ProjectileComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.8"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ReloadThrow_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.16"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "TravelSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ReloadThrow_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.16"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ReloadThrow_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.16"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "TrailComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ReloadThrow_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.16"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.3"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Proj_ReloadThrow_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.9"
+      },
+      "VariableGuid": "38AF50A9-40648451-D43CBFAD-023CDE8C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BP_Proj_ReloadThrow_C:WeaponMesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.15"
+      },
+      "VariableGuid": "92613887-4E9963F5-84EF8783-CC79978E",
+      "InternalVariableName": "WeaponMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Proj_ReloadThrow_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.10"
+      },
+      "ParentComponentOrVariableName": "CollisionComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.12"
+        }
+      ],
+      "VariableGuid": "18DC8DC0-455A5F4D-F7AAB982-F2B2A4CD",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.3"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Proj_ReloadThrow_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "WeaponMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.3"
+    },
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_HandGun_T00'",
+        "ObjectPath": "/Game/Animation/Weapon/HandGun/SK_HandGun_T00.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 270.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "CollisionComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+    },
+    "Properties": {
+      "OnComponentHit": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+            },
+            "FunctionName": "OnBeginHit"
+          }
+        ]
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ReloadThrow_C'Default__BP_Proj_ReloadThrow_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.4"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ReloadThrow_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ReloadThrow.16"
+      }
+    }
+  }
+]

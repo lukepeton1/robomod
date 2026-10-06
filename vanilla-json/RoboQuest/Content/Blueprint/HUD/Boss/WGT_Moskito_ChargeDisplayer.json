@@ -1,0 +1,700 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_Moskito_ChargeDisplayer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Moskito_ChargeDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsGamePaused_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'ACharacter:DelegateOnDispatchStatus__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Moskito_C:DelegateUpdateCurrentChargeRatio__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprint/Enemy/Boss/BP_Moskito.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Ratio",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsStart",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Moskito_ChargeDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnDispatchStatus_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Moskito_ChargeDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStart",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateUpdateCurrentChargeRatio_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Moskito_ChargeDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Ratio",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Moskito_ChargeDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.5"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Moskito_ChargeDisplayer_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Moskito_ChargeDisplayer_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:ExecuteUbergraph_WGT_Moskito_ChargeDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.4"
+      },
+      {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:DelegateUpdateCurrentChargeRatio_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.3"
+      },
+      {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:DelegateOnDispatchStatus_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.2"
+      },
+      {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.1"
+      },
+      {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:ExecuteUbergraph_WGT_Moskito_ChargeDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MoskitoRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | ExposeOnSpawn",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Moskito_C'",
+          "ObjectPath": "/Game/Blueprint/Enemy/Boss/BP_Moskito.41"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentStatusDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Duration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_Moskito_ChargeDisplayer": {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:ExecuteUbergraph_WGT_Moskito_ChargeDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.0"
+      },
+      "Tick": {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.1"
+      },
+      "DelegateOnDispatchStatus_Event_0": {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:DelegateOnDispatchStatus_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.2"
+      },
+      "DelegateUpdateCurrentChargeRatio_Event_0": {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:DelegateUpdateCurrentChargeRatio_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.3"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_Moskito_ChargeDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Moskito_ChargeDisplayer_C'Default__WGT_Moskito_ChargeDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.6"
+    }
+  },
+  {
+    "Type": "WGT_Moskito_ChargeDisplayer_C",
+    "Name": "Default__WGT_Moskito_ChargeDisplayer_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.WGT_Moskito_ChargeDisplayer_C'",
+    "Package": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": true
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Moskito_ChargeDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.14"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 613.0,
+          "Y": 50.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Explobar_Background_1'",
+          "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Background_1.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Moskito_ChargeDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.14"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.9"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12.OverlaySlot_8'",
+          "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.10"
+        }
+      ],
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 20.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.8"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.7"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.8"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Moskito_ChargeDisplayer_C:WidgetTree.SizeBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.12"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Moskito_ChargeDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.14"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 837.0,
+            "Y": 27.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Explobar_Bar'",
+            "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Bar.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 837.0,
+            "Y": 27.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Explobar_Bar'",
+            "ObjectPath": "/Game/Graphic/HUD/Boss/BillyBoom/T_Explobar_Bar.0"
+          }
+        }
+      },
+      "FillColorAndOpacity": {
+        "R": 0.973445,
+        "G": 0.775822,
+        "B": 0.001214,
+        "A": 1.0,
+        "Hex": "FCE404"
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Moskito_ChargeDisplayer_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Moskito_ChargeDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.14"
+    },
+    "Properties": {
+      "WidthOverride": 600.0,
+      "HeightOverride": 34.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Moskito_ChargeDisplayer_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12.OverlaySlot_8'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.10"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Moskito_ChargeDisplayer_C:WidgetTree.SizeBox'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.12"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Moskito_ChargeDisplayer_C:WidgetTree.SizeBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.12"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_Moskito_ChargeDisplayer_C:WidgetTree.PBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.11"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Moskito_ChargeDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.5"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Moskito_ChargeDisplayer_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Boss/WGT_Moskito_ChargeDisplayer.8"
+      }
+    }
+  }
+]

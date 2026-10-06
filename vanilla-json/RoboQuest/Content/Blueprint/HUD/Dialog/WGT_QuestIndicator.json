@@ -1,0 +1,3244 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_QuestIndicator",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Image_Icon_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Image_Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInEditor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Image_Icon_Event_1",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Image_Icon_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetBubbleVisible",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "NewVisibility",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EUMGSequencePlayMode'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EUMGSequencePlayMode'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EUMGSequencePlayMode'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetAnimationCurrentTime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_BoolBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetQuestIcon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "NewTexture",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValidSoftObjectReference_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Validate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SequenceEvent__ENTRYPOINTWGT_QuestIndicator_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SequenceEvent__ENTRYPOINTWGT_QuestIndicator_1",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_QuestIndicator_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_QuestIndicator_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.55"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:FadeIn_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.49"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:OnValidate_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.51"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:IconUpdate_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.50"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:ExecuteUbergraph_WGT_QuestIndicator'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.8"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.7"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:Validate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.6"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SetQuestIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.5"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SetBubbleVisible'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.4"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:Image_Icon_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.3"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:Image_Icon_Event_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.2"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.1"
+      },
+      {
+        "ObjectName": "Function'WGT_QuestIndicator_C:ExecuteUbergraph_WGT_QuestIndicator'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IconUpdate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OnValidate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FadeIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_DialogBackground",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Indicator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetSwitcher_156",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsVisible",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "ImageValidate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "NewIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_QuestIndicator": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:ExecuteUbergraph_WGT_QuestIndicator'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.0"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.1"
+      },
+      "Image_Icon_Event_1": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:Image_Icon_Event_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.2"
+      },
+      "Image_Icon_Event_0": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:Image_Icon_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.3"
+      },
+      "SetBubbleVisible": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SetBubbleVisible'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.4"
+      },
+      "SetQuestIcon": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SetQuestIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.5"
+      },
+      "Validate": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:Validate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.6"
+      },
+      "SequenceEvent__ENTRYPOINTWGT_QuestIndicator_0": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.7"
+      },
+      "SequenceEvent__ENTRYPOINTWGT_QuestIndicator_1": {
+        "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.8"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_QuestIndicator_C'Default__WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.10"
+    }
+  },
+  {
+    "Type": "WGT_QuestIndicator_C",
+    "Name": "Default__WGT_QuestIndicator_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.WGT_QuestIndicator_C'",
+    "Package": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ImageValidate": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/PNJ/T_Quest_Validate.T_Quest_Validate",
+        "SubPathString": ""
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_DialogBackground",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_QuestIndicator_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.55"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 2110.0,
+          "Y": 1480.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_PNJ_Bubble'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/PNJ/T_PNJ_Bubble.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_QuestIndicator_C:WidgetTree.Overlay_125.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.46"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_QuestIndicator_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.55"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 750.0,
+          "Y": 750.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_QuestIndicator_C:WidgetTree.Overlay_125.OverlaySlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.47"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 192.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Indicator",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_QuestIndicator_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.55"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 750.0,
+          "Y": 750.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.947307,
+            "G": 0.462077,
+            "B": 0.011612,
+            "A": 1.0,
+            "Hex": "F9B51C"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Map_Secret'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Map/T_Map_Secret.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156.WidgetSwitcherSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.53"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FadeIn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.49"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "C2701C77-497F8A48-9958D581-AF378636",
+          "Name": "WidgetSwitcher_156",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'WidgetSwitcher'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "2D06F0C9-4543E47D-7F29778D-67B68A02",
+          "Name": "Overlay_31",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Overlay'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "C2701C77-497F8A48-9958D581-AF378636",
+          "BindingName": "WidgetSwitcher_156",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneIntegerTrack'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.43"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "2D06F0C9-4543E47D-7F29778D-67B68A02",
+          "BindingName": "Overlay_31",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.20"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 24001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "65AD4D19-4137A2A4-DFC46DA4-AE379EBA"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "IconUpdate",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:IconUpdate_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.50"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "5206E73B-4FB0EA0A-FF2F4F8D-054F1D08",
+          "Name": "Image_Icon",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "5206E73B-4FB0EA0A-FF2F4F8D-054F1D08",
+          "BindingName": "Image_Icon",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.21"
+            },
+            {
+              "ObjectName": "MovieSceneEventTrack'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.38"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 24001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "02CD62D3-4D59BFEA-05D44A89-C3F0FAAF"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "OnValidate",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:OnValidate_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.51"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "FFCCF541-4DE3B60D-169E40A7-34E6F56B",
+          "Name": "Image_Icon",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "FFCCF541-4DE3B60D-169E40A7-34E6F56B",
+          "BindingName": "Image_Icon",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.22"
+            },
+            {
+              "ObjectName": "MovieSceneEventTrack'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.39"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 39001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "11CE613C-4C530048-7D124F92-5B0F3058"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.20"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.23"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.24"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "758BE064-46C2601E-0E58F88F-C265F0CE"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.21"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.27"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.28"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "7889C1CE-4B15477F-289870B3-CCDB8145"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.22"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          },
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 33000
+          },
+          {
+            "Value": 39000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          },
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 33000
+          },
+          {
+            "Value": 39000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.31"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.32"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 39000
+            }
+          }
+        }
+      },
+      "Signature": "D616E100-408ED5ED-692588BC-5A85D598"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_QuestIndicator_C:FadeIn_INST.FadeIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.14"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.17"
+        }
+      ],
+      "EvaluationFieldGuid": "C1D1CD71-445639FE-B1E877B5-1A0FE6AF",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.17"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C1D1CD71-445639FE-B1E877B5-1A0FE6AF"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.18"
+        }
+      ],
+      "EvaluationFieldGuid": "355D6AD7-4E3732CB-76FC1D86-1F6B5679",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.18"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "355D6AD7-4E3732CB-76FC1D86-1F6B5679"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_QuestIndicator_C:OnValidate_INST.OnValidate'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.19"
+        }
+      ],
+      "EvaluationFieldGuid": "BD00C8CC-473D0516-DE3CA9B3-F8650881",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.19"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 39000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "BD00C8CC-473D0516-DE3CA9B3-F8650881"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.17"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.17"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneIntegerSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0.MovieSceneIntegerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.42"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneIntegerSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0.MovieSceneIntegerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.42"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.18"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.18"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.40"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.40"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.41"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.41"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.49"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "C2701C77-497F8A48-9958D581-AF378636",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneIntegerTrack'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.43"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneIntegerPropertySectionTemplate",
+                  "Data": {
+                    "IntegerCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 12000
+                        },
+                        {
+                          "Value": 24000
+                        }
+                      ],
+                      "DefaultValue": 0,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        0,
+                        1,
+                        1
+                      ]
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ActiveWidgetIndex",
+                      "PropertyPath": "ActiveWidgetIndex"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneIntegerSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0.MovieSceneIntegerSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.42"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "ADCE45B6-4B8E09BA-A4C397B8-2B11B957",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 24000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.17"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "2D06F0C9-4543E47D-7F29778D-67B68A02"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 24000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "3980859D-431EE14E-370606B6-8B815C62",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:IconUpdate_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.50"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 24000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "OneShotEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.18"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.40"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "5206E73B-4FB0EA0A-FF2F4F8D-054F1D08"
+          },
+          {
+            "ObjectBindingID": "5206E73B-4FB0EA0A-FF2F4F8D-054F1D08"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "86029888-43226B83-1EE4E08C-991AF926",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_QuestIndicator_C:OnValidate_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.51"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 39000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "OneShotEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.19"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.41"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "FFCCF541-4DE3B60D-169E40A7-34E6F56B"
+          },
+          {
+            "ObjectBindingID": "FFCCF541-4DE3B60D-169E40A7-34E6F56B"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "739AEBEA-4D22FD35-54909FBC-780468E9",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneEventTrack",
+    "Name": "MovieSceneEventTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneEventTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.15"
+    },
+    "Properties": {
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.40"
+        }
+      ],
+      "EvaluationFieldGuid": "8875EDAD-446D1FDB-A75632A4-01983CFD",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.40"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "8875EDAD-446D1FDB-A75632A4-01983CFD"
+    }
+  },
+  {
+    "Type": "MovieSceneEventTrack",
+    "Name": "MovieSceneEventTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneEventTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_QuestIndicator_C:OnValidate_INST.OnValidate'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.16"
+    },
+    "Properties": {
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.41"
+        }
+      ],
+      "EvaluationFieldGuid": "1E7A3553-439930CE-D79E1AA4-B7F8C585",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneEventTriggerSection'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.41"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1E7A3553-439930CE-D79E1AA4-B7F8C585"
+    }
+  },
+  {
+    "Type": "MovieSceneEventTriggerSection",
+    "Name": "MovieSceneEventTriggerSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneEventTriggerSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTrack'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.38"
+    },
+    "Properties": {
+      "EventChannel": {
+        "KeyTimes": [
+          {
+            "Value": 12000
+          }
+        ],
+        "KeyValues": [
+          {
+            "Ptrs": {
+              "Function": {
+                "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.7"
+              },
+              "BoundObjectProperty": {
+                "Path": [
+                  "Image_Icon"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_0'",
+                  "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.7"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.29"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.30"
+        }
+      },
+      "Signature": "13882BC4-4B8494C5-D3F04891-A51AB6B9"
+    }
+  },
+  {
+    "Type": "MovieSceneEventTriggerSection",
+    "Name": "MovieSceneEventTriggerSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneEventTriggerSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTrack'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.39"
+    },
+    "Properties": {
+      "EventChannel": {
+        "KeyTimes": [
+          {
+            "Value": 12000
+          }
+        ],
+        "KeyValues": [
+          {
+            "Ptrs": {
+              "Function": {
+                "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_1'",
+                "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.8"
+              },
+              "BoundObjectProperty": {
+                "Path": [
+                  "Image_Icon"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Function'WGT_QuestIndicator_C:SequenceEvent__ENTRYPOINTWGT_QuestIndicator_1'",
+                  "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.8"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.33"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:OnValidate_INST.OnValidate.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.34"
+        }
+      },
+      "Signature": "6462522F-482A47A4-0D0B10B2-BBCF40B4"
+    }
+  },
+  {
+    "Type": "MovieSceneIntegerSection",
+    "Name": "MovieSceneIntegerSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneIntegerSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneIntegerTrack'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.43"
+    },
+    "Properties": {
+      "IntegerCurve": {
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          0,
+          1,
+          1
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0.MovieSceneIntegerSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.25"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0.MovieSceneIntegerSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.26"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "CCD547F2-4F525AB8-056D76BA-D4524983"
+    }
+  },
+  {
+    "Type": "MovieSceneIntegerTrack",
+    "Name": "MovieSceneIntegerTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneIntegerTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_QuestIndicator_C:FadeIn_INST.FadeIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.14"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ActiveWidgetIndex",
+        "PropertyPath": "ActiveWidgetIndex",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneIntegerSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0.MovieSceneIntegerSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.42"
+        }
+      ],
+      "EvaluationFieldGuid": "ADCE45B6-4B8E09BA-A4C397B8-2B11B957",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneIntegerSection'WGT_QuestIndicator_C:FadeIn_INST.FadeIn.MovieSceneIntegerTrack_0.MovieSceneIntegerSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.42"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "ADCE45B6-4B8E09BA-A4C397B8-2B11B957"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_125",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_QuestIndicator_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.55"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_QuestIndicator_C:WidgetTree.Overlay_125.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.46"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_QuestIndicator_C:WidgetTree.Overlay_125.OverlaySlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.47"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156.WidgetSwitcherSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.54"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_31",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_QuestIndicator_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.55"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_QuestIndicator_C:WidgetTree.Overlay_31.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.48"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_125'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.44"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_125'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.44"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_QuestIndicator_C:WidgetTree.Image_DialogBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.11"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_125'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.44"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_125'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.44"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_QuestIndicator_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.12"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_31'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.45"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_31'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.45"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.52"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FadeIn_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_QuestIndicator_C:FadeIn_INST.FadeIn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.14"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WidgetSwitcher_156",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "C2701C77-497F8A48-9958D581-AF378636",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Overlay_31",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "2D06F0C9-4543E47D-7F29778D-67B68A02",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "FadeIn",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_QuestIndicator_C:FadeIn_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.35"
+      },
+      "Signature": "3980859D-431EE14E-370606B6-8B815C62"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "IconUpdate_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_QuestIndicator_C:IconUpdate_INST.IconUpdate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.15"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Icon",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "5206E73B-4FB0EA0A-FF2F4F8D-054F1D08",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "IconUpdate",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_QuestIndicator_C:IconUpdate_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.36"
+      },
+      "Signature": "86029888-43226B83-1EE4E08C-991AF926"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "OnValidate_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_QuestIndicator_C:OnValidate_INST.OnValidate'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.16"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Icon",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "FFCCF541-4DE3B60D-169E40A7-34E6F56B",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "OnValidate",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_QuestIndicator_C:OnValidate_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.37"
+      },
+      "Signature": "739AEBEA-4D22FD35-54909FBC-780468E9"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "WidgetSwitcher_156",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_QuestIndicator_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.55"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156.WidgetSwitcherSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.53"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156.WidgetSwitcherSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.54"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_QuestIndicator_C:WidgetTree.Overlay_31.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.48"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.52"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.52"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_QuestIndicator_C:WidgetTree.Image_Indicator'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.13"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.52"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WGT_QuestIndicator_C:WidgetTree.WidgetSwitcher_156'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.52"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_125'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.44"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_QuestIndicator_C:WidgetTree.Overlay_31'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.45"
+      }
+    }
+  }
+]

@@ -1,0 +1,973 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Quest_PapyPawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bEnable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsQuestFinished_ReturnTrue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NewLevel",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLocalPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnValidateQuestLevel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AQuest_C:OnValidateQuestLevel'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.21"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NewLevel",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTickEnabled",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:SetTickEnabled'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bEnable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetWidgetComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AQuest_C:GetWidgetComponent'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitQuestFinishedState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AQuest_C:InitQuestFinishedState'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.10"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:CanInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetStoryUnlockedAmount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnValidateQuest",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AQuest_C:OnValidateQuest'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.15"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLocalPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetMaxLevel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AQuest_C:GetMaxLevel'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.17"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetErrorText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetErrorText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetStoryUnlockedAmount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 64,
+          "Struct": {
+            "ObjectName": "Class'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetQuestIcon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AQuest_C:GetQuestIcon'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetCurrentQuestLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetQuestIcon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetInteractText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetFormattedText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Quest_PapyPawn_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AQuest_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.25"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Quest_PapyPawn_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Quest_PapyPawn_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:ExecuteUbergraph_BP_Quest_PapyPawn'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.11"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetQuestIcon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.10"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetErrorText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.9"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetMaxLevel'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.8"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.7"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:OnValidateQuest'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.6"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.5"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:InitQuestFinishedState'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.4"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.3"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:SetTickEnabled'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.2"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:OnValidateQuestLevel'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.1"
+      },
+      {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:ExecuteUbergraph_BP_Quest_PapyPawn'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Widget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "StoryAmount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "StoryAmount",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "SecondQuestIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Quest_PapyPawn": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:ExecuteUbergraph_BP_Quest_PapyPawn'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.0"
+      },
+      "OnValidateQuestLevel": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:OnValidateQuestLevel'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.1"
+      },
+      "SetTickEnabled": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:SetTickEnabled'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.2"
+      },
+      "GetWidgetComponent": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.3"
+      },
+      "InitQuestFinishedState": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:InitQuestFinishedState'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.4"
+      },
+      "CanInteract": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.5"
+      },
+      "OnValidateQuest": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:OnValidateQuest'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.6"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.7"
+      },
+      "GetMaxLevel": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetMaxLevel'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.8"
+      },
+      "GetErrorText": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetErrorText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.9"
+      },
+      "GetQuestIcon": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetQuestIcon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.10"
+      },
+      "GetInteractText": {
+        "ObjectName": "Function'BP_Quest_PapyPawn_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.11"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Quest_PapyPawn_C'Default__BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.13"
+    }
+  },
+  {
+    "Type": "BP_Quest_PapyPawn_C",
+    "Name": "Default__BP_Quest_PapyPawn_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.BP_Quest_PapyPawn_C'",
+    "Package": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn",
+    "Template": {
+      "ObjectName": "BP_AQuest_C'Default__BP_AQuest_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.26"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "StoryAmount": [
+        5,
+        35
+      ],
+      "SecondQuestIcon": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/PNJ/T_StoryCaps_35.T_StoryCaps_35",
+        "SubPathString": ""
+      },
+      "QuestIcon": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/PNJ/T_StoryCaps_5.T_StoryCaps_5",
+        "SubPathString": ""
+      },
+      "QuestLevelEnum": "EQuestLevel::PapyPawn",
+      "PermanentReward": "EPermanentReward::PapyPawn",
+      "ValidateMontage": {
+        "ObjectName": "AnimMontage'AM_PapyPawn_Quest'",
+        "ObjectPath": "/Game/Animation/Quest/PapyPawn/Animation/AM_PapyPawn_Quest.0"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Quest_PapyPawn_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.14"
+      },
+      "InteractText": {
+        "Namespace": "",
+        "Key": "78680BDD4F434A11C9DD4CB85D0C1D1C",
+        "SourceString": "Show {storyCapsules}",
+        "LocalizedString": "Show {storyCapsules}"
+      },
+      "ErrorText": {
+        "Namespace": "",
+        "Key": "199E4C974FA399546A1D42A720BC252E",
+        "SourceString": "You need {missingCapsules} more, young friend...",
+        "LocalizedString": "You need {missingCapsules} more, young friend..."
+      },
+      "InteractState": "EInteractState::Nothing",
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Quest_PapyPawn_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.14"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Quest_PapyPawn_C'Default__BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.13"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_AQuest_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_AQuest.27"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 200.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkeletalMeshComponent'BP_Quest_PapyPawn_C:SkeletalMesh_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.20"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_APNJ_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/BP_APNJ.5"
+            },
+            "SCSVariableName": "SkeletalMesh",
+            "AssociatedGuid": "EE5A7133-4C8F366F-A57468BB-D372D06F"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Quest_PapyPawn_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Quest_PapyPawn_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.16"
+      },
+      "VariableGuid": "EF0A9B75-4F37E14E-C69E18A6-56263170",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Quest_PapyPawn_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BP_Quest_PapyPawn_C:Widget_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.21"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D8E42242-49C65CC5-C9EA1894-D2D1F2F9",
+      "InternalVariableName": "Widget"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Quest_PapyPawn_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Quest_PapyPawn_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Quest_PapyPawn_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.17"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'BP_APNJ_C:SkeletalMesh_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_APNJ.15"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_PapyPawn_C'",
+        "ObjectPath": "/Game/Animation/Quest/PapyPawn/ABP_PapyPawn.2"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_PapyPawn'",
+        "ObjectPath": "/Game/Animation/Quest/PapyPawn/SK_PapyPawn.0"
+      }
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Quest_PapyPawn_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Quest/BP_Quest_PapyPawn.12"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_QuestIndicator_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Dialog/WGT_QuestIndicator.9"
+      },
+      "bDrawAtDesiredSize": true,
+      "RelativeLocation": {
+        "X": -0.0006713867,
+        "Y": 0.0,
+        "Z": 175.27493
+      }
+    }
+  }
+]

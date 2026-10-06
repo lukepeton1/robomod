@@ -1,0 +1,508 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Perk_Feedback_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Perk_Feedback_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.9"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_Perk_Feedback_C:PopIn_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.8"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PerkFeedbackWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Perk_Feedback_C'Default__WGT_Perk_Feedback_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.1"
+    }
+  },
+  {
+    "Type": "WGT_Perk_Feedback_C",
+    "Name": "Default__WGT_Perk_Feedback_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.WGT_Perk_Feedback_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback",
+    "Properties": {
+      "PerkIconMaterialPtr": {
+        "AssetPathName": "/Game/Graphic/HUD/Perk/MI_PerkIcon_01.MI_PerkIcon_01",
+        "SubPathString": ""
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "PopIn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Perk_Feedback_C:PopIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.8"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "CE6F8E46-4141D26A-96808688-E439F141",
+          "Name": "WGT_Perk_Feedback_C_4",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Perk_Feedback_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.0"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "CE6F8E46-4141D26A-96808688-E439F141",
+          "BindingName": "WGT_Perk_Feedback_C_4",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.4"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "BE4C83CF-471AD352-7712638F-5E29CF83"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.4"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.5"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.6"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 15000
+            }
+          }
+        }
+      },
+      "Signature": "21A7AF93-49E6EB5A-4E07EDAC-C8C507C0"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Perk_Feedback_C:PopIn_INST.PopIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.2"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.3"
+        }
+      ],
+      "EvaluationFieldGuid": "C0FA420F-47AC199A-B8338CA6-9E3CDCBB",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.3"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C0FA420F-47AC199A-B8338CA6-9E3CDCBB"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.3"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.3"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Perk_Feedback_C:PopIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.8"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 15000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_Perk_Feedback_C:PopIn_INST.PopIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.3"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "CE6F8E46-4141D26A-96808688-E439F141"
+          }
+        ]
+      },
+      "CompiledSignature": "40EAAADB-4F6F78A5-74C686B0-EBD09255",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "PopIn_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Perk_Feedback_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_Perk_Feedback_C:PopIn_INST.PopIn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.2"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_Perk_Feedback_C_4",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "CE6F8E46-4141D26A-96808688-E439F141",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "PopIn",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_Perk_Feedback_C:PopIn_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.7"
+      },
+      "Signature": "40EAAADB-4F6F78A5-74C686B0-EBD09255"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Perk_Feedback_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Feedback.0"
+    }
+  }
+]

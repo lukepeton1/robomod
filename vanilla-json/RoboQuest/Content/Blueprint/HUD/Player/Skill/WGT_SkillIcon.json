@@ -1,0 +1,1525 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_SkillIcon_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_SkillIcon_C:OnSkillReady_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.30"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_SkillIcon_C:LoopReady_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.29"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SkillIconWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LoopReady",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ActionButton_Skill",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ActionButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/WGT_ActionButton.7"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Enability",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_SkillIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Cooldown",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Infinite",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VBox_Charge",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_SkillIcon_C'Default__WGT_SkillIcon_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.1"
+    }
+  },
+  {
+    "Type": "WGT_SkillIcon_C",
+    "Name": "Default__WGT_SkillIcon_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.WGT_SkillIcon_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon",
+    "Properties": {
+      "SkillChargeWidgetClassPtr": {
+        "AssetPathName": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillCharge.WGT_SkillCharge_C",
+        "SubPathString": ""
+      },
+      "MagusIconByElement": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/Skill/T_ClassHUD_Magus_Skill_Fire_ON.T_ClassHUD_Magus_Skill_Fire_ON",
+        "SubPathString": ""
+      },
+      "MagusIconByElement[1]": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/Skill/T_ClassHUD_Magus_Skill_Frooze_ON.T_ClassHUD_Magus_Skill_Frooze_ON",
+        "SubPathString": ""
+      },
+      "MagusIconByElement[2]": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/Skill/T_ClassHUD_Magus_Shock_ON.T_ClassHUD_Magus_Shock_ON",
+        "SubPathString": ""
+      },
+      "MagusDeactivateIconByElement": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/Skill/T_ClassHUD_Magus_Skill_Fire_OFF.T_ClassHUD_Magus_Skill_Fire_OFF",
+        "SubPathString": ""
+      },
+      "MagusDeactivateIconByElement[1]": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/Skill/T_ClassHUD_Magus_Skill_Frooze_OFF.T_ClassHUD_Magus_Skill_Frooze_OFF",
+        "SubPathString": ""
+      },
+      "MagusDeactivateIconByElement[2]": {
+        "AssetPathName": "/Game/Graphic/HUD/Icon/Skill/T_ClassHUD_Magus_Shock_OFF.T_ClassHUD_Magus_Shock_OFF",
+        "SubPathString": ""
+      },
+      "SkillReadySound": {
+        "ObjectName": "SoundCue'SC_Feedback_SkillReady'",
+        "ObjectPath": "/Game/Audio/Sound/Interface/Feedback/SC_Feedback_SkillReady.0"
+      },
+      "SkillReadyHaptic": {
+        "ObjectName": "SoundCue'HC_Feedback_SkillReady'",
+        "ObjectPath": "/Game/Audio/Sound/Interface/Feedback/HC_Feedback_SkillReady.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_35",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_SkillIcon_C:WidgetTree.HorizontalBox_35.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_SkillIcon_C:WidgetTree.HorizontalBox_35'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.2"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_SkillIcon_C:WidgetTree.HorizontalBox_35'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.2"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Enability",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 150.0,
+          "Y": 150.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Crosshair_OutOfAmmo'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Weapon/T_Crosshair_OutOfAmmo.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.22"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_SkillIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 200.0,
+          "Y": 200.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_ClassHUD_Recon_Icon_OFF'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Class/Recon/T_ClassHUD_Recon_Icon_OFF.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.19"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "LoopReady",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_SkillIcon_C:LoopReady_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.29"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "20429810-4341E21C-E459B995-7C64AFB1",
+          "Name": "WGT_SkillSlot_C_55",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SkillIcon_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.0"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "20429810-4341E21C-E459B995-7C64AFB1",
+          "BindingName": "WGT_SkillSlot_C_55",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.10"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 24001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "FFA76FDF-492EE5A7-5C4AF6B2-E86E387F"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "OnSkillReady",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_SkillIcon_C:OnSkillReady_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.30"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "566B0C54-4E7CF5C8-776810B2-157EB468",
+          "Name": "Image_SkillIcon",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "566B0C54-4E7CF5C8-776810B2-157EB468",
+          "BindingName": "Image_SkillIcon",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.11"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "B77DEA40-40A3F923-5305E995-97DFA1A6"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.10"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.11,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.11,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.12"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.13"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "7F3C539A-4DAE0AE7-2B52F1B3-4F5DAF33"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.11"
+    },
+    "Properties": {
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.35,
+            "Tangent": {
+              "ArriveTangent": 3E-06,
+              "LeaveTangent": 3E-06,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.35,
+            "Tangent": {
+              "ArriveTangent": 3E-06,
+              "LeaveTangent": 3E-06,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.14"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.15"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "4D176622-480F213C-471090A6-6C2051C2"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_SkillIcon_C:LoopReady_INST.LoopReady'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.6"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.8"
+        }
+      ],
+      "EvaluationFieldGuid": "BFD73A3B-4F0B3097-A8F0C28C-81EEB581",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.8"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "BFD73A3B-4F0B3097-A8F0C28C-81EEB581"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.7"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.9"
+        }
+      ],
+      "EvaluationFieldGuid": "D1E7DFDF-45F87B64-402C3181-EBC6ADF1",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.9"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D1E7DFDF-45F87B64-402C3181-EBC6ADF1"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.8"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.8"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.9"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.9"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_SkillIcon_C:LoopReady_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.29"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 24000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:LoopReady_INST.LoopReady.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.8"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "20429810-4341E21C-E459B995-7C64AFB1"
+          }
+        ]
+      },
+      "CompiledSignature": "F48C7E57-495079AE-20666D97-F48D8B51",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_SkillIcon_C:OnSkillReady_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.30"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.9"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "566B0C54-4E7CF5C8-776810B2-157EB468"
+          }
+        ]
+      },
+      "CompiledSignature": "903C5402-409D6E2F-64337A94-1093D7CA",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "O_SkillSlot",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.19"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.20"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.23"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.21"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.22"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_SkillIcon_C:WidgetTree.HorizontalBox_35.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.3"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_SkillIcon_C:WidgetTree.Image_SkillIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_SkillIcon_C:WidgetTree.Txt_Cooldown'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.27"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_SkillIcon_C:WidgetTree.VBox_Charge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.25"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_SkillIcon_C:WidgetTree.Image_Enability'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.4"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+      },
+      "Content": {
+        "ObjectName": "WGT_ActionButton_C'WGT_SkillIcon_C:WidgetTree.ActionButton_Skill'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.26"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SkillIcon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.18"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_SkillIcon_C:WidgetTree.Txt_Infinite'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.28"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_Charge",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.21"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_ActionButton_C",
+    "Name": "ActionButton_Skill",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/WGT_ActionButton.WGT_ActionButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Template": {
+      "ObjectName": "WGT_ActionButton_C'Default__WGT_ActionButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/WGT_ActionButton.8"
+    },
+    "Properties": {
+      "ActionName": "ClassSkill",
+      "Size": 75,
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.23"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -16.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Cooldown",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "9B7432314CDAAF61718B35A34FD2BA0D",
+        "SourceString": "15",
+        "LocalizedString": "15"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 100
+      },
+      "ShadowOffset": {
+        "X": 4.0,
+        "Y": 4.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.20"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -20.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Infinite",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SkillIcon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.31"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "04F7CD0649CA5C452127F2B324EC6474",
+        "SourceString": "∞",
+        "LocalizedString": "∞"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 120
+      },
+      "ShadowOffset": {
+        "X": 4.0,
+        "Y": 4.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SkillIcon_C:WidgetTree.O_SkillSlot.OverlaySlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.24"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 50.0,
+          "Y": 50.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "LoopReady_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SkillIcon_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_SkillIcon_C:LoopReady_INST.LoopReady'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.6"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_SkillSlot_C_55",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "20429810-4341E21C-E459B995-7C64AFB1",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "LoopReady",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_SkillIcon_C:LoopReady_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.16"
+      },
+      "Signature": "F48C7E57-495079AE-20666D97-F48D8B51"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "OnSkillReady_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SkillIcon_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_SkillIcon_C:OnSkillReady_INST.OnSkillReady'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.7"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_SkillIcon",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "566B0C54-4E7CF5C8-776810B2-157EB468",
+          "bIsRootWidget": false
+        }
+      ],
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_SkillIcon_C:OnSkillReady_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.17"
+      },
+      "Signature": "903C5402-409D6E2F-64337A94-1093D7CA"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SkillIcon_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'WGT_SkillIcon_C:WidgetTree.HorizontalBox_35'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Skill/WGT_SkillIcon.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_PF_Chainsaw",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PF_Chainsaw_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetWeapon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLoopingSoundComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerTarget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PF_Chainsaw_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ASkill:OnTriggerTarget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PF_Chainsaw_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_PF_Chainsaw_C:ExecuteUbergraph_BP_PF_Chainsaw'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill_Automatic'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_PF_Chainsaw_C:OnTriggerTarget'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.1"
+      },
+      {
+        "ObjectName": "Function'BP_PF_Chainsaw_C:ExecuteUbergraph_BP_PF_Chainsaw'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageLoopSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PF_Chainsaw": {
+        "ObjectName": "Function'BP_PF_Chainsaw_C:ExecuteUbergraph_BP_PF_Chainsaw'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.0"
+      },
+      "OnTriggerTarget": {
+        "ObjectName": "Function'BP_PF_Chainsaw_C:OnTriggerTarget'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PF_Chainsaw_C'Default__BP_PF_Chainsaw_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.3"
+    }
+  },
+  {
+    "Type": "BP_PF_Chainsaw_C",
+    "Name": "Default__BP_PF_Chainsaw_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw.BP_PF_Chainsaw_C'",
+    "Package": "/Game/Blueprint/Skill/Weapon/BP_PF_Chainsaw",
+    "Properties": {
+      "UberGraphFrame": {},
+      "DamageLoopSound": {
+        "ObjectName": "SoundCue'SC_Chainsaw_PF_DamageLoop'",
+        "ObjectPath": "/Game/Audio/Sound/Weapon/Specific/Chainsaw/SC_Chainsaw_PF_DamageLoop.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_KillInfiniteAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_KillInfiniteAmmo_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEndInfiniteAMmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_KillInfiniteAmmo_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.3"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCooldownTrigger",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_KillInfiniteAmmo_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.3"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_Item_Cooldown_C:OnCooldownTrigger'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_Item_Cooldown.4"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_KillInfiniteAmmo_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Item_Cooldown_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_Item_Cooldown.7"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_KillInfiniteAmmo_C:ExecuteUbergraph_BP_KillInfiniteAmmo'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_KillInfiniteAmmo_C:OnCooldownTrigger'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.2"
+      },
+      {
+        "ObjectName": "Function'BP_KillInfiniteAmmo_C:OnEndInfiniteAMmo'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.1"
+      },
+      {
+        "ObjectName": "Function'BP_KillInfiniteAmmo_C:ExecuteUbergraph_BP_KillInfiniteAmmo'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_KillInfiniteAmmo": {
+        "ObjectName": "Function'BP_KillInfiniteAmmo_C:ExecuteUbergraph_BP_KillInfiniteAmmo'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.0"
+      },
+      "OnEndInfiniteAMmo": {
+        "ObjectName": "Function'BP_KillInfiniteAmmo_C:OnEndInfiniteAMmo'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.1"
+      },
+      "OnCooldownTrigger": {
+        "ObjectName": "Function'BP_KillInfiniteAmmo_C:OnCooldownTrigger'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_KillInfiniteAmmo_C'Default__BP_KillInfiniteAmmo_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.4"
+    }
+  },
+  {
+    "Type": "BP_KillInfiniteAmmo_C",
+    "Name": "Default__BP_KillInfiniteAmmo_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo.BP_KillInfiniteAmmo_C'",
+    "Package": "/Game/Blueprint/Item/Common/BP_KillInfiniteAmmo",
+    "Template": {
+      "ObjectName": "BP_Item_Cooldown_C'Default__BP_Item_Cooldown_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_Item_Cooldown.8"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

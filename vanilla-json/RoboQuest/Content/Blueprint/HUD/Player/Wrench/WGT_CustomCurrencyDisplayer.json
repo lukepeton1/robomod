@@ -1,0 +1,765 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_CustomCurrencyDisplayer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateUpdateCustomCurrency__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsBasecampMap_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetCustomCurrencyAmount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_Type",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ECustomCost'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_NewAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIncreaseValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetCustomCostIcon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateUpdateCustomCurrency_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Type",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'ECustomCost'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "NewAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIncreaseValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateCost",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CustomCurrencyDisplayer_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CustomCurrencyDisplayer_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:ExecuteUbergraph_WGT_CustomCurrencyDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:UpdateCost'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.3"
+      },
+      {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.2"
+      },
+      {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:DelegateUpdateCustomCurrency_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.1"
+      },
+      {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:ExecuteUbergraph_WGT_CustomCurrencyDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_CurrencyIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Currency",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentTicket",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Type",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Class'ECustomCost'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_CustomCurrencyDisplayer": {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:ExecuteUbergraph_WGT_CustomCurrencyDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.0"
+      },
+      "DelegateUpdateCustomCurrency_Event_0": {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:DelegateUpdateCustomCurrency_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.2"
+      },
+      "UpdateCost": {
+        "ObjectName": "Function'WGT_CustomCurrencyDisplayer_C:UpdateCost'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CustomCurrencyDisplayer_C'Default__WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.5"
+    }
+  },
+  {
+    "Type": "WGT_CustomCurrencyDisplayer_C",
+    "Name": "Default__WGT_CustomCurrencyDisplayer_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.WGT_CustomCurrencyDisplayer_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CustomCurrencyDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.15"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CustomCurrencyDisplayer_C:WidgetTree.Image_CurrencyIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_CustomCurrencyDisplayer_C:WidgetTree.Spacer_58'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_CustomCurrencyDisplayer_C:WidgetTree.Text_Currency'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_CustomCurrencyDisplayer_C:WidgetTree.Spacer_120'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.12"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_CurrencyIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CustomCurrencyDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.15"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 84.0,
+          "Y": 84.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_120",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CustomCurrencyDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.15"
+    },
+    "Properties": {
+      "Size": {
+        "X": 20.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.10"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_58",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CustomCurrencyDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.15"
+    },
+    "Properties": {
+      "Size": {
+        "X": 10.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.8"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Currency",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CustomCurrencyDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.15"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4AAE997D4BD98D155B362FA95EFE25FB",
+        "SourceString": "10",
+        "LocalizedString": "10"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.9"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -4.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'WGT_CustomCurrencyDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.6"
+      }
+    }
+  }
+]

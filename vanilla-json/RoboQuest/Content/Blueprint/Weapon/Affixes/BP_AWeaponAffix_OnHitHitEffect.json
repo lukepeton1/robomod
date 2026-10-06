@@ -1,0 +1,527 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AWeaponAffix_OnHitHitEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateUsed__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetStatBaseValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Clamp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_1",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApplyEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemoveEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUsedSkill",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeaponAffix:OnApply'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemove",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.8"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeaponAffix:OnRemove'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AWeaponAffix_OnHitHitEffect_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:ExecuteUbergraph_BP_AWeaponAffix_OnHitHitEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.7"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.6"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnUsedSkill'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.5"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnRemoveEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.4"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnApplyEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.3"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.2"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:CustomEvent_1'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.1"
+      },
+      {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:ExecuteUbergraph_BP_AWeaponAffix_OnHitHitEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Luck",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsApply",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "FirerateDividerAuto",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "FirerateDividerSemiAuto",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "UseAmount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentUseAmount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AWeaponAffix_OnHitHitEffect": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:ExecuteUbergraph_BP_AWeaponAffix_OnHitHitEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.0"
+      },
+      "CustomEvent_1": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:CustomEvent_1'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.1"
+      },
+      "CustomEvent_0": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.2"
+      },
+      "OnApplyEffect": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnApplyEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.3"
+      },
+      "OnRemoveEffect": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnRemoveEffect'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.4"
+      },
+      "OnUsedSkill": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnUsedSkill'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.5"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.6"
+      },
+      "OnRemove": {
+        "ObjectName": "Function'BP_AWeaponAffix_OnHitHitEffect_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.7"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AWeaponAffix_OnHitHitEffect_C'Default__BP_AWeaponAffix_OnHitHitEffect_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.9"
+    }
+  },
+  {
+    "Type": "BP_AWeaponAffix_OnHitHitEffect_C",
+    "Name": "Default__BP_AWeaponAffix_OnHitHitEffect_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect.BP_AWeaponAffix_OnHitHitEffect_C'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix_OnHitHitEffect",
+    "Template": {
+      "ObjectName": "BP_AWeaponAffix_C'Default__BP_AWeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Luck": 10,
+      "FirerateDividerAuto": 1.0,
+      "FirerateDividerSemiAuto": 1.0
+    }
+  }
+]

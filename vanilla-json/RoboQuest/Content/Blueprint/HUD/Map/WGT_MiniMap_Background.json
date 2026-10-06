@@ -1,0 +1,1039 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_MiniMap_Background_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MiniMapBackgroundWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_GaugeTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_GaugeXP",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_RankProgressBars",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar_GaugeTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar_GaugeXP",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_TimeRank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_XPRank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_MiniMap_Background_C'Default__WGT_MiniMap_Background_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.1"
+    }
+  },
+  {
+    "Type": "WGT_MiniMap_Background_C",
+    "Name": "Default__WGT_MiniMap_Background_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.WGT_MiniMap_Background_C'",
+    "Package": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 500.0,
+          "Y": 496.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Minimap_Background'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Minimap/T_Minimap_Background.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.12"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_GaugeTime",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 200.0,
+          "Y": 27.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_GaugeTimeCells'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Minimap/T_GaugeTimeCells.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.15"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_GaugeXP",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 200.0,
+          "Y": 27.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_GaugeTimeCells'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Minimap/T_GaugeTimeCells.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.17"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Layer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 446.0,
+          "Y": 395.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Minimap_Layer'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Minimap/T_Minimap_Layer.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.13"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -26.0
+        }
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Trame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 446.0,
+          "Y": 395.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Minimap_Trame'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Minimap/T_Minimap_Trame.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.14"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -22.0
+        }
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.12"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.13"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.14"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_MiniMap_Background_C:WidgetTree.ScaleBox_13.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.28"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_GaugeTime",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.15"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.20"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 6.0,
+          "Y": -30.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_GaugeXP",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.17"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.19"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 6.0,
+          "Y": -30.0
+        },
+        "Scale": {
+          "X": -1.0,
+          "Y": 1.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_RankProgressBars",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.19"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.21"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.22"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.20"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.23"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_7'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_7.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.11"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_MiniMap_Background_C:WidgetTree.Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_MiniMap_Background_C:WidgetTree.Layer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_MiniMap_Background_C:WidgetTree.Trame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.8"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.8"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_MiniMap_Background_C:WidgetTree.Image_GaugeTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.3"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.8"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 28.0,
+        "Right": 13.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.8"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_MiniMap_Background_C:WidgetTree.PBar_GaugeTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.25"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.9"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.9"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_MiniMap_Background_C:WidgetTree.Image_GaugeXP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.4"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.9"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 28.0,
+        "Right": 13.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.9"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_MiniMap_Background_C:WidgetTree.PBar_GaugeXP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.26"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.8"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": -5.0
+      },
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'WGT_MiniMap_Background_C:WidgetTree.Text_XP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.31"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 165.0,
+        "Bottom": -5.0
+      },
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'WGT_MiniMap_Background_C:WidgetTree.Text_XPRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.32"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": -5.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'WGT_MiniMap_Background_C:WidgetTree.Text_Time'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.29"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 145.0,
+        "Bottom": -5.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'WGT_MiniMap_Background_C:WidgetTree.Text_TimeRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.30"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar_GaugeTime",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 161.0,
+            "Y": 13.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_GaugeTimeCellsBar'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/Minimap/T_GaugeTimeCellsBar.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "MarqueeImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      },
+      "Percent": 1.0,
+      "FillColorAndOpacity": {
+        "R": 0.723055,
+        "G": 0.127438,
+        "B": 0.000911,
+        "A": 1.0,
+        "Hex": "DD6403"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeTime.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.16"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar_GaugeXP",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 161.0,
+            "Y": 13.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_GaugeTimeCellsBar'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/Minimap/T_GaugeTimeCellsBar.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "MarqueeImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      },
+      "BarFillType": "EProgressBarFillType::RightToLeft",
+      "FillColorAndOpacity": {
+        "R": 0.035601,
+        "G": 0.679543,
+        "B": 0.679543,
+        "A": 1.0,
+        "Hex": "35D7D7"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_GaugeXP.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.18"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "UserSpecifiedScale": 1.05,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_MiniMap_Background_C:WidgetTree.ScaleBox_13.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.28"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_MiniMap_Background_C:WidgetTree.ScaleBox_13'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.27"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_MiniMap_Background_C:WidgetTree.ScaleBox_13'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.27"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_MiniMap_Background_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.7"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "Text_Time",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "txt_time",
+        "SourceString": "Time",
+        "LocalizedString": "Time"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.723055,
+          "G": 0.127438,
+          "B": 0.000911,
+          "A": 1.0,
+          "Hex": "DD6403"
+        }
+      },
+      "Font": {
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Bold Italic",
+        "Size": 22
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.23"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "Text_TimeRank",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "S"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.723055,
+          "G": 0.127438,
+          "B": 0.000911,
+          "A": 1.0,
+          "Hex": "DD6403"
+        }
+      },
+      "Font": {
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Bold Italic",
+        "Size": 22
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.24"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "Text_XP",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "txt_xp",
+        "SourceString": "XP",
+        "LocalizedString": "XP"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.035601,
+          "G": 0.679543,
+          "B": 0.679543,
+          "A": 1.0,
+          "Hex": "35D7D7"
+        }
+      },
+      "Font": {
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Bold Italic",
+        "Size": 22
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.21"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "Text_XPRank",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MiniMap_Background_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.33"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "E"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.035601,
+          "G": 0.679543,
+          "B": 0.679543,
+          "A": 1.0,
+          "Hex": "35D7D7"
+        }
+      },
+      "Font": {
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Bold Italic",
+        "Size": 22
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MiniMap_Background_C:WidgetTree.Overlay_RankProgressBars.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.22"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MiniMap_Background_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ScaleBox'WGT_MiniMap_Background_C:WidgetTree.ScaleBox_13'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/WGT_MiniMap_Background.27"
+      }
+    }
+  }
+]

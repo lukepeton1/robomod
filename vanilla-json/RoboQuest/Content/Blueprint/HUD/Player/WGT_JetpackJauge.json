@@ -1,0 +1,1239 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_JetpackJauge",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_JetpackJauge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateJetpackFuelRatio__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_InRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_FInterpTo_Constant_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_JetpackJauge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUpdateFuelRatio",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_JetpackJauge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "InRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_JetpackJauge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.4"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_JetpackJauge_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_JetpackJauge_C:FadeIn_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.27"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_JetpackJauge_C:ExecuteUbergraph_WGT_JetpackJauge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_JetpackJauge_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.3"
+      },
+      {
+        "ObjectName": "Function'WGT_JetpackJauge_C:OnUpdateFuelRatio'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.2"
+      },
+      {
+        "ObjectName": "Function'WGT_JetpackJauge_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.1"
+      },
+      {
+        "ObjectName": "Function'WGT_JetpackJauge_C:ExecuteUbergraph_WGT_JetpackJauge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FadeIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentFuelRatio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "BaseColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_JetpackJauge": {
+        "ObjectName": "Function'WGT_JetpackJauge_C:ExecuteUbergraph_WGT_JetpackJauge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.0"
+      },
+      "Tick": {
+        "ObjectName": "Function'WGT_JetpackJauge_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.1"
+      },
+      "OnUpdateFuelRatio": {
+        "ObjectName": "Function'WGT_JetpackJauge_C:OnUpdateFuelRatio'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.2"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_JetpackJauge_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_JetpackJauge_C'Default__WGT_JetpackJauge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.5"
+    }
+  },
+  {
+    "Type": "WGT_JetpackJauge_C",
+    "Name": "Default__WGT_JetpackJauge_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/WGT_JetpackJauge.WGT_JetpackJauge_C'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "BaseColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "bHasScriptImplementedTick": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_286",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_JetpackJauge_C:WidgetTree.HorizontalBox_286.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_JetpackJauge_C:WidgetTree.SizeBox_95.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.25"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -30.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_JetpackJauge_C:WidgetTree.HorizontalBox_286'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_JetpackJauge_C:WidgetTree.HorizontalBox_286'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.6"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_JetpackJauge_C:WidgetTree.Text_DurationSuffix'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.26"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 715.0,
+          "Y": 47.0
+        },
+        "Margin": {
+          "Left": 0.2,
+          "Top": 0.2,
+          "Right": 0.2,
+          "Bottom": 0.2
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.6,
+            "Hex": "99FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_ClassHUD_Recon_StealthBar_BG'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Class/Recon/T_ClassHUD_Recon_StealthBar_BG.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_JetpackJauge_C:WidgetTree.Overlay_12.OverlaySlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.18"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FadeIn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_JetpackJauge_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.27"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "4B0CE69A-42FEE996-E781E4B6-2DC43BF0",
+          "Name": "WGT_JetpackJauge_C_3",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_JetpackJauge_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.4"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "4B0CE69A-42FEE996-E781E4B6-2DC43BF0",
+          "BindingName": "WGT_JetpackJauge_C_3",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.14"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "14CC26CD-45D29F6D-8884759B-8F4737EB"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.13"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.13"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_JetpackJauge_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.27"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 15000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.13"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "4B0CE69A-42FEE996-E781E4B6-2DC43BF0"
+          }
+        ]
+      },
+      "CompiledSignature": "94199562-464B0C18-95890491-21FF2970",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.14"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.10"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.11"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 15000
+            }
+          }
+        }
+      },
+      "Signature": "1272B51D-4F5E64CC-F8970592-47CA607C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_JetpackJauge_C:FadeIn_INST.FadeIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.9"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.13"
+        }
+      ],
+      "EvaluationFieldGuid": "3C8872EC-40074D47-8C5BD28D-E806B520",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_JetpackJauge_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.13"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "3C8872EC-40074D47-8C5BD28D-E806B520"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_JetpackJauge_C:WidgetTree.Overlay_12.OverlaySlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.18"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_JetpackJauge_C:WidgetTree.Overlay_12.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.16"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_JetpackJauge_C:WidgetTree.Overlay_12.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_JetpackJauge_C:WidgetTree.ScaleBox_7.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.21"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_JetpackJauge_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.15"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_JetpackJauge_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.15"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_JetpackJauge_C:WidgetTree.SizeBox_68'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.22"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_JetpackJauge_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.15"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_JetpackJauge_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.15"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_JetpackJauge_C:WidgetTree.SizeBox_95'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.23"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_JetpackJauge_C:WidgetTree.Overlay_12'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.15"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_JetpackJauge_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.15"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_JetpackJauge_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.8"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 697.0,
+            "Y": 42.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_ClassHUD_Recon_StealthBar_Fil'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/Class/Recon/T_ClassHUD_Recon_StealthBar_Fil.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 697.0,
+            "Y": 42.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_ClassHUD_Recon_StealthBar_Fil'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/Class/Recon/T_ClassHUD_Recon_StealthBar_Fil.0"
+          }
+        }
+      },
+      "Percent": 1.0,
+      "FillColorAndOpacity": {
+        "R": 0.307292,
+        "G": 0.307292,
+        "B": 0.307292,
+        "A": 1.0,
+        "Hex": "979797"
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_JetpackJauge_C:WidgetTree.SizeBox_68.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.24"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "UserSpecifiedScale": 0.75,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_JetpackJauge_C:WidgetTree.ScaleBox_7.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_JetpackJauge_C:WidgetTree.ScaleBox_7'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.20"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_JetpackJauge_C:WidgetTree.ScaleBox_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.20"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_JetpackJauge_C:WidgetTree.Overlay_12'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.15"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_68",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Properties": {
+      "WidthOverride": 697.0,
+      "HeightOverride": 42.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_JetpackJauge_C:WidgetTree.SizeBox_68.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_JetpackJauge_C:WidgetTree.Overlay_12.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.16"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_95",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Properties": {
+      "WidthOverride": 90.0,
+      "HeightOverride": 30.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_JetpackJauge_C:WidgetTree.SizeBox_95.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_JetpackJauge_C:WidgetTree.Overlay_12.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.17"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_JetpackJauge_C:WidgetTree.SizeBox_68'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_JetpackJauge_C:WidgetTree.SizeBox_68'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.22"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_JetpackJauge_C:WidgetTree.PBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.19"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_JetpackJauge_C:WidgetTree.SizeBox_95'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.23"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_JetpackJauge_C:WidgetTree.SizeBox_95'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.23"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_JetpackJauge_C:WidgetTree.HorizontalBox_286'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.6"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_DurationSuffix",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_JetpackJauge_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.28"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D0FF614047993F7A9A3A2BAED4CD9303",
+        "SourceString": "Fuel",
+        "LocalizedString": "Fuel"
+      },
+      "Font": {
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 40
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_JetpackJauge_C:WidgetTree.HorizontalBox_286.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FadeIn_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_JetpackJauge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.4"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_JetpackJauge_C:FadeIn_INST.FadeIn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.9"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_JetpackJauge_C_3",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "4B0CE69A-42FEE996-E781E4B6-2DC43BF0",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "FadeIn",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_JetpackJauge_C:FadeIn_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.12"
+      },
+      "Signature": "94199562-464B0C18-95890491-21FF2970"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_JetpackJauge_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ScaleBox'WGT_JetpackJauge_C:WidgetTree.ScaleBox_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_JetpackJauge.20"
+      }
+    }
+  }
+]

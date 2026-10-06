@@ -1,0 +1,186 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AssaultSentry_Turret_Trail",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AssaultSentry_Turret_Trail_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerSkillCustomEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AssaultSentry_Turret_Trail_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ASkill:OnTriggerSkillCustomEffect'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AssaultSentry_Turret_Trail_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AssaultSentry_Turret_Trail_C:ExecuteUbergraph_BP_AssaultSentry_Turret_Trail'",
+        "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AAllySkill'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AssaultSentry_Turret_Trail_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.1"
+      },
+      {
+        "ObjectName": "Function'BP_AssaultSentry_Turret_Trail_C:ExecuteUbergraph_BP_AssaultSentry_Turret_Trail'",
+        "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AssaultSentry_Turret_Trail": {
+        "ObjectName": "Function'BP_AssaultSentry_Turret_Trail_C:ExecuteUbergraph_BP_AssaultSentry_Turret_Trail'",
+        "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.0"
+      },
+      "OnTriggerSkillCustomEffect": {
+        "ObjectName": "Function'BP_AssaultSentry_Turret_Trail_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AssaultSentry_Turret_Trail_C'Default__BP_AssaultSentry_Turret_Trail_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.3"
+    }
+  },
+  {
+    "Type": "BP_AssaultSentry_Turret_Trail_C",
+    "Name": "Default__BP_AssaultSentry_Turret_Trail_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail.BP_AssaultSentry_Turret_Trail_C'",
+    "Package": "/Game/Blueprint/Skill/Ally/BP_AssaultSentry_Turret_Trail",
+    "Properties": {
+      "UberGraphFrame": {},
+      "UseAmount": 1
+    }
+  }
+]

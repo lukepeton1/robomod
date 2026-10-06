@@ -1,0 +1,1235 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_Story",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateOnPickArtefact__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateOnRemoveArtefact__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLevelGenerator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ALevelGenerator'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Controller",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyControlled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_LootLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_LootOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Event_RowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bStoryAlreadyUnlocked",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsCurrentArtefact_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLocalPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_RowName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_RowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsVisible_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsStoryUnlocked_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnRemoveArtefact_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "RowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnPickArtefact_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "RowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintSetStoryRowName",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveStory:OnBlueprintSetStoryRowName'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "RowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bStoryAlreadyUnlocked",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLooted",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "LootLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LootOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintActivateInteractive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnBlueprintActivateInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintDeactivateInteractive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnBlueprintDeactivateInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnStartInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitializeLootable",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Deactivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetParticleSystemComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveStory:GetParticleSystemComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetLoot",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_Story_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_Story_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.28"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_Story_C:ExecuteUbergraph_BP_Interactive_Story'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveStory'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:GetLoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.13"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:GetParticleSystemComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.12"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:Deactivate'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.11"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.10"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:InitializeLootable'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.9"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.8"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.7"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnBlueprintActivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.6"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnLooted'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.5"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnBlueprintSetStoryRowName'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:DelegateOnPickArtefact_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:DelegateOnRemoveArtefact_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Story_C:ExecuteUbergraph_BP_Interactive_Story'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_AMapLocator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AMapLocator_C'",
+          "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Arrow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ArrowComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FX_HightLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Capsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ArtefactRow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ArtefactRowHandle'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_Story": {
+        "ObjectName": "Function'BP_Interactive_Story_C:ExecuteUbergraph_BP_Interactive_Story'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.0"
+      },
+      "DelegateOnRemoveArtefact_Event_0": {
+        "ObjectName": "Function'BP_Interactive_Story_C:DelegateOnRemoveArtefact_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.1"
+      },
+      "DelegateOnPickArtefact_Event_0": {
+        "ObjectName": "Function'BP_Interactive_Story_C:DelegateOnPickArtefact_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Interactive_Story_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.3"
+      },
+      "OnBlueprintSetStoryRowName": {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnBlueprintSetStoryRowName'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.4"
+      },
+      "OnLooted": {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnLooted'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.5"
+      },
+      "OnBlueprintActivateInteractive": {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnBlueprintActivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.6"
+      },
+      "OnBlueprintDeactivateInteractive": {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.7"
+      },
+      "OnStartInteract": {
+        "ObjectName": "Function'BP_Interactive_Story_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.8"
+      },
+      "InitializeLootable": {
+        "ObjectName": "Function'BP_Interactive_Story_C:InitializeLootable'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.9"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_Story_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.10"
+      },
+      "Deactivate": {
+        "ObjectName": "Function'BP_Interactive_Story_C:Deactivate'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.11"
+      },
+      "GetParticleSystemComponent": {
+        "ObjectName": "Function'BP_Interactive_Story_C:GetParticleSystemComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.12"
+      },
+      "GetLoot": {
+        "ObjectName": "Function'BP_Interactive_Story_C:GetLoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.13"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'ILootable'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_Story_C'Default__BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.15"
+    }
+  },
+  {
+    "Type": "BP_Interactive_Story_C",
+    "Name": "Default__BP_Interactive_Story_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.BP_Interactive_Story_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ArtefactRow": {
+        "DataTable": {
+          "ObjectName": "DataTable'DT_Artefacts'",
+          "ObjectPath": "/Game/Data/DT_Artefacts.0"
+        },
+        "RowName": "StoryDetector"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Story_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.17"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": "None"
+      },
+      "InteractText": {
+        "Namespace": "",
+        "Key": "B884E5894B3B79F1F748DFA3BC404820",
+        "SourceString": "Pick-up Data-Log",
+        "LocalizedString": "Pick-up Data-Log"
+      },
+      "ErrorText": {
+        "CultureInvariantString": "None"
+      },
+      "InteractState": "EInteractState::Deactivate",
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Story_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.17"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -0.59858817,
+        "Y": 1.5141169,
+        "Z": -21.998575
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Story_C'Default__BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.15"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Movable"
+    }
+  },
+  {
+    "Type": "BP_AMapLocator_C",
+    "Name": "BP_AMapLocator_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Component/BP_AMapLocator.BP_AMapLocator_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "Template": {
+      "ObjectName": "BP_AMapLocator_C'Default__BP_AMapLocator_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.1"
+    },
+    "Properties": {
+      "Icon": {
+        "ObjectName": "Texture2D'T_StoryCaps'",
+        "ObjectPath": "/Game/Graphic/HUD/Icon/T_StoryCaps.0"
+      },
+      "bIsStatic": true,
+      "bAbsoluteRotation": true,
+      "bAutoRegister": false,
+      "ZOrder": 10
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "FX_HightLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_SlotStory_01_HighLight'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/SlotStory/PS_SlotStory_01_HighLight.82"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 4.3133287,
+        "Z": -16.998585
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "Properties": {
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 450.0,
+      "Intensity": 7.0,
+      "LightColor": {
+        "B": 124,
+        "G": 195,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFC37C"
+      },
+      "CastShadows": false,
+      "VolumetricScatteringIntensity": 2.5,
+      "bVisible": false
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Story_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_Story_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.21"
+      },
+      "VariableGuid": "AF1C6BE1-4F364B35-3BBDCFA3-C6A3B747",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Story_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactive_Story_C:SM_Capsule_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.29"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "18463A78-476AA083-AA74DD82-7D202841",
+      "InternalVariableName": "SM_Capsule"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Story_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_Interactive_Story_C:FX_HightLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.19"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DA3EC20B-456C193E-5464E081-5C7AC33E",
+      "InternalVariableName": "FX_HightLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Story_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ArrowComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ArrowComponent'BP_Interactive_Story_C:Arrow_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.16"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B91987B0-45EA8174-166706AD-089F25B7",
+      "InternalVariableName": "Arrow"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Story_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_AMapLocator_C'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_AMapLocator_C'BP_Interactive_Story_C:BP_AMapLocator_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.18"
+      },
+      "VariableGuid": "E2EBA8FC-4DDE2678-602006BA-5DBC0694",
+      "InternalVariableName": "BP_AMapLocator"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Story_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_Interactive_Story_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.20"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A1640FF0-4AE55509-9EF8C680-F138CEC0",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.27"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.27"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_Story_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.22"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Capsule_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Story_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Story.14"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_StoryCapsule'",
+        "ObjectPath": "/Game/Graphic/Interactive/Story/SM_StoryCapsule.2"
+      },
+      "CastShadow": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionProfileName": "NoCollision"
+      },
+      "RelativeLocation": {
+        "X": -0.59858817,
+        "Y": 1.5141169,
+        "Z": -21.998575
+      },
+      "RelativeRotation": {
+        "Pitch": -0.20356677,
+        "Yaw": -10.452437,
+        "Roll": 13.289825
+      }
+    }
+  }
+]

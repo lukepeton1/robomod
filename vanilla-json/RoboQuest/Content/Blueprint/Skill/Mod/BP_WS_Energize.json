@@ -1,0 +1,164 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WS_Energize",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WS_Energize_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetWeapon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_AWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AWeapon_C'",
+          "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.31"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerSkillCustomEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WS_Energize_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ASkill:OnTriggerSkillCustomEffect'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WS_Energize_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Skill/Mod/BP_WS_Energize",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WS_Energize_C:ExecuteUbergraph_BP_WS_Energize'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WS_Energize_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.1"
+      },
+      {
+        "ObjectName": "Function'BP_WS_Energize_C:ExecuteUbergraph_BP_WS_Energize'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WS_Energize": {
+        "ObjectName": "Function'BP_WS_Energize_C:ExecuteUbergraph_BP_WS_Energize'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.0"
+      },
+      "OnTriggerSkillCustomEffect": {
+        "ObjectName": "Function'BP_WS_Energize_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WS_Energize_C'Default__BP_WS_Energize_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Mod/BP_WS_Energize.3"
+    }
+  },
+  {
+    "Type": "BP_WS_Energize_C",
+    "Name": "Default__BP_WS_Energize_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Skill/Mod/BP_WS_Energize.BP_WS_Energize_C'",
+    "Package": "/Game/Blueprint/Skill/Mod/BP_WS_Energize",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

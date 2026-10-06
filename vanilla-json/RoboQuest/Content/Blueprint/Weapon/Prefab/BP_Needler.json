@@ -1,0 +1,410 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Needler",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAnimInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Player_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bOverride",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsABP_Mine_Gun_T03",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "AnimBlueprintGeneratedClass'ABP_MineGun_T03_C'",
+          "ObjectPath": "/Game/Animation/Weapon/MineGun/ABP_MineGun_T03.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_APlayer",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayer_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayer.349"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintUpdateCharacterOwner",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeapon:OnBlueprintUpdateCharacterOwner'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OverrideActionProperties",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.3"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeapon_C:OverrideActionProperties'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bOverride",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Needler_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_Needler",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.31"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Needler_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.11"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Needler_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Needler_C:ExecuteUbergraph_BP_Needler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Needler_C:OverrideActionProperties'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.2"
+      },
+      {
+        "ObjectName": "Function'BP_Needler_C:OnBlueprintUpdateCharacterOwner'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.1"
+      },
+      {
+        "ObjectName": "Function'BP_Needler_C:ExecuteUbergraph_BP_Needler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Needler": {
+        "ObjectName": "Function'BP_Needler_C:ExecuteUbergraph_BP_Needler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.0"
+      },
+      "OnBlueprintUpdateCharacterOwner": {
+        "ObjectName": "Function'BP_Needler_C:OnBlueprintUpdateCharacterOwner'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.1"
+      },
+      "OverrideActionProperties": {
+        "ObjectName": "Function'BP_Needler_C:OverrideActionProperties'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Needler_C'Default__BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.4"
+    }
+  },
+  {
+    "Type": "BP_Needler_C",
+    "Name": "Default__BP_Needler_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Prefab/BP_Needler.BP_Needler_C'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_Needler",
+    "Template": {
+      "ObjectName": "BP_AWeapon_C'Default__BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.32"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "WeaponStatManager": {
+        "ObjectName": "AStatManager'Default__BP_Needler_C:WeaponStatManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.6"
+      },
+      "WeaponSkillManager": {
+        "ObjectName": "ASkillManager'Default__BP_Needler_C:WeaponSkillManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.5"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Needler_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.12"
+      },
+      "IdleSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Needler_C:IdleSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.7"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Needler_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.12"
+      }
+    }
+  },
+  {
+    "Type": "ASkillManager",
+    "Name": "WeaponSkillManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ASkillManager'",
+    "Outer": {
+      "ObjectName": "BP_Needler_C'Default__BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.4"
+    },
+    "Template": {
+      "ObjectName": "ASkillManager'Default__BP_AWeapon_C:WeaponSkillManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.33"
+    }
+  },
+  {
+    "Type": "AStatManager",
+    "Name": "WeaponStatManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AStatManager'",
+    "Outer": {
+      "ObjectName": "BP_Needler_C'Default__BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.4"
+    },
+    "Template": {
+      "ObjectName": "AStatManager'Default__BP_AWeapon_C:WeaponStatManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.34"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Needler_C'Default__BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.4"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_AWeapon_C:IdleSoundComponent'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.35"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Needler_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.12"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.3"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Needler_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Needler_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.9"
+      },
+      "VariableGuid": "B6C88E0E-405AA42A-5F69669D-582A0FF0",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.3"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Needler_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Needler_C'Default__BP_Needler_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Needler.4"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_AWeapon_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.42"
+    }
+  }
+]

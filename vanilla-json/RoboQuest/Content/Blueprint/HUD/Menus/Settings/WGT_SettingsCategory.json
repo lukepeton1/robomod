@@ -1,0 +1,799 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_SettingsCategory",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SettingsCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetSubEntries_Entries",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetSubEntries_Entries",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ASettingsEntry_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/SettingsEntry/WGT_ASettingsEntry.19"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_TextToUpper_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bVisible",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ASettingsEntry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/SettingsEntry/WGT_ASettingsEntry.19"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetCategoryVisibility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SettingsCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bVisible",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SettingsCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SettingsCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetSubEntries",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SettingsCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "Entries",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Entries",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ASettingsEntry_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/SettingsEntry/WGT_ASettingsEntry.19"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "tempArray",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "tempArray",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ASettingsEntry_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/SettingsEntry/WGT_ASettingsEntry.19"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetParent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PanelWidget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetChildIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetChildrenCount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetParent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PanelWidget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetChildAt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Widget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsWGT_ASettings_Entry",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ASettingsEntry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/SettingsEntry/WGT_ASettingsEntry.19"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsWGT_Settings_Category",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SettingsCategory_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_SettingsCategory_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_SettingsCategory_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_SettingsCategory_C:ExecuteUbergraph_WGT_SettingsCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_SettingsCategory_C:GetSubEntries'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.4"
+      },
+      {
+        "ObjectName": "Function'WGT_SettingsCategory_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.3"
+      },
+      {
+        "ObjectName": "Function'WGT_SettingsCategory_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.2"
+      },
+      {
+        "ObjectName": "Function'WGT_SettingsCategory_C:SetCategoryVisibility'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.1"
+      },
+      {
+        "ObjectName": "Function'WGT_SettingsCategory_C:ExecuteUbergraph_WGT_SettingsCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_120",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_SettingsName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Name",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "SubEntries",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "SubEntries",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference | UObjectWrapper",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ASettingsEntry_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/SettingsEntry/WGT_ASettingsEntry.19"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_SettingsCategory": {
+        "ObjectName": "Function'WGT_SettingsCategory_C:ExecuteUbergraph_WGT_SettingsCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.0"
+      },
+      "SetCategoryVisibility": {
+        "ObjectName": "Function'WGT_SettingsCategory_C:SetCategoryVisibility'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_SettingsCategory_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.2"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WGT_SettingsCategory_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.3"
+      },
+      "GetSubEntries": {
+        "ObjectName": "Function'WGT_SettingsCategory_C:GetSubEntries'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_SettingsCategory_C'Default__WGT_SettingsCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.6"
+    }
+  },
+  {
+    "Type": "WGT_SettingsCategory_C",
+    "Name": "Default__WGT_SettingsCategory_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.WGT_SettingsCategory_C'",
+    "Package": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Name": {
+        "Namespace": "",
+        "Key": "C695BF5E4CD7A6EB620EB39340910969",
+        "SourceString": "Category Name",
+        "LocalizedString": "Category Name"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_120",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SettingsCategory_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.14"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 2.0,
+          "Y": 4.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Category_Bar'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/T_Category_Bar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.12"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SettingsCategory_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.14"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_SettingsCategory_C:WidgetTree.Overlay_11.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SettingsCategory_C:WidgetTree.Overlay_11'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.8"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 30.0,
+        "Bottom": 30.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SettingsCategory_C:WidgetTree.Overlay_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.8"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.10"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SettingsCategory_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.14"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.11"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SettingsCategory_C:WidgetTree.Overlay_11.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 5.0
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.10"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_SettingsCategory_C:WidgetTree.Text_SettingsName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.13"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 25.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_SettingsCategory_C:WidgetTree.Image_120'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.7"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_SettingsName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SettingsCategory_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.14"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A9B798C9415BE6C9EFB63F8DF158A73D",
+        "SourceString": "CENTER CROSSHAIR",
+        "LocalizedString": "CENTER CROSSHAIR"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.768151,
+          "G": 0.119538,
+          "B": 0.001821,
+          "A": 1.0,
+          "Hex": "E36106"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 36
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Justification": "ETextJustify::Right",
+      "Margin": {
+        "Top": 5.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_SettingsCategory_C:WidgetTree.VerticalBox_17.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.11"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SettingsCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.5"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_SettingsCategory_C:WidgetTree.Overlay_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Settings/WGT_SettingsCategory.8"
+      }
+    }
+  }
+]

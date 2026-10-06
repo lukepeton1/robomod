@@ -1,0 +1,946 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CircularHitFeedback_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CircularHitFeedback_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.16"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_CircularHitFeedback_C:Anim_Spawn_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.15"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CircularHitFeedbackWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_CircularHit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_CircularHit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CircularHitFeedback_C'Default__WGT_CircularHitFeedback_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.1"
+    }
+  },
+  {
+    "Type": "WGT_CircularHitFeedback_C",
+    "Name": "Default__WGT_CircularHitFeedback_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.WGT_CircularHitFeedback_C'",
+    "Package": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CircularHitFeedback_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.16"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_CircularHitFeedback_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.3"
+        }
+      ],
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_CircularHitFeedback_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 4500.0,
+          "Bottom": 4500.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_CircularHitFeedback_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.2"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_CircularHitFeedback_C:WidgetTree.HBox_CircularHit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_CircularHit",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CircularHitFeedback_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.16"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_CircularHitFeedback_C:WidgetTree.HBox_CircularHit.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_CircularHitFeedback_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.3"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_CircularHitFeedback_C:WidgetTree.HBox_CircularHit'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.4"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_CircularHitFeedback_C:WidgetTree.HBox_CircularHit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.4"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_CircularHitFeedback_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_CircularHit",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CircularHitFeedback_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.16"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1507.0,
+          "Y": 2149.0
+        },
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'MI_HitImpact_Spike'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Player/MI_HitImpact_Spike.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CircularHitFeedback_C:WidgetTree.Overlay_1.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.14"
+      },
+      "RenderTransform": {
+        "Angle": 180.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_Spawn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CircularHitFeedback_C:Anim_Spawn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.15"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "53EB5E51-4A756CB6-8E2E0189-FBE78097",
+          "Name": "Image_CircularHit",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "53EB5E51-4A756CB6-8E2E0189-FBE78097",
+          "BindingName": "Image_CircularHit",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.11"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "5DC49571-4A4A57ED-7A08FE92-0FCE3DCC"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.10"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.10"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.11"
+    },
+    "Properties": {
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 15000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::KeepState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.8"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.9"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "AD33E362-4526F52C-B2D4EC9F-966AB0DD"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.7"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.10"
+        }
+      ],
+      "EvalOptions": {
+        "bEvalNearestSection": true
+      },
+      "EvaluationFieldGuid": "26091612-4C7FA828-2BEE268D-AA7DD0AA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.10"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -1
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.10"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.10"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": 30000
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "26091612-4C7FA828-2BEE268D-AA7DD0AA"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CircularHitFeedback_C:Anim_Spawn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.15"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "53EB5E51-4A756CB6-8E2E0189-FBE78097",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.11"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 15000
+                        },
+                        {
+                          "Value": 30000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.10"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "26091612-4C7FA828-2BEE268D-AA7DD0AA",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 30000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -1
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": 30000
+                }
+              }
+            ]
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          }
+        ]
+      },
+      "CompiledSignature": "278790AA-43FAE621-9D08F1A5-E7934089",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CircularHitFeedback_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.16"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_CircularHitFeedback_C:WidgetTree.Overlay_1.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_CircularHitFeedback_C:WidgetTree.HBox_CircularHit.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CircularHitFeedback_C:WidgetTree.Overlay_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.13"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CircularHitFeedback_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.13"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CircularHitFeedback_C:WidgetTree.Image_CircularHit'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_Spawn_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CircularHitFeedback_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_CircularHitFeedback_C:Anim_Spawn_INST.Anim_Spawn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.7"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_CircularHit",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "53EB5E51-4A756CB6-8E2E0189-FBE78097",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_CircularHitFeedback_C:Anim_Spawn_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.12"
+      },
+      "Signature": "278790AA-43FAE621-9D08F1A5-E7934089"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CircularHitFeedback_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'WGT_CircularHitFeedback_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CircularHitFeedback.2"
+      }
+    }
+  }
+]

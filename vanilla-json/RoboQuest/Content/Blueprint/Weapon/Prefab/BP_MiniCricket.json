@@ -1,0 +1,621 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_MiniCricket",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AStatManager:DelegateRepNotify__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateAction__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_TargetAction",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EAction'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetStatCurrentValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateRepNotify_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "value",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintEndInitialization",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AWeapon_C:OnBlueprintEndInitialization'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.10"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateAction_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "TargetAction",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EAction'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintUpdateCharacterOwner",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeapon:OnBlueprintUpdateCharacterOwner'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_MiniCricket_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.31"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_MiniCricket_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.13"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_MiniCricket_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.10"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_MiniCricket_C:ExecuteUbergraph_BP_MiniCricket'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_MiniCricket_C:OnBlueprintUpdateCharacterOwner'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.4"
+      },
+      {
+        "ObjectName": "Function'BP_MiniCricket_C:DelegateAction_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.3"
+      },
+      {
+        "ObjectName": "Function'BP_MiniCricket_C:OnBlueprintEndInitialization'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.2"
+      },
+      {
+        "ObjectName": "Function'BP_MiniCricket_C:DelegateRepNotify_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.1"
+      },
+      {
+        "ObjectName": "Function'BP_MiniCricket_C:ExecuteUbergraph_BP_MiniCricket'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentOwner",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "AmmoBoneName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_MiniCricket": {
+        "ObjectName": "Function'BP_MiniCricket_C:ExecuteUbergraph_BP_MiniCricket'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.0"
+      },
+      "DelegateRepNotify_Event_0": {
+        "ObjectName": "Function'BP_MiniCricket_C:DelegateRepNotify_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.1"
+      },
+      "OnBlueprintEndInitialization": {
+        "ObjectName": "Function'BP_MiniCricket_C:OnBlueprintEndInitialization'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.2"
+      },
+      "DelegateAction_Event_0": {
+        "ObjectName": "Function'BP_MiniCricket_C:DelegateAction_Event_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.3"
+      },
+      "OnBlueprintUpdateCharacterOwner": {
+        "ObjectName": "Function'BP_MiniCricket_C:OnBlueprintUpdateCharacterOwner'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_MiniCricket_C'Default__BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.6"
+    }
+  },
+  {
+    "Type": "BP_MiniCricket_C",
+    "Name": "Default__BP_MiniCricket_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Prefab/BP_Minicricket.BP_MiniCricket_C'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket",
+    "Template": {
+      "ObjectName": "BP_AWeapon_C'Default__BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.32"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "AmmoBoneName": "W_Rocket",
+      "WeaponStatManager": {
+        "ObjectName": "AStatManager'Default__BP_MiniCricket_C:WeaponStatManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.8"
+      },
+      "WeaponSkillManager": {
+        "ObjectName": "ASkillManager'Default__BP_MiniCricket_C:WeaponSkillManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.7"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_MiniCricket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.14"
+      },
+      "IdleSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_MiniCricket_C:IdleSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.9"
+      },
+      "LowCoolingColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "HighCoolingColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_MiniCricket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.14"
+      }
+    }
+  },
+  {
+    "Type": "ASkillManager",
+    "Name": "WeaponSkillManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ASkillManager'",
+    "Outer": {
+      "ObjectName": "BP_MiniCricket_C'Default__BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.6"
+    },
+    "Template": {
+      "ObjectName": "ASkillManager'Default__BP_AWeapon_C:WeaponSkillManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.33"
+    }
+  },
+  {
+    "Type": "AStatManager",
+    "Name": "WeaponStatManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AStatManager'",
+    "Outer": {
+      "ObjectName": "BP_MiniCricket_C'Default__BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.6"
+    },
+    "Template": {
+      "ObjectName": "AStatManager'Default__BP_AWeapon_C:WeaponStatManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.34"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_MiniCricket_C'Default__BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.6"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_AWeapon_C:IdleSoundComponent'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.35"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_MiniCricket_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.14"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MiniCricket_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_MiniCricket_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.11"
+      },
+      "VariableGuid": "94534FCB-48BA0333-F5FDFF91-0098A177",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.5"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_MiniCricket_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.12"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_MiniCricket_C'Default__BP_MiniCricket_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_Minicricket.6"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_AWeapon_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.42"
+    }
+  }
+]

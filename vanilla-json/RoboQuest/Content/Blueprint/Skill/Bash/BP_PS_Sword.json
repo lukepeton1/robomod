@@ -1,0 +1,357 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_PS_Sword",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PS_Sword_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPlaySkillAnimNotify",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PS_Sword_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill:OnPlaySkillAnimNotify'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerSkillCustomEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PS_Sword_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ASkill:OnTriggerSkillCustomEffect'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnResetAnimationIndex",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PS_Sword_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetSkillAnimation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PS_Sword_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill:GetSkillAnimation'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Animation'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'Animation'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PS_Sword_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Skill/Bash/BP_PS_Sword",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_PS_Sword_C:ExecuteUbergraph_BP_PS_Sword'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill_Bash'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_PS_Sword_C:GetSkillAnimation'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.4"
+      },
+      {
+        "ObjectName": "Function'BP_PS_Sword_C:OnResetAnimationIndex'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.3"
+      },
+      {
+        "ObjectName": "Function'BP_PS_Sword_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.2"
+      },
+      {
+        "ObjectName": "Function'BP_PS_Sword_C:OnPlaySkillAnimNotify'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.1"
+      },
+      {
+        "ObjectName": "Function'BP_PS_Sword_C:ExecuteUbergraph_BP_PS_Sword'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ShootAnimationPool",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "ShootAnimationPool",
+          "Flags": "RF_Public",
+          "ElementSize": 40,
+          "Struct": {
+            "ObjectName": "Class'Animation'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentAnimIndex",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AnimationResetDelay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TimerResetAnimation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PS_Sword": {
+        "ObjectName": "Function'BP_PS_Sword_C:ExecuteUbergraph_BP_PS_Sword'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.0"
+      },
+      "OnPlaySkillAnimNotify": {
+        "ObjectName": "Function'BP_PS_Sword_C:OnPlaySkillAnimNotify'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.1"
+      },
+      "OnTriggerSkillCustomEffect": {
+        "ObjectName": "Function'BP_PS_Sword_C:OnTriggerSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.2"
+      },
+      "OnResetAnimationIndex": {
+        "ObjectName": "Function'BP_PS_Sword_C:OnResetAnimationIndex'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.3"
+      },
+      "GetSkillAnimation": {
+        "ObjectName": "Function'BP_PS_Sword_C:GetSkillAnimation'",
+        "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PS_Sword_C'Default__BP_PS_Sword_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Bash/BP_PS_Sword.6"
+    }
+  },
+  {
+    "Type": "BP_PS_Sword_C",
+    "Name": "Default__BP_PS_Sword_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Skill/Bash/BP_PS_Sword.BP_PS_Sword_C'",
+    "Package": "/Game/Blueprint/Skill/Bash/BP_PS_Sword",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ShootAnimationPool": [
+        {
+          "player": [
+            {
+              "ObjectName": "AnimMontage'AM_SuperBot_Slash00_TPV'",
+              "ObjectPath": "/Game/Animation/Player/SuperBot_TPV/Animation/Skills/AM_SuperBot_Slash00_TPV.0"
+            },
+            {
+              "ObjectName": "AnimMontage'AM_SuperBot_Player_Bash01_FPV'",
+              "ObjectPath": "/Game/Animation/Player/SuperBot_FPV/Animation/Skill/AM_SuperBot_Player_Bash01_FPV.0"
+            }
+          ],
+          "weapon": [
+            null,
+            null
+          ],
+          "sound": null
+        },
+        {
+          "player": [
+            {
+              "ObjectName": "AnimMontage'AM_SuperBot_Slash01_TPV'",
+              "ObjectPath": "/Game/Animation/Player/SuperBot_TPV/Animation/Skills/AM_SuperBot_Slash01_TPV.0"
+            },
+            {
+              "ObjectName": "AnimMontage'AM_SuperBot_Player_Bash01_FPV'",
+              "ObjectPath": "/Game/Animation/Player/SuperBot_FPV/Animation/Skill/AM_SuperBot_Player_Bash01_FPV.0"
+            }
+          ],
+          "weapon": [
+            null,
+            null
+          ],
+          "sound": null
+        },
+        {
+          "player": [
+            {
+              "ObjectName": "AnimMontage'AM_SuperBot_Slash02_TPV'",
+              "ObjectPath": "/Game/Animation/Player/SuperBot_TPV/Animation/Skills/AM_SuperBot_Slash02_TPV.0"
+            },
+            {
+              "ObjectName": "AnimMontage'AM_SuperBot_Player_Bash02_FPV'",
+              "ObjectPath": "/Game/Animation/Player/SuperBot_FPV/Animation/Skill/AM_SuperBot_Player_Bash02_FPV.0"
+            }
+          ],
+          "weapon": [
+            null,
+            null
+          ],
+          "sound": null
+        }
+      ],
+      "AnimationResetDelay": 0.9,
+      "TimerResetAnimation": {
+        "Handle": 0
+      },
+      "GameplayTags": 256
+    }
+  }
+]

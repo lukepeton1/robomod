@@ -1,0 +1,873 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_ButtonRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'EOSUserInterface_AccountSelectCheckbox_Ryseup_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_AccountSelectCheckbox_Ryseup.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChildToGrid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'GridSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'EOSDefaultUserInterface_AccountSelectText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSDefaultUserInterface_AccountSelectText.1"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function'EOSUserInterface_AccountSelectCheckbox_Ryseup_C:On Changed__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_AccountSelectCheckbox_Ryseup.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChildToGrid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'GridSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_Margin",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'Margin'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Context",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_AvailableCandidates",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_Event_AvailableCandidates",
+          "Flags": "RF_Public",
+          "ElementSize": 200,
+          "Struct": {
+            "ObjectName": "Class'EOSUserInterface_CandidateEOSAccount'",
+            "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 200,
+        "Struct": {
+          "ObjectName": "Class'EOSUserInterface_CandidateEOSAccount'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_Selected_",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Candidate",
+        "Flags": "RF_Public",
+        "ElementSize": 200,
+        "Struct": {
+          "ObjectName": "Class'EOSUserInterface_CandidateEOSAccount'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_RemoveItem_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_WGT_MenuButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ButtonRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Candidate Selection Changed",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Selected?",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Candidate",
+        "Flags": "RF_Public",
+        "ElementSize": 200,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'EOSUserInterface_CandidateEOSAccount'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetupUserInterface",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Context",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AvailableCandidates",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "AvailableCandidates",
+          "Flags": "RF_Public",
+          "ElementSize": 200,
+          "Struct": {
+            "ObjectName": "Class'EOSUserInterface_CandidateEOSAccount'",
+            "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_OnlinePopupUserInterfaceBase_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/WGT_OnlinePopupUserInterfaceBase.7"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+      },
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.8"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:ExecuteUbergraph_EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:SetupUserInterface'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.3"
+      },
+      {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:Candidate Selection Changed'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.2"
+      },
+      {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:BndEvt__EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_WGT_MenuButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.1"
+      },
+      {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:ExecuteUbergraph_EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CandidateGrid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'GridPanel'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_MenuButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MenuButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Context",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Selected Candidates",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Selected Candidates",
+          "Flags": "RF_Public",
+          "ElementSize": 200,
+          "Struct": {
+            "ObjectName": "Class'EOSUserInterface_CandidateEOSAccount'",
+            "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup": {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:ExecuteUbergraph_EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.0"
+      },
+      "BndEvt__EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_WGT_MenuButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature": {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:BndEvt__EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_WGT_MenuButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.1"
+      },
+      "Candidate Selection Changed": {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:Candidate Selection Changed'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.2"
+      },
+      "SetupUserInterface": {
+        "ObjectName": "Function'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:SetupUserInterface'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform'",
+          "ObjectPath": "/Script/OnlineSubsystemRedpointEOS"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'Default__EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.5"
+    }
+  },
+  {
+    "Type": "EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C",
+    "Name": "Default__EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+    "Package": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup",
+    "Template": {
+      "ObjectName": "WGT_OnlinePopupUserInterfaceBase_C'Default__WGT_OnlinePopupUserInterfaceBase_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/WGT_OnlinePopupUserInterfaceBase.8"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "BackgroundBlur",
+    "Name": "BackgroundBlur_87",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BackgroundBlur'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "BlurStrength": 10.0,
+      "LowQualityFallbackBrush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.2,
+            "G": 0.2,
+            "B": 0.2,
+            "A": 1.0,
+            "Hex": "7C7C7C"
+          }
+        },
+        "DrawAs": "ESlateBrushDrawType::Image"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BackgroundBlurSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.BackgroundBlur_87.BackgroundBlurSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.7"
+        }
+      ],
+      "Visibility": "ESlateVisibility::Visible"
+    }
+  },
+  {
+    "Type": "BackgroundBlurSlot",
+    "Name": "BackgroundBlurSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BackgroundBlurSlot'",
+    "Outer": {
+      "ObjectName": "BackgroundBlur'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.BackgroundBlur_87'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "BackgroundBlur'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.BackgroundBlur_87'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.6"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_64'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.13"
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.4"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "WGT_MenuButton",
+          "DelegatePropertyName": "DispatchOnValidateButton",
+          "FunctionNameToBind": "BndEvt__EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_WGT_MenuButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "GridPanel",
+    "Name": "CandidateGrid",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'GridPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+    },
+    "Properties": {
+      "ColumnFill": [
+        0.0,
+        1.0
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.16"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_155",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "EpicOnlineSubsystem",
+        "Key": "9557B75B43756F3B652350A36A3D5562",
+        "SourceString": "Select which accounts you want to link to your Epic Games account.",
+        "LocalizedString": "Select which accounts you want to link to your Epic Games account."
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_GameplayText'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_GameplayText.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 50
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 1500.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.15"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_83",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "EpicOnlineSubsystem",
+        "Key": "5B6EC54A41A3267FB821A9A4210758CA",
+        "SourceString": "Link Accounts",
+        "LocalizedString": "Link Accounts"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "Size": 60
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_62",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.14"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.15"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.16"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_64.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_64",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_64.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BackgroundBlurSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.BackgroundBlur_87.BackgroundBlurSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.7"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.TextBlock_83'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 20.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.TextBlock_155'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.10"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Top": 10.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+      },
+      "Content": {
+        "ObjectName": "GridPanel'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.CandidateGrid'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+      },
+      "Content": {
+        "ObjectName": "WGT_MenuButton_C'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.WGT_MenuButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.19"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_64'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.13"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_64'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.13"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.12"
+      }
+    }
+  },
+  {
+    "Type": "WGT_MenuButton_C",
+    "Name": "WGT_MenuButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.WGT_MenuButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.20"
+    },
+    "Template": {
+      "ObjectName": "WGT_MenuButton_C'Default__WGT_MenuButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.10"
+    },
+    "Properties": {
+      "ButtonTitle": {
+        "Namespace": "",
+        "Key": "54918A204C1291D6DFDFF195C053B25A",
+        "SourceString": "Continue with login",
+        "LocalizedString": "Continue with login"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.17"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "BackgroundBlur'EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup_C:WidgetTree.BackgroundBlur_87'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/Online/EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Ryseup.6"
+      }
+    }
+  }
+]

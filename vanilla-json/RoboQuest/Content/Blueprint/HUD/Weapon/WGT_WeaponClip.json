@@ -1,0 +1,2494 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_WeaponClip_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_WeaponClip_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.40"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:FadeIn_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.38"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:FadeOut_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.39"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:Bump_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.37"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponClipWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "FadeOut",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FadeIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SBox_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SizeBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_AmmoInClip",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_PercentCooling",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_WeaponClip_C'Default__WGT_WeaponClip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.1"
+    }
+  },
+  {
+    "Type": "WGT_WeaponClip_C",
+    "Name": "Default__WGT_WeaponClip_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.WGT_WeaponClip_C'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip",
+    "Properties": {
+      "CoolingOverheatColor": {
+        "R": 1.0,
+        "G": 0.078187,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF4F00"
+      },
+      "CoolingLerpColor1": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FFFF00"
+      },
+      "CoolingLerpColor2": {
+        "R": 1.0,
+        "G": 0.201556,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF7C00"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_41",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponClip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.40"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.4"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_WeaponClip_C:WidgetTree.SBox_Root.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.33"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.2"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 10.0,
+        "Bottom": 13.0
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.2"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_WeaponClip_C:WidgetTree.Text_PercentCooling'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.36"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.2"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.2"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_WeaponClip_C:WidgetTree.SizeBox_93'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.32"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Bump",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:Bump_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.37"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "085D03A8-44F502EA-E0CB1CBA-6B1FE5DA",
+          "Name": "WGT_WeaponClip_C_25",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "085D03A8-44F502EA-E0CB1CBA-6B1FE5DA",
+          "BindingName": "WGT_WeaponClip_C_25",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.9"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 12001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "7F82F175-4F4207EA-27F9BFAD-2375A20F"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FadeIn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.38"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "4943755D-424685A4-57E28795-0521943C",
+          "Name": "WGT_WeaponClip_C_13",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "13F3ECCC-467652CF-B6FA5884-7D885846",
+          "Name": "SBox_Root",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'SizeBox'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "4943755D-424685A4-57E28795-0521943C",
+          "BindingName": "WGT_WeaponClip_C_13",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.29"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "13F3ECCC-467652CF-B6FA5884-7D885846",
+          "BindingName": "SizeBox_96",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneByteTrack'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.22"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 6000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "364BC373-4512B190-964C9D99-5177CDA0"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FadeOut",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:FadeOut_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.39"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "E6CCACE3-479A04E6-ECB359B6-A559B369",
+          "Name": "WGT_WeaponClip_C_16",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "93DC9114-41DA4FEA-2721ECBE-AD15CBBF",
+          "Name": "SBox_Root",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'SizeBox'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "E6CCACE3-479A04E6-ECB359B6-A559B369",
+          "BindingName": "WGT_WeaponClip_C_16",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.30"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "93DC9114-41DA4FEA-2721ECBE-AD15CBBF",
+          "BindingName": "SizeBox_96",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneByteTrack'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.23"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 9001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "0C4BB81D-4CFC079A-E57B888D-91DFD963"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.9"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 24
+      },
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.10"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.11"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "3FB66F10-4ED33954-CECCA380-606D03D4"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_WeaponClip_C:Bump_INST.Bump'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.5"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.8"
+        }
+      ],
+      "EvaluationFieldGuid": "6DB30182-46B5BA3C-9C5F0F96-1B030BE0",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.8"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6DB30182-46B5BA3C-9C5F0F96-1B030BE0"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.8"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.8"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.28"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.28"
+    }
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteTrack'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.22"
+    },
+    "Properties": {
+      "ByteCurve": {
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          4
+        ],
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.12"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.13"
+        }
+      },
+      "Signature": "D12D0DF7-4F114750-694F0B95-8B1E3041"
+    }
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteTrack'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.23"
+    },
+    "Properties": {
+      "ByteCurve": {
+        "Times": [
+          {
+            "Value": 9000
+          }
+        ],
+        "Values": [
+          2
+        ],
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.16"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.17"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 9000
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 9000
+            }
+          }
+        }
+      },
+      "Signature": "60CBE1C5-46F374CA-4080E2B0-BD198969"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_WeaponClip_C:FadeIn_INST.FadeIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.6"
+    },
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Class'ESlateVisibility'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Visibility",
+        "PropertyPath": "Visibility",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.20"
+        }
+      ],
+      "EvaluationFieldGuid": "8F67D8D9-49CED85D-1D1ECD9F-AE7FC409",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.20"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "8F67D8D9-49CED85D-1D1ECD9F-AE7FC409"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_WeaponClip_C:FadeOut_INST.FadeOut'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.7"
+    },
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Class'ESlateVisibility'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Visibility",
+        "PropertyPath": "Visibility",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.21"
+        }
+      ],
+      "EvaluationFieldGuid": "ECE26233-47D3C08A-DA10B898-2BFB0326",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.21"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 9000
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 9000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "ECE26233-47D3C08A-DA10B898-2BFB0326"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:Bump_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.37"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_WeaponClip_C:Bump_INST.Bump.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.8"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "085D03A8-44F502EA-E0CB1CBA-6B1FE5DA"
+          }
+        ]
+      },
+      "CompiledSignature": "2E991C1D-42613ACC-0F1DF996-80CF736A",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.38"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "13F3ECCC-467652CF-B6FA5884-7D885846",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneByteTrack'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.22"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBytePropertySectionTemplate",
+                  "Data": {
+                    "ByteCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        }
+                      ],
+                      "DefaultValue": 0,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        4
+                      ],
+                      "Enum": {
+                        "ObjectName": "Class'ESlateVisibility'",
+                        "ObjectPath": "/Script/UMG"
+                      }
+                    },
+                    "PropertyData": {
+                      "PropertyName": "Visibility",
+                      "PropertyPath": "Visibility"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.20"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "8F67D8D9-49CED85D-1D1ECD9F-AE7FC409",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 6000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.27"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "4943755D-424685A4-57E28795-0521943C"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "C7192007-42116177-8DCBB780-334356A2",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_WeaponClip_C:FadeOut_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.39"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "93DC9114-41DA4FEA-2721ECBE-AD15CBBF",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneByteTrack'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.23"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBytePropertySectionTemplate",
+                  "Data": {
+                    "ByteCurve": {
+                      "Times": [
+                        {
+                          "Value": 9000
+                        }
+                      ],
+                      "DefaultValue": 0,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        2
+                      ],
+                      "Enum": {
+                        "ObjectName": "Class'ESlateVisibility'",
+                        "ObjectPath": "/Script/UMG"
+                      }
+                    },
+                    "PropertyData": {
+                      "PropertyName": "Visibility",
+                      "PropertyPath": "Visibility"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneByteSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.21"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "ECE26233-47D3C08A-DA10B898-2BFB0326",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 9000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.28"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "E6CCACE3-479A04E6-ECB359B6-A559B369"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 9000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 9000
+                }
+              },
+              "UpperBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 9000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 9000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "5FD82C2D-40867027-380C64A1-B64BDCD2",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.29"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 6000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.14"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.15"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 6000
+            }
+          }
+        }
+      },
+      "Signature": "B98E0927-4659BA70-E5AA02A0-36F0F783"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.30"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.18"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.19"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 9000
+            }
+          }
+        }
+      },
+      "Signature": "3C1AD07A-4BE40C06-8D2A988E-CEA28721"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_WeaponClip_C:FadeIn_INST.FadeIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.6"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.27"
+        }
+      ],
+      "EvaluationFieldGuid": "22F46BFB-4AD6F157-3A142AB4-263DD8AC",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 6000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "22F46BFB-4AD6F157-3A142AB4-263DD8AC"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_WeaponClip_C:FadeOut_INST.FadeOut'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.7"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.28"
+        }
+      ],
+      "EvaluationFieldGuid": "4B794BF7-43DFFC4C-ADC3789C-80F1B5D6",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_WeaponClip_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.28"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 9000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4B794BF7-43DFFC4C-ADC3789C-80F1B5D6"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_Root",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponClip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.40"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_WeaponClip_C:WidgetTree.SBox_Root.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.33"
+        }
+      ],
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_93",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponClip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.40"
+    },
+    "Properties": {
+      "WidthOverride": 75.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_WeaponClip_C:WidgetTree.SizeBox_93.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.4"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_WeaponClip_C:WidgetTree.SBox_Root'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.31"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Right": 10.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_WeaponClip_C:WidgetTree.SBox_Root'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.31"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.2"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_WeaponClip_C:WidgetTree.SizeBox_93'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.32"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 10.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_WeaponClip_C:WidgetTree.SizeBox_93'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.32"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_WeaponClip_C:WidgetTree.Text_AmmoInClip'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.35"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_AmmoInClip",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponClip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.40"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "F59C151A4FA8A34E9FCD16A770BA7CB6",
+        "SourceString": "10",
+        "LocalizedString": "10"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.5,
+          "Hex": "7FFFFFFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 35
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.5,
+        "Hex": "7F000000"
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_WeaponClip_C:WidgetTree.SizeBox_93.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.34"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_PercentCooling",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponClip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.40"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7936CE5B405138C74C1395A013434325",
+        "SourceString": "%",
+        "LocalizedString": "%"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.5,
+          "Hex": "7FFFFFFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 25
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.5,
+        "Hex": "7F000000"
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_WeaponClip_C:WidgetTree.HorizontalBox_41.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.3"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Bump_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_WeaponClip_C:Bump_INST.Bump'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.5"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_WeaponClip_C_25",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "085D03A8-44F502EA-E0CB1CBA-6B1FE5DA",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "Bump",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_WeaponClip_C:Bump_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.24"
+      },
+      "Signature": "2E991C1D-42613ACC-0F1DF996-80CF736A"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FadeIn_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_WeaponClip_C:FadeIn_INST.FadeIn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.6"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_WeaponClip_C_13",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "4943755D-424685A4-57E28795-0521943C",
+          "bIsRootWidget": true
+        },
+        {
+          "WidgetName": "SBox_Root",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "13F3ECCC-467652CF-B6FA5884-7D885846",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "FadeIn",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_WeaponClip_C:FadeIn_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.25"
+      },
+      "Signature": "C7192007-42116177-8DCBB780-334356A2"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FadeOut_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_WeaponClip_C:FadeOut_INST.FadeOut'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.7"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_WeaponClip_C_16",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "E6CCACE3-479A04E6-ECB359B6-A559B369",
+          "bIsRootWidget": true
+        },
+        {
+          "WidgetName": "SBox_Root",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "93DC9114-41DA4FEA-2721ECBE-AD15CBBF",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "FadeOut",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_WeaponClip_C:FadeOut_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.26"
+      },
+      "Signature": "5FD82C2D-40867027-380C64A1-B64BDCD2"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WGT_WeaponClip_C:WidgetTree.SBox_Root'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.31"
+      }
+    }
+  }
+]

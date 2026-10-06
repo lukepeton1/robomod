@@ -1,0 +1,3643 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetCrosshairImages",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Crosshair_CrossNoSpawnOffset_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DynamicCrosshairWidget:GetCrosshairImages'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Crosshair_CrossNoSpawnOffset_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.40"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CrosshairWidget_Cross'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Crosshair_CrossNoSpawnOffset_C:GetCrosshairImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_CriticalShot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Border_DownSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Border'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Border_LeftSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Border'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Border_RightSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Border'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Border_UpSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Border'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_DownSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_LeftSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_RightSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_UpSide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "O_SquareCrosshair",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_Crosshair_DotCenter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Crosshair_DotCenter_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_DotCenter.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "GetCrosshairImages": {
+        "ObjectName": "Function'WGT_Crosshair_CrossNoSpawnOffset_C:GetCrosshairImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Crosshair_CrossNoSpawnOffset_C'Default__WGT_Crosshair_CrossNoSpawnOffset_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.2"
+    }
+  },
+  {
+    "Type": "WGT_Crosshair_CrossNoSpawnOffset_C",
+    "Name": "Default__WGT_Crosshair_CrossNoSpawnOffset_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.WGT_Crosshair_CrossNoSpawnOffset_C'",
+    "Package": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset",
+    "Properties": {
+      "bIgnoreSpawnOffset": true,
+      "SpreadPixelDivider": 0.4,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_DownSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_DownSide.BorderSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.35"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 20.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_LeftSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_LeftSide.BorderSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.37"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -20.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_RightSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_RightSide.BorderSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.36"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 20.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_UpSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_UpSide.BorderSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.38"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -20.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_DownSide'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.3"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "Parent": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_DownSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.3"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Image_DownSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.11"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_LeftSide'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "Parent": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_LeftSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.4"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Image_LeftSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.12"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_RightSide'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.5"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "Parent": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_RightSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.5"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Image_RightSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.13"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_UpSide'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "Parent": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_UpSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.6"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Image_UpSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.14"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_DownSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4.0,
+          "Y": 26.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_DownSide.BorderSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_LeftSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 26.0,
+          "Y": 4.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_LeftSide.BorderSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_RightSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 26.0,
+          "Y": 4.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_RightSide.BorderSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_UpSide",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4.0,
+          "Y": 24.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_UpSide.BorderSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_CriticalShot",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.40"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "5431E7BC-487E7316-7F68D493-A067AA17",
+          "Name": "Image_DownSide",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "0CA35B7E-428EE36B-C0A2F582-03EB1DA3",
+          "Name": "Image_RightSide",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "9A6A6483-4F71CDF0-879E318E-70D99ED8",
+          "Name": "Image_LeftSide",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "7ADFEDC1-437433DF-53EF73BE-784FB7E4",
+          "Name": "Image_UpSide",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "5431E7BC-487E7316-7F68D493-A067AA17",
+          "BindingName": "Image_DownSide",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.28"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "0CA35B7E-428EE36B-C0A2F582-03EB1DA3",
+          "BindingName": "Image_RightSide",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.30"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "9A6A6483-4F71CDF0-879E318E-70D99ED8",
+          "BindingName": "Image_LeftSide",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.29"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "7ADFEDC1-437433DF-53EF73BE-784FB7E4",
+          "BindingName": "Image_UpSide",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.31"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "C55E9B92-44FFA8BA-3B9E7FB7-74B9DDFA"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.24"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.24"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.26"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.26"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.27"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.28"
+    },
+    "Properties": {
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::RestoreState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.16"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.17"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18001
+            }
+          }
+        }
+      },
+      "Signature": "4EE18505-497A719A-B6D5F6A1-18F2FE9C"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.29"
+    },
+    "Properties": {
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::RestoreState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.18"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.19"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18001
+            }
+          }
+        }
+      },
+      "Signature": "70542FB5-416F55C2-1D56EAB7-8DE97599"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.30"
+    },
+    "Properties": {
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::RestoreState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.20"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.21"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18001
+            }
+          }
+        }
+      },
+      "Signature": "800C144D-489D6AD1-ACB0CFBC-BF79F44D"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.31"
+    },
+    "Properties": {
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 3000
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.1666666E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.00011111112,
+              "LeaveTangent": -0.00011111112,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.666667E-05,
+              "LeaveTangent": 6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::RestoreState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.22"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.23"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18001
+            }
+          }
+        }
+      },
+      "Signature": "93974491-4557B094-68448B86-AD0B83EC"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.24"
+        }
+      ],
+      "EvalOptions": {
+        "bEvalNearestSection": true
+      },
+      "EvaluationFieldGuid": "F8E54198-4D14D68C-FBB1A6A1-38390D7E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.24"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -1
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.24"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.24"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": 18001
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F8E54198-4D14D68C-FBB1A6A1-38390D7E"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.25"
+        }
+      ],
+      "EvalOptions": {
+        "bEvalNearestSection": true
+      },
+      "EvaluationFieldGuid": "976282F5-45FAE945-AC765BB3-D63B7260",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -1
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": 18001
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "976282F5-45FAE945-AC765BB3-D63B7260"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.26"
+        }
+      ],
+      "EvalOptions": {
+        "bEvalNearestSection": true
+      },
+      "EvaluationFieldGuid": "6D39F983-48CD1FC8-556508B4-D812141B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -1
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": 18001
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6D39F983-48CD1FC8-556508B4-D812141B"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.27"
+        }
+      ],
+      "EvalOptions": {
+        "bEvalNearestSection": true
+      },
+      "EvaluationFieldGuid": "0AD32F2B-45796AB9-2B7DB28F-DE6A93D9",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -1
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": 18001
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0AD32F2B-45796AB9-2B7DB28F-DE6A93D9"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.40"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "5431E7BC-487E7316-7F68D493-A067AA17",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.28"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::RestoreState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.24"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          },
+          {
+            "Key": {
+              "Value": 1
+            },
+            "Value": {
+              "ObjectBindingID": "0CA35B7E-428EE36B-C0A2F582-03EB1DA3",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.30"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::RestoreState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.26"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          },
+          {
+            "Key": {
+              "Value": 2
+            },
+            "Value": {
+              "ObjectBindingID": "9A6A6483-4F71CDF0-879E318E-70D99ED8",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.29"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::RestoreState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.25"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          },
+          {
+            "Key": {
+              "Value": 3
+            },
+            "Value": {
+              "ObjectBindingID": "7ADFEDC1-437433DF-53EF73BE-784FB7E4",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.31"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 3000
+                        },
+                        {
+                          "Value": 9000
+                        },
+                        {
+                          "Value": 18000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 4.1666666E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": -0.00011111112,
+                            "LeaveTangent": -0.00011111112,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 6.666667E-05,
+                            "LeaveTangent": 6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::RestoreState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot.MovieSceneColorTrack_3.MovieSceneColorSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.27"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 3
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "F8E54198-4D14D68C-FBB1A6A1-38390D7E",
+              "Value": {
+                "Value": 0
+              }
+            },
+            {
+              "Key": "6D39F983-48CD1FC8-556508B4-D812141B",
+              "Value": {
+                "Value": 1
+              }
+            },
+            {
+              "Key": "976282F5-45FAE945-AC765BB3-D63B7260",
+              "Value": {
+                "Value": 2
+              }
+            },
+            {
+              "Key": "0AD32F2B-45796AB9-2B7DB28F-DE6A93D9",
+              "Value": {
+                "Value": 3
+              }
+            }
+          ]
+        }
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 18001
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 18001
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 4
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 3
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -1
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -1
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -1
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -1
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 4
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 3
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 4
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 3
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": 18001
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": 18001
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": 18001
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": 18001
+                }
+              }
+            ]
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 3,
+                "TearDownIndex": 65532
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 1,
+                "TearDownIndex": 65534
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 3
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 2,
+                "TearDownIndex": 65533
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 3,
+                "TearDownIndex": 65532
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 1,
+                "TearDownIndex": 65534
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 3
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 2,
+                "TearDownIndex": 65533
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 3,
+                "TearDownIndex": 65532
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 1,
+                "TearDownIndex": 65534
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 3
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 2,
+                "TearDownIndex": 65533
+              }
+            ]
+          }
+        ]
+      },
+      "CompiledSignature": "3856C9A5-4AB852FB-C12F41AA-E47D8AD4",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "O_SquareCrosshair",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.35"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.36"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.37"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.38"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.34"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+      },
+      "Content": {
+        "ObjectName": "WGT_Crosshair_DotCenter_C'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.WGT_Crosshair_DotCenter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.39"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+      },
+      "Content": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_DownSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.3"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+      },
+      "Content": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_RightSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+      },
+      "Content": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_LeftSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.4"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+      },
+      "Content": {
+        "ObjectName": "Border'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.Border_UpSide'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.6"
+      }
+    }
+  },
+  {
+    "Type": "WGT_Crosshair_DotCenter_C",
+    "Name": "WGT_Crosshair_DotCenter",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_DotCenter.WGT_Crosshair_DotCenter_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.41"
+    },
+    "Template": {
+      "ObjectName": "WGT_Crosshair_DotCenter_C'Default__WGT_Crosshair_DotCenter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_DotCenter.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.34"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_CriticalShot_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Crosshair_CrossNoSpawnOffset_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.1"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.Anim_CriticalShot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.15"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_DownSide",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "5431E7BC-487E7316-7F68D493-A067AA17",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_RightSide",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "0CA35B7E-428EE36B-C0A2F582-03EB1DA3",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_LeftSide",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "9A6A6483-4F71CDF0-879E318E-70D99ED8",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_UpSide",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "7ADFEDC1-437433DF-53EF73BE-784FB7E4",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_Crosshair_CrossNoSpawnOffset_C:Anim_CriticalShot_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.32"
+      },
+      "Signature": "3856C9A5-4AB852FB-C12F41AA-E47D8AD4"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Crosshair_CrossNoSpawnOffset_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Crosshair_CrossNoSpawnOffset_C:WidgetTree.O_SquareCrosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_CrossNoSpawnOffset.33"
+      }
+    }
+  }
+]

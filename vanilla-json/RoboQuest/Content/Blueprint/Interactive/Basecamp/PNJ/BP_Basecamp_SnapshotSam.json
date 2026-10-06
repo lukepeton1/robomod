@@ -1,0 +1,253 @@
+[
+  {
+    "Type": "Function",
+    "Name": "IsUnlocked",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_SnapshotSam_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_PNJ_Basecamp_C:IsUnlocked'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_PNJ_Basecamp.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLocalPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HavePermanentReward_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Basecamp_SnapshotSam_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PNJ_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_PNJ_Basecamp.13"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Basecamp_SnapshotSam_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.7"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Basecamp_SnapshotSam_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.4"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Basecamp_SnapshotSam_C:IsUnlocked'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.0"
+      }
+    ],
+    "FuncMap": {
+      "IsUnlocked": {
+        "ObjectName": "Function'BP_Basecamp_SnapshotSam_C:IsUnlocked'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Basecamp_SnapshotSam_C'Default__BP_Basecamp_SnapshotSam_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.2"
+    }
+  },
+  {
+    "Type": "BP_Basecamp_SnapshotSam_C",
+    "Name": "Default__BP_Basecamp_SnapshotSam_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.BP_Basecamp_SnapshotSam_C'",
+    "Package": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam",
+    "Template": {
+      "ObjectName": "BP_PNJ_Basecamp_C'Default__BP_PNJ_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_PNJ_Basecamp.14"
+    },
+    "Properties": {
+      "InterractAnimation": {
+        "ObjectName": "AnimMontage'AM_SnapshotSam_Quest'",
+        "ObjectPath": "/Game/Animation/Quest/SnapshotSam/Animation/AM_SnapshotSam_Quest.0"
+      },
+      "InterractAnimationLockDelay": 3.2,
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Basecamp_SnapshotSam_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.3"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Basecamp_SnapshotSam_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Basecamp_SnapshotSam_C'Default__BP_Basecamp_SnapshotSam_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.2"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_PNJ_Basecamp_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/BP_PNJ_Basecamp.15"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 150.0,
+        "Y": 150.0,
+        "Z": 150.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_SnapshotSam_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkeletalMeshComponent'BP_Basecamp_SnapshotSam_C:SkeletalMesh_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_APNJ_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/BP_APNJ.5"
+            },
+            "SCSVariableName": "SkeletalMesh",
+            "AssociatedGuid": "EE5A7133-4C8F366F-A57468BB-D372D06F"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_SnapshotSam_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Basecamp_SnapshotSam_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Basecamp_SnapshotSam_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.5"
+      },
+      "VariableGuid": "F1F01E06-44BC7A11-89620A9A-22B968B6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_SnapshotSam_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.1"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Basecamp_SnapshotSam_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Basecamp_SnapshotSam_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Basecamp/PNJ/BP_Basecamp_SnapshotSam.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'BP_APNJ_C:SkeletalMesh_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/BP_APNJ.15"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_SnapshotSam_C'",
+        "ObjectPath": "/Game/Animation/Quest/SnapshotSam/ABP_SnapshotSam.2"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_SnapshotSam'",
+        "ObjectPath": "/Game/Animation/Quest/SnapshotSam/SK_SnapshotSam.0"
+      }
+    }
+  }
+]

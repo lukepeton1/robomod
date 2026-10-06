@@ -1,0 +1,4205 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_HUD_Video",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsPressed",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Key",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Key_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_KeyKey_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateOnPlayersReady__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsBasecampMap_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsMultiPlayerGame_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMediaPlayerMediaEvent__DelegateSignature'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateOnPlayerDisconnected__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasError_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_OpenSource_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllChildren_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllChildren_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Widget'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Widget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsWGT_Cinematic_Bubble",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsPlatformConsole_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintStartPlayVideo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VideoWidget:OnBlueprintStartPlayVideo'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnSkipVideo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDispatchAnyKey",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsPressed",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Key",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnVideoEnd",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateOnPlayersReady__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMediaPlayerMediaEvent__DelegateSignature'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'APlayerController:DelegateDispatchAnyKey__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPlayerDisconnected",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DisconnectedPlayer",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMediaOpened",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "OpenedUrl",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMediaPlayerMediaEvent__DelegateSignature'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'APlayerController:DelegateDispatchAnyKey__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Play_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMediaOpenedFailed",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "FailedUrl",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateOnPlayersReady__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "NotifyEndVideo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetWidget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AWidget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateOnPlayerDisconnected__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BindMediaPlayerEvents",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMediaPlayerMediaOpened__DelegateSignature'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMediaPlayerMediaOpenFailed__DelegateSignature'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UnbindMediaPlayerEvents",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMediaPlayerMediaOpened__DelegateSignature'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMediaPlayerMediaOpenFailed__DelegateSignature'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintSpawnBubble",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VideoWidget:OnBlueprintSpawnBubble'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Data",
+        "Flags": "RF_Public",
+        "ElementSize": 176,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'CinematicBubbles'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvailableBubbleWidget_Widget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetAvailableBubbleWidget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Widget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "tempBubble",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SlotAsCanvasSlot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChild_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_Anchors",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'Anchors'",
+          "ObjectPath": "/Script/Slate"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayVideoSound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewSound",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSound2D_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopVideoSound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayVideoHaptic",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewSound",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlaySoundVibrationAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlaySoundVibration_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopVideoHaptic",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HUD_Video_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Video/HUD_Video",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'HUD_Video_C:FadeIn_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.68"
+        },
+        {
+          "ObjectName": "WidgetAnimation'HUD_Video_C:FadeOut_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.69"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'HUD_Video_C:ExecuteUbergraph_HUD_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VideoWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HUD_Video_C:StopVideoHaptic'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.18"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:PlayVideoHaptic'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.17"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:StopVideoSound'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.16"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:PlayVideoSound'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.15"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:GetAvailableBubbleWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.14"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnBlueprintSpawnBubble'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.13"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:UnbindMediaPlayerEvents'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.12"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:BindMediaPlayerEvents'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.11"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:NotifyEndVideo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.10"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnMediaOpenedFailed'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.9"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnMediaOpened'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.8"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnPlayerDisconnected'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.7"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnVideoEnd'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.6"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnDispatchAnyKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.5"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.4"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnSkipVideo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.3"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.2"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:OnBlueprintStartPlayVideo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.1"
+      },
+      {
+        "ObjectName": "Function'HUD_Video_C:ExecuteUbergraph_HUD_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FadeOut",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FadeIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Video",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Panel_Bubbles",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanel'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProgressBar_PressKey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SBox_Presskey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SizeBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_PressAnyKey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Waiting",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VBox_HoldAnyKey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MediaPlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MediaPlayer'",
+          "ObjectPath": "/Script/MediaAssets"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CurrentKey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentPressDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VideoSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "IgnoredKeys",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Bubbles",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Bubbles",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CinematicBubble_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.14"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VideoHaptic",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_HUD_Video": {
+        "ObjectName": "Function'HUD_Video_C:ExecuteUbergraph_HUD_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.0"
+      },
+      "OnBlueprintStartPlayVideo": {
+        "ObjectName": "Function'HUD_Video_C:OnBlueprintStartPlayVideo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'HUD_Video_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.2"
+      },
+      "OnSkipVideo": {
+        "ObjectName": "Function'HUD_Video_C:OnSkipVideo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.3"
+      },
+      "Tick": {
+        "ObjectName": "Function'HUD_Video_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.4"
+      },
+      "OnDispatchAnyKey": {
+        "ObjectName": "Function'HUD_Video_C:OnDispatchAnyKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.5"
+      },
+      "OnVideoEnd": {
+        "ObjectName": "Function'HUD_Video_C:OnVideoEnd'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.6"
+      },
+      "OnPlayerDisconnected": {
+        "ObjectName": "Function'HUD_Video_C:OnPlayerDisconnected'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.7"
+      },
+      "OnMediaOpened": {
+        "ObjectName": "Function'HUD_Video_C:OnMediaOpened'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.8"
+      },
+      "OnMediaOpenedFailed": {
+        "ObjectName": "Function'HUD_Video_C:OnMediaOpenedFailed'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.9"
+      },
+      "NotifyEndVideo": {
+        "ObjectName": "Function'HUD_Video_C:NotifyEndVideo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.10"
+      },
+      "BindMediaPlayerEvents": {
+        "ObjectName": "Function'HUD_Video_C:BindMediaPlayerEvents'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.11"
+      },
+      "UnbindMediaPlayerEvents": {
+        "ObjectName": "Function'HUD_Video_C:UnbindMediaPlayerEvents'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.12"
+      },
+      "OnBlueprintSpawnBubble": {
+        "ObjectName": "Function'HUD_Video_C:OnBlueprintSpawnBubble'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.13"
+      },
+      "GetAvailableBubbleWidget": {
+        "ObjectName": "Function'HUD_Video_C:GetAvailableBubbleWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.14"
+      },
+      "PlayVideoSound": {
+        "ObjectName": "Function'HUD_Video_C:PlayVideoSound'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.15"
+      },
+      "StopVideoSound": {
+        "ObjectName": "Function'HUD_Video_C:StopVideoSound'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.16"
+      },
+      "PlayVideoHaptic": {
+        "ObjectName": "Function'HUD_Video_C:PlayVideoHaptic'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.17"
+      },
+      "StopVideoHaptic": {
+        "ObjectName": "Function'HUD_Video_C:StopVideoHaptic'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.18"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HUD_Video_C'Default__HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.20"
+    }
+  },
+  {
+    "Type": "HUD_Video_C",
+    "Name": "Default__HUD_Video_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Video/HUD_Video.HUD_Video_C'",
+    "Package": "/Game/Blueprint/HUD/Video/HUD_Video",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MediaPlayer": {
+        "ObjectName": "MediaPlayer'MP_Cinematic'",
+        "ObjectPath": "/Game/Movies/MP_Cinematic.0"
+      },
+      "CurrentKey": {
+        "KeyName": "None"
+      },
+      "IgnoredKeys": {
+        "KeyName": "None"
+      },
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.26"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.27"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.24"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Panel_Bubbles",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Bubbles.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.28"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Bubbles.CanvasPanelSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.29"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Bubbles.CanvasPanelSlot_7'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Video.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.32"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Panel_Video",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Video.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.31"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Video.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.32"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'HUD_Video_C:WidgetTree.ScBox_Video.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.57"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.1,
+          "Y": 1.4
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'HUD_Video_C:WidgetTree.VBox_HoldAnyKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.60"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_Video_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.33"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'HUD_Video_C:WidgetTree.ScBox_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.56"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -50.0,
+          "Top": -60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'HUD_Video_C:WidgetTree.Text_Waiting'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.64"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Bubbles'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.22"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Bubbles'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.22"
+      },
+      "Content": {
+        "ObjectName": "WGT_CinematicBubble_C'HUD_Video_C:WidgetTree.WGT_CinematicBubble'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.65"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Bubbles'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.22"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Bubbles'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.22"
+      },
+      "Content": {
+        "ObjectName": "WGT_CinematicBubble_C'HUD_Video_C:WidgetTree.WGT_CinematicBubble_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.66"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Bubbles'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.22"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Bubbles'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.22"
+      },
+      "Content": {
+        "ObjectName": "WGT_CinematicBubble_C'HUD_Video_C:WidgetTree.WGT_CinematicBubble_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.67"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Video'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.23"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 26.078125,
+          "Top": 10.918945
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.23"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_Video_C:WidgetTree.Image_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.34"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Video'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.23"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 26.078125,
+          "Top": 10.918945,
+          "Right": 3843.8438,
+          "Bottom": 2162.162
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.23"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Bubbles'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.22"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.25"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Video",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 3840.0,
+          "Y": 2160.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_WHITE'",
+          "ObjectPath": "/Game/Graphic/Environment/2_Tilable/Textures/GenericTextures/T_WHITE.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Video.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.31"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FadeIn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HUD_Video_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.68"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "334A8578-4F782C4D-6ABD10B6-CAA04DCC",
+          "Name": "HUD_Video_C_124",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "334A8578-4F782C4D-6ABD10B6-CAA04DCC",
+          "BindingName": "HUD_Video_C_124",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.53"
+            },
+            {
+              "ObjectName": "MovieSceneByteTrack'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.47"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "316ED027-4F3BA558-243D258F-70BAB1D4"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FadeOut",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HUD_Video_C:FadeOut_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.69"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "4412BB44-4645A098-EE0B7AB1-39540A02",
+          "Name": "HUD_Video_C_129",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "4412BB44-4645A098-EE0B7AB1-39540A02",
+          "BindingName": "HUD_Video_C_129",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.54"
+            },
+            {
+              "ObjectName": "MovieSceneByteTrack'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.48"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "D8724596-45046192-E2BB53A8-C63E79DD"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.45"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.45"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.51"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.51"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.46"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.46"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.52"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.52"
+    }
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteTrack'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.47"
+    },
+    "Properties": {
+      "ByteCurve": {
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          4
+        ],
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.37"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.38"
+        }
+      },
+      "Signature": "5CF9F2E7-4729163E-354DEA89-F4487F0A"
+    }
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteTrack'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.48"
+    },
+    "Properties": {
+      "ByteCurve": {
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          4,
+          2
+        ],
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.41"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.42"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 15000
+            }
+          }
+        }
+      },
+      "Signature": "FD03E390-44922333-164CB688-6369A98F"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HUD_Video_C:FadeIn_INST.FadeIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.35"
+    },
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Class'ESlateVisibility'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Visibility",
+        "PropertyPath": "Visibility",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.45"
+        }
+      ],
+      "EvaluationFieldGuid": "EAA4E4CF-440B3225-57A27691-111AA967",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.45"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "EAA4E4CF-440B3225-57A27691-111AA967"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HUD_Video_C:FadeOut_INST.FadeOut'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.36"
+    },
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Class'ESlateVisibility'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Visibility",
+        "PropertyPath": "Visibility",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.46"
+        }
+      ],
+      "EvaluationFieldGuid": "400B77D6-4D5AE360-08E45381-ED0D0C6A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.46"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "400B77D6-4D5AE360-08E45381-ED0D0C6A"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HUD_Video_C:FadeIn_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.68"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "334A8578-4F782C4D-6ABD10B6-CAA04DCC",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneByteTrack'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.47"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBytePropertySectionTemplate",
+                  "Data": {
+                    "ByteCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        }
+                      ],
+                      "DefaultValue": 0,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        4
+                      ],
+                      "Enum": {
+                        "ObjectName": "Class'ESlateVisibility'",
+                        "ObjectPath": "/Script/UMG"
+                      }
+                    },
+                    "PropertyData": {
+                      "PropertyName": "Visibility",
+                      "PropertyPath": "Visibility"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.45"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "EAA4E4CF-440B3225-57A27691-111AA967",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 15000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.51"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "334A8578-4F782C4D-6ABD10B6-CAA04DCC"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "0E7EC366-4C18537B-A8A544B4-E5DE4051",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HUD_Video_C:FadeOut_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.69"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "4412BB44-4645A098-EE0B7AB1-39540A02",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneByteTrack'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1'",
+                "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.48"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBytePropertySectionTemplate",
+                  "Data": {
+                    "ByteCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 15000
+                        }
+                      ],
+                      "DefaultValue": 0,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        4,
+                        2
+                      ],
+                      "Enum": {
+                        "ObjectName": "Class'ESlateVisibility'",
+                        "ObjectPath": "/Script/UMG"
+                      }
+                    },
+                    "PropertyData": {
+                      "PropertyName": "Visibility",
+                      "PropertyPath": "Visibility"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneByteSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.46"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "400B77D6-4D5AE360-08E45381-ED0D0C6A",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 15000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.52"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "4412BB44-4645A098-EE0B7AB1-39540A02"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 15000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "940E713C-4642AA00-65C3508B-D2B60EF3",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.53"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.39"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.40"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 15000
+            }
+          }
+        }
+      },
+      "Signature": "3EC10D2C-4F6DD5FA-161F03AB-1772F62B"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.54"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.43"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.44"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 15000
+            }
+          }
+        }
+      },
+      "Signature": "89D5E294-460A1B7B-760649A4-9F210D7D"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HUD_Video_C:FadeIn_INST.FadeIn'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.35"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.51"
+        }
+      ],
+      "EvaluationFieldGuid": "65F47E1F-495B2481-C5F92D80-AE4CECD3",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeIn_INST.FadeIn.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.51"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "65F47E1F-495B2481-C5F92D80-AE4CECD3"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HUD_Video_C:FadeOut_INST.FadeOut'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.36"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.52"
+        }
+      ],
+      "EvaluationFieldGuid": "2E35AD68-400A29D6-7E1D5F9B-C950D500",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HUD_Video_C:FadeOut_INST.FadeOut.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.52"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "2E35AD68-400A29D6-7E1D5F9B-C950D500"
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "ProgressBar_PressKey",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 193.0,
+            "Y": 18.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_ProgressBar_HoldKey_Background'",
+            "ObjectPath": "/Game/Graphic/HUD/Loading/T_ProgressBar_HoldKey_Background.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 193.0,
+            "Y": 18.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_ProgressBar_HoldKey'",
+            "ObjectPath": "/Game/Graphic/HUD/Loading/T_ProgressBar_HoldKey.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'HUD_Video_C:WidgetTree.SBox_Presskey.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.59"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScBox_Video",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'HUD_Video_C:WidgetTree.ScBox_Video.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.57"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.26"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'HUD_Video_C:WidgetTree.ScBox_Video'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.56"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox'HUD_Video_C:WidgetTree.ScBox_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.56"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.Panel_Video'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.23"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_Presskey",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "WidthOverride": 500.0,
+      "HeightOverride": 18.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'HUD_Video_C:WidgetTree.SBox_Presskey.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.59"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'HUD_Video_C:WidgetTree.VBox_HoldAnyKey.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.62"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'HUD_Video_C:WidgetTree.SBox_Presskey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.58"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'HUD_Video_C:WidgetTree.SBox_Presskey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.58"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'HUD_Video_C:WidgetTree.ProgressBar_PressKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.55"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_HoldAnyKey",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'HUD_Video_C:WidgetTree.VBox_HoldAnyKey.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.61"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'HUD_Video_C:WidgetTree.VBox_HoldAnyKey.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.62"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.24"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'HUD_Video_C:WidgetTree.VBox_HoldAnyKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.60"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'HUD_Video_C:WidgetTree.VBox_HoldAnyKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.60"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'HUD_Video_C:WidgetTree.Text_PressAnyKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.63"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'HUD_Video_C:WidgetTree.VBox_HoldAnyKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.60"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 5.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'HUD_Video_C:WidgetTree.VBox_HoldAnyKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.60"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'HUD_Video_C:WidgetTree.SBox_Presskey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.58"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_PressAnyKey",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "txt_keyskip",
+        "SourceString": "Hold any key to skip",
+        "LocalizedString": "Hold any key to skip"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 40
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'HUD_Video_C:WidgetTree.VBox_HoldAnyKey.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.61"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Waiting",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "txt_waiting",
+        "SourceString": "Waiting for your Brobot...",
+        "LocalizedString": "Waiting for your Brobot..."
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 3.0,
+        "Y": 3.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.CanvasPanel_11.CanvasPanelSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.27"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WGT_CinematicBubble_C",
+    "Name": "WGT_CinematicBubble",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Video/WGT_CinematicBubble.WGT_CinematicBubble_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Template": {
+      "ObjectName": "WGT_CinematicBubble_C'Default__WGT_CinematicBubble_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.15"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Bubbles.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.28"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 408.0,
+          "Y": 221.0
+        }
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WGT_CinematicBubble_C",
+    "Name": "WGT_CinematicBubble_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Video/WGT_CinematicBubble.WGT_CinematicBubble_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Template": {
+      "ObjectName": "WGT_CinematicBubble_C'Default__WGT_CinematicBubble_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.15"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Bubbles.CanvasPanelSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.29"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WGT_CinematicBubble_C",
+    "Name": "WGT_CinematicBubble_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Video/WGT_CinematicBubble.WGT_CinematicBubble_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Video_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.70"
+    },
+    "Template": {
+      "ObjectName": "WGT_CinematicBubble_C'Default__WGT_CinematicBubble_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/WGT_CinematicBubble.15"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Video_C:WidgetTree.Panel_Bubbles.CanvasPanelSlot_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.30"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FadeIn_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HUD_Video_C:FadeIn_INST.FadeIn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.35"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "HUD_Video_C_124",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "334A8578-4F782C4D-6ABD10B6-CAA04DCC",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "FadeIn",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HUD_Video_C:FadeIn_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.49"
+      },
+      "Signature": "0E7EC366-4C18537B-A8A544B4-E5DE4051"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FadeOut_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HUD_Video_C:FadeOut_INST.FadeOut'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.36"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "HUD_Video_C_129",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "4412BB44-4645A098-EE0B7AB1-39540A02",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "FadeOut",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HUD_Video_C:FadeOut_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.50"
+      },
+      "Signature": "940E713C-4642AA00-65C3508B-D2B60EF3"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Video_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.19"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'HUD_Video_C:WidgetTree.CanvasPanel_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Video/HUD_Video.21"
+      }
+    }
+  }
+]

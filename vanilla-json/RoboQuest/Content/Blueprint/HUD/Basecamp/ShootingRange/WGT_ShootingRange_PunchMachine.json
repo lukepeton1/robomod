@@ -1,0 +1,2162 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_ShootingRange_PunchMachine",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsAnimationPlaying_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'ATarget:DelegateTargetTakeDamage__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateTargetRegistered__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetTargetsByIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetTargetsByIndex_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'ATarget'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ATarget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsRegister",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ATarget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DamageInstigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ACharacter'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_DamageTake",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyControlled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateTargetTakeDamage_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageInstigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'ACharacter'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "DamageTake",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateTargetRegistered_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'ATarget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsRegister",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Initialize",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Reset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "NewTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetTimeAsText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "NewDamage",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Round_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateDPS",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SelectFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_FloatToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_ShootingRange_PunchMachine_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.44"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:ExecuteUbergraph_WGT_ShootingRange_PunchMachine'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:UpdateDPS'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.8"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:UpdateDamage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.7"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:UpdateTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.6"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:Reset'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.5"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:Initialize'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.4"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:DelegateTargetRegistered_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.3"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:DelegateTargetTakeDamage_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.2"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.1"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:ExecuteUbergraph_WGT_ShootingRange_PunchMachine'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BumpDPSAnimation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Damage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_DPS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Duration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentDamage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "DPSUpdateRate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentDPSUpdateTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TimerReset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ResetDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentDPS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_ShootingRange_PunchMachine": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:ExecuteUbergraph_WGT_ShootingRange_PunchMachine'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.0"
+      },
+      "Tick": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.1"
+      },
+      "DelegateTargetTakeDamage_Event_0": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:DelegateTargetTakeDamage_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.2"
+      },
+      "DelegateTargetRegistered_Event_0": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:DelegateTargetRegistered_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.3"
+      },
+      "Initialize": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:Initialize'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.4"
+      },
+      "Reset": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:Reset'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.5"
+      },
+      "UpdateTime": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:UpdateTime'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.6"
+      },
+      "UpdateDamage": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:UpdateDamage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.7"
+      },
+      "UpdateDPS": {
+        "ObjectName": "Function'WGT_ShootingRange_PunchMachine_C:UpdateDPS'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.8"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_ShootingRange_PunchMachine_C'Default__WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.10"
+    }
+  },
+  {
+    "Type": "WGT_ShootingRange_PunchMachine_C",
+    "Name": "Default__WGT_ShootingRange_PunchMachine_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.WGT_ShootingRange_PunchMachine_C'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "DPSUpdateRate": 0.5,
+      "TimerReset": {
+        "Handle": 0
+      },
+      "ResetDuration": 30.0,
+      "bHasScriptImplementedTick": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_140",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.14"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.11"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.11"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.30"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.11"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.11"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.31"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.11"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.11"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_ShootingRange_PunchMachine_C:WidgetTree.Spacer_122'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.29"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "BumpDPSAnimation",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.44"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "95EB3041-44A68E4D-3FDCB6BE-C6A96185",
+          "Name": "Txt_DPS",
+          "PossessedObjectClass": {
+            "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "95EB3041-44A68E4D-3FDCB6BE-C6A96185",
+          "BindingName": "Txt_DPS",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.17"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 8000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 60
+      },
+      "Signature": "7F21C8E2-47C90CB4-C1734EB6-0E783C2F"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.17"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 24
+      },
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 1000
+          },
+          {
+            "Value": 8000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.00024174542,
+              "LeaveTangent": 0.00024174542,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.3,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 1000
+          },
+          {
+            "Value": 8000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.00022120494,
+              "LeaveTangent": 0.00022120494,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.3,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.18"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.19"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 8000
+            }
+          }
+        }
+      },
+      "Signature": "F8C7A429-47C163EC-276E4FAD-95163E15"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.16"
+        }
+      ],
+      "EvaluationFieldGuid": "6F5DC9AA-4EA7B672-1F670AB1-D6A3CFAA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.16"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 8000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6F5DC9AA-4EA7B672-1F670AB1-D6A3CFAA"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.16"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.16"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.44"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 8000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.16"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "95EB3041-44A68E4D-3FDCB6BE-C6A96185"
+          }
+        ]
+      },
+      "CompiledSignature": "52233D6B-47267376-B299F094-23040E2D",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.22"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ShootingRange_PunchMachine_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.21"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ShootingRange_PunchMachine_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.21"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.11"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox.ScaleBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.36"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_1.ScaleBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.35"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_2.ScaleBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.28"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.37"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.23"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.23"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_PunchMachine_C:WidgetTree.Txt_DPS'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.40"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.24"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.24"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_PunchMachine_C:WidgetTree.Txt_Damage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.38"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.25"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.25"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_PunchMachine_C:WidgetTree.Txt_Duration'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.42"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_122",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "Size": {
+        "X": 25.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_144",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.32"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.33"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144.VerticalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_36",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.35"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.37"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.36"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.HorizontalBox_140.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.13"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.30"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_PunchMachine_C:WidgetTree.Txt_DamageTitle_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.39"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.30"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_PunchMachine_C:WidgetTree.Txt_DurationTitle_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.43"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.30"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_PunchMachine_C:WidgetTree.Txt_DPSTitle_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.41"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.31"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.31"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.24"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.31"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.31"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.23"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.31"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.31"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.25"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Damage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "0"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_1.ScaleBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.27"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_DamageTitle_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+        "Key": "stat_damage",
+        "SourceString": "Damage",
+        "LocalizedString": "Damage"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.32"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_DPS",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "-"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.603828,
+          "B": 0.033105,
+          "A": 1.0,
+          "Hex": "FFCC33"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 50
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox.ScaleBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.26"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_DPSTitle_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "480A4F674F6635C6F8C886956E07A7CE",
+        "SourceString": "DPS",
+        "LocalizedString": "DPS"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144.VerticalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.34"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Duration",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "00:00"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 50
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.ScaleBox_2.ScaleBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.28"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_DurationTitle_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_PunchMachine_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.45"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A534E145472B41C6DAAA3EAA9F91FC3E",
+        "SourceString": "Duration",
+        "LocalizedString": "Duration"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_PunchMachine_C:WidgetTree.VerticalBox_144.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.33"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "BumpDPSAnimation_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.BumpDPSAnimation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.15"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Txt_DPS",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "95EB3041-44A68E4D-3FDCB6BE-C6A96185",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "BumpDPSAnimation",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_ShootingRange_PunchMachine_C:BumpDPSAnimation_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.20"
+      },
+      "Signature": "52233D6B-47267376-B299F094-23040E2D"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_PunchMachine_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.9"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_ShootingRange_PunchMachine_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_PunchMachine.21"
+      }
+    }
+  }
+]

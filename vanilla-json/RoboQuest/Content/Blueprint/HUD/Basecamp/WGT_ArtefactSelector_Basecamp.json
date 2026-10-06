@@ -1,0 +1,3236 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_ArtefactSelector_Basecamp",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetGamepadAcceptKey_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function'WGT_ArtefactSelector_C:OnArtefactEntriesEndRegister__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_True_if_break_was_hit_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_ButtonRef_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCanvas_Panel_Slot",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetPosition_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Map_Keys_Keys",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Entry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Entry.20"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Function'WGT_ArtefactSelector_Entry_C:OnSelectedArtefact__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Entry.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bFromValidation",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'APlayerController:DelegateControllerScheme__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_ControllerType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EControllerScheme'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_ButtonRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CanUseCheatCode_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Values_Values",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_Map_Values_Values",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Entry_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Entry.20"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Entry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Entry.20"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllArtefactDataWithRowName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_GetAllArtefactDataWithRowName_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 264,
+          "Struct": {
+            "ObjectName": "Class'ArtefactDataWithRowName'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item_2",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "Struct": {
+          "ObjectName": "Class'ArtefactDataWithRowName'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetGamepadBackKey_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__WGT_ClassSelector_WGT_CheatButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ButtonRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnControllerSchemeChange",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "ControllerType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EControllerScheme'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CloseMenu",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_Menu_C:CloseMenu'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.9"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OpenMenu",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_Menu_C:OpenMenu'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromValidation",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEndRegister",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__WGT_ClassSelector_2_Button_Select_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ButtonRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCancel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_Menu_C:OnCancel'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.4"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_Menu_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsSubmenu",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InHUD",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OutSubmenu",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Menu_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.23"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsSubmenu",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsWGT_Menu",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Menu_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.23"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDataCellAmount",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceBPRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AGameInstance_C'",
+          "ObjectPath": "/Game/Blueprint/GameSystem/GameInstance/BP_AGameInstance.208"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetWrenchAmount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetOutgamePlayerController",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_OutgamePlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_OutgamePlayerController.33"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Outgame_Player_Controller",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_OutgamePlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_OutgamePlayerController.33"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTooltipPosition",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ArtefactRow",
+        "Flags": "RF_Public",
+        "ElementSize": 248,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'ArtefactRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Values_Values",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_Map_Values_Values",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Entry_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Entry.20"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Entry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Entry.20"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCachedGeometry_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LocalToViewport_PixelPosition",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LocalToViewport_ViewportPosition",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_Vector2DVector2D_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_SoftClassReference_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "DisplayArtefactTooltip",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsDisplay",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ArtefactRow",
+        "Flags": "RF_Public",
+        "ElementSize": 248,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'ArtefactRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTooltipPosition_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SlotAsCanvasSlot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_ArtefactSelector_Basecamp_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Menu_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.23"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+      },
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'WGT_ArtefactSelector_Basecamp_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.24"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:ExecuteUbergraph_WGT_ArtefactSelector_Basecamp'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:DisplayArtefactTooltip'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.13"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:GetTooltipPosition'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.12"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:GetOutgamePlayerController'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.11"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:GetDataCellAmount'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.10"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:IsSubmenu'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.9"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.8"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OnCancel'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.7"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:BndEvt__WGT_ClassSelector_2_Button_Select_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.6"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OnEndRegister'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.5"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OpenMenu'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.4"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:CloseMenu'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.3"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OnControllerSchemeChange'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.2"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:BndEvt__WGT_ClassSelector_WGT_CheatButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.1"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:ExecuteUbergraph_WGT_ArtefactSelector_Basecamp'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Button_Gadgets",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Button_Perks",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_NavButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.7"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Button_Select",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MenuButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GamepadButton_Return",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GamepadButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/WGT_GamepadButton.6"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GamepadButton_Toggle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_GamepadButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/WGT_GamepadButton.6"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_Select",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_TopBand",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Return_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VBox_GadgetsSelector",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_ArtefactSelector",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_ArtefactSelector_Tooltip",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Tooltip_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Tooltip.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_CheatButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MenuButton_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetSwitcher_Buttons",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetSwitcher_Main",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentPickedClass",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ClassEntry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ClassEntry.17"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OutgamePlayerControllerRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_OutgamePlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_OutgamePlayerController.33"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DefaultTooltipPosition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TooltipOffset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentHoveredClass",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ClassEntry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ClassEntry.17"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TooltipOffsetLeft",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_ArtefactSelector_Basecamp": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:ExecuteUbergraph_WGT_ArtefactSelector_Basecamp'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.0"
+      },
+      "BndEvt__WGT_ClassSelector_WGT_CheatButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:BndEvt__WGT_ClassSelector_WGT_CheatButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.1"
+      },
+      "OnControllerSchemeChange": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OnControllerSchemeChange'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.2"
+      },
+      "CloseMenu": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:CloseMenu'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.3"
+      },
+      "OpenMenu": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OpenMenu'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.4"
+      },
+      "OnEndRegister": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OnEndRegister'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.5"
+      },
+      "BndEvt__WGT_ClassSelector_2_Button_Select_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:BndEvt__WGT_ClassSelector_2_Button_Select_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.6"
+      },
+      "OnCancel": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:OnCancel'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.7"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.8"
+      },
+      "IsSubmenu": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:IsSubmenu'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.9"
+      },
+      "GetDataCellAmount": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:GetDataCellAmount'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.10"
+      },
+      "GetOutgamePlayerController": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:GetOutgamePlayerController'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.11"
+      },
+      "GetTooltipPosition": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:GetTooltipPosition'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.12"
+      },
+      "DisplayArtefactTooltip": {
+        "ObjectName": "Function'WGT_ArtefactSelector_Basecamp_C:DisplayArtefactTooltip'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.13"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_ArtefactSelector_Basecamp_C'Default__WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.15"
+    }
+  },
+  {
+    "Type": "WGT_ArtefactSelector_Basecamp_C",
+    "Name": "Default__WGT_ArtefactSelector_Basecamp_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.WGT_ArtefactSelector_Basecamp_C'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp",
+    "Template": {
+      "ObjectName": "WGT_Menu_C'Default__WGT_Menu_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.24"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "DefaultTooltipPosition": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TooltipOffset": {
+        "X": -300.0,
+        "Y": 0.0
+      },
+      "TooltipOffsetLeft": {
+        "X": 1000.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_Title",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Padding": {
+        "Left": 100.0,
+        "Top": 0.0,
+        "Right": 100.0,
+        "Bottom": 20.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 686.0,
+          "Y": 125.0
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_ClassSelector_01_BackgroundClassSelectorTitle'",
+          "ObjectPath": "/Game/Graphic/HUD/Basecamp/ClassSelector/Frames/S_ClassSelector_01_BackgroundClassSelectorTitle.0"
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Border_Title.BorderSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_TopScreen.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.51"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 370.0,
+          "Y": 163.0
+        }
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Border_Title'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.16"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 100.0,
+        "Top": 0.0,
+        "Right": 100.0,
+        "Bottom": 20.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Border_Title'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.16"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Text_ClassName_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.64"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.23"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.53"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.74"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Image_Background_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.41"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": -1.0,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Image_TopBand'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.43"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+    },
+    "Properties": {
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+      },
+      "Content": {
+        "ObjectName": "WGT_ArtefactSelector_Tooltip_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WGT_ArtefactSelector_Tooltip'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.63"
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "WGT_CheatButton",
+          "DelegatePropertyName": "DispatchOnValidateButton",
+          "FunctionNameToBind": "BndEvt__WGT_ClassSelector_WGT_CheatButton_K2Node_ComponentBoundEvent_1_DispatchOnValidateButton__DelegateSignature"
+        },
+        {
+          "ComponentPropertyName": "Button_Select",
+          "DelegatePropertyName": "DispatchOnValidateButton",
+          "FunctionNameToBind": "BndEvt__WGT_ClassSelector_2_Button_Select_K2Node_ComponentBoundEvent_0_DispatchOnValidateButton__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_GamepadButtons",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.31"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons.WidgetSwitcherSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.76"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Main.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.32"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Main.ScaleBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.57"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_NavButtons",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.33"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons.HorizontalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.35"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector.VerticalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.61"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_Return",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.37"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.36"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.30"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_Select",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.39"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.38"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.31"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.25"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.25"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.28"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.25"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.25"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.29"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.26"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.26"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.59"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.27"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.27"
+      },
+      "Content": {
+        "ObjectName": "WGT_NavButton_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Button_Gadgets'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.71"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.27"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.27"
+      },
+      "Content": {
+        "ObjectName": "WGT_NavButton_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Button_Perks'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.72"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.27"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.27"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Spacer_169'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.58"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.28"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.28"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Txt_Return'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.65"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.28"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.28"
+      },
+      "Content": {
+        "ObjectName": "WGT_GamepadButton_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.GamepadButton_Return'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.67"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.29"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.29"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Txt_Return_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.66"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.29"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.29"
+      },
+      "Content": {
+        "ObjectName": "WGT_GamepadButton_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.GamepadButton_Toggle'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.68"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 8192.0,
+          "Y": 2160.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_ArtefactSelector_Background'",
+          "ObjectPath": "/Game/Graphic/HUD/Artefact/T_ArtefactSelector_Background.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Background.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.56"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.21"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_BottomBand",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 2048.0,
+          "Y": 332.24066
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_BlackBorder'",
+          "ObjectPath": "/Game/Graphic/HUD/Base/T_BlackBorder.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.50"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 67.0
+        }
+      },
+      "RenderTransformPivot": {
+        "X": 1.0,
+        "Y": 1.0
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_TopBand",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4096.0,
+          "Y": 332.24066
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_BlackBorder'",
+          "ObjectPath": "/Game/Graphic/HUD/Base/T_BlackBorder.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.22"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -67.0
+        },
+        "Scale": {
+          "X": -1.0,
+          "Y": -1.0
+        }
+      },
+      "RenderTransformPivot": {
+        "X": 0.5,
+        "Y": 1.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_Selector",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.49"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_11'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.47"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_7'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.50"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.46"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.48"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Main.WidgetSwitcherSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.77"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_TopScreen",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_TopScreen.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.51"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.49"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -15.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.73"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.54"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+      },
+      "Content": {
+        "ObjectName": "WGT_MenuButton_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WGT_CheatButton'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.70"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_TopScreen'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.45"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Image_BottomBand'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.42"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_TopScreen'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.45"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_TopScreen'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.45"
+      },
+      "Content": {
+        "ObjectName": "Border'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Border_Title'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.16"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScBox_ArtefactSElector",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "UserSpecifiedScale": 1.75,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_ArtefactSElector.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.55"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.60"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScBox_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Stretch": "EStretch::None",
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Background.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.56"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.19"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Main.ScaleBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.57"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.47"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_ArtefactSElector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.52"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_ArtefactSElector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.52"
+      },
+      "Content": {
+        "ObjectName": "WGT_ArtefactSelector_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WGT_ArtefactSelector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.62"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Background'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.53"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.53"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.40"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.54"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.54"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.26"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_169",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Size": {
+        "X": 13.00744,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons.HorizontalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.35"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_GadgetsSelector",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector.VerticalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.61"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.60"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Main.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.32"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.59"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.59"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_ArtefactSElector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.52"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.59"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 300.0,
+        "Right": 300.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.VBox_GadgetsSelector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.59"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.27"
+      }
+    }
+  },
+  {
+    "Type": "WGT_ArtefactSelector_C",
+    "Name": "WGT_ArtefactSelector",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector.WGT_ArtefactSelector_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_ArtefactSelector_C'Default__WGT_ArtefactSelector_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.ScBox_ArtefactSElector.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.55"
+      }
+    }
+  },
+  {
+    "Type": "WGT_ArtefactSelector_Tooltip_C",
+    "Name": "WGT_ArtefactSelector_Tooltip",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Tooltip.WGT_ArtefactSelector_Tooltip_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_ArtefactSelector_Tooltip_C'Default__WGT_ArtefactSelector_Tooltip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Tooltip.2"
+    },
+    "Properties": {
+      "bCanLoop": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.23"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_ClassName_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4DD2E4B040E481EC924E9C8F881C2775",
+        "SourceString": "Gadget Rack",
+        "LocalizedString": "Gadget Rack"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Margin": {
+        "Top": 5.0
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Border_Title.BorderSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.17"
+      },
+      "RenderTransform": {
+        "Angle": -2.0
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Return",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "btn_close",
+        "SourceString": "Close",
+        "LocalizedString": "Close"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 45
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.36"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Return_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4EC26E014A6DC727E4D9E4848FBD591F",
+        "SourceString": "Toggle Gadget",
+        "LocalizedString": "Toggle Gadget"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Menu'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Menu.0"
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 45
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.38"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_GamepadButton_C",
+    "Name": "GamepadButton_Return",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/WGT_GamepadButton.WGT_GamepadButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_GamepadButton_C'Default__WGT_GamepadButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/WGT_GamepadButton.7"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Return.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.37"
+      }
+    }
+  },
+  {
+    "Type": "WGT_GamepadButton_C",
+    "Name": "GamepadButton_Toggle",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/WGT_GamepadButton.WGT_GamepadButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_GamepadButton_C'Default__WGT_GamepadButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/WGT_GamepadButton.7"
+    },
+    "Properties": {
+      "Key": {
+        "KeyName": "Gamepad_FaceButton_Bottom"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_Select.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.39"
+      }
+    }
+  },
+  {
+    "Type": "WGT_MenuButton_C",
+    "Name": "Button_Select",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.WGT_MenuButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_MenuButton_C'Default__WGT_MenuButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.10"
+    },
+    "Properties": {
+      "ButtonTitle": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "btn_close",
+        "SourceString": "Close",
+        "LocalizedString": "Close"
+      },
+      "ValidateSound": {
+        "ObjectName": "SoundCue'SC_Button_Click_Return'",
+        "ObjectPath": "/Game/Audio/Sound/Interface/Buttons/SC_Button_Click_Return.0"
+      },
+      "PressedBrush": {
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.25,
+          "Right": 0.25,
+          "Bottom": 0.25
+        }
+      },
+      "bIsNavigable": false,
+      "bIsGamepadNavigable": false,
+      "ColIndex": 1,
+      "RowIndex": 4,
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons.WidgetSwitcherSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.75"
+      }
+    }
+  },
+  {
+    "Type": "WGT_MenuButton_C",
+    "Name": "WGT_CheatButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.WGT_MenuButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_MenuButton_C'Default__WGT_MenuButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_MenuButton.10"
+    },
+    "Properties": {
+      "ButtonTitle": {
+        "CultureInvariantString": "UNLOCK ARTEFACTS"
+      },
+      "bIsNavigable": false,
+      "bIsGamepadNavigable": false,
+      "RowIndex": 4,
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.48"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 90.0,
+          "Y": -80.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WGT_NavButton_C",
+    "Name": "Button_Gadgets",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Button/WGT_NavButton.WGT_NavButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_NavButton_C'Default__WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.8"
+    },
+    "Properties": {
+      "ButtonTitle": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "txt_gadgets",
+        "SourceString": null,
+        "LocalizedString": ""
+      },
+      "ColIndex": 10,
+      "RowIndex": 10,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.33"
+      }
+    }
+  },
+  {
+    "Type": "WGT_NavButton_C",
+    "Name": "Button_Perks",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Button/WGT_NavButton.WGT_NavButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Template": {
+      "ObjectName": "WGT_NavButton_C'Default__WGT_NavButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_NavButton.8"
+    },
+    "Properties": {
+      "ButtonTitle": {
+        "Namespace": "",
+        "Key": "0CF0EB6D4DE52570165E0B863FC010B6",
+        "SourceString": "Perks",
+        "LocalizedString": "Perks"
+      },
+      "ColIndex": 10,
+      "RowIndex": 10,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_NavButtons.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.34"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "WidgetSwitcher_Buttons",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons.WidgetSwitcherSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.75"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons.WidgetSwitcherSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.76"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.46"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -50.0,
+          "Y": -50.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "WidgetSwitcher_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactSelector_Basecamp_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.78"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Main.WidgetSwitcherSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.77"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.20"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.73"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.73"
+      },
+      "Content": {
+        "ObjectName": "WGT_MenuButton_C'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Button_Select'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.69"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.73"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Buttons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.73"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactSelector_Basecamp_C:WidgetTree.HBox_GamepadButtons'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.25"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.74"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WGT_ArtefactSelector_Basecamp_C:WidgetTree.WidgetSwitcher_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.74"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_ArtefactSelector_Basecamp_C:WidgetTree.Overlay_Selector'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.44"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactSelector_Basecamp_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.14"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'WGT_ArtefactSelector_Basecamp_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/WGT_ArtefactSelector_Basecamp.18"
+      }
+    }
+  }
+]

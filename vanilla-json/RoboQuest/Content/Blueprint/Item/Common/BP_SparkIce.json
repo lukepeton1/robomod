@@ -1,0 +1,142 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_SparkIce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SparkIce_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BindSparkEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SparkIce_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.2"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_Item_Spark_C:BindSparkEvent'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_Item_Spark.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_SparkIce_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Item/Common/BP_SparkIce",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ElementalSpark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_ElementalSpark.3"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_SparkIce_C:ExecuteUbergraph_BP_SparkIce'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_SparkIce_C:BindSparkEvent'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.1"
+      },
+      {
+        "ObjectName": "Function'BP_SparkIce_C:ExecuteUbergraph_BP_SparkIce'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_SparkIce": {
+        "ObjectName": "Function'BP_SparkIce_C:ExecuteUbergraph_BP_SparkIce'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.0"
+      },
+      "BindSparkEvent": {
+        "ObjectName": "Function'BP_SparkIce_C:BindSparkEvent'",
+        "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_SparkIce_C'Default__BP_SparkIce_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_SparkIce.3"
+    }
+  },
+  {
+    "Type": "BP_SparkIce_C",
+    "Name": "Default__BP_SparkIce_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Item/Common/BP_SparkIce.BP_SparkIce_C'",
+    "Package": "/Game/Blueprint/Item/Common/BP_SparkIce",
+    "Template": {
+      "ObjectName": "BP_ElementalSpark_C'Default__BP_ElementalSpark_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Common/BP_ElementalSpark.4"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

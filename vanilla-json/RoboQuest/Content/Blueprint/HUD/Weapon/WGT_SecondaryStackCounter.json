@@ -1,0 +1,906 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_SecondaryStackCounter",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'DelegateOnStackUpdate__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_TargetAction",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EAction'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_CurrentStack",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Skill_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_NewWatchedWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetNewWatchedWeapon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponWatcherWidget:SetNewWatchedWeapon'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewWatchedWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UnbindSkillEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponWatcherWidget:UnbindSkillEvent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BindSkillEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponWatcherWidget:BindSkillEvent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUpdateAffix",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponWatcherWidget:OnUpdateAffix'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUpdateSecondaryStack",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "TargetAction",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EAction'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentStack",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateSecondaryStackText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "InStack",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bResetValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Conv_IntToFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HaveSecondaryStack",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateDisplay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HaveSecondaryStack_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_SecondaryStackCounter_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_SecondaryStackCounter_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:ExecuteUbergraph_WGT_SecondaryStackCounter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponWatcherWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:UpdateDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.8"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:HaveSecondaryStack'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.7"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:UpdateSecondaryStackText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.6"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:OnUpdateSecondaryStack'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.5"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:OnUpdateAffix'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.4"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:BindSkillEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.3"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:UnbindSkillEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.2"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:SetNewWatchedWeapon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.1"
+      },
+      {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:ExecuteUbergraph_WGT_SecondaryStackCounter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_20",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_SecondaryCurrentAmmo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TextAnimed_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_TextAnimed.4"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_SecondaryStackCounter": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:ExecuteUbergraph_WGT_SecondaryStackCounter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.0"
+      },
+      "SetNewWatchedWeapon": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:SetNewWatchedWeapon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.1"
+      },
+      "UnbindSkillEvent": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:UnbindSkillEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.2"
+      },
+      "BindSkillEvent": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:BindSkillEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.3"
+      },
+      "OnUpdateAffix": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:OnUpdateAffix'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.4"
+      },
+      "OnUpdateSecondaryStack": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:OnUpdateSecondaryStack'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.5"
+      },
+      "UpdateSecondaryStackText": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:UpdateSecondaryStackText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.6"
+      },
+      "HaveSecondaryStack": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:HaveSecondaryStack'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.7"
+      },
+      "UpdateDisplay": {
+        "ObjectName": "Function'WGT_SecondaryStackCounter_C:UpdateDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.8"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_SecondaryStackCounter_C'Default__WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.10"
+    }
+  },
+  {
+    "Type": "WGT_SecondaryStackCounter_C",
+    "Name": "Default__WGT_SecondaryStackCounter_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.WGT_SecondaryStackCounter_C'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_20",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SecondaryStackCounter_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.14"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_SecondaryStackCounter_C:WidgetTree.Overlay_20.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.12"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_SecondaryStackCounter_C:WidgetTree.Overlay_20'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.11"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_SecondaryStackCounter_C:WidgetTree.Overlay_20'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.11"
+      },
+      "Content": {
+        "ObjectName": "WGT_TextAnimed_C'WGT_SecondaryStackCounter_C:WidgetTree.Text_SecondaryCurrentAmmo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.13"
+      }
+    }
+  },
+  {
+    "Type": "WGT_TextAnimed_C",
+    "Name": "Text_SecondaryCurrentAmmo",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_TextAnimed.WGT_TextAnimed_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_SecondaryStackCounter_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.14"
+    },
+    "Template": {
+      "ObjectName": "WGT_TextAnimed_C'Default__WGT_TextAnimed_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_TextAnimed.5"
+    },
+    "Properties": {
+      "BaseText": {
+        "CultureInvariantString": "12"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 3
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 40
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "ShadowOffset": {
+        "X": 3.0,
+        "Y": 3.0
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_SecondaryStackCounter_C:WidgetTree.Overlay_20.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.12"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_SecondaryStackCounter_C:WidgetTree.Overlay_20'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.11"
+      }
+    }
+  }
+]

@@ -1,0 +1,899 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_APing",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_APing_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsVisible_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_NewIcon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NewColor",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bLocal",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlaySpawnAnimation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_APing_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PingWidget:PlaySpawnAnimation'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bLocal",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateColor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_APing_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PingWidget:UpdateColor'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NewColor",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdatePingIcon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_APing_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PingWidget:UpdatePingIcon'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewIcon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_APing_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Ping/WGT_APing",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_APing_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.18"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_APing_C:SpawnAnimation_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.17"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_APing_C:ExecuteUbergraph_WGT_APing'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PingWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_APing_C:UpdatePingIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.3"
+      },
+      {
+        "ObjectName": "Function'WGT_APing_C:UpdateColor'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.2"
+      },
+      {
+        "ObjectName": "Function'WGT_APing_C:PlaySpawnAnimation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.1"
+      },
+      {
+        "ObjectName": "Function'WGT_APing_C:ExecuteUbergraph_WGT_APing'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnAnimation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IconRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_APing": {
+        "ObjectName": "Function'WGT_APing_C:ExecuteUbergraph_WGT_APing'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.0"
+      },
+      "PlaySpawnAnimation": {
+        "ObjectName": "Function'WGT_APing_C:PlaySpawnAnimation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.1"
+      },
+      "UpdateColor": {
+        "ObjectName": "Function'WGT_APing_C:UpdateColor'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.2"
+      },
+      "UpdatePingIcon": {
+        "ObjectName": "Function'WGT_APing_C:UpdatePingIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_APing_C'Default__WGT_APing_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.5"
+    }
+  },
+  {
+    "Type": "WGT_APing_C",
+    "Name": "Default__WGT_APing_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Ping/WGT_APing.WGT_APing_C'",
+    "Package": "/Game/Blueprint/HUD/Ping/WGT_APing",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_APing_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.18"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 250.0,
+          "Y": 250.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Ping'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/T_Ping.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_APing_C:WidgetTree.Overlay_14.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.15"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_APing_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.18"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 200.0,
+          "Y": 200.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_JunkBeam'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Weapon/T_JunkBeam.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_APing_C:WidgetTree.Overlay_14.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.16"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0,
+          "Y": 0.33
+        }
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "SpawnAnimation",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_APing_C:SpawnAnimation_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.17"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "7A16423A-4F800ABE-44FEE8B8-9CCEC197",
+          "Name": "WGT_APing_C_5",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_APing_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.4"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "7A16423A-4F800ABE-44FEE8B8-9CCEC197",
+          "BindingName": "WGT_APing_C_5",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.10"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "3730D339-4A102903-BBB421BD-43B0D812"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.10"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.11"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.12"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18000
+            }
+          }
+        }
+      },
+      "Signature": "5AAB064C-42AF0933-E3ED1594-AD97F04D"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.8"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.9"
+        }
+      ],
+      "EvaluationFieldGuid": "70E7F9CE-4BB9A065-1BBF46BB-18CC583B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.9"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "70E7F9CE-4BB9A065-1BBF46BB-18CC583B"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.9"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.9"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_APing_C:SpawnAnimation_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.17"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 18000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.9"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "7A16423A-4F800ABE-44FEE8B8-9CCEC197"
+          }
+        ]
+      },
+      "CompiledSignature": "E33E16EF-4E30B37A-56615FAD-9A13A170",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_APing_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.18"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_APing_C:WidgetTree.Overlay_14.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.15"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_APing_C:WidgetTree.Overlay_14.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.16"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_APing_C:WidgetTree.Overlay_14'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.14"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_APing_C:WidgetTree.Overlay_14'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.14"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_APing_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_APing_C:WidgetTree.Overlay_14'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.14"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_APing_C:WidgetTree.Overlay_14'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.14"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_APing_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "SpawnAnimation_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_APing_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.4"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_APing_C:SpawnAnimation_INST.SpawnAnimation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.8"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_APing_C_5",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "7A16423A-4F800ABE-44FEE8B8-9CCEC197",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "SpawnAnimation",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_APing_C:SpawnAnimation_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.13"
+      },
+      "Signature": "E33E16EF-4E30B37A-56615FAD-9A13A170"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_APing_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_APing_C:WidgetTree.Overlay_14'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ping/WGT_APing.14"
+      }
+    }
+  }
+]

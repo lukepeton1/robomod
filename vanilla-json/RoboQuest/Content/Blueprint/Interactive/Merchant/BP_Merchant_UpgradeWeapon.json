@@ -1,0 +1,1288 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Merchant_UpgradeWeapon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLocalPlayerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLevelGenerator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ALevelGenerator'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetWeaponLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetWeaponStarIcon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bEnable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInteractiveUpgradeWeapon_InteractiveUpgradeWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeapon_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInteractiveRerollAffix_InteractiveRerollAffix",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_RerollAffix_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInteractiveUpgradeWeapon_InteractiveUpgradeWeapon_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeapon_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetParentTile_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ATile'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintTeleported",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AMerchant:OnBlueprintTeleported'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTickEnabled",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AMerchant:SetTickEnabled'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bEnable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OrderedInit",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IOrderableActor:OrderedInit'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractiveUpgradeWeapon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractiveUpgradeWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeapon_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Interactive_Merchant_Upgrade_Weapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeapon_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractiveRerollAffix",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractiveRerollAffix",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_RerollAffix_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Interactive_Merchant_Reroll_Affix",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_RerollAffix_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Merchant_UpgradeWeapon_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AMerchant_Interactive_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Merchant_UpgradeWeapon_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:ExecuteUbergraph_BP_Merchant_UpgradeWeapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:GetInteractiveRerollAffix'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.6"
+      },
+      {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:GetInteractiveUpgradeWeapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.5"
+      },
+      {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.4"
+      },
+      {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:OrderedInit'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.3"
+      },
+      {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:SetTickEnabled'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.2"
+      },
+      {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:OnBlueprintTeleported'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.1"
+      },
+      {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:ExecuteUbergraph_BP_Merchant_UpgradeWeapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CookLight1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BlueLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cube",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RerollAFfix",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "WeaponLevel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractiveUpgradeWeapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeapon_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractiveRerollAffix",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_RerollAffix_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.10"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Merchant_UpgradeWeapon": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:ExecuteUbergraph_BP_Merchant_UpgradeWeapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.0"
+      },
+      "OnBlueprintTeleported": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:OnBlueprintTeleported'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.1"
+      },
+      "SetTickEnabled": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:SetTickEnabled'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.2"
+      },
+      "OrderedInit": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:OrderedInit'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.3"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.4"
+      },
+      "GetInteractiveUpgradeWeapon": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:GetInteractiveUpgradeWeapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.5"
+      },
+      "GetInteractiveRerollAffix": {
+        "ObjectName": "Function'BP_Merchant_UpgradeWeapon_C:GetInteractiveRerollAffix'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Merchant_UpgradeWeapon_C'Default__BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.8"
+    }
+  },
+  {
+    "Type": "BP_Merchant_UpgradeWeapon_C",
+    "Name": "Default__BP_Merchant_UpgradeWeapon_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.BP_Merchant_UpgradeWeapon_C'",
+    "Package": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon",
+    "Template": {
+      "ObjectName": "BP_AMerchant_Interactive_C'Default__BP_AMerchant_Interactive_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "InteractChildActor": {
+        "ObjectName": "ChildActorComponent'Default__BP_Merchant_UpgradeWeapon_C:InteractChildActor'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.15"
+      },
+      "BoundingBox": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_UpgradeWeapon_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.10"
+      },
+      "MerchantMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Merchant_UpgradeWeapon_C:MerchantMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.28"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_UpgradeWeapon_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.10"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Merchant_RerollAffix_C'BP_Merchant_UpgradeWeapon_C:RerollAFfix_GEN_VARIABLE.ChildActor_GEN_VARIABLE_BP_Interactive_Merchant_RerollAffix_C_CAT'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.12"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Interactive_Merchant_RerollAffix_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.12"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoundingBox",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Merchant_UpgradeWeapon_C'Default__BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.8"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_AMerchant_Interactive_C:BoundingBox'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.2"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Merchant_UpgradeWeapon_C'Default__BP_Merchant_UpgradeWeapon_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_UpgradeWeapon_C_CAT'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.13"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Interactive_Merchant_UpgradeWeapon_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.12"
+    }
+  },
+  {
+    "Type": "BP_Interactive_Merchant_RerollAffix_C",
+    "Name": "ChildActor_GEN_VARIABLE_BP_Interactive_Merchant_RerollAffix_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.BP_Interactive_Merchant_RerollAffix_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_Merchant_UpgradeWeapon_C:RerollAFfix_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.14"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactive_Merchant_RerollAffix_C'Default__BP_Interactive_Merchant_RerollAffix_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.11"
+    },
+    "Properties": {
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'BP_Merchant_UpgradeWeapon_C:RerollAFfix_GEN_VARIABLE.ChildActor_GEN_VARIABLE_BP_Interactive_Merchant_RerollAffix_C_CAT.InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.9"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'BP_Merchant_UpgradeWeapon_C:RerollAFfix_GEN_VARIABLE.ChildActor_GEN_VARIABLE_BP_Interactive_Merchant_RerollAffix_C_CAT.InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.9"
+      }
+    }
+  },
+  {
+    "Type": "BP_Interactive_Merchant_UpgradeWeapon_C",
+    "Name": "InteractChildActor_BP_Interactive_Merchant_UpgradeWeapon_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.BP_Interactive_Merchant_UpgradeWeapon_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'Default__BP_Merchant_UpgradeWeapon_C:InteractChildActor'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.15"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactive_Merchant_UpgradeWeapon_C'Default__BP_Interactive_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.11"
+    },
+    "Properties": {
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_UpgradeWeapon_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_UpgradeWeapon_C_CAT.InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.11"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_UpgradeWeapon_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_UpgradeWeapon_C_CAT.InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.11"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "RerollAFfix_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_RerollAffix_C'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_RerollAffix.10"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactive_Merchant_RerollAffix_C'BP_Merchant_UpgradeWeapon_C:RerollAFfix_GEN_VARIABLE.ChildActor_GEN_VARIABLE_BP_Interactive_Merchant_RerollAffix_C_CAT'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.12"
+      },
+      "RelativeLocation": {
+        "X": 84.0,
+        "Y": 200.0,
+        "Z": -100.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "InteractChildActor",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Merchant_UpgradeWeapon_C'Default__BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.8"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'Default__BP_AMerchant_Interactive_C:InteractChildActor'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.3"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_UpgradeWeapon_C'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_UpgradeWeapon.10"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactive_Merchant_UpgradeWeapon_C'Default__BP_Merchant_UpgradeWeapon_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_UpgradeWeapon_C_CAT'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.13"
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_UpgradeWeapon_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.10"
+      },
+      "RelativeLocation": {
+        "X": 84.0,
+        "Y": -40.0,
+        "Z": -100.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "BlueLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "Properties": {
+      "SourceRadius": 191.3208,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 232.4138,
+      "Intensity": 4.0,
+      "LightColor": {
+        "B": 255,
+        "G": 254,
+        "R": 0,
+        "A": 255,
+        "Hex": "00FEFF"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": 153.46089,
+        "Y": -57.02562,
+        "Z": -9.524326
+      }
+    },
+    "IntensityNits": 0.08696125
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "CookLight1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "Properties": {
+      "SourceRadius": 100.0,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 80.0,
+      "Intensity": 8.0,
+      "LightColor": {
+        "B": 150,
+        "G": 201,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFC996"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": 112.81738,
+        "Y": 199.63794,
+        "Z": -111.95042
+      }
+    },
+    "IntensityNits": 0.63661975
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Merchant_UpgradeWeapon_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.19"
+      },
+      "VariableGuid": "40CF1021-421E441D-176351B9-CF9F23B2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_Merchant_UpgradeWeapon_C:RerollAFfix_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.14"
+      },
+      "ParentComponentOrVariableName": "BoundingBox",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "EA5F3C19-4074824F-5381D3BE-BF729789",
+      "InternalVariableName": "RerollAFfix"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_Merchant_UpgradeWeapon_C:SpotLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.30"
+      },
+      "ParentComponentOrVariableName": "BoundingBox",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "70DAC036-4D490DA1-E0FA58AD-9611FE21",
+      "InternalVariableName": "SpotLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Merchant_UpgradeWeapon_C:Cube_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.31"
+      },
+      "ParentComponentOrVariableName": "BoundingBox",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D0543722-428E9A64-37C15194-3B835D93",
+      "InternalVariableName": "Cube"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_Merchant_UpgradeWeapon_C:SpotLight1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.29"
+      },
+      "ParentComponentOrVariableName": "BoundingBox",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "37C142F9-4C2524B0-1F06F98B-5574B5CF",
+      "InternalVariableName": "SpotLight1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_Merchant_UpgradeWeapon_C:BlueLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.17"
+      },
+      "ParentComponentOrVariableName": "BoundingBox",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D63CE0B0-49058867-F72AEB87-D184678F",
+      "InternalVariableName": "BlueLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.27"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_Merchant_UpgradeWeapon_C:CookLight1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.18"
+      },
+      "ParentComponentOrVariableName": "BoundingBox",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6E91F783-418C42F1-F3FBC585-0D7AD96E",
+      "InternalVariableName": "CookLight1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.26"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.26"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Merchant_UpgradeWeapon_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.20"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "MerchantMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Merchant_UpgradeWeapon_C'Default__BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.8"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_AMerchant_Interactive_C:MerchantMesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.8"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_CookPawn_C'",
+        "ObjectPath": "/Game/Animation/Enemy/ABP_CookPawn.2"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'A_GuardPawn_Idle'",
+          "ObjectPath": "/Game/Animation/Enemy/Pawn/GuardPawn/Animation/Locomotion/A_GuardPawn_Idle.0"
+        }
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_CookPawn'",
+        "ObjectPath": "/Game/Animation/Enemy/Pawn/CookPawn/SK_CookPawn.0"
+      },
+      "OverrideMaterials": [
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'Mi_Act1_CookPawn'",
+          "ObjectPath": "/Game/Animation/Enemy/Pawn/CookPawn/Material/Mi_Act1_CookPawn.0"
+        },
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_UpgradeWeapon_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.10"
+      },
+      "RelativeLocation": {
+        "X": -27.0,
+        "Y": -14.999995,
+        "Z": -200.0
+      },
+      "RelativeScale3D": {
+        "X": 1.12,
+        "Y": 1.12,
+        "Z": 1.12
+      }
+    }
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "Properties": {
+      "OuterConeAngle": 34.971428,
+      "Intensity": 20000.0,
+      "LightColor": {
+        "B": 255,
+        "G": 246,
+        "R": 225,
+        "A": 255,
+        "Hex": "E1F6FF"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": 485.81165,
+        "Y": 267.81702,
+        "Z": 412.1639
+      },
+      "RelativeRotation": {
+        "Pitch": -34.324444,
+        "Yaw": 203.75345,
+        "Roll": 554.4407
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "Properties": {
+      "OuterConeAngle": 34.219048,
+      "Intensity": 20000.0,
+      "LightColor": {
+        "B": 223,
+        "G": 237,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFEDDF"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": 340.24945,
+        "Y": -367.25217,
+        "Z": 364.76898
+      },
+      "RelativeRotation": {
+        "Pitch": -53.416325,
+        "Yaw": 138.11916,
+        "Roll": 540.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Cube_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_UpgradeWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeWeapon.7"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Shop_Cook_Cardboard'",
+        "ObjectPath": "/Game/Graphic/Interactive/Merchant/Mesh/SM_Shop_Cook_Cardboard.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'Mi_Merchant_Cook_Cardboard'",
+          "ObjectPath": "/Game/Graphic/Interactive/Merchant/Material/Mi_Merchant_Cook_Cardboard.0"
+        }
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "AllyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnvironmentCheck",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "WeaponMesh",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "EnemyPawn",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TrapScale",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyPawnProjectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "LedgeGrab",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 84.0,
+        "Y": 5.006791E-06,
+        "Z": -200.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.00046,
+        "Roll": 0.0
+      }
+    }
+  }
+]

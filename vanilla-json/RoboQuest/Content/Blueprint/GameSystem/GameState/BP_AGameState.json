@@ -1,0 +1,718 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AGameState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "CallFunc_GetCheatCodes_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "KeyProp": {
+          "Type": "EnumProperty",
+          "Name": "CallFunc_GetCheatCodes_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'ECheatCode'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        },
+        "ValueProp": {
+          "Type": "BoolProperty",
+          "Name": "CallFunc_GetCheatCodes_ReturnValue_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "FieldSize": 1,
+          "ByteOffset": 0,
+          "ByteMask": 1,
+          "FieldMask": 255,
+          "BoolSize": 1,
+          "bIsNativeBool": true
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Data",
+        "Flags": "RF_Public",
+        "ElementSize": 216,
+        "Struct": {
+          "ObjectName": "Class'LocalPlayerData'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyControlled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintInitLocalData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AGameState:OnBlueprintInitLocalData'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Data",
+        "Flags": "RF_Public",
+        "ElementSize": 216,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'LocalPlayerData'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SaveCheatCodes",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AGameState:SaveCheatCodes'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetStatLevel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Enum": null
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetLootRange",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'IntPoint'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_IntPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'IntPoint'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintGetRandomGameTip",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AGameState:OnBlueprintGetRandomGameTip'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'GameTip'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFirstTry",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "TmpRand",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "TmpPool",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "TmpPool",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "SetProperty",
+        "Name": "CallFunc_GetGameTips_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "ElementProp": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetGameTips_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Set_ToArray_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Set_ToArray_Result",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_RemoveItem_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_GameTip",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "Class'GameTip'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_RandomInteger_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_RemoveItem_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Map_Keys_Keys",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "Class'GameTip'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AGameState_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/GameSystem/GameState/BP_AGameState",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AGameState_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AGameState_C:ExecuteUbergraph_BP_AGameState'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AGameState'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AGameState_C:OnBlueprintGetRandomGameTip'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.5"
+      },
+      {
+        "ObjectName": "Function'BP_AGameState_C:GetLootRange'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.4"
+      },
+      {
+        "ObjectName": "Function'BP_AGameState_C:GetStatLevel'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.3"
+      },
+      {
+        "ObjectName": "Function'BP_AGameState_C:SaveCheatCodes'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.2"
+      },
+      {
+        "ObjectName": "Function'BP_AGameState_C:OnBlueprintInitLocalData'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.1"
+      },
+      {
+        "ObjectName": "Function'BP_AGameState_C:ExecuteUbergraph_BP_AGameState'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "LastGameTip",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AGameState": {
+        "ObjectName": "Function'BP_AGameState_C:ExecuteUbergraph_BP_AGameState'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.0"
+      },
+      "OnBlueprintInitLocalData": {
+        "ObjectName": "Function'BP_AGameState_C:OnBlueprintInitLocalData'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.1"
+      },
+      "SaveCheatCodes": {
+        "ObjectName": "Function'BP_AGameState_C:SaveCheatCodes'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.2"
+      },
+      "GetStatLevel": {
+        "ObjectName": "Function'BP_AGameState_C:GetStatLevel'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.3"
+      },
+      "GetLootRange": {
+        "ObjectName": "Function'BP_AGameState_C:GetLootRange'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.4"
+      },
+      "OnBlueprintGetRandomGameTip": {
+        "ObjectName": "Function'BP_AGameState_C:OnBlueprintGetRandomGameTip'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_NotPlaceable | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AGameState_C'Default__BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.7"
+    }
+  },
+  {
+    "Type": "BP_AGameState_C",
+    "Name": "Default__BP_AGameState_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/GameSystem/GameState/BP_AGameState.BP_AGameState_C'",
+    "Package": "/Game/Blueprint/GameSystem/GameState/BP_AGameState",
+    "Properties": {
+      "UberGraphFrame": {},
+      "GameStateDataAssetID": {
+        "PrimaryAssetType": {
+          "Name": "InGameStateDataAsset"
+        },
+        "PrimaryAssetName": "DA_InGameStateData"
+      },
+      "StatManager": {
+        "ObjectName": "AStatManager'Default__BP_AGameState_C:StatManager'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.8"
+      },
+      "PickupPoolAmount": 80,
+      "PickupPoolAmount[1]": 4,
+      "PickupPoolAmount[3]": 4,
+      "PickupPoolAmount[4]": 3,
+      "PickupPoolAmount[5]": 20,
+      "PickupPoolAmount[6]": 10,
+      "InteractiveWeaponClassPtr": {
+        "AssetPathName": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.BP_Interactive_Weapon_C",
+        "SubPathString": ""
+      },
+      "InteractiveItemClassPtr": {
+        "AssetPathName": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Item.BP_Interactive_Item_C",
+        "SubPathString": ""
+      },
+      "CustomProjectileMaxPoolSize": 10,
+      "WorkerClasses": [
+        {
+          "AssetPathName": "/Game/Blueprint/Enemy/Worker/BP_LightWorker.BP_LightWorker_C",
+          "SubPathString": ""
+        }
+      ],
+      "MutatorEnemyExplosionPreshotSound": {
+        "AssetPathName": "/Game/Audio/Sound/Enemy/Generic/Mutator/SC_Mutator_Explosion_Preshoot.SC_Mutator_Explosion_Preshoot",
+        "SubPathString": ""
+      },
+      "MutatorEnemyExplosionTriggerSound": {
+        "AssetPathName": "/Game/Audio/Sound/Enemy/Generic/Pattern/Mine/SC_Enemy_Mine_Explosion.SC_Enemy_Mine_Explosion",
+        "SubPathString": ""
+      },
+      "MutatorEnemyExplosionFX": {
+        "AssetPathName": "/Game/Graphic/VFX/Enemy/Specific/Infinite_DeathExplosion/PS_Infinite_Enemy_DeathExplosion_Warning_02_Full.PS_Infinite_Enemy_DeathExplosion_Warning_02_Full",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "AStatManager",
+    "Name": "StatManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AStatManager'",
+    "Outer": {
+      "ObjectName": "BP_AGameState_C'Default__BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.7"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AGameState_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AGameState_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.9"
+      },
+      "VariableGuid": "6C6B23B3-451B8735-E4DD579B-774A3A0A",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AGameState_C'",
+      "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.6"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AGameState_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AGameState_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AGameState_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/GameSystem/GameState/BP_AGameState.10"
+      }
+    }
+  }
+]

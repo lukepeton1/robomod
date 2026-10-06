@@ -1,0 +1,243 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Proj_Fireball_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_Fireball",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Proj_Fireball_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AAIProjectile'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    }
+  },
+  {
+    "Type": "BP_Proj_Fireball_C",
+    "Name": "Default__BP_Proj_Fireball_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Projectile/BP_Proj_Fireball.BP_Proj_Fireball_C'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_Fireball",
+    "Properties": {
+      "CollisionDamageComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionDamageComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.10"
+      },
+      "CollisionComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.9"
+      },
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Proj_Fireball_C:StaticMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.11"
+      },
+      "ParticleSystemComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_Fireball_C:ParticleSystemComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.3"
+      },
+      "TrailComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_Fireball_C:TrailComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.4"
+      },
+      "TravelSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Proj_Fireball_C:TravelSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.2"
+      },
+      "ProjectileMovement": {
+        "ObjectName": "ProjectileMovementComponent'Default__BP_Proj_Fireball_C:ProjectileComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.5"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.9"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "TravelSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "TrailComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.9"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_Fireball_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.8"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Proj_Fireball_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.6"
+      },
+      "VariableGuid": "5F14C590-41FDB5A7-71F5C081-EEE4D6C9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Proj_Fireball_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.7"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "CollisionComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    },
+    "Properties": {
+      "OnComponentHit": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+            },
+            "FunctionName": "OnBeginHit"
+          }
+        ]
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "CollisionDamageComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Fireball_C'Default__BP_Proj_Fireball_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Fireball_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Fireball.9"
+      }
+    }
+  }
+]

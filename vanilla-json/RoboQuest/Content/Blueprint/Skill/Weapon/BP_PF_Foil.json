@@ -1,0 +1,268 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_PF_Foil",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PF_Foil_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_LastIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerPostSkillCustomEffect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PF_Foil_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ASkill:OnTriggerPostSkillCustomEffect'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NetworkInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 36,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'NetworkSkillInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetSkillAnimation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PF_Foil_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill:GetSkillAnimation'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Animation'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'Animation'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PF_Foil_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_PF_Foil_C:ExecuteUbergraph_BP_PF_Foil'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerSkill_Automatic'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_PF_Foil_C:GetSkillAnimation'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.2"
+      },
+      {
+        "ObjectName": "Function'BP_PF_Foil_C:OnTriggerPostSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.1"
+      },
+      {
+        "ObjectName": "Function'BP_PF_Foil_C:ExecuteUbergraph_BP_PF_Foil'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Animations",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Animations",
+          "Flags": "RF_Public",
+          "ElementSize": 40,
+          "Struct": {
+            "ObjectName": "Class'Animation'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentAnimation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PF_Foil": {
+        "ObjectName": "Function'BP_PF_Foil_C:ExecuteUbergraph_BP_PF_Foil'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.0"
+      },
+      "OnTriggerPostSkillCustomEffect": {
+        "ObjectName": "Function'BP_PF_Foil_C:OnTriggerPostSkillCustomEffect'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.1"
+      },
+      "GetSkillAnimation": {
+        "ObjectName": "Function'BP_PF_Foil_C:GetSkillAnimation'",
+        "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PF_Foil_C'Default__BP_PF_Foil_C'",
+      "ObjectPath": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil.4"
+    }
+  },
+  {
+    "Type": "BP_PF_Foil_C",
+    "Name": "Default__BP_PF_Foil_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Skill/Weapon/BP_PF_Foil.BP_PF_Foil_C'",
+    "Package": "/Game/Blueprint/Skill/Weapon/BP_PF_Foil",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Animations": [
+        {
+          "player": [
+            {
+              "ObjectName": "AnimMontage'AM_Rapier_Player_Shoot01_TPV'",
+              "ObjectPath": "/Game/Animation/Weapon/Rapier/Animation/AM_Rapier_Player_Shoot01_TPV.0"
+            },
+            {
+              "ObjectName": "AnimMontage'AM_Rapier_Player_Shoot01_FPV'",
+              "ObjectPath": "/Game/Animation/Weapon/Rapier/Animation/AM_Rapier_Player_Shoot01_FPV.0"
+            }
+          ],
+          "weapon": [
+            null,
+            {
+              "ObjectName": "AnimMontage'AM_Rapier_Weapon_Shoot01_FPV'",
+              "ObjectPath": "/Game/Animation/Weapon/Rapier/Animation/AM_Rapier_Weapon_Shoot01_FPV.0"
+            }
+          ],
+          "sound": null
+        },
+        {
+          "player": [
+            {
+              "ObjectName": "AnimMontage'AM_Rapier_Player_Shoot02_TPV'",
+              "ObjectPath": "/Game/Animation/Weapon/Rapier/Animation/AM_Rapier_Player_Shoot02_TPV.0"
+            },
+            {
+              "ObjectName": "AnimMontage'AM_Rapier_Player_Shoot02_FPV'",
+              "ObjectPath": "/Game/Animation/Weapon/Rapier/Animation/AM_Rapier_Player_Shoot02_FPV.0"
+            }
+          ],
+          "weapon": [
+            null,
+            {
+              "ObjectName": "AnimMontage'AM_Rapier_Weapon_Shoot02_FPV'",
+              "ObjectPath": "/Game/Animation/Weapon/Rapier/Animation/AM_Rapier_Weapon_Shoot02_FPV.0"
+            }
+          ],
+          "sound": null
+        }
+      ],
+      "bDisplayOnlyFirstHitEvent": true
+    }
+  }
+]

@@ -1,0 +1,654 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_MetaReward_BoardTooltip_Entry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MetaReward_BoardTooltip_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetFormattedText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_ParseTextValues_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateColor",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'SlateColor'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MetaReward_BoardTooltip_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.2"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_MetaReward_BoardTooltip_Entry_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_MetaReward_BoardTooltip_Entry_C:ExecuteUbergraph_WGT_MetaReward_BoardTooltip_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_MetaReward_BoardTooltip_Entry_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.1"
+      },
+      {
+        "ObjectName": "Function'WGT_MetaReward_BoardTooltip_Entry_C:ExecuteUbergraph_WGT_MetaReward_BoardTooltip_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Hbox_Level",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Description",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Level",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_LevelNumber",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Separator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bWithLevel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Level",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsUnlock",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Description",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "CustomFloatProperites",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "KeyProp": {
+          "Type": "NameProperty",
+          "Name": "CustomFloatProperites",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "CustomFloatProperites_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_MetaReward_BoardTooltip_Entry": {
+        "ObjectName": "Function'WGT_MetaReward_BoardTooltip_Entry_C:ExecuteUbergraph_WGT_MetaReward_BoardTooltip_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_MetaReward_BoardTooltip_Entry_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_MetaReward_BoardTooltip_Entry_C'Default__WGT_MetaReward_BoardTooltip_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.3"
+    }
+  },
+  {
+    "Type": "WGT_MetaReward_BoardTooltip_Entry_C",
+    "Name": "Default__WGT_MetaReward_BoardTooltip_Entry_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.WGT_MetaReward_BoardTooltip_Entry_C'",
+    "Package": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "Hbox_Level",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.6"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.11"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_135",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Overlay_61.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Text_Separator'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Spacer_79'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Text_Level'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Text_LevelNumber'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.17"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Text_Description'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.5"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.4"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_61",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Overlay_61.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Overlay_61'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.12"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Overlay_61'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.12"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.5"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_79",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Properties": {
+      "Size": {
+        "X": 10.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.7"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Description",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "You start thvve run with 1 ti ze azeeezee ae zaaz"
+      },
+      "WrapTextAt": 680.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.HorizontalBox_135.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.10"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 15.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Level",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Interface.DST_Interface",
+        "Key": "txt_level_short",
+        "SourceString": "lvl",
+        "LocalizedString": "lvl"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 36
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.8"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_LevelNumber",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "1"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 36
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.9"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Separator",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.19"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": ":"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 36
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Hbox_Level.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.6"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_MetaReward_BoardTooltip_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_MetaReward_BoardTooltip_Entry_C:WidgetTree.Overlay_61'",
+        "ObjectPath": "/Game/Blueprint/HUD/MetaReward/WGT_MetaReward_BoardTooltip_Entry.12"
+      }
+    }
+  }
+]

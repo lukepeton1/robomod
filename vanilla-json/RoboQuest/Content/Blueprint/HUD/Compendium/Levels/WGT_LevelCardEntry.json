@@ -1,0 +1,2144 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_LevelCardEntry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Object",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "K2Node_CustomEvent_LoadingTime",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "Temp_int64_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'LoadObjectCompletePin__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInEditor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLevelRow_OutLevelRow",
+        "Flags": "RF_Public",
+        "ElementSize": 2976,
+        "Struct": {
+          "ObjectName": "Class'LevelRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetLevelRow_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AsyncLoadObjectWithTimer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AsyncLoadObjectWithTimer'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_NameToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInEditor_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+        "Flags": "RF_Public",
+        "ElementSize": 2992,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'LevelRowBase'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_LoadAsset_Blocking_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush_1",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadSprite",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Complete_DC5B98224CD89E64C99474A13D89BD0E",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Object",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "LoadingTime",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FillEntry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_AreQuestStoryCompleted_bFullUnlock",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Set Background Image",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetLevelName",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLevelRow_OutLevelRow",
+        "Flags": "RF_Public",
+        "ElementSize": 2976,
+        "Struct": {
+          "ObjectName": "Class'LevelRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetLevelRow_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RandomizePins",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "tempRandomSprite",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'PaperSprite'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_Map_Keys_Keys",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'PaperSprite'",
+            "ObjectPath": "/Script/Paper2D"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Random_OutItem",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PaperSprite'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Random_OutIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush_1",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector2D_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RandomizeStamp",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLevelRow_OutLevelRow",
+        "Flags": "RF_Public",
+        "ElementSize": 2976,
+        "Struct": {
+          "ObjectName": "Class'LevelRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetLevelRow_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsCompendiumEntryUpgraded_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesEntryExistInCompendium_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Private | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RandomizeInfosRotation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RandomizeLevelNameRotation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_LevelCardEntry_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:ExecuteUbergraph_WGT_LevelCardEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizeLevelNameRotation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.11"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizeInfosRotation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.10"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:SetState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.9"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizeStamp'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.8"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizePins'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.7"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:SetLevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.6"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:Set Background Image'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.5"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:FillEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.4"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:Complete_DC5B98224CD89E64C99474A13D89BD0E'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.3"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:LoadSprite'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.2"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.1"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:ExecuteUbergraph_WGT_LevelCardEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Completion",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Pins",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Shadow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Stamp",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Panel_LevelName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanel'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RBox_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'RetainerBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_LevelName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RowHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | BlueprintReadOnly",
+        "Struct": {
+          "ObjectName": "Class'LevelRowHandle'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Infos",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | BlueprintReadOnly | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardInfos_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardInfos.9"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "StampRotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "InitialBackgroundSize",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsUpgraded",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsRegistered",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "PinSprites",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "KeyProp": {
+          "Type": "ObjectProperty",
+          "Name": "PinSprites",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'PaperSprite'",
+            "ObjectPath": "/Script/Paper2D"
+          }
+        },
+        "ValueProp": {
+          "Type": "StructProperty",
+          "Name": "PinSprites_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "Struct": {
+            "ObjectName": "Class'Vector2D'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bCorrupted",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFullUnlock",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InfosRotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_LevelCardEntry": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:ExecuteUbergraph_WGT_LevelCardEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.0"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.1"
+      },
+      "LoadSprite": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:LoadSprite'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.2"
+      },
+      "Complete_DC5B98224CD89E64C99474A13D89BD0E": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:Complete_DC5B98224CD89E64C99474A13D89BD0E'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.3"
+      },
+      "FillEntry": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:FillEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.4"
+      },
+      "Set Background Image": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:Set Background Image'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.5"
+      },
+      "SetLevelName": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:SetLevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.6"
+      },
+      "RandomizePins": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizePins'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.7"
+      },
+      "RandomizeStamp": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizeStamp'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.8"
+      },
+      "SetState": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:SetState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.9"
+      },
+      "RandomizeInfosRotation": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizeInfosRotation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.10"
+      },
+      "RandomizeLevelNameRotation": {
+        "ObjectName": "Function'WGT_LevelCardEntry_C:RandomizeLevelNameRotation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.11"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_LevelCardEntry_C'Default__WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.13"
+    }
+  },
+  {
+    "Type": "WGT_LevelCardEntry_C",
+    "Name": "Default__WGT_LevelCardEntry_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.WGT_LevelCardEntry_C'",
+    "Package": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry",
+    "Properties": {
+      "UberGraphFrame": {},
+      "RowHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable'DT_Levels'",
+          "ObjectPath": "/Game/Data/DT_Levels.0"
+        },
+        "RowName": "None"
+      },
+      "StampRotation": 10.0,
+      "InitialBackgroundSize": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "PinSprites": null,
+      "InfosRotation": 3.0,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.19"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_CardBackground",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground.CanvasPanelSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground.CanvasPanelSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Panel_LevelName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.23"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground.CanvasPanelSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.22"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 132.90936,
+          "Top": 152.8334
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.14"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_LevelCardEntry_C:WidgetTree.Image_Stamp'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.33"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1019.0,
+          "Bottom": 667.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.14"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 770.5,
+          "Top": 23.5
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.14"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_LevelCardEntry_C:WidgetTree.Image_Pins'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.31"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.15"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 4087.5256,
+          "Bottom": 647.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.15"
+      },
+      "Content": {
+        "ObjectName": "RetainerBox'WGT_LevelCardEntry_C:WidgetTree.RBox_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.15"
+    },
+    "Properties": {
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.15"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_LevelCardEntry_C:WidgetTree.Image_Shadow'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.32"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.15"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 11.809659,
+          "Top": 197.76445,
+          "Right": 993.0,
+          "Bottom": 609.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.15"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.16"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.16"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_LevelCardEntry_C:WidgetTree.Image_LevelNamePaper'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.16"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 17.059046,
+          "Top": -26.329447,
+          "Right": 21.799314,
+          "Bottom": 180.98958
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.16"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_LevelCardEntry_C:WidgetTree.ScBox_LevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.36"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.27"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_LevelCardEntry_C:WidgetTree.ScBox_LevelName.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.37"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.25"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.25"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_LevelCardEntry_C:WidgetTree.Text_LevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.38"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.25"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 50.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.25"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_LevelCardEntry_C:WidgetTree.Image_Completion'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.29"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 992.0,
+          "Y": 636.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_World_11_CarteDarkRuins'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Levels/Textures/Cards/T_World_11_CarteDarkRuins.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "PanelSlot'WGT_LevelCardEntry_C:WidgetTree.RBox_Background.PanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.34"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Completion",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 171.0,
+          "Y": 171.0
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'T_World_Approved'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Levels/Frames/T_World_Approved.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.27"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_LevelNamePaper",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 992.0,
+          "Y": 608.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_WorldTitleBackground'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Levels/Textures/T_WorldTitleBackground.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.23"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Pins",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 77.0,
+          "Y": 111.0
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_World_05_Pins2'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Levels/Frames/S_World_05_Pins2.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.19"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -600.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Shadow",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1020.0,
+          "Y": 668.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_World_24_ShadowCarte'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Levels/Textures/T_World_24_ShadowCarte.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground.CanvasPanelSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.21"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Stamp",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 174.0,
+          "Y": 203.0
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_World_06_Timbre'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Levels/Frames/S_World_06_Timbre.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.17"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PanelSlot'",
+    "Outer": {
+      "ObjectName": "RetainerBox'WGT_LevelCardEntry_C:WidgetTree.RBox_Background'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.35"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "RetainerBox'WGT_LevelCardEntry_C:WidgetTree.RBox_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.35"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_LevelCardEntry_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.28"
+      }
+    }
+  },
+  {
+    "Type": "RetainerBox",
+    "Name": "RBox_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RetainerBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "bRetainRender": false,
+      "RenderOnPhase": false,
+      "EffectMaterial": {
+        "ObjectName": "Material'M_Desaturate'",
+        "ObjectPath": "/Game/Graphic/HUD/Compendium/Levels/M_Desaturate.0"
+      },
+      "TextureParameter": "SpriteTexture",
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot'WGT_LevelCardEntry_C:WidgetTree.RBox_Background.PanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_CardBackground.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.20"
+      },
+      "RenderTransformPivot": {
+        "X": 1.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScBox_LevelName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Properties": {
+      "Stretch": "EStretch::ScaleToFitX",
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_LevelCardEntry_C:WidgetTree.ScBox_LevelName.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.37"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WGT_LevelCardEntry_C:WidgetTree.Panel_LevelName.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.24"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_LevelCardEntry_C:WidgetTree.ScBox_LevelName'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.36"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_LevelCardEntry_C:WidgetTree.ScBox_LevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.36"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.25"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_LevelName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelCardEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.39"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "None"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 4
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 90
+      },
+      "ShadowOffset": {
+        "X": 4.0,
+        "Y": 4.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_LevelCardEntry_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.26"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelCardEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.12"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'WGT_LevelCardEntry_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Levels/WGT_LevelCardEntry.14"
+      }
+    }
+  }
+]

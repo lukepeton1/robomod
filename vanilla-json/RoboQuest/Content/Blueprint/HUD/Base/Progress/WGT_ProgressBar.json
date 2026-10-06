@@ -1,0 +1,199 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_ProgressBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ProgressBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValues_Current",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValues_Max",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetProgressBar_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStatChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ProgressBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.3"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_StatWatcher_C:OnStatChanged'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_StatWatcher.8"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetProgressBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ProgressBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_ProgressBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StatWatcher_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_StatWatcher.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_ProgressBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.5"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_ProgressBar_C:ExecuteUbergraph_WGT_ProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_ProgressBar_C:GetProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.2"
+      },
+      {
+        "ObjectName": "Function'WGT_ProgressBar_C:OnStatChanged'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.1"
+      },
+      {
+        "ObjectName": "Function'WGT_ProgressBar_C:ExecuteUbergraph_WGT_ProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_ProgressBar": {
+        "ObjectName": "Function'WGT_ProgressBar_C:ExecuteUbergraph_WGT_ProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.0"
+      },
+      "OnStatChanged": {
+        "ObjectName": "Function'WGT_ProgressBar_C:OnStatChanged'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.1"
+      },
+      "GetProgressBar": {
+        "ObjectName": "Function'WGT_ProgressBar_C:GetProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_ProgressBar_C'Default__WGT_ProgressBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.4"
+    }
+  },
+  {
+    "Type": "WGT_ProgressBar_C",
+    "Name": "Default__WGT_ProgressBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.WGT_ProgressBar_C'",
+    "Package": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar",
+    "Template": {
+      "ObjectName": "WGT_StatWatcher_C'Default__WGT_StatWatcher_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_StatWatcher.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ProgressBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_ProgressBar.3"
+    }
+  }
+]

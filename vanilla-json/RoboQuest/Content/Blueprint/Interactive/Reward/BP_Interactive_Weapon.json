@@ -1,0 +1,1724 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_Weapon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "CallFunc_GetObjectClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetMeshTransformByType_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetClassDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_GetDataRowName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SyncLoadWeaponRow_OutWeaponRow",
+        "Flags": "RF_Public",
+        "ElementSize": 2096,
+        "Struct": {
+          "ObjectName": "Class'WeaponRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SyncLoadWeaponRow_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 148,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 148,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ComposeRotators_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeTransform_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 148,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintDebugOffset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveWeapon:OnBlueprintDebugOffset'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetErrorText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetErrorText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "TempResult",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_IsExcludedForSuperbot_ExcludeText",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsExcludedForSuperbot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ShouldIgnoreFocus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IFocusable:ShouldIgnoreFocus'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetWidgetComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveWidget:GetWidgetComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHoveringMeshComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetHoveringMeshComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHoveringWidgetComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetHoveringWidgetComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetLoot",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ILootable:GetLoot'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetMapLocator",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetMapLocator'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AMapLocator'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "HaveServerValidation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:HaveServerValidation'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HaveServerValidation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:CanInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsSuperBot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CanInteract_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_IsExcludedForSuperbot_ExcludeText",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsExcludedForSuperbot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractSound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetInteractSound'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInteractSound_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsSuperBot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTicketCost",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetTicketCost'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetTicketCost_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_Weapon_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_Weapon_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.28"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Interactive_Weapon_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.19"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:ExecuteUbergraph_BP_Interactive_Weapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveWeapon'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetTicketCost'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.13"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetInteractSound'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.12"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.11"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:HaveServerValidation'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.10"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetMapLocator'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.9"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetLoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.8"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetHoveringWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.7"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetHoveringMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.6"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.5"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:ShouldIgnoreFocus'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetErrorText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:OnBlueprintDebugOffset'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:ExecuteUbergraph_BP_Interactive_Weapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_AMapLocator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AMapLocator_C'",
+          "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Billboard",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BillboardComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_Weapon": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:ExecuteUbergraph_BP_Interactive_Weapon'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.0"
+      },
+      "OnBlueprintDebugOffset": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:OnBlueprintDebugOffset'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.1"
+      },
+      "GetErrorText": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetErrorText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.2"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.3"
+      },
+      "ShouldIgnoreFocus": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:ShouldIgnoreFocus'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.4"
+      },
+      "GetWidgetComponent": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.5"
+      },
+      "GetHoveringMeshComponent": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetHoveringMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.6"
+      },
+      "GetHoveringWidgetComponent": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetHoveringWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.7"
+      },
+      "GetLoot": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetLoot'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.8"
+      },
+      "GetMapLocator": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetMapLocator'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.9"
+      },
+      "HaveServerValidation": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:HaveServerValidation'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.10"
+      },
+      "CanInteract": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.11"
+      },
+      "GetInteractSound": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetInteractSound'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.12"
+      },
+      "GetTicketCost": {
+        "ObjectName": "Function'BP_Interactive_Weapon_C:GetTicketCost'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.13"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    }
+  },
+  {
+    "Type": "BP_Interactive_Weapon_C",
+    "Name": "Default__BP_Interactive_Weapon_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.BP_Interactive_Weapon_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Scene": {
+        "ObjectName": "SceneComponent'Default__BP_Interactive_Weapon_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.24"
+      },
+      "Widget": {
+        "ObjectName": "WidgetComponent'Default__BP_Interactive_Weapon_C:Widget'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.31"
+      },
+      "WeaponMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Interactive_Weapon_C:WeaponMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.29"
+      },
+      "WeaponBeam": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Interactive_Weapon_C:WeaponBeam'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.20"
+      },
+      "WeaponStar": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Interactive_Weapon_C:WeaponStar'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.22"
+      },
+      "WeaponMod": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Interactive_Weapon_C:WeaponMod'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.21"
+      },
+      "WeaponStarFXSoftPtr": {
+        "AssetPathName": "/Game/Graphic/VFX/Interactive/WeaponPickUp/PS_WeaponStar.PS_WeaponStar",
+        "SubPathString": ""
+      },
+      "WeaponModFXSoftPtr": {
+        "AssetPathName": "/Game/Graphic/VFX/Interactive/WeaponPickUp/PS_WeaponMod.PS_WeaponMod",
+        "SubPathString": ""
+      },
+      "TooltipClass": {
+        "AssetPathName": "/Game/Blueprint/HUD/Tooltip/Weapon/WGT_Tooltip_Weapon.WGT_Tooltip_Weapon_C",
+        "SubPathString": ""
+      },
+      "MeshTransformByType": {
+        "Rotation": {
+          "X": 0.056017958,
+          "Y": -0.20906387,
+          "Z": -0.94302976,
+          "W": 0.2526839,
+          "IsNormalized": true,
+          "Size": 1.0,
+          "SizeSquared": 1.0
+        },
+        "Translation": {
+          "X": -9.0,
+          "Y": 17.0,
+          "Z": 34.0
+        }
+      },
+      "MeshTransformByType[1]": {
+        "Rotation": {
+          "X": 0.056018967,
+          "Y": -0.20906387,
+          "Z": -0.94302964,
+          "W": 0.25268388,
+          "IsNormalized": true,
+          "Size": 0.99999994,
+          "SizeSquared": 0.9999999
+        },
+        "Translation": {
+          "X": -10.0,
+          "Y": 22.0,
+          "Z": 34.0
+        }
+      },
+      "MeshTransformByType[2]": {
+        "Rotation": {
+          "X": 0.056018952,
+          "Y": -0.20906366,
+          "Z": -0.94302964,
+          "W": 0.2526841,
+          "IsNormalized": true,
+          "Size": 0.99999994,
+          "SizeSquared": 0.9999999
+        },
+        "Translation": {
+          "X": -43.0,
+          "Y": 93.0,
+          "Z": 34.0
+        }
+      },
+      "MeshTransformByType[3]": {
+        "Rotation": {
+          "X": 0.056018967,
+          "Y": -0.20906387,
+          "Z": -0.94302964,
+          "W": 0.25268388,
+          "IsNormalized": true,
+          "Size": 0.99999994,
+          "SizeSquared": 0.9999999
+        },
+        "Translation": {
+          "X": -5.0,
+          "Y": 20.0,
+          "Z": 34.0
+        }
+      },
+      "MeshTransformByType[4]": {
+        "Rotation": {
+          "X": 3.870239E-08,
+          "Y": -0.21643943,
+          "Z": -0.976296,
+          "W": 1.7457535E-07,
+          "IsNormalized": true,
+          "Size": 0.99999994,
+          "SizeSquared": 0.99999994
+        },
+        "Translation": {
+          "X": -30.0,
+          "Y": 0.0,
+          "Z": 50.0
+        }
+      },
+      "WeaponModLocationOffset": {
+        "X": 5.0,
+        "Y": 13.0,
+        "Z": -28.0
+      },
+      "LootedSound": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Pickup/SC_Pickup_Weapon_Drop.SC_Pickup_Weapon_Drop",
+        "SubPathString": ""
+      },
+      "PendingWeaponText": {
+        "Namespace": "",
+        "Key": "D904F83149F22C76169A9685DFDFB5AD",
+        "SourceString": "Weapon is loading...",
+        "LocalizedString": "Weapon is loading..."
+      },
+      "PurchaseText": {
+        "Namespace": "",
+        "Key": "DB9779CF475C6A0A1C5A82B152D4C376",
+        "SourceString": "Purchase {targetWeapon}",
+        "LocalizedString": "Purchase {targetWeapon}"
+      },
+      "EquipText": {
+        "Namespace": "",
+        "Key": "E2CF0FC44731D01A223BE2BA0886673F",
+        "SourceString": "Equip {targetWeapon}",
+        "LocalizedString": "Equip {targetWeapon}"
+      },
+      "SuperbotInteractText": {
+        "TableId": "/Game/Data/StringTable/DST_Interactive.DST_Interactive",
+        "Key": "superBotInteract",
+        "SourceString": "Eat {targetWeapon}",
+        "LocalizedString": "Eat {targetWeapon}"
+      },
+      "SwitchText": {
+        "Namespace": "",
+        "Key": "91B89FD640E238A5AB74F39B45A4A7EA",
+        "SourceString": "Switch to {targetWeapon}",
+        "LocalizedString": "Switch to {targetWeapon}"
+      },
+      "UROVisibleDistanceFactorThesholds": [
+        0.012,
+        0.006,
+        0.003
+      ],
+      "PhysicMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Interactive_Weapon_C:PhysicMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.30"
+      },
+      "StopCalculatePhysicOffset": 120.0,
+      "CurveDistance": {
+        "ObjectName": "CurveFloat'CU_TooltipDistanceOffset'",
+        "ObjectPath": "/Game/Data/Curve/CU_TooltipDistanceOffset.0"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Weapon_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.17"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": null
+      },
+      "InteractText": {
+        "CultureInvariantString": "None"
+      },
+      "ErrorText": {
+        "CultureInvariantString": "None"
+      },
+      "bServerValidation": true,
+      "bStencilInteraction": false,
+      "InteractSound": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Pickup/SC_Pickup_Weapon.SC_Pickup_Weapon",
+        "SubPathString": ""
+      },
+      "InteractHaptic": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Pickup/HC_Pickup_Weapon.HC_Pickup_Weapon",
+        "SubPathString": ""
+      },
+      "bPingable": true,
+      "PingWidgetOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 125.0
+      },
+      "PingWidgetClass": {
+        "AssetPathName": "/Game/Blueprint/HUD/Ping/WGT_APing.WGT_APing_C",
+        "SubPathString": ""
+      },
+      "PingCompassClass": {
+        "AssetPathName": "/Game/Blueprint/Component/BP_CompassLocator_Ping.BP_CompassLocator_Ping_C",
+        "SubPathString": ""
+      },
+      "HoverMeshLocationCurve": {
+        "ObjectName": "CurveVector'CU_WeaponHoverLocation'",
+        "ObjectPath": "/Game/Data/Curve/CU_WeaponHoverLocation.0"
+      },
+      "HoverMeshRotationCurve": {
+        "ObjectName": "CurveVector'CU_WeaponHoverRotation'",
+        "ObjectPath": "/Game/Data/Curve/CU_WeaponHoverRotation.0"
+      },
+      "HoverWidgetLocationCurve": {
+        "ObjectName": "CurveVector'CU_WeaponHoverLocation'",
+        "ObjectPath": "/Game/Data/Curve/CU_WeaponHoverLocation.0"
+      },
+      "bReplicates": true,
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Weapon_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.17"
+      }
+    }
+  },
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "Properties": {
+      "Sprite": {
+        "ObjectName": "Texture2D'T_HandGun'",
+        "ObjectPath": "/Game/Graphic/HUD/Icon/Weapon/T_HandGun.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 70.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 360.0,
+        "Roll": 360.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "Interactible"
+      },
+      "Mobility": "EComponentMobility::Movable"
+    }
+  },
+  {
+    "Type": "BP_AMapLocator_C",
+    "Name": "BP_AMapLocator_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Component/BP_AMapLocator.BP_AMapLocator_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "Template": {
+      "ObjectName": "BP_AMapLocator_C'Default__BP_AMapLocator_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.1"
+    },
+    "Properties": {
+      "Icon": {
+        "ObjectName": "Texture2D'T_HandGun'",
+        "ObjectPath": "/Game/Graphic/HUD/Icon/Weapon/T_HandGun.0"
+      },
+      "MapSize": {
+        "X": 100.0,
+        "Y": 33.0
+      },
+      "MiniMapSize": {
+        "X": 100.0,
+        "Y": 33.0
+      },
+      "bIsStatic": true,
+      "bAbsoluteRotation": true,
+      "bAutoRegister": false,
+      "ZOrder": -10
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "WeaponBeam",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Weapon_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.17"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "WeaponMod",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Interactive_Weapon_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.24"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "WeaponStar",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Interactive_Weapon_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.24"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Weapon_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.17"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Weapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_Weapon_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.23"
+      },
+      "VariableGuid": "623B62E4-4DF61EBF-20F9D49D-742F4147",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Weapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BillboardComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BillboardComponent'BP_Interactive_Weapon_C:Billboard_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.16"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8424D720-4CF0377B-706D3394-60583DDC",
+      "InternalVariableName": "Billboard"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_Weapon_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.28"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_AMapLocator_C'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_AMapLocator_C'BP_Interactive_Weapon_C:BP_AMapLocator_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.18"
+      },
+      "VariableGuid": "9C28327D-4F8F464D-5124B7B6-C0FC7414",
+      "InternalVariableName": "BP_AMapLocator"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.14"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Weapon_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Weapon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.27"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Weapon_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_Weapon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.27"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_Weapon_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.25"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "WeaponMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "bNotifyRigidBodyCollision": true,
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel17",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel18",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Weapon_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.17"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PhysicMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_VFX_Sphere_Low'",
+        "ObjectPath": "/Game/Graphic/VFX/Base/Mesh/SM_VFX_Sphere_Low.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_PhysicsBody",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel17",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel18",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_Weapon_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.17"
+      }
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Weapon_C'Default__BP_Interactive_Weapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.15"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Interactive_Weapon_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_Weapon.24"
+      }
+    }
+  }
+]

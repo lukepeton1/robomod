@@ -1,0 +1,292 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Perk_Icon_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Perk_Icon_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PerkIconWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_PerkIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WBox_Upgrades",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WrapBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Perk_Icon_C'Default__WGT_Perk_Icon_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.1"
+    }
+  },
+  {
+    "Type": "WGT_Perk_Icon_C",
+    "Name": "Default__WGT_Perk_Icon_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.WGT_Perk_Icon_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon",
+    "Properties": {
+      "UpgradeIconWidgetClass": {
+        "AssetPathName": "/Game/Blueprint/HUD/Player/Item/WGT_Upgrade_Icon.WGT_Upgrade_Icon_C",
+        "SubPathString": ""
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Perk_Icon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.10"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Perk_Icon_C:WidgetTree.HBox.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.4"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Perk_Icon_C:WidgetTree.HBox.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Perk_Icon_C:WidgetTree.O_SkillSlot.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Perk_Icon_C:WidgetTree.HBox'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.2"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Perk_Icon_C:WidgetTree.HBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.2"
+      },
+      "Content": {
+        "ObjectName": "WrapBox'WGT_Perk_Icon_C:WidgetTree.WBox_Upgrades'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Perk_Icon_C:WidgetTree.HBox'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.2"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Perk_Icon_C:WidgetTree.HBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.2"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Perk_Icon_C:WidgetTree.Overlay_PerkIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.7"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Perk_Icon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.10"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_CoffeeMug'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Item/T_CoffeeMug.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Perk_Icon_C:WidgetTree.Overlay_PerkIcon.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.9"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "O_SkillSlot",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Perk_Icon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.10"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Perk_Icon_C:WidgetTree.O_SkillSlot.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_PerkIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Perk_Icon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.10"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Perk_Icon_C:WidgetTree.Overlay_PerkIcon.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Perk_Icon_C:WidgetTree.HBox.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.4"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Perk_Icon_C:WidgetTree.O_SkillSlot'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Perk_Icon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.6"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Perk_Icon_C:WidgetTree.HBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Perk_Icon_C:WidgetTree.Overlay_PerkIcon'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.7"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Perk_Icon_C:WidgetTree.Overlay_PerkIcon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.7"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Perk_Icon_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Perk_Icon_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Perk_Icon_C:WidgetTree.O_SkillSlot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.6"
+      }
+    }
+  },
+  {
+    "Type": "WrapBox",
+    "Name": "WBox_Upgrades",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WrapBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Perk_Icon_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.10"
+    },
+    "Properties": {
+      "WrapSize": 850.0,
+      "bExplicitWrapSize": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Perk_Icon_C:WidgetTree.HBox.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Item/WGT_Perk_Icon.3"
+      },
+      "bIsVariable": true
+    }
+  }
+]

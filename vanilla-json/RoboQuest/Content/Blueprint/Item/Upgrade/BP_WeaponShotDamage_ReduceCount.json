@@ -1,0 +1,174 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WeaponShotDamage_ReduceCount",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WeaponShotDamage_ReduceCount_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bFromRunSave",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Weapon_Shot_Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_WeaponShotDamage_C'",
+          "ObjectPath": "/Game/Blueprint/Item/Common/BP_WeaponShotDamage.8"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WeaponShotDamage_ReduceCount_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AItem:OnApply'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromRunSave",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WeaponShotDamage_ReduceCount_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AItem_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_AItem.3"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WeaponShotDamage_ReduceCount_C:ExecuteUbergraph_BP_WeaponShotDamage_ReduceCount'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WeaponShotDamage_ReduceCount_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.1"
+      },
+      {
+        "ObjectName": "Function'BP_WeaponShotDamage_ReduceCount_C:ExecuteUbergraph_BP_WeaponShotDamage_ReduceCount'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WeaponShotDamage_ReduceCount": {
+        "ObjectName": "Function'BP_WeaponShotDamage_ReduceCount_C:ExecuteUbergraph_BP_WeaponShotDamage_ReduceCount'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.0"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_WeaponShotDamage_ReduceCount_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WeaponShotDamage_ReduceCount_C'Default__BP_WeaponShotDamage_ReduceCount_C'",
+      "ObjectPath": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.3"
+    }
+  },
+  {
+    "Type": "BP_WeaponShotDamage_ReduceCount_C",
+    "Name": "Default__BP_WeaponShotDamage_ReduceCount_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount.BP_WeaponShotDamage_ReduceCount_C'",
+    "Package": "/Game/Blueprint/Item/Upgrade/BP_WeaponShotDamage_ReduceCount",
+    "Template": {
+      "ObjectName": "BP_AItem_C'Default__BP_AItem_C'",
+      "ObjectPath": "/Game/Blueprint/Item/BP_AItem.4"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

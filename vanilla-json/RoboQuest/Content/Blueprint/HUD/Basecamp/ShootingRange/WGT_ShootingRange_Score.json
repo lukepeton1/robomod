@@ -1,0 +1,2645 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_ShootingRange_Score",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateShootingRangeChallengeStarted__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateShootingRangeChallengeDuration__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'ATarget:DelegateTargetDead__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameState:DelegateReceptServerScore__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_Index_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsStart",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_Index_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_FloatToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetTargetsByIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetTargetsByIndex_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'ATarget'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ATarget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ATarget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsDead",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_ServerScore",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsShootingRangeChallengeStarted_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Multiply_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateColor",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'SlateColor'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateColor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'SlateColor'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'SlateColor'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsPackagedForDistribution_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_InDelay",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartCountdown",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "InDelay",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateReceptServerScore_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ServerScore",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateTargetDead_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'ATarget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsDead",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateShootingRangeChallengeDuration_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateShootingRangeChallengeStarted_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStart",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetChallenge",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateScore",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NewScore",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Multiply_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetCountdownText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "InText",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_ShootingRange_Score_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_ShootingRange_Score_C:ScaleText_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.52"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_ShootingRange_Score_C:ScaleCountdown_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.51"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:ExecuteUbergraph_WGT_ShootingRange_Score'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:SetCountdownText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.9"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:UpdateScore'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.8"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:ResetChallenge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.7"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateShootingRangeChallengeStarted_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.6"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateShootingRangeChallengeDuration_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.5"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateTargetDead_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.4"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.3"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateReceptServerScore_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.2"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:StartCountdown'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.1"
+      },
+      {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:ExecuteUbergraph_WGT_ShootingRange_Score'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScaleCountdown",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScaleText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ClientScaleBox",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ScaleBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_Countdown",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_Main",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_ClientScore",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Countdown",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Duration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Txt_Score",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Score",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ScoreMultiplier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ClientScore",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_ShootingRange_Score": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:ExecuteUbergraph_WGT_ShootingRange_Score'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.0"
+      },
+      "StartCountdown": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:StartCountdown'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.1"
+      },
+      "DelegateReceptServerScore_Event_0": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateReceptServerScore_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.2"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.3"
+      },
+      "DelegateTargetDead_Event_0": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateTargetDead_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.4"
+      },
+      "DelegateShootingRangeChallengeDuration_Event_0": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateShootingRangeChallengeDuration_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.5"
+      },
+      "DelegateShootingRangeChallengeStarted_Event_0": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:DelegateShootingRangeChallengeStarted_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.6"
+      },
+      "ResetChallenge": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:ResetChallenge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.7"
+      },
+      "UpdateScore": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:UpdateScore'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.8"
+      },
+      "SetCountdownText": {
+        "ObjectName": "Function'WGT_ShootingRange_Score_C:SetCountdownText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.9"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_ShootingRange_Score_C'Default__WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.11"
+    }
+  },
+  {
+    "Type": "WGT_ShootingRange_Score_C",
+    "Name": "Default__WGT_ShootingRange_Score_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.WGT_ShootingRange_Score_C'",
+    "Package": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "ScoreMultiplier": 100
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "ScaleCountdown",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_ShootingRange_Score_C:ScaleCountdown_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.51"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "FB373CDB-4CC412AD-30C1F0B8-170C9CC5",
+          "Name": "Txt_Countdown",
+          "PossessedObjectClass": {
+            "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "FB373CDB-4CC412AD-30C1F0B8-170C9CC5",
+          "BindingName": "Txt_Countdown",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.17"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 12001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "93B10600-4F101AB1-640079B2-C148A943"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "ScaleText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_ShootingRange_Score_C:ScaleText_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.52"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "51B02AD3-40F30A1E-E18258A4-066943C5",
+          "Name": "Txt_Score",
+          "PossessedObjectClass": {
+            "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "C541638C-4F9E73AB-1D6B0F8F-D28CB87B",
+          "Name": "Txt_Duration",
+          "PossessedObjectClass": {
+            "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "51B02AD3-40F30A1E-E18258A4-066943C5",
+          "BindingName": "Txt_Score",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.18"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "C541638C-4F9E73AB-1D6B0F8F-D28CB87B",
+          "BindingName": "Txt_Duration",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.19"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 12001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "34CF4914-4BF96031-D60A47AD-1CB80E08"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.17"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.25,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.20"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.21"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "21C909DD-494F6D40-170C3E91-4C77F393"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.18"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.25,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.22"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.23"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "3A215DA6-4A3DB162-B6B66795-C6013686"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.19"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.25,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.24"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.25"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "050851BC-4460BBC6-B9C07199-3EF266B2"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.14"
+        }
+      ],
+      "EvaluationFieldGuid": "3D523C71-4BA87A0D-7B92B38D-ED0910E9",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.14"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "3D523C71-4BA87A0D-7B92B38D-ED0910E9"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.13"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.15"
+        }
+      ],
+      "EvaluationFieldGuid": "ADEC0578-4D86E286-B358E1A3-0F95A084",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.15"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "ADEC0578-4D86E286-B358E1A3-0F95A084"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.13"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.16"
+        }
+      ],
+      "EvaluationFieldGuid": "A4A4291B-4CA4A916-FFC21F96-221BF8C2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.16"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "A4A4291B-4CA4A916-FFC21F96-221BF8C2"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.15"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.15"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.16"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.16"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_ShootingRange_Score_C:ScaleCountdown_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.51"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown.MovieScene2DTransformTrack_4.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.14"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "FB373CDB-4CC412AD-30C1F0B8-170C9CC5"
+          }
+        ]
+      },
+      "CompiledSignature": "55E26F6A-4E2C539F-ABAE9B87-D37CD6FE",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_ShootingRange_Score_C:ScaleText_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.52"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.15"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.16"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "51B02AD3-40F30A1E-E18258A4-066943C5"
+          },
+          {
+            "ObjectBindingID": "C541638C-4F9E73AB-1D6B0F8F-D28CB87B"
+          }
+        ]
+      },
+      "CompiledSignature": "BC4102BC-4727A453-66A9ADA0-0EAE7A1D",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_52",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.32"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.31"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_Countdown",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Countdown.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.33"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.31"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.34"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.35"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.32"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.28"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.28"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Countdown'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.29"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.28"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.28"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.30"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Countdown'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.29"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Countdown'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.29"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_Score_C:WidgetTree.Txt_Countdown'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.48"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.30"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.43"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.30"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ClientScaleBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.36"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ClientScaleBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.ClientScaleBox.ScaleBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.39"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.35"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_1.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.40"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.44"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_2.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.41"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.45"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -35.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ClientScaleBox'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.36"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ClientScaleBox'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.36"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_Score_C:WidgetTree.Txt_ClientScore'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.47"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.37"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.37"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_Score_C:WidgetTree.Txt_Score'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.50"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.38"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ShootingRange_Score_C:WidgetTree.Txt_Duration'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.49"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_192",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 40.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.46"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_36",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.44"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.45"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.46"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Main.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.34"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.43"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.43"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.37"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.43"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.43"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.38"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.43"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ShootingRange_Score_C:WidgetTree.VerticalBox_36'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.43"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_ShootingRange_Score_C:WidgetTree.Spacer_192'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.42"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_ClientScore",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "0"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "Size": 36
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.ClientScaleBox.ScaleBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.39"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Countdown",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "3"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 120
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ShootingRange_Score_C:WidgetTree.Overlay_Countdown.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.33"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -25.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Duration",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "60.00"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "Size": 80
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_2.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.41"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Txt_Score",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ShootingRange_Score_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.53"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.603828,
+          "B": 0.033105,
+          "A": 1.0,
+          "Hex": "FFCC33"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "Size": 120
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_ShootingRange_Score_C:WidgetTree.ScaleBox_1.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.40"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -5.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "ScaleCountdown_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_ShootingRange_Score_C:ScaleCountdown_INST.ScaleCountdown'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.12"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Txt_Countdown",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "FB373CDB-4CC412AD-30C1F0B8-170C9CC5",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "ScaleCountdown",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_ShootingRange_Score_C:ScaleCountdown_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.26"
+      },
+      "Signature": "55E26F6A-4E2C539F-ABAE9B87-D37CD6FE"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "ScaleText_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_ShootingRange_Score_C:ScaleText_INST.ScaleText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.13"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Txt_Score",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "51B02AD3-40F30A1E-E18258A4-066943C5",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Txt_Duration",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "C541638C-4F9E73AB-1D6B0F8F-D28CB87B",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "ScaleText",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_ShootingRange_Score_C:ScaleText_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.27"
+      },
+      "Signature": "BC4102BC-4727A453-66A9ADA0-0EAE7A1D"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ShootingRange_Score_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.10"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_ShootingRange_Score_C:WidgetTree.Overlay_52'",
+        "ObjectPath": "/Game/Blueprint/HUD/Basecamp/ShootingRange/WGT_ShootingRange_Score.28"
+      }
+    }
+  }
+]

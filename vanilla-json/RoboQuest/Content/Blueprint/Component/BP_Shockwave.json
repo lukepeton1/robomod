@@ -1,0 +1,158 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Shockwave_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Component/BP_Shockwave",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Shockwave_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AShockwave'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Shockwave_C'Default__BP_Shockwave_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.1"
+    }
+  },
+  {
+    "Type": "BP_Shockwave_C",
+    "Name": "Default__BP_Shockwave_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Component/BP_Shockwave.BP_Shockwave_C'",
+    "Package": "/Game/Blueprint/Component/BP_Shockwave",
+    "Properties": {
+      "Root": {
+        "ObjectName": "SceneComponent'Default__BP_Shockwave_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.4"
+      },
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Shockwave_C:StaticMesh'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.7"
+      },
+      "ParticleSystemComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Shockwave_C:ParticleSystem'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.2"
+      },
+      "bReplicates": true,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Shockwave_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.4"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Shockwave_C'Default__BP_Shockwave_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.1"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_ShockWave_01'",
+        "ObjectPath": "/Game/Graphic/VFX/Enemy/Specific/ShockWave/PS_ShockWave_01.75"
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Shockwave_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.4"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Shockwave_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Shockwave_C'Default__BP_Shockwave_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Shockwave_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.6"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Shockwave_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.3"
+      },
+      "VariableGuid": "281701B7-4EE5D0B1-1C412DA9-C4121EF1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Shockwave_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Shockwave_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Shockwave_C'Default__BP_Shockwave_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Mole_Shockwave'",
+        "ObjectPath": "/Game/Graphic/VFX/Enemy/Boss/Mole/TMM/SM_Mole_Shockwave.2"
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Shockwave_C:Scene'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_Shockwave.4"
+      },
+      "bVisible": false
+    }
+  }
+]

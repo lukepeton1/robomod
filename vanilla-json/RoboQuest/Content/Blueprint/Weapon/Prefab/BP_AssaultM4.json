@@ -1,0 +1,251 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AssaultM4",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AssaultM4_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.31"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AssaultM4_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_AssaultM4_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AssaultM4_C:ExecuteUbergraph_BP_AssaultM4'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AssaultM4_C:ExecuteUbergraph_BP_AssaultM4'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AssaultM4": {
+        "ObjectName": "Function'BP_AssaultM4_C:ExecuteUbergraph_BP_AssaultM4'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AssaultM4_C'Default__BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.2"
+    }
+  },
+  {
+    "Type": "BP_AssaultM4_C",
+    "Name": "Default__BP_AssaultM4_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.BP_AssaultM4_C'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4",
+    "Template": {
+      "ObjectName": "BP_AWeapon_C'Default__BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.32"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "WeaponStatManager": {
+        "ObjectName": "AStatManager'Default__BP_AssaultM4_C:WeaponStatManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.4"
+      },
+      "WeaponSkillManager": {
+        "ObjectName": "ASkillManager'Default__BP_AssaultM4_C:WeaponSkillManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.3"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_AssaultM4_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.10"
+      },
+      "IdleSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_AssaultM4_C:IdleSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.5"
+      },
+      "LowCoolingColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "HighCoolingColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_AssaultM4_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.10"
+      }
+    }
+  },
+  {
+    "Type": "ASkillManager",
+    "Name": "WeaponSkillManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ASkillManager'",
+    "Outer": {
+      "ObjectName": "BP_AssaultM4_C'Default__BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.2"
+    },
+    "Template": {
+      "ObjectName": "ASkillManager'Default__BP_AWeapon_C:WeaponSkillManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.33"
+    }
+  },
+  {
+    "Type": "AStatManager",
+    "Name": "WeaponStatManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AStatManager'",
+    "Outer": {
+      "ObjectName": "BP_AssaultM4_C'Default__BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.2"
+    },
+    "Template": {
+      "ObjectName": "AStatManager'Default__BP_AWeapon_C:WeaponStatManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.34"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_AssaultM4_C'Default__BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.2"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_AWeapon_C:IdleSoundComponent'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.35"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_AssaultM4_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.10"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AssaultM4_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.9"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AssaultM4_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.7"
+      },
+      "VariableGuid": "94534FCB-48BA0333-F5FDFF91-0098A177",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.1"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AssaultM4_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_AssaultM4_C'Default__BP_AssaultM4_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_AssaultM4.2"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_AWeapon_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.42"
+    }
+  }
+]

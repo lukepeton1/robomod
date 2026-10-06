@@ -1,0 +1,206 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Chest_Weapon_Road_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Discovery_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_AWeapon.6"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Chest_Weapon_Road_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.6"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Chest_Weapon_Road_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Chest_Weapon_Road_C'Default__BP_Chest_Weapon_Road_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.1"
+    }
+  },
+  {
+    "Type": "BP_Chest_Weapon_Road_C",
+    "Name": "Default__BP_Chest_Weapon_Road_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.BP_Chest_Weapon_Road_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road",
+    "Template": {
+      "ObjectName": "BP_Discovery_AWeapon_C'Default__BP_Discovery_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_AWeapon.7"
+    },
+    "Properties": {
+      "LootRange": {
+        "X": 2,
+        "Y": 2
+      },
+      "bCustomLoot": true,
+      "Level": 2,
+      "AffixAmount": 6,
+      "Amount": 1,
+      "HoverAnimation": {
+        "ObjectName": "AnimMontage'AM_Chest_Weapon_03_Hover'",
+        "ObjectPath": "/Game/Graphic/Interactive/Chest/Weapon/AM_Chest_Weapon_03_Hover.0"
+      },
+      "ClosedLoopingParticle": {
+        "ObjectName": "ParticleSystem'PS_Chest_02_Stage_01_Closed'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/Chest/PS_Chest_02_Stage_01_Closed.32"
+      },
+      "OpenLoopingParticle": {
+        "ObjectName": "ParticleSystem'PS_Chest_02_Stage_03_Open'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/Chest/PS_Chest_02_Stage_03_Open.33"
+      },
+      "OpenningParticle": {
+        "ObjectName": "ParticleSystem'PS_Chest_02_Stage_02_Opening_Blue'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/Chest/PS_Chest_02_Stage_02_Opening_Blue.38"
+      },
+      "OnPickParticle": {
+        "ObjectName": "ParticleSystem'PS_Chest_01_Stage_04_Post_Blue'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/Chest/PS_Chest_01_Stage_04_Post_Blue.14"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Chest_Weapon_Road_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.2"
+      },
+      "RemoteRole": "ROLE_SimulatedProxy",
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Chest_Weapon_Road_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Chest_Weapon_Road_C'Default__BP_Chest_Weapon_Road_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.1"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Discovery_AWeapon_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_AWeapon.8"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Weapon_Road_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkeletalMeshComponent'BP_Chest_Weapon_Road_C:SkeletalMesh_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_AChest_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.27"
+            },
+            "SCSVariableName": "SkeletalMesh",
+            "AssociatedGuid": "D45C2370-443ECED0-083A00A6-3A27080A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Weapon_Road_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Chest_Weapon_Road_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.6"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Chest_Weapon_Road_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.4"
+      },
+      "VariableGuid": "89BBA181-47D64CDF-E49521A8-52182E15",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Weapon_Road_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Chest_Weapon_Road_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.5"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Weapon_Road_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Weapon_Road.0"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'BP_Discovery_AWeapon_C:SkeletalMesh_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Discovery_AWeapon.13"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Chest_Weapon_03_C'",
+        "ObjectPath": "/Game/Graphic/Interactive/Chest/Weapon/ABP_Chest_Weapon_03.4"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Chest_Weapon_03'",
+        "ObjectPath": "/Game/Graphic/Interactive/Chest/Weapon/SK_Chest_Weapon_03.0"
+      }
+    }
+  }
+]

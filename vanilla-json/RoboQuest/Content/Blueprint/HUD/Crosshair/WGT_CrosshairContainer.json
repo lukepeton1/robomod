@@ -1,0 +1,3243 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_CrosshairContainer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CrosshairContainer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CrosshairContainer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CrosshairContainer_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.56"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.55"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_CrosshairContainer_C:ExecuteUbergraph_WGT_CrosshairContainer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CrosshairContainerWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_CrosshairContainer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.1"
+      },
+      {
+        "ObjectName": "Function'WGT_CrosshairContainer_C:ExecuteUbergraph_WGT_CrosshairContainer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_OnDealBurnDamage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_ChargeBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_DealDamage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_DealDamageBurn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_GrappleBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_OutOfAmmo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_ScopeChargeBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_Crosshair",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SBox_Grapple",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SizeBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_CoolingGauje_Crosshair",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CoolingGauje_Crosshair_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_SecondaryStackCounter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_SecondaryStackCounter_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_WeaponClip",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponClip_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DynamicGrappleMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_CrosshairContainer": {
+        "ObjectName": "Function'WGT_CrosshairContainer_C:ExecuteUbergraph_WGT_CrosshairContainer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_CrosshairContainer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CrosshairContainer_C'Default__WGT_CrosshairContainer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.3"
+    }
+  },
+  {
+    "Type": "WGT_CrosshairContainer_C",
+    "Name": "Default__WGT_CrosshairContainer_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.WGT_CrosshairContainer_C'",
+    "Package": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CrossCrosshairClass": {
+        "AssetPathName": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_Cross.WGT_Crosshair_Cross_C",
+        "SubPathString": ""
+      },
+      "DotCrosshairClass": {
+        "AssetPathName": "/Game/Blueprint/HUD/Crosshair/WGT_Crosshair_Dot.WGT_Crosshair_Dot_C",
+        "SubPathString": ""
+      },
+      "GreyCrosshairColor": {
+        "R": 0.318547,
+        "G": 0.318547,
+        "B": 0.318547,
+        "A": 0.498039,
+        "Hex": "7F999999"
+      },
+      "ProjectileFalloffOffset": -100.0,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_287",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_8'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.42"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -444.0,
+          "Y": 170.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_ChargeBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'MI_ChargeBar'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Weapon/Bar/MI_ChargeBar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SBox_Warmup.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.50"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_DealDamage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 240.0,
+          "Y": 240.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_HitMarker_M'",
+          "ObjectPath": "/Game/Graphic/HUD/Crosshair/T_HitMarker_M.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.36"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_DealDamageBurn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 240.0,
+          "Y": 240.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_HitMarker_M'",
+          "ObjectPath": "/Game/Graphic/HUD/Crosshair/T_HitMarker_M.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.38"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_GrappleBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.52,
+            "G": 0.52,
+            "B": 0.52,
+            "A": 1.0,
+            "Hex": "BFBFBF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'MI_ChargeBar'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Weapon/Bar/MI_ChargeBar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SBox_Grapple.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.48"
+      },
+      "RenderTransform": {
+        "Angle": 180.0
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_OutOfAmmo",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 104.0,
+          "Y": 104.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF0000"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_No_Ammo_'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Weapon/T_No_Ammo_.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.34"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_ScopeChargeBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'MI_ChargeBar'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Weapon/Bar/MI_ChargeBar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SBox_ScopeCharge.SizeBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.49"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_OnDealBurnDamage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.55"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "55BADB22-4BA284CA-80E12E96-1C480CA0",
+          "Name": "Image_DealDamageBurn",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "55BADB22-4BA284CA-80E12E96-1C480CA0",
+          "BindingName": "Image_DealDamageBurn",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.15"
+            },
+            {
+              "ObjectName": "MovieSceneColorTrack'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.27"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 60
+      },
+      "Signature": "C759D499-4AF46A16-DF64089F-29DB9174"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_OnDealDamage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.56"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "7D4FB7ED-4D2AFC63-CBCFF584-323CE74B",
+          "Name": "Image_DealDamage",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "7D4FB7ED-4D2AFC63-CBCFF584-323CE74B",
+          "BindingName": "Image_DealDamage",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.28"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.16"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 60
+      },
+      "Signature": "FE57EDA1-417EE23D-972CB39C-E9079C79"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.15"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -3E-06,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.04,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -3E-06,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.04,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::RestoreState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.17"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.18"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "Signature": "476592FE-4F3A0445-3F155A87-24F08DB3"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.16"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -2.6666642E-06,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.04,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -2.6666642E-06,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.04,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::RestoreState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.21"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.22"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "Signature": "C428A833-4EFCCB02-EDFDC096-4E42C1B3"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.13"
+        }
+      ],
+      "EvaluationFieldGuid": "C53AD37B-4FD3077D-D782838B-91A10FD3",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.13"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 15001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C53AD37B-4FD3077D-D782838B-91A10FD3"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.14"
+        }
+      ],
+      "EvaluationFieldGuid": "2480A666-4D621FB6-9FF600BF-14FC1169",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.14"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 15001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "2480A666-4D621FB6-9FF600BF-14FC1169"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.13"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.13"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.26"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.26"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.27"
+    },
+    "Properties": {
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -5.6E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -6.7E-05,
+              "LeaveTangent": -6.7E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::KeepState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.19"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.20"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "Signature": "4C8C16F5-48ECC018-EC4D28BC-8481283D"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.28"
+    },
+    "Properties": {
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -5.5555556E-05,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -6.666667E-05,
+              "LeaveTangent": -6.666667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::KeepState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.23"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.24"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "Signature": "C5976BDD-4C23986F-49EA65B3-C037190B"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.25"
+        }
+      ],
+      "EvalOptions": {
+        "bEvalNearestSection": true
+      },
+      "EvaluationFieldGuid": "D54D0F66-4D1C6763-A985EB83-6AD01521",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -1
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 15001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15001
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": 15001
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D54D0F66-4D1C6763-A985EB83-6AD01521"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.26"
+        }
+      ],
+      "EvalOptions": {
+        "bEvalNearestSection": true
+      },
+      "EvaluationFieldGuid": "9EB31124-4B7949DA-019BAD91-181342A2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -1
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 15001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          },
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15001
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": 15001
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9EB31124-4B7949DA-019BAD91-181342A2"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.55"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "55BADB22-4BA284CA-80E12E96-1C480CA0",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.27"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 6000
+                        },
+                        {
+                          "Value": 15000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": -5.6E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": -6.7E-05,
+                            "LeaveTangent": -6.7E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieSceneColorTrack_2.MovieSceneColorSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.25"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "D54D0F66-4D1C6763-A985EB83-6AD01521",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 15001
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.13"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "55BADB22-4BA284CA-80E12E96-1C480CA0"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 15001
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 15001
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -1
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": 15001
+                }
+              }
+            ]
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          }
+        ]
+      },
+      "CompiledSignature": "06D98C0B-47D2A013-2AB7BE97-53F1EED0",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.56"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "7D4FB7ED-4D2AFC63-CBCFF584-323CE74B",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.28"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 6000
+                        },
+                        {
+                          "Value": 15000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": -5.5555556E-05,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": -6.666667E-05,
+                            "LeaveTangent": -6.666667E-05,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+                      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.26"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "9EB31124-4B7949DA-019BAD91-181342A2",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 15001
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.14"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "7D4FB7ED-4D2AFC63-CBCFF584-323CE74B"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 15001
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 15001
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -1
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": 15001
+                }
+              }
+            ]
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          }
+        ]
+      },
+      "CompiledSignature": "39A937EB-47C06282-9D9C8EA2-52B95A7C",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "MainOverlay",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.33"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.36"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.38"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.34"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_7'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.41"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.37"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_10'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.35"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.40"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_9'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.43"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.39"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_8'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.42"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SizeBox_45.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.51"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_Crosshair",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.33"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.Overlay_Crosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.32"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CrosshairContainer_C:WidgetTree.Image_OutOfAmmo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_ScopeCharge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.45"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CrosshairContainer_C:WidgetTree.Image_DealDamage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "WGT_WeaponClip_C'WGT_CrosshairContainer_C:WidgetTree.WGT_WeaponClip'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.54"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CrosshairContainer_C:WidgetTree.Image_DealDamageBurn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.7"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_Grapple'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.44"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "WGT_CoolingGauje_Crosshair_C'WGT_CrosshairContainer_C:WidgetTree.WGT_CoolingGauje_Crosshair'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.52"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_Warmup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.46"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_CrosshairContainer_C:WidgetTree.HorizontalBox_287'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.4"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      },
+      "Content": {
+        "ObjectName": "WGT_SecondaryStackCounter_C'WGT_CrosshairContainer_C:WidgetTree.WGT_SecondaryStackCounter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.53"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_Grapple",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "WidthOverride": 55.0,
+      "HeightOverride": 230.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SBox_Grapple.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.48"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.39"
+      },
+      "RenderTransform": {
+        "Angle": -90.0
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_ScopeCharge",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "WidthOverride": 55.0,
+      "HeightOverride": 230.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SBox_ScopeCharge.SizeBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.49"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_10'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.35"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 70.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_Warmup",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "WidthOverride": 55.0,
+      "HeightOverride": 230.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SBox_Warmup.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.50"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.41"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 70.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_45",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Properties": {
+      "WidthOverride": 600.0,
+      "HeightOverride": 600.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_CrosshairContainer_C:WidgetTree.SizeBox_45.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.51"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_Grapple'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.44"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_Grapple'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.44"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CrosshairContainer_C:WidgetTree.Image_GrappleBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.8"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_ScopeCharge'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.45"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_ScopeCharge'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.45"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CrosshairContainer_C:WidgetTree.Image_ScopeChargeBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.10"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_Warmup'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.46"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SBox_Warmup'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.46"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CrosshairContainer_C:WidgetTree.Image_ChargeBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.5"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SizeBox_45'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.47"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SizeBox_45'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.47"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_CrosshairContainer_C:WidgetTree.MainOverlay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.31"
+      }
+    }
+  },
+  {
+    "Type": "WGT_CoolingGauje_Crosshair_C",
+    "Name": "WGT_CoolingGauje_Crosshair",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.WGT_CoolingGauje_Crosshair_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Template": {
+      "ObjectName": "WGT_CoolingGauje_Crosshair_C'Default__WGT_CoolingGauje_Crosshair_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.40"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -70.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WGT_SecondaryStackCounter_C",
+    "Name": "WGT_SecondaryStackCounter",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.WGT_SecondaryStackCounter_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Template": {
+      "ObjectName": "WGT_SecondaryStackCounter_C'Default__WGT_SecondaryStackCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_SecondaryStackCounter.10"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.43"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 120.0,
+          "Y": 90.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WGT_WeaponClip_C",
+    "Name": "WGT_WeaponClip",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.WGT_WeaponClip_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CrosshairContainer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.57"
+    },
+    "Template": {
+      "ObjectName": "WGT_WeaponClip_C'Default__WGT_WeaponClip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_WeaponClip.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CrosshairContainer_C:WidgetTree.MainOverlay.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.37"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 370.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_OnDealBurnDamage_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CrosshairContainer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.2"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.Anim_OnDealBurnDamage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.11"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_DealDamageBurn",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "55BADB22-4BA284CA-80E12E96-1C480CA0",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_CrosshairContainer_C:Anim_OnDealBurnDamage_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.29"
+      },
+      "Signature": "06D98C0B-47D2A013-2AB7BE97-53F1EED0"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_OnDealDamage_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CrosshairContainer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.2"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.Anim_OnDealDamage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.12"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_DealDamage",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "7D4FB7ED-4D2AFC63-CBCFF584-323CE74B",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_CrosshairContainer_C:Anim_OnDealDamage_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.30"
+      },
+      "Signature": "39A937EB-47C06282-9D9C8EA2-52B95A7C"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CrosshairContainer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WGT_CrosshairContainer_C:WidgetTree.SizeBox_45'",
+        "ObjectPath": "/Game/Blueprint/HUD/Crosshair/WGT_CrosshairContainer.47"
+      }
+    }
+  }
+]

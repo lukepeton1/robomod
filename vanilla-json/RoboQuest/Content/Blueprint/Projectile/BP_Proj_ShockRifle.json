@@ -1,0 +1,2939 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Proj_ShockRifle",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetElement_NewParam",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EElement'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EElement'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_Status_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_AddDuration",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DamageAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_ImpactForceAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageInstigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ACharacter'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_GameplayTags",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_IceRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_ShockRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_Status_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_ForwardVector_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_Intensity",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EBumpIntensity'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageInfo_2",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageInfo_1",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_ForwardVector",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_TriggerLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Radius",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InEnemy_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_AI'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bHighPriority",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InEnemy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_AI'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_FClamp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAPlayer_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerSkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetWeapon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSkill_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ISkillManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkill_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ASkill'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnActivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AProjectile:OnActivate'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDestroy",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AProjectile:OnDestroy'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApplyCosmeticDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UnregisterToTokenSystem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InEnemy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_AI'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RegisterToTokenSystem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InEnemy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_AI'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bHighPriority",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerRocketJump",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ForwardVector",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TriggerLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Radius",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerDeath",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemoveStatus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDealDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 136,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'RQDamageInfo'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBumped",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ForwardVector",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Intensity",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EBumpIntensity'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApplyStatus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApplyDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DamageAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ImpactForceAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageInstigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'ACharacter'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "GameplayTags",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "IceRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ShockRatio",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AddStatusDuration",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AddDuration",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateSphereCollisionVisual",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_FloatToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetElement",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "NewParam",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "Enum": {
+          "ObjectName": "Class'EElement'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "CheckedFlags",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "EnumProperty",
+          "Name": "CheckedFlags",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EGameplayTags'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        },
+        "ValueProp": {
+          "Type": "EnumProperty",
+          "Name": "CheckedFlags_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EElement'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeVariable_MakeVariableOutput",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "KeyProp": {
+          "Type": "EnumProperty",
+          "Name": "K2Node_MakeVariable_MakeVariableOutput",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EGameplayTags'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        },
+        "ValueProp": {
+          "Type": "EnumProperty",
+          "Name": "K2Node_MakeVariable_MakeVariableOutput_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EElement'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "EnumProperty",
+          "Name": "CallFunc_Map_Keys_Keys",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EGameplayTags'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EGameplayTags'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EElement'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckFlagToBitmask_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "ShouldConsumeHit",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsDead",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsAllyTeam",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Team",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'ETeam'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HaveTokenSystem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HaveStatus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTeam",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Enum": {
+          "ObjectName": "Class'ETeam'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTargetThreat",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTargetNavLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTargetLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetStatus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Inner": {
+          "Type": "EnumProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EStatus'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDamageModifierRatio",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDamageLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12,
+          "Struct": {
+            "ObjectName": "Class'Vector'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 12,
+          "Struct": {
+            "ObjectName": "Class'Vector'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetBoneType",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 148,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Enum": {
+          "ObjectName": "Class'EBonesType'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanTakeDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanDie",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCriticalBoneRatio",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 148,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetStatusStayDuration",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Status",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStatus'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetFalloffCalculateLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 148,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDynamicMaterials",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'MaterialInstanceDynamic'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHomingComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTrapDamageModifier",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Type",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'ETrapType'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPierceTag",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDamageablePrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ShouldBlockHit",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "HitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetRicochetLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetGamepadMagnetismLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "StartTrace",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ForwardVector",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanBeHommed",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Proj_ShockRifle_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Proj_ShockRifle_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.54"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:ExecuteUbergraph_BP_Proj_ShockRifle'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'APlayerProjectile'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:CanBeHommed'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.43"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetGamepadMagnetismLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.42"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetRicochetLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.41"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:ShouldBlockHit'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.40"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDamageablePrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.39"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetPierceTag'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.38"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTrapDamageModifier'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.37"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetHomingComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.36"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDynamicMaterials'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.35"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetFalloffCalculateLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.34"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetStatusStayDuration'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.33"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetCriticalBoneRatio'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.32"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:CanDie'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.31"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:CanTakeDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.30"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetBoneType'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.29"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDamageLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.28"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDamageModifierRatio'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.27"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.26"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTargetLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.25"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTargetNavLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.24"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTargetThreat'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.23"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTeam'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.22"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:HaveStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.21"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:HaveTokenSystem'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.20"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:IsAllyTeam'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.19"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:IsDead'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.18"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:ShouldConsumeHit'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.17"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetElement'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.16"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:UpdateSphereCollisionVisual'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.15"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.14"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:AddStatusDuration'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.13"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnApplyDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.12"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnApplyStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.11"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnBumped'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.10"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnDealDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.9"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnRemoveStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.8"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnTriggerDeath'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.7"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnTriggerRocketJump'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.6"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:RegisterToTokenSystem'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.5"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:UnregisterToTokenSystem'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.4"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnApplyCosmeticDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.3"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnDestroy'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.2"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnActivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.1"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:ExecuteUbergraph_BP_Proj_ShockRifle'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExplosionCollision",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsDead",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "BaseTickRadius",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "IncreaseSizeAmount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScaleSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Proj_ShockRifle": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:ExecuteUbergraph_BP_Proj_ShockRifle'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.0"
+      },
+      "OnActivate": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnActivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.1"
+      },
+      "OnDestroy": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnDestroy'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.2"
+      },
+      "OnApplyCosmeticDamage": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnApplyCosmeticDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.3"
+      },
+      "UnregisterToTokenSystem": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:UnregisterToTokenSystem'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.4"
+      },
+      "RegisterToTokenSystem": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:RegisterToTokenSystem'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.5"
+      },
+      "OnTriggerRocketJump": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnTriggerRocketJump'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.6"
+      },
+      "OnTriggerDeath": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnTriggerDeath'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.7"
+      },
+      "OnRemoveStatus": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnRemoveStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.8"
+      },
+      "OnDealDamage": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnDealDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.9"
+      },
+      "OnBumped": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnBumped'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.10"
+      },
+      "OnApplyStatus": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnApplyStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.11"
+      },
+      "OnApplyDamage": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:OnApplyDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.12"
+      },
+      "AddStatusDuration": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:AddStatusDuration'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.13"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.14"
+      },
+      "UpdateSphereCollisionVisual": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:UpdateSphereCollisionVisual'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.15"
+      },
+      "GetElement": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetElement'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.16"
+      },
+      "ShouldConsumeHit": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:ShouldConsumeHit'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.17"
+      },
+      "IsDead": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:IsDead'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.18"
+      },
+      "IsAllyTeam": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:IsAllyTeam'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.19"
+      },
+      "HaveTokenSystem": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:HaveTokenSystem'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.20"
+      },
+      "HaveStatus": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:HaveStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.21"
+      },
+      "GetTeam": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTeam'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.22"
+      },
+      "GetTargetThreat": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTargetThreat'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.23"
+      },
+      "GetTargetNavLocation": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTargetNavLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.24"
+      },
+      "GetTargetLocation": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTargetLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.25"
+      },
+      "GetStatus": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetStatus'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.26"
+      },
+      "GetDamageModifierRatio": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDamageModifierRatio'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.27"
+      },
+      "GetDamageLocation": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDamageLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.28"
+      },
+      "GetBoneType": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetBoneType'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.29"
+      },
+      "CanTakeDamage": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:CanTakeDamage'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.30"
+      },
+      "CanDie": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:CanDie'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.31"
+      },
+      "GetCriticalBoneRatio": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetCriticalBoneRatio'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.32"
+      },
+      "GetStatusStayDuration": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetStatusStayDuration'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.33"
+      },
+      "GetFalloffCalculateLocation": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetFalloffCalculateLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.34"
+      },
+      "GetDynamicMaterials": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDynamicMaterials'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.35"
+      },
+      "GetHomingComponent": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetHomingComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.36"
+      },
+      "GetTrapDamageModifier": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetTrapDamageModifier'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.37"
+      },
+      "GetPierceTag": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetPierceTag'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.38"
+      },
+      "GetDamageablePrimitiveComponent": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetDamageablePrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.39"
+      },
+      "ShouldBlockHit": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:ShouldBlockHit'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.40"
+      },
+      "GetRicochetLocation": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetRicochetLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.41"
+      },
+      "GetGamepadMagnetismLocation": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:GetGamepadMagnetismLocation'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.42"
+      },
+      "CanBeHommed": {
+        "ObjectName": "Function'BP_Proj_ShockRifle_C:CanBeHommed'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.43"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'IDamageable'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+    }
+  },
+  {
+    "Type": "BP_Proj_ShockRifle_C",
+    "Name": "Default__BP_Proj_ShockRifle_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Projectile/BP_Proj_ShockRifle.BP_Proj_ShockRifle_C'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ScaleSound": {
+        "ObjectName": "SoundCue'SC_ShockRifle_SF_Expand'",
+        "ObjectPath": "/Game/Audio/Sound/Weapon/Specific/ShockRifle/SC_ShockRifle_SF_Expand.0"
+      },
+      "CollisionComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ShockRifle_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.56"
+      },
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Proj_ShockRifle_C:StaticMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.58"
+      },
+      "ParticleSystemComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_ShockRifle_C:ParticleSystemComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.47"
+      },
+      "TrailComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_ShockRifle_C:TrailComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.48"
+      },
+      "TravelSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Proj_ShockRifle_C:TravelSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.46"
+      },
+      "ProjectileMovement": {
+        "ObjectName": "ProjectileMovementComponent'Default__BP_Proj_ShockRifle_C:ProjectileComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.49"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ShockRifle_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.56"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "TravelSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ShockRifle_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.56"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ShockRifle_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.56"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "TrailComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ShockRifle_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.56"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_ShockRifle_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.54"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Proj_ShockRifle_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.50"
+      },
+      "VariableGuid": "19FE84AE-4B55C55B-B884BDB2-4A018B68",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_ShockRifle_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.54"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BP_Proj_ShockRifle_C:ExplosionCollision_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.55"
+      },
+      "ParentComponentOrVariableName": "CollisionComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4B9D32E1-4D73900B-E6BEE8A7-ABD444F1",
+      "InternalVariableName": "ExplosionCollision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_ShockRifle_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.54"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Proj_ShockRifle_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.57"
+      },
+      "ParentComponentOrVariableName": "CollisionComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C9766AC4-4598A8BA-C485B7A3-DDFBEDBC",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ShockRifle_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ShockRifle_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.53"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ShockRifle_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Proj_ShockRifle_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.53"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Proj_ShockRifle_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.51"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "ExplosionCollision_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "Properties": {
+      "SphereRadius": 100.0,
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionProfileName": "OverlapOnlySkill",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Dash",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "CollisionComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+    },
+    "Properties": {
+      "OnComponentHit": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+            },
+            "FunctionName": "OnBeginHit"
+          }
+        ]
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.44"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "/Engine/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_BigBallZone_Shock_01'",
+          "ObjectPath": "/Game/Graphic/VFX/Weapon/Projectiles_v2/BigBallZone/TMM/MI_BigBallZone_Shock_01.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionProfileName": "NoCollision"
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_ShockRifle_C'Default__BP_Proj_ShockRifle_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.45"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_ShockRifle_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_ShockRifle.56"
+      }
+    }
+  }
+]

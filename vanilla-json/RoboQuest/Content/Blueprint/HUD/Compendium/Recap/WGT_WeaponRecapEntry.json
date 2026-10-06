@@ -1,0 +1,907 @@
+[
+  {
+    "Type": "Function",
+    "Name": "DispatchOnSelectEntry__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Entry",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponRecapEntry_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_WeaponRecapEntry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Datas",
+        "Flags": "RF_Public",
+        "ElementSize": 2096,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'WeaponRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_RunDatas",
+        "Flags": "RF_Public",
+        "ElementSize": 152,
+        "Struct": {
+          "ObjectName": "Class'WeaponRunRecap'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetWeaponColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FillEntry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Datas",
+        "Flags": "RF_Public",
+        "ElementSize": 2096,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'WeaponRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RunDatas",
+        "Flags": "RF_Public",
+        "ElementSize": 152,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'WeaponRunRecap'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintSelected",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.5"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:OnBlueprintSelected'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetBackgroundImage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.5"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_AButton_C:GetBackgroundImage'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.18"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_WeaponRecapEntry_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.27"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_WeaponRecapEntry_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:ExecuteUbergraph_WGT_WeaponRecapEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.1"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:GetBackgroundImage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.4"
+      },
+      {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:OnBlueprintSelected'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.3"
+      },
+      {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:FillEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.2"
+      },
+      {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:ExecuteUbergraph_WGT_WeaponRecapEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.1"
+      },
+      {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:DispatchOnSelectEntry__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "DispatchOnSelectEntry",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'WGT_WeaponRecapEntry_C:DispatchOnSelectEntry__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.0"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Datas",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 2096,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'WeaponRow'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Run Datas",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 152,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'WeaponRunRecap'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FuncMap": {
+      "DispatchOnSelectEntry__DelegateSignature": {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:DispatchOnSelectEntry__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.0"
+      },
+      "ExecuteUbergraph_WGT_WeaponRecapEntry": {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:ExecuteUbergraph_WGT_WeaponRecapEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.1"
+      },
+      "FillEntry": {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:FillEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.2"
+      },
+      "OnBlueprintSelected": {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:OnBlueprintSelected'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.3"
+      },
+      "GetBackgroundImage": {
+        "ObjectName": "Function'WGT_WeaponRecapEntry_C:GetBackgroundImage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_WeaponRecapEntry_C'Default__WGT_WeaponRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.6"
+    }
+  },
+  {
+    "Type": "WGT_WeaponRecapEntry_C",
+    "Name": "Default__WGT_WeaponRecapEntry_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.WGT_WeaponRecapEntry_C'",
+    "Package": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry",
+    "Template": {
+      "ObjectName": "WGT_AButton_C'Default__WGT_AButton_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Button/WGT_AButton.28"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Datas": {
+        "Skills": [],
+        "LootCategory": "EWeaponCategory::Assault",
+        "Affixes": [],
+        "RandomAffixBundles": [],
+        "RandomAffixes": [],
+        "AmmoInClip": 10.0,
+        "ReloadDuration": 1.0,
+        "bCanShotWhileScopped": false,
+        "LootLevel": 1,
+        "CustomFloatProperties": [],
+        "RecoilRecoverySpeed": 2.0,
+        "RecoilRecoveryMultiplierPerSecond": 100.0,
+        "MaxRecoilRecoverySpeed": 150.0,
+        "SpreadRecoverySpeed": 30.0,
+        "SpreadClamp": {
+          "X": 0.0,
+          "Y": 30.0
+        },
+        "SpreadIncreaseCurve": 1.0,
+        "AnimClass": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "HandPoseType": "EAnimPose::T00",
+        "PlayerReloadFPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "PlayerReloadTPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "WeaponReloadFPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "WeaponReloadTPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "PlayerHighCoolingReloadFPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "PlayerLowCoolingReloadFPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "WeaponHighCoolingReloadFPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "WeaponLowCoolingReloadFPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "PlayerHighCoolingReloadTPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "WeaponHighCoolingReloadTPV": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "SpecificHandPose": {
+          "Left": null,
+          "Right": null
+        },
+        "SpecificHandPoseTPV": {
+          "Left": null,
+          "Right": null
+        },
+        "Duration": 1.0,
+        "RegenDuration": 1.0,
+        "StartSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "LoopSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "bContinueLoopingSoundWhileShoot": false,
+        "StopSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "WarmupFirerateModifier": null,
+        "LoopSoundFadeDelay": {
+          "X": 0.1,
+          "Y": 0.1
+        },
+        "VolumeAmplitude": {
+          "X": 0.9,
+          "Y": 1.2
+        },
+        "PitchAmplitude": {
+          "X": 0.9,
+          "Y": 1.2
+        },
+        "LowColor": {
+          "R": 0.0,
+          "G": 3.5,
+          "B": 8.0,
+          "A": 1.0,
+          "Hex": "00FFFF"
+        },
+        "HighColor": {
+          "R": 50.0,
+          "G": 0.9,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FFF400"
+        },
+        "UpSpeed": 400.0,
+        "DownSpeed": 80.0,
+        "Name": {
+          "Namespace": "",
+          "Key": "FA3FA8A14762AF4D6C98B3A2641710B4",
+          "SourceString": "NewWeapon",
+          "LocalizedString": "NewWeapon"
+        },
+        "Mesh": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "LoadedMesh": null,
+        "OverrideMaterials": [],
+        "Icon": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "OnomatopoeiaGeneration": "EWeaponGeneration::G1",
+        "PickupOverrideMesh": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "PickupMeshLocationOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "PickupMeshRotationOffset": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "PickupMeshScale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "PickupMeshPose": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "StarLocationOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "ModLocationOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Crosshair": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "FeedbackMuzzleIndex": [
+          1
+        ],
+        "FeedbackMuzzleScale": 1.0,
+        "ReloadSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "HapticReloadSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "OverheatStartSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "OverheatStartHapticSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "OverheatLoopSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "OverheatLoopSoundFadeDelay": {
+          "X": 0.1,
+          "Y": 0.1
+        },
+        "IdleSound": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleSoundFadeDelay": {
+          "X": 0.1,
+          "Y": 0.1
+        },
+        "OverheatFX": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "OverheatFXSocket": "GM1",
+        "DualOverheatFXSocket": "GM2",
+        "WeaponClass": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "bLimitedClip": true,
+        "bScope": false,
+        "bWarmup": false,
+        "bCooling": false,
+        "bTemperature": false,
+        "bSpecificHandPose": false,
+        "bLootable": true,
+        "bLootableInShippingBuild": true,
+        "bDeactivateMagnetism": false,
+        "MagnetismOffset": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "bIsInCompendium": true,
+        "CompendiumProgressionMultiplier": 1,
+        "DiscoverSprite": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "UnlockSprite": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "Generation": "EWeaponGeneration::G1",
+        "bExcludeForSuperbot": false,
+        "ExcludeForSuperbotText": {
+          "CultureInvariantString": null
+        }
+      },
+      "Run Datas": {
+        "RowName": "None",
+        "Level": 1,
+        "Rarity": "EWeaponColor::LastIndex",
+        "Damage": 0.0,
+        "DamageAmount": 0,
+        "Firerate": 0.0,
+        "bAreaOfEffect": false,
+        "Range": 0.0,
+        "Crit": 0.0,
+        "SecondaryRowName": "None",
+        "bSecondaryScope": false,
+        "SecondaryStack": 0,
+        "SecondaryCooldown": 0,
+        "Affixes": []
+      },
+      "BaseBrush": {
+        "ImageSize": {
+          "X": 294.0,
+          "Y": 107.0
+        },
+        "Margin": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_Historic_ButtonWeapon_Select'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Recap/Frames/S_Historic_ButtonWeapon_Select.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "HoverBrush": {
+        "ImageSize": {
+          "X": 294.0,
+          "Y": 107.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_Historic_ButtonWeapon_Select'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Recap/Frames/S_Historic_ButtonWeapon_Select.0"
+        }
+      },
+      "HighlightBrush": {
+        "ImageSize": {
+          "X": 277.0,
+          "Y": 89.0
+        },
+        "Margin": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "PressedBrush": {
+        "Margin": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "bIsFocusable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.14"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 294.0,
+          "Y": 107.0
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_Historic_ButtonWeapon_Select'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Recap/Frames/S_Historic_ButtonWeapon_Select.0"
+        },
+        "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+        "ImageType": "ESlateBrushImageType::FullColor"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Color",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.14"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 271.0,
+          "Y": 87.0
+        },
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.25,
+          "Right": 0.25,
+          "Bottom": 0.25
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_Historic_ButtonWeapon_Front'",
+          "ObjectPath": "/Game/Graphic/HUD/Compendium/Recap/Frames/S_Historic_ButtonWeapon_Front.0"
+        },
+        "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageType": "ESlateBrushImageType::FullColor"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.11"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Weapon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.14"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 150.0,
+          "Y": 50.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_AssaultMp'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Weapon/T_AssaultMp.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.12"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_28",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_WeaponRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.14"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.11"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.13"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_WeaponRecapEntry_C:WidgetTree.Image_Color'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.8"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_WeaponRecapEntry_C:WidgetTree.Image_Weapon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 3.0,
+        "Bottom": 5.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_WeaponRecapEntry_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_WeaponRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.5"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_WeaponRecapEntry_C:WidgetTree.Overlay_28'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_WeaponRecapEntry.10"
+      }
+    }
+  }
+]

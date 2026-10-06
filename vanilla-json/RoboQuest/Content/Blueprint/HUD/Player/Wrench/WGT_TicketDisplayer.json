@@ -1,0 +1,764 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_TicketDisplayer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TicketDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateUpdateTicketAmount__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_NewTicketAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsBasecampMap_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateUpdateTicketAmount_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TicketDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NewTicketAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TicketDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateTicket",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TicketDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_TicketDisplayer_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:ExecuteUbergraph_WGT_TicketDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:UpdateTicket'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.3"
+      },
+      {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.2"
+      },
+      {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:DelegateUpdateTicketAmount_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.1"
+      },
+      {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:ExecuteUbergraph_WGT_TicketDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Ticket",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_CrystalPowderDisplayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CustomCurrencyDisplayer_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_WeaponTicketDisplayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CustomCurrencyDisplayer_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.4"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentTicket",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_TicketDisplayer": {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:ExecuteUbergraph_WGT_TicketDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.0"
+      },
+      "DelegateUpdateTicketAmount_Event_0": {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:DelegateUpdateTicketAmount_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.2"
+      },
+      "UpdateTicket": {
+        "ObjectName": "Function'WGT_TicketDisplayer_C:UpdateTicket'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_TicketDisplayer_C'Default__WGT_TicketDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.5"
+    }
+  },
+  {
+    "Type": "WGT_TicketDisplayer_C",
+    "Name": "Default__WGT_TicketDisplayer_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.WGT_TicketDisplayer_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_TicketDisplayer_C:WidgetTree.SizeBox_192.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_TicketDisplayer_C:WidgetTree.Image_22'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.12"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_TicketDisplayer_C:WidgetTree.Spacer_58'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_TicketDisplayer_C:WidgetTree.Text_Ticket'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.20"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "WGT_CustomCurrencyDisplayer_C'WGT_TicketDisplayer_C:WidgetTree.WGT_WeaponTicketDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+      },
+      "Content": {
+        "ObjectName": "WGT_CustomCurrencyDisplayer_C'WGT_TicketDisplayer_C:WidgetTree.WGT_CrystalPowderDisplayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.21"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_22",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 84.0,
+          "Y": 84.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_Powercell'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/T_Icon_Powercell.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.7"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_192",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Properties": {
+      "WidthOverride": 400.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_TicketDisplayer_C:WidgetTree.SizeBox_192.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.18"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_TicketDisplayer_C:WidgetTree.SizeBox_192'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.13"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_TicketDisplayer_C:WidgetTree.SizeBox_192'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.13"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.6"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Properties": {
+      "Size": {
+        "X": 20.0,
+        "Y": 20.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.19"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_58",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Properties": {
+      "Size": {
+        "X": 10.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.8"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_266",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.18"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.19"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.17"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_TicketDisplayer_C:WidgetTree.SizeBox_192'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.13"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.17"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_TicketDisplayer_C:WidgetTree.Spacer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.15"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Ticket",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "8B3B6E1542048CFD684F5ABBBAA958EA",
+        "SourceString": "100",
+        "LocalizedString": "100"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.9"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -4.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_CustomCurrencyDisplayer_C",
+    "Name": "WGT_CrystalPowderDisplayer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.WGT_CustomCurrencyDisplayer_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Template": {
+      "ObjectName": "WGT_CustomCurrencyDisplayer_C'Default__WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.5"
+    },
+    "Properties": {
+      "Type": "ECustomCost::CrystalPowder",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.11"
+      }
+    }
+  },
+  {
+    "Type": "WGT_CustomCurrencyDisplayer_C",
+    "Name": "WGT_WeaponTicketDisplayer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.WGT_CustomCurrencyDisplayer_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TicketDisplayer_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.23"
+    },
+    "Template": {
+      "ObjectName": "WGT_CustomCurrencyDisplayer_C'Default__WGT_CustomCurrencyDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_CustomCurrencyDisplayer.5"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_TicketDisplayer_C:WidgetTree.HorizontalBox_9.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.10"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TicketDisplayer_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "VerticalBox'WGT_TicketDisplayer_C:WidgetTree.VerticalBox_266'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Wrench/WGT_TicketDisplayer.17"
+      }
+    }
+  }
+]

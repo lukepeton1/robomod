@@ -1,0 +1,568 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_CodeButton",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetUserWidgetObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'UserWidget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsWGT_Code_Digit",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CodeDigit_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnStartInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetWidgetComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveCodeButton:GetWidgetComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_CodeButton_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_CodeButton_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.12"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:ExecuteUbergraph_BP_Interactive_CodeButton'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveCodeButton'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:ExecuteUbergraph_BP_Interactive_CodeButton'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Digit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cube",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_CodeButton": {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:ExecuteUbergraph_BP_Interactive_CodeButton'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.0"
+      },
+      "OnStartInteract": {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.2"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.3"
+      },
+      "GetWidgetComponent": {
+        "ObjectName": "Function'BP_Interactive_CodeButton_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_CodeButton_C'Default__BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.6"
+    }
+  },
+  {
+    "Type": "BP_Interactive_CodeButton_C",
+    "Name": "Default__BP_Interactive_CodeButton_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.BP_Interactive_CodeButton_C'",
+    "Package": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InitMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Color_Orange'",
+        "ObjectPath": "/Game/Graphic/Base/Material/Color/MI_Color_Orange.0"
+      },
+      "PressedMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Color_Yellow'",
+        "ObjectPath": "/Game/Graphic/Base/Material/Color/MI_Color_Yellow.0"
+      },
+      "DisabledMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Color_Grey'",
+        "ObjectPath": "/Game/Graphic/Base/Material/Color/MI_Color_Grey.0"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_CodeButton_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.7"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": "None"
+      },
+      "InteractText": {
+        "TableId": "/Game/Data/StringTable/DST_Interactive.DST_Interactive",
+        "Key": "pressButton",
+        "SourceString": "Press",
+        "LocalizedString": "Press"
+      },
+      "ErrorText": {
+        "CultureInvariantString": "None"
+      },
+      "InteractState": "EInteractState::Nothing",
+      "InteractSound": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Unique/SC_DoorCode_Interact.SC_DoorCode_Interact",
+        "SubPathString": ""
+      },
+      "InteractHaptic": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Unique/HC_DoorCode_Interact.HC_DoorCode_Interact",
+        "SubPathString": ""
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_CodeButton_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.7"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_CodeButton_C'Default__BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.6"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 50.0,
+        "Y": 25.0,
+        "Z": 50.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_CodeButton_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.12"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_CodeButton_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.8"
+      },
+      "VariableGuid": "9D8C08D6-47025C7E-E17D77B8-FB5CF31C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_CodeButton_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.12"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactive_CodeButton_C:Cube_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.13"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5828A9D6-4D2BE962-46D1E7A0-27D3564D",
+      "InternalVariableName": "Cube"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_CodeButton_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.12"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BP_Interactive_CodeButton_C:Digit_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.14"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6C3AE402-43279F40-89C531A9-ED643777",
+      "InternalVariableName": "Digit"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_CodeButton_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_CodeButton_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_CodeButton_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_CodeButton_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_CodeButton_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Cube_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Quarry_CodeMachine_Key_01'",
+        "ObjectPath": "/Game/Graphic/Environment/1_Act1/1_Library_Quarry/SM_Quarry_CodeMachine_Key_01.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Color_Orange'",
+          "ObjectPath": "/Game/Graphic/Base/Material/Color/MI_Color_Orange.0"
+        }
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "AllyVisibility",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnvironmentCheck",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "WeaponMesh",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "EnemyPawn",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TrapScale",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "EnemyPawnProjectile",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "LedgeGrab",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -12.466396,
+        "Z": 0.0
+      },
+      "Mobility": "EComponentMobility::Static",
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Digit_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_CodeButton_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Interactive_CodeButton.5"
+    },
+    "Properties": {
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CodeDigit_C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Interactive/WGT_CodeDigit.2"
+      },
+      "WindowVisibility": "EWindowVisibility::Visible",
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 5.0999846,
+        "Z": 0.01404953
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

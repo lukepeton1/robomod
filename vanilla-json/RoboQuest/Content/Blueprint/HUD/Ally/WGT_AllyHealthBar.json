@@ -1,0 +1,1173 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_AllyHealthBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValues_Current",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValues_Max",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetHealthBarColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_InStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HaveStat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Clamp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Conv_IntToFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "AssignStatWatcher",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_StatWatcher_C:AssignStatWatcher'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_StatWatcher.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "InStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStatChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_LerpProgressBar_C:OnStatChanged'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_LerpProgressBar.3"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_LerpProgressBar_C:Tick'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_LerpProgressBar.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetProgressBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_LerpProgressBar_C:GetProgressBar'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_LerpProgressBar.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDisplayProgressBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_LerpProgressBar_C:GetDisplayProgressBar'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_LerpProgressBar.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetValues",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_StatWatcher_C:GetValues'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_StatWatcher.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Current",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Max",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValues_Current",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValues_Max",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SelectFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_AllyHealthBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LerpProgressBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_LerpProgressBar.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:ExecuteUbergraph_WGT_AllyHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:GetValues'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.6"
+      },
+      {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:GetDisplayProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.5"
+      },
+      {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:GetProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.4"
+      },
+      {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.3"
+      },
+      {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:OnStatChanged'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.2"
+      },
+      {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:AssignStatWatcher'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.1"
+      },
+      {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:ExecuteUbergraph_WGT_AllyHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HealthBar_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar_Health",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PBar_LerpHealth",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_CurrentHealth",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TextAnimed_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_TextAnimed.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_AllyHealthBar": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:ExecuteUbergraph_WGT_AllyHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.0"
+      },
+      "AssignStatWatcher": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:AssignStatWatcher'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.1"
+      },
+      "OnStatChanged": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:OnStatChanged'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.2"
+      },
+      "Tick": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.3"
+      },
+      "GetProgressBar": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:GetProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.4"
+      },
+      "GetDisplayProgressBar": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:GetDisplayProgressBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.5"
+      },
+      "GetValues": {
+        "ObjectName": "Function'WGT_AllyHealthBar_C:GetValues'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.6"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_AllyHealthBar_C'Default__WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.8"
+    }
+  },
+  {
+    "Type": "WGT_AllyHealthBar_C",
+    "Name": "Default__WGT_AllyHealthBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.WGT_AllyHealthBar_C'",
+    "Package": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar",
+    "Template": {
+      "ObjectName": "WGT_LerpProgressBar_C'Default__WGT_LerpProgressBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Progress/WGT_LerpProgressBar.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "CurrentPercent": 0.0,
+      "MaxLerpSpeed": 1.0,
+      "CurrentLerpSpeed": 0.0,
+      "LerpSpeedIncreasePerSecond": 5.0,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_MaxHealth",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_AllyHealthBar_C:WidgetTree.HBox_MaxHealth.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_AllyHealthBar_C:WidgetTree.SizeBox_122.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.26"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_88",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HBox_MaxHealth'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.9"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HBox_MaxHealth'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.9"
+      },
+      "Content": {
+        "ObjectName": "WGT_TextAnimed_C'WGT_AllyHealthBar_C:WidgetTree.Text_CurrentHealth'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.27"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.10"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.10"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_AllyHealthBar_C:WidgetTree.ScaleBox_17'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.10"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_HealthInfo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.16"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HealthBar_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 500.0,
+          "Y": 60.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_LifeBar03_Part1'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/HealthBar/T_LifeBar03_Part1.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_281.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.17"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_281",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_281.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.17"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_281.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.18"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_281.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_AllyHealthBar_C:WidgetTree.ScaleBox_17.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.24"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_HealthInfo",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_HealthInfo.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.13"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_281'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.15"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_281'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.15"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_AllyHealthBar_C:WidgetTree.Image_HealthBar_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_281'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.15"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 5.0,
+        "Right": 10.0,
+        "Bottom": 6.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_281'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.15"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_AllyHealthBar_C:WidgetTree.PBar_LerpHealth'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.22"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_281'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.15"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 5.0,
+        "Right": 10.0,
+        "Bottom": 6.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_281'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.15"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_AllyHealthBar_C:WidgetTree.PBar_Health'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.21"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_HealthInfo'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.16"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_HealthInfo'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.16"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_AllyHealthBar_C:WidgetTree.SizeBox_122'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.25"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar_Health",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 1137.0,
+            "Y": 70.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 0.0,
+              "Hex": "000000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_HealthBar_ProgressBar'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/HealthBar/T_HealthBar_ProgressBar.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 1137.0,
+            "Y": 70.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_HealthBar_ProgressBar'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/HealthBar/T_HealthBar_ProgressBar.0"
+          }
+        }
+      },
+      "Percent": 1.0,
+      "FillColorAndOpacity": {
+        "R": 0.102242,
+        "G": 1.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "5AFF00"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_281.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.19"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "PBar_LerpHealth",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 1137.0,
+            "Y": 70.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.005208,
+              "G": 0.005208,
+              "B": 0.005208,
+              "A": 1.0,
+              "Hex": "101010"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_HealthBar_ProgressBar'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/HealthBar/T_HealthBar_ProgressBar.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 1137.0,
+            "Y": 70.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "FF0000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_HealthBar_ProgressBar'",
+            "ObjectPath": "/Game/Graphic/HUD/MainHUD/HealthBar/T_HealthBar_ProgressBar.0"
+          }
+        }
+      },
+      "Percent": 0.5,
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_281.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.18"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "UserSpecifiedScale": 0.7,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_AllyHealthBar_C:WidgetTree.ScaleBox_17.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.12"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_AllyHealthBar_C:WidgetTree.ScaleBox_17'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_AllyHealthBar_C:WidgetTree.ScaleBox_17'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.23"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_AllyHealthBar_C:WidgetTree.Overlay_281'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.15"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_122",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Properties": {
+      "HeightOverride": 45.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_AllyHealthBar_C:WidgetTree.SizeBox_122.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_AllyHealthBar_C:WidgetTree.Overlay_HealthInfo.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.20"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_AllyHealthBar_C:WidgetTree.SizeBox_122'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.25"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_AllyHealthBar_C:WidgetTree.SizeBox_122'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.25"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HBox_MaxHealth'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.9"
+      }
+    }
+  },
+  {
+    "Type": "WGT_TextAnimed_C",
+    "Name": "Text_CurrentHealth",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_TextAnimed.WGT_TextAnimed_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_AllyHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.28"
+    },
+    "Template": {
+      "ObjectName": "WGT_TextAnimed_C'Default__WGT_TextAnimed_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_TextAnimed.5"
+    },
+    "Properties": {
+      "BaseText": {
+        "CultureInvariantString": "100"
+      },
+      "Color": {
+        "SpecifiedColor": {
+          "R": 0.822786,
+          "G": 0.822786,
+          "B": 0.822786,
+          "A": 1.0,
+          "Hex": "EAEAEA"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 30
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_AllyHealthBar_C:WidgetTree.HBox_MaxHealth.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.11"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -10.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AllyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.7"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'WGT_AllyHealthBar_C:WidgetTree.HorizontalBox_88'",
+        "ObjectPath": "/Game/Blueprint/HUD/Ally/WGT_AllyHealthBar.10"
+      }
+    }
+  }
+]

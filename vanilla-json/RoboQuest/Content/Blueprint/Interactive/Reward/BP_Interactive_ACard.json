@@ -1,0 +1,1458 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_ACard",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsTexture_2D",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Loaded",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_LootLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_LootOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Event_InRowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetCardInfo_Name",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetCardInfo_Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCardInfo_Color",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'KismetSystemLibrary:OnAssetLoaded__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetCardText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveCard:ResetCardText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitCard",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveCard:InitCard'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "InRowName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLooted",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ILootable:OnLooted'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "LootLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LootOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnStartInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintStopPhysic",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveLootable:OnBlueprintStopPhysic'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintDeactivateInteractive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnBlueprintDeactivateInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLoaded_EF2470F94E71174DC213F6B214F185DE",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Loaded",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_LinearColorToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetInteractText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCardInfo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Name",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm"
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "Parm | OutParm",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Color",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:CanInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsCompendiumEntryUpgraded_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StoreInteractText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetCardInfo_Name",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetCardInfo_Icon",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCardInfo_Color",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 64,
+          "Struct": {
+            "ObjectName": "Class'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_ACard_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_ACard_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.29"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:ExecuteUbergraph_BP_Interactive_ACard'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveCard'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:StoreInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.14"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.13"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.12"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:GetCardInfo'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.11"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.10"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.9"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnLoaded_EF2470F94E71174DC213F6B214F185DE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.8"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.7"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnBlueprintStopPhysic'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.6"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.5"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnLooted'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:InitCard'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:ResetCardText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_ACard_C:ExecuteUbergraph_BP_Interactive_ACard'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_AMapLocator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AMapLocator_C'",
+          "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RotatingMovement",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'RotatingMovementComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VFX_Glowing",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CompendiumCategory",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Enum": {
+          "ObjectName": "Class'ECompendiumCategoryWithLevel'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LootSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "StoredInteractText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DynamicMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_ACard": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:ExecuteUbergraph_BP_Interactive_ACard'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.0"
+      },
+      "ResetCardText": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:ResetCardText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.2"
+      },
+      "InitCard": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:InitCard'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.3"
+      },
+      "OnLooted": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnLooted'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.4"
+      },
+      "OnStartInteract": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.5"
+      },
+      "OnBlueprintStopPhysic": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnBlueprintStopPhysic'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.6"
+      },
+      "OnBlueprintDeactivateInteractive": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.7"
+      },
+      "OnLoaded_EF2470F94E71174DC213F6B214F185DE": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:OnLoaded_EF2470F94E71174DC213F6B214F185DE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.8"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.9"
+      },
+      "GetInteractText": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.10"
+      },
+      "GetCardInfo": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:GetCardInfo'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.11"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.12"
+      },
+      "CanInteract": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:CanInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.13"
+      },
+      "StoreInteractText": {
+        "ObjectName": "Function'BP_Interactive_ACard_C:StoreInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.14"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_ACard_C'Default__BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.16"
+    }
+  },
+  {
+    "Type": "BP_Interactive_ACard_C",
+    "Name": "Default__BP_Interactive_ACard_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.BP_Interactive_ACard_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LootSound": {
+        "ObjectName": "SoundCue'SC_Pickup_Card_Drop'",
+        "ObjectPath": "/Game/Audio/Sound/Interactive/Pickup/SC_Pickup_Card_Drop.0"
+      },
+      "Color": {
+        "R": 0.947307,
+        "G": 0.462077,
+        "B": 0.011612,
+        "A": 1.0,
+        "Hex": "F9B51C"
+      },
+      "PhysicMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Interactive_ACard_C:PhysicMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.31"
+      },
+      "PhysicsImpulseHeight": 750.0,
+      "RandomPhysicsLateralImpulse": 350.0,
+      "StopCalculatePhysicOffset": 100.0,
+      "CurveDistance": {
+        "ObjectName": "CurveFloat'CU_TooltipDistanceOffset'",
+        "ObjectPath": "/Game/Data/Curve/CU_TooltipDistanceOffset.0"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_ACard_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.17"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": null
+      },
+      "InteractText": {
+        "CultureInvariantString": null
+      },
+      "ErrorText": {
+        "Namespace": "",
+        "Key": "5549C522426A4BBE64997A9FE1F69FCB",
+        "SourceString": "You already have this card.",
+        "LocalizedString": "You already have this card."
+      },
+      "InteractSound": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Pickup/SC_Pickup_Card.SC_Pickup_Card",
+        "SubPathString": ""
+      },
+      "InteractHaptic": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Pickup/HC_Pickup_Card.HC_Pickup_Card",
+        "SubPathString": ""
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_ACard_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.17"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_ACard_C'Default__BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.16"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Movable"
+    }
+  },
+  {
+    "Type": "BP_AMapLocator_C",
+    "Name": "BP_AMapLocator_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Component/BP_AMapLocator.BP_AMapLocator_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "Template": {
+      "ObjectName": "BP_AMapLocator_C'Default__BP_AMapLocator_C'",
+      "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.1"
+    },
+    "Properties": {
+      "Icon": {
+        "ObjectName": "Texture2D'T_Map_Card'",
+        "ObjectPath": "/Game/Graphic/HUD/Icon/Map/T_Map_Card.0"
+      },
+      "bIsStatic": true,
+      "bAbsoluteRotation": true
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "VFX_Glowing_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_Card'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/PickUp/CityKey/PS_Card.27"
+      },
+      "RelativeLocation": {
+        "X": 2.3422945E-07,
+        "Y": 0.68632805,
+        "Z": 42.736725
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "RotatingMovementComponent",
+    "Name": "RotatingMovement_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RotatingMovementComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "Properties": {
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_ACard_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.29"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_ACard_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.21"
+      },
+      "VariableGuid": "74FA0369-42C29E99-1C518489-B67C0D8A",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_ACard_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.29"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactive_ACard_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.30"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.25"
+        }
+      ],
+      "VariableGuid": "126AE6CC-438CEB15-151FEAB2-9141CFC2",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_ACard_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.29"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_Interactive_ACard_C:VFX_Glowing_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.19"
+      },
+      "VariableGuid": "79EDF8EB-4F4A8DA8-D4B71A99-2B7CCC7E",
+      "InternalVariableName": "VFX_Glowing"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_ACard_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.29"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RotatingMovementComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RotatingMovementComponent'BP_Interactive_ACard_C:RotatingMovement_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.20"
+      },
+      "VariableGuid": "7C6E4612-4802142C-BAB94EA7-1E0CAD1B",
+      "InternalVariableName": "RotatingMovement"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_ACard_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.29"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_AMapLocator_C'",
+        "ObjectPath": "/Game/Blueprint/Component/BP_AMapLocator.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_AMapLocator_C'BP_Interactive_ACard_C:BP_AMapLocator_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.18"
+      },
+      "VariableGuid": "48A1C917-4068A71E-0193CB95-26283E10",
+      "InternalVariableName": "BP_AMapLocator"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_ACard_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.29"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_ACard_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.22"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.24"
+        }
+      ],
+      "VariableGuid": "8C34DDDD-4F455DA7-2387D0A7-391AD6CF",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.28"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.28"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_ACard_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.23"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.15"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_LootableCard'",
+        "ObjectPath": "/Game/Graphic/Interactive/Key/SM_LootableCard.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Card'",
+          "ObjectPath": "/Game/Graphic/Interactive/Key/Material/MI_Card.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -3.0517578E-05,
+        "Z": 50.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -89.999985,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PhysicMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_ACard_C'Default__BP_Interactive_ACard_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.16"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_VFX_Sphere_Low'",
+        "ObjectPath": "/Game/Graphic/VFX/Base/Mesh/SM_VFX_Sphere_Low.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_PhysicsBody",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Skill",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel17",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel18",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_ACard_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ACard.17"
+      }
+    }
+  }
+]

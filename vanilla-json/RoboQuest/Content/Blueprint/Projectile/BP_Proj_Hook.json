@@ -1,0 +1,686 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Proj_Hook",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_OutImpulse",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsLateral",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_FloatToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetBaseProjectileColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetFXProjectileColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_LinearColorToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_LinearColorToVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnActivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AProjectile:OnActivate'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeactivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AProjectile:OnDeactivate'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnterBlower",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsLateral",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnExitBlower",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "OutImpulse",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Proj_Hook_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_Hook",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Proj_Hook_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Proj_Hook_C:ExecuteUbergraph_BP_Proj_Hook'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AAIProjectile'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnExitBlower'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.4"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnEnterBlower'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.3"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnDeactivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.2"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnActivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.1"
+      },
+      {
+        "ObjectName": "Function'BP_Proj_Hook_C:ExecuteUbergraph_BP_Proj_Hook'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "BlinkTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFirstTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurRotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentHealth",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Proj_Hook": {
+        "ObjectName": "Function'BP_Proj_Hook_C:ExecuteUbergraph_BP_Proj_Hook'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.0"
+      },
+      "OnActivate": {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnActivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.1"
+      },
+      "OnDeactivate": {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnDeactivate'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.2"
+      },
+      "OnEnterBlower": {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnEnterBlower'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.3"
+      },
+      "OnExitBlower": {
+        "ObjectName": "Function'BP_Proj_Hook_C:OnExitBlower'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'IBlower'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    }
+  },
+  {
+    "Type": "BP_Proj_Hook_C",
+    "Name": "Default__BP_Proj_Hook_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Projectile/BP_Proj_Hook.BP_Proj_Hook_C'",
+    "Package": "/Game/Blueprint/Projectile/BP_Proj_Hook",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bFirstTime": true,
+      "CollisionDamageComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionDamageComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.16"
+      },
+      "CollisionComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.15"
+      },
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Proj_Hook_C:StaticMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.18"
+      },
+      "ParticleSystemComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_Hook_C:ParticleSystemComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.8"
+      },
+      "TrailComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__BP_Proj_Hook_C:TrailComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.9"
+      },
+      "TravelSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_Proj_Hook_C:TravelSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.7"
+      },
+      "ProjectileMovement": {
+        "ObjectName": "ProjectileMovementComponent'Default__BP_Proj_Hook_C:ProjectileComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.10"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.15"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "TravelSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.15"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.15"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "TrailComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.15"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_Hook_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Proj_Hook_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.11"
+      },
+      "VariableGuid": "8C139C25-4D706441-7B35EA8F-0B9F65D6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Proj_Hook_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Proj_Hook_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.17"
+      },
+      "ParentComponentOrVariableName": "CollisionComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9CFE0134-4EB5C2CC-4B33FBA9-C9EB7875",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Proj_Hook_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Proj_Hook_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Proj_Hook_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.12"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "CollisionComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    },
+    "Properties": {
+      "OnComponentHit": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+            },
+            "FunctionName": "OnBeginHit"
+          }
+        ]
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+              "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "CollisionDamageComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel17",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "GameTraceChannel18",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.15"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.5"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "/Engine/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_MagnetHook_01_ForceField'",
+          "ObjectPath": "/Game/Graphic/VFX/Enemy/Specific/HookMagnet/TMM/MI_MagnetHook_01_ForceField.0"
+        }
+      ],
+      "CastShadow": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionProfileName": "NoCollision"
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Proj_Hook_C'Default__BP_Proj_Hook_C'",
+      "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Proj_Hook_C:CollisionComponent'",
+        "ObjectPath": "/Game/Blueprint/Projectile/BP_Proj_Hook.15"
+      }
+    }
+  }
+]

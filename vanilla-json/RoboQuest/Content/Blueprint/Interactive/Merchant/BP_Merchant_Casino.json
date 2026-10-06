@@ -1,0 +1,232 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Merchant_Casino_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AMerchant_Interactive_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Merchant_Casino_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Merchant_Casino_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Merchant_Casino_C'Default__BP_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.1"
+    }
+  },
+  {
+    "Type": "BP_Merchant_Casino_C",
+    "Name": "Default__BP_Merchant_Casino_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.BP_Merchant_Casino_C'",
+    "Package": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino",
+    "Template": {
+      "ObjectName": "BP_AMerchant_Interactive_C'Default__BP_AMerchant_Interactive_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.1"
+    },
+    "Properties": {
+      "InteractChildActor": {
+        "ObjectName": "ChildActorComponent'Default__BP_Merchant_Casino_C:InteractChildActor'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.5"
+      },
+      "BoundingBox": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_Casino_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.2"
+      },
+      "MerchantMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Merchant_Casino_C:MerchantMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.10"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_Casino_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoundingBox",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Merchant_Casino_C'Default__BP_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.1"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_AMerchant_Interactive_C:BoundingBox'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.2"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_Merchant_Casino_C'Default__BP_Merchant_Casino_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_Casino_C_CAT'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.4"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Interactive_Merchant_Casino_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_Casino.12"
+    }
+  },
+  {
+    "Type": "BP_Interactive_Merchant_Casino_C",
+    "Name": "InteractChildActor_BP_Interactive_Merchant_Casino_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_Casino.BP_Interactive_Merchant_Casino_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'Default__BP_Merchant_Casino_C:InteractChildActor'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.5"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactive_Merchant_Casino_C'Default__BP_Interactive_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_Casino.9"
+    },
+    "Properties": {
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_Casino_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_Casino_C_CAT.InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.3"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_Casino_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_Casino_C_CAT.InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.3"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "InteractChildActor",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Merchant_Casino_C'Default__BP_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.1"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'Default__BP_AMerchant_Interactive_C:InteractChildActor'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.3"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Interactive_Merchant_Casino_C'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Interactive_Merchant_Casino.8"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactive_Merchant_Casino_C'Default__BP_Merchant_Casino_C:InteractChildActor.InteractChildActor_BP_Interactive_Merchant_Casino_C_CAT'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.4"
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_Casino_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.2"
+      },
+      "RelativeLocation": {
+        "X": -1.0,
+        "Y": 0.0,
+        "Z": -50.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Merchant_Casino_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.9"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Merchant_Casino_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.7"
+      },
+      "VariableGuid": "1B1318A0-462544F0-4E295D8E-2621AE98",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Merchant_Casino_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "MerchantMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Merchant_Casino_C'Default__BP_Merchant_Casino_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_AMerchant_Interactive_C:MerchantMesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_AMerchant_Interactive.8"
+    },
+    "Properties": {
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'A_RocketPawn_Idle'",
+          "ObjectPath": "/Game/Animation/Enemy/Pawn/RocketPawn/Animation/Locomotion/A_RocketPawn_Idle.0"
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Merchant_Casino_C:BoundingBox'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Merchant/BP_Merchant_Casino.2"
+      }
+    }
+  }
+]

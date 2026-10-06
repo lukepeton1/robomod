@@ -1,0 +1,336 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_DamageCounter",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateOnUpdateDamageCounter__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsBasecampMap_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnUpdateDamageCounter_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.4"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.4"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Update Damage Counter",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetRunRecapTotalDamageDealt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "CallFunc_FTrunc64_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_Int64ToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_DamageCounter_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_DamageCounter",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_DamageCounter_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.9"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_DamageCounter_C:ExecuteUbergraph_WGT_DamageCounter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_DamageCounter_C:Update Damage Counter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.3"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageCounter_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.2"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageCounter_C:DelegateOnUpdateDamageCounter_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.1"
+      },
+      {
+        "ObjectName": "Function'WGT_DamageCounter_C:ExecuteUbergraph_WGT_DamageCounter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Damage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_DamageCounter": {
+        "ObjectName": "Function'WGT_DamageCounter_C:ExecuteUbergraph_WGT_DamageCounter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.0"
+      },
+      "DelegateOnUpdateDamageCounter_Event_0": {
+        "ObjectName": "Function'WGT_DamageCounter_C:DelegateOnUpdateDamageCounter_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_DamageCounter_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.2"
+      },
+      "Update Damage Counter": {
+        "ObjectName": "Function'WGT_DamageCounter_C:Update Damage Counter'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_DamageCounter_C'Default__WGT_DamageCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.5"
+    }
+  },
+  {
+    "Type": "WGT_DamageCounter_C",
+    "Name": "Default__WGT_DamageCounter_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/WGT_DamageCounter.WGT_DamageCounter_C'",
+    "Package": "/Game/Blueprint/HUD/Player/WGT_DamageCounter",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_39",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DamageCounter_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_DamageCounter_C:WidgetTree.HorizontalBox_39.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_DamageCounter_C:WidgetTree.HorizontalBox_39'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_DamageCounter_C:WidgetTree.HorizontalBox_39'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.6"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_DamageCounter_C:WidgetTree.Text_Damage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.8"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Damage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_DamageCounter_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.9"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "0"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "Size": 36
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_DamageCounter_C:WidgetTree.HorizontalBox_39.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.7"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_DamageCounter_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'WGT_DamageCounter_C:WidgetTree.HorizontalBox_39'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/WGT_DamageCounter.6"
+      }
+    }
+  }
+]

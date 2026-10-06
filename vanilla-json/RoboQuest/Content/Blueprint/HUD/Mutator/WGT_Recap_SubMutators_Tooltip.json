@@ -1,0 +1,899 @@
+[
+  {
+    "Type": "Function",
+    "Name": "FillTooltip",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Recap_SubMutators_Tooltip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "RecapSubMutators",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "RecapSubMutators",
+          "Flags": "RF_Public",
+          "ElementSize": 288,
+          "Struct": {
+            "ObjectName": "Class'MutatorUpgrades'",
+            "ObjectPath": "/Script/RoboQuest"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "SubMutatorsCounts",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "SubMutatorsCounts",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 288,
+        "Struct": {
+          "ObjectName": "Class'MutatorUpgrades'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Mutator_Entry_RecapTooltip_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Mutator_Entry_RecapTooltip.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChildToVerticalBox_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBoxSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Recap_SubMutators_Tooltip_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Recap_SubMutators_Tooltip_C:FillTooltip'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_TitleBackground",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScBox_Main",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ScaleBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Name_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VBox_SubMutators",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FuncMap": {
+      "FillTooltip": {
+        "ObjectName": "Function'WGT_Recap_SubMutators_Tooltip_C:FillTooltip'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Recap_SubMutators_Tooltip_C'Default__WGT_Recap_SubMutators_Tooltip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.2"
+    }
+  },
+  {
+    "Type": "WGT_Recap_SubMutators_Tooltip_C",
+    "Name": "Default__WGT_Recap_SubMutators_Tooltip_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.WGT_Recap_SubMutators_Tooltip_C'",
+    "Package": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.HBox_Main.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.27"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.HBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.3"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.HBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.3"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_SubMutators'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.26"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 512.0,
+          "Y": 1.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_PerkSelector_Card'",
+          "ObjectPath": "/Game/Graphic/HUD/Perk/T_PerkSelector_Card.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.13"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_TitleBackground",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1.0,
+          "Y": 80.0
+        },
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.25,
+          "Right": 0.25,
+          "Bottom": 0.25
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_PerkSelector_CardTitle_Background'",
+          "ObjectPath": "/Game/Graphic/HUD/Perk/T_PerkSelector_CardTitle_Background.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.15"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.19"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_35",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.13"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.23"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_59",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.15"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_155.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.24"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_Main.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.12"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.7"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 20.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.7"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Text_Name_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.29"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.8"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.8"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.9"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 20.0,
+        "Right": 20.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.9"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScaleBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.17"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.9"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.9"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Image_TitleBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 50.0,
+        "Top": 50.0,
+        "Right": 50.0,
+        "Bottom": 50.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.10"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.25"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Stretch": "EStretch::ScaleToFitX",
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.14"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScBox_Main.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.20"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScaleBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.17"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScaleBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.17"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.7"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.18"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.18"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.21"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "WidthOverride": 1000.0,
+      "MinDesiredHeight": 1.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_MinDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScBox_Main.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.20"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_155",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "HeightOverride": 95.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_155.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.28"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.21"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.21"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_35'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.8"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_155'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.22"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_155'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.22"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.28"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_Main.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.16"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_SubMutators",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.HBox_Main.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.4"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.25"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 26.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.25"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.HBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.25"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.VBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.25"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.SizeBox_155'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.22"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Name_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Recap_SubMutators_Tooltip_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.30"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "TableId": "/Game/Data/StringTable/DST_Gameplay.DST_Gameplay",
+        "Key": "subMutators",
+        "SourceString": "Glitches",
+        "LocalizedString": "Glitches"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50,
+        "LetterSpacing": 20
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.11"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Recap_SubMutators_Tooltip_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ScaleBox'WGT_Recap_SubMutators_Tooltip_C:WidgetTree.ScBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Mutator/WGT_Recap_SubMutators_Tooltip.18"
+      }
+    }
+  }
+]

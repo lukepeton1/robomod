@@ -1,0 +1,557 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HUD_Map_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Map/HUD_Map",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MapWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RetainerBox_Map",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CullingScaleRetainerBox'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HUD_Map_C'Default__HUD_Map_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.1"
+    }
+  },
+  {
+    "Type": "HUD_Map_C",
+    "Name": "Default__HUD_Map_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Map/HUD_Map.HUD_Map_C'",
+    "Package": "/Game/Blueprint/HUD/Map/HUD_Map",
+    "Properties": {
+      "BasecampMapTexture": {
+        "AssetPathName": "/Game/Graphic/HUD/Map/T_BaseCampMap.T_BaseCampMap",
+        "SubPathString": ""
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot'HUD_Map_C:WidgetTree.RetainerBox_TileColors.PanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_420",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_420.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "IconsLayer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.MapCanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.11"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MapCanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.MapCanvasPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.MapCanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot'HUD_Map_C:WidgetTree.RetainerBox_Map.PanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1200.0,
+          "Bottom": 1200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.2"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_420'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.2"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_Map_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1200.0,
+          "Bottom": 1200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.3"
+      },
+      "Content": {
+        "ObjectName": "UniformGridPanel'HUD_Map_C:WidgetTree.MapGrid'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_420'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1200.0,
+          "Bottom": 1200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_420'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.4"
+      },
+      "Content": {
+        "ObjectName": "CullingScaleRetainerBox'HUD_Map_C:WidgetTree.RetainerBox_Map'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.MapCanvasPanel'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1200.0,
+          "Bottom": 1200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.MapCanvasPanel'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.6"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.IconsLayer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.MapCanvasPanel'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1200.0,
+          "Bottom": 1200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.MapCanvasPanel'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.6"
+      },
+      "Content": {
+        "ObjectName": "RetainerBox'HUD_Map_C:WidgetTree.RetainerBox_TileColors'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.17"
+      }
+    }
+  },
+  {
+    "Type": "CullingScaleRetainerBox",
+    "Name": "RetainerBox_Map",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CullingScaleRetainerBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "EffectMaterial": {
+        "ObjectName": "Material'M_MapMask'",
+        "ObjectPath": "/Game/Graphic/HUD/Map/M_MapMask.0"
+      },
+      "TextureParameter": "InputTexture",
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot'HUD_Map_C:WidgetTree.RetainerBox_Map.PanelSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_420.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 861.0,
+          "Y": 1.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Tab_BG'",
+          "ObjectPath": "/Game/Graphic/HUD/TabOverlay/T_Tab_BG.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.8"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PanelSlot'",
+    "Outer": {
+      "ObjectName": "CullingScaleRetainerBox'HUD_Map_C:WidgetTree.RetainerBox_Map'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.13"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "CullingScaleRetainerBox'HUD_Map_C:WidgetTree.RetainerBox_Map'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.13"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.MapCanvasPanel'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.6"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PanelSlot'",
+    "Outer": {
+      "ObjectName": "RetainerBox'HUD_Map_C:WidgetTree.RetainerBox_TileColors'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "RetainerBox'HUD_Map_C:WidgetTree.RetainerBox_TileColors'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.17"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.3"
+      }
+    }
+  },
+  {
+    "Type": "RetainerBox",
+    "Name": "RetainerBox_TileColors",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RetainerBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "EffectMaterial": {
+        "ObjectName": "Material'M_TileColorsMask'",
+        "ObjectPath": "/Game/Graphic/HUD/Map/M_TileColorsMask.0"
+      },
+      "TextureParameter": "InputTexture",
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot'HUD_Map_C:WidgetTree.RetainerBox_TileColors.PanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.MapCanvasPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.12"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UniformGridPanel",
+    "Name": "MapGrid",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UniformGridPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_Map_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.19"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_Map_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.9"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_Map_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'HUD_Map_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Map/HUD_Map.2"
+      }
+    }
+  }
+]

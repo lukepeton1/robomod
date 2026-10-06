@@ -1,0 +1,3100 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_LevelRank_InfiniteRun",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLevelGeneratorRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ALevelGenerator'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AsyncWaitingForLevelGeneratorInitialization_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AsyncWaitingForLevelGeneratorInitialization'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'LevelGeneratorInitializedCompletePin__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInfiniteRun_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimationForward_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimationForward_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetRankIcon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReiniState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayAdditionAnim",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitializeAnim",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayPopAnim",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayPopSound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Complete_2CE9EAC74A67DAA870CEA6B344569D18",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ChangeCount",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NewCount",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SequenceEvent__ENTRYPOINTWGT_LevelRank_InfiniteRun_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_LevelRank_InfiniteRun_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_LevelRank_InfiniteRun_C:Pop_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.54"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_LevelRank_InfiniteRun_C:Addition_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.53"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:ExecuteUbergraph_WGT_LevelRank_InfiniteRun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:SequenceEvent__ENTRYPOINTWGT_LevelRank_InfiniteRun_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.9"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:ChangeCount'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.8"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:Complete_2CE9EAC74A67DAA870CEA6B344569D18'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.7"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:PlayPopSound'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.6"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:PlayPopAnim'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.5"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:InitializeAnim'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.4"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:PlayAdditionAnim'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.3"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:ReiniState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.2"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.1"
+      },
+      {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:ExecuteUbergraph_WGT_LevelRank_InfiniteRun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Addition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pop",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Rank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Spacer_LevelName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Spacer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Count",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LevelRank_Generic",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsInfiniteRunRank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | BlueprintReadOnly",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "RankInfiniteRun",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | BlueprintReadOnly",
+        "Enum": {
+          "ObjectName": "Class'ERank'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CountInfiniteRun",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_LevelRank_InfiniteRun": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:ExecuteUbergraph_WGT_LevelRank_InfiniteRun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.1"
+      },
+      "ReiniState": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:ReiniState'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.2"
+      },
+      "PlayAdditionAnim": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:PlayAdditionAnim'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.3"
+      },
+      "InitializeAnim": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:InitializeAnim'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.4"
+      },
+      "PlayPopAnim": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:PlayPopAnim'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.5"
+      },
+      "PlayPopSound": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:PlayPopSound'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.6"
+      },
+      "Complete_2CE9EAC74A67DAA870CEA6B344569D18": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:Complete_2CE9EAC74A67DAA870CEA6B344569D18'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.7"
+      },
+      "ChangeCount": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:ChangeCount'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.8"
+      },
+      "SequenceEvent__ENTRYPOINTWGT_LevelRank_InfiniteRun_0": {
+        "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:SequenceEvent__ENTRYPOINTWGT_LevelRank_InfiniteRun_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.9"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_LevelRank_InfiniteRun_C'Default__WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.11"
+    }
+  },
+  {
+    "Type": "WGT_LevelRank_InfiniteRun_C",
+    "Name": "Default__WGT_LevelRank_InfiniteRun_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.WGT_LevelRank_InfiniteRun_C'",
+    "Package": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LevelRank_Generic": {
+        "ObjectName": "SoundCue'SC_Button_Hover_In'",
+        "ObjectPath": "/Game/Audio/Sound/Interface/Buttons/SC_Button_Hover_In.0"
+      },
+      "RankInfiniteRun": "ERank::A",
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_InfiniteRun",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank.VerticalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.50"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -20.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.12"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_LevelRank_InfiniteRun_C:WidgetTree.Text_Multiplier'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.52"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.12"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_LevelRank_InfiniteRun_C:WidgetTree.Text_Count'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.51"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Rank",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 200.0,
+          "Y": 248.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_LevelRank_S_Outline_Mini'",
+          "ObjectPath": "/Game/Graphic/HUD/ScoreScreen/LevelRanks/T_LevelRank_S_Outline_Mini.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank.VerticalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.49"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Addition",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_LevelRank_InfiniteRun_C:Addition_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.53"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "459C5C75-49C8B5C3-F6FDDD85-3B5E3D42",
+          "Name": "WGT_LevelRank_C_21",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank.8"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "459C5C75-49C8B5C3-F6FDDD85-3B5E3D42",
+          "BindingName": "WGT_LevelRank_C_21",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.20"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.41"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 17002
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "15FADC36-4D4ECE46-00FDB8AF-3D8FE6C7"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Pop",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_LevelRank_InfiniteRun_C:Pop_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.54"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "127B686E-446E6395-BD04059F-97A33433",
+          "Name": "WGT_LevelRank_C_16",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank.8"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "EEE03CF5-436FD078-82D7FA83-B835D393",
+          "Name": "Text_LevelName",
+          "PossessedObjectClass": {
+            "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "127B686E-446E6395-BD04059F-97A33433",
+          "BindingName": "WGT_LevelRank_C_16",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.21"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.43"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "EEE03CF5-436FD078-82D7FA83-B835D393",
+          "BindingName": "Text_LevelName",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.42"
+            }
+          ]
+        }
+      ],
+      "MasterTracks": [
+        {
+          "ObjectName": "MovieSceneEventTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.36"
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -3
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "26CF01CD-449D9DBD-359BCD8C-02DED3A4"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.20"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 24
+      },
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.7,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 5E-05,
+              "LeaveTangent": 5E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.7,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 5E-05,
+              "LeaveTangent": 5E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.22"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.23"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 17000
+            }
+          }
+        }
+      },
+      "Signature": "316AFF41-42270D43-26A07485-A9251DAB"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.21"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 24
+      },
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": -3
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": -3
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": -3
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 15000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.7,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.166667E-05,
+              "LeaveTangent": 4.166667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 15000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.7,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 4.166667E-05,
+              "LeaveTangent": 4.166667E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": -3
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": -3
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.26"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.27"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -3
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "E1CAC0F0-47BEA2CA-7C2058A9-7EE84D29"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.18"
+        }
+      ],
+      "EvaluationFieldGuid": "9332FCB4-438692F0-DED7AC93-AD31386F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.18"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 17000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9332FCB4-438692F0-DED7AC93-AD31386F"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.19"
+        }
+      ],
+      "EvaluationFieldGuid": "87EA3014-4006D0A1-A62CD380-31BB94FF",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.19"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": -3
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "87EA3014-4006D0A1-A62CD380-31BB94FF"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.18"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.18"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.38"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.38"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTriggerSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.37"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTriggerSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.37"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.39"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.39"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.40"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.40"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_LevelRank_InfiniteRun_C:Addition_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.53"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                },
+                {
+                  "StartIndex": 2,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 17000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 17000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 17001
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.18"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.38"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "459C5C75-49C8B5C3-F6FDDD85-3B5E3D42"
+          },
+          {
+            "ObjectBindingID": "459C5C75-49C8B5C3-F6FDDD85-3B5E3D42"
+          }
+        ]
+      },
+      "CompiledSignature": "D949E5B4-4F8C4206-9688019F-A20C98A9",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_LevelRank_InfiniteRun_C:Pop_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.54"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": -3
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 0
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "OneShotEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 3000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 3000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneEventTriggerSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.37"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.19"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.40"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.39"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "00000000-00000000-00000000-00000000"
+          },
+          {
+            "ObjectBindingID": "127B686E-446E6395-BD04059F-97A33433"
+          },
+          {
+            "ObjectBindingID": "127B686E-446E6395-BD04059F-97A33433"
+          },
+          {
+            "ObjectBindingID": "EEE03CF5-436FD078-82D7FA83-B835D393"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "840902E4-4D577299-D2DFE3A8-CC1F6CD4",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneEventTrack",
+    "Name": "MovieSceneEventTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneEventTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.17"
+    },
+    "Properties": {
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneEventTriggerSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.37"
+        }
+      ],
+      "EvaluationFieldGuid": "C05D7047-4C3CEEEA-8C8B6FB9-AF9110DC",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneEventTriggerSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.37"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C05D7047-4C3CEEEA-8C8B6FB9-AF9110DC"
+    }
+  },
+  {
+    "Type": "MovieSceneEventTriggerSection",
+    "Name": "MovieSceneEventTriggerSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneEventTriggerSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneEventTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.36"
+    },
+    "Properties": {
+      "EventChannel": {
+        "KeyTimes": [
+          {
+            "Value": 3000
+          }
+        ],
+        "KeyValues": [
+          {
+            "Ptrs": {
+              "Function": {
+                "ObjectName": "Function'WGT_LevelRank_InfiniteRun_C:SequenceEvent__ENTRYPOINTWGT_LevelRank_InfiniteRun_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.9"
+              },
+              "BoundObjectProperty": {
+                "Path": [],
+                "ResolvedOwner": null
+              }
+            }
+          }
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.28"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneEventTrack_0.MovieSceneEventTriggerSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.29"
+        }
+      },
+      "Signature": "03397A31-41E3F82C-EB443DA9-BF11D619"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.41"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.99999994,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.24"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.25"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 17001
+            }
+          }
+        }
+      },
+      "Signature": "EFCC3C0E-4D118A79-A1D02BB6-EB84374A"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.42"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 18000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.30"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.31"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "9D25377B-494DCB0B-8D4FBE85-A8DE3EEC"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.43"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 9000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.99999994,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.99999994,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.32"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.33"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "C6D4B943-4110EFCF-08CA1D98-4BB92FA3"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.38"
+        }
+      ],
+      "EvaluationFieldGuid": "705736C3-4F7FF59A-7A4F3CA9-F1CB4580",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.38"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 17001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "705736C3-4F7FF59A-7A4F3CA9-F1CB4580"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.39"
+        }
+      ],
+      "EvaluationFieldGuid": "22BFC352-4DB5E920-2BAD77BE-B1745B09",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.39"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "22BFC352-4DB5E920-2BAD77BE-B1745B09"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.40"
+        }
+      ],
+      "EvaluationFieldGuid": "7F000BB4-431B37F7-33D1F386-EAE58DCC",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.40"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "7F000BB4-431B37F7-33D1F386-EAE58DCC"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_LevelRank",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+    },
+    "Properties": {
+      "WidthOverride": 253.61281,
+      "HeightOverride": 260.23105,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.SBox_LevelRank.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.45"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.SBox_LevelRank'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.44"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.SBox_LevelRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.44"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.47"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_LevelName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+    },
+    "Properties": {
+      "Size": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.48"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_LevelRank",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank.VerticalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.49"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.48"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank.VerticalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.50"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.SBox_LevelRank.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.45"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.47"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.47"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_LevelRank_InfiniteRun_C:WidgetTree.Spacer_LevelName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.46"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.47"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.47"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_LevelRank_InfiniteRun_C:WidgetTree.Image_Rank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.47"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.VBox_LevelRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.47"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.12"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Count",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "2"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.533333,
+          "G": 0.72549,
+          "B": 0.835294,
+          "A": 1.0,
+          "Hex": "C1DEEC"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 70
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 200.0,
+      "LineHeightPercentage": 0.6,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.14"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Multiplier",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_LevelRank_InfiniteRun_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.55"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "x"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.533333,
+          "G": 0.72549,
+          "B": 0.835294,
+          "A": 1.0,
+          "Hex": "C1DEEC"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 70
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 200.0,
+      "LineHeightPercentage": 0.6,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_LevelRank_InfiniteRun_C:WidgetTree.HBox_InfiniteRun.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.13"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Addition_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Addition_INST.Addition'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.16"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_LevelRank_C_21",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "459C5C75-49C8B5C3-F6FDDD85-3B5E3D42",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "Addition",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_LevelRank_InfiniteRun_C:Addition_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.34"
+      },
+      "Signature": "D949E5B4-4F8C4206-9688019F-A20C98A9"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Pop_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_LevelRank_InfiniteRun_C:Pop_INST.Pop'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.17"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_LevelRank_C_16",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "127B686E-446E6395-BD04059F-97A33433",
+          "bIsRootWidget": true
+        },
+        {
+          "WidgetName": "Text_LevelName",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "EEE03CF5-436FD078-82D7FA83-B835D393",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Pop",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_LevelRank_InfiniteRun_C:Pop_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.35"
+      },
+      "Signature": "840902E4-4D577299-D2DFE3A8-CC1F6CD4"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_LevelRank_InfiniteRun_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.10"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WGT_LevelRank_InfiniteRun_C:WidgetTree.SBox_LevelRank'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/EndGame/WGT_LevelRank_InfiniteRun.44"
+      }
+    }
+  }
+]

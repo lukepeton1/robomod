@@ -1,0 +1,875 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactive_PerkReroll",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Conv_BoolToFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyControlled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintFocus",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IFocusable:OnBlueprintFocus'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsStarting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintDeactivateInteractive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnBlueprintDeactivateInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintActivateInteractive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnBlueprintActivateInteractive'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:OnStartInteract'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetWidgetComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractiveWidget:GetWidgetComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetPrimitiveComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetPrimitiveComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHoveringMeshComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetHoveringMeshComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHoveringWidgetComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AInteractive:GetHoveringWidgetComponent'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetInteractText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'IInterractible:GetInteractText'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "PropertyFlags": "UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 64,
+          "Struct": {
+            "ObjectName": "Class'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetFormattedText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactive_PerkReroll_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_ALootable_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ALootable.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.21"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Interactive_PerkReroll_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:ExecuteUbergraph_BP_Interactive_PerkReroll'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.9"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetHoveringWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.8"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetHoveringMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.7"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.6"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.5"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnBlueprintActivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.2"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnBlueprintFocus'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.1"
+      },
+      {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:ExecuteUbergraph_BP_Interactive_PerkReroll'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HoverComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactive_PerkReroll": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:ExecuteUbergraph_BP_Interactive_PerkReroll'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.0"
+      },
+      "OnBlueprintFocus": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnBlueprintFocus'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.1"
+      },
+      "OnBlueprintDeactivateInteractive": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnBlueprintDeactivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.2"
+      },
+      "OnBlueprintActivateInteractive": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnBlueprintActivateInteractive'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.3"
+      },
+      "OnStartInteract": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:OnStartInteract'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.4"
+      },
+      "GetWidgetComponent": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.5"
+      },
+      "GetPrimitiveComponent": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetPrimitiveComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.6"
+      },
+      "GetHoveringMeshComponent": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetHoveringMeshComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.7"
+      },
+      "GetHoveringWidgetComponent": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetHoveringWidgetComponent'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.8"
+      },
+      "GetInteractText": {
+        "ObjectName": "Function'BP_Interactive_PerkReroll_C:GetInteractText'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.9"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactive_PerkReroll_C'Default__BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.11"
+    }
+  },
+  {
+    "Type": "BP_Interactive_PerkReroll_C",
+    "Name": "Default__BP_Interactive_PerkReroll_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.BP_Interactive_PerkReroll_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll",
+    "Template": {
+      "ObjectName": "BP_Interactive_ALootable_C'Default__BP_Interactive_ALootable_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ALootable.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "PhysicMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Interactive_PerkReroll_C:PhysicMesh'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.23"
+      },
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_PerkReroll_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.12"
+      },
+      "InteractTimeText": {
+        "CultureInvariantString": null
+      },
+      "InteractText": {
+        "TableId": "/Game/Data/StringTable/DST_Interactive.DST_Interactive",
+        "Key": "pickUpItem",
+        "SourceString": "Pick Up {itemName}",
+        "LocalizedString": "Pick Up {itemName}"
+      },
+      "ErrorText": {
+        "CultureInvariantString": null
+      },
+      "InteractSound": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Core/SC_Core_Equip.SC_Core_Equip",
+        "SubPathString": ""
+      },
+      "InteractHaptic": {
+        "AssetPathName": "/Game/Audio/Sound/Interactive/Core/HC_Core_Equip.HC_Core_Equip",
+        "SubPathString": ""
+      },
+      "HoverMeshLocationCurve": {
+        "ObjectName": "CurveVector'CU_WeaponHoverLocation'",
+        "ObjectPath": "/Game/Data/Curve/CU_WeaponHoverLocation.0"
+      },
+      "HoverMeshRotationCurve": {
+        "ObjectName": "CurveVector'CU_WeaponHoverRotation'",
+        "ObjectPath": "/Game/Data/Curve/CU_WeaponHoverRotation.0"
+      },
+      "HoverWidgetLocationCurve": {
+        "ObjectName": "CurveVector'CU_WeaponHoverLocation'",
+        "ObjectPath": "/Game/Data/Curve/CU_WeaponHoverLocation.0"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_PerkReroll_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.12"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_PerkReroll_C'Default__BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.11"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Interactive_ALootable_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ALootable.2"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Movable"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'PS_CoreLoot_Background'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/Upgrade/PS_CoreLoot_Background.8"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 28.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.99999,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 0.8,
+        "Z": 0.8
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "HoverComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -10.000916,
+        "Y": 0.0,
+        "Z": 2.2428894
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.21"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_PerkReroll_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.15"
+      },
+      "VariableGuid": "56D6DC7D-47794E02-D4ECA486-6BD5164A",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.21"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactive_PerkReroll_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.22"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.19"
+        }
+      ],
+      "VariableGuid": "166ED71A-427CD80E-B488FF87-3F76C0F1",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.21"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_Interactive_PerkReroll_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.14"
+      },
+      "VariableGuid": "B1C695E5-4408E02B-134A69AB-B6B150E9",
+      "InternalVariableName": "ParticleSystem"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.21"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactive_PerkReroll_C:HoverComponent_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.16"
+      },
+      "ParentComponentOrVariableName": "InteractCollision",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.18"
+        }
+      ],
+      "VariableGuid": "A5F36E5D-4C720A62-999AB896-78E38128",
+      "InternalVariableName": "HoverComponent"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.20"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.19"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactive_PerkReroll_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.17"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.10"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_GambleGarry_Dice'",
+        "ObjectPath": "/Game/Animation/Quest/GambleGarry/SM_GambleGarry_Dice.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "CustomDepthStencilValue": 206,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionProfileName": "NoCollision"
+      },
+      "RelativeLocation": {
+        "X": 3.7460603E-07,
+        "Y": 0.0,
+        "Z": 15.527008
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 20.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PhysicMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Interactive_PerkReroll_C'Default__BP_Interactive_PerkReroll_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.11"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Interactive_ALootable_C:PhysicMesh'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_ALootable.6"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_Interactive_PerkReroll_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/BP_Interactive_PerkReroll.12"
+      }
+    }
+  }
+]

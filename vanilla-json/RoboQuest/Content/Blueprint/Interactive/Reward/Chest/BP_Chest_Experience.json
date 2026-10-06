@@ -1,0 +1,358 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Chest_Experience",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllActorsOfClass_OutActors",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllActorsOfClass_OutActors",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_Quarry_SecretExplosion_C'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Quarry_SecretExplosion.3"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Quarry_SecretExplosion_C'",
+          "ObjectPath": "/Game/Blueprint/Interactive/Level/BP_Quarry_SecretExplosion.3"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Conv_IntToFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnOpenChest",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.2"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AChest_C:OnOpenChest'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Chest_Experience_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AChest_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.27"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Chest_Experience_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Chest_Experience_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.5"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Chest_Experience_C:ExecuteUbergraph_BP_Chest_Experience'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Chest_Experience_C:OnOpenChest'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.1"
+      },
+      {
+        "ObjectName": "Function'BP_Chest_Experience_C:ExecuteUbergraph_BP_Chest_Experience'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Amount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Chest_Experience": {
+        "ObjectName": "Function'BP_Chest_Experience_C:ExecuteUbergraph_BP_Chest_Experience'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.0"
+      },
+      "OnOpenChest": {
+        "ObjectName": "Function'BP_Chest_Experience_C:OnOpenChest'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Chest_Experience_C'Default__BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.3"
+    }
+  },
+  {
+    "Type": "BP_Chest_Experience_C",
+    "Name": "Default__BP_Chest_Experience_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.BP_Chest_Experience_C'",
+    "Package": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience",
+    "Template": {
+      "ObjectName": "BP_AChest_C'Default__BP_AChest_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.28"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Amount": 150,
+      "HoverAnimation": {
+        "ObjectName": "AnimMontage'AM_Chest_Weapon_03_Hover'",
+        "ObjectPath": "/Game/Graphic/Interactive/Chest/Weapon/AM_Chest_Weapon_03_Hover.0"
+      },
+      "ClosedLoopingParticle": {
+        "ObjectName": "ParticleSystem'PS_Chest_02_Stage_01_Closed'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/Chest/PS_Chest_02_Stage_01_Closed.32"
+      },
+      "OpenningParticle": {
+        "ObjectName": "ParticleSystem'PS_Chest_02_Stage_02_Opening_Blue'",
+        "ObjectPath": "/Game/Graphic/VFX/Interactive/Chest/PS_Chest_02_Stage_02_Opening_Blue.38"
+      },
+      "bLootFromQueue": false,
+      "InteractCollision": {
+        "ObjectName": "BoxComponent'Default__BP_Chest_Experience_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.4"
+      },
+      "bReplicates": true,
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Chest_Experience_C:InteractCollision'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.4"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Chest_Experience_C'Default__BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.3"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_AChest_C:InteractCollision'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.30"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.2"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkeletalMeshComponent'BP_Chest_Experience_C:SkeletalMesh_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_AChest_C'",
+              "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.27"
+            },
+            "SCSVariableName": "SkeletalMesh",
+            "AssociatedGuid": "D45C2370-443ECED0-083A00A6-3A27080A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Chest_Experience_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.8"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Chest_Experience_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.6"
+      },
+      "VariableGuid": "AD802B89-4A7DF14D-8EBFAE89-2F22CF61",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.2"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Chest_Experience_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Chest_Experience_C'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_Chest_Experience.2"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'BP_AChest_C:SkeletalMesh_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprint/Interactive/Reward/Chest/BP_AChest.40"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Chest_Weapon_03_C'",
+        "ObjectPath": "/Game/Graphic/Interactive/Chest/Weapon/ABP_Chest_Weapon_03.4"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Chest_Weapon_03'",
+        "ObjectPath": "/Game/Graphic/Interactive/Chest/Weapon/SK_Chest_Weapon_03.0"
+      },
+      "OverrideMaterials": [
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Holo_Weapon_Selection_Yellow'",
+          "ObjectPath": "/Game/Graphic/Base/Material/MI_Holo_Weapon_Selection_Yellow.0"
+        }
+      ]
+    }
+  }
+]

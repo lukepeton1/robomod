@@ -1,0 +1,557 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_TargetHealthBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TargetHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_StatManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetStatManager",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TargetHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'HealthBarWidget:SetStatManager'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StatManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_TargetHealthBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_TargetHealthBar_C:ExecuteUbergraph_WGT_TargetHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TargetHealthBarWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_TargetHealthBar_C:SetStatManager'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.1"
+      },
+      {
+        "ObjectName": "Function'WGT_TargetHealthBar_C:ExecuteUbergraph_WGT_TargetHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HealthBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_IceResistanceBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_IceResistanceBar_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_IceResistanceBar.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WGT_StunResistanceBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StunResistanceBar_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.3"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_TargetHealthBar": {
+        "ObjectName": "Function'WGT_TargetHealthBar_C:ExecuteUbergraph_WGT_TargetHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.0"
+      },
+      "SetStatManager": {
+        "ObjectName": "Function'WGT_TargetHealthBar_C:SetStatManager'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_TargetHealthBar_C'Default__WGT_TargetHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.3"
+    }
+  },
+  {
+    "Type": "WGT_TargetHealthBar_C",
+    "Name": "Default__WGT_TargetHealthBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.WGT_TargetHealthBar_C'",
+    "Package": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar",
+    "Properties": {
+      "UberGraphFrame": {},
+      "SlowColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "0000FF"
+      },
+      "SlowSubColor": {
+        "R": 0.009047,
+        "G": 0.341302,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "179EFF"
+      },
+      "StatusBarWidthOffset": 5.0,
+      "EnemyHealthBarMaterial": {
+        "AssetPathName": "/Game/Graphic/HUD/Enemy/MI_EnemyBar.MI_EnemyBar",
+        "SubPathString": ""
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HealthBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'MI_EnemyBar'",
+          "ObjectPath": "/Game/Graphic/HUD/Enemy/MI_EnemyBar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.14"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_53",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_TargetHealthBar_C:WidgetTree.Overlay_53.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_TargetHealthBar_C:WidgetTree.SBox_Main.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.11"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_TargetHealthBar_C:WidgetTree.Overlay_53'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.5"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_TargetHealthBar_C:WidgetTree.Overlay_53'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.5"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.13"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_Ice",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Properties": {
+      "WidthOverride": 300.0,
+      "HeightOverride": 10.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_TargetHealthBar_C:WidgetTree.SBox_Ice.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140.VerticalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.16"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Properties": {
+      "WidthOverride": 300.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_TargetHealthBar_C:WidgetTree.SBox_Main.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SBox_Stun",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Properties": {
+      "WidthOverride": 300.0,
+      "HeightOverride": 10.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_TargetHealthBar_C:WidgetTree.SBox_Stun.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.15"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Ice'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.7"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Ice'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.7"
+      },
+      "Content": {
+        "ObjectName": "WGT_IceResistanceBar_C'WGT_TargetHealthBar_C:WidgetTree.WGT_IceResistanceBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.17"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Main'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.8"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.8"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_TargetHealthBar_C:WidgetTree.Overlay_53'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.5"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Stun'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.9"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Stun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.9"
+      },
+      "Content": {
+        "ObjectName": "WGT_StunResistanceBar_C'WGT_TargetHealthBar_C:WidgetTree.WGT_StunResistanceBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_140",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140.VerticalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.16"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.15"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_TargetHealthBar_C:WidgetTree.Overlay_53.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.13"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.13"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_TargetHealthBar_C:WidgetTree.Image_HealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.4"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.13"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.13"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Stun'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.13"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_TargetHealthBar_C:WidgetTree.VerticalBox_140'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.13"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Ice'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.7"
+      }
+    }
+  },
+  {
+    "Type": "WGT_IceResistanceBar_C",
+    "Name": "WGT_IceResistanceBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Enemy/WGT_IceResistanceBar.WGT_IceResistanceBar_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Template": {
+      "ObjectName": "WGT_IceResistanceBar_C'Default__WGT_IceResistanceBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_IceResistanceBar.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_TargetHealthBar_C:WidgetTree.SBox_Ice.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.10"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WGT_StunResistanceBar_C",
+    "Name": "WGT_StunResistanceBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.WGT_StunResistanceBar_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_TargetHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.19"
+    },
+    "Template": {
+      "ObjectName": "WGT_StunResistanceBar_C'Default__WGT_StunResistanceBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_TargetHealthBar_C:WidgetTree.SBox_Stun.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.12"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_TargetHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WGT_TargetHealthBar_C:WidgetTree.SBox_Main'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_TargetHealthBar.8"
+      }
+    }
+  }
+]

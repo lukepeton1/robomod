@@ -1,0 +1,4802 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_Tuto_Objective",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'APlayerController:DelegateDispatchNewKeyBinded__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'APlayerController:DelegateControllerType__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_ControllerType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EControllerScheme'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetVisibility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'APlayerController:DelegateControllerScheme__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Key",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetVisibility_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_NewController",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EController'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegatEControllerType_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "NewController",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EController'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Key",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Key'",
+          "ObjectPath": "/Script/InputCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegatEControllerScheme_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "ControllerType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EControllerScheme'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DisplayHotkey",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "InHotkey",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETutoHotkey'",
+          "ObjectPath": "/Game/Blueprint/LevelGenerator/Tutorial/ETutoHotkey.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RemoveHotkey",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHotkeyText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETutoHotkey'",
+          "ObjectPath": "/Game/Blueprint/LevelGenerator/Tutorial/ETutoHotkey.0"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_6",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_7",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_8",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_9",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_TextToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_TextToString_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateHotkeyDisplay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "SetProperty",
+        "Name": "TmpAxisName",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "ElementProp": {
+          "Type": "NameProperty",
+          "Name": "TmpAxisName",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "TmpIsAxis",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "lHotKeyImages",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "lHotKeyImages",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Widget'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "lActionNames",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "lActionNames",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Widget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsImage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetHotkeySecondaryText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllChildren_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllChildren_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Widget'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetSecondaryHotkeyNames_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetSecondaryHotkeyNames_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetSecondaryHotkeyNames_bIsAxis",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAxisHotKeyImages_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAxisHotKeyImages_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Widget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsImage_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Set_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllChildren_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllChildren_ReturnValue_1",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Widget'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetHotkeyActionNames_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetHotkeyActionNames_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetHotkeyActionNames_bIsAxis",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetHotkeyText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DisplayObjective",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "InObjective",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETutoObjective'",
+          "ObjectPath": "/Game/Blueprint/LevelGenerator/Tutorial/ETutoObjective.0"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetObjectiveText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetObjectiveText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETutoObjective'",
+          "ObjectPath": "/Game/Blueprint/LevelGenerator/Tutorial/ETutoObjective.0"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETutoObjective'",
+          "ObjectPath": "/Game/Blueprint/LevelGenerator/Tutorial/ETutoObjective.0"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_6",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_7",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_8",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_9",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_10",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_11",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "RemoveObjective",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHotkeyActionNames",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsAxis",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESprintMode'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_name_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "Temp_name_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_1",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_2",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_3",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_4",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_5",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_5",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_6",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_6",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_7",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_7",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_8",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_8",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_9",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_9",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_10",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_10",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_11",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_11",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_12",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_12",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_Select_Default",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetAxisHotKeyImages",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetHotkeySecondaryText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETutoHotkey'",
+          "ObjectPath": "/Game/Blueprint/LevelGenerator/Tutorial/ETutoHotkey.0"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_6",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_7",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_8",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_9",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_10",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetSecondaryHotkeyNames",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsAxis",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_MakeLiteralName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "K2Node_MakeArray_Array_1",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Tuto_Objective_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:HotkeyPulse_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.96"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:Appear_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.95"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:Replaced_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.97"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:ExecuteUbergraph_WGT_Tuto_Objective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetSecondaryHotkeyNames'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.15"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetHotkeySecondaryText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.14"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetAxisHotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.13"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetHotkeyActionNames'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.12"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:RemoveObjective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.11"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetObjectiveText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.10"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DisplayObjective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.9"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:UpdateHotkeyDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.8"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetHotkeyText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.7"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:RemoveHotkey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.6"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DisplayHotkey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.5"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.4"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DelegatEControllerScheme_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.3"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.2"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DelegatEControllerType_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.1"
+      },
+      {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:ExecuteUbergraph_WGT_Tuto_Objective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Replaced",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Appear",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HotkeyPulse",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_AxisKeyImages",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_HotKey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_HotKeyImages",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_HotKeySecondaryImages",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Hbox_SecondaryHotKey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_BackgroundBlur",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_HotKeyImage_11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_LineBreak",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Hotkey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Hotkey_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_HotkeySecondary",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Objective",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VBox_HotKeyImages",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CurrentHotkey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETutoHotkey'",
+          "ObjectPath": "/Game/Blueprint/LevelGenerator/Tutorial/ETutoHotkey.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsDisplay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Ishotk",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_Tuto_Objective": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:ExecuteUbergraph_WGT_Tuto_Objective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.0"
+      },
+      "DelegatEControllerType_Event_0": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DelegatEControllerType_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.1"
+      },
+      "CustomEvent_0": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.2"
+      },
+      "DelegatEControllerScheme_Event_0": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DelegatEControllerScheme_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.3"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.4"
+      },
+      "DisplayHotkey": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DisplayHotkey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.5"
+      },
+      "RemoveHotkey": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:RemoveHotkey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.6"
+      },
+      "GetHotkeyText": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetHotkeyText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.7"
+      },
+      "UpdateHotkeyDisplay": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:UpdateHotkeyDisplay'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.8"
+      },
+      "DisplayObjective": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:DisplayObjective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.9"
+      },
+      "GetObjectiveText": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetObjectiveText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.10"
+      },
+      "RemoveObjective": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:RemoveObjective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.11"
+      },
+      "GetHotkeyActionNames": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetHotkeyActionNames'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.12"
+      },
+      "GetAxisHotKeyImages": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetAxisHotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.13"
+      },
+      "GetHotkeySecondaryText": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetHotkeySecondaryText'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.14"
+      },
+      "GetSecondaryHotkeyNames": {
+        "ObjectName": "Function'WGT_Tuto_Objective_C:GetSecondaryHotkeyNames'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.15"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Tuto_Objective_C'Default__WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.17"
+    }
+  },
+  {
+    "Type": "WGT_Tuto_Objective_C",
+    "Name": "Default__WGT_Tuto_Objective_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.WGT_Tuto_Objective_C'",
+    "Package": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_382",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Padding": {
+        "Left": 3.0,
+        "Top": 3.0,
+        "Right": 3.0,
+        "Bottom": 3.0
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'WGT_Tuto_Objective_C:WidgetTree.Border_382.BorderSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.88"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'WGT_Tuto_Objective_C:WidgetTree.Border_382'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.18"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 3.0,
+        "Top": 3.0,
+        "Right": 3.0,
+        "Bottom": 3.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'WGT_Tuto_Objective_C:WidgetTree.Border_382'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.18"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_LineBreak'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.60"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_AxisKeyImages",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.26"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages.HorizontalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.27"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.86"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -25.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_HotKey",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.28"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.31"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.30"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.29"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.32"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80.VerticalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.90"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_HotKeyImages",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.33"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.35"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.36"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.28"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_HotKeySecondaryImages",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.37"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.39"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.40"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.38"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.42"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "Hbox_SecondaryHotKey",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.41"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.45"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_7'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.46"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.42"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.43"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.32"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.20"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": -20.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.20"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.57"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.20"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": -20.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.20"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.55"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.20"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.20"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.56"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_Tuto_Objective_C:WidgetTree.Text_Hotkey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.91"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Tuto_Objective_C:WidgetTree.Spacer_71'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.83"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.84"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.48"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.53"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.49"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.22"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.52"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_8'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.58"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_11'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.51"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_9'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.59"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_10'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.50"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Tuto_Objective_C:WidgetTree.Spacer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.80"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Tuto_Objective_C:WidgetTree.Spacer_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.81"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_Tuto_Objective_C:WidgetTree.Text_HotkeySecondary'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.93"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_Tuto_Objective_C:WidgetTree.Text_Hotkey_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.92"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.24"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Tuto_Objective_C:WidgetTree.Spacer_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.82"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_BackgroundBlur",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Tuto_Objective_C:WidgetTree.Overlay_20.OverlaySlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.77"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.33"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.35"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.40"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.38"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.36"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeyImages.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.34"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.87"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.26"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages.HorizontalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.27"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.25"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.37"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_HotKeyImage_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Keyboard_Black_E'",
+          "ObjectPath": "/Game/Graphic/HUD/Controllers/Keyboard/T_Keyboard_Black_E.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKeySecondaryImages.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.39"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_LineBreak",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 300.0,
+          "Y": 3.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'WGT_Tuto_Objective_C:WidgetTree.Border_382.BorderSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.19"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Appear",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:Appear_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.95"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "FA40BD05-4C2E0D43-9721CE8B-952C4BB1",
+          "Name": "WGT_Tuto_Objective_C_69",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "FA40BD05-4C2E0D43-9721CE8B-952C4BB1",
+          "BindingName": "WGT_Tuto_Objective_C_69",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.74"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "03BEE4ED-451D0AE8-586BB4BF-966F67B8"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "HotkeyPulse",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:HotkeyPulse_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.96"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "3B56ED1A-44D8B5D8-8F642FBA-52D4BF29",
+          "Name": "HBox_HotKey",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'HorizontalBox'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "3B56ED1A-44D8B5D8-8F642FBA-52D4BF29",
+          "BindingName": "HBox_HotKey",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.65"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "898C25EC-4037A20A-8A1FCDB6-23CF8CBB"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Replaced",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:Replaced_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.97"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "C803EDB6-4D1D3951-20329CA9-13E01A6E",
+          "Name": "WGT_Tuto_Objective_C_90",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "C803EDB6-4D1D3951-20329CA9-13E01A6E",
+          "BindingName": "WGT_Tuto_Objective_C_90",
+          "Tracks": []
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "A1FD67AE-4A558941-D6561E88-CB41D084"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.65"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.05,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.05,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.68"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.69"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "DA43390B-4BF2CFED-5F6731B6-4E81B8F8"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.62"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.64"
+        }
+      ],
+      "EvaluationFieldGuid": "917412A6-4D81D705-B38BA5BE-B1929361",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.64"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "917412A6-4D81D705-B38BA5BE-B1929361"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.73"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.73"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.64"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.64"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:Appear_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.95"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 15000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.73"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "FA40BD05-4C2E0D43-9721CE8B-952C4BB1"
+          }
+        ]
+      },
+      "CompiledSignature": "64134E26-45EA21D0-C7BCCAAF-D2AF6BE1",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:HotkeyPulse_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.96"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.64"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "3B56ED1A-44D8B5D8-8F642FBA-52D4BF29"
+          }
+        ]
+      },
+      "CompiledSignature": "A8499F72-4AE205D6-452B79BE-A490808E",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_Tuto_Objective_C:Replaced_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.97"
+    },
+    "Properties": {
+      "CompiledSignature": "1610D0E6-4D6B0590-403B7F9A-7E9D7808",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.74"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.66"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.67"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 15000
+            }
+          }
+        }
+      },
+      "Signature": "09AD7274-4F9F9956-AD398CB5-6732C601"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_Tuto_Objective_C:Appear_INST.Appear'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.61"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.73"
+        }
+      ],
+      "EvaluationFieldGuid": "0BC24C91-4EBA14AB-25EFD8A6-FF439428",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_Tuto_Objective_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.73"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0BC24C91-4EBA14AB-25EFD8A6-FF439428"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_20",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Tuto_Objective_C:WidgetTree.Overlay_20.OverlaySlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.77"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Tuto_Objective_C:WidgetTree.Overlay_20.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.76"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Tuto_Objective_C:WidgetTree.Overlay_20'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.75"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Tuto_Objective_C:WidgetTree.Overlay_20'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.75"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Tuto_Objective_C:WidgetTree.SizeBox_122'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.78"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Tuto_Objective_C:WidgetTree.Overlay_20'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.75"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Tuto_Objective_C:WidgetTree.Overlay_20'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.75"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_BackgroundBlur'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.47"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_122",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "WidthOverride": 950.0,
+      "HeightOverride": 250.0,
+      "MinDesiredHeight": 200.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Tuto_Objective_C:WidgetTree.SizeBox_122.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.79"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Tuto_Objective_C:WidgetTree.Overlay_20.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.76"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Tuto_Objective_C:WidgetTree.SizeBox_122'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.78"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 10.0,
+        "Right": 10.0,
+        "Bottom": 10.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Tuto_Objective_C:WidgetTree.SizeBox_122'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.78"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.85"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Size": {
+        "X": 15.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.41"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Size": {
+        "X": 15.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.43"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Size": {
+        "X": 15.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.46"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_71",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Size": {
+        "X": 15.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.30"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_HotKeyImages",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.87"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.86"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.31"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 25.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_80",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80.VerticalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.89"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.88"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80.VerticalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.90"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Tuto_Objective_C:WidgetTree.SizeBox_122.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.79"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.84"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.84"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_AxisKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.20"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.84"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VBox_HotKeyImages'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.84"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Tuto_Objective_C:WidgetTree.Image_HotKeyImage_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.54"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.85"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 10.0,
+        "Bottom": 15.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.85"
+      },
+      "Content": {
+        "ObjectName": "Border'WGT_Tuto_Objective_C:WidgetTree.Border_382'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.85"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.85"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_Tuto_Objective_C:WidgetTree.Text_Objective'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.94"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.85"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.85"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.21"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Hotkey",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Jump"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.HBox_HotKey.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.29"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Hotkey_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "/"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.45"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_HotkeySecondary",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Jump"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.Hbox_SecondaryHotKey.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.44"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Objective",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Tuto_Objective_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.98"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Jump"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 56
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Tuto_Objective_C:WidgetTree.VerticalBox_80.VerticalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.89"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Appear_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_Tuto_Objective_C:Appear_INST.Appear'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.61"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_Tuto_Objective_C_69",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "FA40BD05-4C2E0D43-9721CE8B-952C4BB1",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "Appear",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_Tuto_Objective_C:Appear_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.70"
+      },
+      "Signature": "64134E26-45EA21D0-C7BCCAAF-D2AF6BE1"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "HotkeyPulse_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_Tuto_Objective_C:HotkeyPulse_INST.HotkeyPulse'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.62"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "HBox_HotKey",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "3B56ED1A-44D8B5D8-8F642FBA-52D4BF29",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "HotkeyPulse",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_Tuto_Objective_C:HotkeyPulse_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.71"
+      },
+      "Signature": "A8499F72-4AE205D6-452B79BE-A490808E"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Replaced_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_Tuto_Objective_C:Replaced_INST.Replaced'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.63"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_Tuto_Objective_C_90",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "C803EDB6-4D1D3951-20329CA9-13E01A6E",
+          "bIsRootWidget": true
+        }
+      ],
+      "DisplayLabel": "Replaced",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_Tuto_Objective_C:Replaced_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.72"
+      },
+      "Signature": "1610D0E6-4D6B0590-403B7F9A-7E9D7808"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Tuto_Objective_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.16"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Tuto_Objective_C:WidgetTree.Overlay_20'",
+        "ObjectPath": "/Game/Blueprint/HUD/Tuto/WGT_Tuto_Objective.75"
+      }
+    }
+  }
+]

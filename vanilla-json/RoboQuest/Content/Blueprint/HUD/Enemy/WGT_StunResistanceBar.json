@@ -1,0 +1,472 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetDurationBarBP",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StunResistanceBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'LerpStatusProgressBarWidget:GetDurationBarBP'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetResistanceBarBP",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StunResistanceBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'LerpStatusProgressBarWidget:GetResistanceBarBP'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetImageBackground",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StunResistanceBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'LerpStatusProgressBarWidget:GetImageBackground'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_StunResistanceBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_StunResistanceBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.12"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'LerpStatusProgressBarWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_StunResistanceBar_C:GetImageBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.2"
+      },
+      {
+        "ObjectName": "Function'WGT_StunResistanceBar_C:GetResistanceBarBP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.1"
+      },
+      {
+        "ObjectName": "Function'WGT_StunResistanceBar_C:GetDurationBarBP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProgressBar_StunDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProgressBar_StunResistance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FuncMap": {
+      "GetDurationBarBP": {
+        "ObjectName": "Function'WGT_StunResistanceBar_C:GetDurationBarBP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.0"
+      },
+      "GetResistanceBarBP": {
+        "ObjectName": "Function'WGT_StunResistanceBar_C:GetResistanceBarBP'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.1"
+      },
+      "GetImageBackground": {
+        "ObjectName": "Function'WGT_StunResistanceBar_C:GetImageBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_StunResistanceBar_C'Default__WGT_StunResistanceBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.4"
+    }
+  },
+  {
+    "Type": "WGT_StunResistanceBar_C",
+    "Name": "Default__WGT_StunResistanceBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.WGT_StunResistanceBar_C'",
+    "Package": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar",
+    "Properties": {
+      "BindedStatus": "EStatus::Stun",
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StunResistanceBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.12"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 300.0,
+          "Y": 24.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Enemy_Shock_BarBackground'",
+          "ObjectPath": "/Game/Graphic/HUD/Enemy/T_Enemy_Shock_BarBackground.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_StunResistanceBar_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.9"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StunResistanceBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.12"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_StunResistanceBar_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.9"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_StunResistanceBar_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.7"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_StunResistanceBar_C:WidgetTree.Overlay_0.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_StunResistanceBar_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_StunResistanceBar_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.6"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_StunResistanceBar_C:WidgetTree.ProgressBar_StunResistance'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.11"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_StunResistanceBar_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_StunResistanceBar_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.6"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_StunResistanceBar_C:WidgetTree.ProgressBar_StunDuration'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_StunResistanceBar_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_StunResistanceBar_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.6"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_StunResistanceBar_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.5"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "ProgressBar_StunDuration",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StunResistanceBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.12"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 300.0,
+            "Y": 24.0
+          },
+          "Margin": {
+            "Left": 0.416667,
+            "Top": 0.416667,
+            "Right": 0.416667,
+            "Bottom": 0.416667
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Enemy_Shock_Bar_png'",
+            "ObjectPath": "/Game/Graphic/HUD/Enemy/T_Enemy_Shock_Bar_png.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 300.0,
+            "Y": 24.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.8125,
+              "G": 0.529635,
+              "B": 0.770412,
+              "A": 1.0,
+              "Hex": "E9C1E4"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Enemy_Shock_Bar_png'",
+            "ObjectPath": "/Game/Graphic/HUD/Enemy/T_Enemy_Shock_Bar_png.0"
+          }
+        },
+        "MarqueeImage": {
+          "ImageSize": {
+            "X": 20.0,
+            "Y": 20.0
+          }
+        }
+      },
+      "Percent": 1.0,
+      "bIsMarquee": true,
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_StunResistanceBar_C:WidgetTree.Overlay_0.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.8"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "ProgressBar_StunResistance",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StunResistanceBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.12"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 300.0,
+            "Y": 24.0
+          },
+          "Margin": {
+            "Left": 0.416667,
+            "Top": 0.416667,
+            "Right": 0.416667,
+            "Bottom": 0.416667
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Enemy_Shock_Bar_png'",
+            "ObjectPath": "/Game/Graphic/HUD/Enemy/T_Enemy_Shock_Bar_png.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 300.0,
+            "Y": 24.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.591402,
+              "G": 0.103198,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "CA5AFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Enemy_Shock_Bar_png'",
+            "ObjectPath": "/Game/Graphic/HUD/Enemy/T_Enemy_Shock_Bar_png.0"
+          }
+        }
+      },
+      "Percent": 0.5,
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_StunResistanceBar_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StunResistanceBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.3"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_StunResistanceBar_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_StunResistanceBar.6"
+      }
+    }
+  }
+]

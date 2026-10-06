@@ -1,0 +1,1019 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_Drone_HealthBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetStatStruct_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'StatValues'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AStatManager:DelegateRepNotify__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetVisibility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bHidden",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetBarHidden",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bHidden",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopDisplayBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.6"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartDisplayBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.6"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateRepNotify_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "value",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.6"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Drone_HealthBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:ExecuteUbergraph_WGT_Drone_HealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.5"
+      },
+      {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:DelegateRepNotify_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.4"
+      },
+      {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:StartDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.3"
+      },
+      {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:StopDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.2"
+      },
+      {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:SetBarHidden'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.1"
+      },
+      {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:ExecuteUbergraph_WGT_Drone_HealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_99",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProgressBar_78",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetSwitcher_73",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DroneRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | ExposeOnSpawn",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Ally'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_Drone_HealthBar": {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:ExecuteUbergraph_WGT_Drone_HealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.0"
+      },
+      "SetBarHidden": {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:SetBarHidden'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.1"
+      },
+      "StopDisplayBar": {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:StopDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.2"
+      },
+      "StartDisplayBar": {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:StartDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.3"
+      },
+      "DelegateRepNotify_Event_0": {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:DelegateRepNotify_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.4"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_Drone_HealthBar_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.5"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Drone_HealthBar_C'Default__WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.7"
+    }
+  },
+  {
+    "Type": "WGT_Drone_HealthBar_C",
+    "Name": "Default__WGT_Drone_HealthBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.WGT_Drone_HealthBar_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 27.0,
+          "Y": 25.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.041667,
+            "G": 0.041667,
+            "B": 0.041667,
+            "A": 1.0,
+            "Hex": "393939"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_DroneGaugeCHECKER'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Skill/T_DroneGaugeCHECKER.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_159.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.15"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_99",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 165.0,
+          "Y": 25.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_BarCache_Drone'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Skill/T_BarCache_Drone.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.14"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_151",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.13"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Drone_HealthBar_C:WidgetTree.VerticalBox_142.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.23"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_159",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_159.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73.WidgetSwitcherSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.26"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_59",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_59.OverlaySlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.16"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.10"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_104'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.18"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Drone_HealthBar_C:WidgetTree.Image_99'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_159'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.11"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_159'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.11"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Drone_HealthBar_C:WidgetTree.Image'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.8"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_59'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.12"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.12"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_223'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.19"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "ProgressBar_78",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 159.0,
+            "Y": 25.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.041667,
+              "G": 0.041667,
+              "B": 0.041667,
+              "A": 1.0,
+              "Hex": "393939"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Bar_Drone'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Skill/T_Bar_Drone.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 159.0,
+            "Y": 25.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.102242,
+              "G": 1.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "5AFF00"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Bar_Drone'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Skill/T_Bar_Drone.0"
+          }
+        }
+      },
+      "Percent": 0.5,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_104.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.20"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_104",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "WidthOverride": 200.0,
+      "HeightOverride": 35.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_104.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.13"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.96,
+          "Y": 0.95
+        }
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_223",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "WidthOverride": 200.0,
+      "HeightOverride": 45.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_223.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Drone_HealthBar_C:WidgetTree.Overlay_59.OverlaySlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.16"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_104'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.18"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_104'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.18"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_Drone_HealthBar_C:WidgetTree.ProgressBar_78'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.17"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_223'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.19"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_223'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.19"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.24"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_142",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Drone_HealthBar_C:WidgetTree.VerticalBox_142.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73.WidgetSwitcherSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.25"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Drone_HealthBar_C:WidgetTree.VerticalBox_142'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Drone_HealthBar_C:WidgetTree.VerticalBox_142'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.22"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_151'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.10"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "WidgetSwitcher_73",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Drone_HealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73.WidgetSwitcherSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.25"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73.WidgetSwitcherSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Drone_HealthBar_C:WidgetTree.SizeBox_223.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.21"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.24"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.24"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_Drone_HealthBar_C:WidgetTree.VerticalBox_142'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.22"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.24"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WGT_Drone_HealthBar_C:WidgetTree.WidgetSwitcher_73'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.24"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_159'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.11"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Drone_HealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.6"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Drone_HealthBar_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Engineer/WGT_Drone_HealthBar.12"
+      }
+    }
+  }
+]

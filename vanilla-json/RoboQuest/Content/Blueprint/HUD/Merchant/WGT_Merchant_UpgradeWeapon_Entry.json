@@ -1,0 +1,972 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_Merchant_UpgradeWeapon_Entry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Merchant_UpgradeWeapon_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetCustomCostIcon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetUpgradeAffixQualityPrice_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetRerollAffixPrice_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetUpgradeWeaponPrice_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetWeaponColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_SelectInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSingleton_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Singleton'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetWeaponColor_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Merchant_UpgradeWeapon_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Merchant_UpgradeWeapon_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Merchant_UpgradeWeapon_Entry_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_Merchant_UpgradeWeapon_Entry_C:ExecuteUbergraph_WGT_Merchant_UpgradeWeapon_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Merchant_UpgradeWeapon_Entry_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.2"
+      },
+      {
+        "ObjectName": "Function'WGT_Merchant_UpgradeWeapon_Entry_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.1"
+      },
+      {
+        "ObjectName": "Function'WGT_Merchant_UpgradeWeapon_Entry_C:ExecuteUbergraph_WGT_Merchant_UpgradeWeapon_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HBox_SecondaryColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_IconPrice",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Price",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "WeaponColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Class'EWeaponColor'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsUpgrade",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsAffixQuality",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "WeaponColor2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Class'EWeaponColor'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CustomCostType",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Class'ECustomCost'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_Merchant_UpgradeWeapon_Entry": {
+        "ObjectName": "Function'WGT_Merchant_UpgradeWeapon_Entry_C:ExecuteUbergraph_WGT_Merchant_UpgradeWeapon_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_Merchant_UpgradeWeapon_Entry_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.1"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WGT_Merchant_UpgradeWeapon_Entry_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Merchant_UpgradeWeapon_Entry_C'Default__WGT_Merchant_UpgradeWeapon_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.4"
+    }
+  },
+  {
+    "Type": "WGT_Merchant_UpgradeWeapon_Entry_C",
+    "Name": "Default__WGT_Merchant_UpgradeWeapon_Entry_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.WGT_Merchant_UpgradeWeapon_Entry_C'",
+    "Package": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bIsUpgrade": true,
+      "WeaponColor2": "EWeaponColor::LastIndex",
+      "CustomCostType": "ECustomCost::LastIndex",
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox_SecondaryColor",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.12"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_49",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.15"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.14"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Overlay_32.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.21"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Image_Arrow'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Image_Icon2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Spacer_197'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.24"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Spacer_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.17"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": -20.0,
+        "Bottom": 20.0
+      },
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Text_Price'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.25"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Spacer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Image_IconPrice'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.19"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Arrow",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 410.0,
+          "Y": 600.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_SmallArrow'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/T_SmallArrow.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.7"
+      },
+      "RenderTransform": {
+        "Angle": 180.0
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 800.0,
+          "Y": 800.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_ClassHUD_Recon_Combppoint_Full'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Class/Recon/T_ClassHUD_Recon_Combppoint_Full.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.11"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 800.0,
+          "Y": 800.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_ClassHUD_Recon_Combppoint_Full'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Class/Recon/T_ClassHUD_Recon_Combppoint_Full.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_IconPrice",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 800.0,
+          "Y": 800.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_Powercell'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/T_Icon_Powercell.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.15"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_32",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Overlay_32.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Overlay_32'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.20"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Overlay_32'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.20"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.6"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Size": {
+        "X": 200.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.14"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Size": {
+        "X": 4.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.10"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_197",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Properties": {
+      "Size": {
+        "X": 100.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HBox_SecondaryColor.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.9"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Price",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.26"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "DF9FA7D943226483BC3A429505E3F598",
+        "SourceString": "2",
+        "LocalizedString": "2"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 20
+        },
+        "TypefaceFontName": "Bold",
+        "Size": 700
+      },
+      "ShadowOffset": {
+        "X": 20.0,
+        "Y": 20.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.HorizontalBox_49.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.13"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -68.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Merchant_UpgradeWeapon_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.3"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Merchant_UpgradeWeapon_Entry_C:WidgetTree.Overlay_32'",
+        "ObjectPath": "/Game/Blueprint/HUD/Merchant/WGT_Merchant_UpgradeWeapon_Entry.20"
+      }
+    }
+  }
+]

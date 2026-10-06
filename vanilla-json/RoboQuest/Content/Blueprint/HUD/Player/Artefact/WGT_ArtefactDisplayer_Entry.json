@@ -1,0 +1,747 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_ArtefactDisplayer_Entry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactDisplayer_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'AGameInstance:DelegateOnUpdateLocalization__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_APlayerController_C'",
+          "ObjectPath": "/Game/Blueprint/Player/BP_APlayerController.126"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_CustomEvent_NewLanguage",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "DelegateOnUpdateLocalization_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactDisplayer_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "NewLanguage",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactDisplayer_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.4"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateTextAndName",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactDisplayer_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_ParseTextValues_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetFormattedText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetFormattedText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_ArtefactDisplayer_Entry_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:ExecuteUbergraph_WGT_ArtefactDisplayer_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:UpdateTextAndName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.3"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.2"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:DelegateOnUpdateLocalization_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.1"
+      },
+      {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:ExecuteUbergraph_WGT_ArtefactDisplayer_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HorizontalBox_505",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'HorizontalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RText_Description",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'RichTextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Name_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "PropertyClass": {
+          "ObjectName": "Class'PaperSprite'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Description",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Title",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "CustomFloatProperties",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "KeyProp": {
+          "Type": "NameProperty",
+          "Name": "CustomFloatProperties",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "CustomFloatProperties_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_ArtefactDisplayer_Entry": {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:ExecuteUbergraph_WGT_ArtefactDisplayer_Entry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.0"
+      },
+      "DelegateOnUpdateLocalization_Event_0": {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:DelegateOnUpdateLocalization_Event_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.2"
+      },
+      "UpdateTextAndName": {
+        "ObjectName": "Function'WGT_ArtefactDisplayer_Entry_C:UpdateTextAndName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_ArtefactDisplayer_Entry_C'Default__WGT_ArtefactDisplayer_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.5"
+    }
+  },
+  {
+    "Type": "WGT_ArtefactDisplayer_Entry_C",
+    "Name": "Default__WGT_ArtefactDisplayer_Entry_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.WGT_ArtefactDisplayer_Entry_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_505",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505.HorizontalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523.VerticalBoxSlot_7'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.19"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 10.0,
+        "Right": 10.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.6"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.6"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.SizeBox_569'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.15"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Tab_Text_Frame'",
+          "ObjectPath": "/Game/Graphic/HUD/TabOverlay/T_Tab_Text_Frame.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.12"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 50.0,
+          "Y": 50.0
+        },
+        "ResourceObject": {
+          "ObjectName": "PaperSprite'S_Gadgets_PickupMagnet'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Gadgets/Frames/S_Gadgets_PickupMagnet.0"
+        },
+        "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+        "ImageType": "ESlateBrushImageType::FullColor"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.7"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.5,
+          "Y": 1.5
+        }
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.12"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0.OverlaySlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.11"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.11"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.11"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 20.0,
+        "Right": 20.0,
+        "Bottom": 6.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.11"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.17"
+      }
+    }
+  },
+  {
+    "Type": "RichTextBlock",
+    "Name": "RText_Description",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Rich"
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable'DT_RichText_Perk'",
+        "ObjectPath": "/Game/Data/DT_RichText_Perk.0"
+      },
+      "WrapTextAt": 700.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.18"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_569",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Properties": {
+      "HeightOverride": 50.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.SizeBox_569.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505.HorizontalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.8"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.SizeBox_569'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.15"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.SizeBox_569'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.15"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Text_Name_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.20"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_523",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523.VerticalBoxSlot_7'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.19"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0.OverlaySlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.13"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.17"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.17"
+      },
+      "Content": {
+        "ObjectName": "RichTextBlock'WGT_ArtefactDisplayer_Entry_C:WidgetTree.RText_Description'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.17"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 2.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.VerticalBox_523'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.17"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_ArtefactDisplayer_Entry_C:WidgetTree.HorizontalBox_505'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.6"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Name_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_ArtefactDisplayer_Entry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.21"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "1936313C49DE35DD3620D38FE9919A49",
+        "SourceString": "Upgrades",
+        "LocalizedString": "Upgrades"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 40
+      },
+      "ShadowOffset": {
+        "X": 2.0,
+        "Y": 2.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Margin": {
+        "Top": 5.0
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_ArtefactDisplayer_Entry_C:WidgetTree.SizeBox_569.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.16"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -5.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_ArtefactDisplayer_Entry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_ArtefactDisplayer_Entry_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Artefact/WGT_ArtefactDisplayer_Entry.11"
+      }
+    }
+  }
+]

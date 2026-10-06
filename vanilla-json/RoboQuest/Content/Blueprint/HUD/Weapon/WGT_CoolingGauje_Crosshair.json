@@ -1,0 +1,719 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CoolingGauje_Crosshair_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CoolingGauje_Crosshair_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.18"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.17"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CoolingGaujeCrosshairWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_153",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_CoolingGauje",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_FreeCooling",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CoolingGauje_Crosshair_C'Default__WGT_CoolingGauje_Crosshair_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.1"
+    }
+  },
+  {
+    "Type": "WGT_CoolingGauje_Crosshair_C",
+    "Name": "Default__WGT_CoolingGauje_Crosshair_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.WGT_CoolingGauje_Crosshair_C'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair",
+    "Properties": {
+      "CoolingColorTexture": {
+        "ObjectName": "CurveLinearColorAtlas'CA_HudCurveAtlas'",
+        "ObjectPath": "/Game/Graphic/HUD/MainHUD/Weapon/Bar/CA_HudCurveAtlas.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_153",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CoolingGauje_Crosshair_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.18"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.161458,
+            "G": 0.577145,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "70C8FF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_FreeCooling_Icon'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Perk/T_FreeCooling_Icon.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_FreeCooling.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.12"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_CoolingGauje",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CoolingGauje_Crosshair_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.18"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 500.0,
+          "Y": 500.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Material'M_CoolingBar_V2'",
+          "ObjectPath": "/Game/Graphic/HUD/MainHUD/Weapon/Bar/M_CoolingBar_V2.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FadeAnimation",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.17"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "475E2B22-44D69B21-860E9B94-F39C6FFA",
+          "Name": "Overlay_Root",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Overlay'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "475E2B22-44D69B21-860E9B94-F39C6FFA",
+          "BindingName": "Overlay_22",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.9"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 15001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "A9AB18D4-4D26CA5D-FE735A86-27A48035"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.8"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.8"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.17"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 15000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.8"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "475E2B22-44D69B21-860E9B94-F39C6FFA"
+          }
+        ]
+      },
+      "CompiledSignature": "FFAEFD46-4915DF0F-16A6A6A5-6C051CEC",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.9"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.5"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.6"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 15000
+            }
+          }
+        }
+      },
+      "Signature": "328E80F5-46E3CDDB-43D6289C-5025F36B"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.4"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.8"
+        }
+      ],
+      "EvaluationFieldGuid": "F4F61790-40EC4AD0-741A289F-2336D045",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.8"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F4F61790-40EC4AD0-741A289F-2336D045"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_FreeCooling",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CoolingGauje_Crosshair_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.18"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_FreeCooling.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.14"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 60.0,
+          "Y": 100.0
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_Root",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CoolingGauje_Crosshair_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.18"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.13"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.SizeBox_24.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.16"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_FreeCooling'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_FreeCooling'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.10"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CoolingGauje_Crosshair_C:WidgetTree.Image_153'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.11"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.11"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_CoolingGauje_Crosshair_C:WidgetTree.Image_CoolingGauje'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.3"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.11"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.11"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_FreeCooling'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.10"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_24",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_CoolingGauje_Crosshair_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.18"
+    },
+    "Properties": {
+      "WidthOverride": 77.0,
+      "HeightOverride": 260.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_CoolingGauje_Crosshair_C:WidgetTree.SizeBox_24.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.16"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_CoolingGauje_Crosshair_C:WidgetTree.SizeBox_24'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.15"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_CoolingGauje_Crosshair_C:WidgetTree.SizeBox_24'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.15"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_CoolingGauje_Crosshair_C:WidgetTree.Overlay_Root'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.11"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FadeAnimation_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CoolingGauje_Crosshair_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.FadeAnimation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.4"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Overlay_Root",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "475E2B22-44D69B21-860E9B94-F39C6FFA",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "FadeAnimation",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_CoolingGauje_Crosshair_C:FadeAnimation_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.7"
+      },
+      "Signature": "FFAEFD46-4915DF0F-16A6A6A5-6C051CEC"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CoolingGauje_Crosshair_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WGT_CoolingGauje_Crosshair_C:WidgetTree.SizeBox_24'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_CoolingGauje_Crosshair.15"
+      }
+    }
+  }
+]

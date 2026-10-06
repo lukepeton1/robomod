@@ -1,0 +1,200 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WA_BossDamage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_BossDamage_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "EnumProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Class'EGameplayTags'",
+            "ObjectPath": "/Script/RoboQuest"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_MakeLiteralByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCustomFloatProperties_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'DMod_BossAndBigAndElite_C'",
+          "ObjectPath": "/Game/Blueprint/Upgrade/Modifier/DMod_BossAndBigAndElite.1"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemove",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_BossDamage_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeaponAffix:OnRemove'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApply",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WA_BossDamage_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWeaponAffix:OnApply'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WA_BossDamage_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WA_BossDamage_C:ExecuteUbergraph_BP_WA_BossDamage'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WA_BossDamage_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.2"
+      },
+      {
+        "ObjectName": "Function'BP_WA_BossDamage_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.1"
+      },
+      {
+        "ObjectName": "Function'BP_WA_BossDamage_C:ExecuteUbergraph_BP_WA_BossDamage'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageModifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Modifier_Damage'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WA_BossDamage": {
+        "ObjectName": "Function'BP_WA_BossDamage_C:ExecuteUbergraph_BP_WA_BossDamage'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.0"
+      },
+      "OnRemove": {
+        "ObjectName": "Function'BP_WA_BossDamage_C:OnRemove'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.1"
+      },
+      "OnApply": {
+        "ObjectName": "Function'BP_WA_BossDamage_C:OnApply'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WA_BossDamage_C'Default__BP_WA_BossDamage_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.4"
+    }
+  },
+  {
+    "Type": "BP_WA_BossDamage_C",
+    "Name": "Default__BP_WA_BossDamage_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage.BP_WA_BossDamage_C'",
+    "Package": "/Game/Blueprint/Weapon/Affixes/Common/BP_WA_BossDamage",
+    "Template": {
+      "ObjectName": "BP_AWeaponAffix_C'Default__BP_AWeaponAffix_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Affixes/BP_AWeaponAffix.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

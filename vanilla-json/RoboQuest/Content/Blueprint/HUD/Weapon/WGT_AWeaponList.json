@@ -1,0 +1,591 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_AWeaponList",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerControllerRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'APlayerController'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AsyncWaitingForPlayerInitialization_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AsyncWaitingForPlayerInitialization'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'PlayerInitializedCompletePin__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'AStatManager:DelegateRepNotify__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyPlayerStat",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "enumStat",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EStat'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "curValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "value",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUpdateWeaponList",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Complete_B4F3695C4C5C942790C7E485D978527C",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnWeaponListChange",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BindWeaponListEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateCurrentWeapon__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateUpdateWeaponList__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UnbindWeaponListEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayerCharacterRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Player'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateCurrentWeapon__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "UObjectWrapper",
+        "SignatureFunction": {
+          "ObjectName": "Class'Character_Player:DelegateUpdateWeaponList__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDisplayWidget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDisplay",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateWeaponSlotAmount",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NewAmount",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUpdateCurrentWeapon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewWeapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AWeapon'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_AWeaponList_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_AWeaponList_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_AWeaponList_C:ExecuteUbergraph_WGT_AWeaponList'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponListWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnUpdateCurrentWeapon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.10"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:UpdateWeaponSlotAmount'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.9"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnDisplayWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.8"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:UnbindWeaponListEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.7"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:BindWeaponListEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.6"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnWeaponListChange'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.5"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:Complete_B4F3695C4C5C942790C7E485D978527C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.4"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.3"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnUpdateWeaponList'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.2"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnNotifyPlayerStat'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.1"
+      },
+      {
+        "ObjectName": "Function'WGT_AWeaponList_C:ExecuteUbergraph_WGT_AWeaponList'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bAutoUpdated",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_AWeaponList": {
+        "ObjectName": "Function'WGT_AWeaponList_C:ExecuteUbergraph_WGT_AWeaponList'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.0"
+      },
+      "OnNotifyPlayerStat": {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnNotifyPlayerStat'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.1"
+      },
+      "OnUpdateWeaponList": {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnUpdateWeaponList'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.2"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_AWeaponList_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.3"
+      },
+      "Complete_B4F3695C4C5C942790C7E485D978527C": {
+        "ObjectName": "Function'WGT_AWeaponList_C:Complete_B4F3695C4C5C942790C7E485D978527C'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.4"
+      },
+      "OnWeaponListChange": {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnWeaponListChange'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.5"
+      },
+      "BindWeaponListEvent": {
+        "ObjectName": "Function'WGT_AWeaponList_C:BindWeaponListEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.6"
+      },
+      "UnbindWeaponListEvent": {
+        "ObjectName": "Function'WGT_AWeaponList_C:UnbindWeaponListEvent'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.7"
+      },
+      "OnDisplayWidget": {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnDisplayWidget'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.8"
+      },
+      "UpdateWeaponSlotAmount": {
+        "ObjectName": "Function'WGT_AWeaponList_C:UpdateWeaponSlotAmount'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.9"
+      },
+      "OnUpdateCurrentWeapon": {
+        "ObjectName": "Function'WGT_AWeaponList_C:OnUpdateCurrentWeapon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.10"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_AWeaponList_C'Default__WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.12"
+    }
+  },
+  {
+    "Type": "WGT_AWeaponList_C",
+    "Name": "Default__WGT_AWeaponList_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.WGT_AWeaponList_C'",
+    "Package": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_AWeaponList_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Weapon/WGT_AWeaponList.11"
+    }
+  }
+]

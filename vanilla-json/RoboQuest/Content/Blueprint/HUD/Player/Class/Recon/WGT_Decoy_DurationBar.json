@@ -1,0 +1,692 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_Decoy_DurationBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Decoy_DurationBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopDisplayBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Decoy_DurationBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Decoy_DurationBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartDisplayBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Decoy_DurationBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Duration",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Decoy_DurationBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.5"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_HUD_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_Decoy_DurationBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.12"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:ExecuteUbergraph_WGT_Decoy_DurationBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.4"
+      },
+      {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:StartDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.3"
+      },
+      {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.2"
+      },
+      {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:StopDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.1"
+      },
+      {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:ExecuteUbergraph_WGT_Decoy_DurationBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_99",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProgressBar_78",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DecoyRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | ExposeOnSpawn",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Decoy_C'",
+          "ObjectPath": "/Game/Blueprint/Ally/BP_Decoy.6"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TargetDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_Decoy_DurationBar": {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:ExecuteUbergraph_WGT_Decoy_DurationBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.0"
+      },
+      "StopDisplayBar": {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:StopDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.1"
+      },
+      "Tick": {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:Tick'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.2"
+      },
+      "StartDisplayBar": {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:StartDisplayBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.3"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_Decoy_DurationBar_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_Decoy_DurationBar_C'Default__WGT_Decoy_DurationBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.6"
+    }
+  },
+  {
+    "Type": "WGT_Decoy_DurationBar_C",
+    "Name": "Default__WGT_Decoy_DurationBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.WGT_Decoy_DurationBar_C'",
+    "Package": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar",
+    "Template": {
+      "ObjectName": "WGT_HUD_C'Default__WGT_HUD_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_HUD.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": true
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_99",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 165.0,
+          "Y": 25.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_BarCache_Drone'",
+          "ObjectPath": "/Game/Graphic/HUD/Icon/Skill/T_BarCache_Drone.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.11"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_151",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.10"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.18"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_59",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_59.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.8"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_Decoy_DurationBar_C:WidgetTree.SizeBox_104'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.8"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.8"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_Decoy_DurationBar_C:WidgetTree.Image_99'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.7"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_59'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.9"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.9"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.17"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "ProgressBar_78",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 159.0,
+            "Y": 25.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.041667,
+              "G": 0.041667,
+              "B": 0.041667,
+              "A": 1.0,
+              "Hex": "393939"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Bar_Drone'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Skill/T_Bar_Drone.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 159.0,
+            "Y": 25.0
+          },
+          "Margin": {
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 0.99482,
+              "B": 0.567708,
+              "A": 1.0,
+              "Hex": "FFFFC7"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'T_Bar_Drone'",
+            "ObjectPath": "/Game/Graphic/HUD/Icon/Skill/T_Bar_Drone.0"
+          }
+        }
+      },
+      "Percent": 0.5,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_Decoy_DurationBar_C:WidgetTree.SizeBox_104.SizeBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.15"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_104",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+    },
+    "Properties": {
+      "WidthOverride": 200.0,
+      "HeightOverride": 25.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_Decoy_DurationBar_C:WidgetTree.SizeBox_104.SizeBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.10"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_Decoy_DurationBar_C:WidgetTree.SizeBox_104'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.14"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_Decoy_DurationBar_C:WidgetTree.SizeBox_104'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.14"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'WGT_Decoy_DurationBar_C:WidgetTree.ProgressBar_78'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.13"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_215",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+    },
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 10.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142.VerticalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.19"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_142",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_Decoy_DurationBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.20"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.18"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142.VerticalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_59.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.17"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_151'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.8"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_Decoy_DurationBar_C:WidgetTree.VerticalBox_142'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.17"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_Decoy_DurationBar_C:WidgetTree.Spacer_215'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.16"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Decoy_DurationBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.5"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_Decoy_DurationBar_C:WidgetTree.Overlay_59'",
+        "ObjectPath": "/Game/Blueprint/HUD/Player/Class/Recon/WGT_Decoy_DurationBar.9"
+      }
+    }
+  }
+]

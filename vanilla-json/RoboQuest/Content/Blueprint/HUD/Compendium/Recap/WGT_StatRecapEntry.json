@@ -1,0 +1,795 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_StatRecapEntry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StatRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "K2Node_CustomEvent_InText",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FillEntry",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StatRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "InText",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StatRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_StatRecapEntry_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_StatRecapEntry_C:ExecuteUbergraph_WGT_StatRecapEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidgetBase'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_StatRecapEntry_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.2"
+      },
+      {
+        "ObjectName": "Function'WGT_StatRecapEntry_C:FillEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.1"
+      },
+      {
+        "ObjectName": "Function'WGT_StatRecapEntry_C:ExecuteUbergraph_WGT_StatRecapEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Amount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Label",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Percentage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Label",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | BlueprintReadOnly"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | BlueprintReadOnly",
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bPercent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_StatRecapEntry": {
+        "ObjectName": "Function'WGT_StatRecapEntry_C:ExecuteUbergraph_WGT_StatRecapEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.0"
+      },
+      "FillEntry": {
+        "ObjectName": "Function'WGT_StatRecapEntry_C:FillEntry'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.1"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WGT_StatRecapEntry_C:PreConstruct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_StatRecapEntry_C'Default__WGT_StatRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.4"
+    }
+  },
+  {
+    "Type": "WGT_StatRecapEntry_C",
+    "Name": "Default__WGT_StatRecapEntry_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.WGT_StatRecapEntry_C'",
+    "Package": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Label": {
+        "Namespace": "",
+        "Key": "97DE6FE547796CDA29227F899325E849",
+        "SourceString": "Level reached",
+        "LocalizedString": "Level reached"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_27",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.6"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WGT_StatRecapEntry_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_StatRecapEntry_C:WidgetTree.Text_Label'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.19"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_StatRecapEntry_C:WidgetTree.Text_Separation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.21"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_StatRecapEntry_C:WidgetTree.Text_Amount'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_StatRecapEntry_C:WidgetTree.Spacer_102'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.17"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      },
+      "Content": {
+        "ObjectName": "Image'WGT_StatRecapEntry_C:WidgetTree.Image_Icon'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_StatRecapEntry_C:WidgetTree.Text_Percentage'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.20"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_StatRecapEntry_C:WidgetTree.Spacer'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.16"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.10"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Properties": {
+      "Stretch": "EStretch::ScaleToFitX",
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WGT_StatRecapEntry_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Outer": {
+      "ObjectName": "ScaleBox'WGT_StatRecapEntry_C:WidgetTree.ScaleBox_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.14"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 100.0
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "ScaleBox'WGT_StatRecapEntry_C:WidgetTree.ScaleBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.14"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.5"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Properties": {
+      "Size": {
+        "X": 10.543982,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.12"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_102",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Properties": {
+      "Size": {
+        "X": 10.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.9"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Amount",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "1000"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 36
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.8"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Label",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "8585BB2344A3A58719CFA48736083F17",
+        "SourceString": "Level reachedssssss",
+        "LocalizedString": "Level reachedssssss"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.541667,
+          "G": 0.541667,
+          "B": 0.541667,
+          "A": 1.0,
+          "Hex": "C3C3C3"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 34
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.6"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Percentage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "%"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Numbers'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Numbers.0"
+        },
+        "TypefaceFontName": "Italic",
+        "Size": 36
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.11"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_Separation",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_StatRecapEntry_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.22"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": ":"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 36
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WGT_StatRecapEntry_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_StatRecapEntry_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.3"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ScaleBox'WGT_StatRecapEntry_C:WidgetTree.ScaleBox_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/Recap/WGT_StatRecapEntry.14"
+      }
+    }
+  }
+]

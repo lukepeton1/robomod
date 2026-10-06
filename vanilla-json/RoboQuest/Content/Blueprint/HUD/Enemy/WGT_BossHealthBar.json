@@ -1,0 +1,1433 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_BossHealthBar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_BossRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Enemy'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'HealthBarWidget:DelegateOnHealthBarMaterialLoaded__DelegateSignature'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetStatManager_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'IStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetStatManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AStatManager'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SlotAsVerticalBoxSlot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBoxSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_HealthBar",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'HealthBarWidget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlueprintAssignBoss",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BossHealthBarWidget:OnBlueprintAssignBoss'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BossRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Character_Enemy'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHealthBarMaterialLoaded",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "HealthBar",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'HealthBarWidget'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_BossHealthBar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WGT_BossHealthBar_C:Fade_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.34"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WGT_BossHealthBar_C:Appear_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.33"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_BossHealthBar_C:ExecuteUbergraph_WGT_BossHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BossHealthBarWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_BossHealthBar_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.3"
+      },
+      {
+        "ObjectName": "Function'WGT_BossHealthBar_C:OnHealthBarMaterialLoaded'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.2"
+      },
+      {
+        "ObjectName": "Function'WGT_BossHealthBar_C:OnBlueprintAssignBoss'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.1"
+      },
+      {
+        "ObjectName": "Function'WGT_BossHealthBar_C:ExecuteUbergraph_WGT_BossHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HealthBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_EnemyHealthBar_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_EnemyHealthBar.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Overlay_SubBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_BossName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'WGT_AText_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_BossHealthBar": {
+        "ObjectName": "Function'WGT_BossHealthBar_C:ExecuteUbergraph_WGT_BossHealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.0"
+      },
+      "OnBlueprintAssignBoss": {
+        "ObjectName": "Function'WGT_BossHealthBar_C:OnBlueprintAssignBoss'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.1"
+      },
+      "OnHealthBarMaterialLoaded": {
+        "ObjectName": "Function'WGT_BossHealthBar_C:OnHealthBarMaterialLoaded'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.2"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_BossHealthBar_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_BossHealthBar_C'Default__WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.5"
+    }
+  },
+  {
+    "Type": "WGT_BossHealthBar_C",
+    "Name": "Default__WGT_BossHealthBar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.WGT_BossHealthBar_C'",
+    "Package": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Appear",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_BossHealthBar_C:Appear_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.33"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "A6A02F20-4F2D39DE-388318B0-A0C04BE1",
+          "Name": "WGT_BossHealthBar_C_49",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "A6A02F20-4F2D39DE-388318B0-A0C04BE1",
+          "BindingName": "WGT_BossHealthBar_C_49",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.16"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "BBF76F2C-4E2248C3-26F6F3BE-ADA18899"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Fade",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_BossHealthBar_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.34"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "EA2A14FB-47CE8C2B-9852A4B2-7E11EA7C",
+          "Name": "WGT_BossHealthBar_C_45",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+            "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "EA2A14FB-47CE8C2B-9852A4B2-7E11EA7C",
+          "BindingName": "WGT_BossHealthBar_C_45",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.17"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 90000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "600F8391-45BD3639-42DAF198-AF193BDC"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.15"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.15"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_BossHealthBar_C:Appear_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.33"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 60000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.14"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "A6A02F20-4F2D39DE-388318B0-A0C04BE1"
+          }
+        ]
+      },
+      "CompiledSignature": "C5EBA23D-4C4E7811-19A2D5A5-7D2A7B9C",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'WGT_BossHealthBar_C:Fade_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.34"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 90000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.15"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "EA2A14FB-47CE8C2B-9852A4B2-7E11EA7C"
+          }
+        ]
+      },
+      "CompiledSignature": "28A90C67-4E4BE0F5-C9AF7C9B-D4B0F91B",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.16"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.8"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.9"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 60000
+            }
+          }
+        }
+      },
+      "Signature": "EEE20F44-448B9E2C-16BE8693-375E4445"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.17"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 90000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.10"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.11"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 90000
+            }
+          }
+        }
+      },
+      "Signature": "0779FB2D-477A4BD3-AF7829A6-6B6AF86C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_BossHealthBar_C:Appear_INST.Appear'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.6"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.14"
+        }
+      ],
+      "EvaluationFieldGuid": "4E8C4140-4D7D04C9-55C71EA6-3E869AA6",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Appear_INST.Appear.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.14"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 60000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4E8C4140-4D7D04C9-55C71EA6-3E869AA6"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'WGT_BossHealthBar_C:Fade_INST.Fade'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.7"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.15"
+        }
+      ],
+      "EvaluationFieldGuid": "6EB0DFAC-450CA4C6-6FB76284-C65C6BD5",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WGT_BossHealthBar_C:Fade_INST.Fade.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.15"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 90000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6EB0DFAC-450CA4C6-6FB76284-C65C6BD5"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_110",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_BossHealthBar_C:WidgetTree.Overlay_110.OverlaySlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.21"
+        },
+        {
+          "ObjectName": "OverlaySlot'WGT_BossHealthBar_C:WidgetTree.Overlay_110.OverlaySlot_3'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120.VerticalBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.28"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_33",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WGT_BossHealthBar_C:WidgetTree.Overlay_33.OverlaySlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.23"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_SubBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120.VerticalBoxSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.30"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_110'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.18"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_110'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.18"
+      },
+      "Content": {
+        "ObjectName": "WGT_EnemyHealthBar_C'WGT_BossHealthBar_C:WidgetTree.HealthBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.32"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_110'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.18"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_110'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.18"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'WGT_BossHealthBar_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.24"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_33'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.19"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_33'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.19"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.27"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Properties": {
+      "WidthOverride": 1627.0,
+      "HeightOverride": 80.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WGT_BossHealthBar_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_BossHealthBar_C:WidgetTree.Overlay_110.OverlaySlot_3'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.22"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'WGT_BossHealthBar_C:WidgetTree.SizeBox_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.24"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'WGT_BossHealthBar_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.24"
+      },
+      "Content": {
+        "ObjectName": "WGT_AText_C'WGT_BossHealthBar_C:WidgetTree.Text_BossName'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.31"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_96",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Spacer'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 10.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120.VerticalBoxSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.29"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_120",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120.VerticalBoxSlot_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.28"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120.VerticalBoxSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.29"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120.VerticalBoxSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_BossHealthBar_C:WidgetTree.Overlay_33.OverlaySlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.23"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.27"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.27"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_110'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.27"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.27"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WGT_BossHealthBar_C:WidgetTree.Spacer_96'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.26"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.27"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WGT_BossHealthBar_C:WidgetTree.VerticalBox_120'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.27"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_SubBar'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.20"
+      }
+    }
+  },
+  {
+    "Type": "WGT_AText_C",
+    "Name": "Text_BossName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/HUD/Base/Text/WGT_AText.WGT_AText_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Template": {
+      "ObjectName": "WGT_AText_C'Default__WGT_AText_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/Text/WGT_AText.2"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "5C062CFD4E16CEF90412C2971FD97476",
+        "SourceString": "Giga Pawn",
+        "LocalizedString": "Giga Pawn"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'F_Title'",
+          "ObjectPath": "/Game/Graphic/Fonts/F_Title.0"
+        },
+        "TypefaceFontName": "BoldItalic",
+        "Size": 70
+      },
+      "ShadowOffset": {
+        "X": 5.0,
+        "Y": 5.0
+      },
+      "ShadowColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Justification": "ETextJustify::Center",
+      "Margin": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WGT_BossHealthBar_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.25"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WGT_EnemyHealthBar_C",
+    "Name": "HealthBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Enemy/WGT_EnemyHealthBar.WGT_EnemyHealthBar_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'WGT_BossHealthBar_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.35"
+    },
+    "Template": {
+      "ObjectName": "WGT_EnemyHealthBar_C'Default__WGT_EnemyHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_EnemyHealthBar.4"
+    },
+    "Properties": {
+      "bIsBossBar": true,
+      "StatusBarWidthOffset": 20.0,
+      "Slot": {
+        "ObjectName": "OverlaySlot'WGT_BossHealthBar_C:WidgetTree.Overlay_110.OverlaySlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.21"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Appear_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_BossHealthBar_C:Appear_INST.Appear'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.6"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_BossHealthBar_C_49",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "A6A02F20-4F2D39DE-388318B0-A0C04BE1",
+          "bIsRootWidget": true
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_BossHealthBar_C:Appear_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.12"
+      },
+      "Signature": "C5EBA23D-4C4E7811-19A2D5A5-7D2A7B9C"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Fade_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WGT_BossHealthBar_C:Fade_INST.Fade'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.7"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "WGT_BossHealthBar_C_45",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "EA2A14FB-47CE8C2B-9852A4B2-7E11EA7C",
+          "bIsRootWidget": true
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WGT_BossHealthBar_C:Fade_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.13"
+      },
+      "Signature": "28A90C67-4E4BE0F5-C9AF7C9B-D4B0F91B"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_BossHealthBar_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WGT_BossHealthBar_C:WidgetTree.Overlay_33'",
+        "ObjectPath": "/Game/Blueprint/HUD/Enemy/WGT_BossHealthBar.19"
+      }
+    }
+  }
+]

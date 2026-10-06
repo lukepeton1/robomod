@@ -1,0 +1,187 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_LongBow_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_LongBow",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.31"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_LongBow_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_LongBow_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_LongBow_C'Default__BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.1"
+    }
+  },
+  {
+    "Type": "BP_LongBow_C",
+    "Name": "Default__BP_LongBow_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Prefab/BP_LongBow.BP_LongBow_C'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_LongBow",
+    "Template": {
+      "ObjectName": "BP_AWeapon_C'Default__BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.32"
+    },
+    "Properties": {
+      "WeaponStatManager": {
+        "ObjectName": "AStatManager'Default__BP_LongBow_C:WeaponStatManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.3"
+      },
+      "WeaponSkillManager": {
+        "ObjectName": "ASkillManager'Default__BP_LongBow_C:WeaponSkillManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.2"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_LongBow_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.9"
+      },
+      "IdleSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_LongBow_C:IdleSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.4"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_LongBow_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.9"
+      }
+    }
+  },
+  {
+    "Type": "ASkillManager",
+    "Name": "WeaponSkillManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ASkillManager'",
+    "Outer": {
+      "ObjectName": "BP_LongBow_C'Default__BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.1"
+    },
+    "Template": {
+      "ObjectName": "ASkillManager'Default__BP_AWeapon_C:WeaponSkillManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.33"
+    }
+  },
+  {
+    "Type": "AStatManager",
+    "Name": "WeaponStatManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AStatManager'",
+    "Outer": {
+      "ObjectName": "BP_LongBow_C'Default__BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.1"
+    },
+    "Template": {
+      "ObjectName": "AStatManager'Default__BP_AWeapon_C:WeaponStatManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.34"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_LongBow_C'Default__BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.1"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_AWeapon_C:IdleSoundComponent'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.35"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_LongBow_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.9"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_LongBow_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.8"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_LongBow_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.6"
+      },
+      "VariableGuid": "25D5BBAA-4607C1D2-863F3080-2D5F2C74",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_LongBow_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_LongBow_C'Default__BP_LongBow_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_LongBow.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_AWeapon_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.42"
+    }
+  }
+]

@@ -1,0 +1,1615 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_HUD_MenuTitleBackground",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_MenuTitleBackground_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bOpen",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimationReverse_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimationForward_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayOpenAnimation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_MenuTitleBackground_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bOpen",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HUD_MenuTitleBackground_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HUD_MenuTitleBackground_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.26"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'HUD_MenuTitleBackground_C:Paralax_INST'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.25"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'HUD_MenuTitleBackground_C:ExecuteUbergraph_HUD_MenuTitleBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AWidget'",
+      "ObjectPath": "/Script/RoboQuest"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HUD_MenuTitleBackground_C:PlayOpenAnimation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.1"
+      },
+      {
+        "ObjectName": "Function'HUD_MenuTitleBackground_C:ExecuteUbergraph_HUD_MenuTitleBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Paralax",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_BlackBackground",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Robot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_TopBand",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_HUD_MenuTitleBackground": {
+        "ObjectName": "Function'HUD_MenuTitleBackground_C:ExecuteUbergraph_HUD_MenuTitleBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.0"
+      },
+      "PlayOpenAnimation": {
+        "ObjectName": "Function'HUD_MenuTitleBackground_C:PlayOpenAnimation'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HUD_MenuTitleBackground_C'Default__HUD_MenuTitleBackground_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.3"
+    }
+  },
+  {
+    "Type": "HUD_MenuTitleBackground_C",
+    "Name": "Default__HUD_MenuTitleBackground_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.HUD_MenuTitleBackground_C'",
+    "Package": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_Ingame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_MenuTitleBackground_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.26"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_5'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_1'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_6'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_4'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_2'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -146.63586
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_MenuTitleBackground_C:WidgetTree.Image_Background'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.10"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 278.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_MenuTitleBackground_C:WidgetTree.Image_BottomBand'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 60.0,
+          "Top": 80.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_MenuTitleBackground_C:WidgetTree.Image_Robot'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_MenuTitleBackground_C:WidgetTree.Image_BlackBackground'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.11"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -75.38262,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": -1.0,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+      },
+      "Content": {
+        "ObjectName": "Image'HUD_MenuTitleBackground_C:WidgetTree.Image_TopBand'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.14"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_MenuTitleBackground_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 6580.0,
+          "Y": 3040.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_MainMenu_Background'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/Title/T_MainMenu_Background.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_1'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.5"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_BlackBackground",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_MenuTitleBackground_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.26"
+    },
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_5'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_BottomBand",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_MenuTitleBackground_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4096.0,
+          "Y": 512.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_BlackBorder_EndScreen'",
+          "ObjectPath": "/Game/Graphic/HUD/ScoreScreen/T_BlackBorder_EndScreen.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_2'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.6"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 62.0
+        }
+      },
+      "RenderTransformPivot": {
+        "X": 1.0,
+        "Y": 1.0
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Robot",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_MenuTitleBackground_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 2048.0,
+          "Y": 2048.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_MainMenu_Robot'",
+          "ObjectPath": "/Game/Graphic/HUD/Menu/Title/T_MainMenu_Robot.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_4'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_TopBand",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Image'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HUD_MenuTitleBackground_C:WidgetTree'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.26"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 3840.0,
+          "Y": 332.24066
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_BlackBorder'",
+          "ObjectPath": "/Game/Graphic/HUD/Base/T_BlackBorder.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame.CanvasPanelSlot_6'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.9"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -9.0
+        },
+        "Scale": {
+          "X": -1.0,
+          "Y": -1.0
+        }
+      },
+      "RenderTransformPivot": {
+        "X": 0.5,
+        "Y": 1.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Paralax",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HUD_MenuTitleBackground_C:Paralax_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.25"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "6DBDCF82-4F706779-C6EA1699-45FEA985",
+          "Name": "Image_Robot",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "3FABC1C8-4E112949-D934D0B6-11151A44",
+          "Name": "Image_Background",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Image'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "6DBDCF82-4F706779-C6EA1699-45FEA985",
+          "BindingName": "Image_Robot",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.18"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "3FABC1C8-4E112949-D934D0B6-11151A44",
+          "BindingName": "Image_Background",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.19"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 45001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "A1854646-494F3484-A14F4A83-8E623BEA"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.18"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 24
+      },
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 45000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.95,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 45000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.95,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.20"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.21"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 45000
+            }
+          }
+        }
+      },
+      "Signature": "10F097DB-44FA5C1B-9FEAA0B6-48E1D70E"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.19"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 24
+      },
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 45000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.98,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 45000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.98,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.22"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.23"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 45000
+            }
+          }
+        }
+      },
+      "Signature": "6A42E0CA-4B34FBE9-9DFF9D9E-8C86BF08"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HUD_MenuTitleBackground_C:Paralax_INST.Paralax'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.16"
+        }
+      ],
+      "EvaluationFieldGuid": "BD99E35D-4290F9F7-97EEA3A3-5580BC75",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.16"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 45000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "BD99E35D-4290F9F7-97EEA3A3-5580BC75"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HUD_MenuTitleBackground_C:Paralax_INST.Paralax'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.15"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.17"
+        }
+      ],
+      "EvaluationFieldGuid": "5C75EC03-4ABC716D-43680FA9-B60849C0",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.17"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 45000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5C75EC03-4ABC716D-43680FA9-B60849C0"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.16"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.16"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.17"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.17"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HUD_MenuTitleBackground_C:Paralax_INST'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.25"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 45000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.16"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'HUD_MenuTitleBackground_C:Paralax_INST.Paralax.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.17"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "6DBDCF82-4F706779-C6EA1699-45FEA985"
+          },
+          {
+            "ObjectBindingID": "3FABC1C8-4E112949-D934D0B6-11151A44"
+          }
+        ]
+      },
+      "CompiledSignature": "3119F91F-46C8F405-0004AC92-0A5D8F72",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Paralax_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_MenuTitleBackground_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.2"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HUD_MenuTitleBackground_C:Paralax_INST.Paralax'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.15"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Robot",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "6DBDCF82-4F706779-C6EA1699-45FEA985",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_Background",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "3FABC1C8-4E112949-D934D0B6-11151A44",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Paralax",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HUD_MenuTitleBackground_C:Paralax_INST.CompiledData'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.24"
+      },
+      "Signature": "3119F91F-46C8F405-0004AC92-0A5D8F72"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HUD_MenuTitleBackground_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'HUD_MenuTitleBackground_C:WidgetTree.CanvasPanel_Ingame'",
+        "ObjectPath": "/Game/Blueprint/HUD/Menus/HUD_MenuTitleBackground.4"
+      }
+    }
+  }
+]

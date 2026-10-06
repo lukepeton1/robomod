@@ -1,0 +1,801 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WGT_CompendiumCategory",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnOpenCompendium",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "Super": {
+      "ObjectName": "Function'WGT_Menu_C:Construct'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TryFillCategory",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bHasBeenModified",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsCompendiumCategoryModified_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FillCategory",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetEnumeratorUserFriendlyName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitializeEntries",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "FunctionFlags": "FUNC_Protected | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDataRowNames",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "OutRowNames",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "OutRowNames",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ECompendiumCategory'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameStateRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameState'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetWeaponRowNames_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetWeaponRowNames_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetEnemyRowNames_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetEnemyRowNames_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllLevelRowNames_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetAllLevelRowNames_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DataTable'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetDataTableRowNames_OutRowNames",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetDataTableRowNames_OutRowNames",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCompletion",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Ratio",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCompendiumEntries",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "CompendiumEntries",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CompendiumEntries",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllCompendiumEntriesByCat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetAllCompendiumEntriesByCat_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "DoesEntryExistInCompendium",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "Name",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bEntryExist",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceRef_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AGameInstance'",
+          "ObjectPath": "/Script/RoboQuest"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesEntryExistInCompendium_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetWrapBoxMaxColumn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "WrapBox",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'WrapBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CardSizeX",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCachedGeometry_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_X",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLocalSize_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FFloor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WGT_CompendiumCategory_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Menu_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.23"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WGT_CompendiumCategory_C:WidgetTree'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:ExecuteUbergraph_WGT_CompendiumCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetWrapBoxMaxColumn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.10"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:DoesEntryExistInCompendium'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.9"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetCompendiumEntries'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.8"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetCompletion'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.7"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetDataRowNames'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.6"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:InitializeEntries'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.5"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:FillCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.4"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:TryFillCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.3"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.2"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:OnOpenCompendium'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.1"
+      },
+      {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:ExecuteUbergraph_WGT_CompendiumCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient | UObjectWrapper",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Category",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | BlueprintReadOnly",
+        "Enum": {
+          "ObjectName": "Class'ECompendiumCategory'",
+          "ObjectPath": "/Script/RoboQuest"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "DataRowNames",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "DataRowNames",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CompendiumRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WGT_Compendium_C'",
+          "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_Compendium.48"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WGT_CompendiumCategory": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:ExecuteUbergraph_WGT_CompendiumCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.0"
+      },
+      "OnOpenCompendium": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:OnOpenCompendium'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.1"
+      },
+      "Construct": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:Construct'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.2"
+      },
+      "TryFillCategory": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:TryFillCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.3"
+      },
+      "FillCategory": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:FillCategory'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.4"
+      },
+      "InitializeEntries": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:InitializeEntries'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.5"
+      },
+      "GetDataRowNames": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetDataRowNames'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.6"
+      },
+      "GetCompletion": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetCompletion'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.7"
+      },
+      "GetCompendiumEntries": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetCompendiumEntries'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.8"
+      },
+      "DoesEntryExistInCompendium": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:DoesEntryExistInCompendium'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.9"
+      },
+      "GetWrapBoxMaxColumn": {
+        "ObjectName": "Function'WGT_CompendiumCategory_C:GetWrapBoxMaxColumn'",
+        "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.10"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WGT_CompendiumCategory_C'Default__WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.12"
+    }
+  },
+  {
+    "Type": "WGT_CompendiumCategory_C",
+    "Name": "Default__WGT_CompendiumCategory_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.WGT_CompendiumCategory_C'",
+    "Package": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory",
+    "Template": {
+      "ObjectName": "WGT_Menu_C'Default__WGT_Menu_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Base/WGT_Menu.24"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WGT_CompendiumCategory_C'",
+      "ObjectPath": "/Game/Blueprint/HUD/Compendium/WGT_CompendiumCategory.11"
+    }
+  }
+]

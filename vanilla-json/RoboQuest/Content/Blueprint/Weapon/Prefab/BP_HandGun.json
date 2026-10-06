@@ -1,0 +1,221 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_HandGun_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_HandGun",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.31"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_HandGun_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_HandGun_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_HandGun_C'Default__BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.1"
+    }
+  },
+  {
+    "Type": "BP_HandGun_C",
+    "Name": "Default__BP_HandGun_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprint/Weapon/Prefab/BP_HandGun.BP_HandGun_C'",
+    "Package": "/Game/Blueprint/Weapon/Prefab/BP_HandGun",
+    "Template": {
+      "ObjectName": "BP_AWeapon_C'Default__BP_AWeapon_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.32"
+    },
+    "Properties": {
+      "WeaponStatManager": {
+        "ObjectName": "AStatManager'Default__BP_HandGun_C:WeaponStatManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.3"
+      },
+      "WeaponSkillManager": {
+        "ObjectName": "ASkillManager'Default__BP_HandGun_C:WeaponSkillManager'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.2"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_HandGun_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.9"
+      },
+      "IdleSoundComponent": {
+        "ObjectName": "AudioComponent'Default__BP_HandGun_C:IdleSoundComponent'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.4"
+      },
+      "OverridePlayerReloadFPV": {
+        "ObjectName": "AnimMontage'AM_Handgun_Player_Reload_FPV'",
+        "ObjectPath": "/Game/Animation/Weapon/HandGun/Animation/AM_Handgun_Player_Reload_FPV.0"
+      },
+      "OverridePlayerReloadTPV": {
+        "ObjectName": "AnimMontage'AM_HandGun_Player_Reload_TPV'",
+        "ObjectPath": "/Game/Animation/Weapon/HandGun/Animation/AM_HandGun_Player_Reload_TPV.0"
+      },
+      "OverrideWeaponReloadFPV": {
+        "ObjectName": "AnimMontage'AM_Handgun_Weapon_Reload_FPV'",
+        "ObjectPath": "/Game/Animation/Weapon/HandGun/Animation/AM_Handgun_Weapon_Reload_FPV.0"
+      },
+      "OverrideWeaponReloadTPV": {
+        "ObjectName": "AnimMontage'AM_Handgun_Weapon_Reload_TPV'",
+        "ObjectPath": "/Game/Animation/Weapon/HandGun/Animation/AM_Handgun_Weapon_Reload_TPV.0"
+      },
+      "OverrideMesh": {
+        "ObjectName": "SkeletalMesh'SK_HandGun_T00'",
+        "ObjectPath": "/Game/Animation/Weapon/HandGun/SK_HandGun_T00.0"
+      },
+      "LowCoolingColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "HighCoolingColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_HandGun_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.9"
+      }
+    }
+  },
+  {
+    "Type": "ASkillManager",
+    "Name": "WeaponSkillManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ASkillManager'",
+    "Outer": {
+      "ObjectName": "BP_HandGun_C'Default__BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.1"
+    },
+    "Template": {
+      "ObjectName": "ASkillManager'Default__BP_AWeapon_C:WeaponSkillManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.33"
+    }
+  },
+  {
+    "Type": "AStatManager",
+    "Name": "WeaponStatManager",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AStatManager'",
+    "Outer": {
+      "ObjectName": "BP_HandGun_C'Default__BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.1"
+    },
+    "Template": {
+      "ObjectName": "AStatManager'Default__BP_AWeapon_C:WeaponStatManager'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.34"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleSoundComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_HandGun_C'Default__BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.1"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__BP_AWeapon_C:IdleSoundComponent'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.35"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_HandGun_C:Mesh'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.9"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_HandGun_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.8"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_HandGun_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.6"
+      },
+      "VariableGuid": "94534FCB-48BA0333-F5FDFF91-0098A177",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_HandGun_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_HandGun_C'Default__BP_HandGun_C'",
+      "ObjectPath": "/Game/Blueprint/Weapon/Prefab/BP_HandGun.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_AWeapon_C:Mesh'",
+      "ObjectPath": "/Game/Blueprint/Weapon/BP_AWeapon.42"
+    }
+  }
+]
