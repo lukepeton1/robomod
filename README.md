@@ -21,6 +21,8 @@ Verified in the game:
 
 The release-candidate build intentionally excludes the diagnostic starter-gun edits.
 
+Foundry complexity is now tied to Roboquest's native weapon quality/color state instead of a flat global limit: Common weapons cannot buy ordinary Foundry affixes; the four upgraded tiers cap at 3 / 4 / 5 / 6 affixes respectively.
+
 ## Release-candidate production core
 
 The generated production policy currently supports:
