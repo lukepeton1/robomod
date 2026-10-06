@@ -22,9 +22,9 @@ class ReleaseManifestTests(unittest.TestCase):
     def test_release_version_is_rc(self):
         self.assertRegex(self.version, r"^\d+\.\d+\.\d+-rc\d+$")
 
-    def test_expected_six_production_packages(self):
+    def test_expected_five_production_packages_after_homing_rollback(self):
         packages = self.manifest["packages"]
-        self.assertEqual(len(packages), 6)
+        self.assertEqual(len(packages), 5)
         paths = [p["path"] for p in packages]
         self.assertEqual(len(paths), len(set(paths)))
 
