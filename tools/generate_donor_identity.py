@@ -28,6 +28,7 @@ from typing import Any, Iterable
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_AFFIXES = ROOT / "research/generated/affixes.json"
 DEFAULT_MODS = ROOT / "research/generated/weapon_mods.json"
+DEFAULT_WEAPONS = ROOT / "research/generated/weapons.json"
 DEFAULT_TRANSFER = ROOT / "Source/grafting/transfer_policy.json"
 DEFAULT_OUTPUT = ROOT / "Source/grafting/donor_identity_catalog.json"
 
