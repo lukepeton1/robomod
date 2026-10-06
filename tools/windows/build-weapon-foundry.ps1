@@ -134,19 +134,23 @@ New-Item -ItemType Directory -Force -Path $jsonRoot, $reportRoot, $cleanRoot, $r
 
 $affixRelative = "Data\DT_WeaponAffix"
 $fragRelative = "Blueprint\Weapon\Affixes\Common\BP_WA_Fragmentation"
+$merchantRelative = "Blueprint\Interactive\Merchant\BP_Merchant_UpgradeAffix"
 $affixSource = Join-Path $contentRoot ($affixRelative + ".uasset")
 $fragSource = Join-Path $contentRoot ($fragRelative + ".uasset")
+$merchantSource = Join-Path $contentRoot ($merchantRelative + ".uasset")
 
-foreach ($source in @($affixSource, $fragSource)) {
+foreach ($source in @($affixSource, $fragSource, $merchantSource)) {
     if (-not (Test-Path -LiteralPath $source)) {
         throw "Required legacy source package not found: $source"
     }
 }
 
 $coreSpec = Join-Path $RepoRoot "Source\patches\weapon_foundry_core.json"
+$merchantSpec = Join-Path $RepoRoot "Source\patches\foundry_merchant.json"
 $dataPatcher = Join-Path $RepoRoot "tools\patch_uassetapi_datatable.py"
 $dataVerifier = Join-Path $RepoRoot "tools\verify_uassetapi_patch.py"
 $fragPatcher = Join-Path $RepoRoot "tools\patch_fragmentation_bytecode.py"
+$cdoPatcher = Join-Path $RepoRoot "tools\patch_uassetapi_cdo.py"
 
 $affixOriginalJson = Join-Path $jsonRoot "DT_WeaponAffix.original.json"
 $affixPatchedJson = Join-Path $jsonRoot "DT_WeaponAffix.weapon-foundry.json"
@@ -155,17 +159,25 @@ $fragOriginalJson = Join-Path $jsonRoot "BP_WA_Fragmentation.original.json"
 $fragCleanJson = Join-Path $jsonRoot "BP_WA_Fragmentation.clean-roundtrip.json"
 $fragPatchedJson = Join-Path $jsonRoot "BP_WA_Fragmentation.weapon-foundry.json"
 $fragRoundtripJson = Join-Path $jsonRoot "BP_WA_Fragmentation.roundtrip.json"
+$merchantOriginalJson = Join-Path $jsonRoot "BP_Merchant_UpgradeAffix.original.json"
+$merchantCleanJson = Join-Path $jsonRoot "BP_Merchant_UpgradeAffix.clean-roundtrip.json"
+$merchantPatchedJson = Join-Path $jsonRoot "BP_Merchant_UpgradeAffix.weapon-foundry.json"
+$merchantRoundtripJson = Join-Path $jsonRoot "BP_Merchant_UpgradeAffix.roundtrip.json"
 
-Write-Host "1/8 Exporting production source packages..."
+Write-Host "1/10 Exporting production source packages..."
 Export-UAssetJson $affixSource $affixOriginalJson "UAssetGUI DT_WeaponAffix tojson"
 Export-UAssetJson $fragSource $fragOriginalJson "UAssetGUI Fragmentation tojson"
+Export-UAssetJson $merchantSource $merchantOriginalJson "UAssetGUI Foundry merchant tojson"
 
-Write-Host "2/8 Proving clean Fragmentation Blueprint round-trip..."
+Write-Host "2/10 Proving clean Blueprint round-trips..."
 $fragCleanBase = Join-Path $cleanRoot ("RoboQuest\Content\" + $fragRelative)
 Build-UAssetFromJson $fragOriginalJson $fragCleanBase "UAssetGUI clean Fragmentation fromjson"
 Export-UAssetJson ($fragCleanBase + ".uasset") $fragCleanJson "UAssetGUI clean Fragmentation round-trip"
+$merchantCleanBase = Join-Path $cleanRoot ("RoboQuest\Content\" + $merchantRelative)
+Build-UAssetFromJson $merchantOriginalJson $merchantCleanBase "UAssetGUI clean Foundry merchant fromjson"
+Export-UAssetJson ($merchantCleanBase + ".uasset") $merchantCleanJson "UAssetGUI clean Foundry merchant round-trip"
 
-Write-Host "3/8 Applying production Weapon Foundry compatibility/eligibility policy..."
+Write-Host "3/10 Applying production Weapon Foundry compatibility/eligibility policy..."
 Invoke-Python @(
     $dataPatcher,
     $affixOriginalJson,
@@ -175,7 +187,7 @@ Invoke-Python @(
     (Join-Path $reportRoot "weapon-foundry-core.json")
 )
 
-Write-Host "4/8 Applying verified Fragmentation cooked-Kismet patch..."
+Write-Host "4/10 Applying verified Fragmentation cooked-Kismet patch..."
 Invoke-Python @(
     $fragPatcher,
     $fragOriginalJson,
@@ -184,19 +196,33 @@ Invoke-Python @(
     (Join-Path $reportRoot "fragmentation-bytecode.json")
 )
 
-Write-Host "5/8 Rebuilding production cooked packages..."
+Write-Host "5/10 Seeding the native affix merchant with Foundry graft candidates..."
+Invoke-Python @(
+    $cdoPatcher,
+    $merchantOriginalJson,
+    $merchantSpec,
+    $merchantPatchedJson,
+    "--report",
+    (Join-Path $reportRoot "foundry-merchant.json")
+)
+
+Write-Host "6/10 Rebuilding production cooked packages..."
 $affixStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $affixRelative)
 $fragStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $fragRelative)
+$merchantStageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $merchantRelative)
 Build-UAssetFromJson $affixPatchedJson $affixStageBase "UAssetGUI production DT_WeaponAffix fromjson"
 Build-UAssetFromJson $fragPatchedJson $fragStageBase "UAssetGUI production Fragmentation fromjson"
+Build-UAssetFromJson $merchantPatchedJson $merchantStageBase "UAssetGUI production Foundry merchant fromjson"
 
-Write-Host "6/8 Re-exporting and verifying production packages..."
+Write-Host "7/10 Re-exporting and verifying production packages..."
 Export-UAssetJson ($affixStageBase + ".uasset") $affixRoundtripJson "UAssetGUI production DT_WeaponAffix round-trip"
 Export-UAssetJson ($fragStageBase + ".uasset") $fragRoundtripJson "UAssetGUI production Fragmentation round-trip"
+Export-UAssetJson ($merchantStageBase + ".uasset") $merchantRoundtripJson "UAssetGUI production Foundry merchant round-trip"
 Invoke-Python @($dataVerifier, $affixRoundtripJson, $coreSpec)
 Invoke-Python @($fragPatcher, $fragRoundtripJson, "--verify-only")
+Invoke-Python @($cdoPatcher, $merchantRoundtripJson, $merchantSpec, "--verify-only")
 
-Write-Host "7/8 Packing WeaponFoundry_P UE4.26 IoStore containers..."
+Write-Host "8/10 Packing WeaponFoundry_P UE4.26 IoStore containers..."
 $utoc = Join-Path $releaseRoot "WeaponFoundry_P.utoc"
 $proc = Start-Process -FilePath $RetocPath -ArgumentList @(
     "to-zen",
@@ -217,19 +243,21 @@ foreach ($required in @($pak, $ucas, $utoc)) {
     }
 }
 
-Write-Host "8/8 Writing production manifest and optionally installing..."
+Write-Host "9/10 Writing production manifest..."
 $manifest = [ordered]@{
-    build = "weapon-foundry-production-core"
+    build = "weapon-foundry-production"
     generated_utc = [DateTime]::UtcNow.ToString("o")
     source_content_root = $contentRoot
     diagnostic_weapon_edits = $false
     modified_packages = @(
         "RoboQuest/Content/Data/DT_WeaponAffix",
-        "RoboQuest/Content/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation"
+        "RoboQuest/Content/Blueprint/Weapon/Affixes/Common/BP_WA_Fragmentation",
+        "RoboQuest/Content/Blueprint/Interactive/Merchant/BP_Merchant_UpgradeAffix"
     )
     policy = [ordered]@{
         affix_patch_sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $coreSpec).Hash.ToLowerInvariant()
         transfer_policy = "Source/grafting/transfer_policy.json"
+        foundry_merchant = "Source/patches/foundry_merchant.json"
     }
     containers = @(
         [ordered]@{ name = "WeaponFoundry_P.pak"; sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $pak).Hash.ToLowerInvariant() },
@@ -240,6 +268,7 @@ $manifest = [ordered]@{
 $manifestPath = Join-Path $releaseRoot "weapon-foundry-manifest.json"
 $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $manifestPath -Encoding UTF8
 
+Write-Host "10/10 Optionally installing production build..."
 if ($Install) {
     if (-not $GamePaksDir) {
         throw "-Install requires -GamePaksDir."
@@ -254,7 +283,7 @@ if ($Install) {
 }
 
 Write-Host ""
-Write-Host "Weapon Foundry production core build complete:"
+Write-Host "Weapon Foundry production build complete:"
 Write-Host "  $releaseRoot"
 Write-Host ""
-Write-Host "This build contains no Phase 3 diagnostic HandGun/skill overrides."
+Write-Host "This build contains the native Foundry merchant surface and no Phase 3 diagnostic HandGun/skill overrides."
