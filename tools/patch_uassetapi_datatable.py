@@ -38,9 +38,32 @@ def nested_properties(row: dict[str, Any]) -> list[dict[str, Any]]:
     value = row.get("Value")
     if not isinstance(value, list):
         raise PatchError(f"row {row.get('Name')} has no Value list")
-    # Roboquest DT_WeaponAffix wraps the actual row fields in StructPropertyData 'Affix'.
-    affix = next((x for x in value if x.get("Name") == "Affix" and isinstance(x.get("Value"), list)), None)
-    return affix["Value"] if affix else value
+
+    # Roboquest DataTables generally wrap the row fields in one StructPropertyData:
+    # Affix, Weapon, PlayerSkill, etc. Keep direct-property tables working too.
+    if len(value) == 1:
+        wrapper = value[0]
+        if (
+            isinstance(wrapper, dict)
+            and "StructPropertyData" in str(wrapper.get("$type", ""))
+            and isinstance(wrapper.get("Value"), list)
+        ):
+            return wrapper["Value"]
+
+    for wrapper_name in ("Affix", "Weapon", "PlayerSkill"):
+        wrapper = next(
+            (
+                x for x in value
+                if isinstance(x, dict)
+                and x.get("Name") == wrapper_name
+                and isinstance(x.get("Value"), list)
+            ),
+            None,
+        )
+        if wrapper:
+            return wrapper["Value"]
+
+    return value
 
 
 def property_by_name(row: dict[str, Any], name: str) -> dict[str, Any]:
@@ -183,6 +206,81 @@ def apply_copy_array(
     }
 
 
+
+def apply_set_value(
+    row: dict[str, Any],
+    field: str,
+    value: Any,
+) -> dict[str, Any]:
+    prop = property_by_name(row, field)
+    before = copy.deepcopy(prop.get("Value"))
+    prop["Value"] = copy.deepcopy(value)
+    return {
+        "before": before,
+        "after": copy.deepcopy(prop.get("Value")),
+        "property_type": prop.get("$type"),
+    }
+
+
+def apply_replace_row_handles(
+    row: dict[str, Any],
+    field: str,
+    values: list[str],
+) -> dict[str, Any]:
+    prop = property_by_name(row, field)
+    current = prop.get("Value")
+    if not isinstance(current, list):
+        raise PatchError(
+            f"row {row.get('Name')} field {field}: expected array Value"
+        )
+    if prop.get("ArrayType") != "StructProperty":
+        raise PatchError(
+            f"row {row.get('Name')} field {field}: replace_row_handles requires ArrayType StructProperty"
+        )
+
+    template = None
+    if current:
+        template = current[0]
+    elif isinstance(prop.get("DummyStruct"), dict):
+        template = prop["DummyStruct"]
+
+    if not isinstance(template, dict):
+        raise PatchError(
+            f"row {row.get('Name')} field {field}: no WeaponAffixRowHandle template available"
+        )
+    if row_handle_name(template) is None and template.get("StructType") != "WeaponAffixRowHandle":
+        raise PatchError(
+            f"row {row.get('Name')} field {field}: array template is not a WeaponAffixRowHandle"
+        )
+
+    before = [row_handle_name(x) for x in current]
+    replacement = []
+    for i, row_name in enumerate(values):
+        item = copy.deepcopy(template)
+        item["Name"] = field
+        item["ArrayIndex"] = i if item.get("ArrayIndex") not in (None, 0) else item.get("ArrayIndex", 0)
+        parts = item.get("Value")
+        if not isinstance(parts, list):
+            raise PatchError("WeaponAffixRowHandle template has no Value list")
+        row_name_prop = next((x for x in parts if x.get("Name") == "RowName"), None)
+        if row_name_prop is None:
+            raise PatchError("WeaponAffixRowHandle template has no RowName property")
+        row_name_prop["Value"] = row_name
+        replacement.append(item)
+
+    prop["Value"] = replacement
+    if not replacement and not prop.get("DummyStruct"):
+        dummy = copy.deepcopy(template)
+        dummy["Value"] = []
+        prop["DummyStruct"] = dummy
+
+    return {
+        "before": before,
+        "after": [row_handle_name(x) for x in prop["Value"]],
+        "replacement_count": len(replacement),
+    }
+
+
 def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     patched = copy.deepcopy(asset)
     rows = data_rows(patched)
@@ -211,6 +309,18 @@ def apply(asset: dict[str, Any], spec: dict[str, Any]) -> tuple[dict[str, Any], 
                 str(op["field"]),
                 by_name[source_row_name],
                 str(op.get("source_field") or op["field"]),
+            )
+        elif op.get("op") == "set_value":
+            detail = apply_set_value(
+                by_name[row_name],
+                str(op["field"]),
+                op.get("value"),
+            )
+        elif op.get("op") == "replace_row_handles":
+            detail = apply_replace_row_handles(
+                by_name[row_name],
+                str(op["field"]),
+                [str(x) for x in op.get("values", [])],
             )
         else:
             raise PatchError(f"operation {index}: unsupported op {op.get('op')!r}")
