@@ -49,7 +49,7 @@ class ProductionPolicyTests(unittest.TestCase):
 
     def test_transfer_catalog_summary(self):
         summary = self.transfer["summary"]
-        self.assertEqual(summary["transferable_affixes"], 49)
+        self.assertEqual(summary["transferable_affixes"], 50)
         self.assertEqual(summary["transferable_alt_fires"], 15)
 
     def test_foundry_merchant_uses_only_globally_safe_transferable_affixes(self):
@@ -60,10 +60,10 @@ class ProductionPolicyTests(unittest.TestCase):
         }
         values = self.merchant["operations"][0]["values"]
 
-        self.assertEqual(len(ordinary), 49)
-        self.assertEqual(self.merchant["policy"]["full_transferable_affix_count"], 49)
-        self.assertEqual(self.merchant["policy"]["global_merchant_affix_count"], 17)
-        self.assertEqual(len(values), 17)
+        self.assertEqual(len(ordinary), 50)
+        self.assertEqual(self.merchant["policy"]["full_transferable_affix_count"], 50)
+        self.assertEqual(self.merchant["policy"]["global_merchant_affix_count"], 18)
+        self.assertEqual(len(values), 18)
         self.assertTrue(set(values).issubset(ordinary))
 
         generalized = {
