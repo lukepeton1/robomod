@@ -30,12 +30,6 @@
         "core_composition": true
       },
       {
-        "row": "AutoShotgun",
-        "base_cost": 4,
-        "rarity": "EWeaponAffixRarity::Rare",
-        "core_composition": true
-      },
-      {
         "row": "Bounce",
         "base_cost": 2,
         "rarity": "EWeaponAffixRarity::Common",
@@ -72,12 +66,6 @@
         "core_composition": true
       },
       {
-        "row": "ExplosiveBlank",
-        "base_cost": 4,
-        "rarity": "EWeaponAffixRarity::Rare",
-        "core_composition": true
-      },
-      {
         "row": "FreeShot",
         "base_cost": 4,
         "rarity": "EWeaponAffixRarity::Rare",
@@ -100,19 +88,41 @@
         "base_cost": 2,
         "rarity": "EWeaponAffixRarity::Common",
         "core_composition": false
-      },
-      {
-        "row": "AutoCritical",
-        "base_cost": 2,
-        "rarity": "EWeaponAffixRarity::Common",
-        "core_composition": false
       }
-    ]
+    ],
+    "excluded_chassis_preset_rows": {
+      "AutoShotgun": [
+        "TommyGun"
+      ],
+      "ExplosiveBlank": [
+        "GrenadeLauncher",
+        "FlareGun",
+        "MineGun",
+        "GrenadeShotgun",
+        "Mortar",
+        "RocketGatling",
+        "GravitonGun",
+        "Grenade",
+        "IceCannon",
+        "FireFlower",
+        "Bolter",
+        "BarrelCannon",
+        "RocketLauncher",
+        "Needler",
+        "DualTonfa",
+        "Slingshot",
+        "SulfatorRocket"
+      ],
+      "AutoCritical": [
+        "Shuriken"
+      ]
+    }
   },
   "validation_order": [
     "actor is AInteractiveWeapon",
     "SpawnedWeapon is valid and distinct from currentWeapon",
     "donor GetAffixRowNames contains a supported candidate",
+    "selected row is not a chassis/native preset on any shipping weapon (probe candidate pool is pre-filtered)",
     "target does not already contain selected row",
     "target quality is above common",
     "AffixAmount is below color + 2 quality cap",
