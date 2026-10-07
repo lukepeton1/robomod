@@ -1,15 +1,17 @@
 @echo off
 setlocal
 
-set "REPO=%~dp0..\.."
-for %%I in ("%REPO%") do set "REPO=%%~fI"
-for %%I in ("%REPO%\..") do set "RQROOT=%%~fI"
-
-powershell -ExecutionPolicy Bypass -File "%REPO%\tools\windows\build-donor-rowname-probe.ps1" ^
-  -LegacyExtractRoot "%RQROOT%\LegacyExtract" ^
-  -UAssetGUIPath "%RQROOT%\UAssetGUI\UAssetGUI.exe" ^
-  -RetocPath "%RQROOT%\retoc\retoc.exe" ^
-  -Install ^
-  -GamePaksDir "%RQROOT%\RoboQuest\Content\Paks"
-
-exit /b %ERRORLEVEL%
+echo.
+echo VERIFIED / RETIRED DIAGNOSTIC
+echo -----------------------------
+echo AAWeapon.GetAffixRowNames() has been verified in a real run:
+echo   WF ROW PROBE: GetAffixRowNames returned rows
+echo.
+echo Do not reinstall this probe.
+echo Restore normal production with:
+echo   tools\windows\run-weapon-foundry.cmd
+echo.
+echo The current end-to-end GRAFT transaction probe is:
+echo   tools\windows\run-ground-graft-ping-probe.cmd
+echo.
+exit /b 3
