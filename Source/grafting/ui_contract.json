@@ -67,8 +67,11 @@
       "server replicates resulting weapon state"
     ],
     "cancel": "no state mutation",
-    "donor_enumeration": "retrieve donor-owned AWeaponAffix UObject references from the weapon/native owner container, filter by WeaponRef, and reconcile enchanted/chassis-native provenance; GameplayStatics actor enumeration is invalid",
-    "donor_actor_probe_result": "Source/probes/donor_runtime_probe_results.json"
+    "donor_enumeration": "preferred after validation: read exact native donor row IDs from AAWeapon.GetAffixRowNames(); fallback only if needed to donor-owned AWeaponAffix UObject references + WeaponRef reconciliation; GameplayStatics actor enumeration is invalid",
+    "donor_actor_probe_result": "Source/probes/donor_runtime_probe_results.json",
+    "candidate_donor_row_enumerator": "AAWeapon.GetAffixRowNames()",
+    "candidate_donor_row_enumerator_status": "runtime validation pending",
+    "candidate_donor_row_probe": "tools/windows/run-donor-rowname-probe.cmd"
   },
   "smith": {
     "trigger": "Foundry / Smith interaction",
