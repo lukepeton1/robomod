@@ -123,33 +123,79 @@ Native metadata contains:
 
 That confirms stable row-level identity exists below the tooltip layer.
 
-## Current gate: validate AAWeapon.GetAffixRowNames()
+## Verified native donor enumerator
 
-The new narrow cooked probe is:
+The cooked runtime probe succeeded on a visibly affixed dropped Dual Rascals:
 
-- patcher: `tools/patch_donor_rowname_probe.py`;
-- builder: `tools/windows/build-donor-rowname-probe.ps1`;
-- runner: `tools/windows/run-donor-rowname-probe.cmd`.
+`WF ROW PROBE: GetAffixRowNames returned rows`
 
-The probe:
+The probe was triggered by the normal interaction key and called:
 
-1. reads the dropped interactive's native `SpawnedWeapon`;
-2. calls reflected native `AAWeapon.GetAffixRowNames()`;
-3. models the return as `TArray<FName>`;
-4. checks only whether the array is empty;
-5. intentionally returns false from `CanInteract` so Roboquest renders the result through the normal interaction-error UI;
-6. does not mutate the weapon, currency or donor state.
+`BP_Interactive_Weapon.SpawnedWeapon.GetAffixRowNames()`
 
-Expected result after pressing the normal interaction key on a visibly affixed dropped weapon:
+Therefore `AAWeapon.GetAffixRowNames()` is now a **verified native/cooked seam** and the preferred authoritative donor row source.
 
-- `WF ROW PROBE: GetAffixRowNames returned rows`
-- or `WF ROW PROBE: GetAffixRowNames returned 0 rows`.
+Production-direction consequences:
 
-Interpretation:
+1. donor discovery no longer needs world-object enumeration;
+2. donor row identity no longer needs tooltip parsing;
+3. donor row identity normally does not need class/custom-float reconstruction;
+4. the server can re-read exact donor row IDs immediately before commit;
+5. target mutation can be verified by re-reading the target's exact native row list.
 
-- **returned rows** -> promote `GetAffixRowNames()` as the authoritative ordinary-affix donor enumerator;
-- **returned 0 rows** -> the reflected function exists, but our inferred return model or its semantics need further work;
-- **crash/load failure** -> the synthesized call signature is invalid and must not be promoted.
+The old row-name diagnostic runner is retired after this result.
+
+## Current gate: end-to-end ground GRAFT transaction
+
+The current diagnostic uses Roboquest's existing ping action as a temporary alternate dropped-weapon interaction while leaving **E** equip/swap untouched.
+
+Files:
+
+- policy generator: `tools/generate_ground_graft_probe.py`;
+- generated policy: `Source/probes/ground_graft_ping_probe.json`;
+- cooked patcher: `tools/patch_ground_graft_ping_probe.py`;
+- builder: `tools/windows/build-ground-graft-ping-probe.ps1`;
+- runner: `tools/windows/run-ground-graft-ping-probe.cmd`.
+
+The patch hooks the existing reliable server RPC:
+
+`BP_APlayer.OnServerPingActor(ActorRef, Location)`
+
+For a dropped `AInteractiveWeapon`, the **server**:
+
+1. resolves `SpawnedWeapon`;
+2. reads `SpawnedWeapon.GetAffixRowNames()`;
+3. chooses the first probe-approved donor row by deterministic priority;
+4. rejects duplicates;
+5. enforces the 0/3/4/5/6 quality complexity policy;
+6. computes native Power Cell cost;
+7. verifies `CurrentTicket` funds;
+8. debits with `RemoveTicket`;
+9. calls the existing replicated `BP_APlayer.AddEnchantedAffix(RowName)` path;
+10. re-reads `currentWeapon.GetAffixRowNames()`;
+11. refunds with `AddTicket` and leaves the donor if verification fails;
+12. destroys the dropped donor interactive only after the target row is observed.
+
+Non-weapon pings and validation failures fall through to vanilla ping behavior.
+
+For the first transaction test, the automatic candidate pool is deliberately restricted to 11 globally-safe rows that are **never a shipping chassis preset**:
+
+- Fragmentation
+- Bounce
+- Pierce
+- Ricochet
+- Burn
+- Ice
+- Shock
+- FreeShot
+- Firerate
+- Impact
+- MarkDamage
+
+`AutoShotgun`, `AutoCritical`, and `ExplosiveBlank` are withheld from this diagnostic because they appear as native preset rows on at least one shipping chassis and could otherwise be mistaken for donor-transferable identity.
+
+This automatic first-match selection is diagnostic only. The final GRAFT UX must replace it with explicit native-feeling donor-row selection.
+
 
 ## Runtime identity fallback
 
