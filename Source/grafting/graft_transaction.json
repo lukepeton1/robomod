@@ -138,8 +138,11 @@
     "alt_fire_slots_source": "Source/grafting/progression_policy.json",
     "donor_identity_catalog": "Source/grafting/donor_identity_catalog.json",
     "donor_identity_reconciler": "tools/reconcile_donor_affixes.py",
-    "donor_identity_usage": "server retrieves donor-owned AWeaponAffix UObject references from the authoritative weapon/native container, filters by WeaponRef, then reconciles enchanted/chassis-native lookalikes before donor_contains_row validation; world-actor enumeration is forbidden",
-    "donor_actor_enumeration": "disproven by Source/probes/donor_runtime_probe_results.json"
+    "donor_identity_usage": "preferred path after runtime validation: server calls AAWeapon.GetAffixRowNames() and uses exact native row IDs directly; fallback path reconstructs rows from donor-owned AWeaponAffix UObject references. World-actor enumeration is forbidden.",
+    "donor_actor_enumeration": "disproven by Source/probes/donor_runtime_probe_results.json",
+    "candidate_donor_row_enumerator": "AAWeapon.GetAffixRowNames()",
+    "candidate_donor_row_enumerator_status": "shipping reflection metadata confirmed; cooked runtime probe pending",
+    "candidate_donor_row_enumerator_probe": "tools/windows/run-donor-rowname-probe.cmd"
   },
   "ui_preview": {
     "donor_planner": "tools/evaluate_graft.py:GraftRules.plan_donor",
