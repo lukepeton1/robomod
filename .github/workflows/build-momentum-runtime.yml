@@ -1,0 +1,60 @@
+name: Build Momentum Runtime
+
+on:
+  push:
+    branches:
+      - feature/movement-overhaul
+    paths:
+      - ".github/workflows/build-momentum-runtime.yml"
+      - "Source/runtime/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out robomod
+        uses: actions/checkout@v4
+
+      - name: Check out pinned UE4SS
+        uses: actions/checkout@v4
+        with:
+          repository: UE4SS-RE/RE-UE4SS
+          ref: 6eb3d9bc3346ba01f7191612b5812e0e47a3bbe1
+          submodules: recursive
+          path: external/RE-UE4SS
+
+      - name: Configure Momentum runtime
+        shell: cmd
+        run: cmake -S Source/runtime/ue4ss -B build/momentum-ue4ss -G "Visual Studio 17 2022" -A x64 -DUE4SS_SOURCE_DIR=%GITHUB_WORKSPACE%/external/RE-UE4SS
+
+      - name: Build Momentum runtime
+        shell: cmd
+        run: cmake --build build/momentum-ue4ss --config Game__Shipping__Win64 --target MomentumOverhaul -- /m
+
+      - name: Stage runtime artifact
+        shell: pwsh
+        run: |
+          $dll = Get-ChildItem build/momentum-ue4ss -Filter MomentumOverhaul.dll -File -Recurse | Select-Object -First 1
+          if (-not $dll) { throw "MomentumOverhaul.dll was not produced." }
+          $dest = Join-Path $env:GITHUB_WORKSPACE "artifact/MomentumOverhaul/dlls"
+          New-Item -ItemType Directory -Force -Path $dest | Out-Null
+          Copy-Item -LiteralPath $dll.FullName -Destination (Join-Path $dest "main.dll") -Force
+          $meta = @(
+            "build_commit=$env:GITHUB_SHA",
+            "ue4ss_commit=6eb3d9bc3346ba01f7191612b5812e0e47a3bbe1",
+            "roboquest_exe_sha256=158487e80be71d5570ca0a1e1a1208ab1c0842daf181f4cb6c98920bc4b4dc1f",
+            "calcvelocity_vtable_slot=215",
+            "calcvelocity_function_rva=0x02EB5440"
+          )
+          $meta | Set-Content -LiteralPath "artifact/MomentumOverhaul/runtime-build.txt" -Encoding ascii
+
+      - name: Upload Momentum runtime
+        uses: actions/upload-artifact@v4
+        with:
+          name: MomentumOverhaul-runtime
+          path: artifact/MomentumOverhaul
+          if-no-files-found: error
