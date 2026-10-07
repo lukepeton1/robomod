@@ -63,6 +63,26 @@ jobs:
             -o /tmp/momentum-core-tests
           /tmp/momentum-core-tests
 
+      - name: Parse runtime-probe PowerShell
+        shell: pwsh
+        run: |
+          $failed = $false
+          Get-ChildItem tools/windows -Filter "*runtime-probe*.ps1" | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile(
+              $_.FullName,
+              [ref]$tokens,
+              [ref]$errors
+            ) | Out-Null
+            if ($errors.Count -gt 0) {
+              $failed = $true
+              Write-Host "PowerShell parse errors in $($_.FullName):"
+              $errors | ForEach-Object { Write-Host "  $($_.Message)" }
+            }
+          }
+          if ($failed) { exit 1 }
+
       - name: Verify manifest targets exist in committed static JSON
         run: |
           python3 - <<'PY'
