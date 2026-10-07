@@ -19,6 +19,7 @@ on:
       - "tools/windows/collect-movement-handoff.*"
       - "tools/windows/collect-movement-native-handoff.*"
       - "tools/windows/collect-movement-thunk-handoff.*"
+      - "tools/windows/run-momentum-runtime-test.*"
       - "tools/windows/run-movement-runtime-probe.*"
       - "tools/windows/cleanup-movement-runtime-probe.*"
       - "tools/windows/momentum-runtime-probe-*.ps1"
@@ -71,7 +72,7 @@ jobs:
         shell: pwsh
         run: |
           $failed = $false
-          Get-ChildItem tools/windows -Filter "*.ps1" | Where-Object { $_.Name -match "movement.*(probe|thunk)" -or $_.Name -match "momentum-runtime-probe" } | ForEach-Object {
+          Get-ChildItem tools/windows -Filter "*.ps1" | Where-Object { $_.Name -match "(?:movement|momentum).*(?:probe|thunk|test)" } | ForEach-Object {
             $tokens = $null
             $errors = $null
             [System.Management.Automation.Language.Parser]::ParseFile(
