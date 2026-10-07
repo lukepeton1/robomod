@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-donor-runtime-probe-results",
+  "observations": [
+    {
+      "id": "aweaponaffix_actor_enumeration",
+      "method": "GameplayStatics.GetAllActorsOfClass(AWeaponAffix)",
+      "status": "disproven",
+      "observed_count": 0,
+      "trigger": "actual dropped-weapon interaction (E); hover/focus alone did not execute the original probe path",
+      "context": "runtime probe executed while an affixed dropped Igniter Gun was visibly present",
+      "conclusion": "AWeaponAffix behavior objects are not enumerable as world actors. Do not use actor enumeration for GRAFT donor discovery.",
+      "next_seam": "retrieve non-actor AWeaponAffix UObject references from the owning AWeapon or one of its native managers/containers"
+    }
+  ]
+}
