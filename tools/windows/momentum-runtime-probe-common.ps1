@@ -242,6 +242,178 @@ function Find-RoboquestShippingExe {
     return $null
 }
 
+function Get-RoboquestPathCacheFile([string]$RepoRoot) {
+    $cacheDir = Join-Path $RepoRoot "handoff\.runtime-cache"
+    if (-not (Test-Path -LiteralPath $cacheDir)) {
+        New-Item -ItemType Directory -Force -Path $cacheDir | Out-Null
+    }
+    return (Join-Path $cacheDir "roboquest-shipping-path.txt")
+}
+
+function Get-CachedRoboquestShippingExe([string]$RepoRoot) {
+    $cacheFile = Get-RoboquestPathCacheFile $RepoRoot
+    if (-not (Test-Path -LiteralPath $cacheFile)) { return $null }
+
+    try {
+        $candidate = (Get-Content -LiteralPath $cacheFile -Raw).Trim()
+        if (-not $candidate) { return $null }
+        if (
+            (Test-Path -LiteralPath $candidate -PathType Leaf) -and
+            ([System.IO.Path]::GetFileName($candidate) -ieq "RoboQuest-Win64-Shipping.exe")
+        ) {
+            return [System.IO.Path]::GetFullPath($candidate)
+        }
+    } catch {
+    }
+
+    Remove-Item -LiteralPath $cacheFile -Force -ErrorAction SilentlyContinue
+    return $null
+}
+
+function Save-CachedRoboquestShippingExe([string]$RepoRoot, [string]$GameExePath) {
+    if (-not $GameExePath) { return }
+    $cacheFile = Get-RoboquestPathCacheFile $RepoRoot
+    [System.IO.Path]::GetFullPath($GameExePath) |
+        Set-Content -LiteralPath $cacheFile -Encoding UTF8
+}
+
+function Get-RunningRoboquestShippingExe {
+    foreach ($proc in Get-Process -ErrorAction SilentlyContinue | Where-Object {
+        $_.ProcessName -ieq "RoboQuest-Win64-Shipping"
+    }) {
+        $candidate = $null
+
+        try {
+            $candidate = $proc.Path
+        } catch {
+        }
+
+        if (-not $candidate) {
+            try {
+                $cim = Get-CimInstance Win32_Process -Filter "ProcessId=$($proc.Id)" -ErrorAction SilentlyContinue
+                $candidate = [string]$cim.ExecutablePath
+            } catch {
+            }
+        }
+
+        if (
+            $candidate -and
+            (Test-Path -LiteralPath $candidate -PathType Leaf) -and
+            ([System.IO.Path]::GetFileName($candidate) -ieq "RoboQuest-Win64-Shipping.exe")
+        ) {
+            return [System.IO.Path]::GetFullPath($candidate)
+        }
+    }
+
+    return $null
+}
+
+function Wait-ForRunningRoboquestShippingExe([int]$TimeoutSeconds = 180) {
+    $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
+
+    while ((Get-Date) -lt $deadline) {
+        $candidate = Get-RunningRoboquestShippingExe
+        if ($candidate) { return $candidate }
+        Start-Sleep -Milliseconds 500
+    }
+
+    return $null
+}
+
+function Wait-ForRoboquestShippingExit([string]$ExpectedPath, [int]$TimeoutSeconds = 300) {
+    $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
+
+    while ((Get-Date) -lt $deadline) {
+        if (-not (Find-RoboquestShippingProcess $ExpectedPath)) {
+            return $true
+        }
+        Start-Sleep -Milliseconds 500
+    }
+
+    return $false
+}
+
+function Start-RoboquestDiscoveryLaunch {
+    # Prefer Steam when it is installed because app id 692890 is stable.
+    try {
+        if ((Get-RoboquestSteamRoots).Count -gt 0) {
+            Start-Process "steam://rungameid/692890" | Out-Null
+            return "steam"
+        }
+    } catch {
+    }
+
+    # Xbox / Microsoft Store and other registered installs generally expose a
+    # Start-menu app id even when the install directory itself is protected.
+    try {
+        $app = Get-StartApps -ErrorAction SilentlyContinue |
+            Where-Object { $_.Name -match "^Robo\s*Quest$|Roboquest" } |
+            Select-Object -First 1
+
+        if ($app -and $app.AppID) {
+            Start-Process ("shell:AppsFolder\" + $app.AppID) | Out-Null
+            return "start-menu"
+        }
+    } catch {
+    }
+
+    return $null
+}
+
+function Resolve-RoboquestShippingExeInteractive([string]$RepoRoot) {
+    $cached = Get-CachedRoboquestShippingExe $RepoRoot
+    if ($cached) {
+        Write-Host "Using cached Roboquest shipping executable:"
+        Write-Host "  $cached"
+        return $cached
+    }
+
+    $static = Find-RoboquestShippingExe
+    if ($static) {
+        Save-CachedRoboquestShippingExe $RepoRoot $static
+        return $static
+    }
+
+    Write-Host ""
+    Write-Host "Static install discovery could not locate Roboquest."
+    Write-Host "Starting a one-time normal game launch so Momentum can capture the"
+    Write-Host "real RoboQuest-Win64-Shipping.exe path from the running process."
+
+    $launchMethod = Start-RoboquestDiscoveryLaunch
+    if ($launchMethod) {
+        Write-Host "Normal discovery launch requested via $launchMethod."
+    } else {
+        Write-Host ""
+        Write-Host "Launch Roboquest normally from Steam/Xbox now."
+    }
+
+    Write-Host "Waiting up to 3 minutes for RoboQuest-Win64-Shipping.exe..."
+    $captured = Wait-ForRunningRoboquestShippingExe -TimeoutSeconds 180
+
+    if (-not $captured) {
+        throw @"
+Could not observe RoboQuest-Win64-Shipping.exe within 3 minutes.
+
+Launch Roboquest normally and rerun this command, or pass -GameExePath explicitly.
+"@
+    }
+
+    Save-CachedRoboquestShippingExe $RepoRoot $captured
+
+    Write-Host ""
+    Write-Host "Captured and cached the shipping executable:"
+    Write-Host "  $captured"
+    Write-Host ""
+    Write-Host "Quit this normal Roboquest launch now."
+    Write-Host "The probe is waiting and will continue automatically after the game exits."
+
+    if (-not (Wait-ForRoboquestShippingExit $captured -TimeoutSeconds 300)) {
+        throw "Roboquest did not exit within 5 minutes. Quit the game and rerun the probe."
+    }
+
+    return $captured
+}
+
 function Set-ProbeIniValue([string]$Path,[string]$Section,[string]$Key,[string]$Value) {
     $lines = @(Get-Content -LiteralPath $Path); $header = "[$Section]"; $s = -1
     for ($i=0;$i -lt $lines.Count;$i++) { if ($lines[$i].Trim() -ieq $header) { $s=$i; break } }
