@@ -108,6 +108,16 @@ class GraftContractAlignmentTests(unittest.TestCase):
         }
         self.assertTrue(expected.issubset(set(self.ui["shared"]["reason_codes"])))
 
+    def test_actor_enumeration_is_forbidden_by_contract(self):
+        usage = self.transaction["rule_engine"]["donor_identity_usage"]
+        self.assertIn("native container", usage)
+        self.assertIn("world-actor enumeration is forbidden", usage)
+        self.assertIn("actor enumeration is invalid", self.ui["ground_graft"]["donor_enumeration"])
+        self.assertEqual(
+            self.transaction["rule_engine"]["donor_actor_enumeration"],
+            "disproven by Source/probes/donor_runtime_probe_results.json",
+        )
+
     def test_release_source_contains_rule_engine_and_generated_inputs(self):
         required = [
             "Source\\grafting\\compatibility_matrix.json",
