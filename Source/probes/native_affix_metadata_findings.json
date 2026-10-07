@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-native-affix-metadata-findings",
+  "source": "user-collected RoboQuest-Win64-Shipping.exe filtered string/reflection metadata",
+  "files_scanned": 1,
+  "evidence": [
+    {
+      "kind": "AAWeapon reflected property cluster",
+      "offset_start": 69380784,
+      "identifiers": [
+        "DT_WeaponAffix",
+        "DT_WeaponMod",
+        "WeaponStatManager",
+        "WeaponSkillManager",
+        "Affixes",
+        "TmpAffixPool",
+        "RandomAffixes",
+        "RandomAffixesRarity"
+      ],
+      "conclusion": "Affixes is present in the same AAWeapon reflected property block as the weapon managers and affix tables."
+    },
+    {
+      "kind": "AAWeapon reflected native function block",
+      "offset_start": 69392896,
+      "identifiers": [
+        "AddEnchantedAffix",
+        "AddRandomAffixe",
+        "GetAffixAmountByRarity",
+        "GetAffixLevel",
+        "GetAffixRow",
+        "GetAffixRowNames",
+        "GetCurrentEnchantedAffixRowName",
+        "GetDataRowName",
+        "InitializeAffixe",
+        "RerollRandomAffixes"
+      ],
+      "conclusion": "GetAffixRowNames is a reflected native AAWeapon function adjacent to native weapon/affix functions already known to be Blueprint-callable."
+    },
+    {
+      "kind": "AAWeapon native implementation strings",
+      "offset_start": 68744864,
+      "identifiers": [
+        "AAWeapon::InitializeAffixe",
+        "AAWeapon::RemoveAffixes",
+        "AAWeapon::RemoveEliteAffixe",
+        "AAWeapon::GetRandomAffixBundle",
+        "AAWeapon::SetWeaponSavedData",
+        "AAWeapon::InitWeaponSavedData",
+        "AAWeapon::GetRandomAffixe"
+      ],
+      "conclusion": "Weapon affix generation/removal/save behavior is implemented on AAWeapon itself."
+    },
+    {
+      "kind": "weapon affix row types",
+      "offset_start": 69666888,
+      "identifiers": [
+        "LoadedAffix",
+        "bEnchantedAffix",
+        "WeaponAffixRow",
+        "WeaponAffixRowHandle"
+      ],
+      "conclusion": "Native metadata preserves explicit row-level identity constructs separate from tooltip text."
+    }
+  ],
+  "candidate_authoritative_enumerator": {
+    "function": "AAWeapon.GetAffixRowNames",
+    "expected_return_model": "TArray<FName>",
+    "evidence_status": "shipping reflection metadata",
+    "runtime_status": "pending cooked probe"
+  },
+  "rejected_enumerator": {
+    "function": "GameplayStatics.GetAllActorsOfClass(AWeaponAffix)",
+    "runtime_status": "disproven",
+    "result": 0
+  }
+}
