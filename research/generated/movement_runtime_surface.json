@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source": {
+    "runtime_handoff_sha256": "bf5b926ca0712ffb4c85b1544d35457494e8d7fd6d59b59f0f0d8bc7293a269d",
+    "jmap_filename": "RoboQuest-4.26.2-0+++UE4+Release-4.26-5418fa4e.jmap",
+    "jmap_sha256": "dcf85f680996aedb1ac0c98d5d48b357e8a55d68dcb5d52ed577f84ea08ea8cc",
+    "game_executable_sha256": "158487e80be71d5570ca0a1e1a1208ab1c0842daf181f4cb6c98920bc4b4dc1f",
+    "ue4ss_asset": "zDEV-UE4SS_v3.0.1-1161-g6eb3d9bc.zip",
+    "engine_version": {"major": 4, "minor": 26},
+    "runtime_image_base": "0x7ff7ed9c0000"
+  },
+  "classes": {
+    "character_movement_component": {
+      "path": "/Script/Engine.CharacterMovementComponent",
+      "super_struct": "/Script/Engine.PawnMovementComponent",
+      "properties_size": 2816,
+      "instance_vtable": "0x7ff7f1add150",
+      "instance_vtable_rva": 68276560,
+      "vtable_entry_count": 390
+    },
+    "client_authorative_cmc": {
+      "path": "/Script/RoboQuest.ClientAuthorativeCMC",
+      "super_struct": "/Script/Engine.CharacterMovementComponent",
+      "properties_size": 2816,
+      "children_count": 0,
+      "instance_vtable": "0x7ff7f1add150",
+      "instance_vtable_rva": 68276560
+    },
+    "roboquest_movement_component": {
+      "path": "/Script/RoboQuest.RoboquestMovementComponent",
+      "super_struct": "/Script/RoboQuest.ClientAuthorativeCMC",
+      "properties_size": 2816,
+      "children_count": 0,
+      "instance_vtable": "0x7ff7f1add150",
+      "instance_vtable_rva": 68276560
+    },
+    "archvis_reference_subclass": {
+      "path": "/Script/ArchVisCharacter.ArchVisCharMovementComponent",
+      "super_struct": "/Script/Engine.CharacterMovementComponent",
+      "properties_size": 2896,
+      "instance_vtable": "0x7ff7f1a8f630",
+      "instance_vtable_rva": 67958320,
+      "changed_slots_vs_base": [
+        {"slot": 0, "base": "0x7ff7eeddb9b0", "archvis": "0x7ff7eec52d50"},
+        {"slot": 89, "base": "0x7ff7f0881780", "archvis": "0x7ff7eec533a0"},
+        {"slot": 266, "base": "0x7ff7f0885200", "archvis": "0x7ff7eec533e0"},
+        {"slot": 356, "base": "0x7ff7eeddb248", "archvis": "0x7ff7eec52b94"},
+        {"slot": 362, "base": "0x7ff7eeddb230", "archvis": "0x7ff7eec52b7c"},
+        {"slot": 379, "base": "0x7ff7eeddb23c", "archvis": "0x7ff7eec52b88"}
+      ]
+    }
+  },
+  "calc_velocity": {
+    "ufunction_path": "/Script/Engine.CharacterMovementComponent:CalcVelocity",
+    "function_flags": "FUNC_Native | FUNC_Public | FUNC_BlueprintCallable",
+    "exec_thunk_va": "0x7ff7f0e54760",
+    "exec_thunk_rva": 55134048,
+    "parameters": [
+      {"name": "DeltaTime", "offset": 0, "size": 4, "type": "FloatProperty"},
+      {"name": "Friction", "offset": 4, "size": 4, "type": "FloatProperty"},
+      {"name": "bFluid", "offset": 8, "size": 1, "type": "BoolProperty"},
+      {"name": "BrakingDeceleration", "offset": 12, "size": 4, "type": "FloatProperty"}
+    ]
+  },
+  "conclusion": {
+    "base_client_roboquest_same_instance_vtable": true,
+    "base_client_roboquest_same_properties_size": true,
+    "archvis_has_distinct_instance_vtable": true,
+    "evidence_supports_guarded_base_calcvelocity_detour": true,
+    "next_gate": "derive exact CalcVelocity vtable slot from reflected exec thunk on the local executable"
+  }
+}

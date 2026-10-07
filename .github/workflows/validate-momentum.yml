@@ -10,12 +10,15 @@ on:
       - "Source/movement/**"
       - "Source/runtime/**"
       - "tools/analyze_movement_seams.py"
+      - "tools/analyze_movement_jmap.py"
+      - "tools/analyze_calcvelocity_thunk.py"
       - "tools/analyze_native_movement_strings.py"
       - "tools/extract_movement_callgraph.py"
       - "tools/filter_movement_jmap.py"
       - "tools/simulate_movement.py"
       - "tools/windows/collect-movement-handoff.*"
       - "tools/windows/collect-movement-native-handoff.*"
+      - "tools/windows/collect-movement-thunk-handoff.*"
       - "tools/windows/run-movement-runtime-probe.*"
       - "tools/windows/cleanup-movement-runtime-probe.*"
       - "tools/windows/momentum-runtime-probe-*.ps1"
@@ -28,6 +31,7 @@ on:
       - "research/MOVEMENT_HANDOFF_FINDINGS.md"
       - "research/NATIVE_BINARY_FINDINGS.md"
       - "research/generated/movement_native_surface.json"
+      - "research/generated/movement_runtime_surface.json"
   pull_request:
     branches:
       - main
@@ -67,7 +71,7 @@ jobs:
         shell: pwsh
         run: |
           $failed = $false
-          Get-ChildItem tools/windows -Filter "*runtime-probe*.ps1" | ForEach-Object {
+          Get-ChildItem tools/windows -Filter "*.ps1" | Where-Object { $_.Name -match "movement.*(probe|thunk)" -or $_.Name -match "momentum-runtime-probe" } | ForEach-Object {
             $tokens = $null
             $errors = $null
             [System.Management.Automation.Language.Parser]::ParseFile(
