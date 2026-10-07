@@ -24,8 +24,16 @@ jobs:
         with:
           repository: UE4SS-RE/RE-UE4SS
           ref: 6eb3d9bc3346ba01f7191612b5812e0e47a3bbe1
-          submodules: recursive
+          submodules: false
           path: external/RE-UE4SS
+
+      - name: Fetch UE4SS public submodules
+        shell: cmd
+        run: |
+          git config --global url."https://github.com/".insteadOf git@github.com:
+          cd external\RE-UE4SS
+          git submodule sync --recursive
+          git submodule update --init --recursive
 
       - name: Configure Momentum runtime
         shell: cmd
