@@ -1,6 +1,12 @@
 function Invoke-MomentumRuntimeProbe([string]$RepoRoot,[string]$GameExePath,[string]$OutputDir) {
-    if (-not $GameExePath){$GameExePath=Find-RoboquestShippingExe};if (-not $GameExePath){throw "Could not locate RoboQuest-Win64-Shipping.exe."}
-    $GameExePath=[System.IO.Path]::GetFullPath((Resolve-Path $GameExePath).Path)
+    if (-not $GameExePath) {
+        $GameExePath = Resolve-RoboquestShippingExeInteractive $RepoRoot
+    }
+    if (-not $GameExePath) {
+        throw "Could not locate RoboQuest-Win64-Shipping.exe."
+    }
+    $GameExePath = [System.IO.Path]::GetFullPath((Resolve-Path -LiteralPath $GameExePath).Path)
+    Save-CachedRoboquestShippingExe $RepoRoot $GameExePath
     if ([System.IO.Path]::GetFileName($GameExePath) -ine "RoboQuest-Win64-Shipping.exe"){throw "Wrong executable: $GameExePath"}
     if (Find-RoboquestShippingProcess $GameExePath){throw "Close Roboquest before running the runtime probe."}
     $win64=Split-Path -Parent $GameExePath;$backup=Join-Path $win64 ".momentum-runtime-probe-backup";if (Test-Path $backup){throw "Existing probe backup found. Run cleanup-movement-runtime-probe.cmd first."}
