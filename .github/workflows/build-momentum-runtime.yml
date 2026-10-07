@@ -6,7 +6,8 @@ on:
       - feature/movement-overhaul
     paths:
       - ".github/workflows/build-momentum-runtime.yml"
-      - "Source/runtime/**"
+      - "Source/runtime/native/**"
+      - "Source/runtime/momentum_core.*"
   workflow_dispatch:
 
 permissions:
@@ -19,46 +20,36 @@ jobs:
       - name: Check out robomod
         uses: actions/checkout@v4
 
-      - name: Check out pinned UE4SS
-        uses: actions/checkout@v4
-        with:
-          repository: UE4SS-RE/RE-UE4SS
-          ref: 6eb3d9bc3346ba01f7191612b5812e0e47a3bbe1
-          submodules: false
-          path: external/RE-UE4SS
-
-      - name: Fetch UE4SS public submodules
+      - name: Configure standalone runtime
         shell: cmd
-        run: |
-          git config --global url."https://github.com/".insteadOf git@github.com:
-          cd external\RE-UE4SS
-          git submodule sync --recursive
-          git submodule update --init --recursive
+        run: cmake -S Source/runtime/native -B build/momentum-native -G "Visual Studio 17 2022" -A x64
 
-      - name: Configure Momentum runtime
+      - name: Compile runtime DLL
         shell: cmd
-        run: cmake -S Source/runtime/ue4ss -B build/momentum-ue4ss -G "Visual Studio 17 2022" -A x64 -DUE4SS_SOURCE_DIR=%GITHUB_WORKSPACE%/external/RE-UE4SS
+        run: cmake --build build/momentum-native --config Release --target MomentumNative -- /m
 
-      - name: Build Momentum runtime
-        shell: cmd
-        run: cmake --build build/momentum-ue4ss --config Game__Shipping__Win64 --target MomentumOverhaul -- /m
-
-      - name: Stage runtime artifact
+      - name: Package runtime mod
         shell: pwsh
         run: |
-          $dll = Get-ChildItem build/momentum-ue4ss -Filter MomentumOverhaul.dll -File -Recurse | Select-Object -First 1
-          if (-not $dll) { throw "MomentumOverhaul.dll was not produced." }
-          $dest = Join-Path $env:GITHUB_WORKSPACE "artifact/MomentumOverhaul/dlls"
-          New-Item -ItemType Directory -Force -Path $dest | Out-Null
-          Copy-Item -LiteralPath $dll.FullName -Destination (Join-Path $dest "main.dll") -Force
-          $meta = @(
+          $dll = Get-ChildItem build/momentum-native -Recurse -File -Filter MomentumNative.dll | Select-Object -First 1
+          if (-not $dll) { throw "MomentumNative.dll missing after build." }
+          $root = "artifact/MomentumOverhaul"
+          $dlls = Join-Path $root "dlls"
+          $scripts = Join-Path $root "Scripts"
+          $config = Join-Path $root "config"
+          New-Item -ItemType Directory -Force -Path $dlls, $scripts, $config | Out-Null
+          Copy-Item -LiteralPath $dll.FullName -Destination (Join-Path $dlls "main.dll") -Force
+          Copy-Item Source/runtime/native/Scripts/main.lua (Join-Path $scripts "main.lua") -Force
+          Copy-Item Source/runtime/native/config/momentum.ini (Join-Path $config "momentum.ini") -Force
+          $dllSha = (Get-FileHash (Join-Path $dlls "main.dll") -Algorithm SHA256).Hash.ToLowerInvariant()
+          @(
             "build_commit=$env:GITHUB_SHA",
-            "ue4ss_commit=6eb3d9bc3346ba01f7191612b5812e0e47a3bbe1",
+            "native_dll_sha256=$dllSha",
             "roboquest_exe_sha256=158487e80be71d5570ca0a1e1a1208ab1c0842daf181f4cb6c98920bc4b4dc1f",
             "calcvelocity_vtable_slot=215",
-            "calcvelocity_function_rva=0x02EB5440"
-          )
-          $meta | Set-Content -LiteralPath "artifact/MomentumOverhaul/runtime-build.txt" -Encoding ascii
+            "calcvelocity_function_rva=0x02EB5440",
+            "mode=observe_by_default"
+          ) | Set-Content -LiteralPath (Join-Path $root "runtime-build.txt") -Encoding ascii
 
       - name: Upload Momentum runtime
         uses: actions/upload-artifact@v4
