@@ -2,9 +2,9 @@
   "schema_version": 1,
   "name": "weapon-foundry-donor-runtime-identity",
   "runtime_model": {
-    "acquisition": "retrieve live AWeaponAffix UObject references from the owning AWeapon or another native owner/container; actor enumeration is explicitly invalid",
+    "acquisition": "preferred: AAWeapon.GetAffixRowNames() exact native row IDs; fallback: retrieve live AWeaponAffix UObject references from the owning AWeapon/native container",
     "actor_enumeration": "DISPROVEN: GameplayStatics.GetAllActorsOfClass(AWeaponAffix) returned 0 in a real run with an affixed dropped weapon present",
-    "candidate_row_enumerator": "AAWeapon.GetAffixRowNames() discovered in shipping reflection metadata; cooked runtime validation pending",
+    "candidate_row_enumerator": "AAWeapon.GetAffixRowNames() VERIFIED in cooked runtime on an affixed dropped weapon; preferred authoritative donor row source",
     "reflected_weapon_fields": [
       "Affixes",
       "TmpAffixPool",
