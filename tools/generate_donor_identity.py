@@ -235,7 +235,9 @@ def build_catalog(
         "runtime_model": {
             "acquisition": "retrieve live AWeaponAffix UObject references from the owning AWeapon or another native owner/container; actor enumeration is explicitly invalid",
             "actor_enumeration": "DISPROVEN: GameplayStatics.GetAllActorsOfClass(AWeaponAffix) returned 0 in a real run with an affixed dropped weapon present",
-            "ownership_filter": "after references are obtained, keep only AWeaponAffix instances whose WeaponRef equals the donor AWeapon",
+            "candidate_row_enumerator": "AAWeapon.GetAffixRowNames() discovered in shipping reflection metadata; cooked runtime validation pending",
+            "reflected_weapon_fields": ["Affixes", "TmpAffixPool", "RandomAffixes", "WeaponStatManager", "WeaponSkillManager"],
+            "ownership_filter": "if object references are needed after row-name enumeration, keep only AWeaponAffix instances whose WeaponRef equals the donor AWeapon",
             "class_identity": "GetObjectClass(AWeaponAffix instance)",
             "custom_identity": "AWeaponAffix.GetCustomFloatProperties(Name); absent keys are treated as 0",
             "enchanted_disambiguation": "AWeapon.GetCurrentEnchantedAffixRowName()",
