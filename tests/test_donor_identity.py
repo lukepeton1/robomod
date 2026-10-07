@@ -70,7 +70,8 @@ class DonorRuntimeIdentityTests(unittest.TestCase):
     def test_actor_enumeration_is_explicitly_retired(self):
         runtime = self.generated["runtime_model"]
         self.assertIn("DISPROVEN", runtime["actor_enumeration"])
-        self.assertIn("AAWeapon.GetAffixRowNames()", runtime["acquisition"])\n        self.assertIn("fallback", runtime["acquisition"])
+        self.assertIn("AAWeapon.GetAffixRowNames()", runtime["acquisition"])
+        self.assertIn("fallback", runtime["acquisition"])
         self.assertIn("WeaponRef", runtime["ownership_filter"])
         self.assertNotIn("GetAllActorsOfClass", runtime["acquisition"])
 
