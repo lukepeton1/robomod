@@ -8,17 +8,25 @@ on:
       - ".github/workflows/validate-momentum.yml"
       - "Source/manifests/movement_patch_targets.txt"
       - "Source/movement/**"
+      - "Source/runtime/**"
       - "tools/analyze_movement_seams.py"
       - "tools/analyze_native_movement_strings.py"
       - "tools/extract_movement_callgraph.py"
+      - "tools/filter_movement_jmap.py"
       - "tools/simulate_movement.py"
       - "tools/windows/collect-movement-handoff.*"
       - "tools/windows/collect-movement-native-handoff.*"
+      - "tools/windows/run-movement-runtime-probe.*"
+      - "tools/windows/cleanup-movement-runtime-probe.*"
+      - "tools/windows/momentum-runtime-probe-*.ps1"
       - "tests/test_*movement*.py"
+      - "tests/cpp/**"
       - "vanilla-json/**"
       - "Docs/MOVEMENT_RESEARCH.md"
       - "Docs/MOVEMENT_DESIGN.md"
+      - "Docs/RUNTIME_ARCHITECTURE.md"
       - "research/MOVEMENT_HANDOFF_FINDINGS.md"
+      - "research/NATIVE_BINARY_FINDINGS.md"
       - "research/generated/movement_native_surface.json"
   pull_request:
     branches:
@@ -46,6 +54,14 @@ jobs:
 
       - name: Validate reference movement suite
         run: python3 tools/simulate_movement.py --frame-invariance > /tmp/movement-frame-invariance.json
+
+      - name: Compile and run C++ movement core tests
+        run: |
+          g++ -std=c++20 -O2 \
+            Source/runtime/momentum_core.cpp \
+            tests/cpp/test_momentum_core.cpp \
+            -o /tmp/momentum-core-tests
+          /tmp/momentum-core-tests
 
       - name: Verify manifest targets exist in committed static JSON
         run: |
