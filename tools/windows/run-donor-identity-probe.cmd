@@ -1,15 +1,17 @@
 @echo off
 setlocal
 
-set "REPO=%~dp0..\.."
-for %%I in ("%REPO%") do set "REPO=%%~fI"
-for %%I in ("%REPO%\..") do set "RQROOT=%%~fI"
-
-powershell -ExecutionPolicy Bypass -File "%REPO%\tools\windows\build-donor-identity-probe.ps1" ^
-  -LegacyExtractRoot "%RQROOT%\LegacyExtract" ^
-  -UAssetGUIPath "%RQROOT%\UAssetGUI\UAssetGUI.exe" ^
-  -RetocPath "%RQROOT%\retoc\retoc.exe" ^
-  -Install ^
-  -GamePaksDir "%RQROOT%\RoboQuest\Content\Paks"
-
-exit /b %ERRORLEVEL%
+echo.
+echo RETIRED DIAGNOSTIC
+echo ------------------
+echo The AWeaponAffix world-actor enumeration probe has completed.
+echo Runtime result: GetAllActorsOfClass(AWeaponAffix) returned 0 with an affixed weapon present.
+echo.
+echo Do not reinstall this probe.
+echo Restore the normal Weapon Foundry build with:
+echo   tools\windows\run-weapon-foundry.cmd
+echo.
+echo Then collect the next native ownership metadata with:
+echo   tools\windows\collect-native-affix-metadata.cmd
+echo.
+exit /b 3
