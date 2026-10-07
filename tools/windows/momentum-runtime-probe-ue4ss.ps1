@@ -15,15 +15,52 @@ function Get-ProbeUE4SSBuild([string]$Scratch) {
 }
 
 function Stage-MomentumUE4SSProbe([string]$Win64,$Build) {
-    $backup=Join-Path $Win64 ".momentum-runtime-probe-backup"; New-Item -ItemType Directory -Force -Path $backup | Out-Null
-    $state=[ordered]@{original_dwmapi=$false;original_ue4ss=$false;original_xinput=$false}
-    $dwm=Join-Path $Win64 "dwmapi.dll"; $ue4ss=Join-Path $Win64 "ue4ss"; $xinput=Join-Path $Win64 "xinput1_3.dll"
-    if(Test-Path $dwm){Move-Item $dwm (Join-Path $backup "dwmapi.dll") -Force;$state.original_dwmapi=$true}
-    if(Test-Path $ue4ss){Move-Item $ue4ss (Join-Path $backup "ue4ss") -Force;$state.original_ue4ss=$true}
-    if(Test-Path $xinput){Move-Item $xinput (Join-Path $backup "xinput1_3.dll") -Force;$state.original_xinput=$true}
-    $state | ConvertTo-Json | Set-Content (Join-Path $backup "state.json") -Encoding UTF8
-    Copy-Item $Build.dwm $dwm -Force; Copy-Item $Build.ue4ss $ue4ss -Recurse -Force
-    return [pscustomobject]@{backup=$backup;dwm=$dwm;ue4ss=$ue4ss;xinput=$xinput;state=$state}
+    $backup = Join-Path $Win64 ".momentum-runtime-probe-backup"
+    $state = [ordered]@{
+        original_dwmapi = $false
+        original_ue4ss = $false
+        original_xinput = $false
+    }
+
+    $stage = [pscustomobject]@{
+        backup = $backup
+        dwm = (Join-Path $Win64 "dwmapi.dll")
+        ue4ss = (Join-Path $Win64 "ue4ss")
+        xinput = (Join-Path $Win64 "xinput1_3.dll")
+        state = $state
+    }
+
+    New-Item -ItemType Directory -Force -Path $backup | Out-Null
+
+    try {
+        if (Test-Path -LiteralPath $stage.dwm) {
+            Move-Item -LiteralPath $stage.dwm -Destination (Join-Path $backup "dwmapi.dll") -Force
+            $state.original_dwmapi = $true
+        }
+        if (Test-Path -LiteralPath $stage.ue4ss) {
+            Move-Item -LiteralPath $stage.ue4ss -Destination (Join-Path $backup "ue4ss") -Force
+            $state.original_ue4ss = $true
+        }
+        if (Test-Path -LiteralPath $stage.xinput) {
+            Move-Item -LiteralPath $stage.xinput -Destination (Join-Path $backup "xinput1_3.dll") -Force
+            $state.original_xinput = $true
+        }
+
+        $state |
+            ConvertTo-Json |
+            Set-Content -LiteralPath (Join-Path $backup "state.json") -Encoding UTF8
+
+        Copy-Item -LiteralPath $Build.dwm -Destination $stage.dwm -Force
+        Copy-Item -LiteralPath $Build.ue4ss -Destination $stage.ue4ss -Recurse -Force
+        return $stage
+    } catch {
+        $message = $_.Exception.Message
+        try {
+            Restore-MomentumUE4SSProbe $stage
+        } catch {
+        }
+        throw "Failed to stage the UE4SS runtime probe in '$Win64': $message"
+    }
 }
 
 function Restore-MomentumUE4SSProbe($Stage) {
