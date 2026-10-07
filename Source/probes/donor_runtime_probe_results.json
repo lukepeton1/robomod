@@ -11,6 +11,16 @@
       "context": "runtime probe executed while an affixed dropped Igniter Gun was visibly present",
       "conclusion": "AWeaponAffix behavior objects are not enumerable as world actors. Do not use actor enumeration for GRAFT donor discovery.",
       "next_seam": "retrieve non-actor AWeaponAffix UObject references from the owning AWeapon or one of its native managers/containers"
+    },
+    {
+      "id": "aweapon_get_affix_row_names",
+      "method": "BP_Interactive_Weapon.SpawnedWeapon -> AAWeapon.GetAffixRowNames()",
+      "status": "verified",
+      "observed_result": "non_empty",
+      "trigger": "actual dropped-weapon interaction (E)",
+      "context": "runtime probe executed against a visibly affixed dropped Dual Rascals; tooltip showed ordinary/native affix content and Rocket Jump",
+      "conclusion": "AAWeapon.GetAffixRowNames() is a working cooked/native seam for authoritative donor row enumeration. Promote exact native row IDs into GRAFT donor validation.",
+      "supersedes_primary_path": "AWeaponAffix UObject class/custom-property reconstruction is fallback-only when a native row ID is unavailable"
     }
   ]
 }
