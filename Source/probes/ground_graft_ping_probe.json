@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-ground-graft-ping-probe",
+  "status": "diagnostic_probe",
+  "trigger": {
+    "input": "existing ping action on a dropped weapon",
+    "server_rpc": "BP_APlayer.OnServerPingActor(ActorRef, Location)",
+    "donor_actor_type": "AInteractiveWeapon",
+    "non_weapon_behavior": "fall through to vanilla ping"
+  },
+  "native_seams": {
+    "donor_weapon": "AInteractiveWeapon.SpawnedWeapon",
+    "donor_rows": "AAWeapon.GetAffixRowNames()",
+    "target_weapon": "Character_Player.currentWeapon",
+    "target_rows": "AAWeapon.GetAffixRowNames()",
+    "mutation": "BP_APlayer.AddEnchantedAffix(RowName)",
+    "currency_balance": "Character_Player.CurrentTicket",
+    "currency_debit": "Character_Player.RemoveTicket(int)",
+    "currency_refund": "Character_Player.AddTicket(int, false)",
+    "donor_consume": "AActor.K2_DestroyActor() on the dropped AInteractiveWeapon"
+  },
+  "selection": {
+    "mode": "first_supported_donor_row_by_priority",
+    "final_ui_requirement": "replace automatic choice with explicit native-feeling donor-row selection",
+    "candidates": [
+      {
+        "row": "Fragmentation",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "AutoShotgun",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "Bounce",
+        "base_cost": 2,
+        "rarity": "EWeaponAffixRarity::Common",
+        "core_composition": true
+      },
+      {
+        "row": "Pierce",
+        "base_cost": 2,
+        "rarity": "EWeaponAffixRarity::Common",
+        "core_composition": true
+      },
+      {
+        "row": "Ricochet",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "Burn",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "Ice",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "Shock",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "ExplosiveBlank",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "FreeShot",
+        "base_cost": 4,
+        "rarity": "EWeaponAffixRarity::Rare",
+        "core_composition": true
+      },
+      {
+        "row": "Firerate",
+        "base_cost": 2,
+        "rarity": "EWeaponAffixRarity::Common",
+        "core_composition": false
+      },
+      {
+        "row": "Impact",
+        "base_cost": 2,
+        "rarity": "EWeaponAffixRarity::Common",
+        "core_composition": false
+      },
+      {
+        "row": "MarkDamage",
+        "base_cost": 2,
+        "rarity": "EWeaponAffixRarity::Common",
+        "core_composition": false
+      },
+      {
+        "row": "AutoCritical",
+        "base_cost": 2,
+        "rarity": "EWeaponAffixRarity::Common",
+        "core_composition": false
+      }
+    ]
+  },
+  "validation_order": [
+    "actor is AInteractiveWeapon",
+    "SpawnedWeapon is valid and distinct from currentWeapon",
+    "donor GetAffixRowNames contains a supported candidate",
+    "target does not already contain selected row",
+    "target quality is above common",
+    "AffixAmount is below color + 2 quality cap",
+    "CurrentTicket >= base cost + max(0, AffixAmount - 2)"
+  ],
+  "commit_order": [
+    "RemoveTicket(total_cost)",
+    "AddEnchantedAffix(selected_row) on server player",
+    "re-read currentWeapon.GetAffixRowNames()",
+    "if selected row absent: AddTicket(total_cost, false) and leave donor",
+    "if selected row present: K2_DestroyActor(donor interactive) and suppress vanilla ping"
+  ],
+  "quality_caps": {
+    "0": 0,
+    "1": 3,
+    "2": 4,
+    "3": 5,
+    "4": 6
+  },
+  "free_complexity_affixes": 2
+}
