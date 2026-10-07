@@ -17,7 +17,7 @@ class NativeAffixMetadataScannerTests(unittest.TestCase):
     def test_printable_strings_extract_ascii_and_utf16(self):
         payload = (
             b"prefix\x00"
-            b"AWeaponAffix\x00"
+            b"AWeaponAffix\\x00\\x00\\x00"
             + "WeaponStatManager".encode("utf-16le")
             + b"\x00\x00tail"
         )
