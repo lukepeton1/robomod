@@ -432,8 +432,32 @@ function Invoke-ProbePython([string[]]$Arguments) {
 }
 
 function Find-RoboquestShippingProcess([string]$ExpectedPath) {
-    foreach ($proc in Get-Process -ErrorAction SilentlyContinue | Where-Object { $_.ProcessName -ieq "RoboQuest-Win64-Shipping" }) {
-        try { if ([System.IO.Path]::GetFullPath($proc.Path) -ieq $ExpectedPath) { return $proc } } catch {}
+    foreach ($proc in Get-Process -ErrorAction SilentlyContinue | Where-Object {
+        $_.ProcessName -ieq "RoboQuest-Win64-Shipping"
+    }) {
+        $candidate = $null
+
+        try {
+            $candidate = $proc.Path
+        } catch {
+        }
+
+        if (-not $candidate) {
+            try {
+                $cim = Get-CimInstance Win32_Process -Filter "ProcessId=$($proc.Id)" -ErrorAction SilentlyContinue
+                $candidate = [string]$cim.ExecutablePath
+            } catch {
+            }
+        }
+
+        if ($candidate) {
+            try {
+                if ([System.IO.Path]::GetFullPath($candidate) -ieq $ExpectedPath) {
+                    return $proc
+                }
+            } catch {
+            }
+        }
     }
     return $null
 }
