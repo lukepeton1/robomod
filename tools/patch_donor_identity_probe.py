@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Instrument BP_Interactive_Weapon with a narrow AWeaponAffix actor-enumeration probe.
+"""Instrument BP_Interactive_Weapon with a visible AWeaponAffix enumeration probe.
 
-This diagnostic answers one question needed by ground-donor GRAFT:
+The previous diagnostic used KismetSystemLibrary.PrintString from GetInteractSound.
+Roboquest retail builds may suppress on-screen/log debug output, so this version
+uses the game's normal interaction error-text surface instead.
 
-    Can Roboquest's live AWeaponAffix instances be enumerated through
-    GameplayStatics.GetAllActorsOfClass(AWeaponAffix)?
+Probe behavior:
+- CanInteract is temporarily forced false for dropped weapons;
+- GetErrorText enumerates live AWeaponAffix actors;
+- the normal interaction UI displays one of:
+    WF PROBE: AWeaponAffix actors found
+    WF PROBE: AWeaponAffix count = 0
 
-When GetInteractSound executes for a dropped weapon, the patched function:
-- gathers all live AWeaponAffix actors;
-- prints a short diagnostic label;
-- prints the resulting actor count;
-- then continues through the original GetInteractSound bytecode unchanged.
-
-This is diagnostic-only. It does not mutate weapon state or consume the donor.
+This answers the only question needed at this stage: whether live AWeaponAffix
+actors are enumerable at all. It does not mutate weapon state or consume a donor.
 """
 from __future__ import annotations
 
@@ -22,18 +23,23 @@ import json
 from pathlib import Path
 from typing import Any
 
-from kismet_layout import insert_top_level_statements, validate_asset
+from kismet_layout import (
+    expression_size,
+    insert_top_level_statements,
+    validate_asset,
+)
 
 
 class PatchError(RuntimeError):
     pass
 
 
-FUNCTION = "GetInteractSound"
+ERROR_FUNCTION = "GetErrorText"
+CAN_INTERACT_FUNCTION = "CanInteract"
 LOCAL_ACTORS = "WF_AffixActors"
 LOCAL_COUNT = "WF_AffixActorCount"
-LOCAL_COUNT_TEXT = "WF_AffixActorCountText"
-LABEL = "Weapon Foundry AWeaponAffix count:"
+POSITIVE_TEXT = "WF PROBE: AWeaponAffix actors found"
+ZERO_TEXT = "WF PROBE: AWeaponAffix count = 0"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -85,7 +91,6 @@ def add_import(
     existing = import_index(asset, object_name)
     if existing is not None:
         return existing
-
     ensure_names(asset, [object_name])
     asset.setdefault("Imports", []).append({
         "$type": "UAssetAPI.Import, UAssetAPI",
@@ -99,18 +104,18 @@ def add_import(
     return -len(asset["Imports"])
 
 
-def find_function(asset: dict[str, Any]) -> tuple[int, dict[str, Any]]:
+def find_function(asset: dict[str, Any], name: str) -> tuple[int, dict[str, Any]]:
     matches = [
         (i + 1, export)
         for i, export in enumerate(asset.get("Exports", []))
         if "FunctionExport" in str(export.get("$type", ""))
-        and export.get("ObjectName") == FUNCTION
+        and export.get("ObjectName") == name
     ]
     if len(matches) != 1:
-        raise PatchError(f"expected one {FUNCTION}, found {len(matches)}")
+        raise PatchError(f"expected one {name}, found {len(matches)}")
     owner, fn = matches[0]
     if not isinstance(fn.get("ScriptBytecode"), list) or fn.get("ScriptBytecodeRaw"):
-        raise PatchError(f"{FUNCTION} bytecode is not fully decoded")
+        raise PatchError(f"{name} bytecode is not fully decoded")
     return owner, fn
 
 
@@ -132,6 +137,13 @@ def local_variable(owner: int, path: str) -> dict[str, Any]:
     }
 
 
+def local_out_variable(owner: int, path: str) -> dict[str, Any]:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LocalOutVariable, UAssetAPI",
+        "Variable": property_pointer(owner, path),
+    }
+
+
 def add_probe_locals(
     fn: dict[str, Any],
     *,
@@ -139,7 +151,7 @@ def add_probe_locals(
 ) -> None:
     loaded = fn.setdefault("LoadedProperties", [])
     existing = {prop.get("Name") for prop in loaded}
-    required = {LOCAL_ACTORS, LOCAL_COUNT, LOCAL_COUNT_TEXT}
+    required = {LOCAL_ACTORS, LOCAL_COUNT}
     overlap = required & existing
     if overlap:
         raise PatchError(f"probe locals already exist: {sorted(overlap)}")
@@ -188,20 +200,6 @@ def add_probe_locals(
             "Flags": "RF_Public",
             "MetaDataMap": None,
         },
-        {
-            "$type": "UAssetAPI.FieldTypes.FGenericProperty, UAssetAPI",
-            "ArrayDim": "TArray",
-            "ElementSize": 16,
-            "PropertyFlags": "CPF_None",
-            "RepIndex": 0,
-            "RepNotifyFunc": "None",
-            "BlueprintReplicationCondition": "COND_None",
-            "RawValue": None,
-            "SerializedType": "StrProperty",
-            "Name": LOCAL_COUNT_TEXT,
-            "Flags": "RF_Public",
-            "MetaDataMap": None,
-        },
     ])
 
 
@@ -214,147 +212,62 @@ def set_array(owner: int) -> dict[str, Any]:
     }
 
 
-def linear_color(struct_index: int) -> dict[str, Any]:
+def make_text(value: str, key: str) -> dict[str, Any]:
     return {
-        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_StructConst, UAssetAPI",
-        "Struct": struct_index,
-        "StructSize": 16,
-        "Value": [
-            {
-                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_FloatConst, UAssetAPI",
-                "Value": 0.0,
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_TextConst, UAssetAPI",
+        "Value": {
+            "$type": "UAssetAPI.Kismet.Bytecode.FScriptText, UAssetAPI",
+            "TextLiteralType": "LocalizedText",
+            "LocalizedSource": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_StringConst, UAssetAPI",
+                "Value": value,
             },
-            {
-                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_FloatConst, UAssetAPI",
-                "Value": 0.66,
+            "LocalizedKey": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_StringConst, UAssetAPI",
+                "Value": key,
             },
-            {
-                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_FloatConst, UAssetAPI",
-                "Value": 1.0,
+            "LocalizedNamespace": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_StringConst, UAssetAPI",
+                "Value": "WeaponFoundryProbe",
             },
-            {
-                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_FloatConst, UAssetAPI",
-                "Value": 1.0,
-            },
-        ],
+            "InvariantLiteralString": None,
+            "LiteralString": None,
+            "StringTableAsset": None,
+            "StringTableId": None,
+            "StringTableKey": None,
+        },
     }
 
 
-def print_statement(
+def assign_text_return(owner: int, value: str, key: str) -> dict[str, Any]:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
+        "Value": property_pointer(owner, "ReturnValue"),
+        "Variable": local_out_variable(owner, "ReturnValue"),
+        "Expression": make_text(value, key),
+    }
+
+
+def return_out(owner: int) -> dict[str, Any]:
+    return {
+        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Return, UAssetAPI",
+        "ReturnExpression": local_out_variable(owner, "ReturnValue"),
+    }
+
+
+def patch_error_text(
+    asset: dict[str, Any],
     *,
-    print_index: int,
-    linear_color_index: int,
-    message: str | dict[str, Any],
+    affix_class: int,
+    get_all: int,
+    default_array: int,
+    array_length: int,
+    greater_int: int,
 ) -> dict[str, Any]:
-    text_expr = (
-        {
-            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_StringConst, UAssetAPI",
-            "Value": message,
-        }
-        if isinstance(message, str)
-        else message
-    )
-    return {
-        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
-        "StackNode": print_index,
-        "Parameters": [
-            {"$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Self, UAssetAPI"},
-            text_expr,
-            {"$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_True, UAssetAPI"},
-            {"$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_True, UAssetAPI"},
-            linear_color(linear_color_index),
-            {
-                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_FloatConst, UAssetAPI",
-                "Value": 4.0,
-            },
-        ],
-    }
-
-
-def patch(asset: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
-    patched = copy.deepcopy(asset)
-    validate_asset(patched)
-
-    owner, fn = find_function(patched)
-
-    engine_package = require_import(patched, "/Script/Engine")
-    roboquest_package = require_import(patched, "/Script/RoboQuest")
-    core_package = require_import(patched, "/Script/CoreUObject")
-    gameplay_statics = require_import(patched, "GameplayStatics")
-    kismet_system = require_import(patched, "KismetSystemLibrary")
-
-    kismet_array = add_import(
-        patched,
-        "KismetArrayLibrary",
-        outer_index=engine_package,
-        class_package="/Script/CoreUObject",
-        class_name="Class",
-    )
-    kismet_string = add_import(
-        patched,
-        "KismetStringLibrary",
-        outer_index=engine_package,
-        class_package="/Script/CoreUObject",
-        class_name="Class",
-    )
-    affix_class = add_import(
-        patched,
-        "AWeaponAffix",
-        outer_index=roboquest_package,
-        class_package="/Script/CoreUObject",
-        class_name="Class",
-    )
-    default_array = add_import(
-        patched,
-        "Default__KismetArrayLibrary",
-        outer_index=engine_package,
-        class_package="/Script/Engine",
-        class_name="KismetArrayLibrary",
-    )
-    linear_color_index = add_import(
-        patched,
-        "LinearColor",
-        outer_index=core_package,
-        class_package="/Script/CoreUObject",
-        class_name="Object",
-    )
-
-    get_all = add_import(
-        patched,
-        "GetAllActorsOfClass",
-        outer_index=gameplay_statics,
-        class_package="/Script/CoreUObject",
-        class_name="Object",
-    )
-    array_length = add_import(
-        patched,
-        "Array_Length",
-        outer_index=kismet_array,
-        class_package="/Script/CoreUObject",
-        class_name="Object",
-    )
-    int_to_string = add_import(
-        patched,
-        "Conv_IntToString",
-        outer_index=kismet_string,
-        class_package="/Script/CoreUObject",
-        class_name="Object",
-    )
-    print_string = add_import(
-        patched,
-        "PrintString",
-        outer_index=kismet_system,
-        class_package="/Script/CoreUObject",
-        class_name="Object",
-    )
-
-    name_map_added = ensure_names(
-        patched,
-        [LOCAL_ACTORS, LOCAL_COUNT, LOCAL_COUNT_TEXT],
-    )
+    owner, fn = find_function(asset, ERROR_FUNCTION)
     add_probe_locals(fn, affix_class_index=affix_class)
 
-    statements = [
+    statements: list[dict[str, Any]] = [
         set_array(owner),
         {
             "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
@@ -389,45 +302,140 @@ def patch(asset: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
             },
         },
         {
-            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_Let, UAssetAPI",
-            "Value": property_pointer(owner, LOCAL_COUNT_TEXT),
-            "Variable": local_variable(owner, LOCAL_COUNT_TEXT),
-            "Expression": {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_JumpIfNot, UAssetAPI",
+            "CodeOffset": 0,
+            "BooleanExpression": {
                 "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_CallMath, UAssetAPI",
-                "StackNode": int_to_string,
-                "Parameters": [local_variable(owner, LOCAL_COUNT)],
+                "StackNode": greater_int,
+                "Parameters": [
+                    local_variable(owner, LOCAL_COUNT),
+                    {
+                        "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_IntConst, UAssetAPI",
+                        "Value": 0,
+                    },
+                ],
             },
         },
-        print_statement(
-            print_index=print_string,
-            linear_color_index=linear_color_index,
-            message=LABEL,
+        assign_text_return(
+            owner,
+            POSITIVE_TEXT,
+            "WeaponFoundryAffixActorsFound",
         ),
-        print_statement(
-            print_index=print_string,
-            linear_color_index=linear_color_index,
-            message=local_variable(owner, LOCAL_COUNT_TEXT),
+        return_out(owner),
+        assign_text_return(
+            owner,
+            ZERO_TEXT,
+            "WeaponFoundryAffixActorsZero",
         ),
+        return_out(owner),
     ]
 
-    insertion = insert_top_level_statements(fn, 0, statements)
+    # EX_JumpIfNot targets the first zero-result statement. Since insertion is
+    # at byte offset zero, this is simply the size of all prior probe statements.
+    statements[3]["CodeOffset"] = sum(expression_size(x) for x in statements[:6])
+
+    report = insert_top_level_statements(fn, 0, statements)
+    report["function"] = ERROR_FUNCTION
+    return report
+
+
+def patch_can_interact(asset: dict[str, Any]) -> dict[str, Any]:
+    owner, fn = find_function(asset, CAN_INTERACT_FUNCTION)
+    statements = [
+        {
+            "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_LetBool, UAssetAPI",
+            "VariableExpression": local_out_variable(owner, "ReturnValue"),
+            "AssignmentExpression": {
+                "$type": "UAssetAPI.Kismet.Bytecode.Expressions.EX_False, UAssetAPI",
+            },
+        },
+        return_out(owner),
+    ]
+    report = insert_top_level_statements(fn, 0, statements)
+    report["function"] = CAN_INTERACT_FUNCTION
+    return report
+
+
+def patch(asset: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
+    patched = copy.deepcopy(asset)
     validate_asset(patched)
 
+    engine_package = require_import(patched, "/Script/Engine")
+    roboquest_package = require_import(patched, "/Script/RoboQuest")
+    gameplay_statics = require_import(patched, "GameplayStatics")
+    kismet_math = require_import(patched, "KismetMathLibrary")
+
+    kismet_array = add_import(
+        patched,
+        "KismetArrayLibrary",
+        outer_index=engine_package,
+        class_package="/Script/CoreUObject",
+        class_name="Class",
+    )
+    affix_class = add_import(
+        patched,
+        "AWeaponAffix",
+        outer_index=roboquest_package,
+        class_package="/Script/CoreUObject",
+        class_name="Class",
+    )
+    default_array = add_import(
+        patched,
+        "Default__KismetArrayLibrary",
+        outer_index=engine_package,
+        class_package="/Script/Engine",
+        class_name="KismetArrayLibrary",
+    )
+    get_all = add_import(
+        patched,
+        "GetAllActorsOfClass",
+        outer_index=gameplay_statics,
+        class_package="/Script/CoreUObject",
+        class_name="Object",
+    )
+    array_length = add_import(
+        patched,
+        "Array_Length",
+        outer_index=kismet_array,
+        class_package="/Script/CoreUObject",
+        class_name="Object",
+    )
+    greater_int = add_import(
+        patched,
+        "Greater_IntInt",
+        outer_index=kismet_math,
+        class_package="/Script/CoreUObject",
+        class_name="Object",
+    )
+
+    name_map_added = ensure_names(patched, [LOCAL_ACTORS, LOCAL_COUNT])
+    error_report = patch_error_text(
+        patched,
+        affix_class=affix_class,
+        get_all=get_all,
+        default_array=default_array,
+        array_length=array_length,
+        greater_int=greater_int,
+    )
+    interact_report = patch_can_interact(patched)
+
+    validate_asset(patched)
     report = {
         "asset": "BP_Interactive_Weapon",
-        "function": FUNCTION,
         "diagnostic_only": True,
-        "probe": "global live AWeaponAffix actor enumeration",
-        "label": LABEL,
+        "probe": "visible live AWeaponAffix actor enumeration",
+        "presentation": "normal interaction error text",
+        "positive_text": POSITIVE_TEXT,
+        "zero_text": ZERO_TEXT,
+        "interaction_temporarily_disabled": True,
         "name_map_added": name_map_added,
         "imports": {
             "AWeaponAffix": affix_class,
             "GetAllActorsOfClass": get_all,
             "Array_Length": array_length,
-            "Conv_IntToString": int_to_string,
-            "PrintString": print_string,
+            "Greater_IntInt": greater_int,
         },
-        **insertion,
+        "functions": [error_report, interact_report],
     }
     return patched, report
 
@@ -454,19 +462,18 @@ def walk(value: Any):
 
 def verify(asset: dict[str, Any]) -> dict[str, Any]:
     validate_asset(asset)
-    owner, fn = find_function(asset)
+    _, error_fn = find_function(asset, ERROR_FUNCTION)
+    _, interact_fn = find_function(asset, CAN_INTERACT_FUNCTION)
 
-    loaded = {prop.get("Name"): prop for prop in fn.get("LoadedProperties") or []}
-    for name in (LOCAL_ACTORS, LOCAL_COUNT, LOCAL_COUNT_TEXT):
+    loaded = {prop.get("Name"): prop for prop in error_fn.get("LoadedProperties") or []}
+    for name in (LOCAL_ACTORS, LOCAL_COUNT):
         if name not in loaded:
             raise PatchError(f"probe local missing: {name}")
 
     calls: list[str] = []
     affix_class_argument = False
-    label_present = False
-    count_text_used = False
-
-    for expr in walk(fn.get("ScriptBytecode") or []):
+    text_values: set[str] = set()
+    for expr in walk(error_fn.get("ScriptBytecode") or []):
         expr_type = str(expr.get("$type", "")).split(",", 1)[0].rsplit(".", 1)[-1]
         if expr_type in {"EX_CallMath", "EX_FinalFunction"}:
             call = object_name(asset, expr.get("StackNode"))
@@ -474,43 +481,44 @@ def verify(asset: dict[str, Any]) -> dict[str, Any]:
                 calls.append(call)
             if call == "GetAllActorsOfClass":
                 params = expr.get("Parameters") or []
-                if len(params) >= 2 and params[1].get("Value"):
+                if len(params) >= 2 and isinstance(params[1].get("Value"), int):
                     affix_class_argument = (
                         object_name(asset, params[1]["Value"]) == "AWeaponAffix"
                     )
-            if call == "PrintString":
-                params = expr.get("Parameters") or []
-                if len(params) >= 2:
-                    text = params[1]
-                    if text.get("Value") == LABEL:
-                        label_present = True
-                    ptr = (text.get("Variable") or {}).get("New") or {}
-                    if ptr.get("Path") == [LOCAL_COUNT_TEXT]:
-                        count_text_used = True
+        if expr_type == "EX_StringConst":
+            value = expr.get("Value")
+            if isinstance(value, str):
+                text_values.add(value)
 
-    required_calls = {
-        "GetAllActorsOfClass",
-        "Array_Length",
-        "Conv_IntToString",
-        "PrintString",
-    }
+    required_calls = {"GetAllActorsOfClass", "Array_Length", "Greater_IntInt"}
     missing = required_calls - set(calls)
     if missing:
         raise PatchError(f"probe calls missing: {sorted(missing)}")
     if not affix_class_argument:
         raise PatchError("GetAllActorsOfClass is not targeting AWeaponAffix")
-    if not label_present or not count_text_used:
-        raise PatchError("diagnostic PrintString statements are incomplete")
+    if POSITIVE_TEXT not in text_values or ZERO_TEXT not in text_values:
+        raise PatchError("visible probe status text is incomplete")
+
+    code = interact_fn.get("ScriptBytecode") or []
+    if len(code) < 2:
+        raise PatchError("CanInteract probe is incomplete")
+    first_type = str(code[0].get("$type", "")).split(",", 1)[0].rsplit(".", 1)[-1]
+    second_type = str(code[1].get("$type", "")).split(",", 1)[0].rsplit(".", 1)[-1]
+    if first_type != "EX_LetBool" or second_type != "EX_Return":
+        raise PatchError("CanInteract is not short-circuited by the visible probe")
+    assignment = code[0].get("AssignmentExpression") or {}
+    if not str(assignment.get("$type", "")).endswith("EX_False, UAssetAPI"):
+        raise PatchError("CanInteract probe does not return false")
 
     return {
         "verified": True,
         "asset": "BP_Interactive_Weapon",
-        "function": FUNCTION,
-        "script_bytecode_size": fn.get("ScriptBytecodeSize"),
-        "probe_locals": [LOCAL_ACTORS, LOCAL_COUNT, LOCAL_COUNT_TEXT],
+        "functions": [ERROR_FUNCTION, CAN_INTERACT_FUNCTION],
         "required_calls": sorted(required_calls),
         "target_class": "AWeaponAffix",
-        "label": LABEL,
+        "positive_text": POSITIVE_TEXT,
+        "zero_text": ZERO_TEXT,
+        "interaction_temporarily_disabled": True,
     }
 
 
