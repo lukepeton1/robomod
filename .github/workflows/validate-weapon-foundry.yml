@@ -46,6 +46,7 @@ jobs:
           python3 tools/generate_raycast_seeker_probe.py
           python3 tools/generate_graft_compatibility.py
           python3 tools/generate_donor_identity.py
+          python3 tools/generate_ground_graft_probe.py
 
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
@@ -77,4 +78,5 @@ jobs:
             Source/probes/raycast_seeker_eligibility.json \
             Source/composition/alt_fire_skill_profiles.json \
             Source/grafting/compatibility_matrix.json \
-            Source/grafting/donor_identity_catalog.json
+            Source/grafting/donor_identity_catalog.json \\
+            Source/probes/ground_graft_ping_probe.json
