@@ -197,16 +197,18 @@ $manifest = [ordered]@{
     diagnostic_probe = $true
     generated_utc = [DateTime]::UtcNow.ToString("o")
     production_release_candidate_included = $true
-    purpose = "Validate that live AWeaponAffix instances can be enumerated as actors from cooked Blueprint."
+    purpose = "Validate that live AWeaponAffix instances can be enumerated as actors from cooked Blueprint using the normal interaction error-text surface."
     modified_probe_package = "RoboQuest/Content/Blueprint/Interactive/Reward/BP_Interactive_Weapon"
-    trigger = "BP_Interactive_Weapon.GetInteractSound"
+    trigger = "hover/focus a dropped BP_Interactive_Weapon; diagnostic CanInteract=false causes GetErrorText to render"
     expected_screen_output = @(
-        "Weapon Foundry AWeaponAffix count:",
-        "<integer count>"
+        "WF PROBE: AWeaponAffix actors found",
+        "or",
+        "WF PROBE: AWeaponAffix count = 0"
     )
+    interaction_temporarily_disabled = $true
     interpretation = [ordered]@{
-        positive = "A count greater than zero proves the native actor-enumeration primitive needed for donor row identity."
-        zero = "Zero while weapons with affixes are live disproves or narrows the actor-enumeration hypothesis."
+        positive = "The 'actors found' interaction error proves the native actor-enumeration primitive needed for donor row identity."
+        zero = "The '= 0' interaction error while affixed weapons are live disproves or narrows the actor-enumeration hypothesis."
         crash_or_load_failure = "Treat as a failed probe; restore the normal RC and keep the runtime enumeration seam unproven."
     }
 }
