@@ -233,7 +233,9 @@ def build_catalog(
         "schema_version": 1,
         "name": "weapon-foundry-donor-runtime-identity",
         "runtime_model": {
-            "enumeration": "enumerate live AWeaponAffix instances and keep only instances whose WeaponRef equals the donor AWeapon",
+            "acquisition": "retrieve live AWeaponAffix UObject references from the owning AWeapon or another native owner/container; actor enumeration is explicitly invalid",
+            "actor_enumeration": "DISPROVEN: GameplayStatics.GetAllActorsOfClass(AWeaponAffix) returned 0 in a real run with an affixed dropped weapon present",
+            "ownership_filter": "after references are obtained, keep only AWeaponAffix instances whose WeaponRef equals the donor AWeapon",
             "class_identity": "GetObjectClass(AWeaponAffix instance)",
             "custom_identity": "AWeaponAffix.GetCustomFloatProperties(Name); absent keys are treated as 0",
             "enchanted_disambiguation": "AWeapon.GetCurrentEnchantedAffixRowName()",
