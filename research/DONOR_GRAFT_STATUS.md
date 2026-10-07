@@ -13,87 +13,19 @@ Weapon Foundry already has a working mutation path for ordinary affix rows:
 
 The production transfer policy already classifies which ordinary affixes/alt-fires are legal graft candidates.
 
-## Raw UAssetAPI handoff result
+## Cooked UAssetAPI handoff result
 
-The expanded UE4.26 legacy handoff has been collected and analyzed. It contains the dropped-weapon, player, weapon, affix, tooltip, merchant, compendium and relevant DataTable packages with decoded Kismet bytecode.
+The expanded UE4.26 legacy handoff contains the dropped-weapon, player, weapon, affix, tooltip, merchant, compendium and relevant DataTable packages with decoded Kismet bytecode.
 
-The raw pass confirms there is no obvious Blueprint-callable native function that simply returns every ordinary affix row name attached to an `AWeapon`.
+The cooked pass did **not** contain a Blueprint graph that called a full ordinary-affix enumerator, so the getter signature was not recoverable from a compiled Blueprint call site.
 
-The tooltip path is also not the row-enumeration source of truth:
+The tooltip path is not the row-enumeration source of truth:
 
 - `WGT_Tooltip_Weapon` is a thin child of native `WeaponTooltipWidget`;
 - `WGT_Tooltip_WeaponAffix` is a thin child of native `WeaponAffixTooltipWidget`;
 - `WGT_WeaponCompendium_Affix` can render a supplied `WeaponAffixRow`, but it does not discover live donor rows.
 
-The singular native `AWeapon.GetCurrentEnchantedAffixRowName()` getter remains useful for perfume-slot provenance but is not the ordinary-affix enumerator.
-
-## Runtime identity model
-
-The raw affix Blueprints expose the state needed to identify a row once a live affix object reference is available.
-
-`AWeaponAffix` behavior objects expose/consume:
-
-- `WeaponRef`, identifying the weapon instance the affix belongs to;
-- `GetCustomFloatProperties(Name)`, exposing row-supplied custom parameter values;
-- concrete UObject class identity.
-
-The generated `DT_WeaponAffix` and `DT_WeaponMod` catalogs map every transferable row to:
-
-- its affix class;
-- its custom-float payload;
-- its property kind;
-- its transfer policy.
-
-Therefore donor row identity does **not** need to be inferred from display strings.
-
-The identity algorithm remains:
-
-1. obtain live `AWeaponAffix` object references from the authoritative weapon/native owner container;
-2. keep only objects whose `WeaponRef` is the donor `AWeapon`;
-3. map concrete affix class to candidate transferable rows;
-4. where multiple transferable rows share a class, query only the minimum custom-float keys necessary to distinguish them;
-5. subtract/guard the donor's current enchanted row through `GetCurrentEnchantedAffixRowName()`;
-6. subtract chassis-native/internal lookalikes using donor weapon-row provenance;
-7. fail closed if an active locked variant remains ambiguous.
-
-## Generated donor identity catalog
-
-`tools/generate_donor_identity.py` generates:
-
-`Source/grafting/donor_identity_catalog.json`
-
-from:
-
-- `research/generated/affixes.json`;
-- `research/generated/weapon_mods.json`;
-- `research/generated/weapons.json`;
-- `Source/grafting/transfer_policy.json`.
-
-Current catalog coverage:
-
-- 65 transferable rows total;
-- 50 rows have an exact class/custom runtime signature with no locked-row collision;
-- 15 rows require an explicit context/provenance guard;
-- 4 transferable class families require custom-property discrimination.
-
-The generator deliberately fails if a future transferable row develops an unresolved runtime-identity collision.
-
-## Context-guarded collisions
-
-The remaining signature collisions are known rather than hidden.
-
-They fall into three classes:
-
-1. **enchanted-slot variants**
-   - identified separately by `GetCurrentEnchantedAffixRowName()`;
-2. **chassis/internal variants**
-   - subtracted from the live multiset using weapon-row preset provenance;
-3. **inactive rows**
-   - never exposed as donor choices.
-
-Examples include ordinary vs enchanted forms of Area Size, Boss Damage, Critical, Fire Rate and Reload Speed, plus internal rows such as `IceBlank`, `ShockBlank`, BuddyBot variants and the narrow `RocketJump_0` alt-fire row.
-
-`tools/reconcile_donor_affixes.py` implements the reference multiset reconciliation behavior.
+The singular native `AWeapon.GetCurrentEnchantedAffixRowName()` getter remains useful for perfume-slot provenance.
 
 ## Empirical result: world-actor enumeration is disproven
 
@@ -120,65 +52,135 @@ The result is recorded in:
 
 `Source/probes/donor_runtime_probe_results.json`
 
-The old actor-enumeration probe is diagnostic history only. Production GRAFT must not call `GetAllActorsOfClass(AWeaponAffix)`.
+Production GRAFT must not call `GetAllActorsOfClass(AWeaponAffix)`.
 
-## New static ownership evidence
+## Shipping-binary metadata breakthrough
 
-The same raw handoff gives a stronger explanation for the zero result.
+A filtered metadata scan of `RoboQuest-Win64-Shipping.exe` exposed the native `AAWeapon` state that cooked Blueprint graphs never referenced directly.
 
-### Weapon-owned native managers
+The findings are summarized in:
 
-`BP_AWeapon` serializes native inherited references to:
+`Source/probes/native_affix_metadata_findings.json`
 
+### Reflected AAWeapon property block
+
+The same reflected property cluster contains:
+
+- `DT_WeaponAffix`;
+- `DT_WeaponMod`;
 - `WeaponStatManager`;
 - `WeaponSkillManager`;
-- `DT_WeaponAffix`;
-- `DT_WeaponMod`.
+- `Affixes`;
+- `TmpAffixPool`;
+- `RandomAffixes`;
+- `RandomAffixesRarity`.
 
-Those manager objects are now primary candidates for the live affix/object ownership seam.
+This materially upgrades the old `Affixes` hypothesis: it is no longer inferred from the unrelated stealth trigger. `Affixes` is an actual reflected `AAWeapon` field name in the shipping binary.
 
-### Non-actor AWeaponAffix arrays exist in native gameplay objects
+### Reflected AAWeapon native function block
 
-`BP_APlayer.SetStealthState` provides direct compiled-Kismet evidence that Roboquest uses `AWeaponAffix` as ordinary object references:
+The same native callable-function cluster contains:
 
-1. it creates a native `Trigger_Weapon` with `SpawnObject`;
-2. it constructs a typed `TArray<AWeaponAffix>`;
-3. it calls `SetArrayPropertyByName` on the trigger with property name `Affixes`.
+- `AddEnchantedAffix`;
+- `AddRandomAffixe`;
+- `GetAffixAmountByRarity`;
+- `GetAffixLevel`;
+- `GetAffixRow`;
+- `GetAffixRowNames`;
+- `GetCurrentEnchantedAffixRowName`;
+- `GetDataRowName`;
+- `InitializeAffixe`;
+- `RerollRandomAffixes`;
+- `UpgradeWeaponAffixQuality`.
 
-This proves two important facts:
+This is the most important new seam.
 
-- `AWeaponAffix` references can live in ordinary UObject arrays rather than the world actor registry;
-- native Roboquest gameplay objects already use an `Affixes` array typed as `AWeaponAffix`.
+`GetAffixRowNames` appears in the same reflected native function table as `GetCurrentEnchantedAffixRowName` and `GetDataRowName`, both of which are already observed as usable native Blueprint calls elsewhere in the cooked game.
 
-It does **not** yet prove that the owning `AWeapon` property itself is named `Affixes`; that must be discovered rather than guessed.
+### Native implementation strings
 
-### Confirmed AWeaponAffix ownership pointer
+The shipping binary also exposes implementation/debug strings for:
 
-Across the collected affix Blueprints, the native `AWeaponAffix` base exposes `WeaponRef`. Once the actual owner/container yields object references, donor filtering is straightforward and does not require UI text.
+- `AAWeapon::InitializeAffixe`;
+- `AAWeapon::RemoveAffixes`;
+- `AAWeapon::RemoveEliteAffixe`;
+- `AAWeapon::GetRandomAffixBundle`;
+- `AAWeapon::SetWeaponSavedData`;
+- `AAWeapon::InitWeaponSavedData`;
+- `AAWeapon::GetRandomAffixe`.
 
-## Current gate: locate the native UObject container
+This strongly supports `AAWeapon` itself as the authoritative affix owner, not an external world registry.
 
-The next gate is no longer row identification. It is acquiring the live affix UObject references.
+### Row-level identity types
 
-Priority order:
+Native metadata contains:
 
-1. discover an `AWeapon` native array/container of `AWeaponAffix` references;
-2. inspect `WeaponStatManager` / `WeaponSkillManager` ownership or registries;
-3. inspect reflected native class/property metadata from the installed game if the relevant field is never referenced by collected Blueprint bytecode;
-4. only after the exact native field/API is known, add a cooked probe that reads it;
-5. runtime DLL/reflection hooks remain a last resort.
+- `LoadedAffix`;
+- `bEnchantedAffix`;
+- `WeaponAffixRow`;
+- `WeaponAffixRowHandle`;
+- `WeaponAffixBundleRowHandle`.
 
-Do **not** guess a field such as `AWeapon.Affixes` merely because `Trigger_Weapon.Affixes` exists.
+That confirms stable row-level identity exists below the tooltip layer.
+
+## Current gate: validate AAWeapon.GetAffixRowNames()
+
+The new narrow cooked probe is:
+
+- patcher: `tools/patch_donor_rowname_probe.py`;
+- builder: `tools/windows/build-donor-rowname-probe.ps1`;
+- runner: `tools/windows/run-donor-rowname-probe.cmd`.
+
+The probe:
+
+1. reads the dropped interactive's native `SpawnedWeapon`;
+2. calls reflected native `AAWeapon.GetAffixRowNames()`;
+3. models the return as `TArray<FName>`;
+4. checks only whether the array is empty;
+5. intentionally returns false from `CanInteract` so Roboquest renders the result through the normal interaction-error UI;
+6. does not mutate the weapon, currency or donor state.
+
+Expected result after pressing the normal interaction key on a visibly affixed dropped weapon:
+
+- `WF ROW PROBE: GetAffixRowNames returned rows`
+- or `WF ROW PROBE: GetAffixRowNames returned 0 rows`.
+
+Interpretation:
+
+- **returned rows** -> promote `GetAffixRowNames()` as the authoritative ordinary-affix donor enumerator;
+- **returned 0 rows** -> the reflected function exists, but our inferred return model or its semantics need further work;
+- **crash/load failure** -> the synthesized call signature is invalid and must not be promoted.
+
+## Runtime identity fallback
+
+If `GetAffixRowNames()` succeeds, direct row IDs supersede most of the previously planned class/custom-property reconstruction.
+
+The generated donor identity catalog remains useful for:
+
+- validating transfer-policy coverage;
+- identifying native/chassis lookalikes where needed;
+- fallback reconstruction if some affix object exists without a row name;
+- future provenance/recursion tracking.
+
+If direct row enumeration fails, the fallback identity model is:
+
+1. obtain `AWeaponAffix` UObject references from `AAWeapon.Affixes` or an exact native owner/container;
+2. filter by `WeaponRef`;
+3. map concrete affix class + minimum custom-float keys to row IDs;
+4. subtract enchanted/chassis-native lookalikes;
+5. fail closed on ambiguity.
+
+`tools/reconcile_donor_affixes.py` implements the reference multiset reconciliation behavior.
 
 ## Planned ground transaction
 
-Once donor-owned affix references/rows are available:
+Once authoritative donor row enumeration is validated:
 
 1. focus dropped donor;
-2. resolve donor-owned transferable rows through the native container + `WeaponRef` + donor identity catalog;
+2. read exact donor affix/mod row IDs through the native weapon API;
 3. show legal and useful blocked choices using the shared rule engine;
 4. player selects one exact donor row;
-5. server re-reads the donor-native state and verifies the row still exists;
+5. server re-reads the donor-native row list and verifies the row still exists;
 6. server validates transferability, target compatibility, conflicts, duplicates, complexity and alt-fire slot;
 7. server computes Power Cell cost;
 8. reserve/debit Power Cells;
@@ -204,9 +206,9 @@ It should be reused or matched rather than inventing a detached developer menu.
 
 ## Fallback order
 
-1. exact native `AWeapon` / manager UObject container;
-2. minimal cooked Blueprint exposure of that exact native container;
-3. native tooltip/row-payload seam if it can be proven to carry stable row identity;
+1. direct `AAWeapon.GetAffixRowNames()`;
+2. exact `AAWeapon.Affixes` / native manager UObject container;
+3. minimal cooked Blueprint exposure of that exact native state;
 4. minimal runtime reflection layer only if cooked/native paths are conclusively insufficient.
 
 The project remains PAK-only until that boundary is actually reached.
