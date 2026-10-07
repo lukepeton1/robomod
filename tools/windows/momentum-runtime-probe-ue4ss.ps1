@@ -82,18 +82,21 @@ function Configure-MomentumUE4SSProbe([string]$Ue4ssDir) {
 print("[MomentumProbe] loaded")
 print("[MomentumProbe] EngineTickAvailable=" .. tostring(EngineTickAvailable))
 print("[MomentumProbe] ProcessEventAvailable=" .. tostring(ProcessEventAvailable))
-local dumped=false
-local function dump()
- if dumped then return end; dumped=true
- print("[MomentumProbe] starting native-only JMAP dump")
- local ok,err=pcall(function() DumpJMAP(false) end)
- print(ok and "[MomentumProbe] JMAP dump call completed" or ("[MomentumProbe] JMAP dump failed: "..tostring(err)))
+
+print("[MomentumProbe] starting native-only JMAP dump")
+local ok,err=pcall(function()
+    DumpJMAP(false, false)
+end)
+
+if ok then
+    print("[MomentumProbe] JMAP dump call completed")
+else
+    print("[MomentumProbe] JMAP dump failed: " .. tostring(err))
 end
-if ExecuteInGameThreadWithDelay ~= nil then ExecuteInGameThreadWithDelay(12000,dump)
-elseif ExecuteWithDelay ~= nil then ExecuteWithDelay(12000,dump)
-else dump() end
 '@
-    Set-Content (Join-Path $scripts "main.lua") $lua -Encoding UTF8
+    $luaPath = Join-Path $scripts "main.lua"
+    $utf8NoBom = New-Object System.Text.UTF8Encoding -ArgumentList $false
+    [System.IO.File]::WriteAllText($luaPath, $lua, $utf8NoBom)
     $mods=Join-Path $Ue4ssDir "Mods\mods.txt"; if(-not(Test-Path $mods)){New-Item -ItemType File -Force -Path $mods|Out-Null}
     $lines=@(Get-Content $mods -ErrorAction SilentlyContinue|Where-Object{$_ -notmatch '^\s*MomentumProbe\s*:'});$lines+="MomentumProbe : 1";Set-Content $mods $lines -Encoding UTF8
 }
