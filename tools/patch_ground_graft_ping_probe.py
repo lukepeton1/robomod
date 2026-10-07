@@ -597,6 +597,13 @@ def compile_block(
     current_weapon = instance(character_player, "currentWeapon")
     emit(let_bool(
         fn_index,
+        LOCAL_TARGET_VALID,
+        object_to_bool(copy.deepcopy(current_weapon)),
+    ))
+    emit(jump_if_not(local(fn_index, LOCAL_TARGET_VALID)), "fallthrough")
+
+    emit(let_bool(
+        fn_index,
         LOCAL_DISTINCT,
         math_call(
             not_equal_object,
