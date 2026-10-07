@@ -119,7 +119,7 @@ def main() -> int:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
-    print(f"wrote {OUTPUT}: {len(candidates)} quick-GRAFT candidate rows")
+    print(f"wrote {OUTPUT}: {len(candidates)} quick-GRAFT candidate rows; excluded {len(excluded_native_rows)} preset-bearing rows")
     return 0
 
 
