@@ -70,6 +70,34 @@ For the first RC pass, test at least one representative from each high-value beh
 
 Confirm input binding, cooldown/charge, original primary-fire behavior and whether elements/Buckshot propagate as predicted by the profile. Traversal inheritance (Seeker/Bounce/Pierce) is deliberately treated as a separate validation axis rather than assumed.
 
+## Donor GRAFT row-name gate
+
+The world-actor probe is complete and returned zero. Do not rerun it.
+
+The current donor-enumeration gate tests reflected native `AAWeapon.GetAffixRowNames()`.
+
+Install the diagnostic:
+
+```cmd
+tools\windows\run-donor-rowname-probe.cmd
+```
+
+In a run:
+
+1. find a dropped weapon whose tooltip visibly lists one or more affixes;
+2. press the normal interaction key (**E** by default);
+3. the diagnostic intentionally blocks the swap and should show exactly one of:
+   - `WF ROW PROBE: GetAffixRowNames returned rows`
+   - `WF ROW PROBE: GetAffixRowNames returned 0 rows`
+
+A positive result validates the direct native row-enumeration seam needed for GRAFT. A zero result or crash means the synthesized signature/semantics must be revisited before implementation.
+
+Restore normal production afterward:
+
+```cmd
+tools\windows\run-weapon-foundry.cmd
+```
+
 ## Save/load release gate
 
 With a multi-affix Foundry weapon:
