@@ -67,6 +67,13 @@ class DonorRuntimeIdentityTests(unittest.TestCase):
             self.assertNotIn("name", identity)
             self.assertNotIn("description", identity)
 
+    def test_actor_enumeration_is_explicitly_retired(self):
+        runtime = self.generated["runtime_model"]
+        self.assertIn("DISPROVEN", runtime["actor_enumeration"])
+        self.assertIn("owner/container", runtime["acquisition"])
+        self.assertIn("WeaponRef", runtime["ownership_filter"])
+        self.assertNotIn("GetAllActorsOfClass", runtime["acquisition"])
+
 
 if __name__ == "__main__":
     unittest.main()
