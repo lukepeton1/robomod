@@ -58,5 +58,5 @@ else dump() end
 '@
     Set-Content (Join-Path $scripts "main.lua") $lua -Encoding UTF8
     $mods=Join-Path $Ue4ssDir "Mods\mods.txt"; if(-not(Test-Path $mods)){New-Item -ItemType File -Force -Path $mods|Out-Null}
-    $lines=@(Get-Content $mods -ErrorAction SilentlyContinue|Where-Object{$_ -notmatch '^\s*MomentumProbe\s*:'t});$lines+="MomentumProbe : 1";Set-Content $mods $lines -Encoding UTF8
+    $lines=@(Get-Content $mods -ErrorAction SilentlyContinue|Where-Object{$_ -notmatch '^\s*MomentumProbe\s*:'});$lines+="MomentumProbe : 1";Set-Content $mods $lines -Encoding UTF8
 }
