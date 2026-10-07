@@ -110,13 +110,34 @@ class GraftContractAlignmentTests(unittest.TestCase):
 
     def test_actor_enumeration_is_forbidden_by_contract(self):
         usage = self.transaction["rule_engine"]["donor_identity_usage"]
-        self.assertIn("native container", usage)
-        self.assertIn("world-actor enumeration is forbidden", usage)
+        self.assertIn("AAWeapon.GetAffixRowNames()", usage)
+        self.assertIn("World-actor enumeration is forbidden", usage)
         self.assertIn("actor enumeration is invalid", self.ui["ground_graft"]["donor_enumeration"])
         self.assertEqual(
             self.transaction["rule_engine"]["donor_actor_enumeration"],
             "disproven by Source/probes/donor_runtime_probe_results.json",
         )
+
+    def test_native_row_getter_candidate_is_aligned(self):
+        tx = self.transaction["rule_engine"]
+        ground = self.ui["ground_graft"]
+        self.assertEqual(
+            tx["candidate_donor_row_enumerator"],
+            "AAWeapon.GetAffixRowNames()",
+        )
+        self.assertEqual(
+            ground["candidate_donor_row_enumerator"],
+            tx["candidate_donor_row_enumerator"],
+        )
+        self.assertEqual(
+            tx["candidate_donor_row_enumerator_probe"],
+            "tools/windows/run-donor-rowname-probe.cmd",
+        )
+        self.assertEqual(
+            ground["candidate_donor_row_probe"],
+            tx["candidate_donor_row_enumerator_probe"],
+        )
+        self.assertIn("runtime", tx["candidate_donor_row_enumerator_status"])
 
     def test_release_source_contains_rule_engine_and_generated_inputs(self):
         required = [
