@@ -58,7 +58,7 @@
       ]
     },
     "commit": [
-      "server re-enumerates donor rows",
+      "server re-reads donor-owned affix UObject references/rows from the authoritative native owner container",
       "server re-evaluates legality and cost",
       "server debits Power Cells",
       "server mutates target through native affix/mod path",
@@ -67,7 +67,8 @@
       "server replicates resulting weapon state"
     ],
     "cancel": "no state mutation",
-    "donor_enumeration": "live AWeaponAffix instances filtered by donor WeaponRef and reconciled against enchanted/chassis-native provenance"
+    "donor_enumeration": "retrieve donor-owned AWeaponAffix UObject references from the weapon/native owner container, filter by WeaponRef, and reconcile enchanted/chassis-native provenance; GameplayStatics actor enumeration is invalid",
+    "donor_actor_probe_result": "Source/probes/donor_runtime_probe_results.json"
   },
   "smith": {
     "trigger": "Foundry / Smith interaction",
