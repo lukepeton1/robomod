@@ -93,8 +93,6 @@ local function bootstrap()
     local native_loader, load_error = package.loadlib(dll, "luaopen_momentum_native")
     local native_uninstall, uninstall_error =
         package.loadlib(dll, "luaopen_momentum_native_uninstall")
-    local native_slide_start, slide_start_error =
-        package.loadlib(dll, "luaopen_momentum_slide_start")
     local native_slide_end, slide_end_error =
         package.loadlib(dll, "luaopen_momentum_slide_end")
 
@@ -106,11 +104,8 @@ local function bootstrap()
         announce("ERROR: native uninstall export missing: " .. tostring(uninstall_error))
         return false
     end
-    if not native_slide_start or not native_slide_end then
-        announce(
-            "ERROR: native PowerSlide exports missing: "
-            .. tostring(slide_start_error or slide_end_error)
-        )
+    if not native_slide_end then
+        announce("ERROR: native PowerSlide end export missing: " .. tostring(slide_end_error))
         return false
     end
 
@@ -120,31 +115,47 @@ local function bootstrap()
         return false
     end
 
-    local hook_ok, pre_id, post_id = pcall(
-        RegisterHook,
-        "/Script/RoboQuest.APlayerAnimInstance:OnDelegatePowerSlide",
-        function(_, bIsStart)
-            local event_ok, event_error
-            if bIsStart then
-                event_ok, event_error = pcall(native_slide_start)
-            else
-                event_ok, event_error = pcall(native_slide_end)
-            end
-            if not event_ok then
-                announce("PowerSlide latch callback failed: " .. tostring(event_error))
-            end
-        end
-    )
+    local function install_slide_end_hook_when_player_exists()
+        if slide_hook_pre then return end
 
-    if not hook_ok then
-        announce("ERROR: PowerSlide delegate hook failed: " .. tostring(pre_id))
-        pcall(native_uninstall)
-        return false
+        local player = FindFirstOf("Character_Player")
+        if not player or not player:IsValid() then
+            if ExecuteInGameThreadWithDelay then
+                ExecuteInGameThreadWithDelay(1000, install_slide_end_hook_when_player_exists)
+            end
+            return
+        end
+
+        local hook_ok, pre_id, post_id = pcall(
+            RegisterHook,
+            "/Script/RoboQuest.Character_Player:OnEndPowerSlide",
+            function()
+                local event_ok, event_error = pcall(native_slide_end)
+                if not event_ok then
+                    announce("PowerSlide end latch callback failed: " .. tostring(event_error))
+                end
+            end
+        )
+
+        if not hook_ok then
+            announce("PowerSlide end hook deferred/failed: " .. tostring(pre_id))
+            if ExecuteInGameThreadWithDelay then
+                ExecuteInGameThreadWithDelay(1000, install_slide_end_hook_when_player_exists)
+            end
+            return
+        end
+
+        slide_hook_pre = pre_id
+        slide_hook_post = post_id
+        announce("PowerSlide end hook installed after player construction.")
     end
 
-    slide_hook_pre = pre_id
-    slide_hook_post = post_id
     loaded = true
+    if ExecuteInGameThreadWithDelay then
+        ExecuteInGameThreadWithDelay(1000, install_slide_end_hook_when_player_exists)
+    else
+        install_slide_end_hook_when_player_exists()
+    end
     local status = io.open(root .. "/runtime-status.txt", "r")
     if status then
         announce(status:read("*l") or "native loader returned")
@@ -158,7 +169,7 @@ local function bootstrap()
             if slide_hook_pre then
                 pcall(
                     UnregisterHook,
-                    "/Script/RoboQuest.APlayerAnimInstance:OnDelegatePowerSlide",
+                    "/Script/RoboQuest.Character_Player:OnEndPowerSlide",
                     slide_hook_pre,
                     slide_hook_post
                 )
