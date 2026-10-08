@@ -34,13 +34,28 @@ function Find-MomentumArtifactZip([string]$Provided) {
     throw "Download MomentumOverhaul-runtime.zip and place it in repo\handoff\, repo root, or Downloads."
 }
 
+function Resolve-MomentumNativeArtifact([string]$ExtractedRoot) {
+    foreach ($relative in @(
+        "native\main.dll",
+        "dlls\main.dll"
+    )) {
+        $candidate = Join-Path $ExtractedRoot $relative
+        if (Test-Path -LiteralPath $candidate -PathType Leaf) {
+            return [pscustomobject]@{
+                RelativePath = $relative
+                FullPath = [System.IO.Path]::GetFullPath($candidate)
+            }
+        }
+    }
+    throw "Invalid Momentum runtime artifact: missing native\main.dll (or legacy dlls\main.dll)."
+}
+
 function Enable-MomentumMod([string]$Ue4ssRoot, [string]$ExtractedRoot, [bool]$ModeActive) {
     $modRoot = Join-Path $Ue4ssRoot "Mods\MomentumOverhaul"
     New-Item -ItemType Directory -Force -Path $modRoot | Out-Null
 
     foreach ($file in @(
         "Scripts\main.lua",
-        "dlls\main.dll",
         "config\momentum.ini"
     )) {
         $source = Join-Path $ExtractedRoot $file
@@ -51,6 +66,11 @@ function Enable-MomentumMod([string]$Ue4ssRoot, [string]$ExtractedRoot, [bool]$M
         New-Item -ItemType Directory -Force -Path (Split-Path -Parent $destination) | Out-Null
         Copy-Item -LiteralPath $source -Destination $destination -Force
     }
+
+    $nativeArtifact = Resolve-MomentumNativeArtifact $ExtractedRoot
+    $nativeDestination = Join-Path $modRoot "native\main.dll"
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $nativeDestination) | Out-Null
+    Copy-Item -LiteralPath $nativeArtifact.FullPath -Destination $nativeDestination -Force
 
     # Force safe observation mode unless explicitly requested otherwise.
     $modeText = if ($ModeActive) { "active=1" } else { "active=0" }
@@ -176,11 +196,12 @@ try {
     Expand-Archive -LiteralPath $RuntimeZipPath -DestinationPath $extracted -Force
 
     # Validate package contents BEFORE modifying the game installation.
-    foreach ($file in @("Scripts\main.lua", "dlls\main.dll", "config\momentum.ini")) {
+    foreach ($file in @("Scripts\main.lua", "config\momentum.ini")) {
         if (-not (Test-Path -LiteralPath (Join-Path $extracted $file) -PathType Leaf)) {
             throw "Invalid Momentum runtime artifact: missing $file"
         }
     }
+    $null = Resolve-MomentumNativeArtifact $extracted
 
     $writeTest = Join-Path $win64 ".momentum-write-test-$PID.tmp"
     [System.IO.File]::WriteAllText($writeTest, "momentum")
