@@ -87,6 +87,15 @@ def fixture():
             "PackageName": None,
             "bImportOptional": False,
         },
+        {
+            "$type": "UAssetAPI.Import, UAssetAPI",
+            "ObjectName": "Character_Player",
+            "OuterIndex": -3,
+            "ClassPackage": "/Script/CoreUObject",
+            "ClassName": "Class",
+            "PackageName": None,
+            "bImportOptional": False,
+        },
     ]
 
     owner = 1
@@ -141,11 +150,12 @@ def fixture():
             "/Script/RoboQuest",
             "AInteractiveWeapon",
             "AWeapon",
+            "Character_Player",
             "GetInteractSound",
             "PlayerCharacter",
             "ReturnValue",
         ],
-        "NamesReferencedFromExportDataCount": 8,
+        "NamesReferencedFromExportDataCount": 9,
         "Imports": imports,
         "Exports": [fn],
     }
@@ -179,7 +189,7 @@ class GroundGraftSafeHostProbeTests(unittest.TestCase):
         )
         self.assertEqual(
             result["mutation"],
-            "PlayerCharacter.AddEnchantedAffix(RowName)",
+            "PlayerCharacter.OnServerAddEnchantedAffix(RowName, captured currentWeapon)",
         )
 
     def test_patch_adds_typed_probe_locals(self):
@@ -193,6 +203,7 @@ class GroundGraftSafeHostProbeTests(unittest.TestCase):
         )
         self.assertEqual(props[LOCAL_CONTAINS]["SerializedType"], "BoolProperty")
         self.assertEqual(props[LOCAL_SELECTED_ROW]["SerializedType"], "NameProperty")
+        self.assertEqual(props["WF_TargetWeapon"]["SerializedType"], "ObjectProperty")
 
     def test_candidate_rows_and_virtual_mutation_are_registered(self):
         patched, _ = patch(fixture(), spec())
@@ -200,7 +211,7 @@ class GroundGraftSafeHostProbeTests(unittest.TestCase):
         for row in ("Fragmentation", "Bounce", "Burn"):
             self.assertIn(row, names)
         self.assertIn("SpawnedWeapon", names)
-        self.assertIn("AddEnchantedAffix", names)
+        self.assertIn("OnServerAddEnchantedAffix", names)
 
     def test_original_function_body_survives_after_probe_block(self):
         original = fixture()
