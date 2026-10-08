@@ -133,15 +133,19 @@ if (-not $contentRoot) {
 $relative = "Blueprint\Player\BP_APlayer"
 $source = Join-Path $contentRoot ($relative + ".uasset")
 $stageRoot = Join-Path $OutputDir "staging"
+$probeStageRoot = Join-Path $OutputDir "probe-staging"
 $releaseRoot = Join-Path $OutputDir "release"
 $jsonRoot = Join-Path $OutputDir "work\ground-graft-ping-json"
 $reportRoot = Join-Path $OutputDir "work\ground-graft-ping-reports"
-New-Item -ItemType Directory -Force -Path $jsonRoot,$reportRoot | Out-Null
+if (Test-Path -LiteralPath $probeStageRoot) {
+    Remove-Item -Recurse -Force $probeStageRoot
+}
+New-Item -ItemType Directory -Force -Path $jsonRoot,$reportRoot,$probeStageRoot | Out-Null
 
 $originalJson = Join-Path $jsonRoot "BP_APlayer.original.json"
 $patchedJson = Join-Path $jsonRoot "BP_APlayer.ground-graft-ping-probe.json"
 $roundtripJson = Join-Path $jsonRoot "BP_APlayer.roundtrip.json"
-$stageBase = Join-Path $stageRoot ("RoboQuest\Content\" + $relative)
+$stageBase = Join-Path $probeStageRoot ("RoboQuest\Content\" + $relative)
 $patcher = Join-Path $RepoRoot "tools\patch_ground_graft_ping_probe.py"
 $spec = Join-Path $RepoRoot "Source\probes\ground_graft_ping_probe.json"
 $kismetLayout = Join-Path $RepoRoot "tools\kismet_layout.py"
@@ -166,30 +170,50 @@ Export-UAssetJson ($stageBase + ".uasset") $roundtripJson "UAssetGUI ground GRAF
 Invoke-Python @($patcher, $roundtripJson, $spec, "--verify-only")
 Invoke-Python @($kismetLayout, $roundtripJson, "--validate")
 
-Write-Host "5/8 Repacking the full RC plus ground GRAFT ping probe..."
-foreach ($name in @("WeaponFoundry_P.pak","WeaponFoundry_P.ucas","WeaponFoundry_P.utoc")) {
+Write-Host "5/8 Packing BP_APlayer as a separate ground GRAFT overlay..."
+$probeNames = @(
+    "WeaponFoundry_GraftProbe_P.pak",
+    "WeaponFoundry_GraftProbe_P.ucas",
+    "WeaponFoundry_GraftProbe_P.utoc"
+)
+foreach ($name in $probeNames) {
     $existing = Join-Path $releaseRoot $name
     if (Test-Path -LiteralPath $existing) {
         Remove-Item -Force $existing
     }
 }
-$utoc = Join-Path $releaseRoot "WeaponFoundry_P.utoc"
-$proc = Start-Process -FilePath $RetocPath -ArgumentList @(
+
+$probeUtoc = Join-Path $releaseRoot "WeaponFoundry_GraftProbe_P.utoc"
+$retocLog = Join-Path $reportRoot "retoc-ground-graft-to-zen.log"
+$retocArgs = @(
     "to-zen",
     "--version",
     "UE4_26",
-    ('"' + $stageRoot + '"'),
-    ('"' + $utoc + '"')
-) -Wait -PassThru
-if ($proc.ExitCode -ne 0) {
-    throw "retoc ground GRAFT ping probe to-zen failed with exit code $($proc.ExitCode)."
+    $probeStageRoot,
+    $probeUtoc
+)
+
+$retocOutput = & $RetocPath @retocArgs 2>&1
+$retocExit = $LASTEXITCODE
+$retocOutput | Tee-Object -FilePath $retocLog
+if ($retocExit -ne 0) {
+    throw "retoc ground GRAFT overlay to-zen failed with exit code $retocExit. Full output: $retocLog"
+}
+
+$probePak = Join-Path $releaseRoot "WeaponFoundry_GraftProbe_P.pak"
+$probeUcas = Join-Path $releaseRoot "WeaponFoundry_GraftProbe_P.ucas"
+foreach ($required in @($probePak,$probeUcas,$probeUtoc)) {
+    if (-not (Test-Path -LiteralPath $required)) {
+        throw "Ground GRAFT overlay container missing: $required"
+    }
 }
 
 $pak = Join-Path $releaseRoot "WeaponFoundry_P.pak"
 $ucas = Join-Path $releaseRoot "WeaponFoundry_P.ucas"
+$utoc = Join-Path $releaseRoot "WeaponFoundry_P.utoc"
 foreach ($required in @($pak,$ucas,$utoc)) {
     if (-not (Test-Path -LiteralPath $required)) {
-        throw "Ground GRAFT ping probe container missing: $required"
+        throw "Production baseline container missing after overlay build: $required"
     }
 }
 
@@ -203,6 +227,8 @@ $manifest = [ordered]@{
     production_release_candidate_included = $true
     purpose = "Validate the complete server-side donor GRAFT commit order using Roboquest native row IDs, Power Cells, mutation, verification and donor destruction."
     modified_probe_package = "RoboQuest/Content/Blueprint/Player/BP_APlayer"
+    packaging = "separate WeaponFoundry_GraftProbe_P overlay layered on the already-built WeaponFoundry_P baseline"
+    retoc_log = "work/ground-graft-ping-reports/retoc-ground-graft-to-zen.log"
     trigger = "existing ping action on a dropped weapon; normal E equip/swap remains untouched"
     authoritative_donor_rows = "AInteractiveWeapon.SpawnedWeapon.GetAffixRowNames()"
     candidate_rows = $candidateRows
@@ -226,10 +252,10 @@ if ($Install) {
     $GamePaksDir = Resolve-Existing $GamePaksDir "Game Paks directory"
     $mods = Join-Path $GamePaksDir "Mods"
     New-Item -ItemType Directory -Force -Path $mods | Out-Null
-    foreach ($file in @($pak,$ucas,$utoc)) {
+    foreach ($file in @($pak,$ucas,$utoc,$probePak,$probeUcas,$probeUtoc)) {
         Copy-Item -LiteralPath $file -Destination (Join-Path $mods ([System.IO.Path]::GetFileName($file))) -Force
     }
-    Write-Host "Installed ground GRAFT ping probe to $mods"
+    Write-Host "Installed Weapon Foundry baseline + ground GRAFT overlay to $mods"
 }
 
 Write-Host "8/8 Ground GRAFT ping probe build complete."
