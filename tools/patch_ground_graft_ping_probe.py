@@ -46,6 +46,7 @@ LOCAL_CONTAINS = "WF_Contains"
 LOCAL_SELECTED_ROW = "WF_SelectedRow"
 LOCAL_BASE_COST = "WF_BaseCost"
 LOCAL_DISTINCT = "WF_Distinct"
+LOCAL_TARGET_VALID = "WF_TargetValid"
 LOCAL_TARGET_ROWS = "WF_TargetRows"
 LOCAL_TARGET_CONTAINS = "WF_TargetContains"
 LOCAL_NON_COMMON = "WF_NonCommon"
@@ -415,6 +416,7 @@ def add_probe_locals(
         generic_property(LOCAL_SELECTED_ROW, "NameProperty", 12),
         generic_property(LOCAL_BASE_COST, "IntProperty", 4),
         bool_property(LOCAL_DISTINCT),
+        bool_property(LOCAL_TARGET_VALID),
         name_array_property(LOCAL_TARGET_ROWS),
         bool_property(LOCAL_TARGET_CONTAINS),
         bool_property(LOCAL_NON_COMMON),
@@ -882,6 +884,7 @@ def verify(asset: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
         LOCAL_DONOR_ROWS,
         LOCAL_SELECTED_ROW,
         LOCAL_BASE_COST,
+        LOCAL_TARGET_VALID,
         LOCAL_TARGET_ROWS,
         LOCAL_TOTAL_COST,
         LOCAL_VERIFIED,
