@@ -2,7 +2,8 @@
 param(
     [string]$RuntimeZipPath = "",
     [string]$GameExePath = "",
-    [switch]$Active
+    [switch]$Active,
+    [switch]$LoaderOnly
 )
 
 $ErrorActionPreference = "Stop"
@@ -219,18 +220,20 @@ try {
     Write-Host "=== Roboquest Momentum native runtime smoke test ==="
     Write-Host "Artifact: $RuntimeZipPath"
     Write-Host "Executable: $GameExePath"
-    Write-Host ("Mode: " + $(if ($Active) { "ACTIVE (modifies movement)" } else { "OBSERVE (vanilla movement)" }))
+    Write-Host ("Mode: " + $(if ($LoaderOnly) { "LOADER-ONLY (UE4SS, no Momentum mod)" } elseif ($Active) { "ACTIVE (modifies movement)" } else { "OBSERVE (vanilla movement)" }))
 
     $extracted = Join-Path $Scratch "artifact"
-    Expand-Archive -LiteralPath $RuntimeZipPath -DestinationPath $extracted -Force
+    if (-not $LoaderOnly) {
+        Expand-Archive -LiteralPath $RuntimeZipPath -DestinationPath $extracted -Force
 
-    # Validate package contents BEFORE modifying the game installation.
-    foreach ($file in @("Scripts\main.lua", "config\momentum.ini")) {
-        if (-not (Test-Path -LiteralPath (Join-Path $extracted $file) -PathType Leaf)) {
-            throw "Invalid Momentum runtime artifact: missing $file"
+        # Validate package contents BEFORE modifying the game installation.
+        foreach ($file in @("Scripts\main.lua", "config\momentum.ini")) {
+            if (-not (Test-Path -LiteralPath (Join-Path $extracted $file) -PathType Leaf)) {
+                throw "Invalid Momentum runtime artifact: missing $file"
+            }
         }
+        $null = Resolve-MomentumNativeArtifact $extracted
     }
-    $null = Resolve-MomentumNativeArtifact $extracted
 
     $writeTest = Join-Path $win64 ".momentum-write-test-$PID.tmp"
     [System.IO.File]::WriteAllText($writeTest, "momentum")
@@ -249,10 +252,18 @@ try {
     Set-ProbeIniValue $settings "Debug" "GuiConsoleEnabled" "0"
     Set-ProbeIniValue $settings "Debug" "GuiConsoleVisible" "0"
 
-    $modRoot = Enable-MomentumMod $stage.ue4ss $extracted ([bool]$Active)
+    if (-not $LoaderOnly) {
+        $modRoot = Enable-MomentumMod $stage.ue4ss $extracted ([bool]$Active)
+    } else {
+        Write-Host "Momentum mod is intentionally NOT installed for loader-only isolation."
+    }
     $method = Start-MomentumGame $GameExePath $win64
     Write-Host "Launch method: $method"
-    Write-Host "Play SINGLE-PLAYER, move around for about one minute, then quit Roboquest normally."
+    if ($LoaderOnly) {
+        Write-Host "Enter the same game/basecamp path that previously crashed, wait about 30 seconds, then quit normally."
+    } else {
+        Write-Host "Play SINGLE-PLAYER, move around for about one minute, then quit Roboquest normally."
+    }
     Write-Host "This window will collect the hook telemetry and restore the original game installation."
 
     $deadline = (Get-Date).AddSeconds(90)
@@ -293,7 +304,7 @@ $manifest = [ordered]@{
     schema_version = 1
     generated_utc = [DateTime]::UtcNow.ToString("o")
     status = $status
-    mode = $(if ($Active) { "active" } else { "observe" })
+    mode = $(if ($LoaderOnly) { "loader_only" } elseif ($Active) { "active" } else { "observe" })
     runtime_artifact_sha256 = (Get-FileHash -LiteralPath $RuntimeZipPath -Algorithm SHA256).Hash.ToLowerInvariant()
     game_executable_filename = [System.IO.Path]::GetFileName($GameExePath)
     game_executable_sha256 = (Get-FileHash -LiteralPath $GameExePath -Algorithm SHA256).Hash.ToLowerInvariant()
