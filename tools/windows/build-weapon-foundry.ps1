@@ -388,6 +388,20 @@ if ($Install) {
     $GamePaksDir = Resolve-Existing $GamePaksDir "Game Paks directory"
     $mods = Join-Path $GamePaksDir "Mods"
     New-Item -ItemType Directory -Force -Path $mods | Out-Null
+
+    # Normal production must remove any diagnostic overlay so restoring the RC
+    # cannot accidentally leave BP_APlayer probe bytecode active.
+    foreach ($diagnosticName in @(
+        "WeaponFoundry_GraftProbe_P.pak",
+        "WeaponFoundry_GraftProbe_P.ucas",
+        "WeaponFoundry_GraftProbe_P.utoc"
+    )) {
+        $diagnosticPath = Join-Path $mods $diagnosticName
+        if (Test-Path -LiteralPath $diagnosticPath) {
+            Remove-Item -Force $diagnosticPath
+        }
+    }
+
     foreach ($file in @($pak, $ucas, $utoc)) {
         Copy-Item -LiteralPath $file -Destination (Join-Path $mods ([System.IO.Path]::GetFileName($file))) -Force
     }
