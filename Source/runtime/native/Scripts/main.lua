@@ -44,6 +44,9 @@ do
 end
 
 local loaded = false
+local slide_hook_pre = nil
+local slide_hook_post = nil
+
 local function bootstrap()
     if loaded then return true end
 
@@ -88,8 +91,26 @@ local function bootstrap()
     end
 
     local native_loader, load_error = package.loadlib(dll, "luaopen_momentum_native")
+    local native_uninstall, uninstall_error =
+        package.loadlib(dll, "luaopen_momentum_native_uninstall")
+    local native_slide_start, slide_start_error =
+        package.loadlib(dll, "luaopen_momentum_slide_start")
+    local native_slide_end, slide_end_error =
+        package.loadlib(dll, "luaopen_momentum_slide_end")
+
     if not native_loader then
         announce("ERROR: native DLL load failed: " .. tostring(load_error))
+        return false
+    end
+    if not native_uninstall then
+        announce("ERROR: native uninstall export missing: " .. tostring(uninstall_error))
+        return false
+    end
+    if not native_slide_start or not native_slide_end then
+        announce(
+            "ERROR: native PowerSlide exports missing: "
+            .. tostring(slide_start_error or slide_end_error)
+        )
         return false
     end
 
@@ -99,6 +120,30 @@ local function bootstrap()
         return false
     end
 
+    local hook_ok, pre_id, post_id = pcall(
+        RegisterHook,
+        "/Script/RoboQuest.APlayerAnimInstance:OnDelegatePowerSlide",
+        function(_, bIsStart)
+            local event_ok, event_error
+            if bIsStart then
+                event_ok, event_error = pcall(native_slide_start)
+            else
+                event_ok, event_error = pcall(native_slide_end)
+            end
+            if not event_ok then
+                announce("PowerSlide latch callback failed: " .. tostring(event_error))
+            end
+        end
+    )
+
+    if not hook_ok then
+        announce("ERROR: PowerSlide delegate hook failed: " .. tostring(pre_id))
+        pcall(native_uninstall)
+        return false
+    end
+
+    slide_hook_pre = pre_id
+    slide_hook_post = post_id
     loaded = true
     local status = io.open(root .. "/runtime-status.txt", "r")
     if status then
@@ -110,13 +155,17 @@ local function bootstrap()
 
     if ModRef then
         ModRef.OnUnload = function()
-            local cleanup, cleanup_error =
-                package.loadlib(dll, "luaopen_momentum_native_uninstall")
-            if cleanup then
-                pcall(cleanup)
-            else
-                announce("Uninstall export unavailable: " .. tostring(cleanup_error))
+            if slide_hook_pre then
+                pcall(
+                    UnregisterHook,
+                    "/Script/RoboQuest.APlayerAnimInstance:OnDelegatePowerSlide",
+                    slide_hook_pre,
+                    slide_hook_post
+                )
+                slide_hook_pre = nil
+                slide_hook_post = nil
             end
+            pcall(native_uninstall)
         end
     end
 
