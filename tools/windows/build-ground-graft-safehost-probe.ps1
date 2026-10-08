@@ -229,11 +229,12 @@ $manifest = [ordered]@{
     explicitly_not_modified = "RoboQuest/Content/Blueprint/Player/BP_APlayer"
     trigger = "normal E weapon interaction via GetInteractSound"
     authoritative_donor_rows = "SpawnedWeapon.GetAffixRowNames()"
-    mutation = "PlayerCharacter.AddEnchantedAffix(RowName)"
+    mutation = "PlayerCharacter.OnServerAddEnchantedAffix(RowName, captured currentWeapon)"
     candidate_rows = $candidateRows
     expected_behavior = @(
         "normal E swap still occurs",
-        "the weapon held before the swap receives the selected donor affix through the native player mutation chain",
+        "the pre-swap currentWeapon is captured and passed explicitly to OnServerAddEnchantedAffix",
+        "the weapon held before the swap receives the selected donor affix through the native server/multicast chain",
         "no Power Cells are debited in this diagnostic",
         "donor is not consumed by this diagnostic"
     )
