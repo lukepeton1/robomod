@@ -59,6 +59,7 @@ static std::filesystem::path g_mod_root{};
 static std::mutex g_log_mutex{};
 static std::atomic<std::uint64_t> g_target_calls{0};
 static std::atomic<bool> g_installed{false};
+static std::atomic<bool> g_slide_active{false};
 static CalcVelocity g_original{};
 static void** g_vtable{};
 static void* g_movement_class{};
@@ -295,7 +296,8 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
     const auto wish = at<FVector3f>(self, layout::acceleration);
     const float max_walk = at<float>(self, layout::max_walk_speed);
     const float max_accel = at<float>(self, layout::max_acceleration);
-    const float slide = at<float>(owner, layout::power_slide_rate);
+    const float slide_rate = at<float>(owner, layout::power_slide_rate);
+    const bool slide_active = g_slide_active.load(std::memory_order_acquire);
 
     original(self, dt, friction, fluid, deceleration);
     const auto vanilla = at<FVector3f>(self, layout::velocity);
@@ -312,7 +314,7 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
             ? static_cast<double>(max_walk) : g_config.ground_speed;
 
         if (movement_mode == 1 || movement_mode == 2) {
-            if (std::isfinite(slide) && slide > 1.0e-4f) {
+            if (slide_active) {
                 result = momentum::apply_slide_friction(result, g_config.slide_friction, dt);
                 result = momentum::accelerate_horizontal(
                     result, input, speed * analog, g_config.slide_acceleration, dt);
@@ -343,7 +345,9 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
         msg << std::fixed << std::setprecision(3)
             << "sample=" << call_number << " active=" << g_config.active
             << " mode=" << static_cast<unsigned>(movement_mode)
-            << " dash=" << dashing << " slide=" << slide
+            << " dash=" << dashing
+            << " slide_active=" << slide_active
+            << " slide_rate=" << slide_rate
             << " dt=" << dt << " max_walk=" << max_walk
             << " max_accel=" << max_accel
             << " pre=(" << before.x << "," << before.y << "," << before.z << ")"
@@ -369,7 +373,15 @@ bool patch_slot(void** table, void* replacement, void* expected) {
     return before == expected;
 }
 
+void set_slide_active(bool active) {
+    const bool previous = g_slide_active.exchange(active, std::memory_order_acq_rel);
+    if (previous != active) {
+        log(active ? "slide_event=start" : "slide_event=end");
+    }
+}
+
 void uninstall() {
+    g_slide_active.store(false, std::memory_order_release);
     if (!g_installed.exchange(false)) return;
     if (g_vtable && g_original) {
         if (patch_slot(g_vtable, reinterpret_cast<void*>(g_original),
@@ -418,6 +430,7 @@ bool install() {
         return false;
     }
 
+    g_slide_active.store(false, std::memory_order_release);
     g_movement_class = movement_class;
     g_player_class = player_class;
     g_original = reinterpret_cast<CalcVelocity>(expected);
@@ -447,6 +460,16 @@ extern "C" __declspec(dllexport) int luaopen_momentum_native(void*) {
 
 extern "C" __declspec(dllexport) int luaopen_momentum_native_uninstall(void*) {
     momentum_native::uninstall();
+    return 0;
+}
+
+extern "C" __declspec(dllexport) int luaopen_momentum_slide_start(void*) {
+    momentum_native::set_slide_active(true);
+    return 0;
+}
+
+extern "C" __declspec(dllexport) int luaopen_momentum_slide_end(void*) {
+    momentum_native::set_slide_active(false);
     return 0;
 }
 
