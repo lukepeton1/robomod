@@ -145,56 +145,51 @@ Production-direction consequences:
 
 The old row-name diagnostic runner is retired after this result.
 
-## Current gate: end-to-end ground GRAFT transaction
+## Current gate: safe-host replicated mutation
 
-The current diagnostic uses Roboquest's existing ping action as a temporary alternate dropped-weapon interaction while leaving **E** equip/swap untouched.
+The first end-to-end transaction attempt used `BP_APlayer.OnServerPingActor` as a server-authoritative host.
 
-Files:
+That transaction block:
 
-- policy generator: `tools/generate_ground_graft_probe.py`;
-- generated policy: `Source/probes/ground_graft_ping_probe.json`;
-- cooked patcher: `tools/patch_ground_graft_ping_probe.py`;
-- builder: `tools/windows/build-ground-graft-ping-probe.ps1`;
-- runner: `tools/windows/run-ground-graft-ping-probe.cmd`.
+- rebuilt and round-tripped successfully through UAssetAPI;
+- verified all 11 candidate rows;
+- preserved debit/refund/verification/donor-destruction ordering.
 
-The patch hooks the existing reliable server RPC:
+However, the shipped overlay crashed during Unreal class construction with:
 
-`BP_APlayer.OnServerPingActor(ActorRef, Location)`
+`Can't find ClassConstructor for class /Game/Blueprint/Player/BP_APlayer.BP_APlayer_C`
 
-For a dropped `AInteractiveWeapon`, the **server**:
+This happens before the injected GRAFT function can run.
 
-1. resolves `SpawnedWeapon`;
-2. reads `SpawnedWeapon.GetAffixRowNames()`;
-3. chooses the first probe-approved donor row by deterministic priority;
-4. rejects duplicates;
-5. enforces the 0/3/4/5/6 quality complexity policy;
-6. computes native Power Cell cost;
-7. verifies `CurrentTicket` funds;
-8. debits with `RemoveTicket`;
-9. calls the existing replicated `BP_APlayer.AddEnchantedAffix(RowName)` path;
-10. re-reads `currentWeapon.GetAffixRowNames()`;
-11. refunds with `AddTicket` and leaves the donor if verification fails;
-12. destroys the dropped donor interactive only after the target row is observed.
+Therefore the **BP_APlayer-hosted cooked overlay is retired on the current toolchain**. The failure may involve generated-class metadata/export-bundle layout rather than the transaction block itself, so the project records it as a host/toolchain failure rather than a logic failure.
 
-Non-weapon pings and validation failures fall through to vanilla ping behavior.
+The failure is recorded in:
 
-For the first transaction test, the automatic candidate pool is deliberately restricted to 11 globally-safe rows that are **never a shipping chassis preset**:
+`Source/probes/ground_graft_runtime_failures.json`
 
-- Fragmentation
-- Bounce
-- Pierce
-- Ricochet
-- Burn
-- Ice
-- Shock
-- FreeShot
-- Firerate
-- Impact
-- MarkDamage
+The current replacement diagnostic deliberately leaves `BP_APlayer` vanilla and uses a Blueprint package already proven to survive cooked UAssetAPI replacement in Roboquest:
 
-`AutoShotgun`, `AutoCritical`, and `ExplosiveBlank` are withheld from this diagnostic because they appear as native preset rows on at least one shipping chassis and could otherwise be mistaken for donor-transferable identity.
+- patcher: `tools/patch_ground_graft_safehost_probe.py`;
+- builder: `tools/windows/build-ground-graft-safehost-probe.ps1`;
+- runner: `tools/windows/run-ground-graft-safehost-probe.cmd`;
+- host: `BP_Interactive_Weapon.GetInteractSound(PlayerCharacter)`.
 
-This automatic first-match selection is diagnostic only. The final GRAFT UX must replace it with explicit native-feeling donor-row selection.
+On normal **E** interaction, the safe host:
+
+1. reads `SpawnedWeapon.GetAffixRowNames()`;
+2. selects the first probe-approved row from the same conservative 11-row candidate pool;
+3. calls `PlayerCharacter.AddEnchantedAffix(RowName)` virtually;
+4. allows the original weapon interaction/swap to continue unchanged.
+
+This probe intentionally does **not** debit Power Cells or consume the donor. Its only purpose is to prove that a safe reserialized dropped-weapon Blueprint can invoke Roboquest's existing replicated player mutation chain while the player Blueprint package remains untouched.
+
+Expected test result:
+
+- the donor swaps into the player's hands normally;
+- the weapon held immediately before the swap is now dropped;
+- that old target weapon now lists the selected donor affix.
+
+Once this cross-object replicated mutation succeeds, the next step is to move cost/consume/verification onto a safe server-authoritative native interaction seam rather than reintroducing a modified `BP_APlayer`.
 
 
 ## Runtime identity fallback
