@@ -205,6 +205,20 @@ class GroundGraftPingPatchTests(unittest.TestCase):
         self.assertEqual(props["WF_TotalCost"]["SerializedType"], "IntProperty")
         self.assertEqual(props["WF_TargetValid"]["SerializedType"], "BoolProperty")
 
+    def test_injected_reflected_names_are_registered(self):
+        patched, _ = patch(fixture(), spec())
+        names = set(patched["NameMap"])
+        for name in (
+            "SpawnedWeapon",
+            "currentWeapon",
+            "CurrentAffixBundle",
+            "AffixAmount",
+            "CurrentTicket",
+            "Color",
+            "AddEnchantedAffix",
+        ):
+            self.assertIn(name, names)
+
     def test_patch_keeps_normal_ping_for_non_weapon_or_validation_failure(self):
         patched, _ = patch(fixture(), spec())
         fn = next(x for x in patched["Exports"] if x["ObjectName"] == "OnServerPingActor")
