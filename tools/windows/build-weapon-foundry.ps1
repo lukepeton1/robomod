@@ -394,7 +394,10 @@ if ($Install) {
     foreach ($diagnosticName in @(
         "WeaponFoundry_GraftProbe_P.pak",
         "WeaponFoundry_GraftProbe_P.ucas",
-        "WeaponFoundry_GraftProbe_P.utoc"
+        "WeaponFoundry_GraftProbe_P.utoc",
+        "WeaponFoundry_GraftSafeHost_P.pak",
+        "WeaponFoundry_GraftSafeHost_P.ucas",
+        "WeaponFoundry_GraftSafeHost_P.utoc"
     )) {
         $diagnosticPath = Join-Path $mods $diagnosticName
         if (Test-Path -LiteralPath $diagnosticPath) {
