@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "weapon-foundry-ground-graft-runtime-failures",
+  "failures": [
+    {
+      "id": "bp_aplayer_overlay_class_constructor",
+      "status": "hard_runtime_failure",
+      "host_package": "RoboQuest/Content/Blueprint/Player/BP_APlayer",
+      "container": "WeaponFoundry_GraftProbe_P",
+      "observed_error": "Can't find ClassConstructor for class /Game/Blueprint/Player/BP_APlayer.BP_APlayer_C",
+      "phase": "class load / construction before GRAFT transaction execution",
+      "transaction_bytecode_status": "UAssetAPI rebuild and round-trip verification succeeded before runtime load",
+      "interpretation": "Do not ship or test the BP_APlayer-hosted probe with the current cooked toolchain. The failure may involve complex generated-class metadata/export-bundle layout; it does not prove the transaction block itself executed or failed.",
+      "replacement_host": "RoboQuest/Content/Blueprint/Interactive/Reward/BP_Interactive_Weapon",
+      "replacement_probe": "tools/windows/run-ground-graft-safehost-probe.cmd"
+    }
+  ]
+}
