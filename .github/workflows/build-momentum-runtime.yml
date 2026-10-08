@@ -34,7 +34,7 @@ jobs:
           $dll = Get-ChildItem build/momentum-native -Recurse -File -Filter MomentumNative.dll | Select-Object -First 1
           if (-not $dll) { throw "MomentumNative.dll missing after build." }
           $root = "artifact/MomentumOverhaul"
-          $dlls = Join-Path $root "dlls"
+          $dlls = Join-Path $root "native"
           $scripts = Join-Path $root "Scripts"
           $config = Join-Path $root "config"
           New-Item -ItemType Directory -Force -Path $dlls, $scripts, $config | Out-Null
