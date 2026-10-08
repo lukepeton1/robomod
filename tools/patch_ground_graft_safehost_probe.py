@@ -44,7 +44,8 @@ FUNCTION = "GetInteractSound"
 LOCAL_DONOR_ROWS = "WF_DonorRows"
 LOCAL_CONTAINS = "WF_Contains"
 LOCAL_SELECTED_ROW = "WF_SelectedRow"
-VIRTUAL_MUTATION = "AddEnchantedAffix"
+LOCAL_TARGET_WEAPON = "WF_TargetWeapon"
+VIRTUAL_MUTATION = "OnServerAddEnchantedAffix"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -268,6 +269,24 @@ def bool_property(name: str) -> dict[str, Any]:
     }
 
 
+def object_property(name: str, property_class: int) -> dict[str, Any]:
+    return {
+        "$type": "UAssetAPI.FieldTypes.FObjectProperty, UAssetAPI",
+        "PropertyClass": property_class,
+        "ArrayDim": "TArray",
+        "ElementSize": 8,
+        "PropertyFlags": "CPF_None",
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "RawValue": None,
+        "SerializedType": "ObjectProperty",
+        "Name": name,
+        "Flags": "RF_Public",
+        "MetaDataMap": None,
+    }
+
+
 def name_array_property(name: str) -> dict[str, Any]:
     return {
         "$type": "UAssetAPI.FieldTypes.FArrayProperty, UAssetAPI",
@@ -286,12 +305,13 @@ def name_array_property(name: str) -> dict[str, Any]:
     }
 
 
-def add_locals(asset: dict[str, Any], fn: dict[str, Any]) -> None:
+def add_locals(asset: dict[str, Any], fn: dict[str, Any], aweapon: int) -> None:
     loaded = fn.setdefault("LoadedProperties", [])
     definitions = [
         name_array_property(LOCAL_DONOR_ROWS),
         bool_property(LOCAL_CONTAINS),
         generic_property(LOCAL_SELECTED_ROW, "NameProperty", 12),
+        object_property(LOCAL_TARGET_WEAPON, aweapon),
     ]
     existing = {p.get("Name") for p in loaded}
     overlap = existing & {p["Name"] for p in definitions}
@@ -310,6 +330,7 @@ def compile_block(
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     ainteractive_weapon = require_import(asset, "AInteractiveWeapon")
     aweapon = require_import(asset, "AWeapon")
+    character_player = require_import(asset, "Character_Player")
     engine_package = require_import(asset, "/Script/Engine")
     kismet_array = add_import(
         asset,
@@ -332,8 +353,8 @@ def compile_block(
         outer_index=kismet_array,
     )
 
-    add_locals(asset, fn)
-    for name in ("SpawnedWeapon", "PlayerCharacter", VIRTUAL_MUTATION):
+    add_locals(asset, fn, aweapon)
+    for name in ("SpawnedWeapon", "PlayerCharacter", "currentWeapon", VIRTUAL_MUTATION):
         ensure_name(asset, name)
 
     candidates = list(spec.get("selection", {}).get("candidates") or [])
@@ -351,6 +372,17 @@ def compile_block(
         statements.append(expr)
         if target:
             targets.append((expr, target))
+
+    # Capture the target weapon before the native E interaction swaps weapons.
+    emit(let(
+        fn_index,
+        LOCAL_TARGET_WEAPON,
+        context(
+            local(fn_index, "PlayerCharacter"),
+            pointer(fn_index, LOCAL_TARGET_WEAPON),
+            instance(character_player, "currentWeapon"),
+        ),
+    ))
 
     # Reset donor row array, then read authoritative native donor rows.
     emit({
@@ -398,7 +430,10 @@ def compile_block(
     label("mutate")
     mutation = virtual_call(
         VIRTUAL_MUTATION,
-        [local(fn_index, LOCAL_SELECTED_ROW)],
+        [
+            local(fn_index, LOCAL_SELECTED_ROW),
+            local(fn_index, LOCAL_TARGET_WEAPON),
+        ],
     )
     emit(context(
         local(fn_index, "PlayerCharacter"),
@@ -435,7 +470,7 @@ def compile_block(
         "insertion_offset": insertion_offset,
         "block_size": block_size,
         "candidate_rows": [str(x["row"]) for x in candidates],
-        "mutation": "PlayerCharacter.AddEnchantedAffix(RowName)",
+        "mutation": "PlayerCharacter.OnServerAddEnchantedAffix(RowName, captured currentWeapon)",
         "normal_interaction": "original GetInteractSound and weapon swap remain intact",
     }
 
@@ -488,7 +523,7 @@ def verify(asset: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
     expected_rows = [str(x["row"]) for x in spec.get("selection", {}).get("candidates") or []]
 
     loaded = {p.get("Name"): p for p in fn.get("LoadedProperties") or []}
-    for name in (LOCAL_DONOR_ROWS, LOCAL_CONTAINS, LOCAL_SELECTED_ROW):
+    for name in (LOCAL_DONOR_ROWS, LOCAL_CONTAINS, LOCAL_SELECTED_ROW, LOCAL_TARGET_WEAPON):
         if name not in loaded:
             raise PatchError(f"safe-host local missing: {name}")
     if (loaded[LOCAL_DONOR_ROWS].get("Inner") or {}).get("SerializedType") != "NameProperty":
@@ -516,7 +551,7 @@ def verify(asset: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
         if required not in calls:
             raise PatchError(f"safe-host call missing: {required}")
     if VIRTUAL_MUTATION not in virtuals:
-        raise PatchError("safe-host probe does not call AddEnchantedAffix")
+        raise PatchError("safe-host probe does not call OnServerAddEnchantedAffix")
     for row in expected_rows:
         if row not in constants:
             raise PatchError(f"safe-host candidate missing: {row}")
