@@ -11,8 +11,9 @@ to survive cooked UAssetAPI round-trips in Roboquest:
 - actual E interaction enters GetInteractSound(PlayerCharacter);
 - donor SpawnedWeapon.GetAffixRowNames() supplies authoritative native row IDs;
 - the first probe-approved donor row is selected deterministically;
-- PlayerCharacter.AddEnchantedAffix(RowName) is invoked virtually;
-- that existing BP_APlayer wrapper retains Roboquest's native server/multicast
+- PlayerCharacter.currentWeapon is captured before the swap;
+- PlayerCharacter.OnServerAddEnchantedAffix(RowName, Weapon) is invoked virtually
+  with that explicit target weapon, reusing Roboquest's existing server/multicast
   mutation chain;
 - original GetInteractSound bytecode then runs unchanged, so normal weapon swap
   behavior remains intact.
@@ -577,7 +578,7 @@ def verify(asset: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
         "candidate_count": len(expected_rows),
         "candidate_rows": expected_rows,
         "authoritative_donor_rows": "AAWeapon.GetAffixRowNames()",
-        "mutation": "PlayerCharacter.AddEnchantedAffix(RowName)",
+        "mutation": "PlayerCharacter.OnServerAddEnchantedAffix(RowName, captured currentWeapon)",
         "script_bytecode_size": fn.get("ScriptBytecodeSize"),
     }
 
