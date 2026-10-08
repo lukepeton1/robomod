@@ -203,6 +203,7 @@ class GroundGraftPingPatchTests(unittest.TestCase):
 
         self.assertEqual(props["WF_SelectedRow"]["SerializedType"], "NameProperty")
         self.assertEqual(props["WF_TotalCost"]["SerializedType"], "IntProperty")
+        self.assertEqual(props["WF_TargetValid"]["SerializedType"], "BoolProperty")
 
     def test_patch_keeps_normal_ping_for_non_weapon_or_validation_failure(self):
         patched, _ = patch(fixture(), spec())
