@@ -299,7 +299,19 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
     const float max_walk = at<float>(self, layout::max_walk_speed);
     const float max_accel = at<float>(self, layout::max_acceleration);
     const float slide_rate = at<float>(owner, layout::power_slide_rate);
-    const bool slide_active = g_slide_active.load(std::memory_order_acquire);
+    bool slide_active = g_slide_active.load(std::memory_order_acquire);
+
+    // PowerSlideRate is a timeline value, not a durable state flag.  It does,
+    // however, hit ~1.0 at slide start on the validated build.  Latch start
+    // here inside the movement call and clear it from Character_Player::OnEndPowerSlide.
+    if (!slide_active && movement_mode == 1 &&
+        std::isfinite(slide_rate) && slide_rate >= 0.95f) {
+        const bool was = g_slide_active.exchange(true, std::memory_order_acq_rel);
+        if (!was) {
+            log("slide_event=start");
+        }
+        slide_active = true;
+    }
 
     const int previous_mode = g_last_movement_mode.exchange(
         static_cast<int>(movement_mode), std::memory_order_relaxed);
