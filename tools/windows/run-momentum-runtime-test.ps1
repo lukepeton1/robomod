@@ -106,6 +106,35 @@ function Enable-MomentumMod([string]$Ue4ssRoot, [string]$ExtractedRoot, [bool]$M
     return $modRoot
 }
 
+function Copy-RoboquestCrashDiagnostics([string]$OutputRoot) {
+    $savedRoot = Join-Path $env:LOCALAPPDATA "RoboQuest\Saved"
+    if (-not (Test-Path -LiteralPath $savedRoot)) { return }
+
+    $cutoff = (Get-Date).AddMinutes(-20)
+    $allowed = @(".log", ".txt", ".xml", ".ini", ".json")
+
+    foreach ($sourceRoot in @(
+        (Join-Path $savedRoot "Logs"),
+        (Join-Path $savedRoot "Crashes")
+    )) {
+        if (-not (Test-Path -LiteralPath $sourceRoot)) { continue }
+
+        $files = Get-ChildItem -LiteralPath $sourceRoot -File -Recurse -ErrorAction SilentlyContinue |
+            Where-Object {
+                $_.LastWriteTime -ge $cutoff -and
+                $allowed -contains $_.Extension.ToLowerInvariant()
+            } |
+            Sort-Object LastWriteTime -Descending |
+            Select-Object -First 12
+
+        foreach ($file in $files) {
+            $safeName = ($file.FullName.Substring($savedRoot.Length).TrimStart("\") -replace '[\\/:*?"<>|]', '_')
+            $destination = Join-Path $OutputRoot ("game-" + $safeName)
+            Copy-Item -LiteralPath $file.FullName -Destination $destination -Force -ErrorAction SilentlyContinue
+        }
+    }
+}
+
 function Start-MomentumGame([string]$GameExe, [string]$Win64) {
     $gameRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $Win64))
     $launcher = Join-Path $gameRoot "RoboQuest.exe"
@@ -243,6 +272,7 @@ try {
     }
     $status = "game_exited"
     Copy-MomentumLogs $modRoot $stage.ue4ss $OutputDir
+    Copy-RoboquestCrashDiagnostics $OutputDir
 } catch {
     $errorMessage = $_.Exception.ToString()
     if ($status -eq "not_started") { $status = "setup_failed" }
@@ -251,6 +281,7 @@ try {
     if ($stage) {
         Copy-MomentumLogs $modRoot $stage.ue4ss $OutputDir
     }
+    Copy-RoboquestCrashDiagnostics $OutputDir
 } finally {
     if ($stage) {
         Write-Host "Restoring original Roboquest/UE4SS files..."
