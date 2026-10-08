@@ -46,9 +46,25 @@ end
 local loaded = false
 local slide_hook_pre = nil
 local slide_hook_post = nil
+local waiting_announced = false
 
 local function bootstrap()
     if loaded then return true end
+
+    -- Do not patch CharacterMovement while Roboquest is still constructing
+    -- BP_APlayer_C.  Wait for a real, non-default player instance first.
+    local live_player = FindFirstOf("Character_Player")
+    if not live_player or not live_player:IsValid() then
+        if not waiting_announced then
+            announce("Waiting for live Character_Player before installing native movement hook.")
+            waiting_announced = true
+        end
+        return false
+    end
+
+    if waiting_announced then
+        announce("Live Character_Player found; installing native movement hook.")
+    end
 
     local movement_class = StaticFindObject("/Script/RoboQuest.RoboquestMovementComponent")
     local player_class = StaticFindObject("/Script/RoboQuest.Character_Player")
@@ -189,8 +205,8 @@ local function try_bootstrap()
     local ok, result = pcall(bootstrap)
     if not ok then announce("Bootstrap error: " .. tostring(result)) end
 
-    if not loaded and attempts < 20 and ExecuteInGameThreadWithDelay then
-        ExecuteInGameThreadWithDelay(1000, try_bootstrap)
+    if not loaded and attempts < 600 and ExecuteInGameThreadWithDelay then
+        ExecuteInGameThreadWithDelay(500, try_bootstrap)
     elseif not loaded then
         announce("Bootstrap could not initialize. Vanilla movement remains unchanged.")
     end
