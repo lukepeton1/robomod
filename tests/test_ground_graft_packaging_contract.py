@@ -42,6 +42,9 @@ class GroundGraftPackagingContractTests(unittest.TestCase):
             "WeaponFoundry_GraftProbe_P.pak",
             "WeaponFoundry_GraftProbe_P.ucas",
             "WeaponFoundry_GraftProbe_P.utoc",
+            "WeaponFoundry_GraftSafeHost_P.pak",
+            "WeaponFoundry_GraftSafeHost_P.ucas",
+            "WeaponFoundry_GraftSafeHost_P.utoc",
         ):
             self.assertIn(name, self.production)
         self.assertIn("Remove-Item -Force $diagnosticPath", self.production)
