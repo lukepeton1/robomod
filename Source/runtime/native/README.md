@@ -18,7 +18,7 @@ An executable update must fail closed. Never remove the fingerprint check to mak
 Copy under game Win64 directory:
 
     ue4ss/Mods/MomentumOverhaul/Scripts/main.lua
-    ue4ss/Mods/MomentumOverhaul/dlls/main.dll
+    ue4ss/Mods/MomentumOverhaul/native/main.dll
     ue4ss/Mods/MomentumOverhaul/config/momentum.ini
 
 Lua obtains UClass and CDO addresses by reflection, writes runtime-bindings.ini,
