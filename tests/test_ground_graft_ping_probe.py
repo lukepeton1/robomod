@@ -219,6 +219,27 @@ class GroundGraftPingPatchTests(unittest.TestCase):
         ):
             self.assertIn(name, names)
 
+    def test_all_kismet_field_path_names_are_registered(self):
+        patched, _ = patch(fixture(), spec())
+        names = set(patched["NameMap"])
+        paths = set()
+
+        def walk(value):
+            if isinstance(value, dict):
+                if value.get("$type", "").endswith("FFieldPath, UAssetAPI"):
+                    for segment in value.get("Path") or []:
+                        if isinstance(segment, str):
+                            paths.add(segment)
+                for child in value.values():
+                    walk(child)
+            elif isinstance(value, list):
+                for child in value:
+                    walk(child)
+
+        fn = next(x for x in patched["Exports"] if x["ObjectName"] == "OnServerPingActor")
+        walk(fn["ScriptBytecode"])
+        self.assertFalse(paths - names, msg=f"unregistered FFieldPath names: {sorted(paths - names)}")
+
     def test_patch_keeps_normal_ping_for_non_weapon_or_validation_failure(self):
         patched, _ = patch(fixture(), spec())
         fn = next(x for x in patched["Exports"] if x["ObjectName"] == "OnServerPingActor")
