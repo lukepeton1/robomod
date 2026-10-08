@@ -84,7 +84,7 @@ local function bootstrap()
     binding_file:write(string.format("movement_cdo=0x%X\n", cdo_address))
     binding_file:close()
 
-    local dll = root .. "/dlls/main.dll"
+    local dll = root .. "/native/main.dll"
     if not package or not package.loadlib then
         announce("ERROR: Lua package.loadlib is unavailable in this UE4SS build.")
         return false
