@@ -58,6 +58,8 @@ static HMODULE g_library{};
 static std::filesystem::path g_mod_root{};
 static std::mutex g_log_mutex{};
 static std::atomic<std::uint64_t> g_target_calls{0};
+static std::atomic<int> g_last_movement_mode{-1};
+static std::atomic<int> g_last_dash{-1};
 static std::atomic<bool> g_installed{false};
 static std::atomic<bool> g_slide_active{false};
 static CalcVelocity g_original{};
@@ -299,6 +301,20 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
     const float slide_rate = at<float>(owner, layout::power_slide_rate);
     const bool slide_active = g_slide_active.load(std::memory_order_acquire);
 
+    const int previous_mode = g_last_movement_mode.exchange(
+        static_cast<int>(movement_mode), std::memory_order_relaxed);
+    if (previous_mode != static_cast<int>(movement_mode)) {
+        std::ostringstream state;
+        state << "movement_mode=" << static_cast<unsigned>(movement_mode);
+        log(state.str());
+    }
+
+    const int dash_state = dashing ? 1 : 0;
+    const int previous_dash = g_last_dash.exchange(dash_state, std::memory_order_relaxed);
+    if (previous_dash != dash_state) {
+        log(dashing ? "dash_event=start" : "dash_event=end");
+    }
+
     original(self, dt, friction, fluid, deceleration);
     const auto vanilla = at<FVector3f>(self, layout::velocity);
 
@@ -382,6 +398,8 @@ void set_slide_active(bool active) {
 
 void uninstall() {
     g_slide_active.store(false, std::memory_order_release);
+    g_last_movement_mode.store(-1, std::memory_order_relaxed);
+    g_last_dash.store(-1, std::memory_order_relaxed);
     if (!g_installed.exchange(false)) return;
     if (g_vtable && g_original) {
         if (patch_slot(g_vtable, reinterpret_cast<void*>(g_original),
@@ -431,6 +449,8 @@ bool install() {
     }
 
     g_slide_active.store(false, std::memory_order_release);
+    g_last_movement_mode.store(-1, std::memory_order_relaxed);
+    g_last_dash.store(-1, std::memory_order_relaxed);
     g_movement_class = movement_class;
     g_player_class = player_class;
     g_original = reinterpret_cast<CalcVelocity>(expected);
