@@ -37,6 +37,17 @@ class PatchError(RuntimeError):
 
 FUNCTION = "OnServerPingActor"
 
+INJECTED_REFLECTED_NAMES = (
+    "SpawnedWeapon",
+    "currentWeapon",
+    "CurrentAffixBundle",
+    "AffixAmount",
+    "CurrentTicket",
+    "Color",
+    "AddEnchantedAffix",
+)
+
+
 LOCAL_DONOR_INTERACTIVE = "WF_DonorInteractive"
 LOCAL_CAST_OK = "WF_CastOk"
 LOCAL_DONOR_WEAPON = "WF_DonorWeapon"
@@ -504,6 +515,12 @@ def compile_block(
     add_ticket = require_import(asset, "AddTicket")
 
     add_probe_locals(asset, fn, ainteractive_weapon, aweapon)
+    # UAssetAPI FFieldPath / virtual-function names must already exist in
+    # the asset NameMap. BP_APlayer does not naturally reference every
+    # native weapon field touched by this injected transaction.
+    for reflected_name in INJECTED_REFLECTED_NAMES:
+        ensure_name(asset, reflected_name)
+
 
     candidates = list(spec.get("selection", {}).get("candidates") or [])
     if not candidates:
