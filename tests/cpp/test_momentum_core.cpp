@@ -122,5 +122,27 @@ int main() {
         assert(near(v.horizontal_speed(), 950));
     }
 
-    std::cout << "Momentum C++ core + 8-hop acceleration/retention tests passed\n";
+    // Repeated D->A->D->A air-strafe reversals with matching mouse turns.
+    // Switching strafe sign must NOT reset velocity. The wish direction
+    // remains mostly perpendicular to the accumulated momentum.
+    {
+        Vec3 v{1050, 0, 0};
+        for (int frame = 0; frame < 120; ++frame) {
+            const double priorSpeed = v.horizontal_speed();
+            const int strafeSign = ((frame / 30) % 2 == 0) ? 1 : -1;
+            const Vec3 direction = v.normalized2();
+            const double forwardPart = std::min(0.3, 160.0 / priorSpeed);
+            const double sidewaysPart = std::sqrt(1.0 - forwardPart * forwardPart);
+            const Vec3 alternatingWish{
+                forwardPart * direction.x - strafeSign * sidewaysPart * direction.y,
+                forwardPart * direction.y + strafeSign * sidewaysPart * direction.x,
+                0.0
+            };
+            v = air_accelerate_source(v, alternatingWish, 1050, 320, 9, dt);
+            assert(v.horizontal_speed() + 1e-8 >= priorSpeed);
+        }
+        assert(v.horizontal_speed() > 2100.0);
+    }
+
+    std::cout << "Momentum C++ core + 8-hop + alternating-strafe tests passed\n";
 }
