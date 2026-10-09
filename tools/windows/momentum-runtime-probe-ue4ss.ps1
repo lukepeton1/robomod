@@ -14,12 +14,12 @@ function Get-ProbeUE4SSBuild([string]$Scratch) {
     return [pscustomobject]@{release=$release;asset=$asset;sha256=$hash;dwm=$dwm.FullName;ue4ss=$dir.FullName}
 }
 
-function Stage-MomentumUE4SSProbe([string]$Win64,$Build) {
+# This staging helper also handles -Baseline (Build=$null): move aside
+# pre-existing UE4SS/proxy files without installing any replacement.
+function Stage-MomentumUE4SSProbe([string]$Win64, $Build) {
     $backup = Join-Path $Win64 ".momentum-runtime-probe-backup"
-    $state = [ordered]@{
-        original_dwmapi = $false
-        original_ue4ss = $false
-        original_xinput = $false
+    if (Test-Path -LiteralPath $backup) {
+        throw "Refusing to overwrite an existing Momentum backup: $backup"
     }
 
     $stage = [pscustomobject]@{
@@ -27,49 +27,86 @@ function Stage-MomentumUE4SSProbe([string]$Win64,$Build) {
         dwm = (Join-Path $Win64 "dwmapi.dll")
         ue4ss = (Join-Path $Win64 "ue4ss")
         xinput = (Join-Path $Win64 "xinput1_3.dll")
-        state = $state
+        state = $null
     }
+    $state = [ordered]@{
+        original_dwmapi = [bool](Test-Path -LiteralPath $stage.dwm)
+        original_ue4ss = [bool](Test-Path -LiteralPath $stage.ue4ss)
+        original_xinput = [bool](Test-Path -LiteralPath $stage.xinput)
+    }
+    $stage.state = $state
 
-    New-Item -ItemType Directory -Force -Path $backup | Out-Null
+    New-Item -ItemType Directory -Path $backup -ErrorAction Stop | Out-Null
+    # Durable state MUST exist before moving even one original file, allowing
+    # cleanup after PowerShell/game interruption during the staging sequence.
+    $state | ConvertTo-Json |
+        Set-Content -LiteralPath (Join-Path $backup "state.json") -Encoding UTF8 -ErrorAction Stop
 
     try {
-        if (Test-Path -LiteralPath $stage.dwm) {
-            Move-Item -LiteralPath $stage.dwm -Destination (Join-Path $backup "dwmapi.dll") -Force
-            $state.original_dwmapi = $true
+        if ($state.original_dwmapi) {
+            Move-Item -LiteralPath $stage.dwm -Destination (Join-Path $backup "dwmapi.dll") -ErrorAction Stop
         }
-        if (Test-Path -LiteralPath $stage.ue4ss) {
-            Move-Item -LiteralPath $stage.ue4ss -Destination (Join-Path $backup "ue4ss") -Force
-            $state.original_ue4ss = $true
+        if ($state.original_ue4ss) {
+            Move-Item -LiteralPath $stage.ue4ss -Destination (Join-Path $backup "ue4ss") -ErrorAction Stop
         }
-        if (Test-Path -LiteralPath $stage.xinput) {
-            Move-Item -LiteralPath $stage.xinput -Destination (Join-Path $backup "xinput1_3.dll") -Force
-            $state.original_xinput = $true
+        if ($state.original_xinput) {
+            Move-Item -LiteralPath $stage.xinput -Destination (Join-Path $backup "xinput1_3.dll") -ErrorAction Stop
         }
 
-        $state |
-            ConvertTo-Json |
-            Set-Content -LiteralPath (Join-Path $backup "state.json") -Encoding UTF8
+        if ($null -ne $Build) {
+            Copy-Item -LiteralPath $Build.dwm -Destination $stage.dwm -Force -ErrorAction Stop
+            Copy-Item -LiteralPath $Build.ue4ss -Destination $stage.ue4ss -Recurse -Force -ErrorAction Stop
+        }
 
-        Copy-Item -LiteralPath $Build.dwm -Destination $stage.dwm -Force
-        Copy-Item -LiteralPath $Build.ue4ss -Destination $stage.ue4ss -Recurse -Force
+        "staged" | Set-Content -LiteralPath (Join-Path $backup "stage-complete.txt") -Encoding ascii -ErrorAction Stop
         return $stage
     } catch {
         $message = $_.Exception.Message
         try {
             Restore-MomentumUE4SSProbe $stage
         } catch {
+            throw "Staging failed: $message. Automatic restoration also failed: $($_.Exception.Message). Backup preserved at $backup"
         }
-        throw "Failed to stage the UE4SS runtime probe in '$Win64': $message"
+        throw "Failed to stage UE4SS/isolate vanilla in '$Win64': $message"
     }
 }
 
 function Restore-MomentumUE4SSProbe($Stage) {
-    if(-not $Stage -or -not (Test-Path $Stage.backup)){return}
-    Remove-Item $Stage.dwm -Force -ErrorAction SilentlyContinue; Remove-Item $Stage.ue4ss -Recurse -Force -ErrorAction SilentlyContinue
-    if($Stage.state.original_dwmapi -and (Test-Path (Join-Path $Stage.backup "dwmapi.dll"))){Move-Item (Join-Path $Stage.backup "dwmapi.dll") $Stage.dwm -Force}
-    if($Stage.state.original_ue4ss -and (Test-Path (Join-Path $Stage.backup "ue4ss"))){Move-Item (Join-Path $Stage.backup "ue4ss") $Stage.ue4ss -Force}
-    if($Stage.state.original_xinput -and (Test-Path (Join-Path $Stage.backup "xinput1_3.dll"))){Move-Item (Join-Path $Stage.backup "xinput1_3.dll") $Stage.xinput -Force}
-    Remove-Item $Stage.backup -Recurse -Force -ErrorAction SilentlyContinue
+    if (-not $Stage -or -not (Test-Path -LiteralPath $Stage.backup)) { return }
+
+    $statePath = Join-Path $Stage.backup "state.json"
+    if (-not (Test-Path -LiteralPath $statePath -PathType Leaf)) {
+        throw "Backup has no state.json. No staged files were deleted: $($Stage.backup)"
+    }
+    $state = Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json
+
+    foreach ($entry in @(
+        @{ Name="dwmapi.dll"; Destination=$Stage.dwm; Original=[bool]$state.original_dwmapi },
+        @{ Name="ue4ss"; Destination=$Stage.ue4ss; Original=[bool]$state.original_ue4ss },
+        @{ Name="xinput1_3.dll"; Destination=$Stage.xinput; Original=[bool]$state.original_xinput }
+    )) {
+        $saved = Join-Path $Stage.backup $entry.Name
+        $savedExists = Test-Path -LiteralPath $saved
+        $destExists = Test-Path -LiteralPath $entry.Destination
+
+        if ($entry.Original -and -not $savedExists) {
+            if ($destExists -and -not (Test-Path -LiteralPath (Join-Path $Stage.backup "stage-complete.txt"))) {
+                # Staging may have been interrupted before moving this original.
+                # Never delete an original when the expected backup does not exist.
+                continue
+            }
+            throw "Original $($entry.Name) backup missing; preserving destination and recovery state."
+        }
+
+        if ($destExists) {
+            Remove-Item -LiteralPath $entry.Destination -Recurse -Force -ErrorAction Stop
+        }
+        if ($entry.Original) {
+            Move-Item -LiteralPath $saved -Destination $entry.Destination -ErrorAction Stop
+        }
+    }
+    # Remove the backup ONLY after every required original was restored.
+    Remove-Item -LiteralPath $Stage.backup -Recurse -Force -ErrorAction Stop
 }
 
 function Configure-MomentumUE4SSProbe([string]$Ue4ssDir) {
