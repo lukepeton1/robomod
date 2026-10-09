@@ -126,3 +126,37 @@ With both players modded:
 - repeated explosive/pierce/bounce interactions;
 - watch actor/projectile growth and frame time;
 - do not deliberately support duplicate spawn/proc rows until provenance is implemented.
+
+## Read-only GRAFT eligibility diagnostic
+
+The old `run-ground-graft-safehost-probe.cmd` mutation runner is retired.
+Two E-swap tests changed no affixes but never reported whether the donor had
+any of the eleven eligible diagnostic rows. Do not repeat a blind swap test.
+
+The next test runs through the proven native error-text UI instead:
+
+```cmd
+tools\windows\run-ground-graft-gate-probe.cmd
+```
+
+With any current weapon equipped, aim at a dropped weapon and press **E**.
+Pickup is intentionally blocked while this read-only diagnostic is installed.
+Capture the **red in-game text**:
+
+- `WF READY: Burn` (or another row) — donor/target row check is passing;
+- `WF BLOCKED: target already has Burn` — duplicate row on target;
+- `WF GATE: donor has no supported affix` — this donor has no row from
+  the narrow diagnostic candidate list;
+- `WF GATE: current target missing` — player target could not be resolved.
+
+If the normal E swap still occurs without any WF message, the **diagnostic
+overlay is not executing the expected interaction hooks**. Do not conclude
+that the network mutation path failed based only on an ordinary swap.
+
+This probe never mutates a gun, debits Power Cells, or destroys a donor.
+After recording the text, restore normal play:
+
+```cmd
+tools\windows\run-weapon-foundry.cmd
+```
+
