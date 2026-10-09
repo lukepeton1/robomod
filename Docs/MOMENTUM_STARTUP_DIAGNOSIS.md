@@ -37,7 +37,7 @@ The supported game binary is `RoboQuest-Win64-Shipping.exe` with SHA-256 `158487
 In PowerShell:
 
 ```powershell
-cd "C:\Users\Luke Peton\Documents\RoboQuest\robomod"
+cd "C:\path\to\robomod"
 git switch feature/movement-overhaul
 git pull --ff-only
 .\tools\windows\run-momentum-runtime-test.cmd -LoaderOnly
