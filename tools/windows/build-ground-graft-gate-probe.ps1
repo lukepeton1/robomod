@@ -143,7 +143,7 @@ if (Test-Path -LiteralPath $probeStageRoot) {
 New-Item -ItemType Directory -Force -Path $probeStageRoot,$jsonRoot,$reportRoot | Out-Null
 
 $originalJson = Join-Path $jsonRoot "BP_Interactive_Weapon.original.json"
-$patchedJson = Join-Path $jsonRoot "BP_Interactive_Weapon.graft-safehost.json"
+$patchedJson = Join-Path $jsonRoot "BP_Interactive_Weapon.graft-gate.json"
 $roundtripJson = Join-Path $jsonRoot "BP_Interactive_Weapon.roundtrip.json"
 $stageBase = Join-Path $probeStageRoot ("RoboQuest\Content\" + $relative)
 $patcher = Join-Path $RepoRoot "tools\patch_ground_graft_gate_probe.py"
@@ -154,7 +154,7 @@ Write-Host "2/8 Exporting BP_Interactive_Weapon..."
 Export-UAssetJson $source $originalJson "UAssetGUI BP_Interactive_Weapon tojson"
 Invoke-Python @($kismetLayout, $originalJson, "--validate")
 
-Write-Host "3/8 Injecting GRAFT gate replicated mutation probe..."
+Write-Host "3/8 Injecting read-only GRAFT eligibility diagnostic..."
 Invoke-Python @(
     $patcher,
     $originalJson,
@@ -165,12 +165,12 @@ Invoke-Python @(
 )
 
 Write-Host "4/8 Rebuilding and round-trip verifying GRAFT gate..."
-Build-UAssetFromJson $patchedJson $stageBase "UAssetGUI GRAFT gate GRAFT probe fromjson"
-Export-UAssetJson ($stageBase + ".uasset") $roundtripJson "UAssetGUI GRAFT gate GRAFT probe round-trip"
+Build-UAssetFromJson $patchedJson $stageBase "UAssetGUI read-only GRAFT gate probe fromjson"
+Export-UAssetJson ($stageBase + ".uasset") $roundtripJson "UAssetGUI read-only GRAFT gate probe round-trip"
 Invoke-Python @($patcher, $roundtripJson, $spec, "--verify-only")
 Invoke-Python @($kismetLayout, $roundtripJson, "--validate")
 
-Write-Host "5/8 Packing GRAFT gate GRAFT overlay..."
+Write-Host "5/8 Packing read-only GRAFT gate overlay..."
 $overlayNames = @(
     "WeaponFoundry_GraftGate_P.pak",
     "WeaponFoundry_GraftGate_P.ucas",
@@ -196,14 +196,14 @@ $retocOutput = & $RetocPath @retocArgs 2>&1
 $retocExit = $LASTEXITCODE
 $retocOutput | Tee-Object -FilePath $retocLog
 if ($retocExit -ne 0) {
-    throw "retoc GRAFT gate GRAFT overlay failed with exit code $retocExit. Full output: $retocLog"
+    throw "retoc read-only GRAFT gate overlay failed with exit code $retocExit. Full output: $retocLog"
 }
 
 $overlayPak = Join-Path $releaseRoot "WeaponFoundry_GraftGate_P.pak"
 $overlayUcas = Join-Path $releaseRoot "WeaponFoundry_GraftGate_P.ucas"
 foreach ($required in @($overlayPak,$overlayUcas,$overlayUtoc)) {
     if (-not (Test-Path -LiteralPath $required)) {
-        throw "GRAFT gate GRAFT overlay container missing: $required"
+        throw "read-only GRAFT gate overlay container missing: $required"
     }
 }
 
@@ -270,10 +270,10 @@ if ($Install) {
     foreach ($file in @($pak,$ucas,$utoc,$overlayPak,$overlayUcas,$overlayUtoc)) {
         Copy-Item -LiteralPath $file -Destination (Join-Path $mods ([System.IO.Path]::GetFileName($file))) -Force
     }
-    Write-Host "Installed Weapon Foundry baseline + GRAFT gate GRAFT overlay to $mods"
+    Write-Host "Installed Weapon Foundry baseline + read-only GRAFT gate overlay to $mods"
 }
 
-Write-Host "8/8 GRAFT gate GRAFT mutation probe build complete."
+Write-Host "8/8 Read-only GRAFT gate probe build complete."
 Write-Host ""
 Write-Host "TEST:"
 Write-Host "  1. Equip any weapon you intend to graft onto."
