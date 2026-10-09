@@ -325,7 +325,7 @@ try {
 $fatalDetected = $false
 $logFiles = @(Get-ChildItem -LiteralPath $OutputDir -File -Filter "*.log" -ErrorAction SilentlyContinue)
 foreach ($file in $logFiles) {
-    if (Select-String -LiteralPath $file.FullName -Pattern "LowLevelFatalError|Can.t find ClassConstructor for class|Fatal error|LogWindows:\s*Error:" -Quiet -ErrorAction SilentlyContinue) {
+    if (Select-String -LiteralPath $file.FullName -Pattern $MomentumFatalRegex -Quiet -ErrorAction SilentlyContinue) {
         $fatalDetected = $true
         break
     }
