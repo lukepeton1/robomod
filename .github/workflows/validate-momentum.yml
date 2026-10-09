@@ -23,6 +23,7 @@ on:
       - "tools/windows/run-movement-runtime-probe.*"
       - "tools/windows/cleanup-movement-runtime-probe.*"
       - "tools/windows/momentum-runtime-probe-*.ps1"
+      - "tools/windows/test-momentum-staging.ps1"
       - "tests/test_*movement*.py"
       - "tests/cpp/**"
       - "vanilla-json/**"
@@ -87,6 +88,10 @@ jobs:
             }
           }
           if ($failed) { exit 1 }
+
+      - name: Test reversible Momentum staging
+        shell: pwsh
+        run: ./tools/windows/test-momentum-staging.ps1
 
       - name: Verify manifest targets exist in committed static JSON
         run: |
