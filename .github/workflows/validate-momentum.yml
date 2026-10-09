@@ -89,6 +89,18 @@ jobs:
           }
           if ($failed) { exit 1 }
 
+      - name: Verify historical UE4SS download, SHA-256, and package layout
+        shell: pwsh
+        run: |
+          . ./tools/windows/momentum-runtime-probe-ue4ss.ps1
+          $scratch = Join-Path $env:RUNNER_TEMP "momentum-pinned-ue4ss"
+          $build = Get-ProbeUE4SSBuild $scratch
+          if ($build.asset.name -ne "zDEV-UE4SS_v3.0.1-1161-g6eb3d9bc.zip") { throw "Wrong UE4SS asset." }
+          if ($build.sha256 -ne "580a244bc30352cfd0d0019c4c63726c2bddd5bb04ef91f985df237aa81b06e9") { throw "UE4SS checksum mismatch." }
+          if (-not (Test-Path -LiteralPath $build.dwm -PathType Leaf)) { throw "UE4SS proxy missing." }
+          if (-not (Test-Path -LiteralPath $build.ue4ss -PathType Container)) { throw "UE4SS directory missing." }
+          Write-Host "Historical UE4SS 1161 archive retrieved and verified successfully."
+
       - name: Test reversible Momentum staging
         shell: pwsh
         run: ./tools/windows/test-momentum-staging.ps1
