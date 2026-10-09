@@ -53,6 +53,14 @@ local loaded = false
 local slide_hook_pre = nil
 local slide_hook_post = nil
 local waiting_announced = false
+local waiting_world_announced = false
+local terminal_error = false
+
+local function fail_permanently(message)
+    terminal_error = true
+    announce(message)
+    return false
+end
 
 local function bootstrap()
     if loaded then return true end
@@ -74,7 +82,10 @@ local function bootstrap()
 
     local world_ok, world = pcall(function() return live_player:GetWorld() end)
     if not world_ok or not world or not world:IsValid() then
-        announce("Player instance exists but has no usable world; retrying.")
+        if not waiting_world_announced then
+            announce("Player instance exists but has no usable world; retrying.")
+            waiting_world_announced = true
+        end
         return false
     end
 
@@ -138,22 +149,19 @@ local function bootstrap()
         package.loadlib(dll, "luaopen_momentum_slide_end")
 
     if not native_loader then
-        announce("ERROR: native DLL load failed: " .. tostring(load_error))
-        return false
+        return fail_permanently("ERROR: native DLL load failed: " .. tostring(load_error))
     end
     if not native_uninstall then
-        announce("ERROR: native uninstall export missing: " .. tostring(uninstall_error))
-        return false
+        return fail_permanently("ERROR: native uninstall export missing: " .. tostring(uninstall_error))
     end
     if not native_slide_end then
-        announce("ERROR: native PowerSlide end export missing: " .. tostring(slide_end_error))
-        return false
+        return fail_permanently("ERROR: native PowerSlide end export missing: " .. tostring(slide_end_error))
     end
 
     local ok, result = pcall(native_loader)
     if not ok then
-        announce("ERROR: native DLL bootstrap failed: " .. tostring(result))
-        return false
+        pcall(native_uninstall)
+        return fail_permanently("ERROR: native DLL bootstrap failed: " .. tostring(result))
     end
 
     -- Native install() signals failure through its status file because the
@@ -165,8 +173,8 @@ local function bootstrap()
     if status_file then status_file:close() end
     if not status_line or (not status_line:match("^OBSERVE:")
             and not status_line:match("^ACTIVE:")) then
-        announce("ERROR: native install did not confirm success: " .. tostring(status_line))
-        return false
+        pcall(native_uninstall)
+        return fail_permanently("ERROR: native install did not confirm success: " .. tostring(status_line))
     end
 
     local function install_slide_end_hook_when_player_exists()
@@ -237,10 +245,12 @@ local function try_bootstrap()
     local ok, result = pcall(bootstrap)
     if not ok then announce("Bootstrap error: " .. tostring(result)) end
 
-    if not loaded and attempts < 600 and ExecuteInGameThreadWithDelay then
+    if not loaded and not terminal_error and attempts < 600 and ExecuteInGameThreadWithDelay then
         ExecuteInGameThreadWithDelay(500, try_bootstrap)
     elseif not loaded then
-        announce("Bootstrap could not initialize. Vanilla movement remains unchanged.")
+        announce(terminal_error
+            and "Native bootstrap failed permanently; no retries will be attempted."
+            or "Bootstrap could not initialize. Vanilla movement remains unchanged.")
     end
 end
 
