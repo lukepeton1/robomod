@@ -19,6 +19,8 @@ All modes use the same reversible test runner. Select one mode per run; never co
 
 The pinned UE4SS development asset is `zDEV-UE4SS_v3.0.1-1161-g6eb3d9bc.zip`, SHA-256 `580a244bc30352cfd0d0019c4c63726c2bddd5bb04ef91f985df237aa81b06e9`. The runner rejects a changed asset/digest. This isolates the tested UE4SS build rather than silently switching to a newer experimental loader.
 
+**October 9, 2026 dependency fix:** UE4SS changed `experimental-latest` from build 1161 to 1164, causing earlier runners to fail before launching Roboquest. The original build 1161 is still published in the [historical `experimental` release](https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/experimental), asset ID `616464965`. The runner now downloads from that archive, validates SHA-256 before touching game files, and caches the verified ZIP at `%LOCALAPPDATA%\RoboQuest\MomentumCache\zDEV-UE4SS_v3.0.1-1161-g6eb3d9bc.zip`. Later runs reuse the cache. If GitHub cannot be reached but you already have this exact archive, pass `-UE4SSZipPath "C:\path\to\zDEV-UE4SS_v3.0.1-1161-g6eb3d9bc.zip"`; an incorrect checksum is rejected. No new or unverified UE4SS version is installed.
+
 ## Isolation guarantees and limitations
 
 - The loader-only mode does **not** require or look for `MomentumOverhaul-runtime.zip`.
