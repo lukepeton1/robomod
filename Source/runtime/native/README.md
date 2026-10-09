@@ -32,6 +32,14 @@ Dash, Grapple/MOVE_Custom, other non-walking modes remain vanilla.
 Vertical velocity is kept from the vanilla solver. No actor position manipulation
 or per-frame RPC is used.
 
+## Startup crash status and isolation
+
+The `BP_APlayer_C` ClassConstructor crash remains unproven as fixed. A successful early observe test was followed by startup crashes before any target movement frame. The bootstrap now waits for a non-default `Character_Player` with a usable world, and the native loader verifies its install status. GitHub Actions compilation is **not** proof of an in-game fix.
+
+The runner supports `-Baseline`, `-LoaderOnly`, `-BootstrapOnly`, and default observe mode. Only observe mode needs the GitHub Actions runtime ZIP; loader-only stages a pinned UE4SS build with all shipped mods disabled. All tests back up and restore pre-existing game-directory modifications.
+
+**Use `-LoaderOnly` for the next local diagnosis.** Full instructions and the result-interpretation matrix: [Momentum startup crash isolation](../../../Docs/MOMENTUM_STARTUP_DIAGNOSIS.md).
+
 ## Test mode
 
 config/momentum.ini defaults to active=0: OBSERVE.
