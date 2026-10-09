@@ -11,7 +11,7 @@ function Get-ProbeUE4SSBuild([string]$Scratch) {
     Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zip -Headers @{"User-Agent"="Roboquest-Momentum-Probe"}
     $hash=(Get-FileHash -Algorithm SHA256 -LiteralPath $zip).Hash.ToLowerInvariant()
     if ($hash -ne $expectedSha256) { throw "Pinned UE4SS archive SHA-256 mismatch ($hash)." }
-    if ($asset.digest -and [string]$asset.digest -match '^sha256:(.+)
+    if ($asset.digest -and [string]$asset.digest -match '^sha256:(.+)$' -and $hash -ne $Matches[1].ToLowerInvariant()) { throw "UE4SS release digest mismatch." }
     Expand-Archive -LiteralPath $zip -DestinationPath $extract -Force
     $dwm=Get-ChildItem $extract -Filter "dwmapi.dll" -File -Recurse | Select-Object -First 1
     $dir=Get-ChildItem $extract -Directory -Filter "ue4ss" -Recurse | Select-Object -First 1
