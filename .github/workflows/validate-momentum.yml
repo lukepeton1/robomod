@@ -84,7 +84,7 @@ jobs:
             if ($errors.Count -gt 0) {
               $failed = $true
               Write-Host "PowerShell parse errors in $($_.FullName):"
-              $errors | ForEach-Object { Write-Host "  $($_.Message)" }
+              $errors | ForEach-Object { Write-Host "  line $($_.Extent.StartLineNumber) col $($_.Extent.StartColumnNumber): $($_.Message) :: $($_.Extent.Text)" }
             }
           }
           if ($failed) { exit 1 }
