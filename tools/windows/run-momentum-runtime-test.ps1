@@ -18,6 +18,7 @@ $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot = [System.IO.Path]::GetFullPath((Join-Path $scriptRoot "..\.."))
 . (Join-Path $scriptRoot "momentum-runtime-probe-common.ps1")
 . (Join-Path $scriptRoot "momentum-runtime-probe-ue4ss.ps1")
+. (Join-Path $scriptRoot "momentum-runtime-probe-artifact.ps1")
 
 # Isolation modes are mutually exclusive. Bare -Active remains explicit and unsafe.
 $selectedCount = 0
@@ -26,26 +27,6 @@ foreach ($selected in @($Active.IsPresent, $LoaderOnly.IsPresent, $BootstrapOnly
 }
 if ($selectedCount -gt 1) {
     throw "Select exactly one of -Baseline, -LoaderOnly, -BootstrapOnly, or -Active; omit all for observe mode."
-}
-
-function Find-MomentumArtifactZip([string]$Provided) {
-    if ($Provided) {
-        if (-not (Test-Path -LiteralPath $Provided -PathType Leaf)) {
-            throw "Runtime artifact ZIP not found: $Provided"
-        }
-        return [System.IO.Path]::GetFullPath((Resolve-Path -LiteralPath $Provided).Path)
-    }
-    $downloads = Join-Path ([Environment]::GetFolderPath("UserProfile")) "Downloads"
-    foreach ($candidate in @(
-        (Join-Path $repoRoot "handoff\MomentumOverhaul-runtime.zip"),
-        (Join-Path $repoRoot "MomentumOverhaul-runtime.zip"),
-        (Join-Path $downloads "MomentumOverhaul-runtime.zip")
-    )) {
-        if (Test-Path -LiteralPath $candidate -PathType Leaf) {
-            return [System.IO.Path]::GetFullPath($candidate)
-        }
-    }
-    throw "Download MomentumOverhaul-runtime.zip and place it in repo\handoff\, repo root, or Downloads."
 }
 
 function Resolve-MomentumNativeArtifact([string]$ExtractedRoot) {
@@ -193,7 +174,7 @@ $OutputDir = Join-Path $repoRoot "handoff\momentum-runtime-test"
 $Scratch = Join-Path $OutputDir "_scratch"
 $needsArtifact = -not ($Baseline -or $LoaderOnly -or $BootstrapOnly)
 if ($needsArtifact) {
-    $RuntimeZipPath = Find-MomentumArtifactZip $RuntimeZipPath
+    $RuntimeZipPath = Find-MomentumCompatibleRuntimeZip $RuntimeZipPath $repoRoot
 } elseif ($RuntimeZipPath) {
     throw "-RuntimeZipPath is only used by observe and active mode."
 }
@@ -344,7 +325,7 @@ try {
 $fatalDetected = $false
 $logFiles = @(Get-ChildItem -LiteralPath $OutputDir -File -Filter "*.log" -ErrorAction SilentlyContinue)
 foreach ($file in $logFiles) {
-    if (Select-String -LiteralPath $file.FullName -Pattern "LowLevelFatalError|ClassConstructor|Fatal error|LogWindows:\s*Error:" -Quiet -ErrorAction SilentlyContinue) {
+    if (Select-String -LiteralPath $file.FullName -Pattern "LowLevelFatalError|Can.t find ClassConstructor for class|Fatal error|LogWindows:\s*Error:" -Quiet -ErrorAction SilentlyContinue) {
         $fatalDetected = $true
         break
     }
