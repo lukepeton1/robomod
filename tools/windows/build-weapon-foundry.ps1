@@ -397,7 +397,10 @@ if ($Install) {
         "WeaponFoundry_GraftProbe_P.utoc",
         "WeaponFoundry_GraftSafeHost_P.pak",
         "WeaponFoundry_GraftSafeHost_P.ucas",
-        "WeaponFoundry_GraftSafeHost_P.utoc"
+        "WeaponFoundry_GraftSafeHost_P.utoc",
+        "WeaponFoundry_GraftGate_P.pak",
+        "WeaponFoundry_GraftGate_P.ucas",
+        "WeaponFoundry_GraftGate_P.utoc"
     )) {
         $diagnosticPath = Join-Path $mods $diagnosticName
         if (Test-Path -LiteralPath $diagnosticPath) {
