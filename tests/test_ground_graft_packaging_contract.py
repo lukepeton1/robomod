@@ -57,7 +57,7 @@ class GroundGraftPackagingContractTests(unittest.TestCase):
             ROOT / "tools/windows/build-ground-graft-gate-probe.ps1"
         ).read_text(encoding="utf-8")
         self.assertIn('BP_Interactive_Weapon', script)
-        self.assertIn('patch_ground_graft_gate_probe.py', script)
+        self.assertIn('patch_ground_graft_rows_probe.py', script)
         self.assertIn('WeaponFoundry_GraftGate_P.utoc', script)
         self.assertIn('retoc-ground-graft-gate.log', script)
         self.assertIn('WeaponFoundry_GraftSafeHost_P.pak', script)

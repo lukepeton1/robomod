@@ -299,3 +299,49 @@ It should be reused or matched rather than inventing a detached developer menu.
 4. minimal runtime reflection layer only if cooked/native paths are conclusively insufficient.
 
 The project remains PAK-only until that boundary is actually reached.
+
+
+## Next diagnostic: raw donor FName inspector (implementation pending runtime proof)
+
+The previous read-only gate returned `WF GATE: donor has no supported affix`
+in the user's most recent in-game test. That result does **not** establish
+whether the array is empty, an expected name differs from the real name, or
+the Kismet generic array comparison is incorrect.
+
+The `run-ground-graft-gate-probe.cmd` runner now builds a stronger **read-only**
+`BP_Interactive_Weapon.GetErrorText` diagnostic through
+`tools/patch_ground_graft_rows_probe.py`. The diagnostic is deliberately
+separate from the retired mutating prototypes and the previous gate patcher.
+It keeps normal pickup disabled while installed.
+
+The visible statuses are:
+
+- `WF RAW: donor weapon missing` — dropped actor has no valid `SpawnedWeapon`;
+- `WF RAW: current target missing` — no current target weapon;
+- `WF RAW: donor rows=0` — native getter returned an empty array;
+- `WF n=<count> |0=<FName> |1=<FName> |2=<FName> |self=OK|FAIL |gate=...` —
+  native rows exist; display up to three raw names with bounded accesses.
+  The first name is immediately fed back to `Array_Contains` to check
+  that the generic-array thunk can find a value from the same array;
+- `gate=NO_MATCH` — no row matched the **11 diagnostic candidates**;
+- `gate=OK:<row>` or `gate=DUP:<row>` — recognized candidate present and
+  target lacks or already contains that row, respectively.
+
+`Array_Get`, name/string conversions and dynamic text formatting are newly
+introduced cooked calls and remain **runtime-unverified** until the next
+Windows in-game experiment. CI validates structure and safe Kismet jump
+offsets, not real-game execution or authority.
+
+### Single next user test
+
+1. `git switch feature/weapon-foundry`, then `git pull --ff-only`.
+2. Run `tools\\windows\\run-ground-graft-gate-probe.cmd` from repository root.
+3. Find one dropped weapon with a visibly listed affix, equip a target weapon,
+   and press **E** to display the full red `WF` diagnostic.
+4. Record the exact message including `n=`, `0=`, `1=`, `2=`, `self=`
+   and `gate=` when present. Do not infer DataTable names from tooltip text.
+5. Restore normal gameplay with `tools\\windows\\run-weapon-foundry.cmd`.
+
+Do not attempt mutation or donor consumption until runtime row extraction and
+the self-comparison check are confirmed. The production manifest remains
+unchanged, and the failed `BP_APlayer` and Homing overrides remain excluded.

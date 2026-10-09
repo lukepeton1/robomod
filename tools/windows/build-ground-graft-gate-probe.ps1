@@ -146,7 +146,7 @@ $originalJson = Join-Path $jsonRoot "BP_Interactive_Weapon.original.json"
 $patchedJson = Join-Path $jsonRoot "BP_Interactive_Weapon.graft-gate.json"
 $roundtripJson = Join-Path $jsonRoot "BP_Interactive_Weapon.roundtrip.json"
 $stageBase = Join-Path $probeStageRoot ("RoboQuest\Content\" + $relative)
-$patcher = Join-Path $RepoRoot "tools\patch_ground_graft_gate_probe.py"
+$patcher = Join-Path $RepoRoot "tools\patch_ground_graft_rows_probe.py"
 $spec = Join-Path $RepoRoot "Source\probes\ground_graft_ping_probe.json"
 $kismetLayout = Join-Path $RepoRoot "tools\kismet_layout.py"
 
@@ -154,7 +154,7 @@ Write-Host "2/8 Exporting BP_Interactive_Weapon..."
 Export-UAssetJson $source $originalJson "UAssetGUI BP_Interactive_Weapon tojson"
 Invoke-Python @($kismetLayout, $originalJson, "--validate")
 
-Write-Host "3/8 Injecting read-only GRAFT eligibility diagnostic..."
+Write-Host "3/8 Injecting read-only raw FName donor inspector..."
 Invoke-Python @(
     $patcher,
     $originalJson,
@@ -164,7 +164,7 @@ Invoke-Python @(
     (Join-Path $reportRoot "ground-graft-gate-probe.json")
 )
 
-Write-Host "4/8 Rebuilding and round-trip verifying GRAFT gate..."
+Write-Host "4/8 Rebuilding and round-trip verifying raw FName probe..."
 Build-UAssetFromJson $patchedJson $stageBase "UAssetGUI read-only GRAFT gate probe fromjson"
 Export-UAssetJson ($stageBase + ".uasset") $roundtripJson "UAssetGUI read-only GRAFT gate probe round-trip"
 Invoke-Python @($patcher, $roundtripJson, $spec, "--verify-only")
@@ -224,7 +224,7 @@ $manifest = [ordered]@{
     diagnostic_probe = $true
     generated_utc = [DateTime]::UtcNow.ToString("o")
     production_release_candidate_included = $true
-    purpose = "Display exact read-only GRAFT eligibility and duplicate status on native dropped-weapon interaction UI."
+    purpose = "Show native donor FName row IDs, array length, self-contains result and candidate/duplicate gate."
     modified_probe_package = "RoboQuest/Content/Blueprint/Interactive/Reward/BP_Interactive_Weapon"
     explicitly_not_modified = "RoboQuest/Content/Blueprint/Player/BP_APlayer"
     trigger = "press E on a dropped weapon; CanInteract=false and GetErrorText shows a native visible diagnostic"
@@ -233,10 +233,10 @@ $manifest = [ordered]@{
     candidate_rows = $candidateRows
     expected_behavior = @(
         "normal E pickup is temporarily blocked",
-        "WF READY: <row> means donor has a supported affix and target does not",
-        "WF BLOCKED: target already has <row> means duplicate",
-        "WF GATE: donor has no supported affix means no candidate row matched",
-        "WF GATE: current target missing means target could not be read",
+        "WF n=<count> shows donor row count, up to 3 exact native row IDs and the gate outcome",
+        "self=OK means Array_Contains recognizes a row read from that same native array",
+        "gate=NO_MATCH means none of the 11 test names matched; raw row IDs remain visible",
+        "gate=OK:<row> / gate=DUP:<row> report recognized transfer row and target duplicate status",
         "Power Cells and all weapon state remain unchanged"
     )
     restore = "tools\windows\run-weapon-foundry.cmd"
@@ -279,7 +279,7 @@ Write-Host "TEST:"
 Write-Host "  1. Equip any weapon you intend to graft onto."
 Write-Host "  2. Find a dropped donor with one or more affixes."
 Write-Host "  3. Press E on the donor (normal swap is temporarily blocked)."
-Write-Host "  4. Record the red WF GATE / WF READY / WF BLOCKED message."
+Write-Host "  4. Record the FULL red WF message: count, raw row IDs, self status and gate status."
 Write-Host ""
 Write-Host "This read-only diagnostic does not transfer affixes, debit cells or consume weapons."
 Write-Host "Restore normal gameplay afterward with tools\windows\run-weapon-foundry.cmd."
