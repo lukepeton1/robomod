@@ -29,9 +29,15 @@ if not root then
 end
 
 local config_path = root .. "/config/momentum.ini"
+local bootstrap_only = false
 do
     local existing = io.open(config_path, "r")
     if existing then
+        for line in existing:lines() do
+            if line:match("^%s*probe_mode%s*=%s*bootstrap_only%s*$") then
+                bootstrap_only = true
+            end
+        end
         existing:close()
     else
         local output = io.open(config_path, "w")
@@ -63,7 +69,13 @@ local function bootstrap()
     end
 
     if waiting_announced then
-        announce("Live Character_Player found; installing native movement hook.")
+        announce("Live Character_Player found; validating class and world.")
+    end
+
+    local world_ok, world = pcall(function() return live_player:GetWorld() end)
+    if not world_ok or not world or not world:IsValid() then
+        announce("Player instance exists but has no usable world; retrying.")
+        return false
     end
 
     local movement_class = StaticFindObject("/Script/RoboQuest.RoboquestMovementComponent")
@@ -100,6 +112,19 @@ local function bootstrap()
     binding_file:write(string.format("movement_cdo=0x%X\n", cdo_address))
     binding_file:close()
 
+    if bootstrap_only then
+        -- Crash isolation: same live player, world, UClass and CDO discovery,
+        -- but never even load the DLL, let alone patch the shared vtable.
+        local output = io.open(root .. "/runtime-status.txt", "w")
+        if output then
+            output:write("BOOTSTRAP_ONLY: player and reflection resolved; native DLL not loaded.\n")
+            output:close()
+        end
+        announce("BOOTSTRAP_ONLY: player and reflection resolved; native DLL not loaded.")
+        loaded = true
+        return true
+    end
+
     local dll = root .. "/native/main.dll"
     if not package or not package.loadlib then
         announce("ERROR: Lua package.loadlib is unavailable in this UE4SS build.")
@@ -128,6 +153,19 @@ local function bootstrap()
     local ok, result = pcall(native_loader)
     if not ok then
         announce("ERROR: native DLL bootstrap failed: " .. tostring(result))
+        return false
+    end
+
+    -- Native install() signals failure through its status file because the
+    -- standalone Lua entrypoint intentionally does not push Lua return values.
+    -- Treat a successful pcall without an installed hook as an error.
+    local status_path = root .. "/runtime-status.txt"
+    local status_file = io.open(status_path, "r")
+    local status_line = status_file and status_file:read("*l") or nil
+    if status_file then status_file:close() end
+    if not status_line or (not status_line:match("^OBSERVE:")
+            and not status_line:match("^ACTIVE:")) then
+        announce("ERROR: native install did not confirm success: " .. tostring(status_line))
         return false
     end
 
@@ -172,13 +210,7 @@ local function bootstrap()
     else
         install_slide_end_hook_when_player_exists()
     end
-    local status = io.open(root .. "/runtime-status.txt", "r")
-    if status then
-        announce(status:read("*l") or "native loader returned")
-        status:close()
-    else
-        announce("Native DLL returned; no status file was produced.")
-    end
+    announce(status_line)
 
     if ModRef then
         ModRef.OnUnload = function()
