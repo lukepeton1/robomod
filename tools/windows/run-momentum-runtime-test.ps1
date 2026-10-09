@@ -2,6 +2,7 @@
 param(
     [string]$RuntimeZipPath = "",
     [string]$GameExePath = "",
+    [string]$UE4SSZipPath = "",
     [Alias("Bhop")]
     [switch]$Active,
     [switch]$LoaderOnly,
@@ -268,7 +269,7 @@ try {
     Remove-Item -LiteralPath $writeTest -Force
 
     if (-not $Baseline) {
-        $build = Get-ProbeUE4SSBuild $Scratch
+        $build = Get-ProbeUE4SSBuild $Scratch $UE4SSZipPath
         Write-Host "UE4SS: $($build.asset.name)"
     }
     $stage = Stage-MomentumUE4SSProbe $win64 $build
