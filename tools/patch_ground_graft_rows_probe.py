@@ -238,7 +238,9 @@ def build_error_probe(asset: dict[str, Any], candidates: list[str]) -> dict[str,
         emit(jump_if_not(has_at_least(i + 1)), label_suffix)
         emit(library_call(row_name, array_get, [
             local_variable(owner, DONOR_ROWS), int_const(i),
-            local_out_variable(owner, row_name),
+            # The array thunk writes a normal CPF_None function local. The
+            # EX_LocalOutVariable opcode is only for formal out parameters.
+            local_variable(owner, row_name),
         ]))
         append_static(f" |{i}=")
         append(math_call(name_to_string, local_variable(owner, row_name)))
@@ -369,8 +371,10 @@ def verify(asset: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
                 calls.append(name)
             if name == "Array_Get":
                 params = expr.get("Parameters") or []
-                if len(params) != 3 or type_name(params[1]) != "EX_IntConst":
-                    raise PatchError("Array_Get must use constant bounded index")
+                if len(params) != 3 or type_name(params[1]) != "EX_IntConst" or (
+                    type_name(params[2]) != "EX_LocalVariable"
+                ):
+                    raise PatchError("Array_Get must use a bounded index and writable FName local")
                 array_get_indices.append(params[1].get("Value"))
             if name == "Array_Contains":
                 params = expr.get("Parameters") or []
