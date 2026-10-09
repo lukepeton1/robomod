@@ -24,6 +24,7 @@ on:
       - "tools/windows/cleanup-movement-runtime-probe.*"
       - "tools/windows/momentum-runtime-probe-*.ps1"
       - "tools/windows/test-momentum-staging.ps1"
+      - "tools/windows/test-momentum-runtime-artifact.ps1"
       - "tests/test_*movement*.py"
       - "tests/cpp/**"
       - "vanilla-json/**"
@@ -48,6 +49,8 @@ jobs:
     steps:
       - name: Check out branch
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Run movement analyzer
         run: |
@@ -88,6 +91,10 @@ jobs:
             }
           }
           if ($failed) { exit 1 }
+
+      - name: Test Momentum native artifact freshness and crash detection
+        shell: pwsh
+        run: ./tools/windows/test-momentum-runtime-artifact.ps1
 
       - name: Verify historical UE4SS download, SHA-256, and package layout
         shell: pwsh
