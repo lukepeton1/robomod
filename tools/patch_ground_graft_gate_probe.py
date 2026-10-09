@@ -208,7 +208,7 @@ def build_error_probe(asset: dict[str, Any], candidates: list[str]) -> dict[str,
     ensure_names(
         asset,
         [*(p["Name"] for p in definitions), "currentWeapon", "SpawnedWeapon",
-         "PlayerCharacter", *candidates],
+         "PlayerCharacter", "ReturnValue", *candidates],
     )
 
     code: list[dict[str, Any]] = []
