@@ -2,48 +2,43 @@
 param([string]$GameExePath = "")
 
 $ErrorActionPreference = "Stop"
+$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+$repoRoot = [System.IO.Path]::GetFullPath((Join-Path $scriptRoot "..\.."))
+. (Join-Path $scriptRoot "momentum-runtime-probe-common.ps1")
+. (Join-Path $scriptRoot "momentum-runtime-probe-ue4ss.ps1")
 
+# Recovery should never launch a new game instance or require a fresh runtime ZIP.
 if (-not $GameExePath) {
-    foreach ($proc in Get-Process -ErrorAction SilentlyContinue | Where-Object { $_.ProcessName -match "^RoboQuest|Roboquest" }) {
-        try {
-            $root = Split-Path -Parent $proc.Path
-            $candidate = Join-Path $root "RoboQuest\Binaries\Win64\RoboQuest-Win64-Shipping.exe"
-            if (Test-Path -LiteralPath $candidate) { $GameExePath = $candidate; break }
-            $found = Get-ChildItem -LiteralPath $root -Filter "RoboQuest-Win64-Shipping.exe" -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
-            if ($found) { $GameExePath = $found.FullName; break }
-        } catch {}
-    }
+    $GameExePath = Get-CachedRoboquestShippingExe $repoRoot
 }
-
 if (-not $GameExePath) {
-    throw "Pass -GameExePath to RoboQuest-Win64-Shipping.exe so the interrupted probe can be restored."
+    $GameExePath = Find-RoboquestShippingExe
+}
+if (-not $GameExePath) {
+    throw "Could not locate RoboQuest-Win64-Shipping.exe. Pass -GameExePath to recover its game directory."
 }
 $GameExePath = [System.IO.Path]::GetFullPath((Resolve-Path -LiteralPath $GameExePath).Path)
+if ([System.IO.Path]::GetFileName($GameExePath) -ine "RoboQuest-Win64-Shipping.exe") {
+    throw "Wrong executable; pass RoboQuest-Win64-Shipping.exe."
+}
+if (Find-RoboquestShippingProcess $GameExePath) {
+    throw "Close Roboquest before restoring staged proxy DLLs and UE4SS files."
+}
+
 $win64 = Split-Path -Parent $GameExePath
 $backupRoot = Join-Path $win64 ".momentum-runtime-probe-backup"
 if (-not (Test-Path -LiteralPath $backupRoot)) {
-    Write-Host "No Momentum runtime-probe backup exists. Nothing to restore."
+    Write-Host "No Momentum probe backup exists. Nothing to restore."
     exit 0
 }
 
-$statePath = Join-Path $backupRoot "state.json"
-if (-not (Test-Path -LiteralPath $statePath)) { throw "Probe backup is missing state.json: $backupRoot" }
-$state = Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json
-$targetDwm = Join-Path $win64 "dwmapi.dll"
-$targetUe4ss = Join-Path $win64 "ue4ss"
-$targetXinput = Join-Path $win64 "xinput1_3.dll"
+$stage = [pscustomobject]@{
+    backup = $backupRoot
+    dwm = (Join-Path $win64 "dwmapi.dll")
+    ue4ss = (Join-Path $win64 "ue4ss")
+    xinput = (Join-Path $win64 "xinput1_3.dll")
+    state = $null
+}
 
-Remove-Item -LiteralPath $targetDwm -Force -ErrorAction SilentlyContinue
-Remove-Item -LiteralPath $targetUe4ss -Recurse -Force -ErrorAction SilentlyContinue
-
-if ($state.original_dwmapi -and (Test-Path -LiteralPath (Join-Path $backupRoot "dwmapi.dll"))) {
-    Move-Item -LiteralPath (Join-Path $backupRoot "dwmapi.dll") -Destination $targetDwm -Force
-}
-if ($state.original_ue4ss -and (Test-Path -LiteralPath (Join-Path $backupRoot "ue4ss"))) {
-    Move-Item -LiteralPath (Join-Path $backupRoot "ue4ss") -Destination $targetUe4ss -Force
-}
-if ($state.original_xinput -and (Test-Path -LiteralPath (Join-Path $backupRoot "xinput1_3.dll"))) {
-    Move-Item -LiteralPath (Join-Path $backupRoot "xinput1_3.dll") -Destination $targetXinput -Force
-}
-Remove-Item -LiteralPath $backupRoot -Recurse -Force
-Write-Host "Momentum runtime-probe files restored/removed successfully."
+Restore-MomentumUE4SSProbe $stage
+Write-Host "Original game-directory files restored. Backup was removed after verification."
