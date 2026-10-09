@@ -1,22 +1,91 @@
-function Get-ProbeUE4SSBuild([string]$Scratch) {
-    $api = "https://api.github.com/repos/UE4SS-RE/RE-UE4SS/releases/tags/experimental-latest"
-    $release = Invoke-RestMethod -Uri $api -Headers @{"User-Agent"="Roboquest-Momentum-Probe"}
-    # Fixed tested development build: changing UE4SS between A/B isolation runs
-    # would confound the result and could reintroduce class-construction crashes.
+function Get-ProbeUE4SSBuild([string]$Scratch, [string]$ArchivePath = "") {
+    # experimental-latest is mutable. The exact, formerly validated 1161
+    # build was moved to the historical 'experimental' release on 2026-10-09.
+    # Do NOT silently upgrade UE4SS during the BP_APlayer_C crash investigation.
     $expectedName = "zDEV-UE4SS_v3.0.1-1161-g6eb3d9bc.zip"
     $expectedSha256 = "580a244bc30352cfd0d0019c4c63726c2bddd5bb04ef91f985df237aa81b06e9"
-    $asset = $release.assets | Where-Object { $_.name -eq $expectedName } | Select-Object -First 1
-    if (-not $asset) { throw "Pinned UE4SS $expectedName is no longer published by experimental-latest. Refusing an untested replacement." }
-    $zip=Join-Path $Scratch "ue4ss-zdev.zip"; $extract=Join-Path $Scratch "ue4ss-package"
-    Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zip -Headers @{"User-Agent"="Roboquest-Momentum-Probe"}
-    $hash=(Get-FileHash -Algorithm SHA256 -LiteralPath $zip).Hash.ToLowerInvariant()
-    if ($hash -ne $expectedSha256) { throw "Pinned UE4SS archive SHA-256 mismatch ($hash)." }
-    if ($asset.digest -and [string]$asset.digest -match '^sha256:(.+)$' -and $hash -ne $Matches[1].ToLowerInvariant()) { throw "UE4SS release digest mismatch." }
+    $downloadUrl = "https://github.com/UE4SS-RE/RE-UE4SS/releases/download/experimental/$expectedName"
+    $release = [pscustomobject]@{ tag_name = "experimental" }
+    $asset = [pscustomobject]@{
+        name = $expectedName
+        browser_download_url = $downloadUrl
+        digest = "sha256:$expectedSha256"
+        id = 616464965
+    }
+
+    New-Item -ItemType Directory -Force -Path $Scratch | Out-Null
+    $zip = Join-Path $Scratch "ue4ss-zdev.zip"
+    $extract = Join-Path $Scratch "ue4ss-package"
+
+    # Keep a *hash-verified* local copy so future tests are reproducible
+    # even when GitHub moves another release tag or is temporarily offline.
+    $cacheBase = [Environment]::GetFolderPath("LocalApplicationData")
+    if (-not $cacheBase) { $cacheBase = [Environment]::GetFolderPath("UserProfile") }
+    $cacheDir = Join-Path $cacheBase "RoboQuest\MomentumCache"
+    $cacheZip = Join-Path $cacheDir $expectedName
+    $downloads = Join-Path ([Environment]::GetFolderPath("UserProfile")) "Downloads"
+    $candidates = @()
+    if ($ArchivePath) {
+        # An explicit override is exact; reject rather than ignoring mistakes.
+        if (-not (Test-Path -LiteralPath $ArchivePath -PathType Leaf)) {
+            throw "Specified UE4SS archive was not found: $ArchivePath"
+        }
+        $candidates += $ArchivePath
+    } else {
+        $candidates += $cacheZip
+        $candidates += (Join-Path $downloads $expectedName)
+    }
+
+    $archiveReady = $false
+    foreach ($candidate in $candidates) {
+        if (-not (Test-Path -LiteralPath $candidate -PathType Leaf)) { continue }
+        $sha = (Get-FileHash -LiteralPath $candidate -Algorithm SHA256).Hash.ToLowerInvariant()
+        if ($sha -ne $expectedSha256) {
+            if ($ArchivePath) {
+                throw "Specified UE4SS ZIP has SHA-256 $sha; expected $expectedSha256. Refusing to load it."
+            }
+            Write-Warning "Ignoring invalid cached UE4SS ZIP at $candidate (SHA-256 mismatch)."
+            continue
+        }
+        Copy-Item -LiteralPath $candidate -Destination $zip -Force
+        Write-Host "Using hash-verified UE4SS ZIP: $candidate"
+        $archiveReady = $true
+        break
+    }
+
+    if (-not $archiveReady) {
+        Write-Host "Fetching pinned UE4SS 1161 from the historical experimental release..."
+        try {
+            Invoke-WebRequest -Uri $downloadUrl -OutFile $zip -UseBasicParsing -ErrorAction Stop
+        } catch {
+            throw "Could not download pinned UE4SS from $downloadUrl. $($_.Exception.Message) You may also pass -UE4SSZipPath with a local copy of $expectedName."
+        }
+        $sha = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
+        if ($sha -ne $expectedSha256) {
+            throw "Downloaded UE4SS SHA-256 mismatch ($sha). Expected $expectedSha256. No game files were changed."
+        }
+        try {
+            New-Item -ItemType Directory -Force -Path $cacheDir | Out-Null
+            Copy-Item -LiteralPath $zip -Destination $cacheZip -Force
+        } catch {
+            Write-Warning "UE4SS ZIP verified, but could not cache it for the next run: $($_.Exception.Message)"
+        }
+    }
+
+    # Recompute the hash after resolving either path, before any staging.
+    $hash = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($hash -ne $expectedSha256) { throw "UE4SS ZIP failed final SHA-256 verification." }
     Expand-Archive -LiteralPath $zip -DestinationPath $extract -Force
-    $dwm=Get-ChildItem $extract -Filter "dwmapi.dll" -File -Recurse | Select-Object -First 1
-    $dir=Get-ChildItem $extract -Directory -Filter "ue4ss" -Recurse | Select-Object -First 1
-    if (-not $dwm -or -not $dir) { throw "Unexpected UE4SS zDEV archive layout." }
-    return [pscustomobject]@{release=$release;asset=$asset;sha256=$hash;dwm=$dwm.FullName;ue4ss=$dir.FullName}
+    $dwm = Get-ChildItem -LiteralPath $extract -Filter "dwmapi.dll" -File -Recurse | Select-Object -First 1
+    $dir = Get-ChildItem -LiteralPath $extract -Directory -Filter "ue4ss" -Recurse | Select-Object -First 1
+    if (-not $dwm -or -not $dir) { throw "Unexpected pinned UE4SS archive layout." }
+    return [pscustomobject]@{
+        release = $release
+        asset = $asset
+        sha256 = $hash
+        dwm = $dwm.FullName
+        ue4ss = $dir.FullName
+    }
 }
 
 # This staging helper also handles -Baseline (Build=$null): move aside
