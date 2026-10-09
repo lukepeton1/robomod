@@ -11,6 +11,7 @@ only generated policy data and returns an authoritative decision object:
 - quality-scaled affix complexity cap;
 - single native secondary-fire slot policy;
 - exact Power Cell cost;
+- donor-chassis preset provenance (never harvest innate weapon properties);
 - optional donor-contains-row and available-funds checks.
 
 The eventual dropped-weapon GRAFT UI and Smith/editor should call the same logic (or
@@ -29,6 +30,7 @@ DEFAULT_MATRIX = ROOT / "Source/grafting/compatibility_matrix.json"
 DEFAULT_TRANSFER = ROOT / "Source/grafting/transfer_policy.json"
 DEFAULT_TRANSACTION = ROOT / "Source/grafting/graft_transaction.json"
 DEFAULT_PROGRESSION = ROOT / "Source/grafting/progression_policy.json"
+DEFAULT_WEAPONS = ROOT / "research/generated/weapons.json"
 
 
 class GraftRuleError(RuntimeError):
@@ -57,11 +59,18 @@ class GraftRules:
         transfer: dict[str, Any],
         transaction: dict[str, Any] | None = None,
         progression: dict[str, Any] | None = None,
+        weapons: list[dict[str, Any]] | None = None,
     ):
         self.matrix = matrix
         self.transfer = transfer
         self.transaction = transaction or {}
         self.progression = progression or {}
+        # Exact native DT_Weapons preset lists. A row that is transferable on a
+        # rolled donor may be permanently innate to another chassis.
+        self.donor_preset_rows: dict[str, frozenset[str]] = {
+            str(weapon["row"]): frozenset(map(str, weapon.get("preset_affixes") or []))
+            for weapon in (weapons or []) if weapon.get("row")
+        }
         self.properties = {
             row["row"]: row
             for row in matrix.get("properties", [])
@@ -78,6 +87,7 @@ class GraftRules:
             load_json(DEFAULT_TRANSFER),
             load_json(DEFAULT_TRANSACTION),
             load_json(DEFAULT_PROGRESSION),
+            weapons=load_json(DEFAULT_WEAPONS),
         )
 
     def quality_cap(self, quality_color: int) -> int:
@@ -135,12 +145,35 @@ class GraftRules:
         quality_color: int = 0,
         available_power_cells: int | None = None,
         donor_rows: Iterable[str] | None = None,
+        donor_weapon: str | None = None,
         requested_kind: str | None = None,
     ) -> dict[str, Any]:
         affixes = _dedupe(existing_affix_rows)
         mods = _dedupe(existing_weapon_mod_rows)
         existing = set(affixes) | set(mods)
         reasons: list[dict[str, Any]] = []
+
+        # Donor-row enumeration includes fixed chassis traits as well as
+        # randomly rolled properties (confirmed in-game for FireGun). Avoid
+        # relying on tooltip names or trimming *Blank as a surrogate identity.
+        if donor_rows is not None:
+            if not donor_weapon or donor_weapon not in self.donor_preset_rows:
+                reasons.append({
+                    "code": "donor_identity_unverified",
+                    "message": (
+                        "Donor chassis row was not verified against native DT_Weapons "
+                        "preset-affix metadata; grafting is blocked."
+                    ),
+                })
+            elif row_id in self.donor_preset_rows[donor_weapon]:
+                reasons.append({
+                    "code": "donor_native_preset",
+                    "message": (
+                        f"{row_id} is an innate preset on {donor_weapon}; "
+                        "only independently rolled donor properties may be harvested."
+                    ),
+                    "donor_weapon": donor_weapon,
+                })
 
         prop = self.properties.get(row_id)
         transfer = self.transferable.get(row_id)
@@ -276,6 +309,7 @@ class GraftRules:
         self,
         *,
         target_weapon: str,
+        donor_weapon: str,
         donor_rows: Iterable[str],
         existing_affix_rows: Iterable[str] = (),
         existing_weapon_mod_rows: Iterable[str] = (),
@@ -294,6 +328,7 @@ class GraftRules:
                 quality_color=quality_color,
                 available_power_cells=available_power_cells,
                 donor_rows=donor,
+                donor_weapon=donor_weapon,
             )
             for row_id in donor
         ]
@@ -307,6 +342,7 @@ class GraftRules:
         return {
             "mode": "donor",
             "target_weapon": target_weapon,
+            "donor_weapon": donor_weapon,
             "quality_color": int(quality_color),
             "donor_rows": donor,
             "allowed_count": sum(result["allowed"] for result in choices),
@@ -402,6 +438,7 @@ def main() -> int:
     ap.add_argument("--existing-affixes", default="")
     ap.add_argument("--existing-mods", default="")
     ap.add_argument("--donor-rows", default=None)
+    ap.add_argument("--donor-weapon", default=None, help="Exact donor DT_Weapons row; required to validate listed donor rows")
     ap.add_argument("--power-cells", type=int)
     args = ap.parse_args()
 
@@ -420,6 +457,7 @@ def main() -> int:
             else None
         ),
         available_power_cells=args.power_cells,
+        donor_weapon=args.donor_weapon,
     )
     print(json.dumps(result, indent=2))
     return 0 if result["allowed"] else 2

@@ -46,6 +46,11 @@
       "failure": "donor_missing_property"
     },
     {
+      "id": "donor_chassis_preset_provenance",
+      "rule": "server resolves donor AWeapon.GetDataRowName() and checks that selected exact FName is not in the matching DT_Weapons.preset_affixes list; missing/unknown donor chassis metadata fails closed. A globally transferable row can still be innate on a specific weapon.",
+      "failure": "donor_native_preset_or_identity_unverified"
+    },
+    {
       "id": "transferable",
       "rule": "row exists in compatibility_matrix + transfer_policy.transferable",
       "failure": "locked_property"
@@ -141,8 +146,10 @@
     "donor_identity_usage": "server calls AAWeapon.GetAffixRowNames() and validates exact native row IDs directly; class/custom-property reconstruction is fallback-only. World-actor enumeration is forbidden.",
     "donor_actor_enumeration": "disproven by Source/probes/donor_runtime_probe_results.json",
     "candidate_donor_row_enumerator": "AAWeapon.GetAffixRowNames()",
-    "candidate_donor_row_enumerator_status": "verified in cooked runtime; authoritative preferred donor-row source",
-    "candidate_donor_row_enumerator_probe": "tools/windows/run-donor-rowname-probe.cmd"
+    "candidate_donor_row_enumerator_status": "verified in cooked runtime: FireGun GetAffixRowNames returned [BurnBlank, HomingBlank], Array_Contains self=OK (2026-10-09)",
+    "candidate_donor_row_enumerator_probe": "tools/windows/run-donor-rowname-probe.cmd",
+    "donor_preset_source": "research/generated/weapons.json",
+    "donor_preset_rule": "Reject exact row if present in donor chassis preset_affixes; never strip Blank suffixes or infer identity from tooltip text"
   },
   "ui_preview": {
     "donor_planner": "tools/evaluate_graft.py:GraftRules.plan_donor",

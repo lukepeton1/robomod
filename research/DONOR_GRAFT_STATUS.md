@@ -345,3 +345,50 @@ offsets, not real-game execution or authority.
 Do not attempt mutation or donor consumption until runtime row extraction and
 the self-comparison check are confirmed. The production manifest remains
 unchanged, and the failed `BP_APlayer` and Homing overrides remain excluded.
+
+## October 9 verified raw-row gameplay result and provenance correction
+
+A screenshot from a real Roboquest run (read-only
+`tools/windows/run-ground-graft-gate-probe.cmd`) showed a dropped Common
+Igniter Gun while the player held a Common Fox Gun. The diagnostic read:
+
+```text
+WF n=2 |0=BurnBlank |1=HomingBlank |self=OK |gate=NO_MATCH
+```
+
+This resolves the earlier instrumentation uncertainty:
+
+- `AAWeapon.GetAffixRowNames()` returned exactly two native `FName` values;
+- bounded `Array_Get` and `Conv_NameToString` operated successfully;
+- `Array_Contains` recognized the first returned row within the donor array;
+- `BurnBlank` and `HomingBlank` are **both preset rows** on
+  `FireGun`, confirmed by `research/generated/weapons.json`;
+- the transfer policy independently locks both as
+  `chassis_or_internal_variant`, so `NO_MATCH` was a *correct* outcome,
+  not a reason to widen the eligible row pool;
+- vanilla `Burn` is a distinct row and must not be substituted for
+  `BurnBlank`. `Homing` and `HomingBlank` are distinct too;
+- the Common target has Foundry affix cap 0; even a legitimately rolled
+  affix would be quality-blocked under current progression policy.
+
+The evidence is recorded in
+`Source/probes/donor_runtime_probe_results.json`.
+
+### Production-safety implication
+
+**Raw native row IDs are not sufficient evidence of transferable ownership.**
+`GetAffixRowNames()` includes intrinsic/preset chassis affixes.
+An affix row such as `AutoShotgun` may be globally transferable but still
+be native to a particular donor (e.g. `TommyGun`). Consequently
+`GraftRules.plan_donor` and the transaction contract now require
+the donor's exact `AAWeapon.GetDataRowName()` chassis row and reject
+any row present in that chassis's `preset_affixes`, even if global policy
+otherwise permits the row. Unknown donor chassis metadata fails closed.
+
+The next runtime validation should use a donor with a genuinely **randomly
+rolled** transferable affix, not merely visible preset text. For GRAFT, use
+a target of quality color 1 or higher. No new extraction is needed.
+
+The native getter/array problem is solved; authority and mutation still
+require separate runtime proof. Leave the retired `BP_APlayer` and Homing
+overlays disabled.

@@ -21,6 +21,28 @@
       "context": "runtime probe executed against a visibly affixed dropped Dual Rascals; tooltip showed ordinary/native affix content and Rocket Jump",
       "conclusion": "AAWeapon.GetAffixRowNames() is a working cooked/native seam for authoritative donor row enumeration. Promote exact native row IDs into GRAFT donor validation.",
       "supersedes_primary_path": "AWeaponAffix UObject class/custom-property reconstruction is fallback-only when a native row ID is unavailable"
+    },
+    {
+      "id": "aweapon_raw_name_and_generic_array_contains",
+      "method": "BP_Interactive_Weapon.GetErrorText read-only raw native row inspector",
+      "status": "verified",
+      "date": "2026-10-09",
+      "trigger": "E on dropped level-1 COMMON Igniter Gun (FireGun) while holding level-1 COMMON Fox Gun (HandGun)",
+      "native_donor_row_count": 2,
+      "native_donor_rows": [
+        "BurnBlank",
+        "HomingBlank"
+      ],
+      "self_contains": true,
+      "candidate_gate": "NO_MATCH",
+      "tooltip_displayed_affixes": [
+        "Burn: Deals burn damage",
+        "Seeker: Projectiles are homing"
+      ],
+      "reconciled_source": "research/generated/weapons.json: FireGun.preset_affixes exactly equals the two returned native FNames",
+      "locked_source": "Source/grafting/transfer_policy.json locks BurnBlank and HomingBlank as chassis_or_internal_variant",
+      "target_quality_rule": "Fox Gun was COMMON (color byte 0), which Source/grafting/progression_policy.json caps at 0 Foundry affixes",
+      "conclusion": "Native donor array enumeration, bounds-guarded FName reads and Array_Contains self-lookup are proven. Rejection is correct: both rows are intrinsic donor presets, not rolled transferable affixes. Do not rewrite Blank rows to ordinary Burn/Homing or harvest them."
     }
   ]
 }

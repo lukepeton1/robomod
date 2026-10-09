@@ -108,6 +108,16 @@ class GraftContractAlignmentTests(unittest.TestCase):
         }
         self.assertTrue(expected.issubset(set(self.ui["shared"]["reason_codes"])))
 
+    def test_donor_preset_provenance_is_mandatory(self):
+        stage = next(step for step in self.transaction["validation_order"]
+                     if step["id"] == "donor_chassis_preset_provenance")
+        self.assertIn("GetDataRowName()", stage["rule"])
+        self.assertIn("preset_affixes", stage["rule"])
+        self.assertIn("donor_native_preset", self.ui["shared"]["reason_codes"])
+        self.assertIn("donor_identity_unverified", self.ui["shared"]["reason_codes"])
+        self.assertEqual(self.transaction["rule_engine"]["donor_preset_source"],
+                         "research/generated/weapons.json")
+
     def test_actor_enumeration_is_forbidden_by_contract(self):
         usage = self.transaction["rule_engine"]["donor_identity_usage"]
         self.assertIn("AAWeapon.GetAffixRowNames()", usage)

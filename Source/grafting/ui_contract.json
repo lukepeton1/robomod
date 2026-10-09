@@ -19,7 +19,9 @@
       "quality_locked",
       "complexity_cap",
       "alt_fire_slot_occupied",
-      "insufficient_power_cells"
+      "insufficient_power_cells",
+      "donor_identity_unverified",
+      "donor_native_preset"
     ],
     "progression_policy": "Source/grafting/progression_policy.json",
     "donor_identity_catalog": "Source/grafting/donor_identity_catalog.json",
@@ -70,8 +72,9 @@
     "donor_enumeration": "read exact native donor row IDs from AAWeapon.GetAffixRowNames(); fallback only if a future row lacks native identity. GameplayStatics actor enumeration is invalid",
     "donor_actor_probe_result": "Source/probes/donor_runtime_probe_results.json",
     "candidate_donor_row_enumerator": "AAWeapon.GetAffixRowNames()",
-    "candidate_donor_row_enumerator_status": "verified in cooked runtime; authoritative",
-    "candidate_donor_row_probe": "tools/windows/run-donor-rowname-probe.cmd"
+    "candidate_donor_row_enumerator_status": "verified in cooked runtime: FireGun native rows BurnBlank and HomingBlank; Array_Contains self=OK",
+    "candidate_donor_row_probe": "tools/windows/run-donor-rowname-probe.cmd",
+    "donor_provenance": "GraftRules.plan_donor must receive donor_weapon=AAWeapon.GetDataRowName(); check exact row against research/generated/weapons.json preset_affixes; native preset rows are locked even when their row is globally transferable"
   },
   "smith": {
     "trigger": "Foundry / Smith interaction",
