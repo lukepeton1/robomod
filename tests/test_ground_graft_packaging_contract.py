@@ -45,9 +45,23 @@ class GroundGraftPackagingContractTests(unittest.TestCase):
             "WeaponFoundry_GraftSafeHost_P.pak",
             "WeaponFoundry_GraftSafeHost_P.ucas",
             "WeaponFoundry_GraftSafeHost_P.utoc",
+            "WeaponFoundry_GraftGate_P.pak",
+            "WeaponFoundry_GraftGate_P.ucas",
+            "WeaponFoundry_GraftGate_P.utoc",
         ):
             self.assertIn(name, self.production)
         self.assertIn("Remove-Item -Force $diagnosticPath", self.production)
+
+    def test_new_gate_uses_proven_interactive_host(self):
+        script = (
+            ROOT / "tools/windows/build-ground-graft-gate-probe.ps1"
+        ).read_text(encoding="utf-8")
+        self.assertIn('BP_Interactive_Weapon', script)
+        self.assertIn('patch_ground_graft_gate_probe.py', script)
+        self.assertIn('WeaponFoundry_GraftGate_P.utoc', script)
+        self.assertIn('retoc-ground-graft-gate.log', script)
+        self.assertIn('WeaponFoundry_GraftSafeHost_P.pak', script)
+        self.assertNotIn('BP_APlayer.uasset', script)
 
 
 if __name__ == "__main__":
