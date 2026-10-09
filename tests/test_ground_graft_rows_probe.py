@@ -79,13 +79,17 @@ class GroundGraftRawRowInspectorTests(unittest.TestCase):
         new, _ = patch(fixture(), spec())
         corrupt = copy.deepcopy(new)
         fn = next(e for e in corrupt["Exports"] if e["ObjectName"] == "GetErrorText")
-        # The first sample has a count > 0 conditional immediately before it.
+        # Corrupt the value of the first exact bounds check while preserving
+        # bytecode size. This tests the semantic guard verifier rather than
+        # relying on an unrelated ScriptBytecodeSize mismatch.
+        array_get = next(-i for i, imp in enumerate(corrupt["Imports"], start=1)
+                         if imp["ObjectName"] == "Array_Get")
         for i, expr in enumerate(fn["ScriptBytecode"]):
-            if "Array_Get" in str(expr) and i:
-                fn["ScriptBytecode"][i - 1]["$type"] = (
-                    "UAssetAPI.Kismet.Bytecode.Expressions.EX_Nothing, UAssetAPI"
-                )
+            if (expr.get("ContextExpression") or {}).get("StackNode") == array_get:
+                fn["ScriptBytecode"][i - 1]["BooleanExpression"]["Parameters"][1]["Value"] = 99
                 break
+        else:
+            self.fail("test fixture did not contain an Array_Get statement")
         with self.assertRaises(Exception):
             verify(corrupt, spec())
 

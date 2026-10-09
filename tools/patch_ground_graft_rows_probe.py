@@ -398,19 +398,45 @@ def verify(asset: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
         if name_const(row) not in [e for e in walk(code) if type_name(e) == "EX_NameConst"]:
             raise PatchError(f"candidate not compared: {row}")
 
-    # Verify a count guard immediately before each sample branch.
+    # Every generic Array_Get must have its own exact count > index guard,
+    # with a jump destination beyond the array read itself.
     top = code
+    guarded_indices: list[int] = []
     for i, expr in enumerate(top):
-        if type_name(expr) != "EX_Context" or not any(
-            type_name(e) == "EX_FinalFunction" and object_name(asset, e.get("StackNode")) == "Array_Get"
-            for e in walk(expr) if isinstance(e, dict)
+        if type_name(expr) != "EX_Context":
+            continue
+        call = expr.get("ContextExpression") or {}
+        if type_name(call) != "EX_FinalFunction" or (
+            object_name(asset, call.get("StackNode")) != "Array_Get"
         ):
             continue
-        if i == 0 or type_name(top[i - 1]) != "EX_JumpIfNot":
-            raise PatchError("Array_Get is not behind count guard")
-        cond = (top[i - 1].get("BooleanExpression") or {})
-        if type_name(cond) != "EX_CallMath" or object_name(asset, cond.get("StackNode")) != "Greater_IntInt":
+        call_params = call.get("Parameters") or []
+        index = call_params[1].get("Value") if len(call_params) == 3 else None
+        if not isinstance(index, int) or i == 0 or (
+            type_name(top[i - 1]) != "EX_JumpIfNot"
+        ):
+            raise PatchError("Array_Get is not preceded by its count guard")
+        guard = top[i - 1]
+        cond = guard.get("BooleanExpression") or {}
+        if type_name(cond) != "EX_CallMath" or (
+            object_name(asset, cond.get("StackNode")) != "Greater_IntInt"
+        ):
             raise PatchError("Array_Get count guard is not Greater_IntInt")
+        params = cond.get("Parameters") or []
+        count_path = (((params[0].get("Variable") or {}).get("New") or {}).get("Path")
+                      if params and type_name(params[0]) == "EX_LocalVariable" else None)
+        threshold = (params[1].get("Value") if len(params) == 2 and
+                     type_name(params[1]) == "EX_IntConst" else None)
+        if count_path != [COUNT] or threshold != index:
+            raise PatchError("Array_Get guard does not compare COUNT > exact index")
+        end_of_read = sum(expression_size(item) for item in top[:i + 1])
+        if not isinstance(guard.get("CodeOffset"), int) or (
+            guard["CodeOffset"] < end_of_read
+        ):
+            raise PatchError("Array_Get zero/short-array branch can enter the read")
+        guarded_indices.append(index)
+    if guarded_indices != list(range(len(ROW_NAMES))):
+        raise PatchError("unverified bounded FName sample indices")
 
     inter_code = interact.get("ScriptBytecode") or []
     if len(inter_code) < 2 or type_name(inter_code[0]) != "EX_LetBool" or (
