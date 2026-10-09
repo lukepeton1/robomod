@@ -45,6 +45,9 @@ try {
     Assert-True ($info.BuildCommit -eq $head) "Manifest commit was parsed incorrectly"
     Assert-MomentumRuntimeSourceMatches $repoRoot $info.BuildCommit
     Write-Host "PASS current-runtime manifest/source match"
+    $selected = Find-MomentumCompatibleRuntimeZip $zip $repoRoot
+    Assert-True ($selected -eq $zip) "Compatible explicit ZIP was not selected"
+    Write-Host "PASS compatible-artifact selection"
 
     Make-TestZip $dir $zip $head $true
     Assert-Rejected { $null = Get-MomentumRuntimeBuildInfo $zip } "Tampered DLL unexpectedly accepted"
@@ -63,6 +66,8 @@ try {
     $oldInfo = Get-MomentumRuntimeBuildInfo $zip
     Assert-Rejected { Assert-MomentumRuntimeSourceMatches $repoRoot $oldInfo.BuildCommit } "Old movement physics unexpectedly accepted"
     Write-Host "PASS old-source stale-DLL rejection"
+    Assert-Rejected { $null = Find-MomentumCompatibleRuntimeZip $zip $repoRoot } "Stale explicit ZIP unexpectedly selected"
+    Write-Host "PASS stale-artifact selection refusal"
 
     Assert-True (-not ("UClass::ClassConstructor = 0xB0" -match $MomentumFatalRegex)) "Harmless UE4SS layout diagnostic falsely reported as fatal"
     Assert-True ("Can't find ClassConstructor for class /Game/BP_APlayer_C" -match $MomentumFatalRegex) "Real ClassConstructor crash not detected"
