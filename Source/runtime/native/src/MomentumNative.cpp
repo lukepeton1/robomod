@@ -61,6 +61,7 @@ static HMODULE g_library{};
 static std::filesystem::path g_mod_root{};
 static std::mutex g_log_mutex{};
 static std::atomic<std::uint64_t> g_target_calls{0};
+static std::atomic<std::uint64_t> g_air_trace_logged{0};
 static std::atomic<int> g_last_movement_mode{-1};
 static std::atomic<int> g_last_dash{-1};
 static std::atomic<bool> g_installed{false};
@@ -343,6 +344,17 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
     const bool bypass = dashing || (movement_mode != 1 && movement_mode != 2 && movement_mode != 3);
     const auto before = at<FVector3f>(self, layout::velocity);
     const auto wish = at<FVector3f>(self, layout::acceleration);
+
+    // The last applied air velocity lets diagnostics distinguish opposition
+    // from a subsequent speed cut outside CalcVelocity.
+    double previous_applied_air_speed = 0.0;
+    if (movement_mode == 3 && !bypass) {
+        std::lock_guard<std::mutex> guard(g_bhop_mutex);
+        const auto it = g_bhop_states.find(self);
+        if (it != g_bhop_states.end() && it->second.previously_airborne) {
+            previous_applied_air_speed = it->second.last_air_velocity.horizontal_speed();
+        }
+    }
     const float max_walk = at<float>(self, layout::max_walk_speed);
     const float max_accel = at<float>(self, layout::max_acceleration);
     const float slide_rate = at<float>(owner, layout::power_slide_rate);
@@ -464,6 +476,40 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
     }
 
     const auto call_number = g_target_calls.fetch_add(1, std::memory_order_relaxed);
+
+    // Targeted active-mode trace for right/left strafe reversals. Previous
+    // 300-frame periodic samples missed the exact moment of speed loss.
+    if (g_config.active && !bypass && movement_mode == 3) {
+        const auto pre = convert(before);
+        const auto requested = convert(wish);
+        const double pre_speed = pre.horizontal_speed();
+        const double wish_magnitude = requested.horizontal_speed();
+        const double alignment = pre_speed > 1.0 && wish_magnitude > 1.0
+            ? std::clamp(pre.dot2(requested) / (pre_speed * wish_magnitude), -1.0, 1.0)
+            : 0.0;
+        const bool outside_speed_cut = previous_applied_air_speed > 500.0 &&
+            pre_speed < previous_applied_air_speed * 0.82;
+        const bool in_hook_braking = pre_speed > 500.0 &&
+            result.horizontal_speed() < pre_speed * 0.92;
+        if ((call_number % 12 == 0 || outside_speed_cut || in_hook_braking) &&
+            g_air_trace_logged.fetch_add(1, std::memory_order_relaxed) < 1300) {
+            std::ostringstream event;
+            event << std::fixed << std::setprecision(2)
+                  << "air_trace=sample frame=" << call_number
+                  << " alignment=" << alignment
+                  << " previous_applied_speed=" << previous_applied_air_speed
+                  << " pre_speed=" << pre_speed
+                  << " vanilla_speed=" << convert(vanilla).horizontal_speed()
+                  << " result_speed=" << result.horizontal_speed()
+                  << " outside_cut=" << outside_speed_cut
+                  << " in_hook_braking=" << in_hook_braking
+                  << " wish=(" << wish.x << "," << wish.y << ")"
+                  << " pre=(" << before.x << "," << before.y << ")"
+                  << " dt=" << dt;
+            log(event.str());
+        }
+    }
+
     if (call_number < 80 || call_number % 300 == 0) {
         std::ostringstream msg;
         msg << std::fixed << std::setprecision(3)
@@ -510,6 +556,7 @@ void uninstall() {
     g_slide_active.store(false, std::memory_order_release);
     g_last_movement_mode.store(-1, std::memory_order_relaxed);
     g_last_dash.store(-1, std::memory_order_relaxed);
+    g_air_trace_logged.store(0, std::memory_order_relaxed);
     {
         std::lock_guard<std::mutex> guard(g_bhop_mutex);
         g_bhop_states.clear();
@@ -565,6 +612,7 @@ bool install() {
     g_slide_active.store(false, std::memory_order_release);
     g_last_movement_mode.store(-1, std::memory_order_relaxed);
     g_last_dash.store(-1, std::memory_order_relaxed);
+    g_air_trace_logged.store(0, std::memory_order_relaxed);
     {
         std::lock_guard<std::mutex> guard(g_bhop_mutex);
         g_bhop_states.clear();
@@ -583,7 +631,7 @@ bool install() {
 
     g_installed.store(true, std::memory_order_release);
     write_status(g_config.active
-        ? "ACTIVE: Source bhop air acceleration, landing speed preservation and grace enabled."
+        ? "ACTIVE: Source bhop air acceleration, landing speed preservation and grace enabled (AIR_TRACE_V2)."
         : "OBSERVE: Source bhop predicted only; vanilla movement is unchanged.");
     return true;
 }
