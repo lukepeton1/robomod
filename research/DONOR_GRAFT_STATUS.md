@@ -192,6 +192,52 @@ Expected test result:
 Once this cross-object replicated mutation succeeds, the next step is to move cost/consume/verification onto a safe server-authoritative native interaction seam rather than reintroducing a modified `BP_APlayer`.
 
 
+## Empirical safe-host mutation result
+
+Two in-game tests of the safe-host `BP_Interactive_Weapon.GetInteractSound`
+mutation probe produced normal E weapon swaps but **no observable affix transfer**:
+
+1. a local `AddEnchantedAffix(RowName)` wrapper call;
+2. an explicit `OnServerAddEnchantedAffix(RowName, captured currentWeapon)` call.
+
+These observations **do not prove** that the server RPC was rejected.
+Neither diagnostic confirmed that `GetInteractSound` was executed in the
+actual E swap path or that the donor contained a row in the restricted 11-row
+probe candidate pool. The earlier donor getter success established only that
+`GetAffixRowNames` returns a nonempty native row list for an affixed weapon.
+
+The old safe-host mutation runner is retired to prevent another blind retest.
+Do not debit cells or destroy donors until the actual execution/authority
+path is established.
+
+## Current gate: visible donor eligibility diagnostic
+
+The current read-only diagnostic reuses the **runtime-proven**
+`BP_Interactive_Weapon.GetErrorText` UI and temporarily sets
+`CanInteract=false`, so an E attempt shows one explicit message:
+
+- `WF READY: <row>` — a supported donor row exists and the target does not
+  already have that row;
+- `WF BLOCKED: target already has <row>` — duplicate in the target;
+- `WF GATE: donor has no supported affix` — nothing in the narrow 11-row pool
+  matched this particular donor;
+- `WF GATE: current target missing` — `PlayerCharacter.currentWeapon`
+  could not be obtained from this interaction context.
+
+Files:
+
+- `tools/patch_ground_graft_gate_probe.py`;
+- `tools/windows/build-ground-graft-gate-probe.ps1`;
+- `tools/windows/run-ground-graft-gate-probe.cmd`.
+
+This is **diagnostic-only**. No Power Cells, weapon affixes, or donor
+consumption are changed. The normal pickup is intentionally disabled until
+the diagnostic overlay is restored to the production build.
+
+After verifying eligibility and callback reachability, move the real
+transaction into a confirmed server-authoritative interaction callback
+rather than repurposing the client-facing sound-selection function.
+
 ## Runtime identity fallback
 
 If `GetAffixRowNames()` succeeds, direct row IDs supersede most of the previously planned class/custom-property reconstruction.
