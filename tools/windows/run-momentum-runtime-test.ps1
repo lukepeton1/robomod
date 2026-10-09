@@ -2,6 +2,7 @@
 param(
     [string]$RuntimeZipPath = "",
     [string]$GameExePath = "",
+    [Alias("Bhop")]
     [switch]$Active,
     [switch]$LoaderOnly,
     [switch]$BootstrapOnly,
@@ -83,10 +84,14 @@ function Enable-MomentumMod([string]$Ue4ssRoot, [string]$SourceRoot, [bool]$Mode
         Copy-Item -LiteralPath $nativeArtifact.FullPath -Destination $nativeDestination -Force
     }
 
-    # The bootstrap-only probe intentionally ships WITHOUT any native DLL.
-    $config = if ($OnlyBootstrap) { "active=0`nprobe_mode=bootstrap_only`n" }
-              elseif ($ModeActive) { "active=1`n" } else { "active=0`n" }
-    Set-Content -LiteralPath (Join-Path $modRoot "config\momentum.ini") -Value $config -Encoding ascii
+    # Preserve authored physics tuning from the artifact. Only switch the
+    # active state, so a player's adjustments are not silently discarded.
+    $configPath = Join-Path $modRoot "config\momentum.ini"
+    $configLines = @(Get-Content -LiteralPath $configPath |
+        Where-Object { $_ -notmatch '^\s*(active|probe_mode)\s*=' })
+    $configLines += if ($ModeActive -and -not $OnlyBootstrap) { "active=1" } else { "active=0" }
+    if ($OnlyBootstrap) { $configLines += "probe_mode=bootstrap_only" }
+    Set-Content -LiteralPath $configPath -Value $configLines -Encoding ascii
     return $modRoot
 }
 
