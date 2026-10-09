@@ -184,14 +184,14 @@ def build_error_probe(asset: dict[str, Any], candidates: list[str]) -> dict[str,
     interactive_cls = require_import(asset, "AInteractiveWeapon")
     player_cls = require_import(asset, "Character_Player")
 
-    array_cls = add_import(asset, "KismetArrayLibrary", outer_index=engine, class_name="Class")
+    array_cls = add_import(asset, "KismetArrayLibrary", outer_index=engine, class_package="/Script/CoreUObject", class_name="Class")
     default_array = add_import(
         asset, "Default__KismetArrayLibrary",
         outer_index=engine, class_package="/Script/Engine",
         class_name="KismetArrayLibrary",
     )
-    get_rows = add_import(asset, "GetAffixRowNames", outer_index=weapon_cls)
-    contains = add_import(asset, "Array_Contains", outer_index=array_cls)
+    get_rows = add_import(asset, "GetAffixRowNames", outer_index=weapon_cls, class_package="/Script/CoreUObject", class_name="Object")
+    contains = add_import(asset, "Array_Contains", outer_index=array_cls, class_package="/Script/CoreUObject", class_name="Object")
 
     definitions = [
         name_array_property(DONOR_ROWS),
