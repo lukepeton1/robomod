@@ -1,6 +1,10 @@
 # Momentum runtime artifact preflight. Never use a stale DLL from handoff/
 # simply because it was found first. This helper performs no game writes.
 
+# A reflected field address is NOT a game fatal. Only match actual fatal text.
+$MomentumFatalRegex = "LowLevelFatalError|Can.t find ClassConstructor for class|Fatal error|LogWindows:\s*Error:"
+
+
 function Get-MomentumRuntimeBuildInfo([string]$ZipPath) {
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     $archive = $null
