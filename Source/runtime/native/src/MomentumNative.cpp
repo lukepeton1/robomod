@@ -21,6 +21,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 #include "../../momentum_core.hpp"
 #include "../include/momentum_native_layout.hpp"
@@ -45,13 +46,15 @@ struct Config {
     double ground_acceleration{12.0};
     double ground_friction{7.0};
     double stop_speed{220.0};
-    double air_acceleration{12.0};
+    // Full-wish-speed Source-style air acceleration; only projection is capped.
+    double air_acceleration{9.0};
     double air_wish_cap{320.0};
     double air_soft_threshold{5000.0};
-    double air_soft_damping{0.15};
+    double air_soft_damping{0.0}; // No arbitrary drag that kills earned bhop speed.
+    double bhop_landing_grace_seconds{0.09};
     double slide_friction{1.15};
     double slide_acceleration{3.5};
-    double absolute_cap{12000.0};
+    double absolute_cap{30000.0}; // Emergency guard only, not ordinary run cap.
 };
 
 static HMODULE g_library{};
@@ -67,6 +70,8 @@ static void** g_vtable{};
 static void* g_movement_class{};
 static void* g_player_class{};
 static Config g_config{};
+static std::mutex g_bhop_mutex{};
+static std::unordered_map<void*, momentum::BunnyhopChainState> g_bhop_states{};
 
 template <class T>
 T& at(void* object, std::size_t offset) noexcept {
@@ -245,21 +250,63 @@ bool read_bindings(void*& movement_class, void*& player_class, void*& movement_c
 }
 
 void read_settings() {
+    g_config = Config{};
     const auto settings = g_mod_root / "config" / "momentum.ini";
     std::ifstream input(settings);
     if (!input) {
-        log("momentum.ini missing; defaulting to observe-only.");
+        log("momentum.ini missing; defaulting to observation-only.");
         return;
     }
     std::string line;
     while (std::getline(input, line)) {
         line = trim(line);
+        if (line.empty() || line.front() == '#' || line.front() == ';') continue;
         const auto equals = line.find('=');
         if (equals == std::string::npos) continue;
         const auto key = trim(line.substr(0, equals));
         const auto val = trim(line.substr(equals + 1));
         if (key == "active") {
             g_config.active = (val == "1" || val == "true");
+            continue;
+        }
+
+        // Reject bogus/non-finite settings and unsafe ranges rather than
+        // allowing a typo to turn movement into a NaN/teleport crash.
+        const auto assign = [&](const char* candidate, double& field,
+                                double minimum, double maximum) {
+            if (key != candidate) return false;
+            try {
+                std::size_t parsed{};
+                const double value = std::stod(val, &parsed);
+                if (parsed != val.size() || !std::isfinite(value) ||
+                    value < minimum || value > maximum) {
+                    log("Ignoring out-of-range config key: " + key);
+                } else {
+                    field = value;
+                }
+            } catch (...) {
+                log("Ignoring invalid numeric config key: " + key);
+            }
+            return true;
+        };
+        if (assign("ground_acceleration", g_config.ground_acceleration, 0, 50)) continue;
+        if (assign("ground_friction", g_config.ground_friction, 0, 30)) continue;
+        if (assign("air_acceleration", g_config.air_acceleration, 0, 30)) continue;
+        if (assign("air_wish_cap", g_config.air_wish_cap, 0, 5000)) continue;
+        if (assign("air_soft_damping", g_config.air_soft_damping, 0, 5)) continue;
+        if (assign("slide_friction", g_config.slide_friction, 0, 20)) continue;
+        if (assign("absolute_speed_cap", g_config.absolute_cap, 2000, 50000)) continue;
+        if (key == "landing_grace_ms") {
+            try {
+                std::size_t parsed{};
+                const double milliseconds = std::stod(val, &parsed);
+                if (parsed == val.size() && std::isfinite(milliseconds) &&
+                    milliseconds >= 0.0 && milliseconds <= 250.0) {
+                    g_config.bhop_landing_grace_seconds = milliseconds / 1000.0;
+                } else log("Ignoring out-of-range landing_grace_ms");
+            } catch (...) {
+                log("Ignoring invalid landing_grace_ms");
+            }
         }
     }
 }
@@ -331,7 +378,13 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
     const auto vanilla = at<FVector3f>(self, layout::velocity);
 
     momentum::Vec3 result = convert(vanilla);
+    bool fresh_landing = false;
+    double applied_ground_friction_dt = static_cast<double>(dt);
+    std::uint64_t bhop_landings = 0;
+
     if (!bypass) {
+        // Do not begin from vanilla's *post*-CalcVelocity speed. It commonly
+        // clamps/brakes at run speed even after an excellent high-speed hop.
         result = convert(before);
         const momentum::Vec3 input = convert(wish);
         const double analog = input.horizontal_speed() <= 1.0e-6 ? 0.0 :
@@ -343,18 +396,36 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
 
         if (movement_mode == 1 || movement_mode == 2) {
             if (slide_active) {
+                // An ability-managed slide has different semantics; do not
+                // overwrite its state with artificial ordinary bhop landings.
+                {
+                    std::lock_guard<std::mutex> guard(g_bhop_mutex);
+                    g_bhop_states.erase(self);
+                }
                 result = momentum::apply_slide_friction(result, g_config.slide_friction, dt);
                 result = momentum::accelerate_horizontal(
                     result, input, speed * analog, g_config.slide_acceleration, dt);
             } else {
+                {
+                    std::lock_guard<std::mutex> guard(g_bhop_mutex);
+                    if (g_bhop_states.size() > 64) g_bhop_states.clear();
+                    auto& chain = g_bhop_states[self];
+                    const auto prior_landings = chain.landings;
+                    applied_ground_friction_dt =
+                        chain.begin_ground_step(result, dt, g_config.bhop_landing_grace_seconds);
+                    bhop_landings = chain.landings;
+                    fresh_landing = chain.landings > prior_landings;
+                }
                 result = momentum::apply_ground_friction(
-                    result, g_config.ground_friction, g_config.stop_speed, dt);
+                    result, g_config.ground_friction, g_config.stop_speed,
+                    applied_ground_friction_dt);
                 result = momentum::accelerate_horizontal(
                     result, input, speed * analog, g_config.ground_acceleration, dt);
             }
-        } else { // MOVE_Falling
-            result = momentum::accelerate_horizontal(
-                result, input, g_config.air_wish_cap * analog, g_config.air_acceleration, dt);
+        } else { // MOVE_Falling, retain sideways and forward horizontal momentum.
+            result = momentum::air_accelerate_source(
+                result, input, speed * analog, g_config.air_wish_cap * analog,
+                g_config.air_acceleration, dt);
             result = momentum::soft_high_speed_damping(
                 result, g_config.air_soft_threshold, g_config.air_soft_damping, dt);
         }
@@ -362,9 +433,34 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
         // Let vanilla own gravity, jump, jetpack, and every vertical impulse.
         result.z = vanilla.z;
         result = momentum::safety_clamp(result, g_config.absolute_cap);
-        if (!std::isfinite(result.x) || !std::isfinite(result.y) || !std::isfinite(result.z)) {
+        if (!std::isfinite(result.x) || !std::isfinite(result.y) ||
+            !std::isfinite(result.z)) {
             result = convert(vanilla);
         }
+
+        if (movement_mode == 3) {
+            std::lock_guard<std::mutex> guard(g_bhop_mutex);
+            if (g_bhop_states.size() > 64) g_bhop_states.clear();
+            // In observe mode, record real vanilla speed; only in active mode
+            // is the predicted result physically applied to the component.
+            g_bhop_states[self].record_air_step(
+                g_config.active ? result : convert(vanilla));
+        }
+    } else {
+        std::lock_guard<std::mutex> guard(g_bhop_mutex);
+        g_bhop_states.erase(self);
+    }
+
+    if (fresh_landing) {
+        std::ostringstream event;
+        event << std::fixed << std::setprecision(1)
+              << "bhop_event=landing count=" << bhop_landings
+              << " active=" << g_config.active
+              << " pre_speed=" << convert(before).horizontal_speed()
+              << " vanilla_speed=" << convert(vanilla).horizontal_speed()
+              << " result_speed=" << result.horizontal_speed()
+              << " grace_ms=" << (g_config.bhop_landing_grace_seconds * 1000.0);
+        log(event.str());
     }
 
     const auto call_number = g_target_calls.fetch_add(1, std::memory_order_relaxed);
@@ -376,6 +472,8 @@ void calc_velocity_hook(void* self, float dt, float friction, bool fluid, float 
             << " dash=" << dashing
             << " slide_active=" << slide_active
             << " slide_rate=" << slide_rate
+            << " bhop_friction_dt=" << applied_ground_friction_dt
+            << " horizontal_speed=" << result.horizontal_speed()
             << " dt=" << dt << " max_walk=" << max_walk
             << " max_accel=" << max_accel
             << " pre=(" << before.x << "," << before.y << "," << before.z << ")"
@@ -412,6 +510,10 @@ void uninstall() {
     g_slide_active.store(false, std::memory_order_release);
     g_last_movement_mode.store(-1, std::memory_order_relaxed);
     g_last_dash.store(-1, std::memory_order_relaxed);
+    {
+        std::lock_guard<std::mutex> guard(g_bhop_mutex);
+        g_bhop_states.clear();
+    }
     if (!g_installed.exchange(false)) return;
     if (g_vtable && g_original) {
         if (patch_slot(g_vtable, reinterpret_cast<void*>(g_original),
@@ -463,6 +565,10 @@ bool install() {
     g_slide_active.store(false, std::memory_order_release);
     g_last_movement_mode.store(-1, std::memory_order_relaxed);
     g_last_dash.store(-1, std::memory_order_relaxed);
+    {
+        std::lock_guard<std::mutex> guard(g_bhop_mutex);
+        g_bhop_states.clear();
+    }
     g_movement_class = movement_class;
     g_player_class = player_class;
     g_original = reinterpret_cast<CalcVelocity>(expected);
@@ -477,8 +583,8 @@ bool install() {
 
     g_installed.store(true, std::memory_order_release);
     write_status(g_config.active
-        ? "ACTIVE: Momentum CalcVelocity hook installed at slot 215."
-        : "OBSERVE: CalcVelocity hook installed at slot 215; vanilla movement unchanged.");
+        ? "ACTIVE: Source bhop air acceleration, landing speed preservation and grace enabled."
+        : "OBSERVE: Source bhop predicted only; vanilla movement is unchanged.");
     return true;
 }
 } // namespace momentum_native
